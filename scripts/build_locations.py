@@ -21,6 +21,34 @@ import ref
 from ref import eid, ename, slugify, write_dataset, facet_meta
 
 
+def town_setups() -> dict[str, list[dict]]:
+    """town_setup name → the buildings a location of that setup starts with.
+
+    common/town_setups is `setup = { building = count, … }`; the counts are
+    building levels, so a town with `marketplace = 2` starts with two."""
+    out: dict[str, list[dict]] = {}
+    try:
+        tree = ref.parser.parser.parse_folder_as_one_file('in_game/common/town_setups')
+    except Exception:
+        return out
+    buildings = ref.parser.buildings
+    for key, block in tree:
+        if not hasattr(block, 'iterate_with_duplicates'):
+            continue
+        items = []
+        for bk, bv in block.iterate_with_duplicates():
+            bk = str(bk)
+            b = buildings.get(bk)
+            items.append({
+                'name': getattr(b, 'display_name', None) or ref.pretty(bk),
+                'id': eid('building', bk) if b is not None else None,
+                'count': bv if isinstance(bv, (int, float)) else 1,
+            })
+        items.sort(key=lambda x: (-x['count'], x['name']))
+        out[str(key)] = items
+    return out
+
+
 def setup_by_location() -> dict[str, dict]:
     """location key → {rank, town_setup, pops[]} from setup/start."""
     out: dict[str, dict] = {}
@@ -38,6 +66,7 @@ def setup_by_location() -> dict[str, dict]:
                 rec['rank'] = str(v)
             elif k == 'town_setup':
                 rec['town_setup'] = ref.pretty(str(v))
+                rec['town_setup_key'] = str(v)
             elif k == 'define_pop' and hasattr(v, 'iterate_with_duplicates'):
                 # A location's several `define_pop` blocks arrive merged into
                 # ONE tree whose type/size/culture/religion keys simply repeat
@@ -81,6 +110,7 @@ def makeup(pops: list[dict], field: str) -> list[dict]:
 def main():
     p = ref.parser
     setup = setup_by_location()
+    setups = town_setups()
     areas = p.areas
 
     entities = []
@@ -111,6 +141,8 @@ def main():
                     'harbor': getattr(loc, 'natural_harbor_suitability', None),
                     'rank': ref.pretty(s['rank']) if s.get('rank') else None,
                     'town_setup': s.get('town_setup'),
+                    'buildings': setups.get(s.get('town_setup_key') or '', []),
+                    'slug': slugify(lkey),
                     'pop_total': round(sum(x['size'] for x in pops), 2) if pops else None,
                     'cultures': makeup(pops, 'culture'),
                     'religions': makeup(pops, 'religion'),
@@ -121,7 +153,8 @@ def main():
                 if not row['sea']:
                     index.append([row['name'], aslug, row['good'] or '', row['culture'] or '',
                                   row['religion'] or '', a.display_name,
-                                  row['rank'] or '', row['pop_total'] or 0])
+                                  row['rank'] or '', row['pop_total'] or 0,
+                                  row['slug'] if row['rank'] else ''])
 
         land = [r for r in rows if not r['sea']]
         entities.append({
@@ -155,7 +188,7 @@ def main():
 
     out = ref.ROOT / 'public' / 'locations.json'
     out.write_text(json.dumps({'cols': ['name', 'area', 'good', 'culture', 'religion',
-                                        'areaName', 'rank', 'pops'],
+                                        'areaName', 'rank', 'pops', 'slug'],
                                'rows': index}, ensure_ascii=False,
                               separators=(',', ':')) + '\n', encoding='utf-8')
     kb = out.stat().st_size // 1024

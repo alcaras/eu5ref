@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import buildingsData from '../data/buildings.json';
+import goodsData from '../data/goods.json';
+
+// Only buildings whose production methods actually move goods can be costed.
+const priced = buildingsData.entities
+  .filter((b) => (b.data.production_methods || []).some((pm: any) => pm.inputs.length || pm.output))
+  .map((b) => ({
+    slug: b.slug, name: b.name, icon: b.icon,
+    category: b.facets.category,
+    pms: b.data.production_methods.filter((pm: any) => pm.inputs.length || pm.output),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const prices = Object.fromEntries(
+  goodsData.entities.map((g) => [g.name, { price: g.data.price, color: g.color }])
+);
+---
+<Base title="Building Calculator" active="building-calculator" pageMark="🧮" eyebrow="Tools"
+  description="What a Europa Universalis V building's production method costs and returns at market prices.">
+
+  <p style="max-width: 760px; color: var(--text-soft);">
+    EU5 buildings are not Victoria-style input→output factories: of the game's
+    90 production methods, <b>79 only consume goods</b> as upkeep and just
+    <b>11 produce one</b>. So this prices what the files actually define —
+    each method's goods in and (where there is one) goods out, valued at base
+    market prices, which you can override below to match your market.
+  </p>
+
+  <div class="bc" data-bc>
+    <div class="filterbar">
+      <input type="search" placeholder="Find a building…" data-bc-q autocomplete="off" />
+      <span class="filter-count" data-bc-count></span>
+    </div>
+    <div class="etbl-scroll">
+      <table class="etbl">
+        <thead><tr>
+          <th data-bc-sort="name">Building</th>
+          <th data-bc-sort="pm">Production method</th>
+          <th>Goods in</th>
+          <th>Goods out</th>
+          <th class="num" data-bc-sort="cost">Upkeep</th>
+          <th class="num" data-bc-sort="rev">Revenue</th>
+          <th class="num" data-bc-sort="net">Net</th>
+        </tr></thead>
+        <tbody data-bc-body></tbody>
+      </table>
+    </div>
+
+    <details class="bc-prices">
+      <summary>Adjust goods prices ({Object.keys(prices).length} goods, base market price shown)</summary>
+      <div class="bc-price-grid" data-bc-prices></div>
+    </details>
+  </div>
+
+  <script define:vars={{ priced, prices }}>
+    const root = document.querySelector('[data-bc]');
+    const body = root.querySelector('[data-bc-body]');
+    const q = root.querySelector('[data-bc-q]');
+    const countEl = root.querySelector('[data-bc-count]');
+    const priceGrid = root.querySelector('[data-bc-prices]');
+    const live = Object.fromEntries(Object.entries(prices).map(([k, v]) => [k, v.price ?? 0]));
+    let sortKey = 'net', sortDir = -1;   // best net first
+
+    // one row per (building, production method)
+    const rows = [];
+    for (const b of priced) {
+      for (const pm of b.pms) {
+        rows.push({ b, pm, name: b.name, pmName: pm.name });
+      }
+    }
+
+    const money = (n) => (n === 0 ? '0' : n.toFixed(3).replace(/\.?0+$/, ''));
+
+    function costOf(pm) {
+      return pm.inputs.reduce((s, i) => s + i.amount * (live[i.good] ?? 0), 0);
+    }
+    function revOf(pm) {
+      return pm.output ? pm.output.amount * (live[pm.output.good] ?? 0) : 0;
+    }
+
+    function render() {
+      const term = (q.value || '').trim().toLowerCase();
+      let hits = rows;
+      if (term) hits = hits.filter((r) =>
+        r.name.toLowerCase().includes(term) || r.pmName.toLowerCase().includes(term) ||
+        r.pm.inputs.some((i) => i.good.toLowerCase().includes(term)) ||
+        (r.pm.output && r.pm.output.good.toLowerCase().includes(term)));
+
+      const withVals = hits.map((r) => {
+        const cost = costOf(r.pm), rev = revOf(r.pm);
+        return { ...r, cost, rev, net: rev - cost };
+      });
+      withVals.sort((a, b) => {
+        const x = sortKey === 'name' ? a.name : sortKey === 'pm' ? a.pmName : a[sortKey];
+        const y = sortKey === 'name' ? b.name : sortKey === 'pm' ? b.pmName : b[sortKey];
+        if (typeof x === 'number') return (x - y) * sortDir;
+        return String(x).localeCompare(String(y)) * sortDir;
+      });
+
+      body.innerHTML = withVals.map((r) => {
+        const ins = r.pm.inputs.map((i) =>
+          `<span class="chip">${i.amount} ${i.good}</span>`).join(' ') || '<span class="is-empty">—</span>';
+        const out = r.pm.output
+          ? `<span class="chip">${r.pm.output.amount} ${r.pm.output.good}</span>`
+          : '<span class="is-empty">—</span>';
+        const cls = r.net > 0 ? 'good' : r.net < 0 ? 'bad' : 'neutral';
+        return `<tr><td><a href="${location.pathname.replace(/building-calculator\/?$/, '')}buildings/${r.b.slug}"><b>${r.name}</b></a></td>` +
+          `<td>${r.pmName}</td><td><span class="chips">${ins}</span></td><td>${out}</td>` +
+          `<td class="num">${money(r.cost)}</td><td class="num">${money(r.rev)}</td>` +
+          `<td class="num"><span class="mod-val ${cls}">${r.net > 0 ? '+' : ''}${money(r.net)}</span></td></tr>`;
+      }).join('');
+      countEl.textContent = `${withVals.length} of ${rows.length} production methods`;
+    }
+
+    // price overrides — only the goods these buildings actually touch
+    const used = new Set();
+    for (const r of rows) {
+      for (const i of r.pm.inputs) used.add(i.good);
+      if (r.pm.output) used.add(r.pm.output.good);
+    }
+    priceGrid.innerHTML = [...used].sort().map((g) =>
+      `<label><span>${g}</span><input type="number" step="0.1" min="0" value="${live[g] ?? 0}" data-good="${g}"></label>`).join('');
+    priceGrid.addEventListener('input', (e) => {
+      const el = e.target;
+      if (!el.dataset.good) return;
+      live[el.dataset.good] = parseFloat(el.value) || 0;
+      render();
+    });
+
+    q.addEventListener('input', render);
+    for (const th of root.querySelectorAll('[data-bc-sort]')) {
+      th.addEventListener('click', () => {
+        const k = th.dataset.bcSort;
+        sortDir = k === sortKey ? -sortDir : (k === 'name' || k === 'pm' ? 1 : -1);
+        sortKey = k;
+        for (const x of root.querySelectorAll('[data-bc-sort]')) x.classList.remove('sorted-asc', 'sorted-desc');
+        th.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+        render();
+      });
+    }
+    render();
+  </script>
+
+  <style>
+    .bc-prices { margin-top: 16px; }
+    .bc-prices summary { cursor: pointer; color: var(--text-dim); font-size: 13px; }
+    .bc-price-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 6px; margin-top: 10px;
+    }
+    .bc-price-grid label { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--text-dim); }
+    .bc-price-grid span { flex: 1; }
+    .bc-price-grid input {
+      width: 74px; background: var(--bg-elev); color: var(--text);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 3px 7px; font-family: var(--font-mono); font-size: 12px;
+    }
+  </style>
+</Base>

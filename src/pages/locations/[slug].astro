@@ -1,0 +1,99 @@
+---
+// Pages for the 1,021 locations that start as a settlement (town, city,
+// megalopolis). The other ~21,800 land locations are plain rural tiles with
+// nothing to say beyond their row on the area page — a page each would be
+// ~200MB of HTML for no gain, so they stay on their area page and in the
+// search index.
+import Base from '../../layouts/Base.astro';
+import Term from '../../components/Term.astro';
+import data from '../../data/areas.json';
+
+export function getStaticPaths() {
+  const out: any[] = [];
+  const seen = new Set<string>();
+  for (const a of data.entities) {
+    for (const l of a.data.locations) {
+      if (l.sea || !l.rank || seen.has(l.slug)) continue;
+      seen.add(l.slug);
+      out.push({ params: { slug: l.slug }, props: { loc: l, area: a } });
+    }
+  }
+  return out;
+}
+const { loc, area } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const buildingTotal = loc.buildings.reduce((n: number, b: any) => n + b.count, 0);
+---
+<Base title={loc.name} active="locations" eyebrow={`${loc.rank} · ${area.name}`}
+  pageStats={[
+    { label: 'pops at 1337', value: loc.pop_total ?? 0 },
+    { label: 'starting buildings', value: buildingTotal },
+    { label: 'good', value: loc.good ?? '—' },
+  ]}
+  description={`${loc.name} in Europa Universalis V — starting buildings, pops, culture makeup and terrain at the 1337 start.`}>
+
+  <div class="detail-grid">
+    <div>
+      <p class="chips">
+        <span class="chip">{loc.rank}</span>
+        {loc.town_setup && <span class="chip">{loc.town_setup}</span>}
+        {loc.topography && <span class="chip">{loc.topography}</span>}
+        {loc.vegetation && <span class="chip">{loc.vegetation}</span>}
+        {loc.climate && <span class="chip">{loc.climate}</span>}
+      </p>
+
+      {loc.buildings.length > 0 && (
+        <div class="panel">
+          <h3>Starting buildings</h3>
+          <ul class="pairs">
+            {loc.buildings.map((b: any) => (
+              <li>
+                <span class="k">
+                  {b.id ? <Term id={b.id} label={b.name} showIcon={false} /> : b.name}
+                </span>
+                <span class="v">×{b.count}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {loc.cultures.length > 0 && (
+        <div class="panel">
+          <h3>Population at 1337 — {loc.pop_total}</h3>
+          <div class="kv">
+            <span class="k">Cultures</span>
+            <span class="v">{loc.cultures.map((c: any) => `${c.name} ${c.pct}%`).join(' · ')}</span>
+            <span class="k">Religions</span>
+            <span class="v">{loc.religions.map((r: any) => `${r.name} ${r.pct}%`).join(' · ')}</span>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h3>Location</h3>
+        <div class="kv">
+          <span class="k">Area</span><span class="v"><a href={`${base}areas/${area.slug}`}>{area.name}</a></span>
+          <span class="k">Province</span><span class="v">{loc.province}</span>
+          <span class="k">Region</span><span class="v">{area.facets.region}</span>
+          <span class="k">Continent</span><span class="v">{area.facets.continent}</span>
+          <span class="k">Trade good</span>
+          <span class="v">{loc.good_id ? <Term id={loc.good_id} label={loc.good} showIcon={false} /> : '—'}</span>
+          <span class="k">Dominant culture</span><span class="v">{loc.culture ?? '—'}</span>
+          <span class="k">Dominant religion</span><span class="v">{loc.religion ?? '—'}</span>
+          {loc.harbor != null && (
+            <Fragment><span class="k">Natural harbour</span><span class="v">{loc.harbor}</span></Fragment>
+          )}
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Nearby</h3>
+        <p style="margin:0; font-size:13px;">
+          <a href={`${base}areas/${area.slug}`}>All {area.data.count} locations in {area.name} →</a>
+        </p>
+      </div>
+    </aside>
+  </div>
+</Base>

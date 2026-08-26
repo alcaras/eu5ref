@@ -67,7 +67,7 @@ import Base from '../layouts/Base.astro';
       });
       const shown = sorted.slice(0, LIMIT);
       body.innerHTML = shown.map((r) =>
-        `<tr><td><b>${esc(r[0])}</b></td>` +
+        `<tr><td>${r[8] ? `<a href="${baseUrl}locations/${r[8]}"><b>${esc(r[0])}</b></a>` : `<b>${esc(r[0])}</b>`}</td>` +
         `<td><a href="${baseUrl}areas/${r[1]}">${esc(r[5])}</a></td>` +
         `<td>${esc(r[2])}</td><td>${esc(r[3])}</td><td>${esc(r[4])}</td>` +
         `<td>${esc(r[6])}</td><td class="num">${r[7] || ''}</td></tr>`).join('');

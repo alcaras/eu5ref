@@ -218,6 +218,11 @@ export const TABS: Tab[] = [
     summary: 'Building + method + prices → goods in/out and profitability',
   },
   {
+    slug: 'building-calculator', icon: '🧮', label: 'Building Calculator', section: 'Tools',
+    status: 'built',
+    summary: 'Goods in vs goods out per production method, at prices you set',
+  },
+  {
     slug: 'advance-planner', icon: '🧭', label: 'Advance Planner', section: 'Tools',
     status: 'built',
     summary: 'Pick target advances → the full prerequisite closure and cost',

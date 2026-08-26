@@ -7,6 +7,7 @@ export function getStaticPaths() {
   return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
 }
 const { entity } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const locs = entity.data.locations.filter((l: any) => !l.sea);
 const seas = entity.data.locations.filter((l: any) => l.sea);
 ---
@@ -34,7 +35,9 @@ const seas = entity.data.locations.filter((l: any) => l.sea);
       <tbody>
         {locs.map((l: any) => (
           <tr>
-            <td><b>{l.name}</b></td>
+            <td>{l.rank
+              ? <a href={`${base}locations/${l.slug}`}><b>{l.name}</b></a>
+              : <b>{l.name}</b>}</td>
             <td>{l.province}</td>
             <td>{l.good_id ? <Term id={l.good_id} label={l.good} /> : <span class="is-empty">—</span>}</td>
             <td>
