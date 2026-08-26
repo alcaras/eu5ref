@@ -22,6 +22,24 @@ import Base from '../layouts/Base.astro';
 
   <div class="vp" data-vp>
     <div class="vp-controls">
+      <div class="pl-picker" data-vp-country>
+        <input type="search" placeholder="Pick a country…" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <div class="pl-picker" data-vp-culture hidden>
+        <input type="search" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <div class="pl-picker" data-vp-religion hidden>
+        <input type="search" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <span class="chips" data-vp-context></span>
+      <label class="pl-toggle" title="Include things your country cannot take">
+        <input type="checkbox" data-vp-all /> show unavailable
+      </label>
+    </div>
+    <div class="vp-controls">
       <input type="search" data-vp-q placeholder="Search laws, reforms, privileges, buildings…" autocomplete="off" />
       <span class="chips" data-vp-sources></span>
       <span class="pl-spacer"></span>
@@ -78,6 +96,9 @@ import Base from '../layouts/Base.astro';
     .vp-item .src { color: var(--text-faint); font-size: 11px; }
     .vp-item .eff { margin-left: auto; font-family: var(--font-mono); font-size: 11px; white-space: nowrap; }
     .vp-item .eff b { font-weight: 600; }
+    .vp-item.dim { opacity: .42; }
+    .vp-item .eicon { flex: none; }
+    .chip.shifted { cursor: pointer; border-color: var(--gold-deep); color: var(--gold-soft); }
 
     .vp-axis { margin-bottom: 12px; }
     .vp-axis__top { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 3px; }
@@ -116,10 +137,43 @@ import Base from '../layouts/Base.astro';
     const picked = new Set<string>();
     let sourceFilter: string | null = null;
     let horizonYears = 20;
+    let country: any = null;
+    let culOverride: any = null;
+    let relOverride: any = null;
+    let showUnavailable = false;
     const start: Record<string, number> = {};   // where each axis begins
     const esc = (t: string) => String(t).replace(/[&<>"]/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
     const uid = (m: any) => `${m.folder}:${m.key}`;
+
+    /** Country facts with any culture/religion swap applied. */
+    function facts() {
+      if (!country) return null;
+      const f = { ...country.f, cap: country.f.cap || {} };
+      if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l; }
+      if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g; }
+      return f;
+    }
+    /** TRUE / FALSE / null-unknown, matching the tech planner. */
+    function evalGate(e: any, f: any): boolean | null {
+      if (!e) return true;
+      const h = e[0];
+      if (h === 'and') { let u = false; for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === false) return false; if (v === null) u = true; } return u ? null : true; }
+      if (h === 'or') { let u = false; for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === true) return true; if (v === null) u = true; } return u ? null : false; }
+      if (h === 'not') { const v = evalGate(e[1], f); return v === null ? null : !v; }
+      if (h === '?') return null;
+      if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
+      if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
+      if (h === 'tag') return f.tag === e[1];
+      return f[h] === e[1];
+    }
+    /** Can this country take it? Unknown counts as yes — it depends on
+     *  state you can still acquire. */
+    function usable(m: any) {
+      const f = facts();
+      if (!f || !m.gate) return true;
+      return evalGate(m.gate, f) !== false;
+    }
 
     /** Net monthly drift per axis. Right is positive, left negative — the
      *  same convention as the -100..+100 axis itself. */
@@ -143,9 +197,20 @@ import Base from '../layouts/Base.astro';
       }).join(' ');
     }
 
+    function itemHtml(m: any) {
+      const dim = !usable(m) ? ' dim' : '';
+      const icon = m.icon
+        ? `<img class="eicon" src="${baseUrl}${m.icon}" alt="" loading="lazy" width="16" height="16"/>` : '';
+      const est = m.estate ? `<span class="src">${esc(m.estate)}</span>` : '';
+      return `<div class="vp-item ${picked.has(uid(m)) ? 'on' : ''}${dim}" data-uid="${esc(uid(m))}">` +
+        icon + `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>${est}` +
+        `<span class="eff">${effLabel(m)}</span></div>`;
+    }
+
     function renderList() {
       const term = ($('[data-vp-q]') as HTMLInputElement).value.trim().toLowerCase();
       const hits = D.movers.filter((m: any) =>
+        (showUnavailable || usable(m)) &&
         (!sourceFilter || m.source === sourceFilter) &&
         (!term || m.name.toLowerCase().includes(term) ||
          m.source.toLowerCase().includes(term) ||
@@ -154,20 +219,14 @@ import Base from '../layouts/Base.astro';
            return p.left.name.toLowerCase().includes(term) ||
                   p.right.name.toLowerCase().includes(term);
          })));
-      $('[data-vp-list]').innerHTML = hits.slice(0, 400).map((m: any) =>
-        `<div class="vp-item ${picked.has(uid(m)) ? 'on' : ''}" data-uid="${esc(uid(m))}">` +
-        `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>` +
-        `<span class="eff">${effLabel(m)}</span></div>`).join('') ||
+      $('[data-vp-list]').innerHTML = hits.slice(0, 400).map(itemHtml).join('') ||
         '<div class="pl-empty">Nothing matches.</div>';
     }
 
     function renderPicked() {
       const list = D.movers.filter((m: any) => picked.has(uid(m)));
       $('[data-vp-count]').textContent = list.length ? `${list.length} selected` : 'none';
-      $('[data-vp-picked]').innerHTML = list.map((m: any) =>
-        `<div class="vp-item on" data-uid="${esc(uid(m))}">` +
-        `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>` +
-        `<span class="eff">${effLabel(m)}</span></div>`).join('') ||
+      $('[data-vp-picked]').innerHTML = list.map(itemHtml).join('') ||
         '<div style="color:var(--text-faint); font-size:12.5px; padding:4px 8px;">' +
         'Nothing picked yet — choose from the list below.</div>';
     }
@@ -266,13 +325,57 @@ import Base from '../layouts/Base.astro';
 
     function syncUrl() {
       const p = new URLSearchParams();
+      if (country) p.set('c', country.t);
+      if (culOverride) p.set('cu', culOverride.k);
+      if (relOverride) p.set('re', relOverride.k);
       if (picked.size) p.set('p', [...picked].join(','));
       const st = Object.entries(start).filter(([, v]) => v);
       if (st.length) p.set('s', st.map(([k, v]) => `${k}:${v}`).join(','));
       if (horizonYears !== 20) p.set('y', String(horizonYears));
       history.replaceState(null, '', p.toString() ? '?' + p.toString() : location.pathname);
     }
-    function render() { renderList(); renderPicked(); renderAxes(); renderUnlocks(); syncUrl(); }
+    function renderContext() {
+      const cw = $('[data-vp-culture]'), rw = $('[data-vp-religion]');
+      cw.hidden = rw.hidden = !country;
+      if (!country) { $('[data-vp-context]').innerHTML = ''; return; }
+      let html = `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${esc(country.n)}</span>`;
+      if (culOverride) html += `<span class="chip shifted" data-reset="cul">${esc(culOverride.n)} ✕</span>`;
+      if (relOverride) html += `<span class="chip shifted" data-reset="rel">${esc(relOverride.n)} ✕</span>`;
+      (cw.querySelector('input') as HTMLInputElement).placeholder =
+        `Culture: ${culOverride ? culOverride.n : country.cu}`;
+      (rw.querySelector('input') as HTMLInputElement).placeholder =
+        `Religion: ${relOverride ? relOverride.n : country.re}`;
+      $('[data-vp-context]').innerHTML = html;
+    }
+
+    function wirePicker(sel: string, items: (q: string) => any[], onPick: (k: string) => void) {
+      const wrap = $(sel);
+      const input = wrap.querySelector('input') as HTMLInputElement;
+      const results = wrap.querySelector('.hdr-search__results') as HTMLElement;
+      const refresh = () => {
+        const q = input.value.trim().toLowerCase();
+        if (!q) { results.hidden = true; return; }
+        const hits = items(q).slice(0, 12);
+        results.innerHTML = hits.map((h: any) =>
+          `<a href="#" data-key="${esc(h.key)}"><span>${esc(h.label)}</span><small>${esc(h.small || '')}</small></a>`).join('');
+        results.hidden = hits.length === 0;
+      };
+      input.addEventListener('input', refresh);
+      input.addEventListener('focus', refresh);
+      results.addEventListener('click', (e) => {
+        e.preventDefault();
+        const a = (e.target as HTMLElement).closest('[data-key]') as HTMLElement | null;
+        if (!a) return;
+        onPick(a.dataset.key!);
+        input.value = ''; results.hidden = true;
+        render();
+      });
+      document.addEventListener('click', (e) => {
+        if (!wrap.contains(e.target as Node)) results.hidden = true;
+      });
+    }
+
+    function render() { renderContext(); renderList(); renderPicked(); renderAxes(); renderUnlocks(); syncUrl(); }
 
     fetch(`${baseUrl}values.json`).then((r) => r.json()).then((data) => {
       D = data;
@@ -288,9 +391,34 @@ import Base from '../layouts/Base.astro';
         renderList();
       });
 
+      wirePicker('[data-vp-country]',
+        (q) => D.countries.filter((c: any) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
+          .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
+        (tag) => { country = D.countries.find((c: any) => c.t === tag) || null; culOverride = relOverride = null; });
+      wirePicker('[data-vp-culture]',
+        (q) => D.cultures.filter((c: any) => c.n.toLowerCase().includes(q))
+          .map((c: any) => ({ key: c.k, label: c.n, small: 'culture' })),
+        (k) => { culOverride = D.cultures.find((c: any) => c.k === k) || null; });
+      wirePicker('[data-vp-religion]',
+        (q) => D.religions.filter((r: any) => r.n.toLowerCase().includes(q))
+          .map((r: any) => ({ key: r.k, label: r.n, small: 'religion' })),
+        (k) => { relOverride = D.religions.find((r: any) => r.k === k) || null; });
+      $('[data-vp-context]').addEventListener('click', (e) => {
+        const c = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
+        if (!c) return;
+        if (c.dataset.reset === 'cul') culOverride = null; else relOverride = null;
+        render();
+      });
+      ($('[data-vp-all]') as HTMLInputElement).addEventListener('change', (e) => {
+        showUnavailable = (e.target as HTMLInputElement).checked; renderList();
+      });
+
       const qs = new URLSearchParams(location.search);
       const q = qs.get('p');
       if (q) for (const id of q.split(',')) picked.add(id);
+      country = D.countries.find((c: any) => c.t === qs.get('c')) || null;
+      culOverride = D.cultures.find((c: any) => c.k === qs.get('cu')) || null;
+      relOverride = D.religions.find((r: any) => r.k === qs.get('re')) || null;
       for (const bit of (qs.get('s') || '').split(',').filter(Boolean)) {
         const [k, v] = bit.split(':');
         if (k in D.pairs) start[k] = parseFloat(v) || 0;

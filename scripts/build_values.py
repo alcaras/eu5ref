@@ -24,6 +24,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
+import triggers
 from ref import eid, slugify, write_dataset
 
 # folder → (source label, entity type for linking to our own pages)
@@ -162,6 +163,8 @@ def requirements() -> list[dict]:
 
 def main():
     mags = magnitudes()
+    labels = ref.label_map()
+    cgroups = ref.culture_group_keys()
     pairs = value_pairs()
     side_to_pair = {}
     for pid, p in pairs.items():
@@ -184,6 +187,26 @@ def main():
                 continue
             name = (ref.plain_text(ref.parser.localize(str(key), default='')) or
                     ref.pretty(str(key)))
+            # Who may use it, so the planner can hide what your country
+            # cannot take, and which estate a privilege belongs to.
+            gate = gate_labels = None
+            for gk in ('potential', 'allow'):
+                blk = block.get(gk) if hasattr(block, 'get') else None
+                if blk is not None and hasattr(blk, 'iterate_with_duplicates'):
+                    expr = triggers.compile_trigger(blk, cgroups)
+                    if expr:
+                        gate = expr
+                        seen_l, gate_labels = set(), []
+                        for kind, v in triggers.literals(expr):
+                            lab = labels.get(v) or ref.pretty(v)
+                            if lab not in seen_l:
+                                seen_l.add(lab)
+                                gate_labels.append([lab, kind, v])
+                        break
+            estate = None
+            ev = block.get('estate') if hasattr(block, 'get') else None
+            if ev is not None and isinstance(ev, str):
+                estate = ref.pretty(ev.split(':')[-1])
             effects = []
             for side, amount, raw in found:
                 hit = side_to_pair.get(side)
@@ -203,6 +226,9 @@ def main():
                 'id': eid(etype, str(key)) if etype else None,
                 'slug': slugify(str(key)),
                 'effects': effects,
+                'gate': gate,
+                'gateLabels': gate_labels or [],
+                'estate': estate,
             })
 
     # the same key can appear in more than one file of a folder
@@ -235,6 +261,47 @@ def main():
     })
 
     reqs = requirements()
+
+    # icons come from the datasets that already exported them
+    icons: dict[str, str] = {}
+    for fname in ('reforms.json', 'estate-privileges.json', 'buildings.json',
+                  'religious-aspects.json', 'cabinet-actions.json', 'laws.json',
+                  'subjects.json', 'estates.json', 'missions.json'):
+        path = ref.DATA_DIR / fname
+        if not path.exists():
+            continue
+        for e in json.loads(path.read_text())['entities']:
+            if e.get('icon'):
+                icons[e['id']] = e['icon']
+    for m in movers:
+        if m['id'] and m['id'] in icons:
+            m['icon'] = icons[m['id']]
+    for r in reqs:
+        if r['id'] and r['id'] in icons:
+            r['icon'] = icons[r['id']]
+
+    # countries, so the planner can default culture/religion from a tag
+    countries = []
+    cpath = ref.DATA_DIR / 'countries.json'
+    if cpath.exists():
+        for c in json.loads(cpath.read_text())['entities']:
+            countries.append({'t': c['data']['tag'], 'n': c['name'],
+                              'col': c.get('color'),
+                              'cu': c['facets']['culture'], 're': c['facets']['religion'],
+                              'f': c['data'].get('facts') or {}})
+        countries.sort(key=lambda c: c['n'])
+    cultures = religions = []
+    cu_path, re_path = ref.DATA_DIR / 'cultures.json', ref.DATA_DIR / 'religions.json'
+    if cu_path.exists():
+        cultures = [{'k': e['id'].split(':', 1)[1], 'n': e['name'],
+                     'g': e['data'].get('group_keys') or [],
+                     'l': e['data'].get('language_key')}
+                    for e in json.loads(cu_path.read_text())['entities']]
+    if re_path.exists():
+        religions = [{'k': e['id'].split(':', 1)[1], 'n': e['name'],
+                      'g': e['data'].get('group_key')}
+                     for e in json.loads(re_path.read_text())['entities']]
+
     out = ref.ROOT / 'public' / 'values.json'
     out.write_text(json.dumps({
         'scale': 100,           # SOCIETAL_VALUE_MAX
@@ -242,6 +309,9 @@ def main():
         'pairs': pairs,
         'movers': movers,
         'requirements': reqs,
+        'countries': countries,
+        'cultures': cultures,
+        'religions': religions,
     }, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     kb = out.stat().st_size // 1024
     eff = sum(len(m['effects']) for m in movers)

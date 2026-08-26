@@ -5,11 +5,10 @@ import Base from '../layouts/Base.astro';
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
   <p class="pl-intro">
-    The advances screen, made scannable: <b>age tabs</b>, then one pane per
-    branch, with every prerequisite step as a column left to right. Same
-    branches and tiers as in game, without the sprawl — and each pane is only
-    as wide as its own branch, so the page never scrolls sideways. Click a
-    pane header to collapse it.
+    The advances screen: <b>age tabs</b>, then one pane per branch, laid out
+    top-down like the game — each prerequisite tier is a row, and what it
+    leads to sits underneath. Same branches, tiers and edges as in game, so
+    nothing needs mentally rotating. Click a pane header to collapse it.
     Pick a country and everything that can never apply to it disappears —
     usually about two thirds of the 3,178 advances.
     <b>Hover</b> to light up an advance's whole prerequisite chain,
@@ -131,6 +130,7 @@ import Base from '../layouts/Base.astro';
     .pl-pane__head small { font-family: var(--font-ui); font-size: 11px; color: var(--text-faint); }
     .pl-pane__head .caret { margin-left: auto; color: var(--text-faint); font-size: 11px; }
     .pl-pane__body { overflow-x: auto; overflow-y: hidden; }
+    .pl-pane__body::-webkit-scrollbar { height: 9px; }
     .pl-pane.collapsed .pl-pane__body { display: none; }
     .pl-board { position: relative; transform-origin: 0 0; }
 
@@ -169,7 +169,7 @@ import Base from '../layouts/Base.astro';
 
     /* node card — compact row: icon + name, tier column packing */
     .pnode {
-      position: absolute; width: 158px; height: 26px; box-sizing: border-box;
+      position: absolute; width: 138px; height: 26px; box-sizing: border-box;
       display: flex; align-items: center; gap: 5px; padding: 0 6px 0 5px;
       background: var(--bg-elev-2); border: 1px solid var(--border);
       border-left: 3px solid var(--border-strong);
@@ -196,7 +196,7 @@ import Base from '../layouts/Base.astro';
     }
     /* expanded card: name on top, what it does underneath */
     .pnode.wide {
-      width: 236px; height: 74px; flex-direction: column; align-items: stretch;
+      width: 208px; height: 70px; flex-direction: column; align-items: stretch;
       gap: 2px; padding: 5px 7px 6px 6px;
     }
     .pnode.wide .hd { display: flex; align-items: center; gap: 5px; }
@@ -273,12 +273,15 @@ import Base from '../layouts/Base.astro';
     // keep the game's *semantics* (branch, tier, prerequisite edges) but
     // turn each tier into a COLUMN and pack it vertically — depth is only
     // 8–10, so an age fits the viewport width and every name stays legible.
-    let NW = 158, NH = 26, COLW = 170, ROWH = 30;
+    // NW/NH are the card; COLW is the sideways step between siblings in a
+    // tier and ROWH the vertical pitch between tiers. Cards are narrower
+    // than the horizontal layout used, because width is now the scarce axis.
+    let NW = 138, NH = 26, COLW = 146, ROWH = 56;
     const BRANCH_GAP = 30, TOP = 26;
     /** Expanded cards carry their effects, so they need room. */
     function setGeometry() {
-      if (expanded) { NW = 236; NH = 74; COLW = 250; ROWH = 80; }
-      else { NW = 158; NH = 26; COLW = 170; ROWH = 30; }
+      if (expanded) { NW = 208; NH = 70; COLW = 216; ROWH = 100; }
+      else { NW = 138; NH = 26; COLW = 146; ROWH = 56; }
     }
 
     // ── three-valued gate evaluation ───────────────────────────
@@ -439,8 +442,11 @@ import Base from '../layouts/Base.astro';
       return out;
     }
 
-    /** Lay ONE branch out: tier = column, packed vertically, children
-     *  ordered by their parent's row so edges stay short. */
+    /** Lay ONE branch out the way the game does: each prerequisite tier is
+     *  a ROW, and the advances in it spread left to right, ordered by their
+     *  parent's position so children sit under the parent they came from.
+     *  Same orientation as the in-game screen, so nothing needs mentally
+     *  rotating — the cost is width, which the pane scrolls. */
     function layoutBranch(list: string[], parentOf: Map<string, string | null>) {
       const local = new Set(list);
       const minTier = Math.min(...list.map((id) => D.nodes[id].d));
@@ -450,26 +456,27 @@ import Base from '../layouts/Base.astro';
         if (!byTier.has(t)) byTier.set(t, []);
         byTier.get(t)!.push(id);
       }
-      const rowOf = new Map<string, number>();
+      const slotOf = new Map<string, number>();     // position within a tier
       const pos = new Map<string, { x: number; y: number }>();
-      let tallest = 0, maxX = 0;
+      let widest = 0, maxTier = 0;
       for (const t of [...byTier.keys()].sort((a, b) => a - b)) {
-        const col = byTier.get(t)!;
-        col.sort((a, b) => {
+        const row = byTier.get(t)!;
+        row.sort((a, b) => {
           const pa = parentOf.get(a), pb = parentOf.get(b);
-          const ra = pa && local.has(pa) && rowOf.has(pa) ? rowOf.get(pa)! : -1;
-          const rb = pb && local.has(pb) && rowOf.has(pb) ? rowOf.get(pb)! : -1;
-          return ra - rb || D.nodes[a].n.localeCompare(D.nodes[b].n);
+          const sa = pa && local.has(pa) && slotOf.has(pa) ? slotOf.get(pa)! : -1;
+          const sb = pb && local.has(pb) && slotOf.has(pb) ? slotOf.get(pb)! : -1;
+          return sa - sb || D.nodes[a].n.localeCompare(D.nodes[b].n);
         });
-        col.forEach((id, row) => {
-          rowOf.set(id, row);
-          const x = 12 + t * COLW, y = 12 + row * ROWH;
-          pos.set(id, { x, y });
-          maxX = Math.max(maxX, x + NW);
+        row.forEach((id, slot) => {
+          slotOf.set(id, slot);
+          pos.set(id, { x: 12 + slot * COLW, y: 12 + t * ROWH });
         });
-        tallest = Math.max(tallest, col.length);
+        widest = Math.max(widest, row.length);
+        maxTier = Math.max(maxTier, t);
       }
-      return { pos, width: maxX + 12, height: tallest * ROWH + 24 };
+      return { pos,
+               width: 24 + Math.max(widest, 1) * COLW,
+               height: 24 + (maxTier + 1) * ROWH };
     }
 
     /** Group the visible advances of this age into branches. */
@@ -560,11 +567,12 @@ import Base from '../layouts/Base.astro';
         for (const r of D.nodes[id].r) {
           const rp = pos.get(r);
           if (!rp) continue;
-          const x1 = rp.x + NW, y1 = rp.y + NH / 2, x2 = pt.x, y2 = pt.y + NH / 2;
-          const mx = (x1 + x2) / 2;
+          // leave the prerequisite's bottom edge, enter the dependant's top
+          const x1 = rp.x + NW / 2, y1 = rp.y + NH, x2 = pt.x + NW / 2, y2 = pt.y;
+          const my = (y1 + y2) / 2;
           const hot = planned.has(id) && (planned.has(r) || researched.has(r));
           paths += `<path class="${hot ? 'hot' : ''}" data-a="${r}" data-b="${id}" ` +
-            `d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/>`;
+            `d="M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}"/>`;
         }
       }
       let inner = `<svg class="pl-edges" width="${width}" height="${height}">${paths}</svg>`;
