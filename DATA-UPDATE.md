@@ -18,7 +18,9 @@ Local mirror of EU5's script/data files for data mining, wiki-style extraction, 
 | `binaries\` | `eu5.exe` + Paradox's `PDXSDK.dll` / `pdx_red_king.dll` for decompilation, and `checksum.txt` (game version). Other DLLs in the install are third-party middleware (DLSS, nvtt, Steam) — nothing to mine. |
 | `tools\` | Cloned repos, see below. |
 
-**Excluded from the mirror:** `gfx` (~9.7 GB), fonts, music, sound, `content_source` (vegetation masks), non-English localization. If you need flags/icons, pull the specific `gfx` subfolder from the Steam install directly.
+**Excluded from the mirror:** `gfx` (~9.7 GB), fonts, music, sound, `content_source` (vegetation masks), non-English localization. If you need other art, pull the specific `gfx` subfolder from the Steam install directly.
+
+**Exception — icon art (added 2026-08-25):** `game\main_menu\gfx\interface\` (icons, advances, illustrations, etc.), `game\main_menu\gfx\coat_of_arms\`, and each DLC's `main_menu\gfx\interface\` ARE mirrored (~1.8 GB) — the reference-site session on the Mac needs them (see ART-EXTRACTION.md if present). The update bat keeps them in sync with their own `/MIR` passes.
 
 ## Tools (cloned repos)
 

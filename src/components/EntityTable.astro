@@ -26,8 +26,9 @@ interface Props {
   entities: any[];
   columns: Column[];
   pagePrefix: string; // route prefix for kind 'name' links, e.g. 'goods'
+  csvName?: string;   // download filename (default: eu5ref-<pagePrefix>)
 }
-const { entities, columns, pagePrefix } = Astro.props;
+const { entities, columns, pagePrefix, csvName = `eu5ref-${pagePrefix}` } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const pretty = (v: string) => String(v).replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
@@ -50,8 +51,39 @@ const cellValue = (e: any, c: Column) =>
   : c.kind === 'rich' ? (e.data?.[c.key] ?? e.desc)
   : c.kind === 'facet' ? e.facets?.[c.key]
   : e.data?.[c.key];
+
+// CSV projection — same column schema, flattened to plain text at build
+// time (the client script only quotes, joins, and downloads).
+function csvCellValue(e: any, c: Column): string {
+  if (c.kind === 'name') return e.name;
+  const v = cellValue(e, c);
+  if (v == null || v === '' || (Array.isArray(v) && v.length === 0)) return '';
+  switch (c.kind) {
+    case 'mods':
+      return v.map((m: any) => `${m.value} ${m.label}`).join('; ');
+    case 'rich':
+      return richToPlain(v);
+    case 'pairs':
+      return v.map((p: any) => `${p.pop ?? p.label ?? p.k}: ${p.value}`).join('; ');
+    case 'chips':
+    case 'facet':
+      return (Array.isArray(v) ? v : [v]).map(pretty).join('; ');
+    default:
+      return String(v);
+  }
+}
+const csvData = {
+  name: csvName,
+  header: columns.map((c) => c.label),
+  rows: entities.map((e) => columns.map((c) => csvCellValue(e, c))),
+};
 ---
-<div class="etbl-scroll">
+<div class="etbl-wrap" data-etbl>
+  <div class="etbl-tools">
+    <button type="button" class="csv-btn" data-csv-btn title="Download the rows currently shown as CSV">⤓ CSV</button>
+  </div>
+  <script type="application/json" data-csv-data set:html={JSON.stringify(csvData)} />
+  <div class="etbl-scroll">
   <table class="etbl">
     <thead>
       <tr>{columns.map((c) => <th>{c.label}</th>)}</tr>
@@ -95,4 +127,35 @@ const cellValue = (e: any, c: Column) =>
       ))}
     </tbody>
   </table>
+  </div>
 </div>
+
+<script>
+  // CSV export: data was flattened at build time; here we only respect the
+  // current filter (skip hidden rows), quote, and download. BOM so Excel
+  // opens UTF-8 correctly.
+  const csvCell = (v: string) =>
+    /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+
+  for (const wrap of document.querySelectorAll('[data-etbl]')) {
+    const btn = wrap.querySelector('[data-csv-btn]');
+    const dataEl = wrap.querySelector('[data-csv-data]');
+    if (!btn || !dataEl) continue;
+    btn.addEventListener('click', () => {
+      const { name, header, rows } = JSON.parse(dataEl.textContent || '{}');
+      const domRows = wrap.querySelectorAll<HTMLElement>('[data-row]');
+      const visible = rows.filter((_: string[], i: number) => !domRows[i]?.hidden);
+      if (!visible.length) return;
+      const csv = '﻿' + [header, ...visible]
+        .map((r: string[]) => r.map(csvCell).join(',')).join('\r\n');
+      const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${name}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  }
+</script>

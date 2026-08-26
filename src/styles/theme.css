@@ -137,7 +137,16 @@ h1, h2, h3 {
 .site-footer .mono { font-family: var(--font-mono); }
 
 /* ── generic entity table ── */
-.etbl-scroll { overflow-x: auto; margin-top: 14px; }
+.etbl-wrap { margin-top: 8px; }
+.etbl-tools { display: flex; justify-content: flex-end; }
+.csv-btn {
+  border: 1px solid var(--border); background: var(--bg-elev);
+  color: var(--text-dim); border-radius: var(--radius-sm);
+  padding: 3px 10px; font-size: 12px; cursor: pointer;
+  font-family: var(--font-ui);
+}
+.csv-btn:hover { border-color: var(--border-strong); color: var(--text-soft); }
+.etbl-scroll { overflow-x: auto; margin-top: 6px; }
 table.etbl { border-collapse: collapse; width: 100%; font-size: 13px; }
 .etbl th {
   text-align: left; font-weight: 600; color: var(--text-dim);
