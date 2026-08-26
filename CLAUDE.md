@@ -346,6 +346,18 @@ targets, scheduled against the campaign clock. Both fetch `public/values.json`
   values.json as `ages`. `current_age = X` is an **exact** match on the age
   you are in, not "this age or later" — a thing gated to age 1 is gone by
   age 2.
+- **The tech clock matters more than the age clock.** Only ~11 movers carry
+  an explicit `current_age` gate, so age gating alone is nearly flat and the
+  planner happily claimed you could swing Quantity in the 1340s. The real
+  constraint is that 187 movers carry **no trigger of their own** and simply
+  do not exist until an advance grants them: advances unlock 43 laws, 22
+  reforms, 12 cabinet actions and 10 privileges. `unlocked_by()` joins
+  `advances.json`'s `unlocks` items (`law:x`, `reform:x`, `privilege:x` — the
+  same ids movers carry) to the earliest granting advance's age, emitted as
+  `mover.unlock = {year, age, advance}`. A mover is unavailable before that
+  year. Quantity is the worked example: `A Large Standing Army` and `Jaysh
+  Armies` both need Absolutism-age advances (1637). Requires advances.json,
+  so build_values must run after build_advances.
 - **A stage waits for its age, it is not "impossible".** When no mover in the
   current age pushes the right way, the scheduler jumps the clock to the next
   age boundary. Only running out of campaign (1837) marks a stage stalled.
@@ -365,6 +377,11 @@ targets, scheduled against the campaign clock. Both fetch `public/values.json`
 - Government type is a compiled gate (`['gov', 'monarchy']`) on movers AND
   advances, selectable in both planners so a change of government can be
   planned. `build_planner.py` reads country-start.json to attach `f.gov`.
+- **Ordering by finish time cannot express wanting to sit on a position.**
+  Holding decentralization while subjects still earn their keep is a
+  judgement about your game, not something the files decide, so stages carry
+  a player-set `after` (not before year N) and `last` pin, and the scheduler
+  and order search both respect them. Don't try to infer these.
 - Unknown gates are **shown as unknown** — a suggestion whose trigger rests
   on a scripted trigger we cannot evaluate gets an "unverified" badge rather
   than being presented as available.

@@ -77,7 +77,8 @@ import Base from '../layouts/Base.astro';
     let country: any = null;
     let govOverride: string | null = null;
     /** Each stage: which axis, which way, and how far (null = to the pole). */
-    let path: { pair: string; dir: 'left' | 'right' | 'auto'; at: number | null }[] = [];
+    let path: { pair: string; dir: 'left' | 'right' | 'auto'; at: number | null;
+                after: number | null; last: boolean }[] = [];
 
     /* The path this tool was built around, as a starting point. Aristocracy
        is a hold-at-0, not a run to the plutocratic pole. */
@@ -93,7 +94,7 @@ import Base from '../layouts/Base.astro';
       ['quality_vs_quantity', 'right', null],
       ['offensive_vs_defensive', 'left', null],
       ['capital_economy_vs_traditional_economy', 'right', null],
-      ['centralization_vs_decentralization', 'left', null],
+      ['centralization_vs_decentralization', 'left', null, null, true],
     ];
 
     const sign = (d: string) => (d === 'right' ? 1 : -1);
@@ -137,7 +138,9 @@ import Base from '../layouts/Base.astro';
       govOverride || (country && (STARTS[country.t] || {}).type) || null;
     function facts(ageKey: string) {
       if (!country) return null;
-      return { ...country.f, cap: country.f.cap || {}, gov: govOf(), age: ageKey };
+      const a = ages().find((x: any) => x.key === ageKey);
+      return { ...country.f, cap: country.f.cap || {}, gov: govOf(),
+               age: ageKey, year: a ? a.year : START_YEAR };
     }
     function evalGate(e: any, f: any): boolean | null {
       if (!e) return true;
@@ -154,7 +157,15 @@ import Base from '../layouts/Base.astro';
       if (h === 'adv') return null;              // research it and you have it
       return f[h] === e[1];
     }
-    const usable = (m: any, f: any) => !f || !m.gate || evalGate(m.gate, f) !== false;
+    /** Available unless the country provably cannot take it — or the advance
+     *  that grants it does not exist yet. A lot of movers carry no trigger of
+     *  their own and are simply handed to you by an advance, which is the
+     *  real reason some axes cannot be swung early. */
+    const usable = (m: any, f: any) => {
+      if (!f) return true;
+      if (m.unlock && (f.year ?? START_YEAR) < m.unlock.year) return false;
+      return !m.gate || evalGate(m.gate, f) !== false;
+    };
     /** True only when the gate resolves cleanly. Some hang off scripted
      *  triggers we cannot read, and those stay openly unproven. */
     const confirmed = (m: any, f: any) => !f || !m.gate || evalGate(m.gate, f) === true;
@@ -260,6 +271,10 @@ import Base from '../layouts/Base.astro';
         const dir = dirOf(st, from);
         const goal = goalOf(st, from);
         const done = reached(from, st);
+        // A stage you are deliberately sitting on until a given year — you
+        // hold decentralization while the subjects are still worth having,
+        // and only then start the swing back.
+        if (st.after && year < st.after) year = st.after;
         const startedAt = year;
 
         let remaining = Math.abs(goal - from);
@@ -361,7 +376,10 @@ import Base from '../layouts/Base.astro';
       for (const st of path) rank.set(st, (seen[st.pair] = (seen[st.pair] ?? -1) + 1));
       const ok = (order: any[]) => {
         const last: Record<string, number> = {};
-        for (const st of order) {
+        for (let i = 0; i < order.length; i++) {
+          const st = order[i];
+          // pinned stages stay at the back, in the order they were pinned
+          if (st.last && order.slice(i + 1).some((x: any) => !x.last)) return false;
           const r = rank.get(st)!;
           if (r < (last[st.pair] ?? -1)) return false;
           last[st.pair] = r;
@@ -414,6 +432,8 @@ import Base from '../layouts/Base.astro';
           `${side.length > 3 ? ` +${side.length - 3}` : ''}</span>`
         : '';
       const adv = needsAdv(h.m);
+      const gift = h.m.unlock
+        ? `<span class="pp-need">from ${esc(h.m.unlock.advance)} · ${esc(h.m.unlock.age)}</span>` : '';
       const tech = adv.length
         ? `<span class="pp-need">needs ${esc(adv.slice(0, 2).join(', '))}</span>` : '';
       const iffy = confirmed(h.m, f) ? ''
@@ -422,7 +442,7 @@ import Base from '../layouts/Base.astro';
       const where = h.m.groupName ? esc(h.m.groupName) : esc(h.m.source);
       return `<div class="pp-mover ${cls}">${iconHtml(h.m)}` +
         `<span class="pp-mover__n">${esc(h.m.name)}</span>` +
-        `<span class="pp-mover__s">${where}</span>${iffy}${tech}${extra}` +
+        `<span class="pp-mover__s">${where}</span>${iffy}${gift}${tech}${extra}` +
         `<span class="pp-mover__p">${h.push > 0 ? '+' : ''}${h.push.toFixed(3)}/mo</span></div>`;
     }
 
@@ -467,6 +487,13 @@ import Base from '../layouts/Base.astro';
             <label class="pp-until">until
               <input type="number" step="5" min="-100" max="100" placeholder="pole"
                 data-edit="at:${i}" value="${st.at === null ? '' : st.at}" />
+            </label>
+            <label class="pp-until" title="Hold off until this year, whatever else is done">
+              not before <input type="number" step="10" min="1337" max="1837" placeholder="—"
+                class="pp-year" data-edit="after:${i}" value="${st.after ?? ''}" />
+            </label>
+            <label class="pp-until" title="Keep this stage last, however the rest is ordered">
+              <input type="checkbox" data-edit="last:${i}"${st.last ? ' checked' : ''} /> last
             </label>
             <span class="pp-mv">
               <button type="button" data-mv="${i}:-1" title="Earlier">↑</button>
@@ -545,7 +572,8 @@ import Base from '../layouts/Base.astro';
             <b>${goalTxt}</b>
             <span class="pp-axis">${esc(p.left.key)} ←→ ${esc(p.right.key)}</span>
             <span class="pp-from">${s.from.toFixed(0)} → ${s.stalled ? '—' : s.goal}</span>
-            <span class="pp-age">${esc(a.name)}</span>
+            <span class="pp-age">${esc(a.name)}</span>` +
+            (s.st.after ? `<span class="pp-hold">held to ${s.st.after}</span>` : '') + `
             ${status}
           </header>
           <div class="pp-body">
@@ -561,7 +589,14 @@ import Base from '../layouts/Base.astro';
         game slows a value's drift as it climbs and stalls it once the push
         runs out. A stage whose tools only open in a later age waits for that
         age rather than being called impossible, which is why "Best order"
-        moves those to the back. How many privileges you can run at once is
+        moves those to the back — and "later age" mostly means <em>later
+        advance</em>: 187 of the movers are not gated by a trigger at all but
+        simply handed to you by an advance, so they do not exist before that
+        advance's age. Ordering by finish time knows nothing about
+        wanting to <em>sit</em> on a position — holding decentralization while
+        your subjects still earn their keep is a judgement call about your
+        game, so set "not before" on that stage, or pin it last, and the
+        schedule works around it. How many privileges you can run at once is
         bounded by estate satisfaction, which the files do not state, so each
         stage takes at most ${TAKE} new movers, ranked by push.
       </p>`;
@@ -587,7 +622,12 @@ import Base from '../layouts/Base.astro';
       if (country) qs.set('c', country.t);
       if (govOverride) qs.set('g', govOverride);
       if (path.length) {
-        qs.set('p', path.map((s) => `${s.pair}:${s.dir}${s.at === null ? '' : ':' + s.at}`).join(','));
+        qs.set('p', path.map((s) => {
+          const tail = (s.after || s.last)
+            ? `:${s.at ?? ''}:${s.after ?? ''}${s.last ? ':L' : ''}`
+            : (s.at === null ? '' : ':' + s.at);
+          return `${s.pair}:${s.dir}${tail}`;
+        }).join(','));
       }
       history.replaceState(null, '', `${location.pathname}${qs.toString() ? '?' + qs : ''}`);
     }
@@ -645,9 +685,12 @@ import Base from '../layouts/Base.astro';
       const g = qs.get('g');
       if (g && GOVS.some(([k]) => k === g)) govOverride = g;
       for (const bit of (qs.get('p') || '').split(',').filter(Boolean)) {
-        const [pair, dir, at] = bit.split(':');
+        const [pair, dir, at, after, pin] = bit.split(':');
         if (pair in D.pairs && (dir === 'left' || dir === 'right' || dir === 'auto')) {
-          path.push({ pair, dir: dir as any, at: at === undefined || at === '' ? null : parseFloat(at) });
+          path.push({ pair, dir: dir as any,
+                      at: at === undefined || at === '' ? null : parseFloat(at),
+                      after: after === undefined || after === '' ? null : parseInt(after, 10),
+                      last: pin === 'L' });
         }
       }
       buildTable();
@@ -663,11 +706,13 @@ import Base from '../layouts/Base.astro';
       const pair = ($('[data-pp-axis]') as HTMLSelectElement).value;
       const dir = ($('[data-pp-goal]') as HTMLSelectElement).value as any;
       const raw = ($('[data-pp-at]') as HTMLInputElement).value.trim();
-      path.push({ pair, dir, at: raw === '' ? null : parseFloat(raw) });
+      path.push({ pair, dir, at: raw === '' ? null : parseFloat(raw),
+                  after: null, last: false });
       render();
     });
     $('[data-pp-example]').addEventListener('click', () => {
-      path = EXAMPLE.map(([pair, dir, at]) => ({ pair, dir, at }));
+      path = EXAMPLE.map(([pair, dir, at, after, last]) =>
+        ({ pair, dir, at, after: after ?? null, last: !!last }));
       render();
     });
     $('[data-pp-order]').addEventListener('click', () => {
@@ -690,6 +735,8 @@ import Base from '../layouts/Base.astro';
       if (!st) return;
       if (field === 'pair') st.pair = el.value;
       else if (field === 'dir') st.dir = el.value as any;
+      else if (field === 'last') st.last = el.checked;
+      else if (field === 'after') st.after = el.value.trim() === '' ? null : parseInt(el.value, 10);
       else st.at = el.value.trim() === '' ? null : parseFloat(el.value);
       render();
     });
@@ -747,6 +794,10 @@ import Base from '../layouts/Base.astro';
     .pp-from { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
     .pp-age { font-size: 11px; color: var(--text-dim); border: 1px solid var(--border-strong);
       border-radius: 3px; padding: 0 5px; }
+    .pp-hold { font-size: 11px; color: var(--gold-soft); border: 1px solid var(--gold-deep);
+      border-radius: 3px; padding: 0 5px; }
+    .pp-row input.pp-year { width: 58px; }
+    .pp-row input[type=checkbox] { accent-color: var(--gold); }
     .pp-when { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-dim); }
     .pp-ok { font-size: 11.5px; color: var(--good); }
     .pp-bad { font-size: 11.5px; color: var(--bad); }

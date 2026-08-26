@@ -81,6 +81,36 @@ def ages() -> list[dict]:
     return out
 
 
+def unlocked_by(age_years: dict[str, int]) -> dict[str, dict]:
+    """entity id → the earliest advance that unlocks it.
+
+    A lot of what moves a societal value is not gated by its own trigger at
+    all — it simply does not exist until an advance grants it. `Mass Levy
+    System` and `A Large Standing Army` read as available in 1337 otherwise,
+    which is how the planner ended up claiming you can swing Quantity in the
+    first decade. Advances carry their age, so this is the real tech clock.
+    """
+    out: dict[str, dict] = {}
+    src = ref.ROOT / 'src' / 'data' / 'advances.json'
+    if not src.exists():
+        return out
+    for e in json.loads(src.read_text())['entities']:
+        age = e.get('facets', {}).get('age')
+        year = age_years.get(age)
+        if not year:
+            continue
+        for grp in (e['data'].get('unlocks') or []):
+            for it in (grp.get('items') or []):
+                key = it.get('id')
+                if not key:
+                    continue
+                prev = out.get(key)
+                if prev is None or year < prev['year']:
+                    out[key] = {'year': year, 'age': age, 'advance': e['name'],
+                                'id': e['id']}
+    return out
+
+
 def value_pairs() -> dict[str, dict]:
     """The 17 axes. The id names both ends: left_vs_right."""
     pairs = {}
@@ -278,6 +308,8 @@ def requirements() -> list[dict]:
 
 def main():
     mags = magnitudes()
+    age_list = ages()
+    unlocks = unlocked_by({a['name']: a['year'] for a in age_list})
     labels = ref.label_map()
     cgroups = ref.culture_group_keys()
     pairs = value_pairs()
@@ -377,6 +409,7 @@ def main():
                 'gate': gate,
                 'gateLabels': gate_labels or [],
                 'estate': estate,
+                'unlock': unlocks.get(eid(etype, group or str(key))) if etype else None,
             })
 
     # the same key can appear in more than one file of a folder
@@ -457,7 +490,7 @@ def main():
         'pairs': pairs,
         'movers': movers,
         'requirements': reqs,
-        'ages': ages(),
+        'ages': age_list,
         'countries': countries,
         'cultures': cultures,
         'religions': religions,
