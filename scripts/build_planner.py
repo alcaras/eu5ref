@@ -76,7 +76,7 @@ def main():
             rec['i'] = e['icon']
         if d.get('gate'):
             rec['g'] = d['gate']
-            rec['gl'] = d.get('gate_labels') or []
+            rec['gl'] = d.get('gate_lits') or [[x, '?', ''] for x in (d.get('gate_labels') or [])]
         mods = [f"{m['value']} {m['label']}" for m in e['mods'][:5]]
         if mods:
             rec['m'] = mods
@@ -112,7 +112,20 @@ def main():
                   'g': r['data'].get('group_key')}
                  for r in religions_ds]
 
+    formables = json.loads((DATA / 'formables.json').read_text())['entities']
+    # tag → the gate that decides who can form it (null = anyone, given the
+    # territory). The planner evaluates it against the chosen country.
+    formable_gates: dict[str, list | None] = {}
+    for f in formables:
+        t = f['data'].get('tag')
+        if not t:
+            continue
+        g = f['data'].get('gate')
+        if t not in formable_gates or formable_gates[t] is not None:
+            formable_gates[t] = g
+
     payload = {
+        'formables': formable_gates,
         'version': patch['version'], 'vhash': vhash, 'order': order,
         'ages': [{'n': a, 'i': age_icon.get(a)} for a in ages],
         'nodes': nodes, 'countries': clist,

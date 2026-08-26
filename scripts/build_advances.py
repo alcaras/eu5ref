@@ -113,14 +113,19 @@ def main():
         national = bool(a.countries) or a.in_tree_of is not None or r['gate'] is not None
         root = root_of(name)
         gate = r['gate']
-        gate_labels = []
+        # Keep each literal's KIND and raw value alongside its label: the
+        # planner needs to tell "another country's tag" (unreachable) from a
+        # formable's tag (reachable) or a religion (convertible).
+        gate_labels, gate_lits = [], []
         if gate:
             seen = set()
-            for _, v in triggers.literals(gate):
+            for kind, v in triggers.literals(gate):
                 lab = labels.get(v) or ref.pretty(v)
-                if lab not in seen:
-                    seen.add(lab)
-                    gate_labels.append(lab)
+                if lab in seen:
+                    continue
+                seen.add(lab)
+                gate_labels.append(lab)
+                gate_lits.append([lab, kind, v])
         entities.append({
             'id': eid('advance', name),
             'type': 'advance',
@@ -143,6 +148,7 @@ def main():
                 'specialization': getattr(a, 'age_specialization', None),
                 'gate': gate,
                 'gate_labels': gate_labels,
+                'gate_lits': gate_lits,
                 'requires_state': triggers.summarize(getattr(a, 'allow', None), labels),
                 'unlocks': collect_unlocks(a),
             },

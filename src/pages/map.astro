@@ -12,9 +12,16 @@ import Base from '../layouts/Base.astro';
 
   <div class="mp" data-mp>
     <div class="mp-modes" data-mp-modes></div>
+    <div class="mp-filter">
+      <input type="search" data-mp-q autocomplete="off" placeholder="Highlight one value…" />
+      <div class="mp-suggest" data-mp-suggest hidden></div>
+      <span class="chips" data-mp-active></span>
+    </div>
     <div class="mp-stage" data-mp-stage>
       <div class="mp-canvas" data-mp-canvas>
         <img data-mp-img alt="" draggable="false" />
+        <canvas data-mp-hl hidden></canvas>
+        <img data-mp-borders alt="" draggable="false" />
       </div>
       <div class="mp-hud" data-mp-hud>loading map…</div>
       <div class="mp-zoom">
@@ -24,6 +31,7 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
     <div class="mp-legend" data-mp-legend></div>
+    <div class="mp-list" data-mp-list></div>
   </div>
 
   <style is:global>
@@ -65,6 +73,53 @@ import Base from '../layouts/Base.astro';
     .mp-legend span { display: flex; align-items: center; gap: 5px; }
     .mp-legend i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
     .mp-legend small { color: var(--text-faint); }
+    .mp-legend span { cursor: pointer; }
+    .mp-legend span:hover { color: var(--text); }
+
+    .mp-filter { position: relative; display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+    .mp-filter input {
+      background: var(--bg-elev); color: var(--text); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 6px 11px; font-size: 13px;
+      width: 260px; font-family: var(--font-ui);
+    }
+    .mp-filter input:focus { outline: none; border-color: var(--gold-deep); }
+    .mp-suggest {
+      position: absolute; left: 0; top: calc(100% + 4px); z-index: 20;
+      min-width: 260px; max-height: 300px; overflow-y: auto; padding: 5px;
+      background: var(--bg-elev); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-sm);
+    }
+    .mp-suggest button {
+      display: flex; width: 100%; align-items: center; gap: 7px; text-align: left;
+      background: none; border: 0; color: var(--text-soft); cursor: pointer;
+      padding: 5px 8px; border-radius: var(--radius-sm); font-size: 12.5px;
+      font-family: var(--font-ui);
+    }
+    .mp-suggest button:hover { background: var(--bg-elev-2); color: var(--text); }
+    .mp-suggest i { width: 11px; height: 11px; border-radius: 2px; flex: none; }
+    .mp-suggest small { margin-left: auto; color: var(--text-faint); }
+    .chip.mp-clear { cursor: pointer; border-color: var(--gold-deep); color: var(--gold); }
+
+    .mp-canvas canvas { position: absolute; inset: 0; image-rendering: pixelated; }
+    /* province outlines, drawn over whichever mode is showing — without them
+       a filtered map is just shapes floating in the dark */
+    .mp-canvas img[data-mp-borders] {
+      position: absolute; inset: 0; pointer-events: none; opacity: .75;
+    }
+    .mp-list { margin-top: 14px; }
+    .mp-list__head { font-size: 12.5px; color: var(--text-dim); margin-bottom: 8px; }
+    .mp-list__grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 2px 12px;
+      max-height: 420px; overflow-y: auto;
+    }
+    .mp-list__grid a, .mp-list__grid span.row {
+      display: flex; gap: 8px; padding: 3px 7px; border-radius: 3px;
+      font-size: 12.5px; color: var(--text-soft); border-left: 2px solid transparent;
+    }
+    .mp-list__grid a:hover, .mp-list__grid span.row:hover {
+      background: var(--bg-elev-2); text-decoration: none; border-left-color: var(--gold);
+    }
+    .mp-list__grid .pv { margin-left: auto; color: var(--text-faint); font-size: 11.5px; white-space: nowrap; }
   </style>
 
   <script>
@@ -74,14 +129,21 @@ import Base from '../layouts/Base.astro';
     const stage = $('[data-mp-stage]');
     const canvas = $('[data-mp-canvas]');
     const img = $('[data-mp-img]') as HTMLImageElement;
+    const hl = $('[data-mp-hl]') as HTMLCanvasElement;
     const hud = $('[data-mp-hud]');
+    const qInput = $('[data-mp-q]') as HTMLInputElement;
+    const suggest = $('[data-mp-suggest]');
 
     let L: any = null;
     let mode = 'religion';
+    let filter: string | null = null;
     let zoom = 1, ox = 0, oy = 0;
-    // the id map, drawn once into an offscreen canvas so we can read which
-    // location a pixel belongs to
-    let idCtx: CanvasRenderingContext2D | null = null;
+    let idCtx: CanvasRenderingContext2D | null = null;   // id map, for hit-testing
+    let idData: Uint8ClampedArray | null = null;         // ...and for highlighting
+
+    const esc = (t: string) => String(t).replace(/[&<>"]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
+    const field = () => L.modeField[mode] ?? 2;
 
     function apply() {
       canvas.style.transform = `translate(${ox}px, ${oy}px) scale(${zoom})`;
@@ -93,16 +155,109 @@ import Base from '../layouts/Base.astro';
       oy = (stage.clientHeight - L.height * zoom) / 2;
       apply();
     }
+
     function setMode(m: string) {
       mode = m;
       img.src = `${baseUrl}map/${m}.png`;
-      for (const b of root.querySelectorAll('[data-mode]')) b.classList.toggle('on',
-        (b as HTMLElement).dataset.mode === m);
-      const entries = L.modes[m].entries.slice(0, 26);
+      for (const b of root.querySelectorAll('[data-mode]'))
+        b.classList.toggle('on', (b as HTMLElement).dataset.mode === m);
+      renderLegend();
+      setFilter(null);                 // a value from the old mode means nothing here
+      qInput.placeholder = `Highlight one ${L.modes[m].label.toLowerCase()}…`;
+    }
+
+    function renderLegend() {
+      const entries = L.modes[mode].entries.slice(0, 26);
       $('[data-mp-legend]').innerHTML = entries.map((e: any) =>
-        `<span><i style="background:${e.color}"></i>${e.name} <small>${e.count}</small></span>`).join('') +
-        (L.modes[m].entries.length > entries.length
-          ? `<span><small>+${L.modes[m].entries.length - entries.length} more</small></span>` : '');
+        `<span data-pick="${esc(e.name)}"><i style="background:${e.color}"></i>${esc(e.name)}` +
+        ` <small>${e.count}</small></span>`).join('') +
+        (L.modes[mode].entries.length > entries.length
+          ? `<span><small>+${L.modes[mode].entries.length - entries.length} more — use the box above</small></span>`
+          : '');
+    }
+
+    /** Repaint the map so only locations matching the filter keep their
+     *  colour; everything else goes flat grey. Done from the id map, one
+     *  pass over the pixels (~8M, a few tens of ms). */
+    function paintHighlight() {
+      if (!filter || !idData || !L) { hl.hidden = true; return; }
+      const f = field();
+      const match = new Uint8Array(L.locations.length);
+      const land = new Uint8Array(L.locations.length);
+      for (let i = 0; i < L.locations.length; i++) {
+        if (L.locations[i][f] === filter) match[i] = 1;
+        if (L.locations[i][13]) land[i] = 1;
+      }
+      // A bright fixed highlight, not the value's own colour: many in-game
+      // colours (iron, coal, stone) are dark and vanish against the dimmed
+      // map. The legend still shows the real colour.
+      const cr = 240, cg = 200, cb = 96;
+      hl.width = L.width; hl.height = L.height;
+      const ctx = hl.getContext('2d')!;
+      const out = ctx.createImageData(L.width, L.height);
+      const o = out.data, src = idData;
+      for (let p = 0, n = L.width * L.height; p < n; p++) {
+        const k = p * 4;
+        const ix = (src[k] << 16) | (src[k + 1] << 8) | src[k + 2];
+        if (ix !== 0xFFFFFF && match[ix]) {
+          o[k] = cr; o[k + 1] = cg; o[k + 2] = cb; o[k + 3] = 255;
+        } else if (ix !== 0xFFFFFF && land[ix]) {
+          o[k] = 58; o[k + 1] = 64; o[k + 2] = 78; o[k + 3] = 255;   // other land
+        } else {
+          o[k] = 20; o[k + 1] = 25; o[k + 2] = 36; o[k + 3] = 255;   // sea
+        }
+      }
+      ctx.putImageData(out, 0, 0);
+      hl.hidden = false;
+    }
+
+    /** Every location matching the filter, grouped by area. */
+    function renderList() {
+      const box = $('[data-mp-list]');
+      if (!filter) { box.innerHTML = ''; return; }
+      const f = field();
+      const hits = L.locations.filter((r: any) => r[f] === filter);
+      const byArea = new Map<string, any[]>();
+      for (const r of hits) {
+        const key = r[5] || '—';
+        if (!byArea.has(key)) byArea.set(key, []);
+        byArea.get(key)!.push(r);
+      }
+      const areas = [...byArea.entries()].sort((a, b) => b[1].length - a[1].length);
+      box.innerHTML =
+        `<div class="mp-list__head"><b>${hits.length.toLocaleString()}</b> locations with ` +
+        `<b>${esc(filter)}</b>, across ${areas.length.toLocaleString()} areas</div>` +
+        `<div class="mp-list__grid">` +
+        areas.slice(0, 400).flatMap(([area, rows]) => rows.map((r: any) => {
+          const tip = `${r[0]} — ${r[6]}, ${r[5]}${r[7] ? ` · ${r[7]}` : ''}` +
+                      `${r[8] ? ` · ${r[8]} pops` : ''} · ${r[2] || '—'} · ${r[3] || '—'} · ${r[4] || '—'}`;
+          const inner = `<span>${esc(r[0])}</span><span class="pv">${esc(r[6] || area)}</span>`;
+          return r[12]
+            ? `<a href="${baseUrl}locations/${r[12]}" title="${esc(tip)}">${inner}</a>`
+            : `<a href="${baseUrl}areas/${r[1]}" title="${esc(tip)}">${inner}</a>`;
+        })).join('') +
+        `</div>`;
+    }
+
+    function setFilter(v: string | null) {
+      filter = v;
+      qInput.value = '';
+      suggest.hidden = true;
+      $('[data-mp-active]').innerHTML = v
+        ? `<span class="chip mp-clear" data-clear>${esc(v)} ✕</span>` : '';
+      paintHighlight();
+      renderList();
+    }
+
+    function renderSuggest() {
+      const term = qInput.value.trim().toLowerCase();
+      if (!term) { suggest.hidden = true; return; }
+      const hits = L.modes[mode].entries
+        .filter((e: any) => e.name.toLowerCase().includes(term)).slice(0, 40);
+      suggest.innerHTML = hits.map((e: any) =>
+        `<button type="button" data-pick="${esc(e.name)}"><i style="background:${e.color}"></i>` +
+        `${esc(e.name)}<small>${e.count}</small></button>`).join('');
+      suggest.hidden = hits.length === 0;
     }
 
     function locAt(clientX: number, clientY: number) {
@@ -126,11 +281,13 @@ import Base from '../layouts/Base.astro';
         if (b) setMode(b.dataset.mode!);
       });
       img.width = L.width; img.height = L.height;
+      const bimg = $('[data-mp-borders]') as HTMLImageElement;
+      bimg.width = L.width; bimg.height = L.height;
+      bimg.src = `${baseUrl}map/borders.png`;
       setMode(mode);
       fit();
       hud.textContent = 'hover a location';
 
-      // load the id map for hit-testing
       const idImg = new Image();
       idImg.onload = () => {
         const c = document.createElement('canvas');
@@ -138,13 +295,39 @@ import Base from '../layouts/Base.astro';
         const ctx = c.getContext('2d', { willReadFrequently: true })!;
         ctx.drawImage(idImg, 0, 0);
         idCtx = ctx;
+        idData = ctx.getImageData(0, 0, L.width, L.height).data;
+        if (filter) paintHighlight();
       };
       idImg.src = `${baseUrl}map/index.png`;
     });
 
-    // pan
+    // filter controls
+    qInput.addEventListener('input', renderSuggest);
+    qInput.addEventListener('focus', renderSuggest);
+    suggest.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('[data-pick]') as HTMLElement | null;
+      if (b) setFilter(b.dataset.pick!);
+    });
+    $('[data-mp-legend]').addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('[data-pick]') as HTMLElement | null;
+      if (b) setFilter(filter === b.dataset.pick ? null : b.dataset.pick!);
+    });
+    $('[data-mp-active]').addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('[data-clear]')) setFilter(null);
+    });
+    document.addEventListener('click', (e) => {
+      if (!suggest.contains(e.target as Node) && e.target !== qInput) suggest.hidden = true;
+    });
+
+    // ── pan / zoom ─────────────────────────────────────────────
+    // The zoom buttons live inside the stage, so anything starting on them
+    // must not also pan the map or open the location underneath.
+    const onControls = (t: EventTarget | null) =>
+      !!(t as HTMLElement)?.closest?.('.mp-zoom, .mp-hud');
+
     let down = false, sx = 0, sy = 0, bx = 0, by = 0, moved = false;
     stage.addEventListener('mousedown', (e) => {
+      if (onControls(e.target)) return;
       down = true; moved = false;
       sx = e.clientX; sy = e.clientY; bx = ox; by = oy;
       stage.classList.add('dragging');
@@ -156,17 +339,20 @@ import Base from '../layouts/Base.astro';
         apply();
         return;
       }
+      if (onControls(e.target)) return;
       const l = locAt(e.clientX, e.clientY);
       if (!l) { hud.textContent = 'hover a location'; return; }
-      hud.innerHTML = `<b>${l[0]}</b>` +
-        (l[2] ? `${l[2]}<br>` : '') +
-        `<small>${[l[3], l[4]].filter(Boolean).join(' · ')}</small>`;
+      hud.innerHTML = `<b>${esc(l[0])}</b>` +
+        (l[2] ? `${esc(l[2])}<br>` : '') +
+        `<small>${[l[3], l[4]].filter(Boolean).map(esc).join(' · ')}` +
+        `${l[6] ? ` — ${esc(l[6])}, ${esc(l[5])}` : ''}</small>`;
     });
     addEventListener('mouseup', () => { down = false; stage.classList.remove('dragging'); });
     stage.addEventListener('click', (e) => {
-      if (moved) return;
+      if (moved || onControls(e.target)) return;
       const l = locAt(e.clientX, e.clientY);
-      if (l && l[1]) location.href = `${baseUrl}areas/${l[1]}`;
+      if (!l) return;
+      location.href = l[12] ? `${baseUrl}locations/${l[12]}` : `${baseUrl}areas/${l[1]}`;
     });
     stage.addEventListener('wheel', (e) => {
       e.preventDefault();
@@ -179,7 +365,8 @@ import Base from '../layouts/Base.astro';
       zoom = nz; apply();
     }, { passive: false });
     for (const b of root.querySelectorAll<HTMLElement>('[data-mp-zoom]')) {
-      b.addEventListener('click', () => {
+      b.addEventListener('click', (e) => {
+        e.stopPropagation();
         const k = b.dataset.mpZoom;
         if (k === '0') return fit();
         const nz = Math.min(12, Math.max(0.3, zoom * (k === '+' ? 1.4 : 1 / 1.4)));

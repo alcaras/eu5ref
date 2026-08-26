@@ -145,6 +145,10 @@ def main():
     fents = []
     for name, f in sorted(formables.items()):
         slug = slugify(name)
+        # Who may form it. Territory requirements are dynamic (you can
+        # conquer your way there), but a culture or religion requirement is
+        # what stops Castile from forming Scandinavia.
+        fgate, fgate_labels = ref.gate_of(f, 'potential', 'allow')
         fents.append({
             'id': eid('formable', name),
             'type': 'formable',
@@ -157,6 +161,9 @@ def main():
             },
             'mods': [],
             'data': {
+                'tag': str(getattr(f, 'country_name', '') or getattr(f, 'tag', '') or ''),
+                'gate': fgate,
+                'gate_labels': fgate_labels,
                 'capital_required': bool(getattr(f, 'capital_required', True)),
                 'regions': [r.display_name for r in (getattr(f, 'regions', None) or [])],
                 'areas': [a.display_name for a in (getattr(f, 'areas', None) or [])],

@@ -6,9 +6,33 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cgrp",
+              "maghrebi_group"
+            ],
+            [
+              "cgrp",
+              "iberian_group"
+            ]
+          ],
+          [
+            "rgrp",
+            "muslim"
+          ]
+        ],
+        "gate_labels": [
+          "Maghrebi",
+          "Iberian",
+          "Islam"
+        ],
         "regions": [
           "Iberia"
-        ]
+        ],
+        "tag": "ADU"
       },
       "desc": [
         [
@@ -30,9 +54,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "arabian_group"
+        ],
+        "gate_labels": [
+          "Arabian"
+        ],
         "regions": [
           "Arabia"
-        ]
+        ],
+        "tag": "AIA"
       },
       "desc": [
         [
@@ -56,7 +88,15 @@
           "Air"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "tuareg"
+        ],
+        "gate_labels": [
+          "Tuareg"
+        ],
+        "regions": [],
+        "tag": "AIR"
       },
       "desc": [
         [
@@ -78,7 +118,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "albanian"
+        ],
+        "gate_labels": [
+          "Albanian"
+        ],
+        "regions": [],
+        "tag": "ALB"
       },
       "desc": [
         [
@@ -102,7 +150,15 @@
           "Armenia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "armenian_culture"
+        ],
+        "gate_labels": [
+          "Armenian"
+        ],
+        "regions": [],
+        "tag": "ARM"
       },
       "desc": [
         [
@@ -124,7 +180,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "ASK"
       },
       "desc": null,
       "facets": {
@@ -141,7 +203,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "AYU"
       },
       "desc": [
         [
@@ -163,9 +231,24 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "rel",
+            "nahuatl"
+          ],
+          [
+            "cul",
+            "nahua_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Nahua"
+        ],
         "regions": [
           "Mesoamerica"
-        ]
+        ],
+        "tag": "AZT"
       },
       "desc": [
         [
@@ -187,7 +270,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "BAH"
       },
       "desc": [
         [
@@ -209,7 +298,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "sundanese_culture"
+        ],
+        "gate_labels": [
+          "Sundanese"
+        ],
+        "regions": [],
+        "tag": "BAN"
       },
       "desc": [
         [
@@ -233,7 +330,15 @@
           "Bavaria"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "danube_bavarian"
+        ],
+        "gate_labels": [
+          "Danube Bavarian"
+        ],
+        "regions": [],
+        "tag": "BAV"
       },
       "desc": [
         [
@@ -255,7 +360,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "beja_culture"
+        ],
+        "gate_labels": [
+          "Beja"
+        ],
+        "regions": [],
+        "tag": "BEJ"
       },
       "desc": [
         [
@@ -281,7 +394,30 @@
           "Wallonia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "walloon"
+            ],
+            [
+              "cul",
+              "low_franconian"
+            ]
+          ],
+          [
+            "?",
+            "current age or later age"
+          ]
+        ],
+        "gate_labels": [
+          "Walloon",
+          "Low Franconian"
+        ],
+        "regions": [],
+        "tag": "BEL"
       },
       "desc": [
         [
@@ -310,7 +446,46 @@
           "Switzerland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "arpitan"
+          ],
+          [
+            "cul",
+            "vivaro_alpine"
+          ],
+          [
+            "cul",
+            "franc_comtois"
+          ],
+          [
+            "cul",
+            "provencal"
+          ],
+          [
+            "or",
+            [
+              "tag",
+              "DAU"
+            ],
+            [
+              "tag",
+              "SAV"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Arpitan",
+          "Alpine",
+          "Franc Comtois",
+          "Provençal",
+          "Viennois",
+          "Savoy"
+        ],
+        "regions": [],
+        "tag": "BGP"
       },
       "desc": [
         [
@@ -334,7 +509,15 @@
           "Bengal"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "bengali"
+        ],
+        "gate_labels": [
+          "Bengali"
+        ],
+        "regions": [],
+        "tag": "BNG"
       },
       "desc": [
         [
@@ -359,7 +542,10 @@
           "South Borneo"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": null,
+        "gate_labels": [],
+        "regions": [],
+        "tag": "BNO"
       },
       "desc": [
         [
@@ -384,7 +570,23 @@
           "Moravia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "czech"
+          ],
+          [
+            "cul",
+            "moravian"
+          ]
+        ],
+        "gate_labels": [
+          "Czech",
+          "Moravian"
+        ],
+        "regions": [],
+        "tag": "BOH"
       },
       "desc": [
         [
@@ -408,7 +610,15 @@
           "Bulgaria"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "bulgarian"
+        ],
+        "gate_labels": [
+          "Bulgarian"
+        ],
+        "regions": [],
+        "tag": "BUL"
       },
       "desc": [
         [
@@ -430,10 +640,28 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "greek_group"
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "TRE"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Roman"
+        ],
         "regions": [
           "Balkans",
           "Anatolia"
-        ]
+        ],
+        "tag": "BYZ"
       },
       "desc": [
         [
@@ -455,10 +683,26 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TRE"
+          ],
+          [
+            "cgrp",
+            "greek_group"
+          ]
+        ],
+        "gate_labels": [
+          "Trebizond",
+          "Roman"
+        ],
         "regions": [
           "Balkans",
           "Anatolia"
-        ]
+        ],
+        "tag": "BYZ"
       },
       "desc": [
         [
@@ -480,9 +724,32 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "culture is culture native american"
+          ],
+          [
+            "or",
+            [
+              "cgrp",
+              "british_group"
+            ],
+            [
+              "cgrp",
+              "french_group"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "British",
+          "French"
+        ],
         "regions": [
           "Canada"
-        ]
+        ],
+        "tag": "CAN"
       },
       "desc": [
         [
@@ -510,9 +777,17 @@
           "Brittany"
         ],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "celtic_group"
+        ],
+        "gate_labels": [
+          "Celtic"
+        ],
         "regions": [
           "Ireland"
-        ]
+        ],
+        "tag": "CEL"
       },
       "desc": [
         [
@@ -534,12 +809,30 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "chinese_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "exists"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Chinese"
+        ],
         "regions": [
           "West China",
           "East China",
           "North China",
           "South China"
-        ]
+        ],
+        "tag": "CHI"
       },
       "desc": [
         [
@@ -563,7 +856,15 @@
           "Matrega"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "circassian_culture"
+        ],
+        "gate_labels": [
+          "Circassian"
+        ],
+        "regions": [],
+        "tag": "CIR"
       },
       "desc": [
         [
@@ -587,7 +888,23 @@
           "Connaught"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "celtic_group"
+          ],
+          [
+            "cgrp",
+            "hibernian_group"
+          ]
+        ],
+        "gate_labels": [
+          "Celtic",
+          "Hibernian"
+        ],
+        "regions": [],
+        "tag": "CNN"
       },
       "desc": [
         [
@@ -612,7 +929,15 @@
           "Slavonia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "croatian"
+        ],
+        "gate_labels": [
+          "Croatian"
+        ],
+        "regions": [],
+        "tag": "CRO"
       },
       "desc": [
         [
@@ -634,7 +959,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "CSH"
       },
       "desc": null,
       "facets": {
@@ -656,7 +987,13 @@
           "Al-Maġrib al-Awsat"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "owns"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "CTH"
       },
       "desc": [
         [
@@ -678,7 +1015,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "DAH"
       },
       "desc": [
         [
@@ -702,7 +1045,23 @@
           "Croatia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "dalmatian"
+          ],
+          [
+            "cul",
+            "croatian"
+          ]
+        ],
+        "gate_labels": [
+          "Dalmatian",
+          "Croatian"
+        ],
+        "regions": [],
+        "tag": "DAL"
       },
       "desc": [
         [
@@ -724,9 +1083,30 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "lang",
+            "marathi_language"
+          ],
+          [
+            "lang",
+            "kannada_language"
+          ],
+          [
+            "lang",
+            "telugu_language"
+          ]
+        ],
+        "gate_labels": [
+          "Marathi",
+          "Kannada",
+          "Telugu"
+        ],
         "regions": [
           "Deccan"
-        ]
+        ],
+        "tag": "DEC"
       },
       "desc": [
         [
@@ -748,9 +1128,47 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "rgrp",
+            "muslim"
+          ],
+          [
+            "or",
+            [
+              "cgrp",
+              "indian_group"
+            ],
+            [
+              "cgrp",
+              "iranian_group"
+            ],
+            [
+              "cgrp",
+              "mongolian_group"
+            ],
+            [
+              "cgrp",
+              "turkic_group"
+            ]
+          ],
+          [
+            "?",
+            "owns"
+          ]
+        ],
+        "gate_labels": [
+          "Islam",
+          "Indian",
+          "Iranian",
+          "Mongol",
+          "Turkic"
+        ],
         "regions": [
           "Hindustan"
-        ]
+        ],
+        "tag": "DLH"
       },
       "desc": [
         [
@@ -776,7 +1194,23 @@
           "Highlands"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "scottish_group"
+          ],
+          [
+            "cgrp",
+            "hibernian_group"
+          ]
+        ],
+        "gate_labels": [
+          "Scottish",
+          "Hibernian"
+        ],
+        "regions": [],
+        "tag": "DRD"
       },
       "desc": [
         [
@@ -798,9 +1232,18 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "not",
+          [
+            "tag",
+            "MAM"
+          ]
+        ],
+        "gate_labels": [],
         "regions": [
           "Egypt"
-        ]
+        ],
+        "tag": "EGY"
       },
       "desc": [
         [
@@ -830,7 +1273,22 @@
           "Lowlands"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "english"
+          ],
+          [
+            "lang",
+            "english_language"
+          ]
+        ],
+        "gate_labels": [
+          "English"
+        ],
+        "regions": [],
+        "tag": "ENG"
       },
       "desc": [
         [
@@ -852,9 +1310,43 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "agaw_culture"
+            ],
+            [
+              "cul",
+              "amhara"
+            ],
+            [
+              "cul",
+              "tigre"
+            ],
+            [
+              "cul",
+              "tigrinya"
+            ]
+          ],
+          [
+            "rel",
+            "miaphysite"
+          ]
+        ],
+        "gate_labels": [
+          "Agaw",
+          "Amhara",
+          "Tigre",
+          "Tigrinya",
+          "Miaphysitism"
+        ],
         "regions": [
           "Ethiopia"
-        ]
+        ],
+        "tag": "ETH"
       },
       "desc": [
         [
@@ -876,7 +1368,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "is hegemon"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "EUR"
       },
       "desc": [
         [
@@ -900,7 +1398,15 @@
           "Finland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "finnish"
+        ],
+        "gate_labels": [
+          "Finnish"
+        ],
+        "regions": [],
+        "tag": "FIN"
       },
       "desc": [
         [
@@ -924,7 +1430,15 @@
           "Franconia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "east_franconian"
+        ],
+        "gate_labels": [
+          "East Franconian"
+        ],
+        "regions": [],
+        "tag": "FKN"
       },
       "desc": [
         [
@@ -946,9 +1460,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "french_group"
+        ],
+        "gate_labels": [
+          "French"
+        ],
         "regions": [
           "France"
-        ]
+        ],
+        "tag": "FRA"
       },
       "desc": [
         [
@@ -970,9 +1492,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "british_group"
+        ],
+        "gate_labels": [
+          "British"
+        ],
         "regions": [
           "Britain"
-        ]
+        ],
+        "tag": "GBR"
       },
       "desc": [
         [
@@ -996,7 +1526,15 @@
           "Georgia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "georgian_culture"
+        ],
+        "gate_labels": [
+          "Georgian"
+        ],
+        "regions": [],
+        "tag": "GEO"
       },
       "desc": [
         [
@@ -1018,10 +1556,18 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "german_group"
+        ],
+        "gate_labels": [
+          "German"
+        ],
         "regions": [
           "Northern Germany",
           "Southern Germany"
-        ]
+        ],
+        "tag": "GER"
       },
       "desc": [
         [
@@ -1043,7 +1589,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "GLD"
       },
       "desc": [
         [
@@ -1071,7 +1623,26 @@
           "Aegean Archipelago"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "country exists"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "TUR"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "GRE"
       },
       "desc": [
         [
@@ -1096,7 +1667,15 @@
           "Saurashtra"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "gujarati_language"
+        ],
+        "gate_labels": [
+          "Gujarati"
+        ],
+        "regions": [],
+        "tag": "GUJ"
       },
       "desc": [
         [
@@ -1122,7 +1701,23 @@
           "Carinthia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "danube_bavarian"
+          ],
+          [
+            "cul",
+            "southern_bavarian"
+          ]
+        ],
+        "gate_labels": [
+          "Danube Bavarian",
+          "Southern Bavarian"
+        ],
+        "regions": [],
+        "tag": "HAB"
       },
       "desc": [
         [
@@ -1146,7 +1741,15 @@
           "Lower Saxony"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "lower_saxon"
+        ],
+        "gate_labels": [
+          "Lower Saxon"
+        ],
+        "regions": [],
+        "tag": "HAN"
       },
       "desc": [
         [
@@ -1171,7 +1774,15 @@
           "South Hausaland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "hausa"
+        ],
+        "gate_labels": [
+          "Hausa"
+        ],
+        "regions": [],
+        "tag": "HAU"
       },
       "desc": [
         [
@@ -1196,7 +1807,15 @@
           "Lowlands"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "brythonic_language"
+        ],
+        "gate_labels": [
+          "Brythonic"
+        ],
+        "regions": [],
+        "tag": "HEN"
       },
       "desc": [
         [
@@ -1218,7 +1837,10 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": null,
+        "gate_labels": [],
+        "regions": [],
+        "tag": "HIN"
       },
       "desc": [
         [
@@ -1240,10 +1862,23 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "exists"
+          ],
+          [
+            "?",
+            "is member of international organization"
+          ]
+        ],
+        "gate_labels": [],
         "regions": [
           "Northern Germany",
           "Southern Germany"
-        ]
+        ],
+        "tag": "HRE"
       },
       "desc": [
         [
@@ -1269,7 +1904,15 @@
           "Transdanubia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "hungarian_group"
+        ],
+        "gate_labels": [
+          "Magyar"
+        ],
+        "regions": [],
+        "tag": "HUN"
       },
       "desc": [
         [
@@ -1293,7 +1936,15 @@
           "Iceland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "icelandic"
+        ],
+        "gate_labels": [
+          "Icelandic"
+        ],
+        "regions": [],
+        "tag": "ICE"
       },
       "desc": [
         [
@@ -1324,9 +1975,29 @@
           "Cappadocia"
         ],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "exists"
+          ],
+          [
+            "?",
+            "is member of international organization"
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "IRA"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "regions": [
           "Persia"
-        ]
+        ],
+        "tag": "ILK"
       },
       "desc": [
         [
@@ -1351,7 +2022,15 @@
           "Puna"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "quechuan_language"
+        ],
+        "gate_labels": [
+          "Quechuan"
+        ],
+        "regions": [],
+        "tag": "INC"
       },
       "desc": [
         [
@@ -1373,9 +2052,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "iranian_group"
+        ],
+        "gate_labels": [
+          "Iranian"
+        ],
         "regions": [
           "Persia"
-        ]
+        ],
+        "tag": "IRA"
       },
       "desc": [
         [
@@ -1397,9 +2084,42 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cgrp",
+              "hibernian_group"
+            ],
+            [
+              "tag",
+              "PLE"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is member of international organization of type type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is member of international organization"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Hibernian",
+          "Pale"
+        ],
         "regions": [
           "Ireland"
-        ]
+        ],
+        "tag": "IRE"
       },
       "desc": [
         [
@@ -1421,9 +2141,15 @@
       "data": {
         "areas": [],
         "capital_required": false,
+        "gate": [
+          "?",
+          "is member of international organization of type type"
+        ],
+        "gate_labels": [],
         "regions": [
           "Ireland"
-        ]
+        ],
+        "tag": "IRE"
       },
       "desc": [
         [
@@ -1445,9 +2171,15 @@
       "data": {
         "areas": [],
         "capital_required": false,
+        "gate": [
+          "?",
+          "is member of international organization"
+        ],
+        "gate_labels": [],
         "regions": [
           "Ireland"
-        ]
+        ],
+        "tag": "IRE"
       },
       "desc": [
         [
@@ -1469,7 +2201,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "haudenosaunee_group"
+        ],
+        "gate_labels": [
+          "Haudenosaunee"
+        ],
+        "regions": [],
+        "tag": "IRO"
       },
       "desc": [
         [
@@ -1491,9 +2231,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "italian_group"
+        ],
+        "gate_labels": [
+          "Italian"
+        ],
         "regions": [
           "Italy"
-        ]
+        ],
+        "tag": "ITA"
       },
       "desc": [
         [
@@ -1515,7 +2263,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "JAP"
       },
       "desc": null,
       "facets": {
@@ -1535,7 +2289,15 @@
           "Zhetysu"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "kipchak_language"
+        ],
+        "gate_labels": [
+          "Kipchak"
+        ],
+        "regions": [],
+        "tag": "KAZ"
       },
       "desc": [
         [
@@ -1560,7 +2322,15 @@
           "Tripoli"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "rel",
+          "catholic"
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "regions": [],
+        "tag": "KOA"
       },
       "desc": [
         [
@@ -1582,7 +2352,35 @@
       "data": {
         "areas": [],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "or",
+            [
+              "tag",
+              "CYP"
+            ],
+            [
+              "tag",
+              "NAP"
+            ],
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism",
+          "Cyprus",
+          "Naples"
+        ],
+        "regions": [],
+        "tag": "KOJ"
       },
       "desc": [
         [
@@ -1607,7 +2405,15 @@
           "Kongo"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "rel",
+          "bantu_religion"
+        ],
+        "gate_labels": [
+          "Bantu"
+        ],
+        "regions": [],
+        "tag": "KON"
       },
       "desc": [
         [
@@ -1631,7 +2437,15 @@
           "Kordestān"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "kurdish_culture"
+        ],
+        "gate_labels": [
+          "Kurdish"
+        ],
+        "regions": [],
+        "tag": "KRS"
       },
       "desc": [
         [
@@ -1653,7 +2467,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "gilak_culture"
+        ],
+        "gate_labels": [
+          "Gilak"
+        ],
+        "regions": [],
+        "tag": "KRY"
       },
       "desc": [
         [
@@ -1678,7 +2500,40 @@
           "Morea"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "country exists"
+            ]
+          ],
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "current age or later age"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "regions": [],
+        "tag": "LAT"
       },
       "desc": [
         [
@@ -1703,7 +2558,43 @@
           "Morea"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "country exists"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ],
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "current age or later age"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "regions": [],
+        "tag": "LAT"
       },
       "desc": [
         [
@@ -1727,7 +2618,15 @@
           "Baltic"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "german_group"
+        ],
+        "gate_labels": [
+          "German"
+        ],
+        "regions": [],
+        "tag": "LIV"
       },
       "desc": [
         [
@@ -1756,7 +2655,51 @@
           "Alsace"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "rhine_alemannic"
+          ],
+          [
+            "cul",
+            "burgundian"
+          ],
+          [
+            "cul",
+            "franc_comtois"
+          ],
+          [
+            "cul",
+            "lorrain"
+          ],
+          [
+            "cul",
+            "walloon"
+          ],
+          [
+            "or",
+            [
+              "tag",
+              "LOR"
+            ],
+            [
+              "tag",
+              "BUR"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Rhine Alemannic",
+          "Bourguignon",
+          "Franc Comtois",
+          "Lorrain",
+          "Walloon",
+          "Lorraine",
+          "Burgundy"
+        ],
+        "regions": [],
+        "tag": "LOT"
       },
       "desc": [
         [
@@ -1784,7 +2727,15 @@
           "West Novgorod"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "baltic_group"
+        ],
+        "gate_labels": [
+          "Baltic"
+        ],
+        "regions": [],
+        "tag": "LVA"
       },
       "desc": [
         [
@@ -1809,7 +2760,15 @@
           "Ghana"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "mande_language"
+        ],
+        "gate_labels": [
+          "Mande"
+        ],
+        "regions": [],
+        "tag": "MAL"
       },
       "desc": [
         [
@@ -1838,7 +2797,22 @@
           "Tezulutlan"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "lang",
+            "maya_language"
+          ],
+          [
+            "rel",
+            "mayan"
+          ]
+        ],
+        "gate_labels": [
+          "Maya"
+        ],
+        "regions": [],
+        "tag": "MAY"
       },
       "desc": [
         [
@@ -1862,7 +2836,15 @@
           "Mazovia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "mazovian"
+        ],
+        "gate_labels": [
+          "Mazovian"
+        ],
+        "regions": [],
+        "tag": "MAZ"
       },
       "desc": [
         [
@@ -1891,7 +2873,15 @@
           "Ussuri"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "jurchen_group"
+        ],
+        "gate_labels": [
+          "Jurchen"
+        ],
+        "regions": [],
+        "tag": "MCH"
       },
       "desc": [
         [
@@ -1915,7 +2905,15 @@
           "Munster"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "hibernian_group"
+        ],
+        "gate_labels": [
+          "Hibernian"
+        ],
+        "regions": [],
+        "tag": "MCM"
       },
       "desc": [
         [
@@ -1937,9 +2935,25 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "iberian_group"
+          ],
+          [
+            "rgrp",
+            "christian"
+          ]
+        ],
+        "gate_labels": [
+          "Iberian",
+          "Christianity"
+        ],
         "regions": [
           "Mesoamerica"
-        ]
+        ],
+        "tag": "MEX"
       },
       "desc": [
         [
@@ -1961,6 +2975,54 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "TIM"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "has ruler"
+            ],
+            [
+              "and",
+              [
+                "?",
+                "ruler has dynasty"
+              ],
+              [
+                "?",
+                "ruler dynasty"
+              ]
+            ]
+          ],
+          [
+            "and",
+            [
+              "or",
+              [
+                "cgrp",
+                "mongolian_group"
+              ],
+              [
+                "cgrp",
+                "turkic_group"
+              ]
+            ],
+            [
+              "?",
+              "government type"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Timurid",
+          "Mongol",
+          "Turkic"
+        ],
         "regions": [
           "Mongolia",
           "Persia",
@@ -1972,7 +3034,8 @@
           "Russia",
           "Khorasan",
           "Xinjiang"
-        ]
+        ],
+        "tag": "MGE"
       },
       "desc": [
         [
@@ -1994,9 +3057,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "mongolian_group"
+        ],
+        "gate_labels": [
+          "Mongol"
+        ],
         "regions": [
           "Mongolia"
-        ]
+        ],
+        "tag": "MGO"
       },
       "desc": [
         [
@@ -2018,9 +3089,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "lang",
+          "marathi_language"
+        ],
+        "gate_labels": [
+          "Marathi"
+        ],
         "regions": [
           "Deccan"
-        ]
+        ],
+        "tag": "MHR"
       },
       "desc": [
         [
@@ -2042,9 +3121,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "malagasy_group"
+        ],
+        "gate_labels": [
+          "Malagasy"
+        ],
         "regions": [
           "Madagascar"
-        ]
+        ],
+        "tag": "MIR"
       },
       "desc": [
         [
@@ -2068,7 +3155,15 @@
           "Mecklenburg"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "western_pomeranian"
+        ],
+        "gate_labels": [
+          "Western Pomeranian"
+        ],
+        "regions": [],
+        "tag": "MKL"
       },
       "desc": [
         [
@@ -2090,7 +3185,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "MLC"
       },
       "desc": [
         [
@@ -2114,7 +3215,15 @@
           "Moldavia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "moldovan"
+        ],
+        "gate_labels": [
+          "Moldovan"
+        ],
+        "regions": [],
+        "tag": "MOL"
       },
       "desc": [
         [
@@ -2139,7 +3248,15 @@
           "Sūs"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "moroccan"
+        ],
+        "gate_labels": [
+          "Moroccan"
+        ],
+        "regions": [],
+        "tag": "MOR"
       },
       "desc": [
         [
@@ -2163,7 +3280,23 @@
           "Malay Peninsula"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "cul",
+            "malay_culture"
+          ],
+          [
+            "rgrp",
+            "muslim"
+          ]
+        ],
+        "gate_labels": [
+          "Malay",
+          "Islam"
+        ],
+        "regions": [],
+        "tag": "MSA"
       },
       "desc": [
         [
@@ -2188,7 +3321,15 @@
           "West Mossi"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "mossi"
+        ],
+        "gate_labels": [
+          "Mossi"
+        ],
+        "regions": [],
+        "tag": "MSI"
       },
       "desc": [
         [
@@ -2210,7 +3351,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "hibernian_group"
+        ],
+        "gate_labels": [
+          "Hibernian"
+        ],
+        "regions": [],
+        "tag": "MTH"
       },
       "desc": [
         [
@@ -2232,7 +3381,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "MTM"
       },
       "desc": null,
       "facets": {
@@ -2249,9 +3404,50 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "rgrp",
+            "muslim"
+          ],
+          [
+            "or",
+            [
+              "cgrp",
+              "iranian_group"
+            ],
+            [
+              "cgrp",
+              "turkic_group"
+            ],
+            [
+              "lang",
+              "afghani_language"
+            ]
+          ],
+          [
+            "?",
+            "owns"
+          ],
+          [
+            "?",
+            "owns"
+          ],
+          [
+            "?",
+            "owns"
+          ]
+        ],
+        "gate_labels": [
+          "Islam",
+          "Iranian",
+          "Turkic",
+          "Afghani"
+        ],
         "regions": [
           "Hindustan"
-        ]
+        ],
+        "tag": "MUG"
       },
       "desc": [
         [
@@ -2273,7 +3469,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "basque"
+        ],
+        "gate_labels": [
+          "Basque"
+        ],
+        "regions": [],
+        "tag": "NAV"
       },
       "desc": [
         [
@@ -2301,7 +3505,15 @@
           "Wallonia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "netherlandish_group"
+        ],
+        "gate_labels": [
+          "Netherlandish"
+        ],
+        "regions": [],
+        "tag": "NED"
       },
       "desc": [
         [
@@ -2326,7 +3538,15 @@
           "Northumbria"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "english_language"
+        ],
+        "gate_labels": [
+          "English"
+        ],
+        "regions": [],
+        "tag": "NOL"
       },
       "desc": [
         [
@@ -2350,7 +3570,15 @@
           "Nepal"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "nepali_group"
+        ],
+        "gate_labels": [
+          "Nepali"
+        ],
+        "regions": [],
+        "tag": "NPL"
       },
       "desc": [
         [
@@ -2372,7 +3600,23 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "rhine_franconian"
+          ],
+          [
+            "cul",
+            "moselle_franconian"
+          ]
+        ],
+        "gate_labels": [
+          "Rhine Franconian",
+          "Moselle Franconian"
+        ],
+        "regions": [],
+        "tag": "NSA"
       },
       "desc": [
         [
@@ -2394,12 +3638,28 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "british_group"
+          ],
+          [
+            "cgrp",
+            "scandinavian_group"
+          ]
+        ],
+        "gate_labels": [
+          "British",
+          "Scandinavian"
+        ],
         "regions": [
           "Britain",
           "Ireland",
           "Scandinavia",
           "North Atlantic Islands"
-        ]
+        ],
+        "tag": "NSE"
       },
       "desc": [
         [
@@ -2421,9 +3681,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cul",
+          "maori_culture"
+        ],
+        "gate_labels": [
+          "Māori"
+        ],
         "regions": [
           "New Zealand"
-        ]
+        ],
+        "tag": "NTR"
       },
       "desc": [
         [
@@ -2448,7 +3716,15 @@
           "Butana"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "nubian"
+        ],
+        "gate_labels": [
+          "Nubian"
+        ],
+        "regions": [],
+        "tag": "NUB"
       },
       "desc": [
         [
@@ -2470,9 +3746,30 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "cul",
+            "javanese_culture"
+          ],
+          [
+            "cul",
+            "sundanese_culture"
+          ],
+          [
+            "cul",
+            "madurese_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Javanese",
+          "Sundanese",
+          "Madurese"
+        ],
         "regions": [
           "Indonesia"
-        ]
+        ],
+        "tag": "NUS"
       },
       "desc": [
         [
@@ -2497,7 +3794,20 @@
           "Languedoc"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "?",
+            "culture.dialect"
+          ],
+          [
+            "?",
+            "culture.dialect"
+          ]
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "OCC"
       },
       "desc": [
         [
@@ -2519,7 +3829,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "PGR"
       },
       "desc": null,
       "facets": {
@@ -2548,7 +3864,23 @@
           "Red Ruthenia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "polish_group"
+          ],
+          [
+            "cgrp",
+            "lithuanian_group"
+          ]
+        ],
+        "gate_labels": [
+          "Polish",
+          "Lithuanian"
+        ],
+        "regions": [],
+        "tag": "PLC"
       },
       "desc": [
         [
@@ -2575,7 +3907,15 @@
           "Mazovia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "polish_group"
+        ],
+        "gate_labels": [
+          "Polish"
+        ],
+        "regions": [],
+        "tag": "POL"
       },
       "desc": [
         [
@@ -2599,7 +3939,23 @@
           "Pomerania"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "eastern_pomeranian"
+          ],
+          [
+            "cul",
+            "western_pomeranian"
+          ]
+        ],
+        "gate_labels": [
+          "Eastern Pomeranian",
+          "Western Pomeranian"
+        ],
+        "regions": [],
+        "tag": "POM"
       },
       "desc": [
         [
@@ -2624,7 +3980,22 @@
           "Crimea"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "pontic_greek_culture"
+          ],
+          [
+            "?",
+            "owns"
+          ]
+        ],
+        "gate_labels": [
+          "Pontic"
+        ],
+        "regions": [],
+        "tag": "PON"
       },
       "desc": [
         [
@@ -2648,7 +4019,15 @@
           "Prussia"
         ],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "german_group"
+        ],
+        "gate_labels": [
+          "German"
+        ],
+        "regions": [],
+        "tag": "PRU"
       },
       "desc": [
         [
@@ -2670,7 +4049,43 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "keres_culture"
+          ],
+          [
+            "cul",
+            "zuni_culture"
+          ],
+          [
+            "cul",
+            "hopi_culture"
+          ],
+          [
+            "cul",
+            "hualapai_culture"
+          ],
+          [
+            "cul",
+            "tanoan_culture"
+          ],
+          [
+            "cul",
+            "hohokam_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Keres",
+          "Zuni",
+          "Hopi",
+          "Hualapai",
+          "Tanoan",
+          "Hohokam"
+        ],
+        "regions": [],
+        "tag": "PUE"
       },
       "desc": [
         [
@@ -2694,7 +4109,15 @@
           "Punjab"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "punjabi"
+        ],
+        "gate_labels": [
+          "Punjabi"
+        ],
+        "regions": [],
+        "tag": "PUN"
       },
       "desc": [
         [
@@ -2718,7 +4141,15 @@
           "Rajputana"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "lang",
+          "rajasthani_language"
+        ],
+        "gate_labels": [
+          "Rajasthani"
+        ],
+        "regions": [],
+        "tag": "RJP"
       },
       "desc": [
         [
@@ -2744,7 +4175,15 @@
           "Moldavia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "romanian_group"
+        ],
+        "gate_labels": [
+          "Romanian"
+        ],
+        "regions": [],
+        "tag": "RMN"
       },
       "desc": [
         [
@@ -2766,9 +4205,25 @@
       "data": {
         "areas": [],
         "capital_required": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "tag",
+            "TRE"
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium",
+          "Trebizond"
+        ],
         "regions": [
           "Italy"
-        ]
+        ],
+        "tag": "ROM"
       },
       "desc": [
         [
@@ -2790,6 +4245,49 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "or",
+              [
+                "tag",
+                "BYZ"
+              ],
+              [
+                "tag",
+                "TRE"
+              ]
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "country rank"
+            ],
+            [
+              "?",
+              "owns"
+            ],
+            [
+              "and",
+              [
+                "?",
+                "owns"
+              ],
+              [
+                "not",
+                [
+                  "tag",
+                  "PAP"
+                ]
+              ]
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "regions": [
           "Italy",
           "Iberia",
@@ -2803,7 +4301,8 @@
           "Maghreb",
           "Carpathia",
           "Caucasus"
-        ]
+        ],
+        "tag": "ROM"
       },
       "desc": [
         [
@@ -2825,9 +4324,25 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "turkic_group"
+          ],
+          [
+            "rgrp",
+            "muslim"
+          ]
+        ],
+        "gate_labels": [
+          "Turkic",
+          "Islam"
+        ],
         "regions": [
           "Anatolia"
-        ]
+        ],
+        "tag": "RUM"
       },
       "desc": [
         [
@@ -2849,11 +4364,19 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "regions": [
           "Russia",
           "Ural",
           "Pontic Steppe"
-        ]
+        ],
+        "tag": "RUS"
       },
       "desc": [
         [
@@ -2875,7 +4398,15 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "ryukyu_culture"
+        ],
+        "gate_labels": [
+          "Ryūkyū"
+        ],
+        "regions": [],
+        "tag": "RYU"
       },
       "desc": [
         [
@@ -2899,7 +4430,15 @@
           "Sardinia"
         ],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "cul",
+          "sardinian"
+        ],
+        "gate_labels": [
+          "Sardinian"
+        ],
+        "regions": [],
+        "tag": "SAR"
       },
       "desc": [
         [
@@ -2924,7 +4463,15 @@
           "Piedmont"
         ],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "italian_group"
+        ],
+        "gate_labels": [
+          "Italian"
+        ],
+        "regions": [],
+        "tag": "SAR_piedmont"
       },
       "desc": [
         [
@@ -2949,7 +4496,23 @@
           "Upper Saxony"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "saxon"
+          ],
+          [
+            "cul",
+            "lower_saxon"
+          ]
+        ],
+        "gate_labels": [
+          "Saxon",
+          "Lower Saxon"
+        ],
+        "regions": [],
+        "tag": "SAX"
       },
       "desc": [
         [
@@ -2973,9 +4536,17 @@
           "Iceland"
         ],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "scandinavian_group"
+        ],
+        "gate_labels": [
+          "Scandinavian"
+        ],
         "regions": [
           "Scandinavia"
-        ]
+        ],
+        "tag": "SCA"
       },
       "desc": [
         [
@@ -3001,7 +4572,15 @@
           "Hebrides"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "scottish_group"
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "regions": [],
+        "tag": "SCO"
       },
       "desc": [
         [
@@ -3025,7 +4604,15 @@
           "Serbia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "serbian"
+        ],
+        "gate_labels": [
+          "Serbian"
+        ],
+        "regions": [],
+        "tag": "SER"
       },
       "desc": [
         [
@@ -3049,7 +4636,15 @@
           "Shan Highland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "shan_group"
+        ],
+        "gate_labels": [
+          "Shan"
+        ],
+        "regions": [],
+        "tag": "SHA"
       },
       "desc": [
         [
@@ -3073,7 +4668,15 @@
           "Holstein"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "holsatian"
+        ],
+        "gate_labels": [
+          "Holsatian"
+        ],
+        "regions": [],
+        "tag": "SHL"
       },
       "desc": [
         [
@@ -3098,7 +4701,15 @@
           "Northern Tai Highland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "thai_culture"
+        ],
+        "gate_labels": [
+          "Thai"
+        ],
+        "regions": [],
+        "tag": "SIA"
       },
       "desc": [
         [
@@ -3122,7 +4733,23 @@
           "Silesia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "silesian"
+          ],
+          [
+            "cul",
+            "german_silesian"
+          ]
+        ],
+        "gate_labels": [
+          "Silesian",
+          "Silesian German"
+        ],
+        "regions": [],
+        "tag": "SIL"
       },
       "desc": [
         [
@@ -3147,7 +4774,31 @@
           "South Hausaland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "hausa"
+            ],
+            [
+              "cul",
+              "fulbe"
+            ]
+          ],
+          [
+            "rel",
+            "sunni"
+          ]
+        ],
+        "gate_labels": [
+          "Hausa",
+          "Fulbe",
+          "Sunnism"
+        ],
+        "regions": [],
+        "tag": "SKO"
       },
       "desc": [
         [
@@ -3171,7 +4822,15 @@
           "Slovakia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "slovak"
+        ],
+        "gate_labels": [
+          "Slovak"
+        ],
+        "regions": [],
+        "tag": "SLO"
       },
       "desc": [
         [
@@ -3193,9 +4852,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cul",
+          "somali_culture"
+        ],
+        "gate_labels": [
+          "Somali"
+        ],
         "regions": [
           "Somalia"
-        ]
+        ],
+        "tag": "SOI"
       },
       "desc": [
         [
@@ -3217,9 +4884,25 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "iberian_group"
+          ],
+          [
+            "rgrp",
+            "christian"
+          ]
+        ],
+        "gate_labels": [
+          "Iberian",
+          "Christianity"
+        ],
         "regions": [
           "Iberia"
-        ]
+        ],
+        "tag": "SPA"
       },
       "desc": [
         [
@@ -3243,7 +4926,15 @@
           "Swabia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "swabian"
+        ],
+        "gate_labels": [
+          "Swabian"
+        ],
+        "regions": [],
+        "tag": "SWA"
       },
       "desc": [
         [
@@ -3269,7 +4960,15 @@
           "Romandy"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cgrp",
+          "swiss_group"
+        ],
+        "gate_labels": [
+          "Swiss"
+        ],
+        "regions": [],
+        "tag": "SWI"
       },
       "desc": [
         [
@@ -3291,7 +4990,50 @@
       "data": {
         "areas": [],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "country exists"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "LAT"
+            ]
+          ],
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "has variable"
+            ],
+            [
+              "tag",
+              "ACH"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "current age or later age"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Achaea"
+        ],
+        "regions": [],
+        "tag": "THE"
       },
       "desc": [
         [
@@ -3313,7 +5055,51 @@
       "data": {
         "areas": [],
         "capital_required": false,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "country exists"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "LAT"
+            ]
+          ],
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "ACH"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "current age or later age"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "THE"
       },
       "desc": [
         [
@@ -3335,9 +5121,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cgrp",
+          "tibetan_group"
+        ],
+        "gate_labels": [
+          "Tibetan"
+        ],
         "regions": [
           "Tibet"
-        ]
+        ],
+        "tag": "TIB"
       },
       "desc": [
         [
@@ -3359,9 +5153,17 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "cul",
+          "uzbek_culture"
+        ],
+        "gate_labels": [
+          "Uzbek"
+        ],
         "regions": [
           "Persia"
-        ]
+        ],
+        "tag": "TIM"
       },
       "desc": [
         [
@@ -3385,7 +5187,33 @@
           "Transylvania"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "hungarian"
+          ],
+          [
+            "cul",
+            "transylvanian"
+          ],
+          [
+            "cul",
+            "german_transylvanian"
+          ],
+          [
+            "cul",
+            "szekely_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Hungarian",
+          "Transylvanian",
+          "Transylvanian German",
+          "Székely"
+        ],
+        "regions": [],
+        "tag": "TRA"
       },
       "desc": [
         [
@@ -3407,7 +5235,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "TUR"
       },
       "desc": null,
       "facets": {
@@ -3426,7 +5260,15 @@
           "Tuscany"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "tuscan"
+        ],
+        "gate_labels": [
+          "Tuscan"
+        ],
+        "regions": [],
+        "tag": "TUS"
       },
       "desc": [
         [
@@ -3454,7 +5296,31 @@
           "Sicily"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "and",
+          [
+            "tag",
+            "ITA"
+          ],
+          [
+            "or",
+            [
+              "cul",
+              "sicilian"
+            ],
+            [
+              "cul",
+              "neapolitan"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "ITA",
+          "Sicilian",
+          "Neapolitan"
+        ],
+        "regions": [],
+        "tag": "TWS"
       },
       "desc": [
         [
@@ -3476,9 +5342,60 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "or",
+          [
+            "cul",
+            "halychian_culture"
+          ],
+          [
+            "cul",
+            "polatskian_culture"
+          ],
+          [
+            "cul",
+            "polesian_culture"
+          ],
+          [
+            "cul",
+            "ruthenian"
+          ],
+          [
+            "cul",
+            "severian"
+          ],
+          [
+            "cul",
+            "volhynian_culture"
+          ],
+          [
+            "cul",
+            "rusyn_culture"
+          ],
+          [
+            "cul",
+            "cossack_culture"
+          ],
+          [
+            "cul",
+            "smolenskian_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Halychian",
+          "Polatskian",
+          "Polesian",
+          "Ruthenian",
+          "Severian",
+          "Volhynian",
+          "Rusyn",
+          "Cossack",
+          "Smolenskian"
+        ],
         "regions": [
           "Ruthenia"
-        ]
+        ],
+        "tag": "UKR"
       },
       "desc": [
         [
@@ -3502,7 +5419,23 @@
           "Ulster"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "celtic_group"
+          ],
+          [
+            "cgrp",
+            "hibernian_group"
+          ]
+        ],
+        "gate_labels": [
+          "Celtic",
+          "Hibernian"
+        ],
+        "regions": [],
+        "tag": "ULS"
       },
       "desc": [
         [
@@ -3524,9 +5457,24 @@
       "data": {
         "areas": [],
         "capital_required": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "culture is culture native american"
+          ],
+          [
+            "cgrp",
+            "british_group"
+          ]
+        ],
+        "gate_labels": [
+          "British"
+        ],
         "regions": [
           "East Coast"
-        ]
+        ],
+        "tag": "USA"
       },
       "desc": [
         [
@@ -3550,7 +5498,15 @@
           "Westphalia"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "westphalian"
+        ],
+        "gate_labels": [
+          "Westphalian"
+        ],
+        "regions": [],
+        "tag": "WES"
       },
       "desc": [
         [
@@ -3574,7 +5530,23 @@
           "Wales"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "or",
+          [
+            "cul",
+            "welsh"
+          ],
+          [
+            "lang",
+            "brythonic_language"
+          ]
+        ],
+        "gate_labels": [
+          "Welsh",
+          "Brythonic"
+        ],
+        "regions": [],
+        "tag": "WLS"
       },
       "desc": [
         [
@@ -3596,7 +5568,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "YMT"
       },
       "desc": [
         [
@@ -3618,7 +5596,13 @@
       "data": {
         "areas": [],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "?",
+          "always"
+        ],
+        "gate_labels": [],
+        "regions": [],
+        "tag": "YUA"
       },
       "desc": [
         [
@@ -3643,7 +5627,15 @@
           "Skåneland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "danish"
+        ],
+        "gate_labels": [
+          "Danish"
+        ],
+        "regions": [],
+        "tag": "DAN"
       },
       "desc": [
         [
@@ -3670,7 +5662,15 @@
           "Finland"
         ],
         "capital_required": true,
-        "regions": []
+        "gate": [
+          "cul",
+          "swedish"
+        ],
+        "gate_labels": [
+          "Swedish"
+        ],
+        "regions": [],
+        "tag": "SWE"
       },
       "desc": [
         [

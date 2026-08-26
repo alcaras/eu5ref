@@ -136,6 +136,22 @@ def main():
     small = idx[::SCALE, ::SCALE]      # NEAREST by construction
     h, w = small.shape
 
+    # Province outlines. Computed at FULL resolution and then OR-reduced per
+    # 4x4 block, so a border survives downscaling instead of dropping out
+    # wherever the ::4 sample happened to miss it. Shipped as one transparent
+    # overlay that sits above every mode, which is what stops a filtered map
+    # from looking like shapes floating in a void.
+    edge = np.zeros(idx.shape, dtype=bool)
+    edge[:, 1:] |= idx[:, 1:] != idx[:, :-1]
+    edge[1:, :] |= idx[1:, :] != idx[:-1, :]
+    eb = edge[:h * SCALE, :w * SCALE].reshape(h, SCALE, w, SCALE).max(axis=(1, 3))
+    del edge
+    border = np.zeros((h, w, 4), dtype=np.uint8)
+    border[..., 3] = np.where(eb, 90, 0)          # black at ~35% alpha
+    Image.fromarray(border, 'RGBA').save(OUT / 'borders.png', optimize=True)
+    print(f'  borders.png: {(OUT / "borders.png").stat().st_size // 1024}KB')
+    del border, eb
+
     legend = {}
     for mode, (label, get, src) in MODES.items():
         vals = [get(by_key.get(k, {})) for k in keys]
@@ -167,15 +183,34 @@ def main():
     Image.fromarray(rgb, 'RGB').save(OUT / 'index.png', optimize=True)
     print(f'  index.png: {(OUT / "index.png").stat().st_size // 1024}KB')
 
+    # Per-location row, indexed the same way as the id map, so the page can
+    # both identify a pixel and list every location matching a filter.
+    # Order: name, areaSlug, good, culture, religion, areaName, province,
+    #        rank, pops, topography, climate, vegetation, locationSlug
+    rows = []
+    for k in keys:
+        l = by_key.get(k, {})
+        rows.append([
+            l.get('name') or ref.pretty(k),
+            l.get('area_slug') or '', l.get('good') or '',
+            l.get('culture') or '', l.get('religion') or '',
+            l.get('area') or '', l.get('province') or '',
+            l.get('rank') or '', l.get('pop_total') or 0,
+            l.get('topography') or '', l.get('climate') or '',
+            l.get('vegetation') or '',
+            (l.get('slug') or '') if l.get('rank') else '',
+            0 if l.get('sea') else 1,
+        ])
     (OUT / 'legend.json').write_text(json.dumps({
         'width': w, 'height': h, 'scale': SCALE,
         'modes': legend,
-        'locations': [[by_key.get(k, {}).get('name') or ref.pretty(k),
-                       by_key.get(k, {}).get('area_slug') or '',
-                       by_key.get(k, {}).get('good') or '',
-                       by_key.get(k, {}).get('culture') or '',
-                       by_key.get(k, {}).get('religion') or '']
-                      for k in keys],
+        'cols': ['name', 'areaSlug', 'good', 'culture', 'religion', 'area',
+                 'province', 'rank', 'pops', 'topography', 'climate',
+                 'vegetation', 'slug', 'land'],
+        # which row field each mode filters on
+        'modeField': {'good': 2, 'culture': 3, 'religion': 4,
+                      'topography': 9, 'climate': 10, 'vegetation': 11},
+        'locations': rows,
     }, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     print(f'  legend.json: {(OUT / "legend.json").stat().st_size // 1024}KB')
 

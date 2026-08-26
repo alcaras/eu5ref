@@ -231,13 +231,14 @@ import Base from '../layouts/Base.astro';
     type Data = { version: string; vhash: string; order: string[];
                   ages: { n: string; i: string | null }[];
                   nodes: Record<string, Node>; countries: Country[];
-                  cultures: Cul[]; religions: Rel[] };
+                  cultures: Cul[]; religions: Rel[]; formables: Record<string, any> };
 
     let D: Data;
     const idx = new Map<string, number>();
     let country: Country | null = null;
     // You can culture-shift and convert mid-game, so both are overridable
     // once a country is picked; the gates re-evaluate against the override.
+    let formables: Record<string, any> = {};   // tag → who may form it
     let culOverride: Cul | null = null;
     let relOverride: Rel | null = null;
     const planned = new Set<string>();
@@ -276,7 +277,16 @@ import Base from '../layouts/Base.astro';
       if (h === '?') return null;
       if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
       if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
-      if (h === 'tag') return f.tag === e[1];
+      if (h === 'tag') {
+        // Your own tag, yes. A formable's tag is reachable, so unknown.
+        // Any other country's tag you simply cannot become — false, not
+        // "conditional", or the planner would suggest becoming Portugal.
+        if (f.tag === e[1]) return true;
+        if (!(e[1] in formables)) return false;      // not a formable: unreachable
+        // reachable only if THIS country could form it
+        const v = evalGate(formables[e[1]], f);
+        return v === false ? false : null;
+      }
       if (h === 'cul') return f.cul === e[1];
       if (h === 'lang') return f.lang === e[1];
       if (h === 'rel') return f.rel === e[1];
@@ -610,9 +620,15 @@ import Base from '../layouts/Base.astro';
       const st = statusOf(id);
       const reqs = n.r.map((r) => D.nodes[r]?.n).filter(Boolean);
       let html = `<b class="t">${n.n}</b>`;
-      if (n.gl?.length) {
+      // A literal is worth naming only if you could still satisfy it: with a
+      // country picked, another country's tag never qualifies (a formable's
+      // does — Poland can become the PLC).
+      const lits = (n.gl || []).filter(([, kind, val]: any[]) =>
+        kind !== 'tag' || !country || val === country.t ||
+        (val in formables && evalGate(formables[val], effectiveFacts()!) !== false));
+      if (lits.length) {
         const verb = st === 'other' ? 'Only for' : st === 'conditional' ? 'Needs' : 'Your unique';
-        html += `<div class="gate">${verb}: ${n.gl.slice(0, 6).join(', ')}</div>`;
+        html += `<div class="gate">${verb}: ${lits.slice(0, 6).map((l: any[]) => l[0]).join(', ')}</div>`;
       } else if (st === 'conditional') {
         html += `<div class="gate">Conditional — depends on state you can still acquire</div>`;
       }
@@ -709,6 +725,7 @@ import Base from '../layouts/Base.astro';
     fetch(`${baseUrl}planner.json`).then((r) => r.json()).then((data) => {
       D = data;
       D.order.forEach((id, i) => idx.set(id, i));
+      formables = D.formables || {};
 
       const p = new URLSearchParams(location.search);
       if (p.get('v') && p.get('v') !== D.vhash) {
