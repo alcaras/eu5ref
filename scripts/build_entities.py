@@ -30,6 +30,7 @@ TYPE_PAGES = {
     'trait': 'traits',
     'event': 'events',
     'area': 'areas',
+    'mission': 'missions',
 }
 
 SKIP_FILES = {'entities.json', 'backlinks.json'}

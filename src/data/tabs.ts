@@ -189,8 +189,8 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'missions', icon: '📌', label: 'Missions', section: 'World',
-    status: 'placeholder',
-    summary: 'Mission trees per country and group',
+    status: 'built',
+    summary: 'The 11 generic mission packs and their tasks (EU5 has no national mission trees)',
   },
 
   {

@@ -42,6 +42,8 @@ import Base from '../layouts/Base.astro';
         <span data-zoom-label>100%</span>
         <button type="button" data-zoom="+">+</button>
       </div>
+      <button type="button" class="csv-btn" data-pl-undo title="Undo (⌘Z)" disabled>↶</button>
+      <button type="button" class="csv-btn" data-pl-redo title="Redo (⇧⌘Z)" disabled>↷</button>
       <button type="button" class="csv-btn" data-pl-copy>⧉ Copy link</button>
       <button type="button" class="csv-btn" data-pl-clear>✕ Clear plan</button>
     </div>
@@ -341,6 +343,55 @@ import Base from '../layouts/Base.astro';
       }
     }
 
+    // ── undo / redo ────────────────────────────────────────────
+    // History covers what you *decided* — the plan, and the country /
+    // culture / religion it is for — not view state like the age tab, zoom
+    // or a collapsed pane. Undo should never move you somewhere else.
+    type Snap = { c: string | null; cu: string | null; re: string | null; p: string[]; r: string[] };
+    // NB: not `history` — that shadows window.history and breaks syncUrl().
+    let undoStack: Snap[] = [];
+    let histIx = -1;
+    let restoring = false;
+
+    const snap = (): Snap => ({
+      c: country?.t ?? null, cu: culOverride?.k ?? null, re: relOverride?.k ?? null,
+      p: [...planned], r: [...researched],
+    });
+    const sameSnap = (a: Snap, b: Snap) =>
+      a.c === b.c && a.cu === b.cu && a.re === b.re &&
+      a.p.length === b.p.length && a.r.length === b.r.length &&
+      a.p.every((x, i) => x === b.p[i]) && a.r.every((x, i) => x === b.r[i]);
+
+    function pushHistory() {
+      if (restoring) return;
+      const s = snap();
+      if (histIx >= 0 && sameSnap(undoStack[histIx], s)) return;
+      undoStack = undoStack.slice(0, histIx + 1);
+      undoStack.push(s);
+      if (undoStack.length > 100) undoStack.shift();
+      histIx = undoStack.length - 1;
+      updateHistoryButtons();
+    }
+    function applySnap(s: Snap) {
+      restoring = true;
+      country = s.c ? D.countries.find((c) => c.t === s.c) || null : null;
+      culOverride = s.cu ? D.cultures.find((c) => c.k === s.cu) || null : null;
+      relOverride = s.re ? D.religions.find((r) => r.k === s.re) || null : null;
+      planned.clear(); for (const x of s.p) planned.add(x);
+      researched.clear(); for (const x of s.r) researched.add(x);
+      restoring = false;
+      render();
+      updateHistoryButtons();
+    }
+    const undo = () => { if (histIx > 0) { histIx--; applySnap(undoStack[histIx]); } };
+    const redo = () => { if (histIx < undoStack.length - 1) { histIx++; applySnap(undoStack[histIx]); } };
+    function updateHistoryButtons() {
+      ($('[data-pl-undo]') as HTMLButtonElement).disabled = histIx <= 0;
+      ($('[data-pl-redo]') as HTMLButtonElement).disabled = histIx >= undoStack.length - 1;
+    }
+    /** Mutate the plan, redraw, and record the step. */
+    function mutate(fn: () => void) { fn(); render(); pushHistory(); }
+
     // ── visible set + tidy top-down layout ─────────────────────
     function visibleIds(): string[] {
       const out: string[] = [];
@@ -598,9 +649,8 @@ import Base from '../layouts/Base.astro';
         e.preventDefault();
         const a = (e.target as HTMLElement).closest('[data-key]') as HTMLElement | null;
         if (!a) return;
-        onPick(a.dataset.key!);
         input.value = ''; results.hidden = true;
-        render();
+        mutate(() => onPick(a.dataset.key!));
       });
       document.addEventListener('click', (e) => {
         if (!wrap.contains(e.target as Node)) results.hidden = true;
@@ -627,8 +677,7 @@ import Base from '../layouts/Base.astro';
       $('[data-pl-context]').addEventListener('click', (e) => {
         const chip = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
         if (!chip) return;
-        if (chip.dataset.reset === 'cul') culOverride = null; else relOverride = null;
-        render();
+        mutate(() => { if (chip.dataset.reset === 'cul') culOverride = null; else relOverride = null; });
       });
     }
 
@@ -684,7 +733,8 @@ import Base from '../layouts/Base.astro';
         const b = $('[data-pl-copy]'); b.textContent = '✓ Copied';
         setTimeout(() => (b.textContent = '⧉ Copy link'), 1200);
       });
-      $('[data-pl-clear]').addEventListener('click', () => { planned.clear(); researched.clear(); render(); });
+      $('[data-pl-clear]').addEventListener('click', () =>
+        mutate(() => { planned.clear(); researched.clear(); }));
       $('[data-pl-ages]').addEventListener('click', (e) => {
         const b = (e.target as HTMLElement).closest('[data-age]') as HTMLElement | null;
         if (b) { ageIx = +b.dataset.age!; render(); }
@@ -696,17 +746,17 @@ import Base from '../layouts/Base.astro';
         if (!el) return;
         const id = el.dataset.id!;
         if ((e as MouseEvent).altKey) { location.href = `${baseUrl}advances/${D.nodes[id].s}`; return; }
-        if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id);
-        render();
+        mutate(() => { if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id); });
       });
       board.addEventListener('contextmenu', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
         if (!el) return;
         e.preventDefault();
         const id = el.dataset.id!;
-        if (researched.has(id)) researched.delete(id);
-        else { researched.add(id); planned.delete(id); }
-        render();
+        mutate(() => {
+          if (researched.has(id)) researched.delete(id);
+          else { researched.add(id); planned.delete(id); }
+        });
       });
       // pane headers collapse their branch
       board.addEventListener('click', (e) => {
@@ -725,8 +775,7 @@ import Base from '../layouts/Base.astro';
         if (!el) return;
         const id = el.dataset.id!;
         if ((e as MouseEvent).altKey) { location.href = `${baseUrl}advances/${D.nodes[id].s}`; return; }
-        if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id);
-        render();
+        mutate(() => { if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id); });
       });
       choicesEl.addEventListener('mousemove', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
@@ -771,7 +820,20 @@ import Base from '../layouts/Base.astro';
         }
       }
 
+      $('[data-pl-undo]').addEventListener('click', undo);
+      $('[data-pl-redo]').addEventListener('click', redo);
+      document.addEventListener('keydown', (e) => {
+        if (!(e.metaKey || e.ctrlKey) || e.key.toLowerCase() !== 'z') {
+          if (!((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'y')) return;
+        }
+        const t = e.target as HTMLElement;
+        if (t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement) return;
+        e.preventDefault();
+        (e.shiftKey || e.key.toLowerCase() === 'y') ? redo() : undo();
+      });
+
       render();
+      pushHistory();          // baseline: whatever the URL asked for
     });
   </script>
 </Base>

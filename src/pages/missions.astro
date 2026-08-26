@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/missions.json';
+
+const tasks = data.entities.reduce((n, e) => n + e.data.tasks.length, 0);
+---
+<Base title="Missions" active="missions" pageMark="📌" eyebrow="World"
+  pageStats={[
+    { label: 'mission packs', value: data.entities.length },
+    { label: 'tasks', value: tasks },
+    { label: 'offered at a time', value: 10 },
+  ]}
+  description="Every mission pack in Europa Universalis V and its tasks.">
+  <p style="max-width: 720px; color: var(--text-soft);">
+    EU5 has no per-country mission trees. There are {data.entities.length} generic
+    mission packs, none tied to a tag, and the game offers ten of them at a time
+    (<code>POTENTIAL_MISSION_COUNT</code>), weighted by each pack's chance. A pack
+    is a set of tasks; finishing the one marked <em>final</em> completes it.
+  </p>
+  <SectionTable data={data} pagePrefix="missions" columns={[
+    { key: 'name', label: 'Mission Pack', kind: 'name' },
+    { key: 'playstyle', label: 'Playstyle', kind: 'facet' },
+    { key: 'repeatable', label: 'Repeatable', kind: 'facet' },
+    { key: 'chance', label: 'Chance', kind: 'num' },
+    { key: 'task_names', label: 'Tasks', kind: 'chips' },
+  ]} placeholder="Filter mission packs…" />
+</Base>

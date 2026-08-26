@@ -1,0 +1,1292 @@
+{
+ "dataset": "missions",
+ "entities": [
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Create a Cabinet",
+     "Enact Government Reforms",
+     "Head of the Cabinet",
+     "Increase Cabinet Efficiency",
+     "Meritocratic Approach",
+     "Royal Authority",
+     "High Era of Root"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_create_cabinet",
+      "name": "Create a Cabinet",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_enact_government_reforms",
+      "name": "Enact Government Reforms",
+      "requires": [
+       "Mission Create Cabinet"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_promote_cabinet_head",
+      "name": "Head of the Cabinet",
+      "requires": [
+       "Mission Create Cabinet"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_increase_cabinet_efficiency",
+      "name": "Increase Cabinet Efficiency",
+      "requires": [
+       "Mission Promote Cabinet Head"
+      ]
+     },
+     {
+      "final": false,
+      "key": "meritocratic_approach",
+      "name": "Meritocratic Approach",
+      "requires": [
+       "Mission Create Cabinet"
+      ]
+     },
+     {
+      "final": false,
+      "key": "royal_authority",
+      "name": "Royal Authority",
+      "requires": [
+       "Mission Create Cabinet"
+      ]
+     },
+     {
+      "final": true,
+      "key": "high_era_of_countryname",
+      "name": "High Era of Root",
+      "requires": [
+       "Royal Authority"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "A council of able advisors will help us promote prosperity and efficiency"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Politics",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-capable-cabinet.png",
+   "id": "mission:capable_cabinet",
+   "mods": [],
+   "name": "A Capable Cabinet",
+   "slug": "capable-cabinet",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "A Great Capital",
+     "All Roads Lead to Root",
+     "Assembly Halls",
+     "Capital Prosperity",
+     "Control Around the Capital",
+     "Food Investments",
+     "Found a Town",
+     "Push for Centralization",
+     "Wave of Urbanization",
+     "Wave of Urbanization",
+     "Control the Region"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "a_great_capital",
+      "name": "A Great Capital",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_build_roads",
+      "name": "All Roads Lead to Root",
+      "requires": [
+       "Mission Capital Province Control"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_assembly_halls",
+      "name": "Assembly Halls",
+      "requires": [
+       "A Great Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_capital_province_prosperity",
+      "name": "Capital Prosperity",
+      "requires": [
+       "A Great Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_capital_province_control",
+      "name": "Control Around the Capital",
+      "requires": [
+       "A Great Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_food_investment",
+      "name": "Food Investments",
+      "requires": [
+       "Mission Capital Province Control"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_capital_town",
+      "name": "Found a Town",
+      "requires": [
+       "A Great Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_push_for_centralization",
+      "name": "Push for Centralization",
+      "requires": [
+       "Mission Capital Province Control"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_capital_city",
+      "name": "Wave of Urbanization",
+      "requires": [
+       "Mission Capital Town"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_capital_city2",
+      "name": "Wave of Urbanization",
+      "requires": [
+       "A Great Capital"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_home_region_control",
+      "name": "Control the Region",
+      "requires": [
+       "Mission Push For Centralization"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The proper establishment of infrastructure around our capital is of vital importance."
+    ]
+   ],
+   "facets": {
+    "playstyle": "Economy",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-infrastructure.png",
+   "id": "mission:development_of_infrastructure",
+   "mods": [],
+   "name": "Infrastructure Efforts",
+   "slug": "development-of-infrastructure",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [
+     "looking for a: estate",
+     "source: actor",
+     "target flag: mission target estate",
+     "name: mission select estate"
+    ],
+    "task_names": [
+     "Capital Influence",
+     "Fund Construction Projects",
+     "Grant Privileges",
+     "Shape Society",
+     "Shared Enrichment",
+     "Gain Favors with the Mission Target Estate"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_capital_influence",
+      "name": "Capital Influence",
+      "requires": [
+       "Mission Estate Privileges"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_fund_construction_projects",
+      "name": "Fund Construction Projects",
+      "requires": [
+       "Mission Estate Privileges"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_estate_privileges",
+      "name": "Grant Privileges",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_shape_society",
+      "name": "Shape Society",
+      "requires": [
+       "Mission Estate Privileges"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_shared_enrichment",
+      "name": "Shared Enrichment",
+      "requires": [
+       "Mission Shape Society"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_estate_satisfaction",
+      "name": "Gain Favors with the Mission Target Estate",
+      "requires": [
+       "Mission Shape Society"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "It would be wise for us to seek good relations with the influential Estates within our borders."
+    ]
+   ],
+   "facets": {
+    "playstyle": "Politics",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-estate-cooperation.png",
+   "id": "mission:estate_cooperation",
+   "mods": [],
+   "name": "Estate Cooperation",
+   "slug": "estate-cooperation",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [
+     "looking for a: market",
+     "target flag: mission target market",
+     "add to list: source",
+     "name: mission select market"
+    ],
+    "task_names": [
+     "Art of Export",
+     "Construct the Manufactories",
+     "Embracing the Capital Economy",
+     "Establish a Trade",
+     "Expand Construction Materials",
+     "Expand into new Markets",
+     "Expanded Trade Capacities",
+     "Export Root",
+     "Flow of Construction Goods",
+     "Gain Production Goods",
+     "Grant Privileges to the Root",
+     "Grow the Root",
+     "Import Construction Materials",
+     "Influential Merchants",
+     "Luxuries for the People",
+     "Manufactory Focus",
+     "Satisfy our Demands",
+     "Secure the Sea Trade",
+     "The Wealth of the Scope",
+     "Trade Focus",
+     "Creation of Profit",
+     "The Rich Merchant"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_get_into_profitable_export",
+      "name": "Art of Export",
+      "requires": [
+       "Mission Expand Merchant Capacity"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_construct_goods_industry",
+      "name": "Construct the Manufactories",
+      "requires": [
+       "Mission Secure Construction Material",
+       "Mission Secure Production Resource"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_embrace_capital_economy",
+      "name": "Embracing the Capital Economy",
+      "requires": [
+       "Mission Attracting New Burghers"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_setup_trade",
+      "name": "Establish a Trade",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_expand_construction_materials",
+      "name": "Expand Construction Materials",
+      "requires": [
+       "Mission Prepare Industry Focus"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_trade_in_new_markets",
+      "name": "Expand into new Markets",
+      "requires": [
+       "Mission Improve Market Worth"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_expand_merchant_capacity",
+      "name": "Expanded Trade Capacities",
+      "requires": [
+       "Mission Prepare Trade Focus"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_export_produced_goods",
+      "name": "Export Root",
+      "requires": [
+       "Mission Construct Goods Industry"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_secure_construction_material",
+      "name": "Flow of Construction Goods",
+      "requires": [
+       "Mission Expand Construction Materials",
+       "Mission Import Construction Materials"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_secure_production_resource",
+      "name": "Gain Production Goods",
+      "requires": [
+       "Mission Prepare Industry Focus"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_grant_burghers_privileges",
+      "name": "Grant Privileges to the Root",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_attracting_new_burghers",
+      "name": "Grow the Root",
+      "requires": [
+       "Mission Grant Burghers Privileges",
+       "Mission Setup Trade"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_import_construction_materials",
+      "name": "Import Construction Materials",
+      "requires": [
+       "Mission Prepare Industry Focus"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_expand_merchant_power",
+      "name": "Influential Merchants",
+      "requires": [
+       "Mission Prepare Trade Focus"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_get_into_profitable_import",
+      "name": "Luxuries for the People",
+      "requires": [
+       "Mission Expand Merchant Power"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_prepare_industry_focus",
+      "name": "Manufactory Focus",
+      "requires": [
+       "Mission Embrace Capital Economy"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_satisfy_own_demands",
+      "name": "Satisfy our Demands",
+      "requires": [
+       "Mission Construct Goods Industry"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_light_ships",
+      "name": "Secure the Sea Trade",
+      "requires": [
+       "Mission Improve Market Worth"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_improve_market_worth",
+      "name": "The Wealth of the Scope",
+      "requires": [
+       "Mission Get Into Profitable Export",
+       "Mission Get Into Profitable Import"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_prepare_trade_focus",
+      "name": "Trade Focus",
+      "requires": [
+       "Mission Embrace Capital Economy"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_create_profit",
+      "name": "Creation of Profit",
+      "requires": [
+       "Mission Satisfy Own Demands",
+       "Mission Export Produced Goods"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_embrace_capital_economy_trade_focus",
+      "name": "The Rich Merchant",
+      "requires": [
+       "Mission Trade In New Markets",
+       "Mission Light Ships"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Greed, for a lack of a better description, is good!"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Economy",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-capital-economy.png",
+   "id": "mission:generic_capital_economy",
+   "mods": [],
+   "name": "Develop a Capital Economy",
+   "slug": "generic-capital-economy",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Chart the Horizon",
+     "Hire Explorers",
+     "Overseas Efforts",
+     "Settle the Horizon",
+     "Colonial Ambitions",
+     "New Maps"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_chart_horizon",
+      "name": "Chart the Horizon",
+      "requires": [
+       "Mission Overseas Efforts"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_hire_explorer",
+      "name": "Hire Explorers",
+      "requires": [
+       "Mission Overseas Efforts"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_overseas_efforts",
+      "name": "Overseas Efforts",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_settle_horizon",
+      "name": "Settle the Horizon",
+      "requires": [
+       "Mission Overseas Efforts"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_colonial_ambitions",
+      "name": "Colonial Ambitions",
+      "requires": [
+       "Mission Settle Horizon"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_new_maps",
+      "name": "New Maps",
+      "requires": [
+       "Mission Chart Horizon"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The call of distant horizons and unclaimed lands stirs our ambitions. We must chart the seas, discover new territories, and expand our influence to ensure our realm's future prosperity."
+    ]
+   ],
+   "facets": {
+    "playstyle": "Expansion",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-colonize-explore.png",
+   "id": "mission:generic_colonize_explore",
+   "mods": [],
+   "name": "Venturing into the Unknown",
+   "slug": "generic-colonize-explore",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Conquer a Province",
+     "Fortify the Border",
+     "Obtain a Casus Belli",
+     "Raise a Navy",
+     "Raise a War Chest",
+     "Raise the Army",
+     "Recover Prosperity",
+     "To War!",
+     "Integrate our Conquest"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_conquer_province",
+      "name": "Conquer a Province",
+      "requires": [
+       "Mission Declare War"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_fortifications",
+      "name": "Fortify the Border",
+      "requires": [
+       "Mission Conquer Province"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_obtain_casus_belli",
+      "name": "Obtain a Casus Belli",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "raise_a_navy",
+      "name": "Raise a Navy",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_war_chest",
+      "name": "Raise a War Chest",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_army",
+      "name": "Raise the Army",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_restore_province",
+      "name": "Recover Prosperity",
+      "requires": [
+       "Mission Conquer Province",
+       "Mission War Chest"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_declare_war",
+      "name": "To War!",
+      "requires": [
+       "Mission Obtain Casus Belli",
+       "Mission Army",
+       "Raise A Navy"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_peace_integrate_province",
+      "name": "Integrate our Conquest",
+      "requires": [
+       "Mission Conquer Province"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Onwards to Glory!"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Expansion",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-conquer-province.png",
+   "id": "mission:generic_conquer_province",
+   "mods": [],
+   "name": "Regional Expansion",
+   "slug": "generic-conquer-province",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Diplomatic Play",
+     "Establish a Spy Network",
+     "Humiliate a Rival",
+     "Impose an Embargo",
+     "Sow Discontent in Rival",
+     "Surpass our Foes"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_insult_rival",
+      "name": "Diplomatic Play",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_establish_spy_networks",
+      "name": "Establish a Spy Network",
+      "requires": [
+       "Mission Insult Rival"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_humiliate_rival",
+      "name": "Humiliate a Rival",
+      "requires": [
+       "Mission Insult Rival"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_impose_embargo",
+      "name": "Impose an Embargo",
+      "requires": [
+       "Mission Insult Rival"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_destabilize_rival",
+      "name": "Sow Discontent in Rival",
+      "requires": [
+       "Mission Establish Spy Networks"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_surpass_rival",
+      "name": "Surpass our Foes",
+      "requires": [
+       "Mission Humiliate Rival"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Those who seek to match our strength must be shown their inferiority!"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Expansion",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-humiliate-rival-mission-pack.png",
+   "id": "mission:generic_humiliate_rival",
+   "mods": [],
+   "name": "Humiliate a Rival",
+   "slug": "generic-humiliate-rival",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "A Merchant Fleet",
+     "Coastal Expansion",
+     "Establish Wharfs",
+     "Establish a Market Center",
+     "Powerful Root",
+     "Protect our Coasts",
+     "Root Entrepôts",
+     "Root Relations",
+     "The ShowBuildingTypeNameWithNoTooltip('marketplace') of Root",
+     "The Winds of Trade",
+     "Trade Capacity",
+     "A Solid Approach",
+     "Maritime Presence"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_merchant_fleet",
+      "name": "A Merchant Fleet",
+      "requires": [
+       "Mission Burgher Relations"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_establish_docks",
+      "name": "Coastal Expansion",
+      "requires": [
+       "Mission Establish Wharfs"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_establish_wharfs",
+      "name": "Establish Wharfs",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_establish_market_center",
+      "name": "Establish a Market Center",
+      "requires": [
+       "Mission Build Entrepot"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_burgher_privileges",
+      "name": "Powerful Root",
+      "requires": [
+       "Mission Burgher Relations"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_protect_our_coasts",
+      "name": "Protect our Coasts",
+      "requires": [
+       "Mission Burgher Relations"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_build_entrepot",
+      "name": "Root Entrepôts",
+      "requires": [
+       "Mission Marketplace Of Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_burgher_relations",
+      "name": "Root Relations",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_marketplace_of_capital",
+      "name": "The ShowBuildingTypeNameWithNoTooltip('marketplace') of Root",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_winds_of_trade",
+      "name": "The Winds of Trade",
+      "requires": [
+       "Mission Build Entrepot"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_trade_capacity",
+      "name": "Trade Capacity",
+      "requires": [
+       "Mission Merchant Fleet"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_solid_approach",
+      "name": "A Solid Approach",
+      "requires": [
+       "Mission Winds Of Trade"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_increase_maritime_presence",
+      "name": "Maritime Presence",
+      "requires": [
+       "Mission Build Entrepot",
+       "Mission Burgher Privileges",
+       "Mission Protect Our Coasts"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "If we are to further our prosperity, we must look to promote our trade endeavors!"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Economy",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-trade.png",
+   "id": "mission:generic_trade",
+   "mods": [],
+   "name": "The Development of Trade",
+   "slug": "generic-trade",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Construct Masons",
+     "Embrace the Traditional Economy",
+     "Expand Irrigation",
+     "Expand Resource Production",
+     "Expand the Workforce",
+     "Peasant Contentment",
+     "Road to Root",
+     "Support Fishing Villages",
+     "Support Rural Cloth",
+     "Village Marketplaces",
+     "Prosperous Production"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_masons",
+      "name": "Construct Masons",
+      "requires": [
+       "Mission Irrigation"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_embrace_trad_economy",
+      "name": "Embrace the Traditional Economy",
+      "requires": [
+       "Mission Market Villages"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_irrigation",
+      "name": "Expand Irrigation",
+      "requires": [
+       "Mission Peasants Estate Satisfaction"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_increase_rgo_level",
+      "name": "Expand Resource Production",
+      "requires": [
+       "Mission Market Villages"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_increase_workforce",
+      "name": "Expand the Workforce",
+      "requires": [
+       "Mission Market Villages"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_peasants_estate_satisfaction",
+      "name": "Peasant Contentment",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_connect_location_to_capital",
+      "name": "Road to Root",
+      "requires": [
+       "Mission Peasants Estate Satisfaction"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_fishing_villages",
+      "name": "Support Fishing Villages",
+      "requires": [
+       "Mission Peasants Estate Satisfaction"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_cloth_makers",
+      "name": "Support Rural Cloth",
+      "requires": [
+       "Mission Market Villages"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_market_villages",
+      "name": "Village Marketplaces",
+      "requires": [
+       "Mission Peasants Estate Satisfaction"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_prosperous_production",
+      "name": "Prosperous Production",
+      "requires": [
+       "Mission Increase Rgo Level",
+       "Mission Masons",
+       "Mission Embrace Trad Economy"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The strength of our nation lies in the tried and tested methods of economic stewardship that have served our people for generations."
+    ]
+   ],
+   "facets": {
+    "playstyle": "Economy",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-traditional-economy.png",
+   "id": "mission:generic_traditional_economy",
+   "mods": [],
+   "name": "Traditional Economy",
+   "slug": "generic-traditional-economy",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [
+     "looking for a: country",
+     "subject can be annexed: True",
+     "add to list: source",
+     "target flag: mission target subject"
+    ],
+    "task_names": [
+     "Commence Annexation",
+     "Connect the Capitals",
+     "Improve Relations with Root",
+     "Joint Military Development",
+     "Monetary Assistance",
+     "A Base of Power",
+     "Complete Annexation"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_commence_annexation",
+      "name": "Commence Annexation",
+      "requires": [
+       "Mission Improve Relations With Vassal"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_connect_the_capitals",
+      "name": "Connect the Capitals",
+      "requires": [
+       "Mission Monetary Assistance"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_improve_relations_with_vassal",
+      "name": "Improve Relations with Root",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_joint_military_development",
+      "name": "Joint Military Development",
+      "requires": [
+       "Mission Improve Relations With Vassal"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_monetary_assistance",
+      "name": "Monetary Assistance",
+      "requires": [
+       "Mission Improve Relations With Vassal"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_base_of_power",
+      "name": "A Base of Power",
+      "requires": [
+       "Mission Monetary Assistance"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_complete_annexation",
+      "name": "Complete Annexation",
+      "requires": [
+       "Mission Commence Annexation"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "We must ensure a stable relationship with our Vassal!"
+    ]
+   ],
+   "facets": {
+    "playstyle": "Politics",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-vassal-ties.png",
+   "id": "mission:generic_vassal_ties",
+   "mods": [],
+   "name": "Vassal Ties",
+   "slug": "generic-vassal-ties",
+   "type": "mission"
+  },
+  {
+   "data": {
+    "chance": 3600,
+    "requires_state": [],
+    "task_names": [
+     "Advances in Technology",
+     "Ensure Book Production",
+     "Found Libraries",
+     "Houses of Wisdom",
+     "Islamic Colleges",
+     "New Institutions",
+     "The Chancery",
+     "Theatrical Expression",
+     "Wave of Innovation",
+     "Raise Literacy"
+    ],
+    "tasks": [
+     {
+      "final": false,
+      "key": "mission_advances_technology",
+      "name": "Advances in Technology",
+      "requires": [
+       "Mission Found Libraries"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_ensure_book_production",
+      "name": "Ensure Book Production",
+      "requires": []
+     },
+     {
+      "final": false,
+      "key": "mission_found_libraries",
+      "name": "Found Libraries",
+      "requires": [
+       "Mission Ensure Book Production"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_houses_of_wisdom",
+      "name": "Houses of Wisdom",
+      "requires": [
+       "Mission Found Libraries"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_islamic_colleges",
+      "name": "Islamic Colleges",
+      "requires": [
+       "Mission Found Libraries"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_new_institutions",
+      "name": "New Institutions",
+      "requires": [
+       "Mission Ensure Book Production"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_build_chancery",
+      "name": "The Chancery",
+      "requires": [
+       "Mission Ensure Book Production"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_theatrical_expression",
+      "name": "Theatrical Expression",
+      "requires": [
+       "Mission Ensure Book Production"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_wave_of_innovation",
+      "name": "Wave of Innovation",
+      "requires": [
+       "Mission Ensure Book Production"
+      ]
+     },
+     {
+      "final": true,
+      "key": "mission_raise_literacy",
+      "name": "Raise Literacy",
+      "requires": [
+       "Mission Advances Technology"
+      ]
+     }
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Tending to the literacy needs of our people is paramount."
+    ]
+   ],
+   "facets": {
+    "playstyle": "Politics",
+    "repeatable": "repeatable"
+   },
+   "icon": "img/mission/generic-progress-and-literacy.png",
+   "id": "mission:progress_and_literacy",
+   "mods": [],
+   "name": "Progress & Literacy",
+   "slug": "progress-and-literacy",
+   "type": "mission"
+  }
+ ],
+ "facets": [
+  {
+   "key": "playstyle",
+   "label": "Playstyle",
+   "options": [
+    {
+     "count": 4,
+     "label": "Economy",
+     "value": "Economy"
+    },
+    {
+     "count": 3,
+     "label": "Expansion",
+     "value": "Expansion"
+    },
+    {
+     "count": 4,
+     "label": "Politics",
+     "value": "Politics"
+    }
+   ]
+  },
+  {
+   "key": "repeatable",
+   "label": "Repeatable",
+   "options": [
+    {
+     "count": 11,
+     "label": "Repeatable",
+     "value": "repeatable"
+    }
+   ]
+  }
+ ],
+ "source": "in_game/common/missions"
+}

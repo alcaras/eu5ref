@@ -36,6 +36,7 @@
   "a call to arms": "event:hundred_years_war.217",
   "a call to arms from the league": "event:flavor_fra.2035",
   "a campaign against target country": "event:flavor_kor.24",
+  "a capable cabinet": "mission:capable_cabinet",
   "a capital befitting an empire": "event:flavor_ser.70",
   "a cardinal-nephew from the rome": "event:catholic_flavor.101",
   "a center of tribal cultures": "event:flavor_chk.22",
@@ -4759,6 +4760,7 @@
   "deteriorating relations with the root": "event:clergy_estate_events.5",
   "deus vult": "advance:deus_vult",
   "devastation_material_name": "define:NGraphics.DEVASTATION_MATERIAL_NAME",
+  "develop a capital economy": "mission:generic_capital_economy",
   "develop province": "cabinet-action:develop_province",
   "develop rocket technology": "advance:hin_rocketry",
   "develop the interior": "parliament-issue:sponsor_urban_development",
@@ -5630,6 +5632,7 @@
   "estate": "concept:estate",
   "estate building": "concept:estate_building",
   "estate buildings": "concept:estate_building",
+  "estate cooperation": "mission:estate_cooperation",
   "estate culture": "concept:estate_culture",
   "estate cultures": "concept:estate_culture",
   "estate disputes": "event:rise_of_the_szlachta.3",
@@ -7777,6 +7780,7 @@
   "humble": "trait:humble",
   "humcha temples": "holy-site:humcha_temples",
   "humiliate": "casus-belli:cb_humiliate",
+  "humiliate a rival": "mission:generic_humiliate_rival",
   "humiliate rival": "casus-belli:cb_humiliate_rival",
   "humiliation": "peace-treaty:peace_humiliate",
   "humming sermons in target location": "event:hussite_flavor.7",
@@ -13314,6 +13318,7 @@
   "profitable_building_workers_rehired_percentage": "define:NEconomy.PROFITABLE_BUILDING_WORKERS_REHIRED_PERCENTAGE",
   "profitable_export_goods_reduce_price_utility_factor": "define:NAI.PROFITABLE_EXPORT_GOODS_REDUCE_PRICE_UTILITY_FACTOR",
   "profitable_export_goods_utility_factor": "define:NAI.PROFITABLE_EXPORT_GOODS_UTILITY_FACTOR",
+  "progress & literacy": "mission:progress_and_literacy",
   "prokhor of gorodets": "event:flavor_mos.30",
   "prome": "country:BPR",
   "prominent": "trait:prominent",
@@ -13957,6 +13962,7 @@
   "region_saturation_strength_on_area": "define:NMapColors.REGION_SATURATION_STRENGTH_ON_AREA",
   "region_value_strength_on_area": "define:NMapColors.REGION_VALUE_STRENGTH_ON_AREA",
   "regional ambitions": "advance:power_projection_advance_3",
+  "regional expansion": "mission:generic_conquer_province",
   "regional power": "concept:regional_power",
   "regional powers": "concept:regional_power",
   "regional root challenge root": "event:random_event.66",
@@ -17671,6 +17677,7 @@
   "the dethronement of former ruler": "event:flavor_swe.24",
   "the devastating treaty of yazhelbitsy": "event:flavor_nov.32",
   "the development of target location": "event:flavor_kni.120",
+  "the development of trade": "mission:generic_trade",
   "the devolution of the lowlands": "event:flavor_fra.417",
   "the devshirme of the steppes": "advance:cri_devshirme_of_the_steppes",
   "the diarii": "event:flavor_ven.85",
@@ -19925,7 +19932,7 @@
   "tradition_gain_land": "define:NCombat.TRADITION_GAIN_LAND",
   "tradition_gain_naval": "define:NCombat.TRADITION_GAIN_NAVAL",
   "tradition_power_scale": "define:NCulture.TRADITION_POWER_SCALE",
-  "traditional economy": "parliament-agenda:pa_push_towards_traditional_economy_nobles",
+  "traditional economy": "mission:generic_traditional_economy",
   "traditional galley": "advance:unlock_traditional_galley_advance",
   "traditionalist vs innovative": "societal-value:traditionalist_vs_innovative",
   "traditions": "age:age_1_traditions",
@@ -20592,6 +20599,7 @@
   "vasco da gama offers his service": "event:flavor_por.22",
   "vasily tatishchev": "event:flavor_rus.33",
   "vassal": "subject:vassal",
+  "vassal ties": "mission:generic_vassal_ties",
   "vassals feel safe": "event:societal_values.1803",
   "vatican library - administrative wing": "building:adm_vatican_library",
   "vatican library - diplomatic wing": "building:dip_vatican_library",
@@ -20639,6 +20647,7 @@
   "venkaṭeśvara temple": "building:venkateswara_temple",
   "ventadour": "country:VNT",
   "ventures to target": "event:settle_the_frontier.2",
+  "venturing into the unknown": "mission:generic_colonize_explore",
   "vepsian": "culture:vepsian",
   "vercelli": "country:VRC",
   "verden": "country:VRD",
@@ -157731,6 +157740,83 @@
    "page": null,
    "slug": "town",
    "type": "location-rank"
+  },
+  "mission:capable_cabinet": {
+   "icon": "img/mission/generic-capable-cabinet.png",
+   "name": "A Capable Cabinet",
+   "page": "missions/capable-cabinet",
+   "slug": "capable-cabinet",
+   "type": "mission"
+  },
+  "mission:development_of_infrastructure": {
+   "icon": "img/mission/generic-infrastructure.png",
+   "name": "Infrastructure Efforts",
+   "page": "missions/development-of-infrastructure",
+   "slug": "development-of-infrastructure",
+   "type": "mission"
+  },
+  "mission:estate_cooperation": {
+   "icon": "img/mission/generic-estate-cooperation.png",
+   "name": "Estate Cooperation",
+   "page": "missions/estate-cooperation",
+   "slug": "estate-cooperation",
+   "type": "mission"
+  },
+  "mission:generic_capital_economy": {
+   "icon": "img/mission/generic-capital-economy.png",
+   "name": "Develop a Capital Economy",
+   "page": "missions/generic-capital-economy",
+   "slug": "generic-capital-economy",
+   "type": "mission"
+  },
+  "mission:generic_colonize_explore": {
+   "icon": "img/mission/generic-colonize-explore.png",
+   "name": "Venturing into the Unknown",
+   "page": "missions/generic-colonize-explore",
+   "slug": "generic-colonize-explore",
+   "type": "mission"
+  },
+  "mission:generic_conquer_province": {
+   "icon": "img/mission/generic-conquer-province.png",
+   "name": "Regional Expansion",
+   "page": "missions/generic-conquer-province",
+   "slug": "generic-conquer-province",
+   "type": "mission"
+  },
+  "mission:generic_humiliate_rival": {
+   "icon": "img/mission/generic-humiliate-rival-mission-pack.png",
+   "name": "Humiliate a Rival",
+   "page": "missions/generic-humiliate-rival",
+   "slug": "generic-humiliate-rival",
+   "type": "mission"
+  },
+  "mission:generic_trade": {
+   "icon": "img/mission/generic-trade.png",
+   "name": "The Development of Trade",
+   "page": "missions/generic-trade",
+   "slug": "generic-trade",
+   "type": "mission"
+  },
+  "mission:generic_traditional_economy": {
+   "icon": "img/mission/generic-traditional-economy.png",
+   "name": "Traditional Economy",
+   "page": "missions/generic-traditional-economy",
+   "slug": "generic-traditional-economy",
+   "type": "mission"
+  },
+  "mission:generic_vassal_ties": {
+   "icon": "img/mission/generic-vassal-ties.png",
+   "name": "Vassal Ties",
+   "page": "missions/generic-vassal-ties",
+   "slug": "generic-vassal-ties",
+   "type": "mission"
+  },
+  "mission:progress_and_literacy": {
+   "icon": "img/mission/generic-progress-and-literacy.png",
+   "name": "Progress & Literacy",
+   "page": "missions/progress-and-literacy",
+   "slug": "progress-and-literacy",
+   "type": "mission"
   },
   "parliament-agenda:pa_accept_estate_culture": {
    "name": "Accept Estate Culture",
