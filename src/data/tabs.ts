@@ -173,6 +173,11 @@ export const TABS: Tab[] = [
     summary: 'Continents → regions → areas → provinces, with a location index',
   },
   {
+    slug: 'locations', icon: '📍', label: 'Locations', section: 'World',
+    status: 'built',
+    summary: 'All 22,864 land locations — trade good, terrain, culture makeup',
+  },
+  {
     slug: 'terrain', icon: '⛰️', label: 'Terrain & Climate', section: 'World',
     status: 'built',
     summary: 'Climate, topography, and vegetation modifiers',

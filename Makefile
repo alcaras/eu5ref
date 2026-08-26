@@ -18,6 +18,7 @@ data:
 	$(PY) scripts/build_religions.py
 	$(PY) scripts/build_cultures.py
 	$(PY) scripts/build_pops.py
+	$(PY) scripts/build_locations.py
 	$(PY) scripts/build_events.py
 	$(PY) scripts/build_countries.py
 	$(PY) scripts/build_simple.py

@@ -25,7 +25,7 @@ CHANGELOG = ROOT / "CHANGELOG.md"
 
 # Derived registries: diffing entry-by-entry is pure noise (they re-derive from
 # the other files), so only report count-level changes for these.
-SUMMARY_ONLY = {"entities.json", "backlinks.json", "events.json", "defines.json"}
+SUMMARY_ONLY = {"entities.json", "backlinks.json", "events.json", "defines.json", "areas.json"}
 
 # Keys we try (in order) to index a list-of-dicts dataset by.
 ID_KEYS = ("id", "key", "slug", "label", "name")

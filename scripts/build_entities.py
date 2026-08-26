@@ -29,6 +29,7 @@ TYPE_PAGES = {
     'formable': 'formables',
     'trait': 'traits',
     'event': 'events',
+    'area': 'areas',
 }
 
 SKIP_FILES = {'entities.json', 'backlinks.json'}

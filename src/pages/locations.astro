@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Locations" active="locations" pageMark="📍" eyebrow="World"
+  description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion.">
+  <p style="max-width: 720px; color: var(--text-soft);">
+    Every land location, searchable. Type a name, a trade good, a culture or a
+    religion — or combine them. Results link through to the location's area,
+    where you get the full detail: terrain, pops, and the culture makeup.
+  </p>
+
+  <div class="loc" data-loc>
+    <div class="filterbar">
+      <input type="search" placeholder="Search locations, goods, cultures…" data-loc-q autocomplete="off" />
+      <div class="facet-group">
+        <span class="facet-label">Good</span>
+        <span data-loc-goods></span>
+      </div>
+      <span class="filter-count" data-loc-count>loading…</span>
+    </div>
+    <div class="etbl-scroll">
+      <table class="etbl">
+        <thead><tr>
+          <th data-loc-sort="0">Location</th>
+          <th data-loc-sort="5">Area</th>
+          <th data-loc-sort="2">Good</th>
+          <th data-loc-sort="3">Culture</th>
+          <th data-loc-sort="4">Religion</th>
+          <th data-loc-sort="6">Rank</th>
+          <th data-loc-sort="7" class="num">Pops</th>
+        </tr></thead>
+        <tbody data-loc-body></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const root = document.querySelector('[data-loc]')!;
+    const q = root.querySelector('[data-loc-q]') as HTMLInputElement;
+    const body = root.querySelector('[data-loc-body]') as HTMLElement;
+    const count = root.querySelector('[data-loc-count]') as HTMLElement;
+    const goodsBar = root.querySelector('[data-loc-goods]') as HTMLElement;
+    const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+    const LIMIT = 300;   // render a page's worth; the filter narrows the rest
+
+    let rows: any[][] = [];
+    let good: string | null = null;
+    let sortIx = 7, sortDir = -1;
+
+    const esc = (s: string) => String(s).replace(/[&<>]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' } as any)[c]);
+
+    function render() {
+      const term = q.value.trim().toLowerCase();
+      let hits = rows;
+      if (good) hits = hits.filter((r) => r[2] === good);
+      if (term) {
+        hits = hits.filter((r) =>
+          r[0].toLowerCase().includes(term) || r[2].toLowerCase().includes(term) ||
+          r[3].toLowerCase().includes(term) || r[4].toLowerCase().includes(term) ||
+          r[5].toLowerCase().includes(term));
+      }
+      const sorted = [...hits].sort((a, b) => {
+        const x = a[sortIx], y = b[sortIx];
+        if (typeof x === 'number' && typeof y === 'number') return (x - y) * sortDir;
+        return String(x).localeCompare(String(y)) * sortDir;
+      });
+      const shown = sorted.slice(0, LIMIT);
+      body.innerHTML = shown.map((r) =>
+        `<tr><td><b>${esc(r[0])}</b></td>` +
+        `<td><a href="${baseUrl}areas/${r[1]}">${esc(r[5])}</a></td>` +
+        `<td>${esc(r[2])}</td><td>${esc(r[3])}</td><td>${esc(r[4])}</td>` +
+        `<td>${esc(r[6])}</td><td class="num">${r[7] || ''}</td></tr>`).join('');
+      count.textContent = hits.length > LIMIT
+        ? `showing ${LIMIT} of ${hits.length.toLocaleString()} matches`
+        : `${hits.length.toLocaleString()} of ${rows.length.toLocaleString()} locations`;
+    }
+
+    fetch(`${baseUrl}locations.json`).then((r) => r.json()).then((d) => {
+      rows = d.rows;
+      // the trade goods that actually occur, most common first
+      const tally = new Map<string, number>();
+      for (const r of rows) if (r[2]) tally.set(r[2], (tally.get(r[2]) || 0) + 1);
+      goodsBar.innerHTML = [...tally.entries()].sort((a, b) => b[1] - a[1])
+        .map(([g, n]) => `<button data-good="${esc(g)}">${esc(g)} <small>${n}</small></button>`).join('');
+      goodsBar.addEventListener('click', (e) => {
+        const b = (e.target as HTMLElement).closest('[data-good]') as HTMLElement | null;
+        if (!b) return;
+        const g = b.dataset.good!;
+        good = good === g ? null : g;
+        for (const x of goodsBar.querySelectorAll('button')) x.classList.remove('on');
+        if (good) b.classList.add('on');
+        render();
+      });
+      render();
+    });
+
+    q.addEventListener('input', render);
+    for (const th of root.querySelectorAll<HTMLElement>('[data-loc-sort]')) {
+      th.addEventListener('click', () => {
+        const ix = Number(th.dataset.locSort);
+        sortDir = ix === sortIx ? -sortDir : (ix === 7 ? -1 : 1);
+        sortIx = ix;
+        for (const x of root.querySelectorAll('[data-loc-sort]')) x.classList.remove('sorted-asc', 'sorted-desc');
+        th.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+        render();
+      });
+    }
+  </script>
+</Base>

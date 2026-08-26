@@ -1,0 +1,86 @@
+---
+import Base from '../../layouts/Base.astro';
+import Term from '../../components/Term.astro';
+import data from '../../data/areas.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const locs = entity.data.locations.filter((l: any) => !l.sea);
+const seas = entity.data.locations.filter((l: any) => l.sea);
+---
+<Base title={entity.name} active="locations" eyebrow={`Area · ${entity.facets.region}`}
+  pageStats={[
+    { label: 'locations', value: entity.data.count },
+    { label: 'towns', value: entity.data.towns },
+    { label: 'pops at 1337', value: entity.data.pop_total },
+    { label: 'goods', value: entity.data.goods.length },
+  ]}
+  description={`${entity.name} — every location, its trade good, terrain, and starting culture makeup.`}>
+
+  <p class="chips">
+    <span class="chip">{entity.facets.continent}</span>
+    <span class="chip">{entity.facets.subcontinent}</span>
+    <span class="chip">{entity.facets.region}</span>
+  </p>
+
+  <div class="etbl-scroll">
+    <table class="etbl">
+      <thead><tr>
+        <th>Location</th><th>Province</th><th>Good</th><th>Terrain</th>
+        <th>Rank</th><th class="num">Pops</th><th>Culture makeup</th><th>Religion</th>
+      </tr></thead>
+      <tbody>
+        {locs.map((l: any) => (
+          <tr>
+            <td><b>{l.name}</b></td>
+            <td>{l.province}</td>
+            <td>{l.good_id ? <Term id={l.good_id} label={l.good} /> : <span class="is-empty">—</span>}</td>
+            <td>
+              <span class="chips">
+                {l.topography && <span class="chip">{l.topography}</span>}
+                {l.vegetation && <span class="chip">{l.vegetation}</span>}
+                {l.climate && <span class="chip">{l.climate}</span>}
+              </span>
+            </td>
+            <td>{l.rank ? <span class="chip">{l.rank}</span> : <span class="is-empty">—</span>}</td>
+            <td class="num">{l.pop_total ?? ''}</td>
+            <td>
+              {l.cultures.length > 0 ? (
+                <span class="mkup">
+                  {l.cultures.slice(0, 4).map((c: any) => (
+                    <span class="mkup__row"><span class="mkup__n">{c.name}</span><span class="mkup__p">{c.pct}%</span></span>
+                  ))}
+                </span>
+              ) : <span class="is-empty">—</span>}
+            </td>
+            <td>
+              {l.religions.length > 0 ? (
+                <span class="mkup">
+                  {l.religions.slice(0, 3).map((r: any) => (
+                    <span class="mkup__row"><span class="mkup__n">{r.name}</span><span class="mkup__p">{r.pct}%</span></span>
+                  ))}
+                </span>
+              ) : <span class="is-empty">—</span>}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {seas.length > 0 && (
+    <p style="margin-top: 14px; color: var(--text-faint); font-size: 12.5px;">
+      Also contains {seas.length} sea or lake {seas.length === 1 ? 'zone' : 'zones'}:
+      {' '}{seas.map((s: any) => s.name).join(', ')}
+    </p>
+  )}
+</Base>
+
+<style>
+  .mkup { display: flex; flex-direction: column; gap: 1px; }
+  .mkup__row { display: flex; gap: 8px; justify-content: space-between; white-space: nowrap; }
+  .mkup__n { color: var(--text-soft); }
+  .mkup__p { color: var(--text-faint); font-family: var(--font-mono); font-size: 11.5px; }
+</style>

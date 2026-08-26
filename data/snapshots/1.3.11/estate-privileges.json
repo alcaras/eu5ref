@@ -3,7 +3,11 @@
   "entities": [
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -48,7 +52,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -105,7 +113,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -144,7 +156,19 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [
+          "text: gained access to this privilege tt",
+          "has variable: amenokal salt traders variable"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -189,7 +213,26 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "PAP"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -222,7 +265,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -267,7 +317,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -312,7 +369,20 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "FLO"
+        ],
+        "gate_labels": [
+          "Florence"
+        ],
+        "requires": [
+          "text: produce any fine cloth or silk tt",
+          "GREATER THAN: 0",
+          "GREATER THAN: 0"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -357,7 +427,17 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "religion: Catholicism",
+          "GREATER THAN: 1"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -402,7 +482,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "rel",
+            "catholic"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -441,7 +537,38 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "current age"
+            ],
+            [
+              "?",
+              "current age"
+            ],
+            [
+              "?",
+              "current age"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
+        "requires": [
+          "has advance: ottoman tax farming",
+          "text: has enabled kadiluks privilege",
+          "has variable: autonomous kadiluks flag"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -486,7 +613,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "KNI"
+          ],
+          [
+            "?",
+            "government type"
+          ]
+        ],
+        "gate_labels": [
+          "Knights Hospitaller"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -531,7 +674,32 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "scottish_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [
+          "has estate privilege: sco statutes of iona"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -576,7 +744,32 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "scottish_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [
+          "has estate privilege: sco statutes of iona"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -615,7 +808,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has advance: noble knights",
+          "has estate privilege: monetary fiefs"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -684,7 +887,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "tag",
+            "VEN"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -723,7 +942,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "TUR"
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -768,7 +996,24 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "SPA"
+          ],
+          [
+            "tag",
+            "CAS"
+          ]
+        ],
+        "gate_labels": [
+          "SPA",
+          "Castile"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -807,7 +1052,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -864,7 +1113,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "SER"
+        ],
+        "gate_labels": [
+          "Serbia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -909,7 +1167,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -948,7 +1213,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -987,7 +1259,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1020,7 +1299,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1065,7 +1348,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1125,7 +1412,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1170,7 +1461,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religious unity LESS THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.66"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1209,7 +1509,26 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "SCO"
+          ],
+          [
+            "tag",
+            "SBL"
+          ]
+        ],
+        "gate_labels": [
+          "Scotland",
+          "Balliol"
+        ],
+        "requires": [
+          "GREATER THAN EQUAL: 1"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1260,7 +1579,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "rel",
+            "catholic"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1311,7 +1646,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "CAS"
+        ],
+        "gate_labels": [
+          "Castile"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1356,7 +1700,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "CAS"
+          ],
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1401,7 +1761,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1446,7 +1813,31 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1491,7 +1882,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "nahuatl"
+          ],
+          [
+            "?",
+            "has advance"
+          ]
+        ],
+        "gate_labels": [
+          "Nahua"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1536,7 +1943,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "FRA"
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1575,7 +1991,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "RUS"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "RUS"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1614,7 +2046,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1653,7 +2089,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1698,7 +2138,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "not",
+          [
+            "?",
+            "religion group"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1737,7 +2187,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "total effective building levels:university GREATER THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "GREATER THAN: 0"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1794,7 +2253,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1845,7 +2311,40 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "has reform"
+            ],
+            [
+              "not",
+              [
+                "rgrp",
+                "root.religion.group"
+              ]
+            ],
+            [
+              "cgrp",
+              "iberian_group"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism",
+          "Iberian"
+        ],
+        "requires": [
+          "has advance: castle advance"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1865,7 +2364,26 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "PAP"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1910,7 +2428,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religion group"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1955,7 +2480,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religious unity LESS THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.66"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -1994,7 +2528,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2045,7 +2583,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2102,7 +2644,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2147,7 +2693,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "hibernian_group"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Hibernian"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2192,7 +2754,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2237,7 +2803,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "religion: Catholicism"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2300,7 +2875,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2351,7 +2930,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has estate privilege"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2371,7 +2957,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has estate privilege"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2391,7 +2984,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has estate privilege"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2411,7 +3011,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has estate privilege"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2431,7 +3038,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2470,7 +3084,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2521,7 +3139,29 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "ZAN"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "trigger if has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Kilwa"
+        ],
+        "requires": [
+          "has or had tag: Kilwa",
+          "has reform: Control of the Mahdali Coinage"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2578,7 +3218,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2629,7 +3273,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2668,7 +3316,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2707,7 +3359,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2746,7 +3402,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2791,7 +3451,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2830,7 +3494,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2869,7 +3537,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religious unity LESS THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.66"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2908,7 +3585,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2947,7 +3628,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -2986,7 +3671,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3025,7 +3714,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3064,7 +3757,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "hibernian_group"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Hibernian"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3121,7 +3830,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3166,7 +3882,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "religion group"
+          ],
+          [
+            "?",
+            "dominant religion group"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3199,7 +3929,28 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "religion group"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "dominant religion group"
+            ],
+            [
+              "?",
+              "dominant religion group"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3244,7 +3995,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3264,7 +4019,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3309,7 +4068,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3348,7 +4111,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3393,7 +4160,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3432,7 +4203,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3477,7 +4252,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3516,7 +4295,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3561,7 +4344,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3612,7 +4399,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3657,7 +4448,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3702,7 +4497,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3759,7 +4561,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "rel",
+            "miaphysite"
+          ]
+        ],
+        "gate_labels": [
+          "Miaphysitism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3798,7 +4616,27 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3855,7 +4693,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3894,7 +4736,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3939,7 +4785,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has embraced institution"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -3984,7 +4837,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "FLO"
+        ],
+        "gate_labels": [
+          "Florence"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4050,7 +4912,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4101,7 +4967,18 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "ARA"
+        ],
+        "gate_labels": [
+          "Aragon"
+        ],
+        "requires": [
+          "type: formalized oath"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4146,7 +5023,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "?",
+            "character:etienne marcel is alive"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4197,7 +5090,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "tag",
+            "FRA"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4248,7 +5157,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "tag",
+            "FRA"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4299,7 +5224,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "target: ROOT",
+          "LESS THAN: 50"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4350,7 +5285,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religion group"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4395,7 +5337,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "PAP"
+          ],
+          [
+            "?",
+            "has estate privilege"
+          ]
+        ],
+        "gate_labels": [
+          "Rome"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4440,7 +5398,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "produced in country:pepper GREATER THAN"
+          ],
+          [
+            "?",
+            "religion group"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4479,7 +5451,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "ARA"
+        ],
+        "gate_labels": [
+          "Aragon"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4524,7 +5505,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "religion group"
+          ],
+          [
+            "cgrp",
+            "turkic_group"
+          ]
+        ],
+        "gate_labels": [
+          "Turkic"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4581,7 +5578,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "HUN"
+        ],
+        "gate_labels": [
+          "Hungary"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4626,7 +5632,38 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "POL"
+            ],
+            [
+              "tag",
+              "PLC"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "has variable"
+            ],
+            [
+              "?",
+              "any active disaster disaster type"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Poland",
+          "PLC"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4683,7 +5720,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "SER"
+        ],
+        "gate_labels": [
+          "Serbia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4728,7 +5774,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "FRA"
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4773,7 +5828,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4818,7 +5877,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "text: gained access to this privilege tt",
+          "has variable: hab tractatus incorporalibus granted"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4863,7 +5932,28 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ],
+          [
+            "cap",
+            "sub_continent",
+            "south_asia"
+          ]
+        ],
+        "gate_labels": [
+          "South Asia"
+        ],
+        "requires": [
+          "has slavery: True",
+          "has estate privilege: dhimmi in administration",
+          "has estate privilege: noble leaders only"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4914,7 +6004,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "haudenosaunee_group"
+        ],
+        "gate_labels": [
+          "Haudenosaunee"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -4965,7 +6064,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ],
+          [
+            "?",
+            "has law"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5004,7 +6117,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "inti"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Inti"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5049,7 +6178,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "BOH"
+        ],
+        "gate_labels": [
+          "Bohemia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5094,7 +6232,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5139,7 +6284,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5184,7 +6336,53 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "or",
+            [
+              "cap",
+              "region",
+              "baltic_region"
+            ],
+            [
+              "cap",
+              "region",
+              "carpathia_region"
+            ],
+            [
+              "cap",
+              "area",
+              "baltic_area"
+            ],
+            [
+              "cap",
+              "area",
+              "bohemia_area"
+            ],
+            [
+              "cap",
+              "area",
+              "moravia_area"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism",
+          "Baltic",
+          "Carpathia",
+          "Bohemia",
+          "Moravia"
+        ],
+        "requires": [
+          "has policy: closed borders law"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5229,7 +6427,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ],
+          [
+            "?",
+            "religion group"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5286,7 +6498,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5331,7 +6550,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "bohemian_group"
+        ],
+        "gate_labels": [
+          "Bohemian"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5382,7 +6610,50 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "rel",
+              "jain"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "religion group"
+            ],
+            [
+              "?",
+              "religion group"
+            ]
+          ],
+          [
+            "cap",
+            "sub_continent",
+            "south_asia"
+          ],
+          [
+            "and",
+            [
+              "rel",
+              "jain"
+            ],
+            [
+              "?",
+              "value GREATER THAN"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "South Asia",
+          "Jainism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5415,7 +6686,50 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "rel",
+              "jain"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "religion group"
+            ],
+            [
+              "?",
+              "religion group"
+            ]
+          ],
+          [
+            "cap",
+            "sub_continent",
+            "south_asia"
+          ],
+          [
+            "and",
+            [
+              "rel",
+              "jain"
+            ],
+            [
+              "?",
+              "value GREATER THAN"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "South Asia",
+          "Jainism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5435,7 +6749,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5480,7 +6798,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "root"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5531,7 +6863,18 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "ARA"
+        ],
+        "gate_labels": [
+          "Aragon"
+        ],
+        "requires": [
+          "type: justicia de aragon"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5576,7 +6919,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5627,7 +6977,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5666,7 +7025,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5711,7 +7079,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [
+          "owns: gambaru",
+          "owns: yo",
+          "owns: bodou sailay",
+          "owns: nguigmi"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5756,7 +7138,30 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "KBO"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "custom tooltip text"
+            ],
+            [
+              "?",
+              "custom tooltip has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5813,7 +7218,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5846,7 +7260,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5891,7 +7314,33 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "prussian"
+            ],
+            [
+              "cgrp",
+              "german_group"
+            ]
+          ],
+          [
+            "cap",
+            "region",
+            "baltic_region"
+          ]
+        ],
+        "gate_labels": [
+          "Prussian",
+          "German",
+          "Baltic"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5911,7 +7360,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -5962,7 +7415,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "SWE"
+        ],
+        "gate_labels": [
+          "Sweden"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6013,7 +7475,28 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ],
+          [
+            "not",
+            [
+              "cul",
+              "greek_culture"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "culture: Greek",
+          "is frankokratia state: True",
+          "religion: Catholicism"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6076,7 +7559,28 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "not",
+            [
+              "cul",
+              "greek_culture"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.33",
+          "is frankokratia state: True",
+          "culture: Greek"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6139,7 +7643,35 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "?",
+            "owns"
+          ],
+          [
+            "?",
+            "location:constantinople is location holy site for"
+          ],
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [
+          "religion: Catholicism",
+          "owns: constantinople",
+          "is location holy site for: Catholicism"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6196,7 +7728,31 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "POL"
+            ],
+            [
+              "tag",
+              "PLC"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Poland",
+          "PLC"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6247,7 +7803,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "tag",
+            "VEN"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6304,7 +7876,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "tag",
+            "VEN"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6349,7 +7937,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6394,7 +7989,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6439,7 +8041,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "GREATER THAN: 0"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6484,7 +8095,24 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "cap",
+            "region",
+            "maghreb_region"
+          ],
+          [
+            "?",
+            "estate power(estate type:tribes estate) GREATER THAN"
+          ]
+        ],
+        "gate_labels": [
+          "Maghreb"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6517,7 +8145,75 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cap",
+              "area",
+              "baltic_area"
+            ],
+            [
+              "cap",
+              "region",
+              "north_german_region"
+            ],
+            [
+              "cap",
+              "region",
+              "south_german_region"
+            ],
+            [
+              "cap",
+              "area",
+              "alsace_area"
+            ],
+            [
+              "cap",
+              "area",
+              "franche_comte_area"
+            ],
+            [
+              "cap",
+              "area",
+              "lorraine_area"
+            ],
+            [
+              "cap",
+              "area",
+              "picardy_area"
+            ],
+            [
+              "cap",
+              "area",
+              "slovenia_area"
+            ],
+            [
+              "cap",
+              "area",
+              "silesia_area"
+            ]
+          ],
+          [
+            "?",
+            "is member of international organization"
+          ]
+        ],
+        "gate_labels": [
+          "Baltic",
+          "Northern Germany",
+          "Southern Germany",
+          "Alsace",
+          "Franche-Comté",
+          "Lorraine",
+          "Picardy",
+          "Carniola",
+          "Silesia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6568,7 +8264,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6613,7 +8316,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6658,7 +8368,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "MAM"
+          ],
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Egypt (MAM)"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6703,7 +8429,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: maintain clerical proceedings"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6754,7 +8489,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "RUS"
+          ],
+          [
+            "?",
+            "ruler has variable"
+          ]
+        ],
+        "gate_labels": [
+          "RUS"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6799,7 +8550,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6850,7 +8608,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6901,7 +8663,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6952,7 +8721,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -6972,7 +8748,20 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "MLO"
+        ],
+        "gate_labels": [
+          "Milan"
+        ],
+        "requires": [
+          "text: produce any fine cloth or silk tt",
+          "GREATER THAN: 0",
+          "GREATER THAN: 0"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7023,7 +8812,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "andean_group"
+        ],
+        "gate_labels": [
+          "Andean"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7074,7 +8872,19 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "not",
+          [
+            "?",
+            "has estate privilege"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: auxilium et consilium"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7125,7 +8935,28 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "POL"
+          ],
+          [
+            "tag",
+            "PLC"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Poland",
+          "PLC"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7182,7 +9013,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7239,7 +9077,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religion group"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7278,7 +9123,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7335,7 +9184,24 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "tag",
+            "KOR"
+          ]
+        ],
+        "gate_labels": [
+          "France",
+          "Goryeo"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7386,7 +9252,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has advance: castle advance"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7449,7 +9324,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7554,7 +9433,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "?",
+            "government type"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7593,7 +9486,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7644,7 +9544,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7689,7 +9593,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7746,7 +9654,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has ports"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7791,7 +9706,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7860,7 +9779,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7905,7 +9828,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religious unity LESS THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.66"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7944,7 +9876,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "NOV"
+        ],
+        "gate_labels": [
+          "Velikiy Novgorod"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -7964,7 +9905,32 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "cap",
+            "region",
+            "carpathia_region"
+          ],
+          [
+            "cap",
+            "region",
+            "baltic_region"
+          ],
+          [
+            "cap",
+            "region",
+            "ruthenia_region"
+          ]
+        ],
+        "gate_labels": [
+          "Carpathia",
+          "Baltic",
+          "Ruthenia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8009,7 +9975,18 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "MAL"
+        ],
+        "gate_labels": [
+          "Mali"
+        ],
+        "requires": [
+          "type: office of the farima soura privilege"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8072,7 +10049,18 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "MAL"
+        ],
+        "gate_labels": [
+          "Mali"
+        ],
+        "requires": [
+          "type: office of the sankar zouma privilege"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8117,7 +10105,25 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "ENG"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "England"
+        ],
+        "requires": [
+          "has estate privilege: peasants free peasantry"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8162,7 +10168,28 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "POL"
+          ],
+          [
+            "tag",
+            "PLC"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Poland",
+          "PLC"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8219,7 +10246,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8270,7 +10301,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8321,7 +10356,19 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "not",
+          [
+            "?",
+            "has estate privilege"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: tur banned weaponry for peasants"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8384,7 +10431,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8441,7 +10492,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8486,7 +10541,38 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "and",
+            [
+              "?",
+              "limit has estate privilege"
+            ],
+            [
+              "not",
+              [
+                "?",
+                "trigger if has estate privilege"
+              ]
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: statutes of piotrkow",
+          "has estate privilege: statutes of piotrkow",
+          "has estate privilege: ordinance of laborers"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8555,7 +10641,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8606,7 +10696,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "ENG"
+        ],
+        "gate_labels": [
+          "England"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8657,7 +10756,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religious unity LESS THAN"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "LESS THAN: 0.66"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8708,7 +10816,18 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "modifier:has a parliamentary system"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "parliament type: estate parliament",
+          "parliament type: autocratic parliament",
+          "parliament type: constitutional parliament"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8759,7 +10878,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8810,7 +10933,30 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8855,7 +11001,40 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "confucian_group"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "any international organizations member of international organization type"
+            ],
+            [
+              "?",
+              "any international organizations member of international organization has policy"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "is member of international organization"
+          ]
+        ],
+        "gate_labels": [
+          "Confucian-Influenced"
+        ],
+        "requires": [
+          "has imperial examinations: True"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8906,7 +11085,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8969,7 +11155,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -8989,7 +11182,24 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "POL"
+          ],
+          [
+            "tag",
+            "PLC"
+          ]
+        ],
+        "gate_labels": [
+          "Poland",
+          "PLC"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9034,7 +11244,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "PAP"
+        ],
+        "gate_labels": [
+          "Rome"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9073,7 +11292,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9118,7 +11341,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "num of ports GREATER THAN"
+          ],
+          [
+            "?",
+            "modifier:can hire privateers"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9163,7 +11400,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9208,7 +11452,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9247,7 +11495,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9304,7 +11559,43 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "lang",
+              "rajasthani_language"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "religion group"
+            ],
+            [
+              "?",
+              "religion group"
+            ]
+          ],
+          [
+            "cap",
+            "sub_continent",
+            "south_asia"
+          ],
+          [
+            "lang",
+            "rajasthani_language"
+          ]
+        ],
+        "gate_labels": [
+          "South Asia",
+          "Rajasthani"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9324,7 +11615,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9375,7 +11673,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "not",
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9426,7 +11734,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9471,7 +11786,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9516,7 +11838,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9555,7 +11881,30 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9600,7 +11949,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "german_group"
+          ],
+          [
+            "?",
+            "succession law"
+          ]
+        ],
+        "gate_labels": [
+          "German"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9645,7 +12010,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9690,7 +12062,17 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "text: gained access to this privilege tt",
+          "has variable: mos salt tax exemption flag"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9735,7 +12117,40 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "confucian_group"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "any international organizations member of international organization type"
+            ],
+            [
+              "?",
+              "any international organizations member of international organization has policy"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "is member of international organization"
+          ]
+        ],
+        "gate_labels": [
+          "Confucian-Influenced"
+        ],
+        "requires": [
+          "has imperial examinations: True"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9786,7 +12201,14 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9831,7 +12253,35 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "scottish_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [
+          "has estate privilege: sco statutes of iona"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9882,7 +12332,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has tribal government"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9921,7 +12378,24 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "or",
+          [
+            "?",
+            "num of ports GREATER THAN"
+          ],
+          [
+            "?",
+            "any owned foreign building location modifier:can build ships in this location"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [
+          "GREATER THAN: 0",
+          "modifier:can build ships in this location: True"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -9972,7 +12446,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10011,7 +12492,18 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "FLO"
+        ],
+        "gate_labels": [
+          "Florence"
+        ],
+        "requires": [
+          "has reform: Signoria"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10056,7 +12548,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "num of ports GREATER THAN"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10095,7 +12594,21 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "?",
+            "has advance"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10140,7 +12653,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: maintain clerical proceedings"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10173,7 +12695,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10218,7 +12747,17 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "not",
+          [
+            "rel",
+            "catholic"
+          ]
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10263,7 +12802,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10308,7 +12856,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "government type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10359,7 +12914,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10410,7 +12969,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10461,7 +13024,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has tribal government"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10512,7 +13082,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has tribal government"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has advance: ranching"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10551,7 +13130,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10590,7 +13173,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "scottish_group"
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10629,7 +13221,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "scottish_group"
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10668,7 +13269,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10713,7 +13318,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10752,7 +13361,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "cgrp",
+          "scottish_group"
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10791,7 +13409,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10824,7 +13446,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10863,7 +13489,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10902,7 +13532,35 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "scottish_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Scottish"
+        ],
+        "requires": [
+          "has estate privilege: sco statutes of iona"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10947,7 +13605,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -10986,7 +13648,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11025,7 +13691,19 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "owns: konya",
+          "owns: sivas",
+          "owns: erzurum",
+          "owns: tabriz"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11070,7 +13748,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [
+          "has estate privilege: peasants allowed weapons privilege"
+        ],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11121,7 +13808,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "NOV"
+        ],
+        "gate_labels": [
+          "Velikiy Novgorod"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11141,7 +13837,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11192,7 +13895,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11237,7 +13947,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "rel",
+            "hussite"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Hussitism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11282,7 +14008,11 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": null,
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11327,7 +14057,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "rel",
+            "catholic"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11366,7 +14112,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11411,7 +14164,23 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked estate privilege trigger type"
+          ],
+          [
+            "rel",
+            "hindu"
+          ]
+        ],
+        "gate_labels": [
+          "Hinduism"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11450,7 +14219,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has unlocked estate privilege trigger type"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11483,7 +14259,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "FRA"
+        ],
+        "gate_labels": [
+          "France"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11534,7 +14319,16 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "tag",
+          "MLO"
+        ],
+        "gate_labels": [
+          "Milan"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11579,7 +14373,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "SER"
+        ],
+        "gate_labels": [
+          "Serbia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11618,7 +14421,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "religion group"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11663,7 +14473,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "rel",
+          "nahuatl"
+        ],
+        "gate_labels": [
+          "Nahua"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11708,7 +14527,14 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11728,7 +14554,23 @@
     },
     {
       "data": {
-        "can_revoke": true
+        "can_revoke": true,
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "tag",
+            "VEN"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
@@ -11779,7 +14621,16 @@
     },
     {
       "data": {
-        "can_revoke": false
+        "can_revoke": false,
+        "gate": [
+          "tag",
+          "SER"
+        ],
+        "gate_labels": [
+          "Serbia"
+        ],
+        "requires": [],
+        "unlocked_by": null
       },
       "desc": [
         [
