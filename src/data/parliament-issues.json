@@ -1,0 +1,3053 @@
+{
+ "dataset": "parliament-issues",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our subjects in Britain have shown to be discontent despite our claim. Showing them that we are not oppressors might help placate them."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:appease_english_population",
+   "mods": [],
+   "name": "Appease English Populace",
+   "slug": "appease-english-population",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our war efforts stand to greatly benefit by the backing of our legislative framework."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:back_the_war_effort",
+   "mods": [],
+   "name": "Back the War Effort",
+   "slug": "back-the-war-effort",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The financial crisis that looms over our people's heads is a dire matter, urgently in need to be addressed."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:balance_the_budget",
+   "mods": [],
+   "name": "Balance the Budget",
+   "slug": "balance-the-budget",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Expanding the rights for baronial burghs will further the development of our nation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:baronial_burghs_rights",
+   "mods": [],
+   "name": "Expand Baronial Burghs",
+   "slug": "baronial-burghs-rights",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The central authority of our country should stand tall above all interest groups and prominent members of our upper strata."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:bolster_the_divine_mandate",
+   "mods": [],
+   "name": "Bolster the Government",
+   "slug": "bolster-the-divine-mandate",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The central authority of our country should stand tall above all interest groups and prominent members of our upper strata."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:bolster_the_khan",
+   "mods": [],
+   "name": "Bolster the Government",
+   "slug": "bolster-the-khan",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The central authority of our country should stand tall above all interest groups and prominent members of our upper strata."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:bolster_the_monarchy",
+   "mods": [],
+   "name": "Bolster the Government",
+   "slug": "bolster-the-monarchy",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The central authority of our country should stand tall above all interest groups and prominent members of our upper strata."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:bolster_the_republic",
+   "mods": [],
+   "name": "Bolster the Government",
+   "slug": "bolster-the-republic",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The central authority of our country should stand tall above all interest groups and prominent members of our upper strata."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:bolster_the_tribal_leader",
+   "mods": [],
+   "name": "Bolster the Government",
+   "slug": "bolster-the-tribal-leader",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The masters and journeymen of our workshops toil without formal recognition from the crown. By granting guild charters to the craft brotherhoods of the realm, we bring their trades under lawful order and earn the goodwill of those whose hands sustain our prosperity."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:charter_artisan_guilds",
+   "mods": [],
+   "name": "Charter Artisan Guilds",
+   "slug": "charter-artisan-guilds",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our distant subjects demand attention that the crown can ill afford. By chartering formal governors with royal authority, we tighten our grip on these lands and ensure their revenues flow properly to our coffers."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:charter_subject_governors",
+   "mods": [],
+   "name": "Charter Subject Governors",
+   "slug": "charter-subject-governors",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our coasts offer natural harbors and stopping points that go unused for lack of proper facilities. A merchant-funded network of coastal trading posts would reduce the costs and risks of maritime commerce and bring distant provinces closer to the capital."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:coastal_trading_post_network",
+   "mods": [],
+   "name": "Coastal Trading Post Network",
+   "slug": "coastal-trading-post-network",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should invest heavily into the Education of the nobility to advance our administration."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:compulsory_education_nobles",
+   "mods": [],
+   "name": "Noble Education Act",
+   "slug": "compulsory-education-nobles",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The proper documentation of our people while tending to their development and prosperity is a great way to promote stability across the realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:conduct_a_census",
+   "mods": [],
+   "name": "Conduct a Census",
+   "slug": "conduct-a-census",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The authority of the [game concept Player] can not and will not be trumped by any authority outside its halls. In order to pursue our ideals, we must exercise this right in spite of royal decrees!"
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:curb_central_authority",
+   "mods": [],
+   "name": "Curb Central Authority",
+   "slug": "curb-central-authority",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our war effort demands resources beyond what ordinary revenue can provide. Parliament must authorise emergency levies on all estates — a burden shared by all for the survival and glory of the realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:declare_war_taxes",
+   "mods": [],
+   "name": "Declare War Taxes",
+   "slug": "declare-war-taxes",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Instead of sitting idly whilst the population starves, we should provide aid for any location which may be lacking food."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:dlh_famine_reductions",
+   "mods": [],
+   "name": "Combat Famines",
+   "slug": "dlh-famine-reductions",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Expanding the rights for ecclesiastical burghs will further the development of our nation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:ecclesiastical_burghs_rights",
+   "mods": [],
+   "name": "Expand Ecclesiastical Burghs",
+   "slug": "ecclesiastical-burghs-rights",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "After years of religious struggle, it is time for us to promote unity through co-existence and end the unnecessary bloodshed."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:edict_of_nantes_issue",
+   "mods": [],
+   "name": "Edict of Nantes",
+   "slug": "edict-of-nantes-issue",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The will of the people must be encapsuled into a written document, accepted by all, to solidify our rights and at the same time curb central authority."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_a_constitution",
+   "mods": [],
+   "name": "Establish a Constitution",
+   "slug": "establish-a-constitution",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our people go hungry while the granaries of great lords stand full. It is the duty of the Church to organize the relief of the poor and the hungry — a duty we must now formalize and fund."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_clergy_charity",
+   "mods": [],
+   "name": "Establish Clergy Charity",
+   "slug": "establish-clergy-charity",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The colonies we have planted abroad must be governed as proper extensions of our realm, not left to the whims of fortune-seekers. We must establish proper administrative structures to make this so."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_colonial_administration",
+   "mods": [],
+   "name": "Establish Colonial Administration",
+   "slug": "establish-colonial-administration",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our market centers bustle with activity, but lack a formal exchange where bulk goods can be traded in an orderly fashion. A properly established commodity exchange would make our markets the envy of our neighbors."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_commodity_exchange",
+   "mods": [],
+   "name": "Establish a Commodity Exchange",
+   "slug": "establish-commodity-exchange",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our people are vulnerable to the cruel turns of bad harvests, and hunger breeds desperation. By establishing community grain stores, we ensure that no famine, however harsh, can leave our people without recourse."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_common_food_stores",
+   "mods": [],
+   "name": "Establish Common Food Stores",
+   "slug": "establish-common-food-stores",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our borders are porous, and foreign merchants profit from goods that enter our realm without proper accounting. By building customs houses, we impose order on our imports and ensure the crown and our merchants take their proper share."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_customs_houses",
+   "mods": [],
+   "name": "Establish Customs Houses",
+   "slug": "establish-customs-houses",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Too many of our soldiers die not from enemy blades but from wounds that could be treated, and sickness that could be prevented. Let the Church organize mobile hospitals to follow our armies and save the lives of those who fight for us."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_field_hospitals",
+   "mods": [],
+   "name": "Establish Field Hospitals",
+   "slug": "establish-field-hospitals",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The precedence of titles, the rights of coats of arms, and the order of noble rank are matters of great consequence. A heralds' college would bring order to these affairs and lend greater prestige to our realm abroad."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_heralds_college",
+   "mods": [],
+   "name": "Establish a Heralds' College",
+   "slug": "establish-heralds-college",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We must not allow the flood of foreign goods to undermine our own producers. By establishing formal controls on what enters our markets, we protect our industries and ensure our merchants remain competitive."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_import_controls",
+   "mods": [],
+   "name": "Establish Import Controls",
+   "slug": "establish-import-controls",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The seeds of heresy have taken root, and only a systematic effort of Church courts can root them out. We must act swiftly before the contagion spreads further."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_inquisition_courts",
+   "mods": [],
+   "name": "Establish Inquisition Courts",
+   "slug": "establish-inquisition-courts",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our noble retinues grow soft in times of peace. By mandating regular field exercises and tournaments, we ensure that our warriors remain sharp and our armies ready when the call to battle comes."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_military_exercises",
+   "mods": [],
+   "name": "Establish Military Exercises",
+   "slug": "establish-military-exercises",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Unrest threatens our realm, and we cannot suppress it without strong local garrisons. Let the noble houses be required by law to maintain fortified positions in their domains, ready to defend crown and country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_noble_garrison_law",
+   "mods": [],
+   "name": "Establish Noble Garrison Law",
+   "slug": "establish-noble-garrison-law",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The roads of our realm are long and the distances wearying for courier and traveler alike. By establishing parish stations along key routes, the Church can provide rest, guidance, and support to all who move through our lands."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_parish_waypoints",
+   "mods": [],
+   "name": "Establish Parish Waypoints",
+   "slug": "establish-parish-waypoints",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The sacred sites of our faith draw the faithful from near and far. By formally protecting and maintaining the routes to these holy places, we show our piety and draw distinction and prestige to our realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_pilgrimage_routes",
+   "mods": [],
+   "name": "Establish Pilgrimage Routes",
+   "slug": "establish-pilgrimage-routes",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The age of mustering retainers at need has passed. Our noble houses should instead furnish trained officers to lead regiments kept permanent in royal service, a fighting force that owes its discipline to the crown rather than to its lord."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_standing_regiments",
+   "mods": [],
+   "name": "Establish Standing Regiments",
+   "slug": "establish-standing-regiments",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The old Commune of Venice serves its purpose and has its long tradition within our state. However, its administrative efficiency is showing its age. We might want to rework the supreme body of government and replace it with a new system which leads solves the domestic problems of the nation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_the_signoria_of_venice",
+   "mods": [],
+   "name": "Establish the Signoria of Venice",
+   "slug": "establish-the-signoria-of-venice",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The risks of trade — shipwreck, banditry, war — deter many a merchant from the ventures that would enrich the realm. By creating formal insurance schemes, we allow our merchants to trade with greater confidence."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_trade_insurance",
+   "mods": [],
+   "name": "Establish Trade Insurance",
+   "slug": "establish-trade-insurance",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our rural communities are governed by distant lords who neither know nor care for local needs. By establishing village councils with the authority to manage local affairs, we give our people a voice and bring order closer to home."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:establish_village_councils",
+   "mods": [],
+   "name": "Establish Village Councils",
+   "slug": "establish-village-councils",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our army reserve has seen better days and is in dire need of new infrastructure for recruitment."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_barracks",
+   "mods": [],
+   "name": "Expand the Barracks Infrastructure",
+   "slug": "expand-barracks",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The sword alone will only carry us so far. It would be far more beneficial for us to let the pen support the sword to achieve greater things. We need to secure our relations to the great powers of the world."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_diplomatic_corps_majors",
+   "mods": [],
+   "name": "Great Power Relations",
+   "slug": "expand-diplomatic-corps-majors",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The sword alone will only carry us so far. It would be far more beneficial for us to let the pen support the sword to achieve greater things. Our main concern should be the minor countries around ourselves."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_diplomatic_corps_minors",
+   "mods": [],
+   "name": "Increase Ties to Neighbors",
+   "slug": "expand-diplomatic-corps-minors",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The sword alone will only carry us so far. It would be far more beneficial for us to let the pen support the sword to achieve greater things. It is vital for us to improve our contacts to our religious brethren."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_diplomatic_corps_religion",
+   "mods": [],
+   "name": "Reach Out to our Faith",
+   "slug": "expand-diplomatic-corps-religion",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to expand our shipbuilding capacities to provide a formidable fleet for our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_docks",
+   "mods": [],
+   "name": "Expand our Shipbuilding Facilities",
+   "slug": "expand-docks",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to expand our shipbuilding capacities to provide a formidable fleet for our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_dry_docks",
+   "mods": [],
+   "name": "Expand our Shipbuilding Facilities",
+   "slug": "expand-dry-docks",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our farming estates secure the production of many basic necessities. However, the owners of the lands promise greater yields if we invest more time and resources into them."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_farming_operations",
+   "mods": [],
+   "name": "Fund Farming Estates",
+   "slug": "expand-farming-operations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our people are raising the pressing concern of food shortages to us. We should try to expand our Granary Network to prevent the same situation in the future."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_food_stockpiles",
+   "mods": [],
+   "name": "Expand Food Stockpiles",
+   "slug": "expand-food-stockpiles",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The forests of our country promise greater yields. We should expand our extraction operations to reach their potential."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_forestry_operations",
+   "mods": [],
+   "name": "Expand Forest Exploitation",
+   "slug": "expand-forestry-operations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should expand our gathering operations to meet the demands of those goods in the construction and maintenance of our wider economy."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_gathering_operations",
+   "mods": [],
+   "name": "Expand Gathering Industries",
+   "slug": "expand-gathering-operations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to expand our shipbuilding capacities to provide a formidable fleet for our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_grand_shipyards",
+   "mods": [],
+   "name": "Expand our Shipbuilding Facilities",
+   "slug": "expand-grand-shipyards",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We have not yet developed our hunting grounds to their full capacity and are therefore missing many possible profits."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_hunting_operations",
+   "mods": [],
+   "name": "Establish New Hunting Grounds",
+   "slug": "expand-hunting-operations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Mining could play a vital part in our economy, but the current operations are not up to a satisfactory standard."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_mining_operations",
+   "mods": [],
+   "name": "Expand Mining Operations",
+   "slug": "expand-mining-operations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to expand our shipbuilding capacities to provide a formidable fleet for our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_naval_bases",
+   "mods": [],
+   "name": "Expand our Shipbuilding Facilities",
+   "slug": "expand-naval-bases",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The promotion of capable men in high ranks across our military is a surefire way to ensure capable leadership."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_officer_lists",
+   "mods": [],
+   "name": "Expand Officer Lists",
+   "slug": "expand-officer-lists",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our market stands to greatly benefit by the loosening of our mercantile regulations."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_our_market",
+   "mods": [],
+   "name": "Market Expansion Acts",
+   "slug": "expand-our-market",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Reliable communication is the lifeblood of commerce. Our merchant houses are willing to finance a network of relay stations that would carry messages and goods faster than ever before — an investment that would repay itself many times over."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_postal_relay_network",
+   "mods": [],
+   "name": "Expand the Postal Relay Network",
+   "slug": "expand-postal-relay-network",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to expand our shipbuilding capacities to provide a formidable fleet for our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:expand_shipyards",
+   "mods": [],
+   "name": "Expand our Shipbuilding Facilities",
+   "slug": "expand-shipyards",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our army reserve has seen better days and is in dire need of new infrastructure for recruitment."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:finance_the_armory",
+   "mods": [],
+   "name": "Expand Our Armory",
+   "slug": "finance-the-armory",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our borders are only as strong as the passes our enemies must cross to reach us. We should fund the hardening of every vulnerable crossing — turning the natural defenses of the land into killing grounds for any who dare invade."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fortify_frontier_passes",
+   "mods": [],
+   "name": "Fortify Frontier Passes",
+   "slug": "fortify-frontier-passes",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The legal code is currently underdeveloped and does not meet our standards. We should establish a new Institution, the College of Justice, to tackle these issues and found a strong legal system."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:found_college_of_justice",
+   "mods": [],
+   "name": "Establish the College of Justice",
+   "slug": "found-college-of-justice",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The skilled craftsmen of our realm produce goods of extraordinary quality, but they lack the organisation and support to reach their full potential. We should fund and protect the guilds that represent them."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_artisan_guilds",
+   "mods": [],
+   "name": "Fund Artisan Guilds",
+   "slug": "fund-artisan-guilds",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The monasteries of our realm are centers of learning, charity, and order. We should expand their network and endow them properly, that their good works may reach every corner of the realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_monastery_network",
+   "mods": [],
+   "name": "Fund a Monastery Network",
+   "slug": "fund-monastery-network",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The great noble houses of our realm have the resources and the ambition to finance colonial expeditions. We should charter and encourage these ventures to extend our reach beyond the horizon."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_noble_colonization",
+   "mods": [],
+   "name": "Fund Noble Colonization",
+   "slug": "fund-noble-colonization",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The greatness of a realm is measured not only in armies and gold, but in the works of art and culture it produces. We should invest in the patronage of artists and craftsmen who will immortalize our dynasty's glory."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_royal_art_patronage",
+   "mods": [],
+   "name": "Fund Royal Art Patronage",
+   "slug": "fund-royal-art-patronage",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The walls of our enemies will not fall without the expertise to bring them down. Our burgher guilds can finance specialist engineers and the siege equipment needed to reduce even the strongest fortifications."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_siege_engineers",
+   "mods": [],
+   "name": "Fund Siege Engineers",
+   "slug": "fund-siege-engineers",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The merchant guilds stand ready to pool their capital for long-range commercial voyages, but such ventures require the backing of law and the confidence that comes from parliamentary support."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:fund_trade_expeditions",
+   "mods": [],
+   "name": "Fund Trade Expeditions",
+   "slug": "fund-trade-expeditions",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "To keep our territory flourishing, we will need to expand the rights of our urban areas and grant more city rights."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:grant_city_rights",
+   "mods": [],
+   "name": "Grant City Rights",
+   "slug": "grant-city-rights",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The forests and game of the realm are the natural domain of the nobility. By granting them exclusive rights to hunt and manage these lands, we strengthen their bond to their estates and their loyalty to the crown."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:grant_exclusive_hunting_rights",
+   "mods": [],
+   "name": "Grant Exclusive Hunting Rights",
+   "slug": "grant-exclusive-hunting-rights",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:gravel_road_development",
+   "mods": [],
+   "name": "Expand Gravel Road Network",
+   "slug": "gravel-road-development",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:gravel_road_development_burghers",
+   "mods": [],
+   "name": "Expand Gravel Road Network",
+   "slug": "gravel-road-development-burghers",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "If we are to keep a versatile army, we must promote military drills as a means to keep our soldiers at peak condition and ready."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:host_army_excercises",
+   "mods": [],
+   "name": "Host Army Exercises",
+   "slug": "host-army-excercises",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Request that the Imperial Circles raise levies for the Empire. Circle leaders are rewarded for their cooperation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_circle_levy_request",
+   "mods": [],
+   "name": "Request Circle Levies",
+   "slug": "hre-circle-levy-request",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The authority of the GetUniqueInternationalOrganization('hre') is undermined due to internal conflicts within the Holy Roman Empire. It is in the Empire's interest to enforce internal peace and stability."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_demand_internal_peace",
+   "mods": [],
+   "name": "Demand Internal Peace",
+   "slug": "hre-demand-internal-peace",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Empower Circle Leaders to enforce the Imperial peace within their territories."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_enforce_circle_landfriede",
+   "mods": [],
+   "name": "Enforce Circle Landfriede",
+   "slug": "hre-enforce-circle-landfriede",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the GetUniqueInternationalOrganization('hre') and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_establish_perpetual_diet",
+   "mods": [],
+   "name": "Establish the Perpetual Diet",
+   "slug": "hre-establish-perpetual-diet",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The rule of the GetUniqueInternationalOrganization('hre') has been judged by the Prince-Elector as insufficient. The Imperial Diet has been called to discuss the future of the leadership of the Holy Roman Empire."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_force_emperor_to_abdicate",
+   "mods": [],
+   "name": "Force Emperor to Abdicate",
+   "slug": "hre-force-emperor-to-abdicate",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Emperor of the Holy Roman Empire intends to implement a new law. Now is the opportunity for the Imperial Estates to negotiate in favor or against the proposal."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_law_debate",
+   "mods": [],
+   "name": "Imperial Law Debate",
+   "slug": "hre-law-debate",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Holy Roman Empire is under the threat of foreign invasion. The GetUniqueInternationalOrganization('hre') sees itself forced to request the military might of the whole Empire and all its members."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_request_additional_military_support",
+   "mods": [],
+   "name": "Imperial Military Support",
+   "slug": "hre-request-additional-military-support",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The treasury of the Holy Roman Empire has been running dry as of late. The GetUniqueInternationalOrganization('hre') requests the finanical support of the members of the Empire to ensure its security."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hre_roman_month",
+   "mods": [],
+   "name": "Roman Month",
+   "slug": "hre-roman-month",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our people have traversed the valleys of history against all odds. Surviving wars, crusades and persecution. Our armies deserve to employ the finest of tactics and shift into the offense, against all those who seek our demise!"
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:hussite_army_reform",
+   "mods": [],
+   "name": "Hussite Military Reforms",
+   "slug": "hussite-army-reform",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The relations between our faith and our state can be strained by many decision, especially if the faith itself is split on a specific issue. Acting as a mediator between different factions and forcing them to negotiate could prevent any further, severe split."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:improve_relations_with_the_faith",
+   "mods": [],
+   "name": "Foster Religious Relations",
+   "slug": "improve-relations-with-the-faith",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "By increasing our diplomatic and administrative ties to our subject we will be able to bind them more closely to our state."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:improve_subject_relations",
+   "mods": [],
+   "name": "Increase Ties to Subject",
+   "slug": "improve-subject-relations",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The British Isles are disconnected from the rest of the European continent, making it harder for us to rule over them. We should put the effort to make sure we overcome this challenge and increase our control over there."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:increase_control_in_britain",
+   "mods": [],
+   "name": "Increase Control in Britain",
+   "slug": "increase-control-in-britain",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We need to improve the infrastructure of our coastal towns and cities to support our power projection across our waters."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:increase_naval_spending",
+   "mods": [],
+   "name": "Increased Naval Infrastructure",
+   "slug": "increase-naval-spending",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Rather than allowing our nation to be filled with many different faiths, we should try to control them further lest they rebel."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:increase_non_hindu_control",
+   "mods": [],
+   "name": "Control over the Heathens",
+   "slug": "increase-non-hindu-control",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Exerting control over our county is vital to the functionality of our state. We should improve our institutions that enforce control over our towns."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:increase_our_control",
+   "mods": [],
+   "name": "Increase Our Control",
+   "slug": "increase-our-control",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A realm divided in faith is a realm divided in spirit. By codifying church law and enforcing its uniform application across our provinces, we strengthen the bonds of faith that hold our people together."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:institute_canonical_law",
+   "mods": [],
+   "name": "Institute Canonical Law",
+   "slug": "institute-canonical-law",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of any great army is the mounted nobility. By formalizing the military obligations of our noble houses — particularly their obligation to furnish heavy cavalry — we strengthen our forces in the field."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:institute_feudal_levies",
+   "mods": [],
+   "name": "Institute Feudal Levies",
+   "slug": "institute-feudal-levies",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our rivals have taken actions that cannot go without formal rebuke. A royal censure, backed by the authority of this parliament, would make plain to all that we will not suffer such conduct without response."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:issue_royal_censure",
+   "mods": [],
+   "name": "Issue Royal Censure",
+   "slug": "issue-royal-censure",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Much of our realm yet lies outside the light of the true faith. The Church must organize and dispatch missionaries to bring those lost souls into the fold, and we shall give them the backing they need to succeed."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:launch_religious_missions",
+   "mods": [],
+   "name": "Launch Religious Missions",
+   "slug": "launch-religious-missions",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The seas offer riches to the bold, and noble houses are well placed to outfit vessels of war for profit. By issuing letters of marque, we give form and legitimacy to their ventures while the crown benefits from the resulting trade disruption."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:license_noble_privateers",
+   "mods": [],
+   "name": "License Noble Privateers",
+   "slug": "license-noble-privateers",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The risks and rewards of long-distance trade are too great for any single merchant to bear alone. We should license formal trading companies to pool resources and share those risks, to the benefit of the realm as a whole."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:license_trading_companies",
+   "mods": [],
+   "name": "License Trading Companies",
+   "slug": "license-trading-companies",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "With the resurgency of the Romuva faith, many are worried that they may try and cause unrest. We need to summon the estates to deal with this matter."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:lit_measures_against_romuva",
+   "mods": [],
+   "name": "Measures Against Romuvan Resurgence",
+   "slug": "lit-measures-against-romuva",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our war effort stands in need of greater support from every corner of the realm. The crown must call upon all estates and subjects to contribute what they can to see us through this trial."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:mandate_emergency_levies",
+   "mods": [],
+   "name": "Mandate Emergency Levies",
+   "slug": "mandate-emergency-levies",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our enemies field armies of conscripted men, and we must do the same. Drawing reserves and recruits through the parish rolls will swell our forces in this hour of need."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:mandate_wartime_conscription",
+   "mods": [],
+   "name": "Mandate Wartime Conscription",
+   "slug": "mandate-wartime-conscription",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our armies fight not only for crown and country, but for faith and duty. By embedding clergy as chaplains within our forces, we sustain the spirit of our soldiers under the hardships of campaign."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:military_chaplaincy",
+   "mods": [],
+   "name": "Military Chaplaincy",
+   "slug": "military-chaplaincy",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:modern_road_development",
+   "mods": [],
+   "name": "Expand Modern Road Network",
+   "slug": "modern-road-development",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our nobility controls the roads, the passes, and the bridges through which all land trade must flow. By granting them formal tolling rights over overland merchants, we channel those profits into the hands of our most loyal subjects."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:monopolize_land_trade_routes",
+   "mods": [],
+   "name": "Monopolize Land Trade Routes",
+   "slug": "monopolize-land-trade-routes",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our noble houses stand astride the mountain passes that divide our realm. By chartering them to maintain and garrison these crossings, we ensure that distance and terrain no longer isolate our provinces from the crown."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:mountain_pass_charters",
+   "mods": [],
+   "name": "Mountain Pass Charters",
+   "slug": "mountain-pass-charters",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "By promoting the Rajasthani people in the nation, we can ensure that we have a number of militaristic officials we can depend upon."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:mug_promote_rajput_officials",
+   "mods": [],
+   "name": "Promote Rajasthani Officials",
+   "slug": "mug-promote-rajput-officials",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our fleet cannot remain at sea without reliable supply, and the merchant guilds have the networks to provide it. By contracting them formally to keep the fleet provisioned, we ensure our ships can fight without fear of running short."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:naval_supply_contracts",
+   "mods": [],
+   "name": "Naval Supply Contracts",
+   "slug": "naval-supply-contracts",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ravages of the ongoing civil war against the Royalists have proven that our army is in dire need of total reform."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:new_model_army_pi",
+   "mods": [],
+   "name": "New Model Army",
+   "slug": "new-model-army-pi",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:paved_road_development",
+   "mods": [],
+   "name": "Expand Paved Road Network",
+   "slug": "paved-road-development",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:paved_road_development_burghers",
+   "mods": [],
+   "name": "Expand Paved Road Network",
+   "slug": "paved-road-development-burghers",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should establish a school in every parish of our country to further the education of our people. They shall be run by members of the Church and be paid by a tax laid upon the Landowners of our country."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:presbyterian_education",
+   "mods": [],
+   "name": "Presbyterian Education Act",
+   "slug": "presbyterian-education",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The great lords of the realm have for too long seized the common lands that our peasants depend upon for their survival. We must act to protect what little they have left, before that unrest becomes something far more dangerous."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:prevent_noble_enclosure",
+   "mods": [],
+   "name": "Prevent Noble Enclosure",
+   "slug": "prevent-noble-enclosure",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The decisive power of artillery on the battlefield is unquestionable, and we must built our military doctrine around that fact. We must ensure that our armies include powerful cannons capable of shattering both enemy lines and fortifications."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_artillery_doctrine",
+   "mods": [],
+   "name": "Promote Artillery Doctrine",
+   "slug": "promote-artillery-doctrine",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Across our country lie excellent sites for potential fortifications, ready to halt any advance of our enemies."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_bastion_building",
+   "mods": [],
+   "name": "Promote Bastion Works",
+   "slug": "promote-bastion-building",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The burghers are vital to our state, both as merchants and members of the guilds. We should promote the capable members of their estate to our government."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_burghers_member",
+   "mods": [],
+   "name": "Promote Member of the Burghers",
+   "slug": "promote-burghers-member",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Across our country lie excellent sites for potential fortifications, ready to halt any advance of our enemies."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_castle_building",
+   "mods": [],
+   "name": "Promote Castle Works",
+   "slug": "promote-castle-building",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our chivalric orders are the embodiment of noble martial virtue. By granting them royal recognition and funding, we strengthen the bonds between the crown and its finest warriors."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_chivalric_orders",
+   "mods": [],
+   "name": "Promote Chivalric Orders",
+   "slug": "promote-chivalric-orders",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our administration could use the support of the Clergy to run more efficiently. By offering them higher positions in our government we could improve the situation of our state."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_clergy_member",
+   "mods": [],
+   "name": "Promote Member of the Clergy",
+   "slug": "promote-clergy-member",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our merchants stand ready to carry our goods to the furthest corners of the world, but they need the backing of this parliament to expand their networks. A commitment to export trade will enrich the realm and strengthen our hand abroad."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_export_trade",
+   "mods": [],
+   "name": "Promote Export Trade",
+   "slug": "promote-export-trade",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "New methods of crop rotation and cultivation have shown remarkable results in other lands. We should support their adoption across our realm, that our fields may yield more abundantly and our people suffer less from want."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_farming_innovation",
+   "mods": [],
+   "name": "Promote Farming Innovation",
+   "slug": "promote-farming-innovation",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Across our country lie excellent sites for potential fortifications, ready to halt any advance of our enemies."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_fortress_building",
+   "mods": [],
+   "name": "Promote Fortress Works",
+   "slug": "promote-fortress-building",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The craft brotherhoods that once sustained our towns can no longer match the output our age demands. We should invest in the new manufactories and mechanized workshops that produce far more, far faster, and let our trades meet the times."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_industrial_workshops",
+   "mods": [],
+   "name": "Promote Industrial Workshops",
+   "slug": "promote-industrial-workshops",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should support the efforts to integrate the remote provinces of our domain and consolidate them more closer into our core territory."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_integration",
+   "mods": [],
+   "name": "Promote Integration Process",
+   "slug": "promote-integration",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The sea lanes are highways of wealth for those bold enough to use them. We should invest in the infrastructure and institutions that support maritime commerce, and ensure our merchants command the waters."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_maritime_trade",
+   "mods": [],
+   "name": "Promote Maritime Trade",
+   "slug": "promote-maritime-trade",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should look toward our minor Nobility to promote new officers into the ranks of our government."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_noble_officers",
+   "mods": [],
+   "name": "Promote Noble Officers",
+   "slug": "promote-noble-officers",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The combination of pikemen and arquebusiers in the same disciplined formations is a force to reckon with in any army. By promoting strict training in these formations, we will ensure that our army can outperform the enemy in both offense and defense even among their midst."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_pike_and_shot_tactics",
+   "mods": [],
+   "name": "Promote Pike and Shot Tactics",
+   "slug": "promote-pike-and-shot-tactics",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our realm is home to many who do not share our faith, and their discontent breeds unrest. It is the wisdom of the Church to acknowledge that peace is better served by tolerance than by perpetual conflict."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_religious_tolerance",
+   "mods": [],
+   "name": "Promote Religious Tolerance",
+   "slug": "promote-religious-tolerance",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Across our country lie excellent sites for potential fortifications, ready to halt any advance of our enemies."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_star_fort_building",
+   "mods": [],
+   "name": "Promote Star Fort Works",
+   "slug": "promote-star-fort-building",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Having our subjects following the religion of our state is a crucial step towards the stability of our realm. We should increase our efforts to convert our people."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_state_religion",
+   "mods": [],
+   "name": "Promote State Religion",
+   "slug": "promote-state-religion",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is evident that the way forward lies in promoting the urbanization of our major towns, as a means to grow our power base."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:promote_urbanization",
+   "mods": [],
+   "name": "Promote Urbanization",
+   "slug": "promote-urbanization",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Due to the competitiveness of our markets, it would be wise to tighten our mercantile regulations to ensure a competitive advantage for our own merchants."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:protect_our_market",
+   "mods": [],
+   "name": "Market Regulations",
+   "slug": "protect-our-market",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The backbone of our country is what connects our provinces and populated centers. As such, we must pave new roads and finance their construction as well as expansion."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:railroad_development",
+   "mods": [],
+   "name": "Expand Railroad Network",
+   "slug": "railroad-development",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The common man has lived his whole life being taxed by a lord. In order to push our agendas for liberating the people, this taxation must seize!"
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:reduce_peasant_taxation",
+   "mods": [],
+   "name": "Reduce Peasant Taxation",
+   "slug": "reduce-peasant-taxation",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The bonds of serfdom weigh heavily on the common folk, binding them to the land and stifling the very labor that sustains us all. By easing these burdens and granting greater freedom of movement, we strengthen the loyalty and productivity of our people."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:reduce_serfdom",
+   "mods": [],
+   "name": "Reduce Serfdom",
+   "slug": "reduce-serfdom",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The unchecked expansion of minting has driven prices upward and weakened the value of our coin. A thorough audit of crown finances and reform of our treasury practices would restore sound money to the realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:reform_the_royal_treasury",
+   "mods": [],
+   "name": "Reform the Royal Treasury",
+   "slug": "reform-the-royal-treasury",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The collection of tithes has grown irregular and contentious. By standardizing the church's share of income across the realm, we ensure fair and reliable revenue for the clergy while relieving the burden of uncertainty from our people."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:regulate_tithe_collection",
+   "mods": [],
+   "name": "Regulate Tithe Collection",
+   "slug": "regulate-tithe-collection",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Those who took advantage of the labor and sweat of the common folk, now cower at the thought of their meager privileges being taken away."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:revoke_privilege_of_the_nobles",
+   "mods": [],
+   "name": "Revoke Privilege of the Nobility",
+   "slug": "revoke-privilege-of-the-nobles",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The merchants of our realm have grown fat on the profits of commerce for long enough. By asserting a royal monopoly on key goods, we bring those revenues into the crown's hands, where they can serve the whole of the realm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:royal_monopoly_on_trade",
+   "mods": [],
+   "name": "Royal Monopoly on Trade",
+   "slug": "royal-monopoly-on-trade",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The roads that connect our realm are the arteries through which authority and commerce flow. By commissioning a proper network of maintained royal roads, we ensure that our control reaches swiftly to every corner of our lands."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:royal_road_commission",
+   "mods": [],
+   "name": "Royal Road Commission",
+   "slug": "royal-road-commission",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The guild monopolies of our towns crush the cottage industries that sustain rural families through lean seasons. We should charter and protect rural craftsmen from such interference, giving the common folk the economic freedom they deserve."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:rural_crafts_charter",
+   "mods": [],
+   "name": "Rural Crafts Charter",
+   "slug": "rural-crafts-charter",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our rural roads fall into disrepair for want of organized maintenance. By requiring a modest corvée of labor from peasant households to keep local roads passable, we ensure that no part of the realm is cut off from the center."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:rural_road_upkeep_corvee",
+   "mods": [],
+   "name": "Rural Road Upkeep Corvée",
+   "slug": "rural-road-upkeep-corvee",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our governance will be forever revered if we construct a cathedral to celebrate our faith in one of our most prominent towns."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_a_cathedral",
+   "mods": [],
+   "name": "Sponsor a Cathedral",
+   "slug": "sponsor-a-cathedral",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "To pursue higher knowledge and offer our scholars an extensive infrastructure for their work, we should invest into our academies."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_a_confucian_academy",
+   "mods": [],
+   "name": "Sponsor a Confucian Academy",
+   "slug": "sponsor-a-confucian-academy",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should invest into a dedicated merchant expedition to establish trade connections with other markets."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_a_merchant_expedition",
+   "mods": [],
+   "name": "Sponsor Trade Expedition",
+   "slug": "sponsor-a-merchant-expedition",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our people demand an expansion of our cultural institutions. Providing them with a new Opera House will satiate this cultural fever while providing our urban areas with the necessary attention."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_a_opera_house",
+   "mods": [],
+   "name": "Sponsor a Opera House",
+   "slug": "sponsor-a-opera-house",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The dissemination of knowledge in the pursuit of mental enlightenment and comprehension of the divine is a pure goal and one we must back with all our financial and political might by establishing liturgical institutions of great recognition."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_a_university",
+   "mods": [],
+   "name": "Sponsor a University",
+   "slug": "sponsor-a-university",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our army reserve has seen better days and is in dire need of new infrastructure for recruitment."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_conscription_center",
+   "mods": [],
+   "name": "Expand the Conscription Center Infrastructure",
+   "slug": "sponsor-conscription-center",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Much of our realm's land could yield far greater harvests if only water could be brought to it. We should fund the construction of waterways and irrigation works that will transform dry land into productive farmland."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_irrigation_projects",
+   "mods": [],
+   "name": "Sponsor Irrigation Projects",
+   "slug": "sponsor-irrigation-projects",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our army reserve has seen better days and is in dire need of new infrastructure for recruitment."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_regimental_camp",
+   "mods": [],
+   "name": "Expand the Regimental Camp Infrastructure",
+   "slug": "sponsor-regimental-camp",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A learned clergy is the foundation of a spiritually healthy realm. We must fund the establishment and expansion of seminaries to train a new generation of learned churchmen."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_theological_seminaries",
+   "mods": [],
+   "name": "Sponsor Theological Seminaries",
+   "slug": "sponsor-theological-seminaries",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our army reserve has seen better days and is in dire need of new infrastructure for recruitment."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_training_fields",
+   "mods": [],
+   "name": "Expand the Training Fields Infrastructure",
+   "slug": "sponsor-training-fields",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should not neglect our interior lands and develop them accordingly."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:sponsor_urban_development",
+   "mods": [],
+   "name": "Develop the Interior",
+   "slug": "sponsor-urban-development",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our markets hold the means to feed our people, but only if the price of grain remains within reach of ordinary folk. By subsidizing grain imports, we ensure that shortage and want do not drive our people to desperation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:subsidize_grain_imports",
+   "mods": [],
+   "name": "Subsidize Grain Imports",
+   "slug": "subsidize-grain-imports",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The roads that carry our supplies to the front must be maintained and our materiel moved without cease. Our people can serve the war effort through labor on the supply lines — a contribution as vital as any sword arm."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:supply_line_labor_draft",
+   "mods": [],
+   "name": "Supply Line Labor Draft",
+   "slug": "supply-line-labor-draft",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The bureaucracy throughout our domain stands to benefit greatly from a legislative reform around its efficiency, funded by the most wealthy members of society."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_burgher_cabinet",
+   "mods": [],
+   "name": "Support a Mercantile Cabinet",
+   "slug": "support-burgher-cabinet",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The bureaucracy throughout our domain stands to benefit greatly from a legislative reform around its efficiency. The best option for this is to turn to our devoted holy men."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_clergy_cabinet",
+   "mods": [],
+   "name": "Support a Clerical Cabinet",
+   "slug": "support-clergy-cabinet",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The bureaucracy throughout our domain stands to benefit greatly from a legislative reform around its efficiency, and who is a better candidate to champion this reform than our most esteemed members of the upper society."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_noble_cabinet",
+   "mods": [],
+   "name": "Support a Noble Cabinet",
+   "slug": "support-noble-cabinet",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We should grant one of our most valiant Lords a permit to raise a mercenary company in order to defend our faith and countrymen in our name."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_noble_sponsored_armies",
+   "mods": [],
+   "name": "Raise Noble Sponsored Mercenaries",
+   "slug": "support-noble-sponsored-armies",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our sophisticated elites crave more art to admire above all else. If we employ more artists we would surely make them happy."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_nobles_art",
+   "mods": [],
+   "name": "Sponsor the Noble Arts",
+   "slug": "support-nobles-art",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The bureaucracy throughout our domain stands to benefit greatly from a legislative reform around its efficiency, backed by the popular support."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_peasant_cabinet",
+   "mods": [],
+   "name": "Support a Common Cabinet",
+   "slug": "support-peasant-cabinet",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our faith serves as a great inspiration for artists all over our country. Since our Court is able to support artists, we should hire one of those who are inspired by the divine."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_religious_art",
+   "mods": [],
+   "name": "Sponsor Religious Art",
+   "slug": "support-religious-art",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our state's reliance on the servants of the faith can be a great asset in the education of our population. This would accelerate our scientific advancements while increasing the loyalty of our devoted followers."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_religious_education",
+   "mods": [],
+   "name": "Support Religious Education",
+   "slug": "support-religious-education",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our government can not function without the proper acknowledgment of its power. With a proper declaration of the parliament, we can solidify our reputation and strengthen our ruler."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:support_ruler",
+   "mods": [],
+   "name": "Support the State",
+   "slug": "support-ruler",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "With our realm being a multireligious one, and our ruler being a believer in tolerance, we should allow these different beliefs in our nation."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:tolerance_of_non_hindus",
+   "mods": [],
+   "name": "Tolerance of Heathens",
+   "slug": "tolerance-of-non-hindus",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Some members of the Union are either newcomers or have managed to repell any attempt of centralizing the Union. It is necessary to enforce these laws in each of the members if we want a clean annexation of the other members."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:union_enforce_law_implementation",
+   "mods": [],
+   "name": "Enforce Law Implementation",
+   "slug": "union-enforce-law-implementation",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The decisive engagement may come at any moment, and we must ensure our heavy cavalry are in a state of full readiness. Let the noble houses commit their finest mounted warriors to a state of constant alert until the war is won."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:wartime_cavalry_reserve",
+   "mods": [],
+   "name": "Wartime Cavalry Reserve",
+   "slug": "wartime-cavalry-reserve",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our armies march on their stomachs, and a hungry army does not fight well. By organizing the pooling of harvest surpluses into regional magazines, our people can directly sustain the forces that defend them."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:wartime_harvest_pooling",
+   "mods": [],
+   "name": "Wartime Harvest Pooling",
+   "slug": "wartime-harvest-pooling",
+   "type": "parliament-issue"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The shock of cavalry no longer wins the day. What carries a battle now is the skill of those who command, and parliament should give the army its pick of our finest, trained and posted before the campaign opens."
+    ]
+   ],
+   "facets": {
+    "category": null
+   },
+   "icon": null,
+   "id": "parliament-issue:wartime_officer_corps",
+   "mods": [],
+   "name": "Reinforce the Officer Corps",
+   "slug": "wartime-officer-corps",
+   "type": "parliament-issue"
+  }
+ ],
+ "facets": [
+  {
+   "key": "category",
+   "label": "Category",
+   "options": []
+  }
+ ],
+ "source": "parliament_issues"
+}

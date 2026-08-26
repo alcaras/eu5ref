@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/formables.json';
+
+const entities = data.entities;
+const columns = [
+  { key: 'name', label: 'Formable', kind: 'name' },
+  { key: 'level', label: 'Level', kind: 'facet' },
+  { key: 'regions', label: 'Regions', kind: 'chips' },
+  { key: 'areas', label: 'Areas', kind: 'chips' },
+] as const;
+---
+<Base
+  title="Formable Countries"
+  active="formables"
+  pageMark="🛠️"
+  eyebrow="Countries"
+  pageStats={[{ label: 'formables', value: entities.length }]}
+  description="Every formable country in Europa Universalis V and where it can be formed."
+>
+  <div data-filter-scope>
+    <FilterBar facets={data.facets} placeholder="Filter formables…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="formables" />
+  </div>
+</Base>

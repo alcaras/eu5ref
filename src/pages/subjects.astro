@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/subjects.json';
+---
+<Base title="Subjects" active="subjects" pageMark="🤝" eyebrow="Diplomacy"
+  pageStats={[{ label: 'subject types', value: data.entities.length }]}
+  description="Every subject type in Europa Universalis V — capacity cost, war behavior, and modifiers.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Subject Type', kind: 'name' },
+    { key: 'diplomatic_capacity_cost', label: 'Dip. Capacity', kind: 'num' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter subject types…" />
+</Base>

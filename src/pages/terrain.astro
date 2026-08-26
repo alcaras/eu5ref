@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import climates from '../data/climates.json';
+import topography from '../data/topography.json';
+import vegetation from '../data/vegetation.json';
+
+const terrainCols = [
+  { key: 'name', label: 'Type', kind: 'name' },
+  { key: 'movement_cost', label: 'Move Cost', kind: 'num' },
+  { key: 'combat_width', label: 'Combat Width', kind: 'num' },
+  { key: 'defender_dice_modifier', label: 'Def. Dice', kind: 'num' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+];
+---
+<Base title="Terrain & Climate" active="terrain" pageMark="⛰️" eyebrow="World"
+  pageStats={[
+    { label: 'climates', value: climates.entities.length },
+    { label: 'topographies', value: topography.entities.length },
+    { label: 'vegetations', value: vegetation.entities.length },
+  ]}
+  description="Climate, topography, and vegetation modifiers in Europa Universalis V.">
+  <SectionTable title="Climate" data={climates} columns={[
+    { key: 'name', label: 'Climate', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter climates…" />
+  <SectionTable title="Topography" data={topography} columns={terrainCols} placeholder="Filter topography…" />
+  <SectionTable title="Vegetation" data={vegetation} columns={terrainCols} placeholder="Filter vegetation…" />
+</Base>

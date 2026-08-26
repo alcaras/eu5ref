@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import estatesData from '../data/estates.json';
+import privData from '../data/estate-privileges.json';
+
+const estates = estatesData.entities;
+const privileges = privData.entities;
+
+const estateCols = [
+  { key: 'name', label: 'Estate', kind: 'name' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'desc', label: 'Description', kind: 'rich' },
+] as const;
+const privCols = [
+  { key: 'name', label: 'Privilege', kind: 'name' },
+  { key: 'estate', label: 'Estate', kind: 'facet' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Estates & Privileges"
+  active="estates"
+  pageMark="🏰"
+  eyebrow="Government & Laws"
+  pageStats={[
+    { label: 'estates', value: estates.length },
+    { label: 'privileges', value: privileges.length },
+  ]}
+  description="The estates of Europa Universalis V and every estate privilege."
+>
+  <h2 style="margin-top: 18px;">Estates</h2>
+  <div data-filter-scope>
+    <EntityTable entities={estates} columns={estateCols as any} pagePrefix="estates" csvName="eu5ref-estates" />
+  </div>
+
+  <h2 style="margin-top: 34px;">Privileges</h2>
+  <div data-filter-scope>
+    <FilterBar facets={privData.facets} placeholder="Filter privileges…" />
+    <EntityTable entities={privileges} columns={privCols as any} pagePrefix="privileges" csvName="eu5ref-estate-privileges" />
+  </div>
+</Base>

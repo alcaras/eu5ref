@@ -1,0 +1,1295 @@
+{
+  "dataset": "peace-treaties",
+  "entities": [
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4810b060-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We shall compel our foes to renounce their unfounded claims on colonial domains, erasing their ambitions across the seas."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:abandon_colonial_claim",
+      "mods": [],
+      "name": "Abandon Colonial Claim",
+      "slug": "abandon-colonial-claim",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187124-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our enemies shall abandon their distant colonies, leaving them to ruin or to be claimed by others more worthy... like ourselves."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:abandon_colonies",
+      "mods": [],
+      "name": "Abandon Colonies",
+      "slug": "abandon-colonies",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481872c8-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The age of raiding and plunder is at an end. Our foes must swear to cease their acts of piracy and lawlessness upon the seas."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:abandon_piracy",
+      "mods": [],
+      "name": "Abandon Piracy",
+      "slug": "abandon-piracy",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481873e0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "[game concept TARGET COUNTRY] is not fit to rule over the [game concept TARGET COUNTRY]! We shall take over the burden of leadership, and assume the seniority over the Union."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:assume_union_senority",
+      "mods": [],
+      "name": "Assume Union Senority",
+      "slug": "assume-union-senority",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818753e-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "No longer will foreign powers be allowed to build on our soil. Their ambitions shall wither under this treaty."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:block_foreign_building_treaty",
+      "mods": [],
+      "name": "Block Foreign Buildings",
+      "slug": "block-foreign-building-treaty",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187674-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "It is time for our people to rise against the oppression of the Tatar-Overlord and throw off the shackles that have been laid upon the East Slavic people."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:break_from_tatar_yoke",
+      "mods": [],
+      "name": "Break free from Tatar Yoke",
+      "slug": "break-from-tatar-yoke",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187822-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "[game concept TARGET COUNTRY] has gained too much influence within our court. They shall be ousted out of government, and the Union shall no longer dictate our fate."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:break_from_union",
+      "mods": [],
+      "name": "Break away from Union",
+      "slug": "break-from-union",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187912-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our debts shall be wiped clean, freeing us from the burdens of interest and financial servitude."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:cancel_debt",
+      "mods": [],
+      "name": "Cancel Debt",
+      "slug": "cancel-debt",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189cda-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Through force of arms we have proven ourselves the dominant power in Italy. The leadership of their League now passes to us while their former leader is stripped of command by right of conquest."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:challenge_league_leadership_peace_treaty",
+      "mods": [],
+      "name": "Claim League Leadership",
+      "slug": "challenge-league-leadership-peace-treaty",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a5b8-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The Emperor shall be freed and restored to his throne, and those who dared imprison him shall taste bitter shame."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:chi_recapture_emperor",
+      "mods": [],
+      "name": "Recapture Emperor",
+      "slug": "chi-recapture-emperor",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187a70-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Through rightful blood and ancient precedent, we will assert dominion over the Kingdom of France. This treaty will pave the way for a new future for the entire region, under our rule."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:claim_french_throne",
+      "mods": [],
+      "name": "Union with France",
+      "slug": "claim-french-throne",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187c50-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "By treaty and by right, we shall proclaim ourselves the heirs to the great legacy of GetCharacter('chg timur lame borjigin') and all that once bowed before it."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:claim_timurid_empire",
+      "mods": [],
+      "name": "Claim game_concept_TARGET_COUNTRY.GetNameWithFlag Realm",
+      "slug": "claim-timurid-empire",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188218-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will demand that the Hanseatic Kontors are disbanded."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:disband_kontor",
+      "mods": [],
+      "name": "Disband Kontor",
+      "slug": "disband-kontor",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188358-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their walls and fortifications shall be torn down stone by stone, leaving them vulnerable to future judgment."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:dismantle_fortifications",
+      "mods": [],
+      "name": "Dismantle Forts",
+      "slug": "dismantle-fortifications",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818860a-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "This league of opportunists shall be scattered, its members cowed and divided, no longer united against us."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:dissolve_coalition",
+      "mods": [],
+      "name": "Dissolve Coalition",
+      "slug": "dissolve-coalition",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481886f0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The Hanseatic League has outlived its usefulness and is causing more harm than good with its influence in many European cities. All of the subjects under the League will be set free."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:dissolve_hanseatic_league_peace_deal",
+      "mods": [],
+      "name": "Dissolve Hanseatic League",
+      "slug": "dissolve-hanseatic-league-peace-deal",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481887cc-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their league shall be no more, its cause shattered and its members forced to stand apart in peace. This will bring about a major shift in the power of balance during the Italian Wars."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:dissolve_league_peace_deal",
+      "mods": [],
+      "name": "Dissolve League",
+      "slug": "dissolve-league-peace-deal",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481888da-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "dissolve_the_yoke_desc"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:dissolve_tatar_yoke",
+      "mods": [],
+      "name": "Dissolve Tatar Yoke",
+      "slug": "dissolve-tatar-yoke",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481889f2-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "They shall pay the ultimate price for defiance, executed by our decree so that all may know our power."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:execute_ruler",
+      "mods": [],
+      "name": "Execute Ruler",
+      "slug": "execute-ruler",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188d9e-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The glory of our religion must be spread - even if it is done so by the blade!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:force_convert",
+      "mods": [],
+      "name": "Force Convert game_concept_TARGET_COUNTRY.GetNameWithFlagWithNoTooltip to game_concept_COUNTRY.GetReligion.GetNameWithNoTooltip",
+      "slug": "force-convert",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189064-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The old order shall be swept away. By this treaty we shall force them to embrace the fires of revolution."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:force_revolution",
+      "mods": [],
+      "name": "Force Revolution",
+      "slug": "force-revolution",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481891a4-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Force them to be our Tributary.<br />This war forbids us to conquer any ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] directly"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:force_tributary",
+      "mods": [],
+      "name": "Force Tributary",
+      "slug": "force-tributary",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481897d0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will enforce our demands as the Hegemon through military means."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:hegemon_demand_force_change_court_language",
+      "mods": [],
+      "name": "Force to Change Court Language",
+      "slug": "hegemon-demand-force-change-court-language",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481898fc-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will enforce our demands as the Hegemon through military means."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:hegemon_demand_force_divert_trade",
+      "mods": [],
+      "name": "force_divert_trade",
+      "slug": "hegemon-demand-force-divert-trade",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189564-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will enforce our demands as the Hegemon through military means."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:hegemon_demand_force_embargo",
+      "mods": [],
+      "name": "Force Embargo",
+      "slug": "hegemon-demand-force-embargo",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818969a-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will enforce our demands as the Hegemon through military means."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:hegemon_demand_violate_sovereignty",
+      "mods": [],
+      "name": "Violate Sovereignty",
+      "slug": "hegemon-demand-violate-sovereignty",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481899e2-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The leadership of the High Kingship must shift. No longer shall they claim dominion over the isle!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:high_kingship_overthrow",
+      "mods": [],
+      "name": "Overthrow High King",
+      "slug": "high-kingship-overthrow",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a018-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The princes shall have their victory, forcing the crown to bow and yield its power."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:league_of_public_weal_appanage_victory",
+      "mods": [],
+      "name": "Enforce League of the Public Weal",
+      "slug": "league-of-public-weal-appanage-victory",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a0f4-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The king shall triumph, humbling the princes and restoring royal authority over the realm."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:league_of_public_weal_royalist_victory",
+      "mods": [],
+      "name": "Crush League of the Public Weal",
+      "slug": "league-of-public-weal-royalist-victory",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189dc0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "It is time to take charge of our Confederation and lead it to greatness under our wise rule."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_claim_confederation_leadership",
+      "mods": [],
+      "name": "Claim Confederation Leadership",
+      "slug": "peace-claim-confederation-leadership",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187da4-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Claim the [game concept TARGET COUNTRY] of [game concept TARGET COUNTRY] for the [game concept COUNTRY] dynasty!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_claim_delhi",
+      "mods": [],
+      "name": "Claim game_concept_TARGET_COUNTRY.GetName",
+      "slug": "peace-claim-delhi",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481880d8-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their patriarchate shall be dissolved by treaty, its hierarchy cast down and its members left to find a new spiritual lord."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_destroy_autocephalous_patriarchate",
+      "mods": [],
+      "name": "Destroy the game_concept_target_ap.GetName",
+      "slug": "peace-destroy-autocephalous-patriarchate",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188506-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The Holy Roman Empire itself shall be broken, its crown cast aside and its princes left to rule alone, free of imperial bonds."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_dismantle_hre",
+      "mods": [],
+      "name": "Dismantle the Holy Roman Empire",
+      "slug": "peace-dismantle-hre",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188b1e-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our clan shall rise higher still, claiming new rights and lands at the expense of those who opposed us."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_expand_clan_influence",
+      "mods": [],
+      "name": "Expand Clan Influence",
+      "slug": "peace-expand-clan-influence",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189ef6-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "They will fare better under our leadership!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_force_into_jurchen_confederation",
+      "mods": [],
+      "name": "Force into our Jurchen Confederation",
+      "slug": "peace-force-into-jurchen-confederation",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48188f56-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our foes shall abandon all pretense of Īlkhānān rule, renouncing the legacy they falsely claimed as their own."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_force_renounce_ilkhan_claim",
+      "mods": [],
+      "name": "Force Renounce to the Īlkhānān Claim",
+      "slug": "peace-force-renounce-ilkhan-claim",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481893e8-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "[game concept TARGET COUNTRY] changes their allegiance to Country, forcing them to join our cause."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_gag_force_faction_change",
+      "mods": [],
+      "name": "Force Faction Change",
+      "slug": "peace-gag-force-faction-change",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_481892da-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We will establish ourselves as an independent domain, no longer will our territory be ruled by other clans."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_gain_clan_autonomy",
+      "mods": [],
+      "name": "Gain Clan Autonomy",
+      "slug": "peace-gain-clan-autonomy",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189b04-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Through war and forceful means, we will assert our dominance against our rivals. Our superiority shall be clear and plain to see through this peace treaty."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_humiliate",
+      "mods": [],
+      "name": "Humiliation",
+      "slug": "peace-humiliate",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a20c-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The Holy Roman Empire shall no longer claim us as subject. Our lands shall stand apart from imperial law and protection."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_leave_the_hre",
+      "mods": [],
+      "name": "Leave the Holy Roman Empire",
+      "slug": "peace-leave-the-hre",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b5c6-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Take the leadership of the Middle Kingdom."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_mandate_of_heaven",
+      "mods": [],
+      "name": "Take Mandate of Heaven",
+      "slug": "peace-mandate-of-heaven",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a2de-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "They shall be disbanded. Their people will be ordered to take refuge at the court of GetUniqueInternationalOrganization('japanese shogunate')."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_nanbokuchou_force_imperial_abdication",
+      "mods": [],
+      "name": "Force Imperial Abdication",
+      "slug": "peace-nanbokuchou-force-imperial-abdication",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48187f3e-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their upstrat revolt has been crushed. It is time now for the whip to put these rebels back in order!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_reintegrate_revolter",
+      "mods": [],
+      "name": "Crush the game_concept_TARGET_COUNTRY.GetAdjective Revolt",
+      "slug": "peace-reintegrate-revolter",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a842-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their autonomy of shall be stripped away, their fate once more brought under our control."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_revoke_clan_autonomy",
+      "mods": [],
+      "name": "Revoke Clan Autonomy",
+      "slug": "peace-revoke-clan-autonomy",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a40a-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "[game concept TARGET COUNTRY] is far too weak to stand up to the influence of Delhi during the Fall of Delhi ["
+        ],
+        [
+          "r",
+          "concept:situation",
+          "Situation"
+        ],
+        [
+          "t",
+          "]. Thus, it falls upon our shoulders to seize the opportunity and ensure the dissolution of yet another prospecting conqueror."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_seize_opposition_leadership",
+      "mods": [],
+      "name": "Seize Opposition Leadership",
+      "slug": "peace-seize-opposition-leadership",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b724-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The beating heart of their economy shall be ours, seized for the glory and profit of our country."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_take_over_market_center",
+      "mods": [],
+      "name": "Take over game_concept_target_market.GetName",
+      "slug": "peace-take-over-market-center",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b814-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Leadership within the Japanese Shogunate will pass into our hands. This will herald a new age as the destiny of Japan will henceforth be shaped by our rule."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:peace_take_shogunate",
+      "mods": [],
+      "name": "Take the Shogunate",
+      "slug": "peace-take-shogunate",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a4e6-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We shall punish them for interfering with our Treasure Voyage. They shall be held up as an example before the world, boosting our prestige as we heap disgrace on their names."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:punish_chinese_expedition_foes",
+      "mods": [],
+      "name": "Punish Expedition's Foes",
+      "slug": "punish-chinese-expedition-foes",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a68a-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The monarchy shall rise again, casting down the revolutionaries who sought to end the royal line."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:reinstate_the_monarchy",
+      "mods": [],
+      "name": "Reinstate the Monarchy",
+      "slug": "reinstate-the-monarchy",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a75c-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Enforce the superiority of our Religious League within the Holy Roman Empire!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:religious_supremacy",
+      "mods": [],
+      "name": "Religious Supremacy",
+      "slug": "religious-supremacy",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818aafe-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Demand every ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] owned by the target ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] and their ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subjects"
+        ],
+        [
+          "t",
+          "], including unoccupied territories."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:rtr_demand_all_chinese_territories",
+      "mods": [],
+      "name": "Demand All Chinese Territories",
+      "slug": "rtr-demand-all-chinese-territories",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818ac16-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Only under one banner can China return to peace! Fully annexes the target ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] and integrates all their territories — no occupation required."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:rtr_demand_complete_annexation",
+      "mods": [],
+      "name": "Demand Complete Annexation",
+      "slug": "rtr-demand-complete-annexation",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a9f0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Demand all ["
+        ],
+        [
+          "r",
+          "concept:occupation",
+          "Occupied"
+        ],
+        [
+          "t",
+          "] locations from the target ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:rtr_demand_occupied_territories",
+      "mods": [],
+      "name": "Demand Occupied Territories",
+      "slug": "rtr-demand-occupied-territories",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818a914-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Rein in the rebels and force them to swear allegiance to us once again!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:rtr_rein_in_rebellion",
+      "mods": [],
+      "name": "Rein in Rebellion",
+      "slug": "rtr-rein-in-rebellion",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818acf2-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "A set of hostile countries had the gall to oppose and shrink the domains of the della Scala. It is time to cull the weak!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/peace-treaty/scaligeri-victory.png",
+      "id": "peace-treaty:scaligeri_victory",
+      "mods": [],
+      "name": "Enforce Scaliger Demands",
+      "slug": "scaligeri-victory",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b0e4-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our merchants shall pass freely through the [Sound Toll], untaxed and unburdened by excess fees."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:sound_toll_exemption",
+      "mods": [],
+      "name": "Demand Sound Toll Exemption",
+      "slug": "sound-toll-exemption",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b1d4-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "We shall take their knowledge of far away lands to use for our own gain."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:steal_maps_treaty",
+      "mods": [],
+      "name": "Take Maps",
+      "slug": "steal-maps-treaty",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b2a6-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Their people shall resettle in our lands by force, strengthening our country while theirs grows weak."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:steal_pops",
+      "mods": [],
+      "name": "Kidnap Pops",
+      "slug": "steal-pops",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b3a0-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The natives shall bend the knee and accept our dominion, and their lands shall become ours by right."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:subjugate_natives",
+      "mods": [],
+      "name": "Subjugate Natives",
+      "slug": "subjugate-natives",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b47c-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The Gods demand a ready supply of sacrifices wealth, which [game concept TARGET COUNTRY] will provide."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:subjugate_neighbor_native",
+      "mods": [],
+      "name": "Subjugate Neighbor Native",
+      "slug": "subjugate-neighbor-native",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_48189c12-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "The heresy shall be put to the sword. By this treaty, we compel them to root out the Hussitism faith wherever it lingers."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:supress_hussite_faith",
+      "mods": [],
+      "name": "Suppress Hussitism",
+      "slug": "supress-hussite-faith",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818af0e-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "All that is desired by the Duchy of Florence in the Scaliger War."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:ver_florentine_demands",
+      "mods": [],
+      "name": "Florentine Demands",
+      "slug": "ver-florentine-demands",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818adf6-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "A comprehensive set of demands in the Scaliger War that are issued by the Duchy of Milan."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:ver_milanese_demands",
+      "mods": [],
+      "name": "Milanese Demands",
+      "slug": "ver-milanese-demands",
+      "type": "peace-treaty"
+    },
+    {
+      "color": null,
+      "data": {
+        "cost": "inline_script_value_4818b012-a125-11f1-8c8d-e6607317b287"
+      },
+      "desc": [
+        [
+          "t",
+          "Our demands for the Scaliger War."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "peace-treaty:ver_venetian_demands",
+      "mods": [],
+      "name": "Venetian Demands",
+      "slug": "ver-venetian-demands",
+      "type": "peace-treaty"
+    }
+  ],
+  "facets": [],
+  "source": "peace_treaties"
+}

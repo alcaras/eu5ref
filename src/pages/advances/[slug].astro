@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import Term from '../../components/Term.astro';
+import data from '../../data/advances.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">
+    <Fragment slot="aside">
+      {(entity.data.requires.length > 0 || entity.data.countries.length > 0 || entity.data.tree) && (
+        <div class="panel">
+          <h3>Position</h3>
+          <div class="kv">
+            {entity.data.requires.length > 0 && (
+              <Fragment>
+                <span class="k">Requires</span>
+                <span class="v">{entity.data.requires.map((r: any, i: number) => (
+                  <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
+                ))}</span>
+              </Fragment>
+            )}
+            {entity.data.tree && (<Fragment><span class="k">Tree</span><span class="v">{entity.data.tree}</span></Fragment>)}
+            {entity.data.countries.length > 0 && (
+              <Fragment><span class="k">Countries</span><span class="v">{entity.data.countries.join(', ')}</span></Fragment>
+            )}
+          </div>
+        </div>
+      )}
+    </Fragment>
+  </EntityDetail>
+</Base>

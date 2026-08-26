@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
-from ref import eid, hex_color, mods_from_tree, rich, slugify, write_dataset, facet_meta
+from ref import eid, export_icon, hex_color, mods_from_tree, rich, slugify, write_dataset, facet_meta
 
 
 def main():
@@ -20,10 +20,12 @@ def main():
                 demand.append({'pop': pop.display_name, 'value': round(value, 4)})
         demand.sort(key=lambda d: -d['value'])
         tags = list(getattr(g, 'custom_tags', []) or [])
+        slug = slugify(name)
         entities.append({
             'id': eid('good', name),
             'type': 'good',
-            'slug': slugify(name),
+            'slug': slug,
+            'icon': export_icon(g, 'good', slug),
             'name': g.display_name,
             'desc': rich(g.description),
             'color': hex_color(g.color),

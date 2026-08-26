@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/religions.json';
+import aspects from '../data/religious-aspects.json';
+import schools from '../data/religious-schools.json';
+import holySites from '../data/holy-sites.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Religion', kind: 'name' },
+  { key: 'group', label: 'Group', kind: 'facet' },
+  { key: 'mechanics', label: 'Mechanics', kind: 'chips' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Religions"
+  active="religions"
+  pageMark="🕌"
+  eyebrow="Society"
+  pageStats={[
+    { label: 'religions', value: entities.length },
+    { label: 'groups', value: new Set(entities.map((e) => e.facets.group)).size },
+  ]}
+  description="Every religion in Europa Universalis V — group, special mechanics, and modifiers."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter religions…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="religions" />
+  </div>
+
+  <SectionTable title="Religious Aspects" data={aspects} minFacetCount={3} columns={[
+    { key: 'name', label: 'Aspect', kind: 'name' },
+    { key: 'religion', label: 'Religion', kind: 'facet' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  ]} placeholder="Filter aspects…" />
+  <SectionTable title="Religious Schools" data={schools} columns={[
+    { key: 'name', label: 'School', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter schools…" />
+  <SectionTable title="Holy Sites" data={holySites} columns={[
+    { key: 'name', label: 'Holy Site', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter holy sites…" />
+</Base>

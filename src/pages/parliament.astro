@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import types from '../data/parliament-types.json';
+import issues from '../data/parliament-issues.json';
+import agendas from '../data/parliament-agendas.json';
+
+const cols = [
+  { key: 'name', label: 'Name', kind: 'name' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'desc', label: 'Description', kind: 'rich' },
+];
+---
+<Base title="Parliament" active="parliament" pageMark="🗳️" eyebrow="Government & Laws"
+  pageStats={[
+    { label: 'types', value: types.entities.length },
+    { label: 'issues', value: issues.entities.length },
+    { label: 'agendas', value: agendas.entities.length },
+  ]}
+  description="Parliament types, issues, and agendas in Europa Universalis V.">
+  <SectionTable title="Parliament Types" data={types} columns={cols} placeholder="Filter types…" />
+  <SectionTable title="Issues" data={issues} columns={[
+    { key: 'name', label: 'Issue', kind: 'name' },
+    { key: 'category', label: 'Category', kind: 'facet' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  ]} placeholder="Filter issues…" />
+  <SectionTable title="Agendas" data={agendas} columns={cols} placeholder="Filter agendas…" />
+</Base>

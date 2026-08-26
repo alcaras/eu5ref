@@ -1,0 +1,2947 @@
+{
+  "dataset": "country-interactions",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will allow us to remove a Casus Belli they hold against us."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:annul_casus_belli",
+      "mods": [],
+      "name": "Annul Casus Belli",
+      "slug": "annul-casus-belli",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to provide us with additional manpower for our forces."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:appanage_request_levies",
+      "mods": [],
+      "name": "Request Appanage Manpower",
+      "slug": "appanage-request-levies",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Seizing the resources of our Appanage's court will greatly damage our relationship with them. However, if they are powerful subject, the benefits may outweigh the dangers."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:appanage_seize_court_resources",
+      "mods": [],
+      "name": "Seize Court Resources",
+      "slug": "appanage-seize-court-resources",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Request a new financial grant from our Circle Leader."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:appeal_to_circle_diet",
+      "mods": [],
+      "name": "Request Financial Grant from Circle Diet",
+      "slug": "appeal-to-circle-diet",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Appeal to the Emperor to intervene in your circle's leadership dispute."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:appeal_to_emperor",
+      "mods": [],
+      "name": "Appeal to the Emperor",
+      "slug": "appeal-to-emperor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Use Imperial authority to appoint a leader for a circle that currently lacks one."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:appoint_imperial_circle_leader",
+      "mods": [],
+      "name": "Appoint Circle Leader",
+      "slug": "appoint-imperial-circle-leader",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to give us and our allies [Military Access]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_for_access_for_war_side",
+      "mods": [],
+      "name": "Ask for military access for war side",
+      "slug": "ask-for-access-for-war-side",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request our [Country Rank] to be raised to Duchy."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_for_dukedom",
+      "mods": [],
+      "name": "Ask for Ducal Rights",
+      "slug": "ask-for-dukedom",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to help us out, with a small donation."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_for_money",
+      "mods": [],
+      "name": "Ask for Money",
+      "slug": "ask-for-money",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to help us out by attacking our enemies."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_join_war_for_favors",
+      "mods": [],
+      "name": "Use favors to call in to War",
+      "slug": "ask-join-war-for-favors",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to reject the current Curia proposal."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_reject_curia_proposal",
+      "mods": [],
+      "name": "Ask to reject Curia proposal",
+      "slug": "ask-reject-curia-proposal",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to support the current Curia proposal."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_support_curia_proposal",
+      "mods": [],
+      "name": "Ask to support Curia proposal",
+      "slug": "ask-support-curia-proposal",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to lift the ["
+        ],
+        [
+          "r",
+          "concept:excommunication",
+          "Excommunication"
+        ],
+        [
+          "t",
+          "] from our ruler."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_to_lift_excommunication",
+      "mods": [],
+      "name": "Request Lifting Excommunication",
+      "slug": "ask-to-lift-excommunication",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to lift the Interdict from our ruler."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_to_lift_interdict",
+      "mods": [],
+      "name": "Request Lifting Interdict",
+      "slug": "ask-to-lift-interdict",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to vote for us when electing a new Emperor."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:ask_to_vote_for_me_as_emperor",
+      "mods": [],
+      "name": "Ask for Election Support",
+      "slug": "ask-to-vote-for-me-as-emperor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Will it be a knife in the back? Or poison in the food? An accident while hunting? One thing is certain: this person will die."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:assassinate_character",
+      "mods": [],
+      "name": "Assassinate Character",
+      "slug": "assassinate-character",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them an ["
+        ],
+        [
+          "r",
+          "concept:elector",
+          "Elector"
+        ],
+        [
+          "t",
+          "] in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bestow_elector_status",
+      "mods": [],
+      "name": "Bestow Elector Status",
+      "slug": "bestow-elector-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them a Free Imperial City in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bestow_free_city_status",
+      "mods": [],
+      "name": "Bestow Free City Status",
+      "slug": "bestow-free-city-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will bestow a Kingdom Title to a ["
+        ],
+        [
+          "r",
+          "concept:member",
+          "Member"
+        ],
+        [
+          "t",
+          "] of the Holy Roman Empire, allowing them to be elevated to the rank of a Kingdom.Only the titles of Bohemia, Burgundy (BGP), Lotharingia and Italy are available."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bestow_kingdom_title",
+      "mods": [],
+      "name": "Bestow Kingdom Title",
+      "slug": "bestow-kingdom-title",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them a Legatus Natus in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bestow_legatus_natus_status",
+      "mods": [],
+      "name": "Bestow Legatus Natus Status",
+      "slug": "bestow-legatus-natus-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them a Primas Germaniae in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bestow_primas_germaniae_status",
+      "mods": [],
+      "name": "Bestow Primas Germaniae Status",
+      "slug": "bestow-primas-germaniae-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request them to bolster our troops by having them join one of our current ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "Wars"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bolster_imperial_army",
+      "mods": [],
+      "name": "Bolster Imperial Army",
+      "slug": "bolster-imperial-army",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will force them to break relations with another nation, and unable to regain that ally any time soon."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:break_others_alliance",
+      "mods": [],
+      "name": "Isolate from Allies",
+      "slug": "break-others-alliance",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will install a new ruler on their throne and force them out of their ["
+        ],
+        [
+          "r",
+          "concept:union",
+          "Union"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:break_subject_union",
+      "mods": [],
+      "name": "Break from Union",
+      "slug": "break-subject-union",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to vote for the chosen candidate when electing a new Emperor."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:bribe_elector_to_vote_for_candidate",
+      "mods": [],
+      "name": "Ask Elector to Vote for Candidate",
+      "slug": "bribe-elector-to-vote-for-candidate",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Spend ["
+        ],
+        [
+          "r",
+          "concept:prestige",
+          "Prestige"
+        ],
+        [
+          "t",
+          "] and offer [Ducats] to a member so they vote for the outcome we choose in the current law debate."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/country-interaction/bribe-voter-for-policy.png",
+      "id": "country-interaction:bribe_voter_for_policy",
+      "mods": [],
+      "name": "Bribe Voter",
+      "slug": "bribe-voter-for-policy",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will call our Appanage to arms in our ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "War"
+        ],
+        [
+          "t",
+          "] against a ["
+        ],
+        [
+          "r",
+          "concept:hostile",
+          "Hostile"
+        ],
+        [
+          "t",
+          "] country."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:call_appanage_to_war",
+      "mods": [],
+      "name": "Call Appanage to War",
+      "slug": "call-appanage-to-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Call upon a Circle Leader to bring their circle's military support to your current war."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:call_imperial_circle_to_war",
+      "mods": [],
+      "name": "Call Circle to War",
+      "slug": "call-imperial-circle-to-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will call the sponsored Military Order to arms in our ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "War"
+        ],
+        [
+          "t",
+          "] against a ["
+        ],
+        [
+          "r",
+          "concept:heathen",
+          "Heathen"
+        ],
+        [
+          "t",
+          "] country."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:call_order_to_crusade",
+      "mods": [],
+      "name": "Call Military Order to Crusade",
+      "slug": "call-order-to-crusade",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Withdraw from our sponsor role and leave the League."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:cancel_italian_league_sponsor",
+      "mods": [],
+      "name": "Cancel League Sponsorship",
+      "slug": "cancel-italian-league-sponsor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our current Circle leaders have proven themselves to be unworthy of the position and the responsibility. We have the opportunity to put their power into question and undermine their authority, which can lead to their hold weaken even more, or to open opposition directly."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:challenge_circle_leadership",
+      "mods": [],
+      "name": "Challenge Circle Leadership",
+      "slug": "challenge-circle-leadership",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will install a new ruler on their throne."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:change_ruler",
+      "mods": [],
+      "name": "Install New Ruler",
+      "slug": "change-ruler",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt our [Court Language]!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:change_subject_court_language",
+      "mods": [],
+      "name": "Change Court Language",
+      "slug": "change-subject-court-language",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt our ["
+        ],
+        [
+          "r",
+          "concept:policy",
+          "Policy"
+        ],
+        [
+          "t",
+          "]!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:change_subject_policy",
+      "mods": [],
+      "name": "Change Policy",
+      "slug": "change-subject-policy",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they give us a cash boost."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:demand_additional_tribute",
+      "mods": [],
+      "name": "Demand Additional Tribute",
+      "slug": "demand-additional-tribute",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They do not follow Allāh's will. By demanding them to convert to Islam we can further increase our influence in their nation."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:demand_conversion_to_islam",
+      "mods": [],
+      "name": "Demand Conversion to Islam",
+      "slug": "demand-conversion-to-islam",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Single Whip Policy policy now allows us to extract a higher toll of Silver from our various subjects."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:demand_silver_tribute",
+      "mods": [],
+      "name": "Demand Silver Tribute",
+      "slug": "demand-silver-tribute",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they return Unlawful Territory within the Holy Roman Empire to its former owner. If they refuse, we will gain a Following Through On Threat [Casus Belli] against them."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:demand_unlawful_territory",
+      "mods": [],
+      "name": "Demand Unlawful Territory",
+      "slug": "demand-unlawful-territory",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are not a worthy subject to carry the title of Celestial Governor. We best demote their status within the Middle Kingdom lest they endanger our rule."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:demote_celestial_governor_to_vassal",
+      "mods": [],
+      "name": "Demote from Celestial Governor",
+      "slug": "demote-celestial-governor-to-vassal",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will elevate them to the title of a Duchy."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:elevate_county",
+      "mods": [],
+      "name": "Elevate County",
+      "slug": "elevate-county",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt Scope as their primary culture."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:enforce_culture",
+      "mods": [],
+      "name": "Enforce Culture",
+      "slug": "enforce-culture",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will enforce the Landfriede within the Holy Roman Empire, ending any internal wars in the process.<br />{{red|We will be called into war against them if they decline!}}"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:enforce_landfriede",
+      "mods": [],
+      "name": "Enforce Landfriede",
+      "slug": "enforce-landfriede",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:enforce_religion",
+      "mods": [],
+      "name": "Enforce Religion",
+      "slug": "enforce-religion",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will force them to change their ["
+        ],
+        [
+          "r",
+          "concept:religion",
+          "Religion"
+        ],
+        [
+          "t",
+          "] to GetUniqueInternationalOrganization('hre')"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:enforce_religious_unity",
+      "mods": [],
+      "name": "Enforce Religious Unity",
+      "slug": "enforce-religious-unity",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will ["
+        ],
+        [
+          "r",
+          "concept:excommunication",
+          "Excommunicate"
+        ],
+        [
+          "t",
+          "] their ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:excommunicate",
+      "mods": [],
+      "name": "Excommunicate",
+      "slug": "excommunicate",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them use our [Court Language]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:force_change_court_language",
+      "mods": [],
+      "name": "Force to Change Court Language",
+      "slug": "force-change-court-language",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them prevent another nation from using their market(s)."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:force_embargo",
+      "mods": [],
+      "name": "Force Embargo",
+      "slug": "force-embargo",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Form closer bonds with them and improve their opinion and trust with our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:form_closer_bond_iroquois",
+      "mods": [],
+      "name": "Form Closer Bonds",
+      "slug": "form-closer-bond-iroquois",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Formalize relations with them and improve their opinion and trust with our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:formalize_relations",
+      "mods": [],
+      "name": "Formalize Relations",
+      "slug": "formalize-relations",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will give them part of our territory."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:give_location_to_subject",
+      "mods": [],
+      "name": "Cede Location",
+      "slug": "give-location-to-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will give them one of our provinces."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:give_province_to_subject",
+      "mods": [],
+      "name": "Cede Province",
+      "slug": "give-province-to-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will reorganise our subjects' lands."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:give_subject_location_to_other_subject",
+      "mods": [],
+      "name": "Transfer Location to other Subject",
+      "slug": "give-subject-location-to-other-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will grant privileges to a ["
+        ],
+        [
+          "r",
+          "concept:member",
+          "Member"
+        ],
+        [
+          "t",
+          "] in the Holy Roman Empire, allowing them to either become a Margraviate or a Landgraviate."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:grant_county_privileges",
+      "mods": [],
+      "name": "Grant County Privileges",
+      "slug": "grant-county-privileges",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Invite them to sponsor our League, granting them entry as a patron who contributes gold and manpower to us each month."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:grant_italian_league_sponsor",
+      "mods": [],
+      "name": "Request League Sponsorship",
+      "slug": "grant-italian-league-sponsor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to improve their ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "]'s opinion of ours."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:improve_cultural_view",
+      "mods": [],
+      "name": "Ask to improve Cultural opinion",
+      "slug": "improve-cultural-view",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to improve their ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "]'s opinion of ours."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:improve_cultural_view_subject",
+      "mods": [],
+      "name": "Ask to improve Cultural opinion",
+      "slug": "improve-cultural-view-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will use our diplomatic hegemony status to persuade them to think better of us, increasing their ["
+        ],
+        [
+          "r",
+          "concept:opinion",
+          "Opinion"
+        ],
+        [
+          "t",
+          "] of us and ["
+        ],
+        [
+          "r",
+          "concept:trust",
+          "Trust"
+        ],
+        [
+          "t",
+          "] in us."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:influence_nation",
+      "mods": [],
+      "name": "Influence Nation",
+      "slug": "influence-nation",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We should intervene in this [Civil War] and sort it out once and for all."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:intervene_in_subject_civil_war",
+      "mods": [],
+      "name": "Intervene in Subject Civil War",
+      "slug": "intervene-in-subject-civil-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We should intervene in this ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "War"
+        ],
+        [
+          "t",
+          "] and sort it out once and for all."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:intervene_in_subject_regular_war",
+      "mods": [],
+      "name": "Intervene in War",
+      "slug": "intervene-in-subject-regular-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We should intervene in this [Civil War] and sort it out once and for all."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:intervene_in_union_civil_war",
+      "mods": [],
+      "name": "Intervene in Union Civil War",
+      "slug": "intervene-in-union-civil-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Invite the ["
+        ],
+        [
+          "r",
+          "concept:artist",
+          "Artist"
+        ],
+        [
+          "t",
+          "] to live and work in our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:invite_artist",
+      "mods": [],
+      "name": "Invite Artist",
+      "slug": "invite-artist",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will invite one of their most important nobles to become our new ruler!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:invite_prince",
+      "mods": [],
+      "name": "Invite Prince",
+      "slug": "invite-prince",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will invite one of our ruler's close relatives to our country."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:invite_royal_family",
+      "mods": [],
+      "name": "Invite Royal Family",
+      "slug": "invite-royal-family",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Invite settlers to live and work in our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:invite_settlers",
+      "mods": [],
+      "name": "Invite Settlers",
+      "slug": "invite-settlers",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will invite their character to participate in the Prussian Crusade. The character will be under our control for 5 years. During this time the character has a chance to increase their stats... or to die gloriously trying."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:invite_to_prussian_crusade",
+      "mods": [],
+      "name": "Invite to Prussian Crusade",
+      "slug": "invite-to-prussian-crusade",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Offer [Ducats] to an Italian state not yet in any League, enticing them to join ours."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:italian_wars_bribe_country",
+      "mods": [],
+      "name": "Bribe into League",
+      "slug": "italian-wars-bribe-country",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Grant temporary command of one of our army units to a war ally. The unit returns when we no longer share an active war."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lend_unit_to_ally",
+      "mods": [],
+      "name": "Lend Unit to Ally",
+      "slug": "lend-unit-to-ally",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will remove the ["
+        ],
+        [
+          "r",
+          "concept:excommunication",
+          "Excommunication"
+        ],
+        [
+          "t",
+          "] and all of its associated penalties from their ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lift_excommunication",
+      "mods": [],
+      "name": "Lift Excommunication",
+      "slug": "lift-excommunication",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will remove the Interdict and all of its associated penalties from them."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lift_interdict",
+      "mods": [],
+      "name": "Lift Interdict",
+      "slug": "lift-interdict",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will assert our ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] [Game Concept Actor] as their ["
+        ],
+        [
+          "r",
+          "concept:regent",
+          "Regent"
+        ],
+        [
+          "t",
+          "], a right that is ours due to our position in the Lordship of Ireland."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lordship_of_ireland_assert_regency",
+      "mods": [],
+      "name": "Assert Regency",
+      "slug": "lordship-of-ireland-assert-regency",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them a Lieutenant in the Lordship of Ireland."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lordship_of_ireland_bestow_lieutenant_status",
+      "mods": [],
+      "name": "Bestow Lieutenant Status",
+      "slug": "lordship-of-ireland-bestow-lieutenant-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will subjugate them as the personal Fiefdom of our ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] [Game Concept Actor], a right that is ours due to our position in the Lordship of Ireland."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lordship_of_ireland_enfeoff_regency",
+      "mods": [],
+      "name": "Enfeoff Regency",
+      "slug": "lordship-of-ireland-enfeoff-regency",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will rescind their Lieutenant status in the Lordship of Ireland."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lordship_of_ireland_rescind_lieutenant_status",
+      "mods": [],
+      "name": "Rescind Lieutenant Status",
+      "slug": "lordship-of-ireland-rescind-lieutenant-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will invite them to surrender their petty kingship and in return we will regrant them as new feudal titles under the safety of our legal system."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:lordship_of_ireland_surrender_and_regrant",
+      "mods": [],
+      "name": "Surrender and Regrant",
+      "slug": "lordship-of-ireland-surrender-and-regrant",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Order two of our colonies to unite into a single stronger colony."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:merge_colonies",
+      "mods": [],
+      "name": "Merge Colonies",
+      "slug": "merge-colonies",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Merge our tribe with theirs, unifying the two ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "] under Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:merge_tribe_iroquois",
+      "mods": [],
+      "name": "Merge Tribes",
+      "slug": "merge-tribe-iroquois",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Invite [Game Concept Recipient] to an upcoming campaign against the Empire of Byzantium."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:mfa_join_against_byz",
+      "mods": [],
+      "name": "Invite to Campaign Against Byzantium",
+      "slug": "mfa-join-against-byz",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to help us out, with a moderate donation."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:mil_order_request_funds",
+      "mods": [],
+      "name": "Request Funds",
+      "slug": "mil-order-request-funds",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will ask them to help us out, with additional manpower for our forces."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:mil_order_request_men",
+      "mods": [],
+      "name": "Request Soldiers",
+      "slug": "mil-order-request-men",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will order our ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] to relocate their ["
+        ],
+        [
+          "r",
+          "concept:capital",
+          "Capital"
+        ],
+        [
+          "t",
+          "] to another ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:move_subject_capital",
+      "mods": [],
+      "name": "Move Subject's Capital",
+      "slug": "move-subject-capital",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Their succession law is volatile and will lead to an end of the union. The ruling class must be convinced to adopt our own laws for a secure succession."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:negotiate_succession_law",
+      "mods": [],
+      "name": "Negotiate Succession Law",
+      "slug": "negotiate-succession-law",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will propose one of our marriageable, female ["
+        ],
+        [
+          "r",
+          "concept:character",
+          "Characters"
+        ],
+        [
+          "t",
+          "] who is either part of the Nobility or Clergy for a marriage with the target country's ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "].<br />When accepted, the character moves to the target country, and they gain an ["
+        ],
+        [
+          "r",
+          "concept:opinion",
+          "Opinion"
+        ],
+        [
+          "t",
+          "] boost of {{green|+100}}.\n\nUnlike [Royal Marriages], marrying a character with this diplomatic action will NOT create a diplomatic or royal bond between our two countries. The to-be married character does not have to be a member of our ["
+        ],
+        [
+          "r",
+          "concept:dynasty",
+          "Dynasty"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:nusta_marriage",
+      "mods": [],
+      "name": "Ñusta Marriage",
+      "slug": "nusta-marriage",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will pay off their Scope{{icon|gold}} ["
+        ],
+        [
+          "r",
+          "concept:debt",
+          "Debt"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:pay_off_debt",
+      "mods": [],
+      "name": "Pay off Debt",
+      "slug": "pay-off-debt",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Circle Leader, petition the Imperial Diet to address a grievance or request."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:petition_imperial_diet",
+      "mods": [],
+      "name": "Petition the Imperial Diet",
+      "slug": "petition-imperial-diet",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will place them under interdict."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:place_interdict",
+      "mods": [],
+      "name": "Place Interdict",
+      "slug": "place-interdict",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will place a ["
+        ],
+        [
+          "r",
+          "concept:character",
+          "Character"
+        ],
+        [
+          "t",
+          "] who is a relative to our ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] on their throne."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:place_relative_on_throne",
+      "mods": [],
+      "name": "Place Relative on Throne",
+      "slug": "place-relative-on-throne",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will take some of their sailors to serve in our navy."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:press_sailors",
+      "mods": [],
+      "name": "Press Sailors",
+      "slug": "press-sailors",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are a worthy subject under our banner. We best reward their loyalty and cooperation by elevating their status within the Middle Kingdom."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:promote_member_to_celestial_governor",
+      "mods": [],
+      "name": "Promote to Celestial Governor",
+      "slug": "promote-member-to-celestial-governor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will offer them a member of our own ["
+        ],
+        [
+          "r",
+          "concept:dynasty",
+          "Dynasty"
+        ],
+        [
+          "t",
+          "] to become their new ruler."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:propose_ruler",
+      "mods": [],
+      "name": "Propose Ruler",
+      "slug": "propose-ruler",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This allows us to renegotiate the terms of a ["
+        ],
+        [
+          "r",
+          "concept:loan",
+          "Loan"
+        ],
+        [
+          "t",
+          "] to get more ["
+        ],
+        [
+          "r",
+          "concept:interest",
+          "Interest"
+        ],
+        [
+          "t",
+          "], at the expense of ["
+        ],
+        [
+          "r",
+          "concept:favors",
+          "Favors"
+        ],
+        [
+          "t",
+          "] and ["
+        ],
+        [
+          "r",
+          "concept:opinion",
+          "Opinion"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:renegotiate_loan",
+      "mods": [],
+      "name": "Renegotiate Loan",
+      "slug": "renegotiate-loan",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Request a grant from the Circle Captain to use our existing reserves as additional workforce in the expansion of our infrastructure."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_circle_infrastructure_expansion",
+      "mods": [],
+      "name": "Request Military Infrastructure Expansion",
+      "slug": "request-circle-infrastructure-expansion",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Request a special privilege from the Emperor for your circle."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_circle_privilege",
+      "mods": [],
+      "name": "Request Circle Privilege",
+      "slug": "request-circle-privilege",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request privileges from the [Emperor] in the Holy Roman Empire, allowing us to either receive the ability to enact Margraviate or Landgraviate."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_county_privileges",
+      "mods": [],
+      "name": "Request County Privileges",
+      "slug": "request-county-privileges",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Some members of the royal families are needed in our court. We can request them from the ruling seat of our ruler."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_crown_character",
+      "mods": [],
+      "name": "Request Crown Character",
+      "slug": "request-crown-character",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will ask them for permission for our ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] to divorce from the ["
+        ],
+        [
+          "r",
+          "concept:consort",
+          "Spouse"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_divorce",
+      "mods": [],
+      "name": "Request Divorce",
+      "slug": "request-divorce",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request the status of an ["
+        ],
+        [
+          "r",
+          "concept:elector",
+          "Elector"
+        ],
+        [
+          "t",
+          "] in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_elector_status",
+      "mods": [],
+      "name": "Request Elector Status",
+      "slug": "request-elector-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request the status of a Free Imperial City in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_free_city_status",
+      "mods": [],
+      "name": "Request Free City Status",
+      "slug": "request-free-city-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will request a Kingdom Title from the [Emperor], allowing us to be elevated to the rank of a Kingdom."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_kingdom_title",
+      "mods": [],
+      "name": "Request Kingdom Title",
+      "slug": "request-kingdom-title",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Request Legatus Natus Status from Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_legatus_natus_status",
+      "mods": [],
+      "name": "Request Legatus Natus Status",
+      "slug": "request-legatus-natus-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Take a loan from another ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. Scope will then be in ["
+        ],
+        [
+          "r",
+          "concept:debt",
+          "Debt"
+        ],
+        [
+          "t",
+          "] to them."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_loan",
+      "mods": [],
+      "name": "Request Loan",
+      "slug": "request-loan",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Demand the elevation of our country within our Imperial Circle."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_new_circle_titles",
+      "mods": [],
+      "name": "Elevate Country in Circle",
+      "slug": "request-new-circle-titles",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Request Primas Germaniae Status from Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_primas_germaniae_status",
+      "mods": [],
+      "name": "Request Primas Germaniae Status",
+      "slug": "request-primas-germaniae-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Purchase a [Work of Art] from another ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]'s collection."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:request_work_of_art_purchase",
+      "mods": [],
+      "name": "Purchase Work of Art",
+      "slug": "request-work-of-art-purchase",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will rescind their ["
+        ],
+        [
+          "r",
+          "concept:elector",
+          "Elector"
+        ],
+        [
+          "t",
+          "] status in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:rescind_elector_status",
+      "mods": [],
+      "name": "Rescind Elector Status",
+      "slug": "rescind-elector-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will rescind their Free Imperial City status in the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:rescind_free_city_status",
+      "mods": [],
+      "name": "Rescind Free City Status",
+      "slug": "rescind-free-city-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Rescind Legatus Natus Status from Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:rescind_legatus_natus_status",
+      "mods": [],
+      "name": "Rescind Legatus Natus Status",
+      "slug": "rescind-legatus-natus-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Rescind Primas Germaniae Status from Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:rescind_primas_germaniae_status",
+      "mods": [],
+      "name": "Rescind Primas Germaniae Status",
+      "slug": "rescind-primas-germaniae-status",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Revoke their sponsor status and remove them from the League."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:revoke_italian_league_sponsor",
+      "mods": [],
+      "name": "Revoke League Sponsorship",
+      "slug": "revoke-italian-league-sponsor",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Empire, long divided, must unite. They shall all bow to our rule!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:rtr_demand_annexation",
+      "mods": [],
+      "name": "Demand Annexation",
+      "slug": "rtr-demand-annexation",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We can send our spies to our enemy's territory, causing damage to their holdings by arson, poison, or any other available method."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:sabotage_clans_buildings",
+      "mods": [],
+      "name": "Sabotage Clan Buildings",
+      "slug": "sabotage-clans-buildings",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will give another nation a much worse opinion of them!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:sabotage_reputation",
+      "mods": [],
+      "name": "Sabotage Reputation",
+      "slug": "sabotage-reputation",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our spies will go deep into the enemy's territory, blending among their population, and reporting back to us with all the information they can find."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:scout_enemy_holdings",
+      "mods": [],
+      "name": "Scout Enemy Holdings",
+      "slug": "scout-enemy-holdings",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will take some of their territory for ourselves."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:seize_location_from_subject",
+      "mods": [],
+      "name": "Seize Territory",
+      "slug": "seize-location-from-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Corsica has caused nothing but troubles for our state. The time has come to depart from this island once and for all."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:sell_corsica",
+      "mods": [],
+      "name": "Sell Corsica",
+      "slug": "sell-corsica",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will try to sell them a Religious Icon."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:sell_icon",
+      "mods": [],
+      "name": "Sell Icon",
+      "slug": "sell-icon",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Offer a [Work of Art] from our collection to another ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] in exchange for gold."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:sell_work_of_art",
+      "mods": [],
+      "name": "Sell Work of Art",
+      "slug": "sell-work-of-art",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will send a ["
+        ],
+        [
+          "r",
+          "concept:character",
+          "Character"
+        ],
+        [
+          "t",
+          "] of our choice to the target country to participate in the Prussian Crusade. The character will be under the control of the target country for 5 years. During this time the character has a chance to increase their stats... or to die gloriously trying."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:send_to_prussian_crusade",
+      "mods": [],
+      "name": "Send Character to Prussian Crusade",
+      "slug": "send-to-prussian-crusade",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will allow us to give them a map of an area we have ["
+        ],
+        [
+          "r",
+          "concept:discover",
+          "Discovered"
+        ],
+        [
+          "t",
+          "] that they do not have."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:share_maps",
+      "mods": [],
+      "name": "Share Maps",
+      "slug": "share-maps",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will take part of their income directly to our coffers."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:siphon_income",
+      "mods": [],
+      "name": "Siphon Income",
+      "slug": "siphon-income",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We order them to go to war with Scope"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:start_war_in_colony",
+      "mods": [],
+      "name": "Start War in Colony",
+      "slug": "start-war-in-colony",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will allow us to steal the map of an area they have ["
+        ],
+        [
+          "r",
+          "concept:discover",
+          "Discovered"
+        ],
+        [
+          "t",
+          "] that we do not have."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:steal_maps",
+      "mods": [],
+      "name": "Steal Maps",
+      "slug": "steal-maps",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will give us a fair bit of [Research Progress] while actively weakening theirs."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:steal_technology",
+      "mods": [],
+      "name": "Steal Technology",
+      "slug": "steal-technology",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they apply all our active trade embargos."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:subject_embargo",
+      "mods": [],
+      "name": "Enforce Embargo Policy",
+      "slug": "subject-embargo",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they leave a war"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:subject_enforce_peace",
+      "mods": [],
+      "name": "Enforce Subject Peace",
+      "slug": "subject-enforce-peace",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they give back a ["
+        ],
+        [
+          "r",
+          "concept:core",
+          "Core"
+        ],
+        [
+          "t",
+          "] ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "] to its rightful owner."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:subject_return_land",
+      "mods": [],
+      "name": "Return Land",
+      "slug": "subject-return-land",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "All hope is lost, surrender this [Civil War] and let us end this pointless bloodshed."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:surrender_civil_war",
+      "mods": [],
+      "name": "Surrender Civil War",
+      "slug": "surrender-civil-war",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will ask them to cede a [Colonial Charter] in exchange for us writing off a ["
+        ],
+        [
+          "r",
+          "concept:loan",
+          "Loan"
+        ],
+        [
+          "t",
+          "] to them."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:take_colony_for_debt",
+      "mods": [],
+      "name": "Take Colonial Charter for Debt",
+      "slug": "take-colony-for-debt",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This allows us to send a ["
+        ],
+        [
+          "r",
+          "concept:diplomat",
+          "Diplomat"
+        ],
+        [
+          "t",
+          "] to a ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] and then become the ["
+        ],
+        [
+          "r",
+          "concept:lender",
+          "Lender"
+        ],
+        [
+          "t",
+          "] of one of their ["
+        ],
+        [
+          "r",
+          "concept:loan",
+          "Loans"
+        ],
+        [
+          "t",
+          "], forcing them to pay ["
+        ],
+        [
+          "r",
+          "concept:interest",
+          "Interest"
+        ],
+        [
+          "t",
+          "] to us instead."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:take_over_loan",
+      "mods": [],
+      "name": "Take over Loan",
+      "slug": "take-over-loan",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This allows us to surpass Scope's role of Senior Partner within the Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:take_over_seniority",
+      "mods": [],
+      "name": "Take over Seniority",
+      "slug": "take-over-seniority",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will transfer control of one of our occupied ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] to Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:transfer_occupation",
+      "mods": [],
+      "name": "Transfer Occupations",
+      "slug": "transfer-occupation",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will offer them the chance to take one of our subjects in exchange for gold"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:transfer_subject",
+      "mods": [],
+      "name": "Transfer Subject",
+      "slug": "transfer-subject",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt Scope as their primary culture."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:union_enforce_culture",
+      "mods": [],
+      "name": "Enforce Culture",
+      "slug": "union-enforce-culture",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they leave a war"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:union_enforce_peace",
+      "mods": [],
+      "name": "Enforce Union Peace",
+      "slug": "union-enforce-peace",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will demand that they adopt Scope."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:union_enforce_religion",
+      "mods": [],
+      "name": "Enforce Religion",
+      "slug": "union-enforce-religion",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will elevate the status of our subject to a more loyal form."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:upgrade_to_maha_samanta",
+      "mods": [],
+      "name": "Upgrade to Mahā-Sāmanta",
+      "slug": "upgrade-to-maha-samanta",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will elevate the status of our subject to a more loyal form."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:upgrade_to_pradhana_maha_samanta",
+      "mods": [],
+      "name": "Upgrade to Pradhāna-Mahā-Sāmanta",
+      "slug": "upgrade-to-pradhana-maha-samanta",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Offer [Ducats] to an Italian state or League member to defect to our League, regardless of their current allegiance."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:violate_italian_sovereignty",
+      "mods": [],
+      "name": "Violate Italian Sovereignty",
+      "slug": "violate-italian-sovereignty",
+      "type": "country-interaction"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will make them give us [Military Access] and [Food Access]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "country-interaction:violate_sovereignty",
+      "mods": [],
+      "name": "Violate Sovereignty",
+      "slug": "violate-sovereignty",
+      "type": "country-interaction"
+    }
+  ],
+  "facets": [],
+  "source": "country_interactions"
+}

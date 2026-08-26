@@ -1,0 +1,381 @@
+{
+  "dataset": "situations",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "'Father abandoned child, wife husband, one brother another; for this illness seemed to strike through the breath and sight. And so they died... great pits were dug and piled deep with the multitude of dead... And as soon as those ditches were filled, more were dug... And so many died that all believed it was the end of the world.'"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/black-death.png",
+      "id": "situation:black_death",
+      "mods": [],
+      "name": "Black Death",
+      "slug": "black-death",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The ideas of the Enlightenment have found a receptive audience in colonial holdings around the world. The ruling elite in the colonies, deprived of political involvement, have been inspired the ideals of liberty, equality, and representation. Naturally, these ideas clash with their current status as a subject to their colonial overlords, existing only to satisfy the demands of their masters.\n\nEither through political pressure or outright revolt, it will be difficult to maintain order in the colonial landscape for a long time."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/colonial-revolution.png",
+      "id": "situation:colonial_revolution",
+      "mods": [],
+      "name": "Colonial Revolution",
+      "slug": "colonial-revolution",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Contact with new foreign peoples from beyond the sea has opened our country to novel crops and animals from these faraway lands, and has brought great opportunities to develop trade relationships that provide our merchants access to strange and exotic new products."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/columbian-exchange.png",
+      "id": "situation:columbian_exchange",
+      "mods": [],
+      "name": "Columbian Exchange",
+      "slug": "columbian-exchange",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Based in Trent, the Council of Trent is the Catholicism attempt to stop The Reformation and to overhaul the laws and policies of the Catholic Church. During this period, major reforms can be proposed by any member of the Church, though in the end the real power — if such debates come to fruition — remains in the hands of the Curia and the Kingdom of Rome."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/council-of-trent.png",
+      "id": "situation:council_of_trent",
+      "mods": [],
+      "name": "Council of Trent",
+      "slug": "council-of-trent",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A century of overextension and a crumbling central authority have hurt the rule and reputation of the mighty Delhi. Beyond their borders are vultures and enemies, waiting to strike at any moment. The great GetCountry('DLH') of their forefathers will be brought to its knees in but an instant lest they succeed in safeguarding their people from internal and external threats."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/fall-of-delhi.png",
+      "id": "situation:fall_of_delhi",
+      "mods": [],
+      "name": "Fall of Delhi",
+      "slug": "fall-of-delhi",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The wealth of the New World has attracted more than great empires to its waters — an unending tide of brigands and disgruntled sailors has also embarked, more than willing to follow the call of adventure, treasure, and freedom... even if they risk ending their escapades dangling from a noose."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/golden-age-of-piracy.png",
+      "id": "situation:golden_age_of_piracy",
+      "mods": [],
+      "name": "Golden Age of Piracy",
+      "slug": "golden-age-of-piracy",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Terrible news reaches us from abroad. Misery and plague sweep the land, and death runs with them, apparently brought by mysterious bearded foreigners. This plague is not something our elders have ever heard of, and no answers in our ancestors' memories could help us face the catastrophe if it reaches our settlements. Will our people perish, or will we somehow resist when this walking death reaches us?"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/great-pestilence.png",
+      "id": "situation:great_pestilence",
+      "mods": [],
+      "name": "Great Pestilence",
+      "slug": "great-pestilence",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Guelphs and Ghibellines have been fighting for dominance over Italy for centuries, ever since the Investiture Controversy pitted the GetUniqueInternationalOrganization('catholic church') and the GetUniqueInternationalOrganization('hre') against each other. The Guelphs support the Roman authority over the peninsula, while Ghibellines are considered Imperial loyalists holding their allegiance true to the Holy Roman Empire. But matters have spiraled well beyond their initial positions, and both sides now represent a diversity of interests; the different countries are no strangers to switching sides when doing so might benefit them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/guelphs-and-ghibellines.png",
+      "id": "situation:guelphs_and_ghibellines",
+      "mods": [],
+      "name": "Guelphs and Ghibellines",
+      "slug": "guelphs-and-ghibellines",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The death of the last direct heir to the French throne has left a power vacuum, plunging France into turmoil. With competing claims and long-standing tensions over territory and feudal rights, the fragile peace between France and England has shattered. Both realms hold lands across France, creating friction that threatens the unity of Christianity. What began as a dispute over succession has escalated into a protracted struggle for dominance — one that now threatens to scar the continent for generations."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/hundred-years-war.png",
+      "id": "situation:hundred_years_war",
+      "mods": [],
+      "name": "Hundred Years' War",
+      "slug": "hundred-years-war",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A series of conflicts between the followers of Hussitism and Catholicism, it quickly escalated into a full-blown war for the very identity of the country itself."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/hussite-wars.png",
+      "id": "situation:hussite_wars",
+      "mods": [],
+      "name": "Hussite Wars",
+      "slug": "hussite-wars",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "For over a century, Italy has prospered thanks to her advantageous position in Europe. Thriving foreign trade, abundant wealth, and the flowering culture of the Renaissance have ushered in a golden age in many parts of the peninsula.\n\nHowever, this prosperity has attracted the attention of outside powers, who slaver over Italy's riches and seek to usurp control of her smaller independent states. In response, the strongest powers in Italy have united in leagues in an effort to repel the invaders..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/italian-wars.png",
+      "id": "situation:italian_wars",
+      "mods": [],
+      "name": "Italian Wars",
+      "slug": "italian-wars",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The bone-chilling cold of the Little Ice Age tests our resilience, forcing our leader to adapt or watch their domain descend into frozen hell. Whether through careful governance or sheer survival instinct, history will remember those who make it through this time of great hardship."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/little-ice-age.png",
+      "id": "situation:little_ice_age",
+      "mods": [],
+      "name": "Little Ice Age",
+      "slug": "little-ice-age",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Following the dismantling of the Kamakura Shogunate, Imperial rule was reinstated under jap_go_daigo_tenno with the help of jap_ashikaga_takauji in what is known as the Kenmu Restoration. However, the two former allies quickly became bitter rivals. jap_go_daigo_tenno wanted to restore the supremacy of the Imperial rule like it was in the Heian Period, which earned GetCharacter('jap go daigo tenno') the discontent of many in the warrior class, including jap_ashikaga_takauji. The latter was pushed out from the capital and forced to flee to Kyūshū, but was able to return to Kyōto in 1336 and seize it, establishing a new Japanese Shogunate under GetCharacter('jap ashikaga takauji') and enthroning a new Emperor. In January 1337, jap_go_daigo_tenno fled the capital and established GetCharacter('jap go daigo tenno') own court at Yoshino, starting the period known as Nanbokuchō Jidai, the Northern and Southern Courts."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/nanbokuchou.png",
+      "id": "situation:nanbokuchou",
+      "mods": [],
+      "name": "Nanbokuchō Jidai",
+      "slug": "nanbokuchou",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Chinese are revolting against their GetCountry('CHI') overlords. The rebels have declared the establishment of their independent states, throwing the entirety of China into a civil war that threatens to devour the Yuán dynasty..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/red-turban-rebellions.png",
+      "id": "situation:red_turban_rebellions",
+      "mods": [],
+      "name": "Red Turban Rebellions",
+      "slug": "red-turban-rebellions",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "'''When our Lord and Master Jesus Christ said 'Repent,' he willed the entire life of believers to be one of repentance.'''\n\nThese were the first notes in a document of 95 Theses found nailed to a church door, each detailing the corruption of the Catholic Church. Having suffered an extended period of weakness and internal struggle, the Catholicism faith seems ripe for reform. Many echo the same sentiment as the author of the 95 Theses about the pureness of internal faith, and that only through God can a Christianity can experience forgiveness. Others decry this work as heresy and straying disturbingly far from the Catholicism beliefs.\n\nWith a wave of discussion sweeping Europe, it has become clear that this will irreversible alter the future of our continent."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/reformation.png",
+      "id": "situation:reformation",
+      "mods": [],
+      "name": "The Reformation",
+      "slug": "reformation",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Driven by a potent combination of ambition, martial skill, and strategic vision, many Turkish Beyliks carved their own paths through the fragmented realms of Anatolia. Their nomadic origins merged with the sophistication of settled societies, creating a formidable blend of military might and administrative acumen.\n\nAs the regional principalities lay divided and vulnerable, the most formidable among them seized the opportunity to unite their ranks under a single banner. Charismatic leaders such as tur_osman, the founder of Ottomans, ignited flames of inspiration that would burn brightly for centuries to come.\n\nWith every victory, these Beyliks gather momentum, transforming themselves into a force to be reckoned with. The conquest of vital towns and cities across the region all heralded their inexorable rise."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/rise-of-the-ottomans.png",
+      "id": "situation:rise_of_the_ottomans",
+      "mods": [],
+      "name": "Rise of the Turks",
+      "slug": "rise-of-the-ottomans",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Fueled by the ambition to follow in the steps of GetCharacter('genghis khan') Khān and Caliphs, GetCountry('TIM') rallied GetCountry('TIM') soldiers and loyalists, and founded a nascent Empire built on ruthless expansion and brilliant tactics. To GetCountry('TIM'), the lands of Central Asia, Middle East, and India are the ripest for GetCountry('TIM') conquest, which will indelibly shape these regions over the coming centuries..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/rise-of-timur.png",
+      "id": "situation:rise_of_timur",
+      "mods": [],
+      "name": "Rise of Timur",
+      "slug": "rise-of-timur",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is a time of upheaval. The central authority of the GetUniqueInternationalOrganization('japanese shogunate') has waned, and GetUniqueInternationalOrganization('japanese shogunate') power to control the different clans diminished. Fueled by their own conflicts, the clans have increased their autonomy and independence, and have become masters of their own territory. Japan will be engulfed in war unless someone is powerful enough to grab the reins of government once again..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/sengoku.png",
+      "id": "situation:sengoku",
+      "mods": [],
+      "name": "Sengoku Jidai",
+      "slug": "sengoku",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Wealth inequality, a declining standard of living, and increased literacy have led to the rise of individual awareness. The ongoing exploitation of the lower classes by the nobility, along with the unchecked power of the ruling class, has finally driven both our burghers and the peasantry to demand a change in government. This new movement challenges the established order of society, which for as long as we can recall has seen a dominant upper class oppress those below them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/the-revolution.png",
+      "id": "situation:the_revolution",
+      "mods": [],
+      "name": "People's Uprising",
+      "slug": "the-revolution",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This treaty was signed in GetSituationByKey('treaty of tordesillas') by the GetSituationByKey('treaty of tordesillas') and the GetSituationByKey('treaty of tordesillas'). The document establishes a set of rules and parameters that allow the two powers to claim exclusive rights to the colonization and exploitation of any newly discovered lands on the continent of America."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/treaty-of-tordesillas.png",
+      "id": "situation:treaty_of_tordesillas",
+      "mods": [],
+      "name": "Treaty of [GetSituationByKey('treaty_of_tordesillas').MakeScope.GetVariable('treaty_location').GetLocation.GetNameWithNoTooltip]",
+      "slug": "treaty-of-tordesillas",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "After several decades of religious strife, dissent over the correct practice of Christianity worship in the Holy Roman Empire has reached a point where armed conflict between the Protestant Union and Catholic League seems impossible to avoid. While these organizations of Imperial princes are mainly concerned with the protection of their respective faiths, many leaders in Europe look at the turbulent Empire with greedy eyes. Whether it be charged with religious fervor or worldly desire, the mightiest powers of Europe are preparing their armies for a fight, as the peace of the Empire hangs in a delicate balance."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/war-of-religions.png",
+      "id": "situation:war_of_religions",
+      "mods": [],
+      "name": "War of Religions",
+      "slug": "war-of-religions",
+      "type": "situation"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Schism has struck Catholicism and has thrown the Curia in petty factionalism!\n\nEven if the Church has been divided before, this Schism seems to be of a different nature. After the death of the last GetInternationalOrganization('catholic church'), a faction of Italian cardinals is pushing for the return of the Holy See into their own control, something they have desired ever since the Papacy fell under French control. Opposing them, the French faction insists on the new GetInternationalOrganization('catholic church') remaining under their control. The demands of both factions seems irreconcilable and Catholicism world is swiftly descending into factionalism, leaving the good Catholicism people of the Catholic Church without their shepherds. As long as this division persists, they will have to navigate a world without their usual authority and decide for their own who the true representative of divine will is."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/situation/western-schism.png",
+      "id": "situation:western_schism",
+      "mods": [],
+      "name": "Western Schism",
+      "slug": "western-schism",
+      "type": "situation"
+    }
+  ],
+  "facets": [],
+  "source": "situations"
+}

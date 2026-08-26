@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import actions from '../data/cabinet-actions.json';
+import heirs from '../data/heir-selections.json';
+---
+<Base title="Cabinet" active="cabinet" pageMark="📜" eyebrow="Government & Laws"
+  pageStats={[
+    { label: 'cabinet actions', value: actions.entities.length },
+    { label: 'heir selections', value: heirs.entities.length },
+  ]}
+  description="Cabinet actions and heir selection methods in Europa Universalis V.">
+  <SectionTable title="Cabinet Actions" data={actions} columns={[
+    { key: 'name', label: 'Action', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter actions…" />
+  <SectionTable title="Heir Selection" data={heirs} columns={[
+    { key: 'name', label: 'Method', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter methods…" />
+</Base>

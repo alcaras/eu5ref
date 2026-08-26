@@ -9,6 +9,19 @@ patch: data audit changelog build
 data:
 	$(PY) scripts/build_concepts.py
 	$(PY) scripts/build_goods.py
+	$(PY) scripts/build_advances.py
+	$(PY) scripts/build_buildings.py
+	$(PY) scripts/build_units.py
+	$(PY) scripts/build_laws.py
+	$(PY) scripts/build_reforms.py
+	$(PY) scripts/build_estates.py
+	$(PY) scripts/build_religions.py
+	$(PY) scripts/build_cultures.py
+	$(PY) scripts/build_pops.py
+	$(PY) scripts/build_countries.py
+	$(PY) scripts/build_simple.py
+	$(PY) scripts/build_defines.py
+	$(PY) scripts/build_planner.py
 	$(PY) scripts/build_entities.py
 	$(PY) scripts/build_backlinks.py
 

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/traits.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="characters" eyebrow="Character Trait" iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      {(entity.data.opposites?.length > 0) && (
+        <div class="panel">
+          <h3>Opposites</h3>
+          <span class="chips">
+            {entity.data.opposites.map((o: string) => <span class="chip">{o}</span>)}
+          </span>
+        </div>
+      )}
+    </Fragment>
+  </EntityDetail>
+</Base>

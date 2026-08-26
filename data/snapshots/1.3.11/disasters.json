@@ -1,0 +1,1393 @@
+{
+  "dataset": "disasters",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A succession crisis has begun, and a rather unusual one: In the absence of a strong claimant to the throne, idealistic scholars are establishing a fledgling republic in Milan. These rebellious academics have already won significant popular support, and threaten to further destabilize the entire realm."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/ambrosian-republic-disaster.png",
+      "id": "disaster:ambrosian_republic_disaster",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−10.00%"
+        },
+        {
+          "key": "stability_cost_efficiency",
+          "label": "Stability Investment Efficiency",
+          "polarity": "bad",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Golden Ambrosian Republic",
+      "slug": "ambrosian-republic-disaster",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The population's thirst for liberty and the desire to enact enlightened ideals have made their rebellion seemingly unavoidable. Their rage towards our perceived failure to rule threatens to explode into a revolutionary conflagration! This will make things far more difficult for us going forward..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/aspiration-for-liberty.png",
+      "id": "disaster:aspiration_for_liberty",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        },
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "−0.10"
+        }
+      ],
+      "name": "Aspiration for Liberty",
+      "slug": "aspiration-for-liberty",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Scheming pretenders and influential figures in the shadows plot to overthrow the ruling Byzantine dynastic line. Turmoil grips the court as powerful generals and outsiders bid to influence the outcome of this turbulent period. Our weakened presence in the Balkans is what has given way to this great uncertainty for the future of the last legitimate bastion of Rome..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/byzantine-succession-crisis.png",
+      "id": "disaster:byzantine_succession_crisis",
+      "mods": [
+        {
+          "key": "monthly_pretender_rebel_growth",
+          "label": "Monthly Pretender Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_satisfaction_decay",
+          "label": "Estates Satisfaction Decay",
+          "polarity": "bad",
+          "value": "+2.00%"
+        },
+        {
+          "key": "blocked_from_creating_subjects",
+          "label": "Blocked from Creating Subjects",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Byzantine Succession Crisis",
+      "slug": "byzantine-succession-crisis",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our enemies constantly look for ways to intervene in our politics, either by spurring instability or through supporting rival claimants to our seat of authority. This period of instability will surely reveal those who seek to end our rule and erase us from the pages of history. The wealth of Iberia has always drawn the hungry gazes of the foes on our borders, but we must not allow them to feast!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/castilian-civil-war.png",
+      "id": "disaster:castilian_civil_war",
+      "mods": [
+        {
+          "key": "monthly_pretender_rebel_growth",
+          "label": "Monthly Pretender Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−15.00%"
+        },
+        {
+          "key": "blocked_from_creating_subjects",
+          "label": "Blocked from Creating Subjects",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Castilian Civil War",
+      "slug": "castilian-civil-war",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Florence faces a time of uncertainty as the Ciompi threaten open revolt. The Ciompi — made up of laborers, craftsmen, and artisans without guild associations — bear the burden of heavy taxation, yet have no political representation due to their lack of guild memberships. Such widespread unrest has the potential to plunge our entire society into discord..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/ciompi-revolt.png",
+      "id": "disaster:ciompi_revolt",
+      "mods": [
+        {
+          "key": "burghers_estate_target_satisfaction",
+          "label": "Burgher Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "peasants_estate_target_satisfaction",
+          "label": "Peasant Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "global_wool_output_modifier",
+          "label": "Wool Output",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_silk_output_modifier",
+          "label": "Silk Output",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_fine_cloth_output_modifier",
+          "label": "Fine Cloth Output",
+          "polarity": "bad",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Ciompi Revolt",
+      "slug": "ciompi-revolt",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Shadowy threats circle us like birds of prey, waiting to peck us apart — the most terrifying of which would bring about the untimely demise of our ruler! Worse, they would be replaced by a puppet, controlled from behind the scenes by these same murderous shadows."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/coup-attempt.png",
+      "id": "disaster:coup_attempt",
+      "mods": [
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "country_cabinet_efficiency",
+          "label": "Efficiency of Our Cabinet",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "court_spending_efficiency",
+          "label": "Court Spending Efficiency",
+          "polarity": "bad",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Coup Attempt",
+      "slug": "coup-attempt",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Resistance to increasing centralization in our country has culminated in a period of general crisis and conflict between Court and Country. Depending on how we handle this difficult time, we might come out of it a stronger country than before — if we manage to weather the storm, of course."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/court-and-country.png",
+      "id": "disaster:court_and_country",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−10.00%"
+        },
+        {
+          "key": "pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "bad",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Court and Country",
+      "slug": "court-and-country",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Heaven grows dark and grey. We are on the cusp of losing divine favor! Internal and external pressure grows; crumbling bureaucracy and agricultural failures have tipped the scales against us. The people no longer recognize us as the legitimate rulers of our GetCountry('CHI')!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/crisis-of-the-chinese-dynasty.png",
+      "id": "disaster:crisis_of_the_chinese_dynasty",
+      "mods": [
+        {
+          "key": "monthly_celestial_authority",
+          "label": "Monthly Celestial Authority Change",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "bad",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "monthly_inflation",
+          "label": "Monthly Inflation",
+          "polarity": "bad",
+          "value": "+0.10%"
+        }
+      ],
+      "name": "Crisis of the Empire of Yuán(CHI)",
+      "slug": "crisis-of-the-chinese-dynasty",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Despite our dynasty's long and successful history of ruling this region, internal strife and a series of illegitimate rulers have precipitated a major crisis among us. While we are distracted with combating our internal strife, insidious enemies and our powerful neighbors will seize any opportunity they can to divide our lands and wipe our people from the face of the Earth. We must find a way to assert what has always been rightfully ours to the outside world without being consumed from the inside by corrosion within our own ranks."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/crisis-of-the-sayfawa-dynasty.png",
+      "id": "disaster:crisis_of_the_sayfawa_dynasty",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.30"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.50%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Crisis of the Sayfawa Dynasty",
+      "slug": "crisis-of-the-sayfawa-dynasty",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "No one disputes the greatness and grandeur surrounding the legend of ser_stefan_dusan. Raised with the most excellent education, adept at court etiquette, and an accomplished commander, ser_stefan_dusan led our great nation to new heights. However, as royal intrigues go, GetCharacter('ser stefan dusan') legacy was built on suffering, murder, and skullduggery. The prime trophy taken during GetCharacter('ser stefan dusan') ascension was that of GetCharacter('ser stefan dusan') own father, ser_stefan_decanski, whose dying breath cursed ser_stefan_dusan's line with decay and ruin. Superstitious voices across our court whisper that the visage of the old Scope has returned, marking the beginning of our end..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/curse-of-stefan-uros-iii.png",
+      "id": "disaster:curse_of_stefan_uros_iii",
+      "mods": [
+        {
+          "key": "monthly_pretender_rebel_growth",
+          "label": "Monthly Pretender Rebel Growth",
+          "polarity": "bad",
+          "value": "+2.50%"
+        },
+        {
+          "key": "monthly_nationalist_rebel_growth",
+          "label": "Monthly Nationalist Rebel Growth",
+          "polarity": "bad",
+          "value": "+2.50%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.25"
+        }
+      ],
+      "name": "Curse of ser_stefan_decanski",
+      "slug": "curse-of-stefan-uros-iii",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The passing of our great leader maj_hayam_wuruk has thrown our GetCountry('MAJ') into great turmoil. This turbulent period could last many long years, as those who once bowed to us rise up against our authority. Disputed succession and the decay of our Majapahit power are two pressing issues that must be resolved immediately, if we want to survive this catastrophe."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/death-of-hayan-wuruk.png",
+      "id": "disaster:death_of_hayan_wuruk",
+      "mods": [
+        {
+          "key": "subject_loyalty",
+          "label": "Loyalty of Subjects",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "diplomatic_spending_cost",
+          "label": "Expected Diplomatic Spending",
+          "polarity": "bad",
+          "value": "+2.50%"
+        }
+      ],
+      "name": "Death of maj_hayam_wuruk",
+      "slug": "death-of-hayan-wuruk",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Once mighty and unshakable, our domain now teeters on the brink of collapse. Corruption festers within our institutions, our provinces grow restless under the weight of neglect, and foreign powers circle like vultures, eager to carve up what remains of our glory. The golden age that once defined us has faded into memory, and the cracks in our foundation grow wider with each passing day. If we do not act swiftly to address the rot within and restore control, our empire will crumble, leaving only ruins and regret, a shadow of our former glory..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/decline-of-empire.png",
+      "id": "disaster:decline_of_empire",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−15.00%"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.30%"
+        },
+        {
+          "key": "bank_interest",
+          "label": "Bank Interest",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_complacency",
+          "label": "Monthly Complacency",
+          "polarity": "good",
+          "value": "−0.20"
+        },
+        {
+          "key": "has_complacency_effects",
+          "label": "Complacency Impacts",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Complacent Decline",
+      "slug": "decline-of-empire",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our GetCountry('MAJ') is not as prosperous as it once was. Beset by internal dynastic conflicts, this period of weakness has long been anticipated by our rivals, who eagerly await any chance when to encroach on our borders. Now, with the rise of Islam in Indonesia, we could easily fall from relevance and into the dark oubliette of forgotten empires..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/decline-of-majapahit.png",
+      "id": "disaster:decline_of_majapahit",
+      "mods": [
+        {
+          "key": "power_projection",
+          "label": "Power Projection",
+          "polarity": "bad",
+          "value": "−15.00"
+        },
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "monthly_complacency",
+          "label": "Monthly Complacency",
+          "polarity": "bad",
+          "value": "+0.25"
+        },
+        {
+          "key": "has_complacency_effects",
+          "label": "Complacency Impacts",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "The Decline of Majapahit",
+      "slug": "decline-of-majapahit",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Weak rulership, civil wars, the rise of external threats, and internal stagnation are the primary challenges the Empire of Mali has faced in recent years. The stability and security of the GetCountry('MAL') is in peril, and only a strong hand can guide us out of this creeping doom and into glory once again."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/decline-of-mali.png",
+      "id": "disaster:decline_of_mali",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.30%"
+        },
+        {
+          "key": "bank_interest",
+          "label": "Bank Interest",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_complacency",
+          "label": "Monthly Complacency",
+          "polarity": "bad",
+          "value": "+0.20"
+        },
+        {
+          "key": "has_complacency_effects",
+          "label": "Complacency Impacts",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "The Decline of Mali",
+      "slug": "decline-of-mali",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Despite our best efforts, we have not been able to undo the damage wrought by our opposers. Our once great Empire has spiraled into chaos as our enemies surround us from every direction. This is truly a most dire situation and one that we must face head-on, lest we risk falling victim to the aggressive tendencies of those who covet our lands..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/dissolution-of-delhi.png",
+      "id": "disaster:dissolution_of_delhi",
+      "mods": [
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+2.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "−0.10"
+        },
+        {
+          "key": "monthly_complacency",
+          "label": "Monthly Complacency",
+          "polarity": "bad",
+          "value": "+0.30"
+        },
+        {
+          "key": "has_complacency_effects",
+          "label": "Complacency Impacts",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "The Dissolution of Delhi",
+      "slug": "dissolution-of-delhi",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Growing tensions between the Crown and Parliament over power and governance threaten to overwhelm the entire country. Our ruler's belief in divine right and religious policies have angered Parliament, as has Scope apparent ignorance of proper taxation procedures. The situation threatens to explode into outright civil war, unless we find a solution swiftly..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/english-civil-war.png",
+      "id": "disaster:english_civil_war",
+      "mods": [
+        {
+          "key": "pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "bad",
+          "value": "+0.15"
+        },
+        {
+          "key": "global_manpower_modifier",
+          "label": "Manpower",
+          "polarity": "bad",
+          "value": "−33.00%"
+        }
+      ],
+      "name": "The English Civil War",
+      "slug": "english-civil-war",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The recent centuries have witnessed the slow decay of our glorious GetCountry('BYZ'). Constant infighting, internal instability and the ongoing Rise of the Turks spell doom for us and our people, all while Serbia and Bulgaria encroach on our northern border. Through sheer might and tenacity, we must put an end to corruption and restore the authority of the crown, before it is too late..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/fate-of-the-phoenix.png",
+      "id": "disaster:fate_of_the_phoenix",
+      "mods": [
+        {
+          "key": "hire_mercenary_premium_cost_modifier",
+          "label": "Hire Mercenary Premium Cost",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "global_bureaucracy_maintenance_efficiency",
+          "label": "Bureaucracy Maintenance Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "casus_belli_creation_speed_modifier",
+          "label": "Casus Belli Creation Speed",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Fate of the Phoenix",
+      "slug": "fate-of-the-phoenix",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As new branches of the Christianity faith appear across Europe, the subsequent religious friction created within our society has reached a boiling point. Now we are beset by armed zealots — heretics and defenders of the true faith alike — threatening to drag our entire realm into vicious civil conflict."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/french-wars-religion.png",
+      "id": "disaster:french_wars_religion",
+      "mods": [
+        {
+          "key": "clergy_estate_target_satisfaction",
+          "label": "Clergy Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−50.00%"
+        },
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "bad",
+          "value": "+0.15"
+        },
+        {
+          "key": "global_clergy_estate_power",
+          "label": "Clergy Power",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "global_clergy_migration_allowed",
+          "label": "Allows Clerics to Migrate",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "French Wars of Religion",
+      "slug": "french-wars-religion",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our line of succession is unclear, and as a result, our political leaders have divided themselves into two factions. The Hook faction are generally more conservative and back established rulers, whereas the Cods typically favor independence and back those with less solid claims. This division has the potential to severely undermine the status quo, and should be handled with care."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/hook-and-cod-wars.png",
+      "id": "disaster:hook_and_cod_wars",
+      "mods": [
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+2.00%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−2.50%"
+        }
+      ],
+      "name": "The Hook and Cod Wars",
+      "slug": "hook-and-cod-wars",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Once again the authority of our ruler is being questioned! A rival warlord threatens the Horde with a civil war, hungry to claim the throne for themselves. The horde must march to war against its own renegade warriors..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/horde-civil-war.png",
+      "id": "disaster:horde_civil_war",
+      "mods": [
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−2.50%"
+        },
+        {
+          "key": "horde_unity_hit_at_ruler_death",
+          "label": "Horde Unity Change on Ruler Death",
+          "polarity": "good",
+          "value": "+50.00"
+        },
+        {
+          "key": "monthly_horde_unity",
+          "label": "Monthly Horde Unity",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "subject_loyalty",
+          "label": "Loyalty of Subjects",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Horde Civil War",
+      "slug": "horde-civil-war",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "GetCountry('MOS') is the seat of power in GetCountry('MOS'). Due to a succession crisis, infighting has broken out between various family members of the ruling dynasty, each claiming the right to sit on the throne. Escalation in that conflict not only threatens to tear their family apart, but could have calamitous effects on us all."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/muscovite-succession-war.png",
+      "id": "disaster:muscovite_succession_war",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "stability_cost_efficiency",
+          "label": "Stability Investment Efficiency",
+          "polarity": "bad",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Muscovite War of Succession",
+      "slug": "muscovite-succession-war",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As discontent simmers in the countryside, the plight of the common folk grows increasingly dire. Unjust taxation, oppressive noble masters, and a sense of desperation have driven the peasants to the brink. A swelling tide of anger surged forth, leading to a cataclysmic upheaval that would come to be known as the Peasants' War."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/peasants-war.png",
+      "id": "disaster:peasants_war",
+      "mods": [
+        {
+          "key": "global_peasants_assimilation_blocked",
+          "label": "Assimilation of Peasants Blocked",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "global_peasants_conversion_blocked",
+          "label": "Conversion of Peasants Blocked",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "peasants_estate_target_satisfaction",
+          "label": "Peasant Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Peasants' War",
+      "slug": "peasants-war",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Āltepētl system has served our people with care and prosperity over the years. However, our loose grasp on our subjects' concerns in other city-states has raised a chorus of dissenting voices against our rule. Should we wish to retain our splendor and consolidate our power, centralization reforms are necessary."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/reform-society.png",
+      "id": "disaster:reform_society",
+      "mods": [
+        {
+          "key": "monthly_towards_centralization",
+          "label": "Monthly Progress to Centralization",
+          "polarity": "neutral",
+          "value": "+0.33"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.50%"
+        },
+        {
+          "key": "annexation_speed_modifier",
+          "label": "Speed of Annexation",
+          "polarity": "good",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Reform Society",
+      "slug": "reform-society",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Differences between the religious groups in our realm have become insurmountable, leading to a rise in intolerance and bigotry. We must ensure our people walk the correct path going forward, and guide those who have strayed back to the light."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/religious-turmoil.png",
+      "id": "disaster:religious_turmoil",
+      "mods": [
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "bad",
+          "value": "−2.00"
+        }
+      ],
+      "name": "Religious Turmoil",
+      "slug": "religious-turmoil",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Decades of feudal oppression, economic difficulties, and religious intolerance have taken their toll on the peace of our nation, and our population's desire for liberty poses a serious threat to our reign. A popular uprising is all but inevitable..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/revolution-disaster.png",
+      "id": "disaster:revolution_disaster",
+      "mods": [
+        {
+          "key": "pop_leave_rebels_threshold",
+          "label": "Pop Leave Rebels Threshold",
+          "polarity": "bad",
+          "value": "+10.00%"
+        },
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "−1.00"
+        }
+      ],
+      "name": "Revolution!",
+      "slug": "revolution-disaster",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The old regime is no more! We have overthrown our former oppressors and seized for ourselves. Yet the stability and security of our fledgling realm is still in peril, as rival factions fight over who should hold the ultimate authority in our nascent government. We must quash this internal turbulence if we are to remain stalwart against outside threats..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/revolutionary-chaos.png",
+      "id": "disaster:revolutionary_chaos",
+      "mods": [
+        {
+          "key": "monthly_republican_tradition",
+          "label": "Monthly Republican Tradition",
+          "polarity": "bad",
+          "value": "−0.20"
+        }
+      ],
+      "name": "Revolutionary Chaos",
+      "slug": "revolutionary-chaos",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We are no strangers to the power-hungry tendencies of the Szlachta. As Szlachta influence grows, their rising demands for more privileges flood our court. These political maneuvers bring to mind a prowling jungle beast, circling and waiting to strike. Surely, they will seize the first opportunity to challenge our authority!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/rise-of-the-szlachta.png",
+      "id": "disaster:rise_of_the_szlachta",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−10.00%"
+        },
+        {
+          "key": "monthly_towards_aristocracy",
+          "label": "Monthly Progress to Aristocracy",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.25"
+        }
+      ],
+      "name": "Rise of the Szlachta",
+      "slug": "rise-of-the-szlachta",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "An upstart preacher has begun spreading an apocalyptic message among our people. His fiery sermons denounce our corrupt, morally decayed society, especially those at the top. These ravings are causing quite a stir among our population — clearly, this madman has great powers of influence..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/savonarola-disaster.png",
+      "id": "disaster:savonarola_disaster",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        },
+        {
+          "key": "monthly_towards_traditionalist",
+          "label": "Monthly Progress to Traditionalist",
+          "polarity": "neutral",
+          "value": "+0.20"
+        },
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "−0.20"
+        }
+      ],
+      "name": "The Rise of Savonarola",
+      "slug": "savonarola-disaster",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The influence of China has been a boon to our society in many ways. However, our relationship with this cultural giant has woven many foreign threads into the tapestry of our society, disconnecting us from our traditions and threatening our independence. If we are to maintain our unique culture, we must resist further corruption from these seductive outside influences. Coversely, however, we might benefit from closer ties..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/sinicization-disaster.png",
+      "id": "disaster:sinicization_disaster",
+      "mods": [
+        {
+          "key": "monthly_tribal_cohesion",
+          "label": "Monthly Tribal Cohesion",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "monthly_republican_tradition",
+          "label": "Monthly Republican Tradition",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "monthly_devotion",
+          "label": "Monthly Devotion",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.50%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−15.00%"
+        }
+      ],
+      "name": "The Influence of China",
+      "slug": "sinicization-disaster",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Conflict rages over the authority of the monarch versus the power of the Sejm, and it appears our customary hierarchy will soon be challenged. We must decisively eliminate these threats if we wish to maintain the status quo. It is time we rid ourselves of the Estates' oversight and cease the reigns of power!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/struggle-for-royal-power.png",
+      "id": "disaster:struggle_for_royal_power",
+      "mods": [
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−50.00%"
+        },
+        {
+          "key": "nobles_estate_satisfaction_decay",
+          "label": "Noble Estate Satisfaction Decay",
+          "polarity": "neutral",
+          "value": "+2.50%"
+        }
+      ],
+      "name": "Struggle for Royal Power",
+      "slug": "struggle-for-royal-power",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our realm is in disarray! A powerful claimant has pressed their right to our throne against the wishes of our people. Our lands are now in mortal peril from both internal and external foes..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/succession-crisis.png",
+      "id": "disaster:succession_crisis",
+      "mods": [
+        {
+          "key": "monthly_pretender_rebel_growth",
+          "label": "Monthly Pretender Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "global_crown_estate_power",
+          "label": "Crown Power",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−15.00%"
+        },
+        {
+          "key": "blocked_from_creating_subjects",
+          "label": "Blocked from Creating Subjects",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Succession Crisis",
+      "slug": "succession-crisis",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is a dark period of social and economic unrest. Our nation is struggling with famine and war, as well as trying to brook opposition to the clergy and nobles. Beset on all sides by the dogs of strife, our realm is about to be ripped apart and devoured..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/time-of-troubles.png",
+      "id": "disaster:time_of_troubles",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.30"
+        },
+        {
+          "key": "global_monthly_food_modifier",
+          "label": "Food Production %",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Time of Troubles",
+      "slug": "time-of-troubles",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The County of Brandenburg finds itself in difficult times ever since the power of the Askanier crumbled and the Wittelsbach assumed control of the Margraviate. With the efforts of the Wittelsbach bound elsewhere, the young GetCountry('BRA') GetCountry('BRA') must struggle alone to re-assert the central authority in the Brandenburgian March. Facing unruly estates, a population yearning for the days of Askanier rule, and the ruthless Robber Barons will provide a difficult task for GetCountry('BRA').\n\nWhile occupied with internal affairs, the County of Brandenburg could also attract interest from other dynasties with a claim to the poor, but prestigious title of the Holy Roman Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/turmoil-in-brandenburg.png",
+      "id": "disaster:turmoil_in_brandenburg",
+      "mods": [
+        {
+          "key": "global_max_control",
+          "label": "Max Control",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "global_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "bad",
+          "value": "−0.05%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.02"
+        }
+      ],
+      "name": "Turmoil in Brandenburg",
+      "slug": "turmoil-in-brandenburg",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Even since the death of Ivan Asen II, Bulgaria has been struggling with weak rule, noble infighting, and foreign encroachment. Burdened by internal division and external threats alike, the GetCountry('BUL') now faces a perilous twilight, one from which it may emerge renewed, or collapse into ruin."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/twilight-of-the-tsardom.png",
+      "id": "disaster:twilight_of_the_tsardom",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−25.00%"
+        },
+        {
+          "key": "monthly_rebel_growth",
+          "label": "Monthly Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.30%"
+        },
+        {
+          "key": "monthly_complacency",
+          "label": "Monthly Complacency",
+          "polarity": "bad",
+          "value": "+0.20"
+        },
+        {
+          "key": "global_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "bad",
+          "value": "−0.05%"
+        },
+        {
+          "key": "has_complacency_effects",
+          "label": "Complacency Impacts",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Twilight of the Tsardom",
+      "slug": "twilight-of-the-tsardom",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Angered by excessive demands made upon them by the Scope crown, two groups of well-heeled rebels have formed: The Aragonese and the Valencian Unions. Created by disgruntled members of the GetCountry('ARA') and GetCountry('ARA') classes, the Unions both call for constraints against the ruler's power, reduced taxation, and respect for local laws, privileges, and traditions."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/war-of-the-aragonese-union-disaster.png",
+      "id": "disaster:war_of_the_aragonese_union_disaster",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "stability_cost_efficiency",
+          "label": "Stability Investment Efficiency",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "monthly_nobles_estate_rebel_growth",
+          "label": "Monthly Nobility Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.20%"
+        },
+        {
+          "key": "monthly_burghers_estate_rebel_growth",
+          "label": "Monthly Burghers Rebel Growth",
+          "polarity": "bad",
+          "value": "+0.20%"
+        }
+      ],
+      "name": "War of the Union",
+      "slug": "war-of-the-aragonese-union-disaster",
+      "type": "disaster"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "England is being torn apart by vicious conflict between cadet branches of the ruling dynasty, the 'white rose' of York and the 'red rose' of lancaster_dynasty, over whose hereditary claim to the rulership is strongest. This in-fighting could drag on for decades and affect the entire GetCountry('ENG'), completely undermining the stability of the GetCountry('ENG')!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/disaster/war-of-the-roses.png",
+      "id": "disaster:war_of_the_roses",
+      "mods": [
+        {
+          "key": "monthly_pretender_rebel_growth",
+          "label": "Monthly Pretender Rebel Growth",
+          "polarity": "bad",
+          "value": "+1.00%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.20"
+        }
+      ],
+      "name": "War of the Roses",
+      "slug": "war-of-the-roses",
+      "type": "disaster"
+    }
+  ],
+  "facets": [],
+  "source": "disasters"
+}

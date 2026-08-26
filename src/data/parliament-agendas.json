@@ -1,0 +1,2588 @@
+{
+ "dataset": "parliament-agendas",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] demands that the dominant ["
+    ],
+    [
+     "r",
+     "concept:culture",
+     "Culture"
+    ],
+    [
+     "t",
+     "] of its people be granted official acceptance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_accept_estate_culture",
+   "mods": [],
+   "name": "Accept Estate Culture",
+   "slug": "pa-accept-estate-culture",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Sometimes you have to give permanent benefits to an ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] to gain their support for something in the shorter term."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_add_privilege",
+   "mods": [],
+   "name": "Grant Privilege",
+   "slug": "pa-add-privilege",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This alliance is against the interest of this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] and they think it would be beneficial if the ["
+    ],
+    [
+     "r",
+     "concept:alliance",
+     "Alliance"
+    ],
+    [
+     "t",
+     "] was broken."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_break_alliance",
+   "mods": [],
+   "name": "Break Alliance",
+   "slug": "pa-break-alliance",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] demands that the [Court Language] be changed to one that better reflects its identity."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_change_court_language_to_estate_language",
+   "mods": [],
+   "name": "Change Court Language",
+   "slug": "pa-change-court-language-to-estate-language",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] takes issue with our current ["
+    ],
+    [
+     "r",
+     "concept:policy",
+     "Policy"
+    ],
+    [
+     "t",
+     "] and would be more supportive if we alter our position to something more preferable."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_change_policy",
+   "mods": [],
+   "name": "Change Policy",
+   "slug": "pa-change-policy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The citizens are petitioning us to construct new City Walls for their protection."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_construct_city_walls",
+   "mods": [],
+   "name": "Demand for City Walls",
+   "slug": "pa-construct-city-walls",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] is petitioning us to construct a new Market Village for their mercantile activities."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_construct_market_village",
+   "mods": [],
+   "name": "Demand for a New Marketplace",
+   "slug": "pa-construct-market-village",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Prominent clergymen are petitioning us to construct a remote monastic refuge for them to practice their faith in peace."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_construct_monastery",
+   "mods": [],
+   "name": "Demand for a New Monastery",
+   "slug": "pa-construct-monastery",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] demands that the country convert to the ["
+    ],
+    [
+     "r",
+     "concept:religion",
+     "Religion"
+    ],
+    [
+     "t",
+     "] of its people."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_convert_to_estate_religion",
+   "mods": [],
+   "name": "Convert to Estate Religion",
+   "slug": "pa-convert-to-estate-religion",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Members of this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] seem to be pushing for the reduction of current bureaucracy entrenchment, likely in an effort to limit institutional influence."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_decrease_entrenchment",
+   "mods": [],
+   "name": "Reduce Bureaucratic Entrenchment",
+   "slug": "pa-decrease-entrenchment",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We renew the rights and securities of the Free Imperial Cities, ensuring their stability and prosperity within the Empire."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_hre_affirmation_of_free_city_rights",
+   "mods": [],
+   "name": "Affirmation of Free Imperial City Rights",
+   "slug": "pa-hre-affirmation-of-free-city-rights",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The monarchs of Prussia have always been ambitious in their strife towards power and glory. They formally requested the title of Kings even, though in the end they have to live as 'Kings in Prussia'. Elevating this country to a proper Kingdom might gain us the last bit of favor though..."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_hre_elevate_prussia_to_kingdom",
+   "mods": [],
+   "name": "Elevate Prussia to a Kingdom",
+   "slug": "pa-hre-elevate-prussia-to-kingdom",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Prince-Electors would greatly appreciate additional titles and prestige from the crown."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_hre_grant_imperial_titles",
+   "mods": [],
+   "name": "Grant Imperial Titles",
+   "slug": "pa-hre-grant-imperial-titles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the Imperial Contribution obligations they have for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_hre_lessen_tax_burden",
+   "mods": [],
+   "name": "Lessen Tax Burden",
+   "slug": "pa-hre-lessen-tax-burden",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Members of this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] seem to be pushing for the entrechment of current bureaucracy, likely in an effort to solidify whatever institutional influence they have."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_increase_entrenchment",
+   "mods": [],
+   "name": "Increase Bureaucratic Entrenchment",
+   "slug": "pa-increase-entrenchment",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:levy",
+     "Levy"
+    ],
+    [
+     "t",
+     "] obligations they have for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_burghers",
+   "mods": [],
+   "name": "Lessen Levy Obligations",
+   "slug": "pa-lessen-levy-obligations-for-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:levy",
+     "Levy"
+    ],
+    [
+     "t",
+     "] obligations they have for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_clergy",
+   "mods": [],
+   "name": "Lessen Levy Obligations",
+   "slug": "pa-lessen-levy-obligations-for-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:levy",
+     "Levy"
+    ],
+    [
+     "t",
+     "] obligations they have for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_nobles",
+   "mods": [],
+   "name": "Lessen Levy Obligations",
+   "slug": "pa-lessen-levy-obligations-for-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:levy",
+     "Levy"
+    ],
+    [
+     "t",
+     "] obligations they have for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_peasants",
+   "mods": [],
+   "name": "Lessen Levy Obligations",
+   "slug": "pa-lessen-levy-obligations-for-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:tax",
+     "Tax"
+    ],
+    [
+     "t",
+     "] collected for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_burghers",
+   "mods": [],
+   "name": "Tax Exemption",
+   "slug": "pa-lessen-tax-burden-for-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:tax",
+     "Tax"
+    ],
+    [
+     "t",
+     "] collected for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_clergy",
+   "mods": [],
+   "name": "Tax Exemption",
+   "slug": "pa-lessen-tax-burden-for-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:tax",
+     "Tax"
+    ],
+    [
+     "t",
+     "] collected for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_nobles",
+   "mods": [],
+   "name": "Tax Exemption",
+   "slug": "pa-lessen-tax-burden-for-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We promise to reduce the ["
+    ],
+    [
+     "r",
+     "concept:tax",
+     "Tax"
+    ],
+    [
+     "t",
+     "] collected for their support."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_peasants",
+   "mods": [],
+   "name": "Tax Exemption",
+   "slug": "pa-lessen-tax-burden-for-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and elevate the nobility as the highest societal strata."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_aristocracy",
+   "mods": [],
+   "name": "Aristocratic Support",
+   "slug": "pa-move-towards-aristocracy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and present our belligerent stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_belligerent",
+   "mods": [],
+   "name": "Bellicose Support",
+   "slug": "pa-move-towards-belligerent",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our capital economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_capital_economy",
+   "mods": [],
+   "name": "Support for Capital Economy",
+   "slug": "pa-move-towards-capital-economy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our communal roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_communalism_clergy",
+   "mods": [],
+   "name": "Support of Communal Values",
+   "slug": "pa-move-towards-communalism-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our communal roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_communalism_peasants",
+   "mods": [],
+   "name": "Support of Communal Values",
+   "slug": "pa-move-towards-communalism-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and strife towards conciliatory values."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_conciliatory_burghers",
+   "mods": [],
+   "name": "Conciliatory Support",
+   "slug": "pa-move-towards-conciliatory-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and strife towards conciliatory values."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_conciliatory_peasants",
+   "mods": [],
+   "name": "Conciliatory Support",
+   "slug": "pa-move-towards-conciliatory-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and elevate the nobility as the autonomous rulers of our land"
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_decentralized_nobles",
+   "mods": [],
+   "name": "Autonomy Support",
+   "slug": "pa-move-towards-decentralized-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and elevate the nobility as the autonomous rulers of our land"
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_decentralized_peasants",
+   "mods": [],
+   "name": "Autonomy Support",
+   "slug": "pa-move-towards-decentralized-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine the freedom of our subjects."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_free_subjects_burghers",
+   "mods": [],
+   "name": "Support Free Subjects",
+   "slug": "pa-move-towards-free-subjects-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine the freedom of our subjects."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_free_subjects_peasants",
+   "mods": [],
+   "name": "Support Free Subjects",
+   "slug": "pa-move-towards-free-subjects-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our humanist stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_humanist",
+   "mods": [],
+   "name": "Support of Humanist Ideas",
+   "slug": "pa-move-towards-humanist",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our individualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_individualism",
+   "mods": [],
+   "name": "Support of Individualist Values",
+   "slug": "pa-move-towards-individualism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our innovative roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_innovative",
+   "mods": [],
+   "name": "Support of Innovative Ideas",
+   "slug": "pa-move-towards-innovative",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our inward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_inward_clergy",
+   "mods": [],
+   "name": "Support of Inward",
+   "slug": "pa-move-towards-inward-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our inward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_inward_peasants",
+   "mods": [],
+   "name": "Support of Inward",
+   "slug": "pa-move-towards-inward-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and focus on our presence in our lands."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_land",
+   "mods": [],
+   "name": "Support for Land Focus",
+   "slug": "pa-move-towards-land",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine mercantilism deeper in our society."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_mercantilism",
+   "mods": [],
+   "name": "Mercantilism Support",
+   "slug": "pa-move-towards-mercantilism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and focus on our presence on the sea."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_naval",
+   "mods": [],
+   "name": "Naval Support",
+   "slug": "pa-move-towards-naval",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our outward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_outward_burghers",
+   "mods": [],
+   "name": "Support for Outward",
+   "slug": "pa-move-towards-outward-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our outward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_outward_nobles",
+   "mods": [],
+   "name": "Support for Outward",
+   "slug": "pa-move-towards-outward-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and strife towards plutocratic values."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_plutocracy",
+   "mods": [],
+   "name": "Plutocratic Support",
+   "slug": "pa-move-towards-plutocracy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine serfdom deeper in our society."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_serfdom",
+   "mods": [],
+   "name": "Serfdom Support",
+   "slug": "pa-move-towards-serfdom",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our spiritualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_spiritualist_clergy",
+   "mods": [],
+   "name": "Support of Spiritualist Ideas",
+   "slug": "pa-move-towards-spiritualist-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our spiritualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_spiritualist_peasants",
+   "mods": [],
+   "name": "Support of Spiritualist Ideas",
+   "slug": "pa-move-towards-spiritualist-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our traditional economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_traditional_economy_nobles",
+   "mods": [],
+   "name": "Support for Traditional Economy",
+   "slug": "pa-move-towards-traditional-economy-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and enshrine our traditional economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_traditional_economy_peasants",
+   "mods": [],
+   "name": "Support for Traditional Economy",
+   "slug": "pa-move-towards-traditional-economy-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society requires constant reminding what our ideals represent. We must reinforce our values and nurture our traditionalist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_move_towards_traditionalist",
+   "mods": [],
+   "name": "Support of Traditional Ideas",
+   "slug": "pa-move-towards-traditionalist",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace the nobility as the highest societal strata."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_aristocracy",
+   "mods": [],
+   "name": "Aristocratic Movement",
+   "slug": "pa-push-towards-aristocracy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and take a more belligerent behavior."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_belligerent",
+   "mods": [],
+   "name": "Bellicose Movement",
+   "slug": "pa-push-towards-belligerent",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to a capital economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_capital_economy",
+   "mods": [],
+   "name": "Capital Economy",
+   "slug": "pa-push-towards-capital-economy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our communal roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_communalism_clergy",
+   "mods": [],
+   "name": "Preservation of Communal Values",
+   "slug": "pa-push-towards-communalism-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our communal roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_communalism_peasants",
+   "mods": [],
+   "name": "Preservation of Communal Values",
+   "slug": "pa-push-towards-communalism-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our conciliatory nature."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_conciliatory_burghers",
+   "mods": [],
+   "name": "Conciliatory Movement",
+   "slug": "pa-push-towards-conciliatory-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our conciliatory nature."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_conciliatory_peasants",
+   "mods": [],
+   "name": "Conciliatory Movement",
+   "slug": "pa-push-towards-conciliatory-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace the nobility as the autonomous rulers of our land."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_decentralized_nobles",
+   "mods": [],
+   "name": "Autonomy Movement",
+   "slug": "pa-push-towards-decentralized-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace the nobility as the autonomous rulers of our land."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_decentralized_peasants",
+   "mods": [],
+   "name": "Autonomy Movement",
+   "slug": "pa-push-towards-decentralized-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and strife towards the freedom of our subjects."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_free_subjects_burghers",
+   "mods": [],
+   "name": "Call to Freedom",
+   "slug": "pa-push-towards-free-subjects-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and strife towards the freedom of our subjects."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_free_subjects_peasants",
+   "mods": [],
+   "name": "Call to Freedom",
+   "slug": "pa-push-towards-free-subjects-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our humanist stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_humanist",
+   "mods": [],
+   "name": "Adaptation to Humanist Ideas",
+   "slug": "pa-push-towards-humanist",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our individualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_individualism",
+   "mods": [],
+   "name": "Preservation of Individualist Values",
+   "slug": "pa-push-towards-individualism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our innovative roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_innovative",
+   "mods": [],
+   "name": "Adaptation to Innovative Ideas",
+   "slug": "pa-push-towards-innovative",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to an inward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_inward_clergy",
+   "mods": [],
+   "name": "Inward Look",
+   "slug": "pa-push-towards-inward-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to an inward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_inward_peasants",
+   "mods": [],
+   "name": "Inward Look",
+   "slug": "pa-push-towards-inward-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and take more care of our land."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_land",
+   "mods": [],
+   "name": "Focus on the Land",
+   "slug": "pa-push-towards-land",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace mercantilism to the best of our abilities."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_mercantilism",
+   "mods": [],
+   "name": "Mercantilism Movement",
+   "slug": "pa-push-towards-mercantilism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and take more care of our presence at sea."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_naval",
+   "mods": [],
+   "name": "Naval Movement",
+   "slug": "pa-push-towards-naval",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to an outward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_outward_burghers",
+   "mods": [],
+   "name": "Outward Look",
+   "slug": "pa-push-towards-outward-burghers",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to an outward stance."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_outward_nobles",
+   "mods": [],
+   "name": "Outward Look",
+   "slug": "pa-push-towards-outward-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our plutocratic nature."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_plutocracy",
+   "mods": [],
+   "name": "Plutocratic Movement",
+   "slug": "pa-push-towards-plutocracy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace serfdom to the best of our abilities."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_serfdom",
+   "mods": [],
+   "name": "Serfdom Movement",
+   "slug": "pa-push-towards-serfdom",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our spiritualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_spiritualist_clergy",
+   "mods": [],
+   "name": "Preservation of Spiritualist Ideas",
+   "slug": "pa-push-towards-spiritualist-clergy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our spiritualist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_spiritualist_peasants",
+   "mods": [],
+   "name": "Preservation of Spiritualist Ideas",
+   "slug": "pa-push-towards-spiritualist-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to a traditional economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_traditional_economy_nobles",
+   "mods": [],
+   "name": "Traditional Economy",
+   "slug": "pa-push-towards-traditional-economy-nobles",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and adapt to a traditional economy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_traditional_economy_peasants",
+   "mods": [],
+   "name": "Traditional Economy",
+   "slug": "pa-push-towards-traditional-economy-peasants",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our society has strayed too much from our roots. We must push towards returning to our ideals and embrace our traditionalist roots."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_push_towards_traditionalist",
+   "mods": [],
+   "name": "Preservation of Traditional Ideas",
+   "slug": "pa-push-towards-traditionalist",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] would prefer if we establish relations with this country to whatever purpose they have in mind."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_raise_opinion",
+   "mods": [],
+   "name": "Increase Opinion",
+   "slug": "pa-raise-opinion",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The members of this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] are concerned with our intensive recruitment for the military and want to reduce the amount of people pressed into service."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_reduce_land_recruitment",
+   "mods": [],
+   "name": "Reduce Army Recruitment",
+   "slug": "pa-reduce-land-recruitment",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The members of this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] are concerned with our intensive recruitment for the navy and want to reduce the amount of people pressed into service."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_reduce_naval_recruitment",
+   "mods": [],
+   "name": "Reduce Navy Recruitment",
+   "slug": "pa-reduce-naval-recruitment",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The mere thought of establishing relations with this country enrages this ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] and they demand a strongly worded letter addressed at their ruler this instant."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_reduce_opinion",
+   "mods": [],
+   "name": "Reduce Opinion",
+   "slug": "pa-reduce-opinion",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Artisan Guilds that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_artisan_guilds",
+   "mods": [],
+   "name": "Address Artisan Guilds Complaints",
+   "slug": "pa-remove-artisan-guilds",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Bailiff that has received complaints from the Commoners."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_bailiffs",
+   "mods": [],
+   "name": "Address Bailiff Complaints",
+   "slug": "pa-remove-bailiffs",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Burgher Mansion that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_burgher_mansion",
+   "mods": [],
+   "name": "Address Burgher Mansion Complaints",
+   "slug": "pa-remove-burgher-mansion",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Clerical Archives that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_clerical_archives",
+   "mods": [],
+   "name": "Address Clerical Archives Complaints",
+   "slug": "pa-remove-clerical-archives",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Festival Grounds that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_festival_grounds",
+   "mods": [],
+   "name": "Address Festival Grounds Complaints",
+   "slug": "pa-remove-festival-grounds",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Free Village that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_free_village",
+   "mods": [],
+   "name": "Address Free Village Complaints",
+   "slug": "pa-remove-free-village",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Guild Hall that has received complaints from the Commoners."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_guild_hall",
+   "mods": [],
+   "name": "Address Guild Hall Complaints",
+   "slug": "pa-remove-guild-hall",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Assembly that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_assembly",
+   "mods": [],
+   "name": "Address Local Assembly Complaints",
+   "slug": "pa-remove-local-assembly",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Markets that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_markets",
+   "mods": [],
+   "name": "Address Local Markets Complaints",
+   "slug": "pa-remove-local-markets",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Newspaper that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_newspaper",
+   "mods": [],
+   "name": "Address Local Newspaper Complaints",
+   "slug": "pa-remove-local-newspaper",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Noble Delegation that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_noble_delegation",
+   "mods": [],
+   "name": "Address Local Noble Delegation Complaints",
+   "slug": "pa-remove-local-noble-delegation",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Schools that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_schools",
+   "mods": [],
+   "name": "Address Local Schools Complaints",
+   "slug": "pa-remove-local-schools",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Local Shrine that has received complaints from the Commoners."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_local_shrine",
+   "mods": [],
+   "name": "Address Local Shrine Complaints",
+   "slug": "pa-remove-local-shrine",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Merchants' Guild that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_merchants_guild",
+   "mods": [],
+   "name": "Address Merchants' Guild Complaints",
+   "slug": "pa-remove-merchants-guild",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Nobility Fortifications that has received complaints from the Clergy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_nobility_fortifications",
+   "mods": [],
+   "name": "Address Nobility Fortifications Complaints",
+   "slug": "pa-remove-nobility-fortifications",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Noble Villa that has received complaints from the Commoners."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_noble_villa",
+   "mods": [],
+   "name": "Address Noble Villa Complaints",
+   "slug": "pa-remove-noble-villa",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Nobles Recruitment Center that has received complaints from the Commoners."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_nobles_recruitment_center",
+   "mods": [],
+   "name": "Address Nobles Recruitment Center Complaints",
+   "slug": "pa-remove-nobles-recruitment-center",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Parish Church that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_parish_church",
+   "mods": [],
+   "name": "Address Parish Church Complaints",
+   "slug": "pa-remove-parish-church",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Peasants Hunting Grounds that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_peasants_hunting_grounds",
+   "mods": [],
+   "name": "Address Peasants Hunting Grounds Complaints",
+   "slug": "pa-remove-peasants-hunting-grounds",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Peasants Training Grounds that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_peasants_training_grounds",
+   "mods": [],
+   "name": "Address Peasants Training Grounds Complaints",
+   "slug": "pa-remove-peasants-training-grounds",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Pirate Haven that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_pirate_haven",
+   "mods": [],
+   "name": "Address Pirate Haven Complaints",
+   "slug": "pa-remove-pirate-haven",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Rotten Borough that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_rotten_borough",
+   "mods": [],
+   "name": "Address Rotten Borough Complaints",
+   "slug": "pa-remove-rotten-borough",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Spiritual Retreat that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_spiritual_retreat",
+   "mods": [],
+   "name": "Address Spiritual Retreat Complaints",
+   "slug": "pa-remove-spiritual-retreat",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Toll Castle that has received complaints from the Burghers."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_toll_castle",
+   "mods": [],
+   "name": "Address Toll Castle Complaints",
+   "slug": "pa-remove-toll-castle",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "We will remove any Warrior Monks Training Grounds that has received complaints from the Nobility."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_remove_warrior_monks_training_grounds",
+   "mods": [],
+   "name": "Address Warrior Monks Training Grounds Complaints",
+   "slug": "pa-remove-warrior-monks-training-grounds",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Artillery in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_artillery_institution",
+   "mods": [],
+   "name": "Contain Artillery",
+   "slug": "pa-resist-artillery-institution",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Banking in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_banking",
+   "mods": [],
+   "name": "Contain Banking",
+   "slug": "pa-resist-banking",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Confessionalism in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_confessionalism",
+   "mods": [],
+   "name": "Contain Confessionalism",
+   "slug": "pa-resist-confessionalism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Enlightenment in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_enlightenment",
+   "mods": [],
+   "name": "Contain Enlightenment",
+   "slug": "pa-resist-enlightenment",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Feudalism in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_feudalism",
+   "mods": [],
+   "name": "Contain Feudalism",
+   "slug": "pa-resist-feudalism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Global Trade in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_global_trade",
+   "mods": [],
+   "name": "Contain Global Trade",
+   "slug": "pa-resist-global-trade",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Industrialization in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_industrialization",
+   "mods": [],
+   "name": "Contain Industrialization",
+   "slug": "pa-resist-industrialization",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Legalism in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_legalism",
+   "mods": [],
+   "name": "Contain Legalism",
+   "slug": "pa-resist-legalism",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Levée en Masse in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_levee_en_masse",
+   "mods": [],
+   "name": "Contain Levée en Masse",
+   "slug": "pa-resist-levee-en-masse",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Manufactories in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_manufactories",
+   "mods": [],
+   "name": "Contain Manufactories",
+   "slug": "pa-resist-manufactories",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Meritocracy in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_meritocracy",
+   "mods": [],
+   "name": "Contain Meritocracy",
+   "slug": "pa-resist-meritocracy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Military Revolution in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_military_revolution",
+   "mods": [],
+   "name": "Contain Military Revolution",
+   "slug": "pa-resist-military-revolution",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of New World in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_new_world",
+   "mods": [],
+   "name": "Contain New World",
+   "slug": "pa-resist-new-world",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Pike and Shot in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_pike_and_shot",
+   "mods": [],
+   "name": "Contain Pike and Shot",
+   "slug": "pa-resist-pike-and-shot",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Printing Press in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_printing_press",
+   "mods": [],
+   "name": "Contain Printing Press",
+   "slug": "pa-resist-printing-press",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Professional Armies in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_professional_armies",
+   "mods": [],
+   "name": "Contain Professional Armies",
+   "slug": "pa-resist-professional-armies",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Renaissance in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_renaissance",
+   "mods": [],
+   "name": "Contain Renaissance",
+   "slug": "pa-resist-renaissance",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] wants us to act against the spread of Scientific Revolution in our country."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_resist_scientific_revolution",
+   "mods": [],
+   "name": "Contain Scientific Revolution",
+   "slug": "pa-resist-scientific-revolution",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] is unhappy with the current principles of our military academy and wants us to re-evaluate their teachings."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_rethink_army_academy",
+   "mods": [],
+   "name": "Shake up Army Academy",
+   "slug": "pa-rethink-army-academy",
+   "type": "parliament-agenda"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estate"
+    ],
+    [
+     "t",
+     "] is unhappy with the current principles of our military academy and wants us to re-evaluate their teachings."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-agenda:pa_rethink_navy_academy",
+   "mods": [],
+   "name": "Shake up Naval Academy",
+   "slug": "pa-rethink-navy-academy",
+   "type": "parliament-agenda"
+  }
+ ],
+ "facets": [],
+ "source": "parliament_agendas"
+}

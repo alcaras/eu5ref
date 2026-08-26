@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/societal-values.json';
+---
+<Base title="Societal Values" active="societal-values" pageMark="🧭" eyebrow="Government & Laws"
+  pageStats={[{ label: 'values', value: data.entities.length }]}
+  description="The societal value sliders of Europa Universalis V.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Value', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter values…" />
+</Base>

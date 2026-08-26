@@ -1,0 +1,179 @@
+{
+ "dataset": "estates",
+ "entities": [
+  {
+   "color": "#c91b1a",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents the commercial class of our country, including artisans, merchants, and traders. Their traditional responsibility is to maintain and develop the economy. Therefore, they are usually granted special rights and privileges to facilitate commerce and trade.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/burghers-estate.png",
+   "id": "estate:burghers_estate",
+   "mods": [],
+   "name": "Burghers",
+   "slug": "burghers-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#e6c8c8",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents the educated priests of our state religion. Their traditional responsibility is to care for the spiritual well-being of the realm and our people, but they also have a long tradition of serving in our country's administration. Over the centuries, they have been gifted valuable property and privileges by pious folk and former rulers alike.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/clergy-estate.png",
+   "id": "estate:clergy_estate",
+   "mods": [],
+   "name": "Clergy",
+   "slug": "clergy-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#c3c83c",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents the different groups of Cossack people present in our ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "]. Organized in semi-nomadic and semi-militarized groups, they live on the fringes of other nations, but can be convinced to serve them faithfully and be put to great use if given the appropriate incentives.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/cossacks-estate.png",
+   "id": "estate:cossacks_estate",
+   "mods": [],
+   "name": "Cossacks",
+   "slug": "cossacks-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#cc5d5c",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This is the heart and source of authority for our entire realm and government, held solely by those at the very top and not granted to the other estates.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/crown-estate.png",
+   "id": "estate:crown_estate",
+   "mods": [],
+   "name": "Crown",
+   "slug": "crown-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#d90d5a",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents the religious minorities in our ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] who are considered 'People of the Book' in Islam. This usually refers to the Christianity and Judaism communities, but is sometimes extended to other ["
+    ],
+    [
+     "r",
+     "concept:religion",
+     "Religions"
+    ],
+    [
+     "t",
+     "]. Their status and privileges can vary greatly between different countries, as do both their organization and numbers.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/dhimmi-estate.png",
+   "id": "estate:dhimmi_estate",
+   "mods": [],
+   "name": "Dhimmi",
+   "slug": "dhimmi-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#cc5554",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents our landed aristocracy. Their privileges are guaranteed by ancient traditions, most of which were originally granted in return for exceptional service to the state. They are traditionally responsible for protecting the realm against outside dangers as well as helping the ruler keep the peace.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/nobles-estate.png",
+   "id": "estate:nobles_estate",
+   "mods": [],
+   "name": "Nobility",
+   "slug": "nobles-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#784343",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This is the estate which represents the population at the lowest tier of society. Frequently a class given little to no prestige or power, the common folk nevertheless make up the foundation of our country, and can become surprisingly powerful when united.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/peasants-estate.png",
+   "id": "estate:peasants_estate",
+   "mods": [],
+   "name": "Commoners",
+   "slug": "peasants-estate",
+   "type": "estate"
+  },
+  {
+   "color": "#784343",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This estate represents the different tribes and clans present in our ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "]. They are traditionally organized into lineage and kinship groups and dispersed mostly in rural areas. These different groups live and work in very diverse ways, and their distance and relative independence from the main centers of power make them difficult to govern. Their unique customs also typically give them a reputation as fearsome, unpredictable warriors.<br />In general, it is better for the Crown estate to have more power than the other estates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/estate/tribes-estate.png",
+   "id": "estate:tribes_estate",
+   "mods": [],
+   "name": "Tribes",
+   "slug": "tribes-estate",
+   "type": "estate"
+  }
+ ],
+ "facets": [],
+ "source": "in_game/common/estates"
+}

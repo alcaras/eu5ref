@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import changelog from '../../CHANGELOG.md?raw';
+
+// Tiny markdown-lite renderer for our own CHANGELOG format (h1/h2/h3, li, p).
+const lines = changelog.split('\n');
+type Block = { kind: 'h2' | 'h3' | 'li' | 'p'; text: string };
+const blocks: Block[] = [];
+for (const line of lines) {
+  if (line.startsWith('# ')) continue; // page has its own title
+  else if (line.startsWith('## ')) blocks.push({ kind: 'h2', text: line.slice(3) });
+  else if (line.startsWith('### ')) blocks.push({ kind: 'h3', text: line.slice(4) });
+  else if (line.startsWith('- ')) blocks.push({ kind: 'li', text: line.slice(2) });
+  else if (line.trim()) blocks.push({ kind: 'p', text: line });
+}
+const clean = (t: string) => t.replace(/\*\*(.+?)\*\*/g, '$1').replace(/`(.+?)`/g, '$1');
+---
+<Base title="Patch Notes" active="patch-notes" pageMark="🛠️" eyebrow="Tools"
+  description="Per-patch data changes detected by the eu5ref pipeline.">
+  <div style="max-width: 780px;">
+    {blocks.map((b) =>
+      b.kind === 'h2' ? <h2 style="margin-top: 28px;">{b.text}</h2>
+      : b.kind === 'h3' ? <h3 style="margin-top: 16px; font-family: var(--font-mono); font-size: 13px; color: var(--text-dim);">{b.text}</h3>
+      : b.kind === 'li' ? <div style="padding: 2px 0 2px 14px; color: var(--text-soft); font-size: 13px;">{clean(b.text)}</div>
+      : <p style="color: var(--text-dim);">{clean(b.text)}</p>
+    )}
+  </div>
+</Base>

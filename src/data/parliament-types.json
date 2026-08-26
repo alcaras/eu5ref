@@ -1,0 +1,678 @@
+{
+ "dataset": "parliament-types",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Summoning all free people of our domain is the only way for us to determine the focus of our country."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/assembly.png",
+   "id": "parliament-type:assembly",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "peasants_estate_can_participate_in_parliament",
+     "label": "Commoners in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "bad",
+     "value": "−33.00%"
+    },
+    {
+     "key": "peasants_estate_agenda_impact",
+     "label": "Agenda Impact for Commoners",
+     "polarity": "bad",
+     "value": "−33.00%"
+    }
+   ],
+   "name": "Assembly",
+   "slug": "assembly",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The issue with separated power is that many urgent actions from the government can easily be locked in bureaucratic chaos and dragging discussions. The power of the State must be focused on the hands of the sovereign to ensure the success of our country."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/autocratic-parliament.png",
+   "id": "parliament-type:autocratic_parliament",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "global_crown_estate_power",
+     "label": "Crown Power",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "monthly_towards_absolutism",
+     "label": "Monthly Progress to Absolutism",
+     "polarity": "neutral",
+     "value": "+0.10"
+    },
+    {
+     "key": "clergy_estate_can_participate_in_parliament",
+     "label": "Clergy in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_can_participate_in_parliament",
+     "label": "Burghers in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Autocratic Parliament",
+   "slug": "autocratic-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The authority of the ruler must be regulated while power and justice are in the hands of the people. In the Constitutional System, the role of the masses is significantly expanded."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/constitutional-parliament.png",
+   "id": "parliament-type:constitutional_parliament",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "clergy_estate_can_participate_in_parliament",
+     "label": "Clergy in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_can_participate_in_parliament",
+     "label": "Burghers in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "global_estate_target_satisfaction",
+     "label": "Estates Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+5.00%"
+    },
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "clergy_estate_agenda_impact",
+     "label": "Agenda Impact for Clergy",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "burghers_estate_agenda_impact",
+     "label": "Agenda Impact for Burghers",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "peasants_estate_agenda_impact",
+     "label": "Agenda Impact for Commoners",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "parliament_request_issue_support_needed",
+     "label": "Parliament Request Issue Support Needed",
+     "polarity": "good",
+     "value": "−25%"
+    }
+   ],
+   "name": "Constitutional Parliament",
+   "slug": "constitutional-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "While power is concentrated in a single authoritative monarch in many societies, many others have seen the alternative benefits of a system allowing a council to discuss and debate matters before acting upon them."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/council.png",
+   "id": "parliament-type:council",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "clergy_estate_can_participate_in_parliament",
+     "label": "Clergy in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "bad",
+     "value": "−10.00%"
+    },
+    {
+     "key": "clergy_estate_agenda_impact",
+     "label": "Agenda Impact for Clergy",
+     "polarity": "bad",
+     "value": "−10.00%"
+    }
+   ],
+   "name": "Council",
+   "slug": "council",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The wealthy members of parliament are granted greater powers, while the clergy is bared from having representatives."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/dutch-parliament.png",
+   "id": "parliament-type:dutch_parliament",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_can_participate_in_parliament",
+     "label": "Burghers in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_agenda_impact",
+     "label": "Agenda Impact for Burghers",
+     "polarity": "good",
+     "value": "+25.00%"
+    }
+   ],
+   "name": "Dutch Parliament",
+   "slug": "dutch-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Representatives of the Estates will gather in the parliament to discuss issues and find common ground in achieving these goals."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/estate-parliament.png",
+   "id": "parliament-type:estate_parliament",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "clergy_estate_can_participate_in_parliament",
+     "label": "Clergy in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_can_participate_in_parliament",
+     "label": "Burghers in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Estate Parliament",
+   "slug": "estate-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Bicameral Imperial Diet expands representation by granting voting rights to ecclesiastical dignitaries and princely rulers alike, forming two chambers within the Diet.<br />\n*  Standard power for Emperor, Prince-Elector, Archbishop-Elector, and Imperial Prince\n*  Imperial Prelate gain meaningful influence\n*  Free Imperial City and Imperial Peasant Republic still lack representation"
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/hre-bi-camerial-imperial-diet.png",
+   "id": "parliament-type:hre_bi_camerial_imperial_diet",
+   "mods": [
+    {
+     "key": "has_international_parliament",
+     "label": "Has International Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "uses_parliament_for_law_votes",
+     "label": "Uses Parliament for Law Changes",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "forbid_multiple_policies_vote",
+     "label": "Forbid Multiple Policies Vote",
+     "polarity": "neutral",
+     "value": "yes"
+    },
+    {
+     "key": "elector_can_participate_in_parliament",
+     "label": "Prince-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "archbishop_elector_can_participate_in_parliament",
+     "label": "Archbishop-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "primas_germaniae_can_participate_in_parliament",
+     "label": "Primas Germaniae in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "legatus_natus_can_participate_in_parliament",
+     "label": "Legatus Natus in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "imperial_prelate_can_participate_in_parliament",
+     "label": "Imperial Prelate in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "imperial_prince_can_participate_in_parliament",
+     "label": "Imperial Prince in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Bicameral Imperial Diet",
+   "slug": "hre-bi-camerial-imperial-diet",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "From the old days of ogk_otto_liudolfinger, the Court Assembly is an ancient and primitive style of assembly within the Holy Roman Empire. Due to the lack of codified processes, discussing law implementations with the GetUniqueInternationalOrganization('hre') tend to be not as efficient as they could be.<br />\n*  Greatly increases voting power for the Emperor, Prince-Elector, and Archbishop-Elector\n*  Significantly reduces Free Imperial City, Imperial Prelate, Primas Germaniae, and Legatus Natus influence\n*  Imperial Peasant Republic have standard power"
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/hre-court-assembly.png",
+   "id": "parliament-type:hre_court_assembly",
+   "mods": [
+    {
+     "key": "has_international_parliament",
+     "label": "Has International Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "uses_parliament_for_law_votes",
+     "label": "Uses Parliament for Law Changes",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "forbid_multiple_policies_vote",
+     "label": "Forbid Multiple Policies Vote",
+     "polarity": "neutral",
+     "value": "yes"
+    },
+    {
+     "key": "elector_can_participate_in_parliament",
+     "label": "Prince-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "archbishop_elector_can_participate_in_parliament",
+     "label": "Archbishop-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "free_city_can_participate_in_parliament",
+     "label": "Free Imperial City in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "primas_germaniae_can_participate_in_parliament",
+     "label": "Primas Germaniae in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Court Assembly",
+   "slug": "hre-court-assembly",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The earliest form of Imperial Diet represents the traditional order of the Holy Roman Empire. Only the Prince-Elector, Archbishop-Elector, and Imperial Prince may participate, excluding Free Imperial City and lower ecclesiastical entities from the legislative process.<br />\n*  Strong voting power for the Emperor, Prince-Elector, Archbishop-Elector, and Imperial Prince\n*  Free Imperial City and Imperial Peasant Republic have no voting power\n*  Minor ecclesiastical roles like Imperial Prelate, Primas Germaniae, and Legatus Natus have limited power"
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/hre-early-imperial-diet.png",
+   "id": "parliament-type:hre_early_imperial_diet",
+   "mods": [
+    {
+     "key": "has_international_parliament",
+     "label": "Has International Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "uses_parliament_for_law_votes",
+     "label": "Uses Parliament for Law Changes",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "forbid_multiple_policies_vote",
+     "label": "Forbid Multiple Policies Vote",
+     "polarity": "neutral",
+     "value": "yes"
+    },
+    {
+     "key": "elector_can_participate_in_parliament",
+     "label": "Prince-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "archbishop_elector_can_participate_in_parliament",
+     "label": "Archbishop-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "imperial_prince_can_participate_in_parliament",
+     "label": "Imperial Prince in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Early Imperial Diet",
+   "slug": "hre-early-imperial-diet",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "With the Tricameral Imperial Diet, Free Imperial City finally gain a decisive voice. The Imperial Diet now consists of three chambers — ecclesiastical, princely, and civic — reflecting a more inclusive balance of power.<br />\n*  Balanced power among Emperor, Prince-Elector, Archbishop-Elector, Imperial Prince, Free Imperial City, and minor theocratic roles\n*  Imperial Peasant Republic gain the highest influence here\n*  Most inclusive form of the Diet"
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/hre-tri-camerial-imperial-diet.png",
+   "id": "parliament-type:hre_tri_camerial_imperial_diet",
+   "mods": [
+    {
+     "key": "has_international_parliament",
+     "label": "Has International Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "uses_parliament_for_law_votes",
+     "label": "Uses Parliament for Law Changes",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "forbid_multiple_policies_vote",
+     "label": "Forbid Multiple Policies Vote",
+     "polarity": "neutral",
+     "value": "yes"
+    },
+    {
+     "key": "elector_can_participate_in_parliament",
+     "label": "Prince-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "archbishop_elector_can_participate_in_parliament",
+     "label": "Archbishop-Elector in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "free_city_can_participate_in_parliament",
+     "label": "Free Imperial City in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "primas_germaniae_can_participate_in_parliament",
+     "label": "Primas Germaniae in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "legatus_natus_can_participate_in_parliament",
+     "label": "Legatus Natus in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "imperial_prelate_can_participate_in_parliament",
+     "label": "Imperial Prelate in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "imperial_prince_can_participate_in_parliament",
+     "label": "Imperial Prince in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Tricameral Imperial Diet",
+   "slug": "hre-tri-camerial-imperial-diet",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The only reason to summon others in front of the ruler can be to give orders, not to discuss policy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "parliament-type:no_organization_parliament",
+   "mods": [],
+   "name": "No Organization Parliament",
+   "slug": "no-organization-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The only reason to summon others in front of the ruler can be to give orders, not to discuss policy."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/no-parliament.png",
+   "id": "parliament-type:no_parliament",
+   "mods": [
+    {
+     "key": "global_estate_target_satisfaction",
+     "label": "Estates Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "−10.00%"
+    }
+   ],
+   "name": "No Parliament",
+   "slug": "no-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The parliament of the Polish-Lithuanian Commonwealth grants greater powers to the noble representatives."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/plc-parliament.png",
+   "id": "parliament-type:plc_parliament",
+   "mods": [
+    {
+     "key": "has_a_parliamentary_system",
+     "label": "Has a Parliamentary System",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "clergy_estate_can_participate_in_parliament",
+     "label": "Clergy in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "burghers_estate_can_participate_in_parliament",
+     "label": "Burghers in Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "good",
+     "value": "+20.00%"
+    }
+   ],
+   "name": "Polish-Lithuanian Parliament",
+   "slug": "plc-parliament",
+   "type": "parliament-type"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Royal Assembly is a rather rudimentary council for the entire Union. The ["
+    ],
+    [
+     "r",
+     "concept:estate",
+     "Estates"
+    ],
+    [
+     "t",
+     "] of the members are summoned in the assembly to discuss and negotiate the implementation of centralizing ["
+    ],
+    [
+     "r",
+     "concept:law",
+     "Laws"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/parliament-type/union-royal-assembly.png",
+   "id": "parliament-type:union_royal_assembly",
+   "mods": [
+    {
+     "key": "has_international_parliament",
+     "label": "Has International Parliament",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "policy_vote_required_vote_ratio",
+     "label": "Required Policy Vote Ratio",
+     "polarity": "neutral",
+     "value": "+50.00%"
+    }
+   ],
+   "name": "Royal Assembly",
+   "slug": "union-royal-assembly",
+   "type": "parliament-type"
+  }
+ ],
+ "facets": [],
+ "source": "parliament_types"
+}

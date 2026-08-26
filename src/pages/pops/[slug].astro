@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/pops.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="pops" eyebrow="Pop Type" iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Data</h3>
+        <div class="kv">
+          <span class="k">Food consumption</span><span class="v">{entity.data.food_consumption ?? '—'}</span>
+          <span class="k">Promotes to</span><span class="v">{entity.data.promote_to.join(', ') || '—'}</span>
+          <span class="k">Capped</span><span class="v">{entity.data.has_cap ? 'yes' : 'no'}</span>
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

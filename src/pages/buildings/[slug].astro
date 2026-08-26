@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/buildings.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="buildings" eyebrow={`Building · ${entity.facets.category}`} iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    {entity.data.production_methods.length > 0 && (
+      <div class="panel">
+        <h3>Production methods</h3>
+        <ul class="pairs">
+          {entity.data.production_methods.map((pm: any) => (
+            <li><span class="k">{pm.label}</span> <span class="v">{pm.value}</span></li>
+          ))}
+        </ul>
+      </div>
+    )}
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Data</h3>
+        <div class="kv">
+          <span class="k">Max levels</span><span class="v">{entity.data.max_levels ?? '—'}</span>
+          <span class="k">Settlements</span><span class="v">{entity.data.settlements.join(', ') || '—'}</span>
+          <span class="k">Special</span><span class="v">{entity.data.special ? 'yes' : 'no'}</span>
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

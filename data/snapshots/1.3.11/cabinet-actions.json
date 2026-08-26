@@ -1,0 +1,2824 @@
+{
+  "dataset": "cabinet-actions",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will set our Cabinet to develop Constantinople and its ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "], ensuring it stays as the jewel of our nation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/develop-province.png",
+      "id": "cabinet-action:aid_constantinople",
+      "mods": [
+        {
+          "key": "local_monthly_development",
+          "label": "Local Monthly Development",
+          "polarity": "good",
+          "value": "+0.0050"
+        },
+        {
+          "key": "local_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.05%"
+        },
+        {
+          "key": "local_pop_promotion_speed",
+          "label": "Local Pop Promotion Speed",
+          "polarity": "good",
+          "value": "+0.005"
+        }
+      ],
+      "name": "Aid Constantinople",
+      "slug": "aid-constantinople",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will decrease our ["
+        ],
+        [
+          "r",
+          "concept:antagonism",
+          "Antagonism"
+        ],
+        [
+          "t",
+          "] monthly."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/alleviate-concerns.png",
+      "id": "cabinet-action:alleviate_concerns",
+      "mods": [
+        {
+          "key": "antagonism_monthly_change_modifier",
+          "label": "Antagonism Decay",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Alleviate Concerns",
+      "slug": "alleviate-concerns",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase the ["
+        ],
+        [
+          "r",
+          "concept:estate",
+          "Estate"
+        ],
+        [
+          "t",
+          "]'s [Estate Satisfaction]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:appease_estate",
+      "mods": [],
+      "name": "Appease Estate",
+      "slug": "appease-estate",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of health and medicinal related matters, allowing for better distribution of medicines and rapid distribution of any knowledge concerning potential treatments."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/aptekarsky.png",
+      "id": "cabinet-action:aptekarsky",
+      "mods": [
+        {
+          "key": "local_disease_resistance",
+          "label": "Disease Resistance",
+          "polarity": "good",
+          "value": "+5%"
+        },
+        {
+          "key": "local_monthly_prosperity",
+          "label": "Local Monthly Prosperity",
+          "polarity": "good",
+          "value": "+0.20%"
+        }
+      ],
+      "name": "Aptekarsky",
+      "slug": "aptekarsky",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Cultural Hegemon we can promote a culture over a larger area of the country at once."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/assimilate-area.png",
+      "id": "cabinet-action:assimilate_area",
+      "mods": [
+        {
+          "key": "local_pop_assimilation_speed",
+          "label": "Pop Assimilation Speed",
+          "polarity": "good",
+          "value": "+0.02"
+        },
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "bad",
+          "value": "−0.20"
+        }
+      ],
+      "name": "Assimilate Area",
+      "slug": "assimilate-area",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Council of the Empire is a custodian of foreign influences, reducing the ["
+        ],
+        [
+          "r",
+          "concept:cabinet",
+          "Cabinet"
+        ],
+        [
+          "t",
+          "] power of native ["
+        ],
+        [
+          "r",
+          "concept:estate",
+          "Estates"
+        ],
+        [
+          "t",
+          "] in favor of the crown, whilst focusing on improving our [Diplomatic Reputation] by fostering better relations with other countries."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/diplomatic-endeavors.png",
+      "id": "cabinet-action:bironovshchina",
+      "mods": [
+        {
+          "key": "estate_power_from_cabinet",
+          "label": "Estate Power from Cabinet Position",
+          "polarity": "good",
+          "value": "−25.00%"
+        },
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "neutral",
+          "value": "+2.00"
+        },
+        {
+          "key": "monthly_towards_outward",
+          "label": "Monthly Progress to Outward",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "stability_decay",
+          "label": "Stability Decay",
+          "polarity": "good",
+          "value": "−0.025%"
+        }
+      ],
+      "name": "Promote Council of the Empire",
+      "slug": "bironovshchina",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the maintenance of palaces and the reduction of court-related expenses. Religious monasteries are also overseen to ensure they are aligned with state doctrine and abide by the law."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/bolshogo-dvortsa.png",
+      "id": "cabinet-action:bolshogo_dvortsa",
+      "mods": [
+        {
+          "key": "monthly_religious_influence",
+          "label": "Monthly Religious Influence",
+          "polarity": "good",
+          "value": "+0.50"
+        },
+        {
+          "key": "court_spending_efficiency",
+          "label": "Court Spending Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Bolshogo Dvortsa",
+      "slug": "bolshogo-dvortsa",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our administration is dependent on many bureaucratic cornerstones, many of which are old and costly to maintain. Assigning a capable cabinet member to oversee their operations will cut down on the upkeep they demand from our treasury."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/bolster-bureaucratic-efficiency.png",
+      "id": "cabinet-action:bolster_bureaucratic_efficiency",
+      "mods": [
+        {
+          "key": "maintain_bureaucracy_price_cost_modifier",
+          "label": "Maintain Bureaucracy Price Modifier",
+          "polarity": "good",
+          "value": "−5.00%"
+        }
+      ],
+      "name": "Reduce Bureaucratic Upkeep",
+      "slug": "bolster-bureaucratic-efficiency",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "During times of war and when our faith is at risk, as we struggle to protect what is holy, it falls upon our shoulders to call all able-bodied pious men to serve and donate their dues against our heathen foes."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/byz-extensive-conscription.png",
+      "id": "cabinet-action:byz_extensive_conscription",
+      "mods": [
+        {
+          "key": "global_manpower_modifier",
+          "label": "Manpower",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "army_reinforce_efficiency",
+          "label": "Army Reinforcement Efficiency",
+          "polarity": "good",
+          "value": "+4.00%"
+        }
+      ],
+      "name": "Extensive Conscription",
+      "slug": "byz-extensive-conscription",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Diplomatic Hegemon we have a way to support our diplomats to make them more capable and efficient."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/cab-diplomatic-corps.png",
+      "id": "cabinet-action:cab_diplomatic_corps",
+      "mods": [
+        {
+          "key": "diplomatic_capacity_modifier",
+          "label": "Diplomatic Capacity",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "monthly_diplomats",
+          "label": "Monthly Diplomats",
+          "polarity": "good",
+          "value": "+0.20"
+        }
+      ],
+      "name": "Diplomatic Corps",
+      "slug": "cab-diplomatic-corps",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Naval Hegemon we can use our government to support our maritime efforts."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/cab-naval-focus.png",
+      "id": "cabinet-action:cab_naval_focus",
+      "mods": [
+        {
+          "key": "local_maritime_presence",
+          "label": "Local Maritime Presence",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "harbor_suitability",
+          "label": "Harbor Capacity",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Maritime Support",
+      "slug": "cab-naval-focus",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This allows us to focus on a change on a specific [Societal Value]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/change-societal-values.png",
+      "id": "cabinet-action:change_societal_values",
+      "mods": [],
+      "name": "Change Societal Values",
+      "slug": "change-societal-values",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will protect our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] against other countries that attempt to build up their [Spy Network] in our country."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/counter-espionage-action.png",
+      "id": "cabinet-action:counter_espionage_action",
+      "mods": [
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "good",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Counterespionage",
+      "slug": "counter-espionage-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the best way to increase ["
+        ],
+        [
+          "r",
+          "concept:development",
+          "Development"
+        ],
+        [
+          "t",
+          "] in the selected ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. This is probably what you want to do when you have nothing currently urgent to do."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/develop-province.png",
+      "id": "cabinet-action:develop_province",
+      "mods": [
+        {
+          "key": "local_monthly_development",
+          "label": "Local Monthly Development",
+          "polarity": "good",
+          "value": "+0.0025"
+        }
+      ],
+      "name": "Develop Province",
+      "slug": "develop-province",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will affect a fair amount of ["
+        ],
+        [
+          "r",
+          "concept:diplomacy",
+          "Diplomacy"
+        ],
+        [
+          "t",
+          "] that our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] tries to do. Primarily it will help with things where the ["
+        ],
+        [
+          "r",
+          "concept:opinion",
+          "Opinion"
+        ],
+        [
+          "t",
+          "] of other countries matters."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/diplomatic-endeavors.png",
+      "id": "cabinet-action:diplomatic_endeavors",
+      "mods": [
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "neutral",
+          "value": "+2.00"
+        },
+        {
+          "key": "improve_relation_impact",
+          "label": "Improve Relations",
+          "polarity": "good",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Diplomatic Endeavors",
+      "slug": "diplomatic-endeavors",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We shall bind our realm to the Latin ideal of ordered war: contracts enforced, drills standardized, and the burden of arms made routine. Such discipline will surely reduce the cost of keeping soldiers in the field and foster a professional tradition of service."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/encourage-latin-militarism.png",
+      "id": "cabinet-action:encourage_latin_militarism",
+      "mods": [
+        {
+          "key": "army_maintenance_efficiency",
+          "label": "Army Maintenance Efficiency",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_army_tradition",
+          "label": "Monthly Army Tradition",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "monthly_towards_latinization",
+          "label": "Monthly Progress to Latinitas",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Encourage Latin Militarism",
+      "slug": "encourage-latin-militarism",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will make ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] more likely to ["
+        ],
+        [
+          "r",
+          "concept:migration",
+          "Migrate"
+        ],
+        [
+          "t",
+          "] to this ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "].\n\nNote: the cabinet assignment also speeds up ["
+        ],
+        [
+          "r",
+          "concept:migration",
+          "Migration"
+        ],
+        [
+          "t",
+          "] across all owned locations, not just the selected one."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/encourage-migration.png",
+      "id": "cabinet-action:encourage_migration",
+      "mods": [
+        {
+          "key": "global_migration_speed_modifier",
+          "label": "Pop Migration Speed",
+          "polarity": "good",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Encourage Migration",
+      "slug": "encourage-migration",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will force ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] to ["
+        ],
+        [
+          "r",
+          "concept:migration",
+          "Migrate"
+        ],
+        [
+          "t",
+          "] away from this ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/expel-people.png",
+      "id": "cabinet-action:expel_people",
+      "mods": [
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "bad",
+          "value": "−2.00"
+        },
+        {
+          "key": "local_migration_speed",
+          "label": "Pop Migration Speed",
+          "polarity": "good",
+          "value": "+0.01"
+        },
+        {
+          "key": "local_migration_speed_modifier",
+          "label": "Pop Migration Speed",
+          "polarity": "good",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_peasants_migration_allowed",
+          "label": "Allows Peasants to Migrate",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "local_laborers_migration_allowed",
+          "label": "Allows Laborers to Migrate",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "local_tribesmen_migration_allowed",
+          "label": "Allows Tribesmen to Migrate",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Expel People",
+      "slug": "expel-people",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Form an entirely new ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "] that will become our [Primary Culture]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/form-new-culture.png",
+      "id": "cabinet-action:form_new_culture",
+      "mods": [
+        {
+          "key": "monthly_towards_innovative",
+          "label": "Monthly Progress to Innovative",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Foster New Culture",
+      "slug": "form-new-culture",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "By hindering their delegates with archaic constitutional legislature and obstructing them at every turn, we can increase the amount of time it will take for our ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] to ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annex"
+        ],
+        [
+          "t",
+          "] us."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/frustrate-annexation.png",
+      "id": "cabinet-action:frustrate_annexation",
+      "mods": [
+        {
+          "key": "hostile_diplomatic_annexation_efficiency",
+          "label": "Hostile Diplomatic Annexation Efficiency",
+          "polarity": "bad",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Frustrate Annexation",
+      "slug": "frustrate-annexation",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase the assimilation of any foreign ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "] and our Celestial Authority gain."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/gaituguiliu-policy.png",
+      "id": "cabinet-action:gaituguiliu_policy",
+      "mods": [
+        {
+          "key": "global_pop_assimilation_speed_modifier",
+          "label": "Pop Assimilation Speed",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "monthly_celestial_authority",
+          "label": "Monthly Celestial Authority Change",
+          "polarity": "good",
+          "value": "+0.01"
+        },
+        {
+          "key": "annexation_speed_modifier",
+          "label": "Speed of Annexation",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Gǎitǔguīliú Policy",
+      "slug": "gaituguiliu-policy",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our cabinet will focus on gathering the most beautiful and intelligent girls of the realm to train them to become Acllas, allowing them to serve the state for [Royal Marriage] and Marry Aclla.<br />The amount of eligible ["
+        ],
+        [
+          "r",
+          "concept:character",
+          "Characters"
+        ],
+        [
+          "t",
+          "] we will gain varies between 2 and 7 in 4 years."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/gather-acllas.png",
+      "id": "cabinet-action:gather_acllas",
+      "mods": [
+        {
+          "key": "clergy_estate_target_satisfaction",
+          "label": "Clergy Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Aclla Recruitment",
+      "slug": "gather-acllas",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our cabinet can be directed to actively push bureaucratic structures toward entrenchment, speeding up the consolidation of our administrative order and making these institutions harder to dislodge."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/increase-bureaucratic-entrenchment.png",
+      "id": "cabinet-action:increase_bureaucratic_entrenchment",
+      "mods": [
+        {
+          "key": "global_bureaucracy_entrenchment_speed_modifier",
+          "label": "Bureaucracy Entrenchment Speed Modifier",
+          "polarity": "bad",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Accelerate Bureaucratic Entrenchment",
+      "slug": "increase-bureaucratic-entrenchment",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will slowly increase our ["
+        ],
+        [
+          "r",
+          "concept:control",
+          "Control"
+        ],
+        [
+          "t",
+          "] in the selected ["
+        ],
+        [
+          "r",
+          "concept:area",
+          "Area"
+        ],
+        [
+          "t",
+          "]. This can be useful when circumstances have changed, and we quickly wish to increase control."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/increase-control-area.png",
+      "id": "cabinet-action:increase_control_area",
+      "mods": [
+        {
+          "key": "local_max_control",
+          "label": "Max Control",
+          "polarity": "good",
+          "value": "+15.00%"
+        },
+        {
+          "key": "local_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "good",
+          "value": "+0.50%"
+        }
+      ],
+      "name": "Increase Area Control",
+      "slug": "increase-control-area",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will slowly increase our ["
+        ],
+        [
+          "r",
+          "concept:control",
+          "Control"
+        ],
+        [
+          "t",
+          "] in the selected ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. This can be useful when circumstances have changed, and we quickly wish to increase control."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/increase-control-province.png",
+      "id": "cabinet-action:increase_control_province",
+      "mods": [
+        {
+          "key": "local_max_control",
+          "label": "Max Control",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "local_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "good",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Increase Province Control",
+      "slug": "increase-control-province",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "When we have conquered an ["
+        ],
+        [
+          "r",
+          "concept:area",
+          "Area"
+        ],
+        [
+          "t",
+          "], we need to ["
+        ],
+        [
+          "r",
+          "concept:integration",
+          "Integrate"
+        ],
+        [
+          "t",
+          "] it before it will be a part of our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. If it does not become integrated, the ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] in the area may ["
+        ],
+        [
+          "r",
+          "concept:rebel_movement",
+          "Rebel"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/integrate-area.png",
+      "id": "cabinet-action:integrate_area",
+      "mods": [],
+      "name": "Integrate Area",
+      "slug": "integrate-area",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "When we have conquered a ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "], we need to ["
+        ],
+        [
+          "r",
+          "concept:integration",
+          "Integrate"
+        ],
+        [
+          "t",
+          "] it before it will be a part of our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. If it does not become integrated, the ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] in the province may ["
+        ],
+        [
+          "r",
+          "concept:rebel_movement",
+          "Rebel"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/integrate-province.png",
+      "id": "cabinet-action:integrate_province",
+      "mods": [],
+      "name": "Integrate Province",
+      "slug": "integrate-province",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of judicial matters and law enforcement, optimizing the implementation of legal decisions and sentences, as well as maintaining law and order."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/ispolneniya-zakonov.png",
+      "id": "cabinet-action:ispolneniya_zakonov",
+      "mods": [
+        {
+          "key": "legislative_efficiency",
+          "label": "Legislative Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "global_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "good",
+          "value": "+0.50%"
+        }
+      ],
+      "name": "Ispolneniya Zakonov",
+      "slug": "ispolneniya-zakonov",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of the treasury, streamlining the collection of taxes and keeping state expenditures in check."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/kazenny.png",
+      "id": "cabinet-action:kazenny",
+      "mods": [
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "neutral",
+          "value": "+1.00%"
+        },
+        {
+          "key": "global_distance_from_capital_speed_propagation",
+          "label": "Proximity Efficiency",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Kazenny",
+      "slug": "kazenny",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will make our ["
+        ],
+        [
+          "r",
+          "concept:population",
+          "Population"
+        ],
+        [
+          "t",
+          "] be ["
+        ],
+        [
+          "r",
+          "concept:promote",
+          "Promoted"
+        ],
+        [
+          "t",
+          "] and ["
+        ],
+        [
+          "r",
+          "concept:assimilate",
+          "Assimilated"
+        ],
+        [
+          "t",
+          "] more quickly, while bolstering our armies."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/pop-promote-action.png",
+      "id": "cabinet-action:kbo_pop_promote_action",
+      "mods": [
+        {
+          "key": "wrong_culture_levy_size",
+          "label": "Non-Culture Levy Size",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "local_pop_promotion_speed",
+          "label": "Local Pop Promotion Speed",
+          "polarity": "good",
+          "value": "+0.002"
+        },
+        {
+          "key": "local_pop_assimilation_speed",
+          "label": "Pop Assimilation Speed",
+          "polarity": "good",
+          "value": "+0.02"
+        }
+      ],
+      "name": "Egalitarian Integration",
+      "slug": "kbo-pop-promote-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "An honest and precise interpretation of the Sharī'ah will greatly supplement our administrative efficiency and improve our efforts towards safeguarding our values."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/kbo-sharia-courts.png",
+      "id": "cabinet-action:kbo_sharia_courts",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed",
+          "label": "Pop Conversion Speed",
+          "polarity": "good",
+          "value": "+0.025"
+        },
+        {
+          "key": "global_max_literacy",
+          "label": "Max Literacy",
+          "polarity": "good",
+          "value": "+5.00"
+        },
+        {
+          "key": "monthly_towards_traditionalist",
+          "label": "Monthly Progress to Traditionalist",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Enforce Sharī'ah Administration",
+      "slug": "kbo-sharia-courts",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "When we have retaken a ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "] within Claims of the Latin Empire, we need to ["
+        ],
+        [
+          "r",
+          "concept:integration",
+          "Integrate"
+        ],
+        [
+          "t",
+          "] it before it will be a part of our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:lat_reintegrate_province",
+      "mods": [],
+      "name": "Reintegrate the Empire of Constantinople",
+      "slug": "lat-reintegrate-province",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase the amount of ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] that will ["
+        ],
+        [
+          "r",
+          "concept:conversion",
+          "Convert"
+        ],
+        [
+          "t",
+          "] to Catholicism each month."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/lit-promote-catholicism.png",
+      "id": "cabinet-action:lit_promote_catholicism",
+      "mods": [
+        {
+          "key": "local_pop_conversion_speed",
+          "label": "Local Pop Conversion Speed",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Promote Catholicism",
+      "slug": "lit-promote-catholicism",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will set our ["
+        ],
+        [
+          "r",
+          "concept:cabinet",
+          "Cabinet"
+        ],
+        [
+          "t",
+          "] to maintain the Grand Trunk Road"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/maintain-trunk-road-cabinet-action.png",
+      "id": "cabinet-action:maintain_trunk_road_cabinet_action",
+      "mods": [
+        {
+          "key": "global_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "good",
+          "value": "−15.00%"
+        },
+        {
+          "key": "road_cost_on_distance_from_capital",
+          "label": "Proximity Cost through Roads",
+          "polarity": "good",
+          "value": "−0.50"
+        }
+      ],
+      "name": "Maintain Grand Trunk Road",
+      "slug": "maintain-trunk-road-cabinet-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "[Unify] one of the [Culture Groups] of our [Primary Culture] into a new ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/merge-culture-group.png",
+      "id": "cabinet-action:merge_culture_group",
+      "mods": [
+        {
+          "key": "monthly_towards_centralization",
+          "label": "Monthly Progress to Centralization",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Unify Culture Group",
+      "slug": "merge-culture-group",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on improving the military capabilities of our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "], and increase the discipline of our ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:militarize_country",
+      "mods": [
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Militarize Country",
+      "slug": "militarize-country",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our quest to unite the former lands of the Lombard Kingdom is but a noble and legitimate one."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/mlo-restore-kingdom-lombardy.png",
+      "id": "cabinet-action:mlo_restore_kingdom_lombardy",
+      "mods": [
+        {
+          "key": "local_devastation_recovery",
+          "label": "Prosperity Recovery",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "local_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.10%"
+        }
+      ],
+      "name": "Integrate Lombard Claims",
+      "slug": "mlo-restore-kingdom-lombardy",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will slowly increase our ["
+        ],
+        [
+          "r",
+          "concept:control",
+          "Control"
+        ],
+        [
+          "t",
+          "] in the selected ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. This can be useful when circumstances have changed, and we quickly wish to increase control."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:noblesse_oblige_cabinet_action",
+      "mods": [
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+5.00%"
+        },
+        {
+          "key": "local_max_control",
+          "label": "Max Control",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "local_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "good",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Noblesse Oblige",
+      "slug": "noblesse-oblige-cabinet-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A [Cabinet Member] is assigned to manage the Office of New Converts, devoted to the conversion of heathen souls. Operating in Kazan, it takes an assertive approach to speed up conversion through any means necessary, sending a powerful and provocative message that all must adhere to the Orthodoxy faith."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/office-of-new-converts.png",
+      "id": "cabinet-action:office_of_new_converts",
+      "mods": [
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "bad",
+          "value": "−3.00"
+        },
+        {
+          "key": "global_pop_conversion_speed",
+          "label": "Pop Conversion Speed",
+          "polarity": "good",
+          "value": "+0.01"
+        },
+        {
+          "key": "monthly_towards_belligerent",
+          "label": "Monthly Progress to Belligerent",
+          "polarity": "neutral",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Office of New Converts",
+      "slug": "office-of-new-converts",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will set our ["
+        ],
+        [
+          "r",
+          "concept:cabinet",
+          "Cabinet"
+        ],
+        [
+          "t",
+          "] to bolster our ["
+        ],
+        [
+          "r",
+          "concept:navy",
+          "Navy"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/oma-bolster-omani-navy.png",
+      "id": "cabinet-action:oma_bolster_omani_navy",
+      "mods": [
+        {
+          "key": "merchant_power_from_maritime_modifier",
+          "label": "Trade Maritime Advantage",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "global_naval_supplies_output_modifier",
+          "label": "Naval Supplies Output",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Bolster Navy",
+      "slug": "oma-bolster-omani-navy",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "To exert our influence in the Swahili Coast we must make sure the ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] there are properly accepted into our realm and integrated without the need of force."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/integrate-area.png",
+      "id": "cabinet-action:oma_zanzibar_integration",
+      "mods": [],
+      "name": "Integrate Swahili Province",
+      "slug": "oma-zanzibar-integration",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will decrease the ["
+        ],
+        [
+          "r",
+          "concept:unrest",
+          "Unrest"
+        ],
+        [
+          "t",
+          "] of the local ["
+        ],
+        [
+          "r",
+          "concept:population",
+          "Population"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/pacify-population.png",
+      "id": "cabinet-action:pacify_population",
+      "mods": [
+        {
+          "key": "local_unrest",
+          "label": "Unrest",
+          "polarity": "good",
+          "value": "−20.00%"
+        },
+        {
+          "key": "local_pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "good",
+          "value": "−5.00%"
+        },
+        {
+          "key": "local_pop_leave_rebels_threshold",
+          "label": "Pop Leave Rebels Threshold",
+          "polarity": "good",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Pacify Population",
+      "slug": "pacify-population",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "While we ensured the rights of our laborers and farmers, we can only ensure their wellbeing with direct oversight in a ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:peasant_labor_rights_action",
+      "mods": [
+        {
+          "key": "local_monthly_prosperity",
+          "label": "Local Monthly Prosperity",
+          "polarity": "good",
+          "value": "+0.10%"
+        },
+        {
+          "key": "local_monthly_literacy",
+          "label": "Local Monthly Literacy",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Oversee Labor Rights",
+      "slug": "peasant-labor-rights-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will make our ["
+        ],
+        [
+          "r",
+          "concept:population",
+          "Population"
+        ],
+        [
+          "t",
+          "] to be ["
+        ],
+        [
+          "r",
+          "concept:promote",
+          "Promoted"
+        ],
+        [
+          "t",
+          "] more quickly."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/pop-promote-action.png",
+      "id": "cabinet-action:pop_promote_action",
+      "mods": [
+        {
+          "key": "local_pop_promotion_speed",
+          "label": "Local Pop Promotion Speed",
+          "polarity": "good",
+          "value": "+0.005"
+        }
+      ],
+      "name": "Encourage Urbanization",
+      "slug": "pop-promote-action",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of foreign affairs, improving the integration of subjects and ensuring good relations with other ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/diplomatic-endeavors.png",
+      "id": "cabinet-action:posolsky",
+      "mods": [
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "neutral",
+          "value": "+2.00"
+        },
+        {
+          "key": "annexation_speed_modifier",
+          "label": "Speed of Annexation",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Posolsky",
+      "slug": "posolsky",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will convert the local ["
+        ],
+        [
+          "r",
+          "concept:population",
+          "Population"
+        ],
+        [
+          "t",
+          "] to the target ["
+        ],
+        [
+          "r",
+          "concept:culture",
+          "Culture"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/promote-culture.png",
+      "id": "cabinet-action:promote_culture",
+      "mods": [
+        {
+          "key": "local_pop_assimilation_speed",
+          "label": "Pop Assimilation Speed",
+          "polarity": "good",
+          "value": "+0.04"
+        },
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "bad",
+          "value": "−0.15"
+        }
+      ],
+      "name": "Assimilate Pops into our Culture",
+      "slug": "promote-culture",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase the amount of ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] that will ["
+        ],
+        [
+          "r",
+          "concept:conversion",
+          "Convert"
+        ],
+        [
+          "t",
+          "] to the selected ["
+        ],
+        [
+          "r",
+          "concept:religion",
+          "Religion"
+        ],
+        [
+          "t",
+          "] each month.\n\nOnly the country's [Primary Religion] and religions within the same [Religion Group] that have at least 1% presence in the country may be selected."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/promote-religion.png",
+      "id": "cabinet-action:promote_religion",
+      "mods": [
+        {
+          "key": "local_pop_conversion_speed",
+          "label": "Local Pop Conversion Speed",
+          "polarity": "good",
+          "value": "+0.04"
+        },
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "bad",
+          "value": "−0.15"
+        }
+      ],
+      "name": "Convert Province",
+      "slug": "promote-religion",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Faith is the beating heart of our people and the sacred bond between our rulers, our gods, and the world. New teachings must be guided with care, so they do not fracture the balance that sustains our lands and our destiny. By appointing a trusted voice of the court to oversee this sacred work, we will hasten the reform and ensure it brings strength instead of unnecesary unrest."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:promote_religious_reformation",
+      "mods": [
+        {
+          "key": "monthly_nahualt_reform_progress",
+          "label": "Monthly Nahuatl Reform Progress",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Promote Nahua Reformation",
+      "slug": "promote-religious-reformation",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The local Robber Barons are a threat to our hold over the province and to our prestige even more. We must get rid of them for the good of our splendor! And perhaps for the good of the local peasantry, too."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/turmoil-in-brandenburg.png",
+      "id": "cabinet-action:pru_deal_with_robber_barons",
+      "mods": [],
+      "name": "Deal With the Robber Barons",
+      "slug": "pru-deal-with-robber-barons",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of military affairs, overseeing the distribution of military supplies and weapons, and overseeing the recruitment and organization of the ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Army"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/razryadny.png",
+      "id": "cabinet-action:razryadny",
+      "mods": [
+        {
+          "key": "supply_depot_capacity",
+          "label": "Supply Depot Capacity",
+          "polarity": "good",
+          "value": "+200.00"
+        },
+        {
+          "key": "army_tradition_decay",
+          "label": "Army Tradition Decay",
+          "polarity": "good",
+          "value": "−0.10%"
+        }
+      ],
+      "name": "Razryadny",
+      "slug": "razryadny",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "["
+        ],
+        [
+          "r",
+          "concept:rebel_movement",
+          "Rebels"
+        ],
+        [
+          "t",
+          "] cannot be allowed to foment instability in our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. We will target a rebel faction and crack down hard on them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/rebel-crackdown.png",
+      "id": "cabinet-action:rebel_crackdown",
+      "mods": [],
+      "name": "Rebel Crackdown",
+      "slug": "rebel-crackdown",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the best way to recover from negative ["
+        ],
+        [
+          "r",
+          "concept:prosperity",
+          "Prosperity"
+        ],
+        [
+          "t",
+          "] in the selected ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. This could be vital after a war or a plague."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/recovery-effort.png",
+      "id": "cabinet-action:recovery_effort",
+      "mods": [
+        {
+          "key": "local_devastation_recovery",
+          "label": "Prosperity Recovery",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "local_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.10%"
+        }
+      ],
+      "name": "Recovery Effort",
+      "slug": "recovery-effort",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the best way to reduce ["
+        ],
+        [
+          "r",
+          "concept:inflation",
+          "Inflation"
+        ],
+        [
+          "t",
+          "] in our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. We can also mint fewer coins, but that may affect our balance."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/reduce-inflation.png",
+      "id": "cabinet-action:reduce_inflation",
+      "mods": [
+        {
+          "key": "monthly_inflation",
+          "label": "Monthly Inflation",
+          "polarity": "good",
+          "value": "−0.025%"
+        }
+      ],
+      "name": "Reduce Inflation",
+      "slug": "reduce-inflation",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will reduce our [War Exhaustion]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/reduce-war-exhaustion.png",
+      "id": "cabinet-action:reduce_war_exhaustion",
+      "mods": [
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "good",
+          "value": "−0.05"
+        }
+      ],
+      "name": "Reduce War Exhaustion",
+      "slug": "reduce-war-exhaustion",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Economic Hegemon we can use our government to make sure our economy is more efficient."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/reduced-paperwork.png",
+      "id": "cabinet-action:reduced_paperwork",
+      "mods": [
+        {
+          "key": "local_production_efficiency",
+          "label": "Production Efficiency",
+          "polarity": "neutral",
+          "value": "+2.50%"
+        }
+      ],
+      "name": "Reduced Paperwork",
+      "slug": "reduced-paperwork",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The inept local governors in charge of extracting tax have long-lost their meager ability to do so. It is up to our highest councils now, to correct this and reform our taxation system. A grueling process that may take a few years, it is a necessary step to help us see through the current crisis."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/taluqdar-tax-collection.png",
+      "id": "cabinet-action:reform_taxation_system",
+      "mods": [
+        {
+          "key": "monthly_celestial_authority",
+          "label": "Monthly Celestial Authority Change",
+          "polarity": "good",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Reform Taxation System",
+      "slug": "reform-taxation-system",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Force our ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] to migrate into one of our [Colonial Charters]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/send-people-to-colonial-charter.png",
+      "id": "cabinet-action:send_people_to_colonial_charter",
+      "mods": [],
+      "name": "Boost Colonial Charter",
+      "slug": "send-people-to-colonial-charter",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Force our ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] to migrate into a Colonial Nation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/send-people-to-the-colonies.png",
+      "id": "cabinet-action:send_people_to_the_colonies",
+      "mods": [],
+      "name": "Send People to the Colonies",
+      "slug": "send-people-to-the-colonies",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase our ["
+        ],
+        [
+          "r",
+          "concept:control",
+          "Control"
+        ],
+        [
+          "t",
+          "] in our selected province drastically."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/increase-control-province.png",
+      "id": "cabinet-action:send_secret_royal_inspectors",
+      "mods": [
+        {
+          "key": "local_unrest",
+          "label": "Unrest",
+          "polarity": "good",
+          "value": "−5.00%"
+        },
+        {
+          "key": "local_max_control",
+          "label": "Max Control",
+          "polarity": "good",
+          "value": "+30.00%"
+        },
+        {
+          "key": "local_monthly_control",
+          "label": "Monthly Control",
+          "polarity": "good",
+          "value": "+2.00%"
+        }
+      ],
+      "name": "Send Secret Royal Inspectors",
+      "slug": "send-secret-royal-inspectors",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The ["
+        ],
+        [
+          "r",
+          "concept:cabinet",
+          "Cabinet"
+        ],
+        [
+          "t",
+          "] will put efforts into settling the uncolonized ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "] with a band of ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/settle-the-frontier.png",
+      "id": "cabinet-action:settle_the_frontier",
+      "mods": [],
+      "name": "Settle the Frontier",
+      "slug": "settle-the-frontier",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will slightly encourage Tribesmen to become Peasants"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/settle-tribesmen.png",
+      "id": "cabinet-action:settle_tribesmen",
+      "mods": [
+        {
+          "key": "local_tribal_promotion",
+          "label": "Tribesmen to Peasants",
+          "polarity": "good",
+          "value": "+500.00%"
+        }
+      ],
+      "name": "Settle Tribesmen",
+      "slug": "settle-tribesmen",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As a Military Hegemon we can use our government to improve all types constructions in the country."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/soldiers-as-workforce.png",
+      "id": "cabinet-action:soldiers_as_workforce",
+      "mods": [
+        {
+          "key": "local_construction_speed",
+          "label": "Construction Speed",
+          "polarity": "good",
+          "value": "+33.00%"
+        }
+      ],
+      "name": "Soldiers as Workforce",
+      "slug": "soldiers-as-workforce",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "By spreading cruel rumors about our ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] and espousing the benefits of ruling ourselves, we can decrease our own [Subject Loyalty], potentially becoming a [Disloyal Subject]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/sow-disloyalty.png",
+      "id": "cabinet-action:sow_disloyalty",
+      "mods": [
+        {
+          "key": "loyalty_to_overlord",
+          "label": "Loyalty to Overlord",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Sow Disloyalty",
+      "slug": "sow-disloyalty",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "By elevating Roman learning, art, and philosophy, we seek to shape how our realm is perceived both at home and abroad. Scholars, artists, and admirers of Greek culture are drawn to us, strengthening our splendor and influence through admiration rather than force."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/spread-philhellenism.png",
+      "id": "cabinet-action:spread_philhellenism",
+      "mods": [
+        {
+          "key": "cultural_influence_modifier",
+          "label": "Cultural Influence %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "research_speed_modifier",
+          "label": "Monthly Research Progress %",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_towards_hellenization",
+          "label": "Monthly Progress to Rōmanismós",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Spread Philhellenism",
+      "slug": "spread-philhellenism",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is one of the three main ways to increase ["
+        ],
+        [
+          "r",
+          "concept:stability",
+          "Stability"
+        ],
+        [
+          "t",
+          "] in our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "]. Another one depends on the ratio of Clergy in the country and the final one depends on how much of our ["
+        ],
+        [
+          "r",
+          "concept:budget",
+          "Balance"
+        ],
+        [
+          "t",
+          "] we are willing to spend on it."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/stabilize-country.png",
+      "id": "cabinet-action:stabilize_country",
+      "mods": [
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Stabilize Country",
+      "slug": "stabilize-country",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on the prikaz of musketeers, which includes overseeing their recruitment, training, organization, and their responsibilities for internal security and law enforcement."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/byz-extensive-conscription.png",
+      "id": "cabinet-action:streltsy",
+      "mods": [
+        {
+          "key": "monthly_army_tradition",
+          "label": "Monthly Army Tradition",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Streltsy",
+      "slug": "streltsy",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the best way to immediately strengthen our [Government Power]. There is no other way for us to directly affect it easily."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/strengthen-government.png",
+      "id": "cabinet-action:strengthen_government",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_republican_tradition",
+          "label": "Monthly Republican Tradition",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_devotion",
+          "label": "Monthly Devotion",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_horde_unity",
+          "label": "Monthly Horde Unity",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_tribal_cohesion",
+          "label": "Monthly Tribal Cohesion",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Strengthen Government",
+      "slug": "strengthen-government",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Having a member of the Stroganov dynasty's assigned to cabinet allows players to channel the family's wealth, power, and historical ties to the salt industry for significant benefits."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/stroganov-influences.png",
+      "id": "cabinet-action:stroganov_influences",
+      "mods": [
+        {
+          "key": "global_salt_output_modifier",
+          "label": "Salt Output",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_towards_plutocracy",
+          "label": "Monthly Progress to Plutocracy",
+          "polarity": "neutral",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Stroganov Influences",
+      "slug": "stroganov-influences",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This focuses our cabinet on speeding the spread of an ["
+        ],
+        [
+          "r",
+          "concept:institution",
+          "Institution"
+        ],
+        [
+          "t",
+          "] that is already reaching the selected ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "] through trade, neighboring lands, or our market. It hastens adoption where an institution has begun to take root, but cannot conjure one in a ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "] it has yet to reach."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/study-institutions.png",
+      "id": "cabinet-action:study_institutions",
+      "mods": [
+        {
+          "key": "local_institution_growth_modifier",
+          "label": "Institution Growth",
+          "polarity": "good",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Foster Institutions",
+      "slug": "study-institutions",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will let our cabinet focus on supporting the religious leader, gaining us [game concept Player]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/support-patriarchate.png",
+      "id": "cabinet-action:support_patriarchate",
+      "mods": [
+        {
+          "key": "monthly_religious_influence",
+          "label": "Monthly Religious Influence",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Support Patriarchate",
+      "slug": "support-patriarchate",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We are supporting Finnish and Swedish settlers in the north to colonize and populate the new lands."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/pop-promote-action.png",
+      "id": "cabinet-action:swe_slash_and_burn_new_farms",
+      "mods": [
+        {
+          "key": "local_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+2.00%"
+        },
+        {
+          "key": "local_monthly_development",
+          "label": "Local Monthly Development",
+          "polarity": "good",
+          "value": "+0.0100"
+        },
+        {
+          "key": "local_migration_attraction",
+          "label": "Migration Attraction",
+          "polarity": "good",
+          "value": "+0.25"
+        }
+      ],
+      "name": "Support New Farms in North or East",
+      "slug": "swe-slash-and-burn-new-farms",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will allow us to collect significantly more tax from our ["
+        ],
+        [
+          "r",
+          "concept:estate",
+          "Estates"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/cabinet-action/taluqdar-tax-collection.png",
+      "id": "cabinet-action:taluqdar_tax_collection",
+      "mods": [
+        {
+          "key": "peasants_estate_max_tax",
+          "label": "Maximum Tax for Peasants Estate",
+          "polarity": "good",
+          "value": "+15.00%"
+        },
+        {
+          "key": "peasants_estate_min_tax",
+          "label": "Minimum Tax for Peasants Estate",
+          "polarity": "good",
+          "value": "+15.00%"
+        },
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        },
+        {
+          "key": "global_nobles_estate_power",
+          "label": "Nobles Power",
+          "polarity": "bad",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Taluqdar Tax Collection",
+      "slug": "taluqdar-tax-collection",
+      "type": "cabinet-action"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This will increase the ["
+        ],
+        [
+          "r",
+          "concept:estate",
+          "Estate"
+        ],
+        [
+          "t",
+          "]'s [Estate Satisfaction]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "cabinet-action:tyranny_of_the_capital_action",
+      "mods": [],
+      "name": "Align Estate",
+      "slug": "tyranny-of-the-capital-action",
+      "type": "cabinet-action"
+    }
+  ],
+  "facets": [],
+  "source": "cabinet_actions"
+}

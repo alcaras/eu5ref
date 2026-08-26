@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/ages.json';
+---
+<Base title="Ages" active="ages" pageMark="⏳" eyebrow="Ages & Advances"
+  pageStats={[{ label: 'ages', value: data.entities.length }]}
+  description="The ages of Europa Universalis V.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Age', kind: 'name' },
+    { key: 'start_date', label: 'Start', kind: 'text' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter ages…" />
+</Base>

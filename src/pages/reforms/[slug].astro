@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/reforms.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="government" eyebrow="Government Reform" iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks} />
+</Base>

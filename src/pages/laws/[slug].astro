@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import Mods from '../../components/Mods.astro';
+import Rich from '../../components/Rich.astro';
+import data from '../../data/laws.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="laws" eyebrow={`Law · ${entity.facets.category}`} iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    {entity.data.policies.map((p: any) => (
+      <div class="panel">
+        <h3>{p.name}</h3>
+        {p.desc && <p style="margin-top:0;"><Rich tokens={p.desc} /></p>}
+        <Mods mods={p.mods} />
+      </div>
+    ))}
+  </EntityDetail>
+</Base>

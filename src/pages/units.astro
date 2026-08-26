@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/units.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Unit', kind: 'name' },
+  { key: 'category', label: 'Category', kind: 'facet' },
+  { key: 'age', label: 'Age', kind: 'facet' },
+  { key: 'combat_power', label: 'Power', kind: 'num' },
+  { key: 'max_strength', label: 'Strength', kind: 'num' },
+  { key: 'movement_speed', label: 'Speed', kind: 'num' },
+  { key: 'initiative', label: 'Initiative', kind: 'num' },
+  { key: 'flags', label: 'Flags', kind: 'chips' },
+] as const;
+---
+<Base
+  title="Units"
+  active="units"
+  pageMark="⚔️"
+  eyebrow="Military"
+  pageStats={[
+    { label: 'unit types', value: entities.length },
+    { label: 'buildable', value: entities.filter((e) => e.facets.buildable === 'buildable').length },
+  ]}
+  description="Every land and naval unit type in Europa Universalis V — stats, ages, and categories."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter units…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="units" />
+  </div>
+</Base>

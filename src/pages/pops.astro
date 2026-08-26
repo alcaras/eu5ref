@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import data from '../data/pops.json';
+
+const entities = data.entities;
+const columns = [
+  { key: 'name', label: 'Pop Type', kind: 'name' },
+  { key: 'food_consumption', label: 'Food', kind: 'num' },
+  { key: 'promote_to', label: 'Promotes To', kind: 'chips' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'desc', label: 'Description', kind: 'rich' },
+] as const;
+---
+<Base
+  title="Pops"
+  active="pops"
+  pageMark="👥"
+  eyebrow="Society"
+  pageStats={[{ label: 'pop types', value: entities.length }]}
+  description="The pop types of Europa Universalis V — food consumption, literacy, and promotion."
+>
+  <div data-filter-scope>
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="pops" />
+  </div>
+</Base>

@@ -6,14 +6,16 @@ import { getEntity } from '../lib/entities';
 interface Props {
   id: string;
   label?: string;
+  showIcon?: boolean;
 }
-const { id, label } = Astro.props;
+const { id, label, showIcon = true } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const entity = getEntity(id);
 const text = label || entity?.name || id.split(':').pop();
+const icon = showIcon && (entity as any)?.icon;
 ---
 {entity?.page ? (
-  <a href={`${base}${entity.page}`} data-term={id}>{text}</a>
+  <a href={`${base}${entity.page}`} data-term={id}>{icon && <img class="eicon eicon--inline" src={`${base}${icon}`} alt="" loading="lazy" width="16" height="16" />}{text}</a>
 ) : (
   <span data-term={id}>{text}</span>
 )}

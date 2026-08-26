@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/country-ranks.json';
+---
+<Base title="Country Ranks" active="country-ranks" pageMark="🏅" eyebrow="Countries"
+  pageStats={[{ label: 'ranks', value: data.entities.length }]}
+  description="Country rank tiers in Europa Universalis V.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Rank', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter ranks…" />
+</Base>

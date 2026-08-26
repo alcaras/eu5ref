@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/defines.json';
+
+// value → display string for the text column
+const entities = data.entities.map((e) => ({
+  ...e,
+  data: { ...e.data, value: Array.isArray(e.data.value) ? JSON.stringify(e.data.value) : String(e.data.value) },
+}));
+const ds = { ...data, entities };
+---
+<Base title="Defines" active="defines" pageMark="🔢" eyebrow="Concepts"
+  pageStats={[
+    { label: 'constants', value: entities.length },
+    { label: 'groups', value: new Set(entities.map((e) => e.facets.group)).size },
+  ]}
+  description="Every engine define in Europa Universalis V — the constants behind the formulas.">
+  <SectionTable data={ds} minFacetCount={40} columns={[
+    { key: 'name', label: 'Define', kind: 'name' },
+    { key: 'group', label: 'Group', kind: 'facet' },
+    { key: 'value', label: 'Value', kind: 'text' },
+  ]} placeholder="Filter defines… (large groups as chips; search finds all)" />
+</Base>

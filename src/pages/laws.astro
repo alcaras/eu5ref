@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/laws.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Law', kind: 'name' },
+  { key: 'category', label: 'Category', kind: 'facet' },
+  { key: 'government', label: 'Government', kind: 'facet' },
+  { key: 'policy_names', label: 'Policies', kind: 'chips' },
+] as const;
+---
+<Base
+  title="Laws & Policies"
+  active="laws"
+  pageMark="⚖️"
+  eyebrow="Government & Laws"
+  pageStats={[
+    { label: 'law groups', value: entities.length },
+    { label: 'policies', value: entities.reduce((n, e) => n + e.data.policies.length, 0) },
+  ]}
+  description="Every law group and its selectable policies in Europa Universalis V."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter laws…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="laws" />
+  </div>
+</Base>

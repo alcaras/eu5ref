@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/reforms.json';
+import govTypes from '../data/government-types.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Reform', kind: 'name' },
+  { key: 'government', label: 'Government', kind: 'facet' },
+  { key: 'age', label: 'Age', kind: 'facet' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Government Reforms"
+  active="government"
+  pageMark="🏛️"
+  eyebrow="Government & Laws"
+  pageStats={[{ label: 'reforms', value: entities.length }]}
+  description="Every government reform in Europa Universalis V — government type, age, and modifiers."
+>
+  <SectionTable title="Government Types" data={govTypes} columns={[
+    { key: 'name', label: 'Type', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter types…" />
+
+  <h2 style="margin-top: 34px;">Reforms</h2>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter reforms…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="reforms" />
+  </div>
+</Base>

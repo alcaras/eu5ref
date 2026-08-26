@@ -1,0 +1,1839 @@
+{
+  "dataset": "wargoals",
+  "entities": [
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to destroy the enemies ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "]. If one side has an ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Army"
+        ],
+        [
+          "t",
+          "] and the other does not, they will receive a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/clan-expansion-wargoal.png",
+      "id": "wargoal:clan_expansion_wargoal",
+      "mods": [],
+      "name": "Clan Expansion",
+      "slug": "clan-expansion-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take [game concept PROVINCE]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/conquer-province.png",
+      "id": "wargoal:conquer_province",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "conquer-province",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the target ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. Get bonus [Warscore] from occupying the target ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying and holding every ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] in the province."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/crusade-conquest.png",
+      "id": "wargoal:crusade_conquest",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "crusade-conquest",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Defend the Capital [game concept PROVINCE]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:defend_capital",
+      "mods": [],
+      "name": "Defend the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "defend-capital",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/demand-military-access.png",
+      "id": "wargoal:demand_military_access",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "demand-military-access",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/dissolve-tatar-yoke-wargoal.png",
+      "id": "wargoal:dissolve_tatar_yoke_wargoal",
+      "mods": [],
+      "name": "Dissolve the Tatar Yoke",
+      "slug": "dissolve-tatar-yoke-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/excommunication-conquest.png",
+      "id": "wargoal:excommunication_conquest",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "excommunication-conquest",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take [game concept PROVINCE]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/fabricated-conquer-province.png",
+      "id": "wargoal:fabricated_conquer_province",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "fabricated-conquer-province",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/false-ilkhan-claimant-wargoal.png",
+      "id": "wargoal:false_ilkhan_claimant_wargoal",
+      "mods": [],
+      "name": "Refuse the False Claimant",
+      "slug": "false-ilkhan-claimant-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "In a bid to challenge the influence of our Scandinavian foes, the decision has been made to take up arms and wrestle over the control of lucrative lands and trade routes across the Baltic."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/great-northern-conflict-conquest.png",
+      "id": "wargoal:great_northern_conflict_conquest",
+      "mods": [],
+      "name": "Great Northern Conflict Conquest",
+      "slug": "great-northern-conflict-conquest",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Take [game concept PROVINCE]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:high_kingship_reclamation_wargoal",
+      "mods": [],
+      "name": "High Kingship Reclamation",
+      "slug": "high-kingship-reclamation-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:high_kingship_subjugate_wargoal",
+      "mods": [],
+      "name": "High Kingship Subjugation",
+      "slug": "high-kingship-subjugate-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:high_kingship_superiority_wargoal",
+      "mods": [],
+      "name": "High Kingship Superiority",
+      "slug": "high-kingship-superiority-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to humiliate our rival. Get [Warscore] from victories in battles and from occupying enemy territory."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/humiliate.png",
+      "id": "wargoal:humiliate",
+      "mods": [],
+      "name": "Humiliate",
+      "slug": "humiliate",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/hundred-years-war-wargoal.png",
+      "id": "wargoal:hundred_years_war_wargoal",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "hundred-years-war-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take [game concept PROVINCE]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:imperial_ban_conquer_province",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "imperial-ban-conquer-province",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0
+      },
+      "desc": [
+        [
+          "t",
+          "The [Wargoal] is controlling the whole ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] of [game concept PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] from ["
+        ],
+        [
+          "r",
+          "concept:occupation",
+          "Occupying"
+        ],
+        [
+          "t",
+          "] their territory.\n\nThe former ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] needs to enforce their independence through a [Peace Treaty]. A [White Peace] will restore the status quo prior to the ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "War"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/independence.png",
+      "id": "wargoal:independence",
+      "mods": [],
+      "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+      "slug": "independence",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "The [Wargoal] is controlling the whole ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] of [game concept PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] from ["
+        ],
+        [
+          "r",
+          "concept:occupation",
+          "Occupying"
+        ],
+        [
+          "t",
+          "] their territory.\n\nThe former ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] needs to enforce their independence through a [Peace Treaty]. A [White Peace] will restore the status quo prior to the ["
+        ],
+        [
+          "r",
+          "concept:war",
+          "War"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/independence-annexing-me.png",
+      "id": "wargoal:independence_annexing_me",
+      "mods": [],
+      "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+      "slug": "independence-annexing-me",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the target ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. Get bonus [Warscore] from occupying the target ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying and holding every ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] in the province."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/jihad-conquest.png",
+      "id": "wargoal:jihad_conquest",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "jihad-conquest",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Settle the power struggle between the crown and the League of the Public Weal!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/league-of-public-weal-wargoal.png",
+      "id": "wargoal:league_of_public_weal_wargoal",
+      "mods": [],
+      "name": "War of the Public Weal",
+      "slug": "league-of-public-weal-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to destroy the enemies ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "]. If one side has an ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Army"
+        ],
+        [
+          "t",
+          "] and the other does not, they will receive a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/nanbokuchou-wargoal.png",
+      "id": "wargoal:nanbokuchou_wargoal",
+      "mods": [],
+      "name": "Nanbokuchō Jidai",
+      "slug": "nanbokuchou-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show naval superiority. Get bonus [Warscore] from winning naval battles. If we ["
+        ],
+        [
+          "r",
+          "concept:blockade",
+          "Blockade"
+        ],
+        [
+          "t",
+          "] a port (and our opponent is not) we will receive a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/naval.png",
+      "id": "wargoal:naval",
+      "mods": [],
+      "name": "Show Naval Superiority",
+      "slug": "naval",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take [game concept PROVINCE]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/parliament-conquer-province.png",
+      "id": "wargoal:parliament_conquer_province",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "parliament-conquer-province",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/red-turban-rebellions-against-other-rebels-wargoal.png",
+      "id": "wargoal:red_turban_rebellions_against_other_rebels_wargoal",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "red-turban-rebellions-against-other-rebels-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/red-turban-rebellions-wargoal.png",
+      "id": "wargoal:red_turban_rebellions_wargoal",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "red-turban-rebellions-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take [game concept PROVINCE]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/religious-conquer-province.png",
+      "id": "wargoal:religious_conquer_province",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "religious-conquer-province",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 1.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/religious-superiority-wargoal.png",
+      "id": "wargoal:religious_superiority_wargoal",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "religious-superiority-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to seize an Italian province. Get bonus [Warscore] from occupying the target ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying and holding every ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] in the province.\n\nConquest is restricted to Italy"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:secure_italy_wargoal",
+      "mods": [],
+      "name": "Secure Italy",
+      "slug": "secure-italy-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to win more battles than our enemy."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/sengoku-wargoal.png",
+      "id": "wargoal:sengoku_wargoal",
+      "mods": [],
+      "name": "Sengoku Jidai",
+      "slug": "sengoku-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/shed-shackles-of-ilkhanate-wargoal.png",
+      "id": "wargoal:shed_shackles_of_ilkhanate_wargoal",
+      "mods": [],
+      "name": "Shed the Shackles of the Īlkhānān",
+      "slug": "shed-shackles-of-ilkhanate-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to win more battles than our enemy."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority.png",
+      "id": "wargoal:superiority",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-against-hordes.png",
+      "id": "wargoal:superiority_against_hordes",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-against-hordes",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-beaver-war.png",
+      "id": "wargoal:superiority_beaver_war",
+      "mods": [],
+      "name": "Beaver War",
+      "slug": "superiority-beaver-war",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-chinese-unification.png",
+      "id": "wargoal:superiority_chinese_unification",
+      "mods": [],
+      "name": "Conquer China",
+      "slug": "superiority-chinese-unification",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.2
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-claim-china.png",
+      "id": "wargoal:superiority_claim_china",
+      "mods": [],
+      "name": "Conquest of China",
+      "slug": "superiority-claim-china",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:superiority_coalition",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-coalition",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-coalition-scaliger-war.png",
+      "id": "wargoal:superiority_coalition_scaliger_war",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-coalition-scaliger-war",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to capture enemy nobles."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-flower-wars.png",
+      "id": "wargoal:superiority_flower_wars",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-flower-wars",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:superiority_force_migration",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-force-migration",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to win more battles than our heretic enemy."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-heretic.png",
+      "id": "wargoal:superiority_heretic",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-heretic",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show military superiority. Get bonus [Warscore] from winning land battles."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-horde.png",
+      "id": "wargoal:superiority_horde",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-horde",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:superiority_lat_reconquest",
+      "mods": [],
+      "name": "Latin Reconquest",
+      "slug": "superiority-lat-reconquest",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-livonian-wars.png",
+      "id": "wargoal:superiority_livonian_wars",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-livonian-wars",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take enemy's locations of a non-Tribal neighbor."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-push-back-colonizers.png",
+      "id": "wargoal:superiority_push_back_colonizers",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-push-back-colonizers",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-raiding.png",
+      "id": "wargoal:superiority_raiding",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-raiding",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-reclaim-andalucia.png",
+      "id": "wargoal:superiority_reclaim_andalucia",
+      "mods": [],
+      "name": "Restoration of Andalusia",
+      "slug": "superiority-reclaim-andalucia",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "The glory of Rome awaits! The end of a period of decay heralds the glorious and golden return of a most illustrious empire. Now, let us reclaim our Roman Borders!\n\nGet bonus [Warscore] from winning sieges and ["
+        ],
+        [
+          "r",
+          "concept:occupation",
+          "Occupying"
+        ],
+        [
+          "t",
+          "] enemy territory within the Roman Borders. The enemy gains ticking [Warscore] for each of their ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in these regions that we have not ["
+        ],
+        [
+          "r",
+          "concept:occupation",
+          "Occupied"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:superiority_restore_roman_borders",
+      "mods": [],
+      "name": "Restore Roman Borders",
+      "slug": "superiority-restore-roman-borders",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to win more battles than our enemy."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:superiority_rival",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "superiority-rival",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/superiority-sco-invade-england.png",
+      "id": "wargoal:superiority_sco_invade_england",
+      "mods": [],
+      "name": "Invasion of England",
+      "slug": "superiority-sco-invade-england",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take enemy's locations bordering our own territory."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-border.png",
+      "id": "wargoal:take_border",
+      "mods": [],
+      "name": "Take Border Province game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-border",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital.png",
+      "id": "wargoal:take_capital",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. Once we win, we can then install [game concept CHARACTER] as their ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-claim-throne.png",
+      "id": "wargoal:take_capital_claim_throne",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip and install game_concept_CHARACTER.GetName as their Ruler",
+      "slug": "take-capital-claim-throne",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-colony-war.png",
+      "id": "wargoal:take_capital_colony_war",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-colony-war",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:take_capital_enforce_hegemon_demands",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-enforce-hegemon-demands",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-gag-force-country-into-faction.png",
+      "id": "wargoal:take_capital_gag_force_country_into_faction",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-gag-force-country-into-faction",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy's capital."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-imperial.png",
+      "id": "wargoal:take_capital_imperial",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-imperial",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:take_capital_liberate_hre_member",
+      "mods": [],
+      "name": "Holy Roman Empire Liberation",
+      "slug": "take-capital-liberate-hre-member",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "Take the Capital [game concept PROVINCE]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:take_capital_lodi_claims",
+      "mods": [],
+      "name": "Claims over Delhi",
+      "slug": "take-capital-lodi-claims",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-prevent-annexation.png",
+      "id": "wargoal:take_capital_prevent_annexation",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-prevent-annexation",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:take_capital_sound_toll",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-sound-toll",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-subjugation.png",
+      "id": "wargoal:take_capital_subjugation",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-subjugation",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy capital ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]. We will receive a ticking [Warscore] from occupying all the ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] in the ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-capital-tributary.png",
+      "id": "wargoal:take_capital_tributary",
+      "mods": [],
+      "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-capital-tributary",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy country. Get bonus [Warscore] from winning sieges of enemy fortifications and from occupying enemy territory."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-country.png",
+      "id": "wargoal:take_country",
+      "mods": [],
+      "name": "Take game_concept_COUNTRY.GetNameWithNoTooltip",
+      "slug": "take-country",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the enemy country. Get bonus [Warscore] from occupying enemy territory of our [Culture Group]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "wargoal:take_province_nationalist",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-province-nationalist",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to take the target province. Get bonus [Warscore] from occupying the target province. We will receive a ticking [Warscore] from holding the province."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-province-tribal-feud.png",
+      "id": "wargoal:take_province_tribal_feud",
+      "mods": [],
+      "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+      "slug": "take-province-tribal-feud",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to win more battles than our enemy."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/take-shogunate-wargoal.png",
+      "id": "wargoal:take_shogunate_wargoal",
+      "mods": [],
+      "name": "Crush the Shogunate",
+      "slug": "take-shogunate-wargoal",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/timurs-war-superiority.png",
+      "id": "wargoal:timurs_war_superiority",
+      "mods": [],
+      "name": "Show Superiority",
+      "slug": "timurs-war-superiority",
+      "type": "wargoal"
+    },
+    {
+      "color": null,
+      "data": {
+        "ticking_war_score": 0.25
+      },
+      "desc": [
+        [
+          "t",
+          "[Wargoal] is to show superiority. Participants will get more [Warscore] from winning battles.<br />Accumulating more than THRESHOLD|Y% [Warscore] from won battles will grant us a ticking [Warscore]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/wargoal/unify-ilkhanate-wargoal.png",
+      "id": "wargoal:unify_ilkhanate_wargoal",
+      "mods": [],
+      "name": "Show Horde Superiority",
+      "slug": "unify-ilkhanate-wargoal",
+      "type": "wargoal"
+    }
+  ],
+  "facets": [],
+  "source": "wargoals"
+}

@@ -1,0 +1,391 @@
+{
+  "dataset": "ages",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Different societies have been established all over the world for thousands of years, and their foundations can be framed in traditions such as Legalism, Meritocracy, or Feudalism."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-1-traditions.png",
+      "id": "age:age_1_traditions",
+      "mods": [
+        {
+          "key": "expected_navy_size_modifier",
+          "label": "Expected Navy Size",
+          "polarity": "bad",
+          "value": "−80.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Traditions",
+      "slug": "age-1-traditions",
+      "type": "age"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Societies affected by the Pax Mongolica, Islamic Golden Age, and Renaissance in Europe are witnessing the emergence of a new era of knowledge, art, and innovation as a result of increased foreign interactions and the establishment of new institutions."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-2-renaissance.png",
+      "id": "age:age_2_renaissance",
+      "mods": [
+        {
+          "key": "expected_army_size_modifier",
+          "label": "Expected Army Size",
+          "polarity": "good",
+          "value": "+100.00%"
+        },
+        {
+          "key": "expected_navy_size_modifier",
+          "label": "Expected Navy Size",
+          "polarity": "bad",
+          "value": "−64.00%"
+        },
+        {
+          "key": "levy_maintenance_modifier",
+          "label": "Levy Maintenance",
+          "polarity": "bad",
+          "value": "+10.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "global_navy_levy_size_modifier",
+          "label": "Navy Levy Size",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "antagonism_religion_influence",
+          "label": "Antagonism Religion Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Renaissance",
+      "slug": "age-2-renaissance",
+      "type": "age"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As the Early Modern Era dawns, new continents are being mapped, while feudal society is slowly giving way to centralized states.<br />For an enterprising leader, this age is the perfect time to build the foundations of a globe-spanning empire..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-3-discovery.png",
+      "id": "age:age_3_discovery",
+      "mods": [
+        {
+          "key": "expected_army_size_modifier",
+          "label": "Expected Army Size",
+          "polarity": "good",
+          "value": "+200.00%"
+        },
+        {
+          "key": "expected_navy_size_modifier",
+          "label": "Expected Navy Size",
+          "polarity": "bad",
+          "value": "−48.00%"
+        },
+        {
+          "key": "levy_maintenance_modifier",
+          "label": "Levy Maintenance",
+          "polarity": "bad",
+          "value": "+25.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+40.00%"
+        },
+        {
+          "key": "global_navy_levy_size_modifier",
+          "label": "Navy Levy Size",
+          "polarity": "bad",
+          "value": "−75.00%"
+        },
+        {
+          "key": "antagonism_religion_influence",
+          "label": "Antagonism Religion Influence",
+          "polarity": "neutral",
+          "value": "+15.00%"
+        }
+      ],
+      "name": "Discovery",
+      "slug": "age-3-discovery",
+      "type": "age"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "From East to West, this is the age of religious conviction, debate, and mass movements. Protestant churches are entrenched in Europe, millenarianism has taken hold of Iran, and Religious Syncretism shapes society in India."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-4-reformation.png",
+      "id": "age:age_4_reformation",
+      "mods": [
+        {
+          "key": "expected_army_size_modifier",
+          "label": "Expected Army Size",
+          "polarity": "good",
+          "value": "+400.00%"
+        },
+        {
+          "key": "expected_navy_size_modifier",
+          "label": "Expected Navy Size",
+          "polarity": "bad",
+          "value": "−32.00%"
+        },
+        {
+          "key": "levy_maintenance_modifier",
+          "label": "Levy Maintenance",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+60.00%"
+        },
+        {
+          "key": "global_navy_levy_size_modifier",
+          "label": "Navy Levy Size",
+          "polarity": "bad",
+          "value": "−100.00%"
+        },
+        {
+          "key": "antagonism_religion_influence",
+          "label": "Antagonism Religion Influence",
+          "polarity": "neutral",
+          "value": "+20.00%"
+        },
+        {
+          "key": "antagonism_culture_influence",
+          "label": "Antagonism Culture Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        },
+        {
+          "key": "antagonism_government_type_influence",
+          "label": "Antagonism Government Type Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Reformation",
+      "slug": "age-4-reformation",
+      "type": "age"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As governments seize absolute authority over their countries, their devotion turns from amassing power to building empires. This is the age of the state; of rulers and their armies."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-5-absolutism.png",
+      "id": "age:age_5_absolutism",
+      "mods": [
+        {
+          "key": "expected_army_size_modifier",
+          "label": "Expected Army Size",
+          "polarity": "good",
+          "value": "+800.00%"
+        },
+        {
+          "key": "expected_navy_size_modifier",
+          "label": "Expected Navy Size",
+          "polarity": "bad",
+          "value": "−16.00%"
+        },
+        {
+          "key": "levy_maintenance_modifier",
+          "label": "Levy Maintenance",
+          "polarity": "bad",
+          "value": "+75.00%"
+        },
+        {
+          "key": "estate_building_destruction_satisfaction_impact",
+          "label": "Estate Satisfaction from Destroying Estate Buildings",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+80.00%"
+        },
+        {
+          "key": "global_war_score_efficiency",
+          "label": "War Score Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "construction_center_max_level",
+          "label": "Construction Center Max Level",
+          "polarity": "good",
+          "value": "+2"
+        },
+        {
+          "key": "subject_pays_colonial_cost_modifier",
+          "label": "Income from Colonial Subjects",
+          "polarity": "good",
+          "value": "+100.00%"
+        },
+        {
+          "key": "subject_loyalty",
+          "label": "Loyalty of Subjects",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "global_navy_levy_size_modifier",
+          "label": "Navy Levy Size",
+          "polarity": "bad",
+          "value": "−200.00%"
+        },
+        {
+          "key": "antagonism_religion_influence",
+          "label": "Antagonism Religion Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        },
+        {
+          "key": "antagonism_culture_influence",
+          "label": "Antagonism Culture Influence",
+          "polarity": "neutral",
+          "value": "+20.00%"
+        },
+        {
+          "key": "antagonism_government_type_influence",
+          "label": "Antagonism Government Type Influence",
+          "polarity": "neutral",
+          "value": "+20.00%"
+        },
+        {
+          "key": "antagonism_societal_value_influence",
+          "label": "Antagonism Societal Value Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Absolutism",
+      "slug": "age-5-absolutism",
+      "type": "age"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Enlightenment's interrogation of rights, authority, and the nature of our world itself has led to widespread rejection of the old hierarchies. As absolutism crumbles before revolution, so too are kingdoms brought down to make way for republics..."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/age/age-6-revolutions.png",
+      "id": "age:age_6_revolutions",
+      "mods": [
+        {
+          "key": "expected_army_size_modifier",
+          "label": "Expected Army Size",
+          "polarity": "good",
+          "value": "+1600.00%"
+        },
+        {
+          "key": "levy_maintenance_modifier",
+          "label": "Levy Maintenance",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "lack_of_control_impact_on_warscore",
+          "label": "Control Impact on Warscore",
+          "polarity": "good",
+          "value": "+100.00%"
+        },
+        {
+          "key": "estate_building_destruction_satisfaction_impact",
+          "label": "Estate Satisfaction from Destroying Estate Buildings",
+          "polarity": "bad",
+          "value": "−40.00%"
+        },
+        {
+          "key": "construction_center_max_level",
+          "label": "Construction Center Max Level",
+          "polarity": "good",
+          "value": "+5"
+        },
+        {
+          "key": "global_navy_levy_size_modifier",
+          "label": "Navy Levy Size",
+          "polarity": "bad",
+          "value": "−200.00%"
+        },
+        {
+          "key": "subject_pays_colonial_cost_modifier",
+          "label": "Income from Colonial Subjects",
+          "polarity": "good",
+          "value": "+200.00%"
+        },
+        {
+          "key": "antagonism_culture_influence",
+          "label": "Antagonism Culture Influence",
+          "polarity": "neutral",
+          "value": "+10.00%"
+        },
+        {
+          "key": "antagonism_societal_value_influence",
+          "label": "Antagonism Societal Value Influence",
+          "polarity": "neutral",
+          "value": "+20.00%"
+        },
+        {
+          "key": "antagonism_government_type_influence",
+          "label": "Antagonism Government Type Influence",
+          "polarity": "neutral",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Revolutions",
+      "slug": "age-6-revolutions",
+      "type": "age"
+    }
+  ],
+  "facets": [],
+  "source": "age"
+}

@@ -1,0 +1,808 @@
+{
+  "dataset": "topography",
+  "entities": [
+    {
+      "color": "#ff4e4d",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Atolls are circular low-altitude islands that usually encircle a lagoon."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/atoll.png",
+      "id": "topography:atoll",
+      "mods": [],
+      "name": "Atoll",
+      "slug": "atoll",
+      "type": "topography"
+    },
+    {
+      "color": "#ba3736",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "This is the open seas between the continents, where only the best of ships can travel, but in the areas closer to the coast."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/coastal-ocean.png",
+      "id": "topography:coastal_ocean",
+      "mods": [],
+      "name": "Coastal Ocean",
+      "slug": "coastal-ocean",
+      "type": "topography"
+    },
+    {
+      "color": "#731d1c",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "This is the open seas between the continents, where only the best of ships can travel, in the furthest areas from any coast."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/deep-ocean.png",
+      "id": "topography:deep_ocean",
+      "mods": [
+        {
+          "key": "local_navy_attrition",
+          "label": "Naval Attrition",
+          "polarity": "bad",
+          "value": "+10.00"
+        },
+        {
+          "key": "max_attrition",
+          "label": "Maximum Attrition",
+          "polarity": "bad",
+          "value": "+40.00"
+        }
+      ],
+      "name": "Deep Ocean",
+      "slug": "deep-ocean",
+      "type": "topography"
+    },
+    {
+      "color": "#abab3f",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Deserts are barren landscapes with little precipitation and almost no potential for plant or animal life."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/dune-wasteland.png",
+      "id": "topography:dune_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Dune wasteland",
+      "slug": "dune-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#5aeb1b",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Flatland represents terrain that does not have any major topographic variation, so there are no impediments for ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Army"
+        ],
+        [
+          "t",
+          "] movement or ["
+        ],
+        [
+          "r",
+          "concept:building",
+          "Building"
+        ],
+        [
+          "t",
+          "] development."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/flatland.png",
+      "id": "topography:flatland",
+      "mods": [],
+      "name": "Flatland",
+      "slug": "flatland",
+      "type": "topography"
+    },
+    {
+      "color": "#5aeb1b",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Flatland represents terrain that does not have any major topographic variation, so there are no impediments for ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Army"
+        ],
+        [
+          "t",
+          "] movement or ["
+        ],
+        [
+          "r",
+          "concept:building",
+          "Building"
+        ],
+        [
+          "t",
+          "] development."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/flatland-wasteland.png",
+      "id": "topography:flatland_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Flatland Wasteland",
+      "slug": "flatland-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#ff3533",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Lakes represent inland bodies of water without any contact with the open sea except through possible rivers, so no ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] of relevance are able to sail in them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/high-lakes.png",
+      "id": "topography:high_lakes",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "High Lakes",
+      "slug": "high-lakes",
+      "type": "topography"
+    },
+    {
+      "color": "#b01515",
+      "data": {
+        "movement_cost": 1.5
+      },
+      "desc": [
+        [
+          "t",
+          "A terrain with hills has variations in the topography, but the slopes are not as steep nor as high as those of mountains, so the penalties are also not as bad."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/hills.png",
+      "id": "topography:hills",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−3.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+25.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Hills",
+      "slug": "hills",
+      "type": "topography"
+    },
+    {
+      "color": "#5d9279",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "A terrain with hills has variations in the topography, but the slopes are not as steep nor as high as those of mountains, so the penalties are also not as bad."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/hills-wasteland.png",
+      "id": "topography:hills_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Hills Wasteland",
+      "slug": "hills-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#d64442",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Inland seas represent the land-enclosed seas like the Mediterranean or the Baltic."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/inland-sea.png",
+      "id": "topography:inland_sea",
+      "mods": [],
+      "name": "Inland Sea",
+      "slug": "inland-sea",
+      "type": "topography"
+    },
+    {
+      "color": "#ff3533",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Lakes represent inland bodies of water without any contact with the open sea except through possible rivers, so no ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] of relevance are able to sail in them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/lakes.png",
+      "id": "topography:lakes",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Lakes",
+      "slug": "lakes",
+      "type": "topography"
+    },
+    {
+      "color": "#8d693d",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Deserts are barren landscapes with little precipitation and almost no potential for plant or animal life."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/mesa-wasteland.png",
+      "id": "topography:mesa_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Mesa Wasteland",
+      "slug": "mesa-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#490e00",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Mountain terrain has high altitude and also steep slopes with relatively few and narrow flat areas, so it is more difficult for ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "] to cross and fight in it, and also more difficult to develop."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/mountain-wasteland.png",
+      "id": "topography:mountain_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Mountain Wasteland",
+      "slug": "mountain-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#690404",
+      "data": {
+        "movement_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Mountain terrain has high altitude and also steep slopes with relatively few and narrow flat areas, so it is more difficult for ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "] to cross and fight in it, and also more difficult to develop."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/mountains.png",
+      "id": "topography:mountains",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−4.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+300.00%"
+        },
+        {
+          "key": "local_population_capacity_modifier",
+          "label": "Local Population Capacity %",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Mountains",
+      "slug": "mountains",
+      "type": "topography"
+    },
+    {
+      "color": "#db5251",
+      "data": {
+        "movement_cost": 1.2
+      },
+      "desc": [
+        [
+          "t",
+          "Narrows are areas of sea with proximity of coast on many sides, like straits or the sea inside archipelagos, where there is not much space for movement."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/narrows.png",
+      "id": "topography:narrows",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−2.00"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Narrows",
+      "slug": "narrows",
+      "type": "topography"
+    },
+    {
+      "color": "#912b2a",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "This is the open seas between the continents, where only the best of ships can travel."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/ocean.png",
+      "id": "topography:ocean",
+      "mods": [
+        {
+          "key": "local_navy_attrition",
+          "label": "Naval Attrition",
+          "polarity": "bad",
+          "value": "+2.00"
+        },
+        {
+          "key": "max_attrition",
+          "label": "Maximum Attrition",
+          "polarity": "bad",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Ocean",
+      "slug": "ocean",
+      "type": "topography"
+    },
+    {
+      "color": "#000b83",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "This is ocean sea outside of the main currents, so it is not a convenient path for ships to take, as they could end up stranded in the middle of it."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/ocean-wasteland.png",
+      "id": "topography:ocean_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Ocean Wasteland",
+      "slug": "ocean-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#cf1c1b",
+      "data": {
+        "movement_cost": 1.25
+      },
+      "desc": [
+        [
+          "t",
+          "They represent relatively flat areas situated at high altitude, so they have some penalties compared to flatlands due to their elevation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/plateau.png",
+      "id": "topography:plateau",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−1.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+25.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Plateau",
+      "slug": "plateau",
+      "type": "topography"
+    },
+    {
+      "color": "#8d753d",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "They represent relatively flat areas situated at high altitude, so they have some penalties compared to flatlands due to their elevation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/plateau-wasteland.png",
+      "id": "topography:plateau_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Plateau Wasteland",
+      "slug": "plateau-wasteland",
+      "type": "topography"
+    },
+    {
+      "color": "#8d823d",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Salt Pans are barren expanses of extremely flat land formed by the evaporation of a lake or a pond."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/salt-pans.png",
+      "id": "topography:salt_pans",
+      "mods": [],
+      "name": "Salt Pan",
+      "slug": "salt-pans",
+      "type": "topography"
+    },
+    {
+      "color": "#a64a49",
+      "data": {
+        "movement_cost": 1.5
+      },
+      "desc": [
+        [
+          "t",
+          "Wetlands are terrain that is partially flooded, generally due to being near a river, lake, or coast."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/wetlands.png",
+      "id": "topography:wetlands",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−3.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+25.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−30.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "bad",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Wetlands",
+      "slug": "wetlands",
+      "type": "topography"
+    },
+    {
+      "color": "#009f64",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Wetlands are terrain that is partially flooded, generally due to being near a river, lake, or coast."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/topography/wetlands-wasteland.png",
+      "id": "topography:wetlands_wasteland",
+      "mods": [
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Wetlands Wasteland",
+      "slug": "wetlands-wasteland",
+      "type": "topography"
+    }
+  ],
+  "facets": [],
+  "source": "topography"
+}

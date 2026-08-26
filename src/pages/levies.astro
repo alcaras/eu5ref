@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import levies from '../data/levies.json';
+import methods from '../data/recruitment-methods.json';
+---
+<Base title="Levies & Recruitment" active="levies" pageMark="🛡️" eyebrow="Military"
+  pageStats={[
+    { label: 'levies', value: levies.entities.length },
+    { label: 'recruitment methods', value: methods.entities.length },
+  ]}
+  description="Levy definitions and recruitment methods in Europa Universalis V.">
+  <SectionTable title="Levies" data={levies} columns={[
+    { key: 'name', label: 'Levy', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter levies…" />
+  <SectionTable title="Recruitment Methods" data={methods} columns={[
+    { key: 'name', label: 'Method', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter methods…" />
+</Base>

@@ -1,0 +1,376 @@
+{
+  "dataset": "government-types",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Monarchy is a [Government Type] based upon the principle of undivided personal sovereignty, where the ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] is the first among the elites. The ["
+        ],
+        [
+          "r",
+          "concept:heir",
+          "Heir"
+        ],
+        [
+          "t",
+          "] is normally determined by the ["
+        ],
+        [
+          "r",
+          "concept:dynasty",
+          "Dynasty"
+        ],
+        [
+          "t",
+          "] of the Monarch and in most cases they rule for life.\n\nMonarchs can use [Royal Marriages] to secure ["
+        ],
+        [
+          "r",
+          "concept:alliance",
+          "Alliances"
+        ],
+        [
+          "t",
+          "], and can even inherit foreign ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "] through [Personal Unions]. However, succession is often a troublesome matter, and Monarchies may easily fall into ["
+        ],
+        [
+          "r",
+          "concept:regency",
+          "Regencies"
+        ],
+        [
+          "t",
+          "] or under the influence of foreign Dynasties."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/government-type/monarchy.png",
+      "id": "government-type:monarchy",
+      "mods": [
+        {
+          "key": "care_about_producing_heirs",
+          "label": "Royal Marriages",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Monarchy",
+      "slug": "monarchy",
+      "type": "government-type"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Republic is a [Government Type] where the ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Rulers"
+        ],
+        [
+          "t",
+          "] are chosen by ["
+        ],
+        [
+          "r",
+          "concept:election",
+          "Election"
+        ],
+        [
+          "t",
+          "] to serve as the representants of the citizen body for a set period of time. Depending on the [Succession Law] the Ruler may belong to any of the ["
+        ],
+        [
+          "r",
+          "concept:estate",
+          "Estates"
+        ],
+        [
+          "t",
+          "].\n\nThe strength of the political institutions makes Republics more resilient to inheritance issues, but the less personal nature of rule limits the diplomatic tools at their disposal. As such, ["
+        ],
+        [
+          "r",
+          "concept:dynasty",
+          "Dynasties"
+        ],
+        [
+          "t",
+          "] play a lesser role and Republics cannot benefit from [Royal Marriages]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/government-type/republic.png",
+      "id": "government-type:republic",
+      "mods": [
+        {
+          "key": "court_language_is_market_language_importance_modifier",
+          "label": "Prefers Court Language to be Market Language",
+          "polarity": "good",
+          "value": "+3.00"
+        }
+      ],
+      "name": "Republic",
+      "slug": "republic",
+      "type": "government-type"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Steppe Horde is a [Government Type] based upon on military power of its ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "]. Relatives of the current Ruler have a higher chance to become the ["
+        ],
+        [
+          "r",
+          "concept:heir",
+          "Heir"
+        ],
+        [
+          "t",
+          "], but seniority and personal ["
+        ],
+        [
+          "r",
+          "concept:ability",
+          "Abilities"
+        ],
+        [
+          "t",
+          "] are also highly regarded.\n\nRulers are issued from the elite members of the society and will only keep the loyalty of their peers as long as they prove themselves capable of subjugating, razing, and plundering neighboring ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "]. Because of that, succession is a momentous event for a Steppe Horde, and might even lead to collapse if the new Ruler fails to demonstrate its might."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/government-type/steppe-horde.png",
+      "id": "government-type:steppe_horde",
+      "mods": [
+        {
+          "key": "court_language_is_common_language_importance_modifier",
+          "label": "Prefers Court Language to be Common Language",
+          "polarity": "good",
+          "value": "+30.00"
+        },
+        {
+          "key": "horde_unity_hit_at_ruler_death",
+          "label": "Horde Unity Change on Ruler Death",
+          "polarity": "bad",
+          "value": "−50.00"
+        },
+        {
+          "key": "war_no_cb_cost_modifier",
+          "label": "War with No Casus Belli Cost",
+          "polarity": "good",
+          "value": "−50.00%"
+        },
+        {
+          "key": "amount_looted_modifier",
+          "label": "Amount Looted",
+          "polarity": "good",
+          "value": "+33.00%"
+        },
+        {
+          "key": "rural_settlement_downgrade_cost_modifier",
+          "label": "Downgrading to Rural Settlement Cost",
+          "polarity": "good",
+          "value": "−75.00%"
+        },
+        {
+          "key": "global_war_score_efficiency",
+          "label": "War Score Efficiency",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "care_about_producing_heirs",
+          "label": "Royal Marriages",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "combined_arms_max_threshold",
+          "label": "Combined Arms Threshold",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "combined_bonus_per_type",
+          "label": "Combined Arms Bonus",
+          "polarity": "bad",
+          "value": "−1.00%"
+        }
+      ],
+      "name": "Steppe Horde",
+      "slug": "steppe-horde",
+      "type": "government-type"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Theocracy is a [Government Type] based on the principle of divine sovereignty, where the ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "] is issued from the servants of the faith and secular matters are subordinated to religious authority.\n\nRulers are usually chosen to rule for life by some form of ["
+        ],
+        [
+          "r",
+          "concept:election",
+          "Election"
+        ],
+        [
+          "t",
+          "], which allows for a less disruptive transfer of power."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/government-type/theocracy.png",
+      "id": "government-type:theocracy",
+      "mods": [
+        {
+          "key": "force_convert_created_subjects",
+          "label": "Force Convert Subjects on Creation",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Theocracy",
+      "slug": "theocracy",
+      "type": "government-type"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A Tribe is a [Government Type] where the political power is structured first and foremost around the concept of kinship, be it by direct blood or perceived ancestry.\n\n["
+        ],
+        [
+          "r",
+          "concept:dynasty",
+          "Dynasties"
+        ],
+        [
+          "t",
+          "] and family ties are therefore of prime importance when determining the ["
+        ],
+        [
+          "r",
+          "concept:heir",
+          "Heir"
+        ],
+        [
+          "t",
+          "], who will always belong to the elite members of society, but very frequently seniority, personal ["
+        ],
+        [
+          "r",
+          "concept:ability",
+          "Abilities"
+        ],
+        [
+          "t",
+          "], and military prowess are also highly regarded."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/government-type/tribe.png",
+      "id": "government-type:tribe",
+      "mods": [
+        {
+          "key": "court_language_is_common_language_importance_modifier",
+          "label": "Prefers Court Language to be Common Language",
+          "polarity": "good",
+          "value": "+30.00"
+        },
+        {
+          "key": "rural_settlement_downgrade_cost_modifier",
+          "label": "Downgrading to Rural Settlement Cost",
+          "polarity": "good",
+          "value": "−50.00%"
+        },
+        {
+          "key": "global_nobles_food_consumption",
+          "label": "Nobles Food Consumption",
+          "polarity": "good",
+          "value": "−25.00%"
+        },
+        {
+          "key": "diplomatic_upkeep_efficiency",
+          "label": "Diplomatic Upkeep Efficiency",
+          "polarity": "good",
+          "value": "+150.00%"
+        },
+        {
+          "key": "care_about_producing_heirs",
+          "label": "Royal Marriages",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Tribe",
+      "slug": "tribe",
+      "type": "government-type"
+    }
+  ],
+  "facets": [],
+  "source": "government_types"
+}

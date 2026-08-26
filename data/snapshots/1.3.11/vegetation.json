@@ -1,0 +1,381 @@
+{
+  "dataset": "vegetation",
+  "entities": [
+    {
+      "color": "#f2f26f",
+      "data": {
+        "movement_cost": 1.1
+      },
+      "desc": [
+        [
+          "t",
+          "Deserts are barren landscapes with little precipitation and almost no potential for plant or animal life."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/desert.png",
+      "id": "vegetation:desert",
+      "mods": [
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−33.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "bad",
+          "value": "−33.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+10"
+        },
+        {
+          "key": "supply_limit",
+          "label": "Supply Limit",
+          "polarity": "bad",
+          "value": "−5.00"
+        }
+      ],
+      "name": "Desert",
+      "slug": "desert",
+      "type": "vegetation"
+    },
+    {
+      "color": "#00ff00",
+      "data": {
+        "movement_cost": 1.1
+      },
+      "desc": [
+        [
+          "t",
+          "Farmland represents anthropogenic terrain, devoted to crops and/or extensive pastures."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/farmland.png",
+      "id": "vegetation:farmland",
+      "mods": [
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+20.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+100"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "local_max_rgo_size_modifier",
+          "label": "Maximum RGO Size",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "good",
+          "value": "+33.00%"
+        },
+        {
+          "key": "supply_limit",
+          "label": "Supply Limit",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Farmlands",
+      "slug": "farmland",
+      "type": "vegetation"
+    },
+    {
+      "color": "#124a09",
+      "data": {
+        "movement_cost": 1.5
+      },
+      "desc": [
+        [
+          "t",
+          "Forest represents terrain with dense vegetation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/forest.png",
+      "id": "vegetation:forest",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−3.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+33.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+100.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+25"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Forest",
+      "slug": "forest",
+      "type": "vegetation"
+    },
+    {
+      "color": "#5aeb1b",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Grasslands represent terrain dominated by grass with little or no trees or shrubs."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/grasslands.png",
+      "id": "vegetation:grasslands",
+      "mods": [
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+50"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "supply_limit",
+          "label": "Supply Limit",
+          "polarity": "good",
+          "value": "+2.00"
+        }
+      ],
+      "name": "Grasslands",
+      "slug": "grasslands",
+      "type": "vegetation"
+    },
+    {
+      "color": "#082903",
+      "data": {
+        "movement_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "A jungle represents terrain with dense forest and tangled vegetation that makes doing anything on the land difficult."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/jungle.png",
+      "id": "vegetation:jungle",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−4.00"
+        },
+        {
+          "key": "local_rgo_build_time",
+          "label": "Expanding Raw Materials Time",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+300.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+50"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−30.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "blocks_vision_from_land",
+          "label": "Blocks Vision from Land",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Jungle",
+      "slug": "jungle",
+      "type": "vegetation"
+    },
+    {
+      "color": "#93c853",
+      "data": {
+        "movement_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Sparse represent large flat areas of land with few or no trees."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/sparse.png",
+      "id": "vegetation:sparse",
+      "mods": [
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "good",
+          "value": "−10.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+25"
+        }
+      ],
+      "name": "Sparse",
+      "slug": "sparse",
+      "type": "vegetation"
+    },
+    {
+      "color": "#299b16",
+      "data": {
+        "movement_cost": 1.25
+      },
+      "desc": [
+        [
+          "t",
+          "Woods represent terrain with less dense vegetation than forests."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/vegetation/woods.png",
+      "id": "vegetation:woods",
+      "mods": [
+        {
+          "key": "local_frontage_allowed",
+          "label": "Possible Frontage",
+          "polarity": "bad",
+          "value": "−2.00"
+        },
+        {
+          "key": "local_road_building_time",
+          "label": "Road Building Time",
+          "polarity": "bad",
+          "value": "+50.00%"
+        },
+        {
+          "key": "local_population_capacity",
+          "label": "Local Population Capacity",
+          "polarity": "good",
+          "value": "+50"
+        },
+        {
+          "key": "local_monthly_development_modifier",
+          "label": "Local Monthly Development Growth",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "local_monthly_food_modifier",
+          "label": "Local Food Production %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "blocks_vision_from_sea",
+          "label": "Blocks Vision from Sea",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "supply_limit",
+          "label": "Supply Limit",
+          "polarity": "good",
+          "value": "+2.00"
+        }
+      ],
+      "name": "Woods",
+      "slug": "woods",
+      "type": "vegetation"
+    }
+  ],
+  "facets": [],
+  "source": "vegetation"
+}

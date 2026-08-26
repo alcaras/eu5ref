@@ -1,0 +1,386 @@
+{
+  "dataset": "institutions",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The invention of gunpowder in China led to the development of a device that would employ its firepower in warfare: the artillery. Although artillery spread throughout Europe and Asia in the 13th century, its widespread adoption as a weapon system did not happen until the 15th century, when improvements in cannon length and gunpowder composition made artillery powerful enough to pose a threat to the stone-built castles and fortifications common in Europe. Soon artillery would be used not only in sieges, but also on battlefields, as smaller-caliber guns were mobile enough to be quickly deployed and used. Its final evolution as a key warfare system would come in the 18th century, especially after Napoleon perfected its use at crucial points during battles."
+        ]
+      ],
+      "facets": {
+        "age": "Reformation"
+      },
+      "icon": "img/institution/artillery-institution.png",
+      "id": "institution:artillery_institution",
+      "mods": [],
+      "name": "Artillery",
+      "slug": "artillery-institution",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Moneylending has existed since metal-based coins first appeared in Antiquity. However, its availability is heavily dependent on the dominant people, culture, or religion of a given state.\n\nA shift occurred in the Middle Ages, encouraged by the renewed growth of long-range commercial activities on the Eurasian continent and its peripheries. Specialized moneylenders began to organize when Jewish communities started operating between the Christian and Muslim worlds. However, the boom of credit demand that followed the Crusades in the 12th century encouraged merchants in the Italian city-states to create larger structures for moneylending, effectively founding the first banking institutions, such as the Peruzzi and Bardi houses.\n\nMore instruments were developed, like bills of exchange and debt bonds, and banking dynasties such as the di Medici, Fugger, or Welser soon became as powerful as states."
+        ]
+      ],
+      "facets": {
+        "age": "Renaissance"
+      },
+      "icon": "img/institution/banking.png",
+      "id": "institution:banking",
+      "mods": [],
+      "name": "Banking",
+      "slug": "banking",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Catholicism has been regarded as a unitary entity for a long time, but the advent of the various Protestant faiths has put an end to that. Given the myriad of different interpretations of what the faith should be, Christianity is anything but united. But whereas before any deviance from mainstream Church teachings could be easily labeled as heresy, the lines between the different sects have mercifully become blurrier.\n\nAs such, there has been an increasing interest both for religious and secular authorities alike to clearly define the shape of their specific doctrines, enforcing their particular rules and views on all aspects of faith and life. This allows them a more firm grip on the faith of their population, but also increases the differentiation, and thus animosity with all other forms of belief."
+        ]
+      ],
+      "facets": {
+        "age": "Reformation"
+      },
+      "icon": "img/institution/confessionalism.png",
+      "id": "institution:confessionalism",
+      "mods": [],
+      "name": "Confessionalism",
+      "slug": "confessionalism",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Rationalism and Empiricism have gained incredible popularity among the greatest minds of the age. In letters, publications, and coffeehouses, intellectual giants from kings to scientists debate the merits of tolerance, advanced scientific methodology, and the spread of Enlightenment ideals to all of humanity. From universities and the courts of enlightened monarchs, expeditions are being sent to measure, catalog, and map the world so that we can better understand the laws governing everything around us. Other thinkers are more interested in the laws of society and try to better understand the Rights of Man.\n\nColossal undertakings, such as creating a complete encyclopedia of all knowledge or a complete index of all plants, animals, and fungi in the world, are being pursued for the greater good of humanity. The Light of Reason has been lit, and many will not rest until it has been brought to all corners of the earth."
+        ]
+      ],
+      "facets": {
+        "age": "Revolutions"
+      },
+      "icon": "img/institution/enlightenment.png",
+      "id": "institution:enlightenment",
+      "mods": [],
+      "name": "Enlightenment",
+      "slug": "enlightenment",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Over time, many societies develop stronger and more permanent institutions of government. After the fall of the Roman Empire, much of Europe gradually developed into a feudal system, a structure in which Commoners performed labor on properties owned by wealthy Nobility in exchange for protection and the right to use that land for their own purposes.\n\nFor similar reasons, parallel systems of land tenure and reciprocal obligation have formed across the world, some with roots that go even further back than European feudalism."
+        ]
+      ],
+      "facets": {
+        "age": "Traditions"
+      },
+      "icon": "img/institution/feudalism.png",
+      "id": "institution:feudalism",
+      "mods": [],
+      "name": "Feudalism",
+      "slug": "feudalism",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Goods have been moved across continents since antiquity. But where this was previously limited to a set number of routes and and specific goods, such as the manufactured products from India and China finding their way across the Indian Ocean and along the Silk Road, trade is now increasingly becoming part of a greater world network. With the discovery of the Americas, establishment of sea routes around Africa, and the crossing of the Pacific Ocean, local trade networks are being woven into a single, interconnected, world-spanning web.\n\nSilver mined in the Andes is now being shipped via Europe all the way to China and India, Iron mined and wrought in Scandinavia is being sold in Western Africa by English merchants, and others are making a fortune just by distributing Cloth and spices to traders from South East Asia. Merchants in India are even investing in future European trade ventures! It may still be early to speak of a truly global economy, but surely the first seeds have been sown."
+        ]
+      ],
+      "facets": {
+        "age": "Reformation"
+      },
+      "icon": "img/institution/global-trade.png",
+      "id": "institution:global_trade",
+      "mods": [],
+      "name": "Global Trade",
+      "slug": "global-trade",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The dawn of the 18th century has given rise to many new institutions as humanity's thirst for progress grows. Advances in the field of production and manufacturing, as well as the introduction of complicated machinery, will change the world as we know it on a global scale. The Industrial Revolution has brought about permanent change — not just to commerce and business, but to the social fabric of many nations. Inventions such as the power loom and steam engine shall push the capabilities of mankind to its highest zenith yet."
+        ]
+      ],
+      "facets": {
+        "age": "Revolutions"
+      },
+      "icon": "img/institution/industrialization.png",
+      "id": "institution:industrialization",
+      "mods": [],
+      "name": "Industrialization",
+      "slug": "industrialization",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The theories behind Legalism have been integral to Chinese society for hundreds of years. The concept that strict laws, centralized authority, and bureaucratic efficiency lead to a stable, prosperous state with a powerful army is deeply rooted in many ideologies throughout East Asia.\n\nAs merchants and migrants facilitated the exchange of ideas across the world, Legalism entered the vast Muslim sphere, where it became part of the symbiotic relationship between believers and non-Muslim subjects.\n\nIn Europe, Legalism emerged from the dying gasps of the Roman Empire. After its decline, its systematic legal codes were adapted and transformed into the foundational jurisprudence for many nations on the continent."
+        ]
+      ],
+      "facets": {
+        "age": "Traditions"
+      },
+      "icon": "img/institution/legalism.png",
+      "id": "institution:legalism",
+      "mods": [],
+      "name": "Legalism",
+      "slug": "legalism",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Warfare is an ever-evolving concept, having been studied and improved upon for generations and generations. We have witnessed the rise of powerful empires, each with its own ambitions. To satisfy the need for expansion and provide the fuel necessary to fulfill these ambitions, new nationwide conscription laws will be drafted. We shall raise armies of young, eager recruits, the size of which will leave an indelible mark upon history."
+        ]
+      ],
+      "facets": {
+        "age": "Revolutions"
+      },
+      "icon": "img/institution/levee-en-masse.png",
+      "id": "institution:levee_en_masse",
+      "mods": [],
+      "name": "Levée en Masse",
+      "slug": "levee-en-masse",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "While a number of technical innovations during the 16th and 17th centuries increased production output for some goods, such as Iron or Cloth, the biggest industrial improvement came in the form of optimized organization. By creating manufactories, often outside city limits, merchant capitalists could both bypass the ancient guild laws that inhibited mass production and pioneer ways to increase output through the organization and specialization of centralized labor. The forerunners of later Industrialization were able to increase production by facilitating access to raw materials and organizing labor on a mass scale, rather than by investing in expensive new machinery. This was in itself a huge change from the often heavily regulated methods of old, and together with later technical advances, this new mode of production would come to revolutionize society."
+        ]
+      ],
+      "facets": {
+        "age": "Absolutism"
+      },
+      "icon": "img/institution/manufactories.png",
+      "id": "institution:manufactories",
+      "mods": [],
+      "name": "Manufactories",
+      "slug": "manufactories",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Individuals of great prestige and power often appoint those closest to them to particularly influential positions.\n\nThe advent of Meritocracy as an institution and thought movement was largely popular in the courts of China. There, Confucius himself supported the notion that those who govern should do so on the basis of merit, not due to inherited status. This led to the replacement of the traditional Chinese aristocracy with one based solely on merit.\n\nThe development of this institution would cause ripples across and beyond the borders of Asia, eventually reaching the royal courts of Europe, even those whose nobles had a crushing grasp on the mechanisms of power and authority."
+        ]
+      ],
+      "facets": {
+        "age": "Traditions"
+      },
+      "icon": "img/institution/meritocracy.png",
+      "id": "institution:meritocracy",
+      "mods": [],
+      "name": "Meritocracy",
+      "slug": "meritocracy",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The continuous state of war affecting Europe in the 16th and 17th centuries led to a sharp increase in the size of armies, a necessity born of the growing authority of competing absolutist regimes. The infantry is now armed en masse with flintlock muskets, greatly increasing their firepower and performance in battle by being deployed in the innovative line formation, which replaces the old Pike and Shot.\n\nOur military needs affect the capabilities of the state administration; it continues to expand to handle the manpower and finances required by this increase in the size of the military. This pressure has also led to the development of supply chains to feed and sustain armies, as well as intermediate depots that support the operational forces. The ultimate result of these advances would be a surge of wars between increasingly militarized countries throughout the 18th century."
+        ]
+      ],
+      "facets": {
+        "age": "Absolutism"
+      },
+      "icon": "img/institution/military-revolution.png",
+      "id": "institution:military_revolution",
+      "mods": [],
+      "name": "Military Revolution",
+      "slug": "military-revolution",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The discovery of the New World has ushered in a new era — not only for the colonizers and the colonized, but for many nations in the Old World, as colonial expansion has led to widespread availability of new resources and innovations, as well as a fuller realization of our vast world. As new animals, crops, precious metals, and diseases spread across the Atlantic Ocean, the first steps have been taken towards a truly global economy.\n\nWith foreign lands and peoples being mapped and documented, ideas as well as religious and philosophical debate are increasingly being colored by what we have found in overseas societies. Great minds feel the need to question what was once accepted as truth, and from Valladolid to Fatehpur Sikri, the nature of the world is now up for debate."
+        ]
+      ],
+      "facets": {
+        "age": "Discovery"
+      },
+      "icon": "img/institution/new-world.png",
+      "id": "institution:new_world",
+      "mods": [],
+      "name": "New World",
+      "slug": "new-world",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A new type of warfare began to develop at the end of the 15th Century, in the midst of the Italian Wars. The generalization of pikemen in the Late Middle Ages as an alternative to men-at-arms who could successfully face heavy cavalry charges was accompanied by the development of portable firearms, mainly matchlock arquebuses and muskets. The soldiers now adopt a new formation, in which the pikemen form a square, while the arquebusiers fan out to the sides and front, and seek cover behind or inside the square in case the formation enters close combat. This new type of formation, called Pike and Shot, was favored by German ''Landsknechts'' and Spanish ''Tercios'', and was soon adopted by other armies, reigning supreme on the battlefields of Europe for nearly two centuries, until superseded in the early 18th Century by line infantry formations armed with new flintlock muskets mounting bayonets."
+        ]
+      ],
+      "facets": {
+        "age": "Discovery"
+      },
+      "icon": "img/institution/pike-and-shot.png",
+      "id": "institution:pike_and_shot",
+      "mods": [],
+      "name": "Pike and Shot",
+      "slug": "pike-and-shot",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The ability to mass-produce the written word would revolutionize the spread of information and, in many ways, society as a whole. Pioneered by talented individuals, such as Venetian printer Aldus Manutius, this new art helped fuel the Renaissance by making the translated classics more widely available. Later, the Reformation benefitted greatly from the ability to spread critical publications and translations of the Holy Scriptures.\n\nNow that printing has matured as a technique and spread throughout Europe, hundreds of thousands of copies of everything from religious and political pamphlets, to scientific treatises, to etiquette guides are circulating the continent. With print shops growing ever more commonplace, rulers have found it hard to contain the new technique, as the comparatively easy means of production means censorship can be sidestepped by moving one's business across a border — or even just changing the name on a title page."
+        ]
+      ],
+      "facets": {
+        "age": "Discovery"
+      },
+      "icon": "img/institution/printing-press.png",
+      "id": "institution:printing_press",
+      "mods": [],
+      "name": "Printing Press",
+      "slug": "printing-press",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Armies have existed since war was invented, many thousands of years ago. However, their form has changed over the centuries, and different types of recruitment and organization have developed in different cultures and periods.\n\nIn the Late Middle Ages, armies in many societies relied on levy systems, with knights and footmen forming a core that was levied seasonally. Some states, however, were powerful enough to finance standing armies, staffed by professional soldiers who would be available for duty throughout the year.\n\nThis system also developed in Europe after the outbreak of the Hundred Years War, being one of the main changes that promoted a military revolution in the Early Modern Age. Increasing the size and quality of professional armies, while finding new sources of revenue to finance them, soon became one of the main challenges for rulers around the world."
+        ]
+      ],
+      "facets": {
+        "age": "Renaissance"
+      },
+      "icon": "img/institution/professional-armies.png",
+      "id": "institution:professional_armies",
+      "mods": [],
+      "name": "Professional Armies",
+      "slug": "professional-armies",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The wealthiest and most powerful citizens in the Italian city-states have been patronizing artists and scholars who are breathing new life into the classical ideals and aesthetics of their Greek and Roman forebears. As a cultural movement, the Renaissance has already had a profound impact on the literature, art, philosophy, and music of our region. Renaissance Humanism has developed into a fully-formed intellectual tradition ready to permeate all aspects of society; A true Renaissance Humanist is an expert in everything from politics and philosophy to art, textual analysis, music, and architecture.\n\nNew ideals for rulers — as well as those who are ruled — are spreading as quickly as printing presses can distribute copies.\n\nRenaissance ideals are now poised to reshape the world according to these sophisticated classical principles."
+        ]
+      ],
+      "facets": {
+        "age": "Renaissance"
+      },
+      "icon": "img/institution/renaissance.png",
+      "id": "institution:renaissance",
+      "mods": [],
+      "name": "Renaissance",
+      "slug": "renaissance",
+      "type": "institution"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The world is smaller now than ever before. The rise of global trade and expansion of the printing industry have led to an increased flow of ideas, allowing for a more widespread dissemination of knowledge. This, in turn, resulted in a more thorough questioning and analysis of the reality of the world. What was once just accepted as fact is now questioned, what was only poorly understood is now observed, and what was only supposed has been tested.\n\nThe recent advancements in areas such as mathematics, physics, and biology are undeniable, but the real revolution is the change in the perception and approach towards science itself, and our way of understanding it. Systematic experimentation is the true scientific revolution, and it will completely change our conception of the world."
+        ]
+      ],
+      "facets": {
+        "age": "Absolutism"
+      },
+      "icon": "img/institution/scientific-revolution.png",
+      "id": "institution:scientific_revolution",
+      "mods": [],
+      "name": "Scientific Revolution",
+      "slug": "scientific-revolution",
+      "type": "institution"
+    }
+  ],
+  "facets": [
+    {
+      "key": "age",
+      "label": "Age",
+      "options": [
+        {
+          "count": 3,
+          "label": "Absolutism",
+          "value": "Absolutism"
+        },
+        {
+          "count": 3,
+          "label": "Discovery",
+          "value": "Discovery"
+        },
+        {
+          "count": 3,
+          "label": "Reformation",
+          "value": "Reformation"
+        },
+        {
+          "count": 3,
+          "label": "Renaissance",
+          "value": "Renaissance"
+        },
+        {
+          "count": 3,
+          "label": "Revolutions",
+          "value": "Revolutions"
+        },
+        {
+          "count": 3,
+          "label": "Traditions",
+          "value": "Traditions"
+        }
+      ]
+    }
+  ],
+  "source": "institution"
+}

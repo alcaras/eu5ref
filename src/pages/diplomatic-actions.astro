@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/country-interactions.json';
+---
+<Base title="Diplomatic Actions" active="diplomatic-actions" pageMark="🕊️" eyebrow="Diplomacy"
+  pageStats={[{ label: 'actions', value: data.entities.length }]}
+  description="Every country interaction in Europa Universalis V.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Action', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter actions…" />
+</Base>

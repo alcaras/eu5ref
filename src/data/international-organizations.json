@@ -1,0 +1,924 @@
+{
+ "dataset": "international-organizations",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Meaning ''self-headed'', an Autocephalous Patriarchate is a Metropolitan bishop in the Eastern Christian confessions which acts independently and does not subordinate or answer to any other hierarchically superior Church authority. The different patriarchates have then their own synods of bishops to decide anything affecting their own religious jurisdiction."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/autocephalous-patriarchate.png",
+   "id": "io:autocephalous_patriarchate",
+   "mods": [],
+   "name": "Autocephalous Patriarchate",
+   "slug": "autocephalous-patriarchate",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Catholic Church is a grand religious organization which goes beyond national borders. Theocrats of all kinds and of every state are emissaries of the Holy See in Rome. The Bishop of Rome and head of the Catholic Church is the ruler of the Rome."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/catholic-church.png",
+   "id": "io:catholic_church",
+   "mods": [
+    {
+     "key": "unlock_withdraw_from_organization_treasury",
+     "label": "Unlock Withdraw from Organization Treasury",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Catholic Church",
+   "slug": "catholic-church",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Catholic League is a defensive alliance of Catholicism countries who wish to contain the growing influence and spread of the ["
+    ],
+    [
+     "r",
+     "concept:reformation",
+     "Reformation"
+    ],
+    [
+     "t",
+     "] within the Holy Roman Empire. Although inherently Catholicism, Lutheranism and Calvinism states can also join if they see a political advantage from working with the League."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/catholic-league.png",
+   "id": "io:catholic_league",
+   "mods": [],
+   "name": "Catholic League",
+   "slug": "catholic-league",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A Coalition is a group of ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Countries"
+    ],
+    [
+     "t",
+     "] that band together due to their ["
+    ],
+    [
+     "r",
+     "concept:antagonism",
+     "Antagonism"
+    ],
+    [
+     "t",
+     "] towards another ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "], with the goal of checking any potential aggression. Members of a coalition will defend each other if the target attacks one of them, and may declare ["
+    ],
+    [
+     "r",
+     "concept:war",
+     "War"
+    ],
+    [
+     "t",
+     "] on the target."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/coalition.png",
+   "id": "io:coalition",
+   "mods": [],
+   "name": "Coalition",
+   "slug": "coalition",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A group of different colonial governments that have banded together for protection from their enemies and to benefit from mutual cooperation and growth."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "io:colonial_federation",
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.02"
+    }
+   ],
+   "name": "Colonial Federation",
+   "slug": "colonial-federation",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "When a band of like-minded countries come together to rid themselves of heathens, driven by the Pope."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/crusade.png",
+   "id": "io:crusade",
+   "mods": [
+    {
+     "key": "damage_done_versus_heathens_modifier",
+     "label": "Damage Done versus Heathens in Battle",
+     "polarity": "good",
+     "value": "+10.00%"
+    }
+   ],
+   "name": "Crusade",
+   "slug": "crusade",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A Defensive League is a group of ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Countries"
+    ],
+    [
+     "t",
+     "] that mutually agree to defend each other if ["
+    ],
+    [
+     "r",
+     "concept:war",
+     "War"
+    ],
+    [
+     "t",
+     "] is declared upon one of them."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/defensive-league.png",
+   "id": "io:defensive_league",
+   "mods": [],
+   "name": "Defensive League",
+   "slug": "defensive-league",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('foreign league balkan'). Hailing from centuries past, this league comes to Italy in order to press old claims or forge new ones."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/foreign-league-balkan.png",
+   "id": "io:foreign_league_balkan",
+   "mods": [],
+   "name": "Balkan League",
+   "slug": "foreign-league-balkan",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('foreign league france'), this confederation symbolizes the aspiration of taming Italy and establishing a steady monopoly over her wealth."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/foreign-league-france.png",
+   "id": "io:foreign_league_france",
+   "mods": [],
+   "name": "French League",
+   "slug": "foreign-league-france",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('foreign league hre'). Despite the Emperor's best attempts, Italy has always been a contested battleground between outsiders and members of the Holy Roman Empire."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/foreign-league-hre.png",
+   "id": "io:foreign_league_hre",
+   "mods": [],
+   "name": "Holy Roman League",
+   "slug": "foreign-league-hre",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('foreign league iberia'). Hailing from the western reaches of Europe, this league wishes to subjugate the peninsula and bring the Italian folk under firm control."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/foreign-league-iberia.png",
+   "id": "io:foreign_league_iberia",
+   "mods": [],
+   "name": "Iberian League",
+   "slug": "foreign-league-iberia",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Ghibellines are a group of Italian states who align themselves with the interests of the Holy Roman Empire in Italy."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/ghibellines-io.png",
+   "id": "io:ghibellines_io",
+   "mods": [
+    {
+     "key": "nobles_estate_target_satisfaction",
+     "label": "Noble Estate Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+5.00%"
+    },
+    {
+     "key": "peasants_estate_target_satisfaction",
+     "label": "Peasant Estate Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+2.50%"
+    },
+    {
+     "key": "monthly_religious_influence",
+     "label": "Monthly Religious Influence",
+     "polarity": "bad",
+     "value": "−0.10"
+    },
+    {
+     "key": "ghibelline_imperial_protection",
+     "label": "Imperial Sanction",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Ghibellines",
+   "slug": "ghibellines-io",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Guelphs are a group of Italian states who align themselves with the interests of the Kingdom of Rome in Italy."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/guelphs-io.png",
+   "id": "io:guelphs_io",
+   "mods": [
+    {
+     "key": "burghers_estate_target_satisfaction",
+     "label": "Burgher Estate Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+5.00%"
+    },
+    {
+     "key": "clergy_estate_target_satisfaction",
+     "label": "Clergy Estate Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+2.50%"
+    },
+    {
+     "key": "excluded_from_imperial_protection",
+     "label": "Excluded from Imperial Protection",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Guelphs",
+   "slug": "guelphs-io",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "As power waxes and wanes throughout the millennia, occasionally a powerful leader will gather enough might and support to claim the title of High King, a great overlord of the Celtic peoples."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/high-kingship.png",
+   "id": "io:high_kingship",
+   "mods": [
+    {
+     "key": "block_from_change_to_kingdom_rank",
+     "label": "Cannot Become a Kingdom",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "block_from_change_to_empire_rank",
+     "label": "Cannot Become an Empire",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "High Kingship",
+   "slug": "high-kingship",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A branch is a group of traditions and beliefs inside Hinduism giving prominence to one or more specific ["
+    ],
+    [
+     "r",
+     "concept:god",
+     "Gods"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/hindu-branch.png",
+   "id": "io:hindu_branch",
+   "mods": [],
+   "name": "Hindu Branch",
+   "slug": "hindu-branch",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The glory of the ancient Roman Empire lives in the memory of all in Europe. fra_charlemagne was crowned Roman Emperor, but it was not until the coronation of ogk_otto_liudolfinger that the current Holy Roman Empire was born, with the ambitions of forming a revived and unified European Empire."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/hre.png",
+   "id": "io:hre",
+   "mods": [
+    {
+     "key": "hre_max_elector",
+     "label": "Max Prince-Elector",
+     "polarity": "neutral",
+     "value": "+4"
+    },
+    {
+     "key": "hre_max_archbishop_elector",
+     "label": "Max Archbishop-Elector",
+     "polarity": "neutral",
+     "value": "+3"
+    }
+   ],
+   "name": "Holy Roman Empire",
+   "slug": "hre",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Īlkhānān, or Ilkhanate, are the lands conquered by the Great GetCharacter('genghis khan') Khān, and later governed by his son hulegu_khan_borjigin and his descendants. As such, it is also known as the Hulegu Ulus."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/ilkhanate.png",
+   "id": "io:ilkhanate",
+   "mods": [
+    {
+     "key": "block_from_change_to_empire_rank",
+     "label": "Cannot Become an Empire",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Īlkhānān",
+   "slug": "ilkhanate",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is time to shake off the shackles of our ["
+    ],
+    [
+     "r",
+     "concept:overlord",
+     "Overlords"
+    ],
+    [
+     "t",
+     "] and fight for freedom! Independence movements can begin at any time, but are more likely to occur if a ["
+    ],
+    [
+     "r",
+     "concept:subject",
+     "Subject"
+    ],
+    [
+     "t",
+     "] is dissatisfied with life under their current leader. An independence movement can quickly gain supporters if we are unpopular."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/independence-movement.png",
+   "id": "io:independence_movement",
+   "mods": [],
+   "name": "Independence Movement",
+   "slug": "independence-movement",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('italian league 1'). Dedicated to the protection of its members' sovereign borders, the states within this League are prepared to resist the influence and potential invasions of their foreign counterparts."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/italian-league-1.png",
+   "id": "io:italian_league_1",
+   "mods": [],
+   "name": "First Italian League",
+   "slug": "italian-league-1",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('italian league 2'). Dedicated to the protection of its members' sovereign borders, the states within this League are prepared to resist the influence and potential invasions of their foreign counterparts."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/italian-league-2.png",
+   "id": "io:italian_league_2",
+   "mods": [],
+   "name": "Second Italian League",
+   "slug": "italian-league-2",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A league formed around the capital of GetUniqueInternationalOrganization('italian league 3'). Dedicated to the protection of its members' sovereign borders, the states within this League are prepared to resist the influence and potential invasions of their foreign counterparts."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/italian-league-3.png",
+   "id": "io:italian_league_3",
+   "mods": [],
+   "name": "Third Italian League",
+   "slug": "italian-league-3",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The lands of Japan have long been immersed in a complex political structure. Despite the Emperor being the titular leader of the nation, actual rule has been for centuries in the hands of the Shōgun, and even that role was replaced by a regent during some periods. The different clans live in a constant struggle for supremacy and authority over the Land of the Rising Sun."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/japanese-shogunate.png",
+   "id": "io:japanese_shogunate",
+   "mods": [
+    {
+     "key": "block_from_change_to_kingdom_rank",
+     "label": "Cannot Become a Kingdom",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "block_from_change_to_empire_rank",
+     "label": "Cannot Become an Empire",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Japanese Shogunate",
+   "slug": "japanese-shogunate",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "When a band of like-minded countries come together to rid themselves of infidels."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/jihad.png",
+   "id": "io:jihad",
+   "mods": [
+    {
+     "key": "damage_done_versus_heathens_modifier",
+     "label": "Damage Done versus Heathens in Battle",
+     "polarity": "good",
+     "value": "+10.00%"
+    }
+   ],
+   "name": "Jihād",
+   "slug": "jihad",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A union of nomadic and semi-nomadic people under the banner of one clan, it offers protection from external threats while trying to quell internal infighting and promote unity between its various members."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/jurchen-confederation.png",
+   "id": "io:jurchen_confederation",
+   "mods": [
+    {
+     "key": "monthly_tribal_cohesion",
+     "label": "Monthly Tribal Cohesion",
+     "polarity": "good",
+     "value": "+0.03"
+    }
+   ],
+   "name": "Jurchen Confederation",
+   "slug": "jurchen-confederation",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "English rule over Ireland lies in an uneasy state. Since the initial conquest around 1170, the Crown's direct control has been reduced to a rump administration around Dublin. It relies on a loyal Lieutenant and currently exercises only nominal control over its increasingly distant vassals. Descendants of the conquering adventurers — despite being rewarded handsomely with earldoms and baronies — are becoming more like their Gaelic chieftain predecessors in both language and culture, while others have slipped out of English control entirely."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/lordship-of-ireland.png",
+   "id": "io:lordship_of_ireland",
+   "mods": [],
+   "name": "Lordship of Ireland",
+   "slug": "lordship-of-ireland",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A special ["
+    ],
+    [
+     "r",
+     "concept:union",
+     "Union"
+    ],
+    [
+     "t",
+     "] which is created via a [Royal Marriage]. Unlike a Union, the Marriage Union can not be centralized and is more akin to a Defensive League."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/marriage-union.png",
+   "id": "io:marriage_union",
+   "mods": [],
+   "name": "Marriage Union",
+   "slug": "marriage-union",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Middle Kingdom refers to China, considered the cultural center of Far East Asia since Antiquity, and therefore in the center — or middle — of the world."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/middle-kingdom.png",
+   "id": "io:middle_kingdom",
+   "mods": [
+    {
+     "key": "monthly_towards_sinicized",
+     "label": "Monthly Progress to Sinicized",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Middle Kingdom",
+   "slug": "middle-kingdom",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Protestant Union is a defensive alliance of countries of the ["
+    ],
+    [
+     "r",
+     "concept:reformation",
+     "Reformation"
+    ],
+    [
+     "t",
+     "] which want to protect themselves from the growing hostilities of the Catholicism states of the Holy Roman Empire. Although founded by states of the Lutheranism and Calvinism faiths, every member of the Empire who feels threatened by the overzealous counter-reformers may join this [International Organization]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/protestant-union.png",
+   "id": "io:protestant_union",
+   "mods": [],
+   "name": "Protestant Union",
+   "slug": "protestant-union",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Red Turban Rebels<br />The Red Turban Rebels are a group of disorganized and striving rebels who seek to overthrow the GetCountry('CHI') overlords and claim the Middle Kingdom for themselves. Although they oppose China, the loyalty of the Red Turban Rebels is only to their own ambitions."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/red-turban-rebels.png",
+   "id": "io:red_turban_rebels",
+   "mods": [],
+   "name": "Red Turban Rebels",
+   "slug": "red-turban-rebels",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A Sect is one of the many branches of Buddhism, each one focusing on different teachings and ways of following the path of the Buddha to reach enlightenment."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/sect.png",
+   "id": "io:sect",
+   "mods": [],
+   "name": "Sect",
+   "slug": "sect",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The diverse set of beliefs and practices revolving around Kami worship that were present in Japan before the arrival of Buddhism got intrinsically tied to and blended with Buddhist practices and concepts as Buddhism spread through Japan. The Kami and Buddhist deities were identified with one another, with both sets of beliefs becoming functionally inseparable. This gave rise to a particularly Japanese flavor of Buddhism blended with a Buddhism-influenced Kami worship."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/shinto.png",
+   "id": "io:shinto",
+   "mods": [],
+   "name": "Shintō",
+   "slug": "shinto",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A religion founded by the teachings of the Gurū, it originates from the varied Hindu faiths of India, and incorporates many influences from Islam. It believes in one creator, Ik Onkar, and to conduct oneself honestly and selflessly for the benefit of all. It encourages connection with the divine through the use of contemplation and meditation, as well as recitation and music as ways to be conscious of God's presence."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/sikhism.png",
+   "id": "io:sikhism",
+   "mods": [],
+   "name": "Sikhism",
+   "slug": "sikhism",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Swiss Confederation - also known as the ''Eidgenossenschaft'' - is a league of political entities home to the Swiss Plateau and the Alps. The Swiss people have formed this union in order to defend themselves from the growing influence of the Habsburg."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/swiss-confederation.png",
+   "id": "io:swiss_confederation",
+   "mods": [],
+   "name": "Swiss Confederation",
+   "slug": "swiss-confederation",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Tatar Yoke refers to various principalities of Eastern Europe that are subject to Tatar Rule as a result of their invasion in the 13th century. The most prominent of rulers is awarded the title of Grand Prince, and is tasked with collecting tribute from the other tributaries on behalf of the Golden Horde Khān."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/tatar-yoke.png",
+   "id": "io:tatar_yoke",
+   "mods": [
+    {
+     "key": "cannot_declare_no_cb_wars_on_members",
+     "label": "Forbidden Unjustified Wars Against Other Members",
+     "polarity": "neutral",
+     "value": "yes"
+    }
+   ],
+   "name": "Tatar Yoke",
+   "slug": "tatar-yoke",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A group of different tribes that have banded together for protection from their enemies and to benefit from mutual cooperation and growth."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/tribal-confederation.png",
+   "id": "io:tribal_confederation",
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.02"
+    },
+    {
+     "key": "monthly_tribal_cohesion",
+     "label": "Monthly Tribal Cohesion",
+     "polarity": "good",
+     "value": "+0.02"
+    }
+   ],
+   "name": "Tribal Confederation",
+   "slug": "tribal-confederation",
+   "type": "io"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A union is a type of ["
+    ],
+    [
+     "r",
+     "concept:treaty",
+     "Treaty"
+    ],
+    [
+     "t",
+     "] that happens when two or more ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Countries"
+    ],
+    [
+     "t",
+     "] have come to have the same ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] due to [Royal Marriages]. This functions like a defensive ["
+    ],
+    [
+     "r",
+     "concept:alliance",
+     "Alliance"
+    ],
+    [
+     "t",
+     "] in that they will come to each other's help automatically if they are attacked, but ["
+    ],
+    [
+     "r",
+     "concept:law",
+     "Laws"
+    ],
+    [
+     "t",
+     "] can be added to them to change how the union works. The most important member in the union is called the Senior Partner, while the rest of countries in a union are the Junior Partners."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/io/union.png",
+   "id": "io:union",
+   "mods": [],
+   "name": "Union",
+   "slug": "union",
+   "type": "io"
+  }
+ ],
+ "facets": [],
+ "source": "international_organizations"
+}

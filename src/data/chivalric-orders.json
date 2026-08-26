@@ -1,0 +1,649 @@
+{
+ "dataset": "chivalric-orders",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "This order, known as the 'Chivalric Society of Saint George,' embodies a commitment to the ideals of chivalry and honor, promoting these values through knightly tournaments and festivals."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-saint-george.png",
+   "id": "chivalric-order:order_of_saint_george",
+   "mods": [
+    {
+     "key": "nobles_estate_levy_size",
+     "label": "Nobles Levy Size",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "diplomatic_reputation",
+     "label": "Diplomatic Reputation",
+     "polarity": "neutral",
+     "value": "+1.00"
+    }
+   ],
+   "name": "Order of Saint George",
+   "slug": "order-of-saint-george",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Order of the Band is composed of the most excellent knights, who swear their loyalty and obedience to the ruler of Castile. Its members are held to high standards of scrupulous and impeccable courtly behavior, regularly participate in jousts, and must be above all else supportive and loyal to their ruler."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-band.png",
+   "id": "chivalric-order:order_of_the_band",
+   "mods": [
+    {
+     "key": "nobles_estate_levy_size",
+     "label": "Nobles Levy Size",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "land_morale_modifier",
+     "label": "Army Morale",
+     "polarity": "good",
+     "value": "+5.00%"
+    }
+   ],
+   "name": "Order of the Band",
+   "slug": "order-of-the-band",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The secular Order of the Black Eagle is more of a military order than a spiritual one. Members of this Order tend to include members of the royal family, visiting foreign royals, and distinguished generals who have been awarded for their merit."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-black-eagle.png",
+   "id": "chivalric-order:order_of_the_black_eagle",
+   "mods": [
+    {
+     "key": "army_tradition_decay",
+     "label": "Army Tradition Decay",
+     "polarity": "good",
+     "value": "−0.10%"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "land_morale_modifier",
+     "label": "Army Morale",
+     "polarity": "good",
+     "value": "+5.00%"
+    }
+   ],
+   "name": "Order of the Black Eagle",
+   "slug": "order-of-the-black-eagle",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Also known as the '''Societas Draconica''', this Order was dedicated to defending the Hungarian monarchy, the Catholicism Church, and Christianity against the threat of the Beylik of the Ottomans, heretics, and pagans. Modeled after the Order of St. George and inspired by the crusading spirit of the time, it unites the Nobility and the Crown under the symbols of the ouroboros and the red cross, fostering a collective defense against foreign and domestic threats while offering the Nobility royal protection and honors in return for their loyalty."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-dragon.png",
+   "id": "chivalric-order:order_of_the_dragon",
+   "mods": [
+    {
+     "key": "global_garrison_size_modifier",
+     "label": "Garrison Size",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "global_defensive",
+     "label": "Fort Defense",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "adm",
+     "label": "Administrative Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "land_morale_modifier",
+     "label": "Army Morale",
+     "polarity": "good",
+     "value": "+5.00%"
+    }
+   ],
+   "name": "Order of the Dragon",
+   "slug": "order-of-the-dragon",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Order of the Ermine draws inspiration from the English Order of the Garter. With the ermine as its symbol, representing unwavering personal honor, the order recognizes both men and women, regardless of social status, for exceptional service to the Duchy of Brittany."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-ermine.png",
+   "id": "chivalric-order:order_of_the_ermine",
+   "mods": [
+    {
+     "key": "nobles_estate_levy_size",
+     "label": "Nobles Levy Size",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "adm",
+     "label": "Administrative Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "global_estate_target_satisfaction",
+     "label": "Estates Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "+1.00%"
+    }
+   ],
+   "name": "Order of the Ermine",
+   "slug": "order-of-the-ermine",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Established in the tradition of the legendary Knights of the Round Table, the Order of the Garter is the most prestigious [Chivalric Order] in the realm. Its motto, '''Honi soit qui mal y pense''', speaks to the honor demanded of its members."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-garter.png",
+   "id": "chivalric-order:order_of_the_garter",
+   "mods": [
+    {
+     "key": "country_cabinet_efficiency",
+     "label": "Efficiency of Our Cabinet",
+     "polarity": "good",
+     "value": "+5.00%"
+    },
+    {
+     "key": "dip",
+     "label": "Diplomatic Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_towards_aristocracy",
+     "label": "Monthly Progress to Aristocracy",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Order of the Garter",
+   "slug": "order-of-the-garter",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Founded by Philip the Good of Burgundy, the Order of the Golden Fleece is among the most illustrious [Chivalric Order]s in Christendom. Membership binds its knights by solemn oath to uphold the glory and honor of their lord, and to stand united against all threats to Christendom."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-golden-fleece.png",
+   "id": "chivalric-order:order_of_the_golden_fleece",
+   "mods": [
+    {
+     "key": "nobles_estate_satisfaction_recovery",
+     "label": "Noble Estate Satisfaction Recovery",
+     "polarity": "neutral",
+     "value": "+0.10%"
+    },
+    {
+     "key": "dip",
+     "label": "Diplomatic Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_towards_offensive",
+     "label": "Monthly Progress to Offensive",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Order of the Golden Fleece",
+   "slug": "order-of-the-golden-fleece",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The Order of the Swan is dedicated to promoting piety and spreading the cult of the Virgin Mary. Members of this Order include many princes from the ruling dynasty as well as the Nobility, all united in perseverance."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-swan.png",
+   "id": "chivalric-order:order_of_the_swan",
+   "mods": [
+    {
+     "key": "nobles_estate_levy_size",
+     "label": "Nobles Levy Size",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_religious_influence",
+     "label": "Monthly Religious Influence",
+     "polarity": "good",
+     "value": "+0.05"
+    }
+   ],
+   "name": "Order of the Swan",
+   "slug": "order-of-the-swan",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The military Order of the White Eagle is awarded to the closest supporters of the state and the most brilliant of our citizens as a reward for their service to the country. It is also bestowed upon high-ranking visitors who have graced us with their presence."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/order-of-the-white-eagle.png",
+   "id": "chivalric-order:order_of_the_white_eagle",
+   "mods": [
+    {
+     "key": "army_tradition_decay",
+     "label": "Army Tradition Decay",
+     "polarity": "good",
+     "value": "−0.10%"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "land_morale_modifier",
+     "label": "Army Morale",
+     "polarity": "good",
+     "value": "+5.00%"
+    }
+   ],
+   "name": "Order of the White Eagle",
+   "slug": "order-of-the-white-eagle",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ''Klüppelgesellschaft'' has been founded by a group of knights concerned about the erosion of our power within the Holy Roman Empire. It would be wise of us to sponsor those willing to fight for our status."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-bengler-mainz.png",
+   "id": "chivalric-order:society_bengler_mainz",
+   "mods": [
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "adm",
+     "label": "Administrative Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_towards_aristocracy",
+     "label": "Monthly Progress to Aristocracy",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Bengler Society",
+   "slug": "society-bengler-mainz",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Our lands are at risk of invasion from hostile neighbors, who desire the riches of our valleys. Creating and funding an order of knights, ready to defend our lands, allows us to draw on greater forces if the need ever arises."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-elephant-tyrol.png",
+   "id": "chivalric-order:society_elephant_tyrol",
+   "mods": [
+    {
+     "key": "global_defensive",
+     "label": "Fort Defense",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_towards_defensive",
+     "label": "Monthly Progress to Defensive",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Elefantenbund",
+   "slug": "society-elephant-tyrol",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ''Gesellschaft mit dem Fürspang'' is an order of knights formed to defend their interests and provide assistance to those who sponsor them. Providing them with extensive funds will grant us significantly more political prowess within our region and within the Holy Roman Empire."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-furspang-franconia.png",
+   "id": "chivalric-order:society_furspang_franconia",
+   "mods": [
+    {
+     "key": "monthly_devotion",
+     "label": "Monthly Devotion",
+     "polarity": "good",
+     "value": "+0.10"
+    },
+    {
+     "key": "monthly_legitimacy",
+     "label": "Monthly Legitimacy",
+     "polarity": "good",
+     "value": "+0.10"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_towards_offensive",
+     "label": "Monthly Progress to Offensive",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Fürspang Society",
+   "slug": "society-furspang-franconia",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The ''Hubertusorden'' will serve as a glorious reminder of our knights' combat prowess! Joining the order will be a reward for our loyal knights, and its members will display our glory for all to see."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-hubertus-cologne.png",
+   "id": "chivalric-order:society_hubertus_cologne",
+   "mods": [
+    {
+     "key": "cultural_influence_modifier",
+     "label": "Cultural Influence %",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "dip",
+     "label": "Diplomatic Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_towards_conciliatory",
+     "label": "Monthly Progress to Conciliatory",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Order of Saint Hubert",
+   "slug": "society-hubertus-cologne",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Founded in the woes of the Western Schism, the ''Löwenbund'' is sworn to protect our lands from heretical revolts. We should grant them our official sponsorship and incorporate them into our court to further our cause."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-lion-nassau.png",
+   "id": "chivalric-order:society_lion_nassau",
+   "mods": [
+    {
+     "key": "global_pop_conversion_speed_modifier",
+     "label": "Pop Conversion Speed %",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "mil",
+     "label": "Military Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_towards_spiritualist",
+     "label": "Monthly Progress to Spiritualist",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Society with the Lion",
+   "slug": "society-lion-nassau",
+   "type": "chivalric-order"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Founded to protect knightly interests within the Empire, the ''Gesellschaft mit dem Esel'' has entrenched itself in the lands surrounding Heidelberg. Their expertise in governance, as well as their ability to sponsor tourneys, will improve our cultural standing."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/chivalric-order/society-with-the-donkey.png",
+   "id": "chivalric-order:society_with_the_donkey",
+   "mods": [
+    {
+     "key": "cultural_tradition_modifier",
+     "label": "Cultural Tradition %",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "dip",
+     "label": "Diplomatic Ability",
+     "polarity": "good",
+     "value": "+15"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_towards_innovative",
+     "label": "Monthly Progress to Innovative",
+     "polarity": "neutral",
+     "value": "+0.10"
+    }
+   ],
+   "name": "Society with the Donkey",
+   "slug": "society-with-the-donkey",
+   "type": "chivalric-order"
+  }
+ ],
+ "facets": [],
+ "source": "chivalric_orders"
+}

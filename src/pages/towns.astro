@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import ranks from '../data/location-ranks.json';
+import rights from '../data/town-rights.json';
+---
+<Base title="Towns & Settlements" active="towns" pageMark="🏘️" eyebrow="Economy"
+  pageStats={[
+    { label: 'location ranks', value: ranks.entities.length },
+    { label: 'town rights', value: rights.entities.length },
+  ]}
+  description="Location ranks and town rights in Europa Universalis V.">
+  <SectionTable title="Location Ranks" data={ranks} columns={[
+    { key: 'name', label: 'Rank', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter ranks…" />
+  <SectionTable title="Town Rights" data={rights} columns={[
+    { key: 'name', label: 'Right', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter town rights…" />
+</Base>

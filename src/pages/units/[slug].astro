@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/units.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+const d = entity.data;
+const rows: [string, any][] = [
+  ['Combat power', d.combat_power], ['Max strength', d.max_strength],
+  ['Movement speed', d.movement_speed], ['Combat speed', d.combat_speed],
+  ['Initiative', d.initiative], ['Frontage', d.frontage],
+  ['Flanking', d.flanking], ['Morale dmg done', d.morale_dmg_done],
+  ['Strength dmg done', d.strength_dmg_done], ['Supply weight', d.supply_weight],
+  ['Food / strength', d.food_per_strength], ['Cannons', d.cannons],
+  ['Hull size', d.hull_size],
+];
+---
+<Base title={entity.name} active="units" eyebrow={`Unit · ${entity.facets.category}`} iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Stats</h3>
+        <div class="kv">
+          {rows.filter(([, v]) => v != null).map(([k, v]) => (
+            <Fragment><span class="k">{k}</span><span class="v">{v}</span></Fragment>
+          ))}
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

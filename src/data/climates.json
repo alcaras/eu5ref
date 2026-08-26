@@ -1,0 +1,301 @@
+{
+ "dataset": "climates",
+ "entities": [
+  {
+   "color": "#99cecb",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Arctic represents areas with very cold winters."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/arctic.png",
+   "id": "climate:arctic",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "bad",
+     "value": "−33.00%"
+    },
+    {
+     "key": "local_monthly_development_modifier",
+     "label": "Local Monthly Development Growth",
+     "polarity": "bad",
+     "value": "−25.00%"
+    },
+    {
+     "key": "local_life_expectancy",
+     "label": "Character Life Expectancy",
+     "polarity": "bad",
+     "value": "−5"
+    },
+    {
+     "key": "local_supply_limit_modifier",
+     "label": "Supply Limit",
+     "polarity": "bad",
+     "value": "−20.00%"
+    }
+   ],
+   "name": "Arctic",
+   "slug": "arctic",
+   "type": "climate"
+  },
+  {
+   "color": "#a7753a",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Hot Arid represents an area that has a severe lack of available water."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/arid.png",
+   "id": "climate:arid",
+   "mods": [
+    {
+     "key": "local_wheat_output_modifier",
+     "label": "Local Wheat Output",
+     "polarity": "bad",
+     "value": "−10.00%"
+    },
+    {
+     "key": "local_life_expectancy",
+     "label": "Character Life Expectancy",
+     "polarity": "bad",
+     "value": "−5"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "local_supply_limit_modifier",
+     "label": "Supply Limit",
+     "polarity": "bad",
+     "value": "−10.00%"
+    }
+   ],
+   "name": "Hot Arid",
+   "slug": "arid",
+   "type": "climate"
+  },
+  {
+   "color": "#b57676",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Cold Arid represents an area that has a severe lack of available water but experiences winters."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/cold-arid.png",
+   "id": "climate:cold_arid",
+   "mods": [
+    {
+     "key": "local_wheat_output_modifier",
+     "label": "Local Wheat Output",
+     "polarity": "bad",
+     "value": "−5.00%"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "local_supply_limit_modifier",
+     "label": "Supply Limit",
+     "polarity": "bad",
+     "value": "−5.00%"
+    }
+   ],
+   "name": "Cold Arid",
+   "slug": "cold-arid",
+   "type": "climate"
+  },
+  {
+   "color": "#9e4544",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Continental represents areas with cold winters."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/continental.png",
+   "id": "climate:continental",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Continental",
+   "slug": "continental",
+   "type": "climate"
+  },
+  {
+   "color": "#c6ff4e",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Mediterranean represents areas with a perfect climate, where everyone wants to live."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/mediterranean.png",
+   "id": "climate:mediterranean",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+150.00%"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Mediterranean",
+   "slug": "mediterranean",
+   "type": "climate"
+  },
+  {
+   "color": "#66ff33",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Oceanic represents areas with mild winters but high humidity."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/oceanic.png",
+   "id": "climate:oceanic",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+100.00%"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Oceanic",
+   "slug": "oceanic",
+   "type": "climate"
+  },
+  {
+   "color": "#126222",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Subtropical represents areas with high average temperatures and mild winters."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/subtropical.png",
+   "id": "climate:subtropical",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+100.00%"
+    },
+    {
+     "key": "local_food_decay",
+     "label": "Food Decay",
+     "polarity": "bad",
+     "value": "+0.10%"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Subtropical",
+   "slug": "subtropical",
+   "type": "climate"
+  },
+  {
+   "color": "#0e3a09",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Tropical represents areas with high average temperatures and no winter."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/climate/tropical.png",
+   "id": "climate:tropical",
+   "mods": [
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "local_monthly_development_modifier",
+     "label": "Local Monthly Development Growth",
+     "polarity": "bad",
+     "value": "−10.00%"
+    },
+    {
+     "key": "local_life_expectancy",
+     "label": "Character Life Expectancy",
+     "polarity": "bad",
+     "value": "−5"
+    },
+    {
+     "key": "free_capacity_attracts_pops",
+     "label": "Available Land is Attractive",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "local_food_decay",
+     "label": "Food Decay",
+     "polarity": "bad",
+     "value": "+0.20%"
+    }
+   ],
+   "name": "Tropical",
+   "slug": "tropical",
+   "type": "climate"
+  }
+ ],
+ "facets": [],
+ "source": "climates"
+}

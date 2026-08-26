@@ -1,0 +1,120 @@
+{
+  "dataset": "recruitment-methods",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The soldiers in ["
+        ],
+        [
+          "r",
+          "concept:regiment",
+          "Regiments"
+        ],
+        [
+          "t",
+          "] will have more ["
+        ],
+        [
+          "r",
+          "concept:experience",
+          "Experience"
+        ],
+        [
+          "t",
+          "], at the cost of longer training."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/recruitment-method/elite-training.png",
+      "id": "recruitment-method:elite_training",
+      "mods": [],
+      "name": "Additional",
+      "slug": "elite-training",
+      "type": "recruitment-method"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the default way of building a ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ship"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "recruitment-method:normal_navy_method",
+      "mods": [],
+      "name": "Normal (Navy)",
+      "slug": "normal-navy-method",
+      "type": "recruitment-method"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the default way of training a ["
+        ],
+        [
+          "r",
+          "concept:regiment",
+          "Regiment"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/recruitment-method/normal-training.png",
+      "id": "recruitment-method:normal_training",
+      "mods": [],
+      "name": "Normal",
+      "slug": "normal-training",
+      "type": "recruitment-method"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "These ["
+        ],
+        [
+          "r",
+          "concept:regiment",
+          "Regiments"
+        ],
+        [
+          "t",
+          "] will not even be full [Maximum Strength] before they get deployed."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/recruitment-method/rushed-training.png",
+      "id": "recruitment-method:rushed_training",
+      "mods": [],
+      "name": "Rushed",
+      "slug": "rushed-training",
+      "type": "recruitment-method"
+    }
+  ],
+  "facets": [],
+  "source": "recruitment_method"
+}

@@ -8,10 +8,11 @@ interface Props {
   active?: string;
   eyebrow?: string;
   pageMark?: string;
+  iconSrc?: string;   // web-relative game icon (img/...) shown before the title
   pageStats?: { label: string; value: string | number }[];
   description?: string;
 }
-const { title, active, eyebrow, pageMark, pageStats, description } = Astro.props;
+const { title, active, eyebrow, pageMark, iconSrc, pageStats, description } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const SITE_NAME = 'EU5 Reference';
@@ -23,8 +24,15 @@ const fullTitle = `${title} · ${SITE_NAME}`;
 const siteOrigin = Astro.site?.origin || 'https://alcaras.github.io';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 
-// Nav = every built tab, grouped by section (single-tab sections flatten).
-const navTabs = TABS.filter((t) => t.status === 'built');
+// Nav = built tabs grouped into section dropdowns; single-tab sections
+// render as plain links (same source of truth as the home catalog).
+const navSections = SECTIONS
+  .map((section) => ({
+    section,
+    items: TABS.filter((t) => t.section === section && t.status === 'built'),
+  }))
+  .filter((s) => s.items.length > 0);
+const activeSection = navSections.find((s) => s.items.some((t) => t.slug === active))?.section;
 ---
 <!doctype html>
 <html lang="en">
@@ -53,20 +61,93 @@ const navTabs = TABS.filter((t) => t.status === 'built');
       <div class="wrap">
         <span class="site-title"><a href={base}>EU5 Reference</a></span>
         <nav class="site-nav">
-          {navTabs.map((t) => (
-            <a href={`${base}${t.slug}`} class={active === t.slug ? 'active' : undefined}>
-              {t.label}
-            </a>
-          ))}
+          {navSections.map((s) =>
+            s.items.length === 1 ? (
+              <a href={`${base}${s.items[0].slug}`} class={active === s.items[0].slug ? 'active' : undefined}>
+                {s.items[0].label}
+              </a>
+            ) : (
+              <div class={`navsec ${activeSection === s.section ? 'navsec--active' : ''}`}>
+                <span class="navsec__label">{s.section} ▾</span>
+                <div class="navdrop">
+                  {s.items.map((t) => (
+                    <a href={`${base}${t.slug}`} class={active === t.slug ? 'active' : undefined}>
+                      {t.icon} {t.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )
+          )}
         </nav>
+        <div class="hdr-search" data-hdr-search>
+          <input type="search" placeholder="Search… ( / )" autocomplete="off" />
+          <div class="hdr-search__results" hidden></div>
+        </div>
       </div>
     </header>
+
+    <script>
+      // Global entity search: lazy-fetch the index on first focus, filter,
+      // navigate on click/Enter. "/" focuses from anywhere.
+      const wrap = document.querySelector('[data-hdr-search]');
+      if (wrap) {
+        const input = wrap.querySelector('input')!;
+        const results = wrap.querySelector('.hdr-search__results') as HTMLElement;
+        const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+        let index: [string, string, string][] | null = null;
+        let loading = false;
+
+        async function load() {
+          if (index || loading) return;
+          loading = true;
+          try {
+            const res = await fetch(`${baseUrl}search.json`);
+            index = await res.json();
+          } catch { loading = false; }
+        }
+        function render() {
+          const q = input.value.trim().toLowerCase();
+          if (!q || !index) { results.hidden = true; return; }
+          const starts: any[] = [], contains: any[] = [];
+          for (const row of index) {
+            const n = row[0].toLowerCase();
+            if (n.startsWith(q)) starts.push(row);
+            else if (n.includes(q)) contains.push(row);
+            if (starts.length > 12) break;
+          }
+          const hits = starts.concat(contains).slice(0, 12);
+          results.innerHTML = hits.map((r) =>
+            `<a href="${baseUrl}${r[1]}"><span>${r[0]}</span><small>${r[2]}</small></a>`).join('');
+          results.hidden = hits.length === 0;
+        }
+        input.addEventListener('focus', () => { load().then(render); });
+        input.addEventListener('input', render);
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            const first = results.querySelector('a');
+            if (first) (first as HTMLAnchorElement).click();
+          }
+          if (e.key === 'Escape') { results.hidden = true; input.blur(); }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === '/' && document.activeElement !== input &&
+              !(document.activeElement instanceof HTMLInputElement)) {
+            e.preventDefault();
+            input.focus();
+          }
+        });
+        document.addEventListener('click', (e) => {
+          if (!wrap.contains(e.target as Node)) results.hidden = true;
+        });
+      }
+    </script>
 
     <main class="wrap">
       {(title || pageStats) && (
         <div class="page-meta">
           {eyebrow && <div class="eyebrow">{eyebrow}</div>}
-          <h1 class="page-title">{pageMark && `${pageMark} `}{title}</h1>
+          <h1 class="page-title">{iconSrc ? <img class="eicon eicon--title" src={`${base}${iconSrc}`} alt="" /> : pageMark && `${pageMark} `}{title}</h1>
           {pageStats && (
             <div class="page-stats">
               {pageStats.map((s) => (

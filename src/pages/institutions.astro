@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/institutions.json';
+---
+<Base title="Institutions" active="institutions" pageMark="💡" eyebrow="Ages & Advances"
+  pageStats={[{ label: 'institutions', value: data.entities.length }]}
+  description="Every institution in Europa Universalis V.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Institution', kind: 'name' },
+    { key: 'age', label: 'Age', kind: 'facet' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter institutions…" />
+</Base>

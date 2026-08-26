@@ -1,0 +1,115 @@
+{
+ "dataset": "location-ranks",
+ "entities": [
+  {
+   "color": "#bf2a2a",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The very epitome of civilization, a City is a bustling metropolis of industry, great temples, and seats of governmental authority sprawled across multiple districts."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/location-rank/city.png",
+   "id": "location-rank:city",
+   "mods": [
+    {
+     "key": "monthly_doom",
+     "label": "Monthly Doom",
+     "polarity": "bad",
+     "value": "+0.03"
+    },
+    {
+     "key": "fort_limit",
+     "label": "Fort Limit",
+     "polarity": "good",
+     "value": "+1.00"
+    }
+   ],
+   "name": "City",
+   "slug": "city",
+   "type": "location-rank"
+  },
+  {
+   "color": "#d9211e",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Perhaps the grandest feat of all mankind, a Megalopolis is a sprawling urban center that showcases the pinnacle of architectural and cultural achievement."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/location-rank/megalopolis.png",
+   "id": "location-rank:megalopolis",
+   "mods": [
+    {
+     "key": "monthly_doom",
+     "label": "Monthly Doom",
+     "polarity": "bad",
+     "value": "+0.06"
+    },
+    {
+     "key": "fort_limit",
+     "label": "Fort Limit",
+     "polarity": "good",
+     "value": "+2.00"
+    }
+   ],
+   "name": "Megalopolis",
+   "slug": "megalopolis",
+   "type": "location-rank"
+  },
+  {
+   "color": "#a12323",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A Rural Settlement is land that is ripe for exploitation, representing everything from wilderness to clusters of countryside villages."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/location-rank/rural-settlement.png",
+   "id": "location-rank:rural_settlement",
+   "mods": [
+    {
+     "key": "monthly_doom",
+     "label": "Monthly Doom",
+     "polarity": "bad",
+     "value": "+0.005"
+    }
+   ],
+   "name": "Rural Settlement",
+   "slug": "rural-settlement",
+   "type": "location-rank"
+  },
+  {
+   "color": "#4d3232",
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A modest settlement able to fulfill basic manufacturing needs, a Town marks the beginnings of urban life."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/location-rank/town.png",
+   "id": "location-rank:town",
+   "mods": [
+    {
+     "key": "monthly_doom",
+     "label": "Monthly Doom",
+     "polarity": "bad",
+     "value": "+0.01"
+    }
+   ],
+   "name": "Town",
+   "slug": "town",
+   "type": "location-rank"
+  }
+ ],
+ "facets": [],
+ "source": "location_ranks"
+}

@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import cbs from '../data/casus-belli.json';
+import wargoals from '../data/wargoals.json';
+import treaties from '../data/peace-treaties.json';
+---
+<Base title="Warfare" active="warfare" pageMark="🎯" eyebrow="Military"
+  pageStats={[
+    { label: 'casus belli', value: cbs.entities.length },
+    { label: 'war goals', value: wargoals.entities.length },
+    { label: 'peace treaties', value: treaties.entities.length },
+  ]}
+  description="Casus belli, war goals, and peace treaties in Europa Universalis V.">
+  <SectionTable title="Casus Belli" data={cbs} columns={[
+    { key: 'name', label: 'Casus Belli', kind: 'name' },
+    { key: 'war_goal', label: 'War Goal', kind: 'text' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter casus belli…" />
+  <SectionTable title="War Goals" data={wargoals} columns={[
+    { key: 'name', label: 'War Goal', kind: 'name' },
+    { key: 'ticking_war_score', label: 'Ticking WS', kind: 'num' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter war goals…" />
+  <SectionTable title="Peace Treaties" data={treaties} columns={[
+    { key: 'name', label: 'Treaty', kind: 'name' },
+    { key: 'base_cost', label: 'Base Cost', kind: 'num' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter treaties…" />
+</Base>

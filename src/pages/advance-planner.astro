@@ -1,0 +1,413 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools"
+  description="Interactive Europa Universalis V advance planner — pick a country, plan your research age by age, share the build as a URL.">
+  <p style="max-width: 720px; color: var(--text-soft);">
+    Pick a country — its national branches appear automatically and its culture
+    and religion show as context. Add extra branches if you plan to shift.
+    <b>Click</b> an advance to plan it (prerequisites come along);
+    <b>right-click</b> marks it already researched. The URL always encodes your
+    plan — copy it to share.
+  </p>
+
+  <div class="pl" data-pl>
+    <div class="pl-controls">
+      <div class="pl-picker" data-pl-country>
+        <input type="search" placeholder="Pick a country…" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <span class="chips" data-pl-context></span>
+      <div class="pl-picker" data-pl-tree>
+        <input type="search" placeholder="Add a branch…" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <label class="pl-toggle"><input type="checkbox" data-pl-all /> show every branch</label>
+      <button type="button" class="csv-btn" data-pl-copy>⧉ Copy link</button>
+      <button type="button" class="csv-btn" data-pl-clear>✕ Clear</button>
+    </div>
+
+    <div class="pl-ages" data-pl-ages></div>
+    <div class="pl-stats" data-pl-stats></div>
+    <div class="pl-board-wrap"><div class="pl-board" data-pl-board></div></div>
+    <div class="pl-tip" data-pl-tip hidden></div>
+  </div>
+
+  <style is:global>
+    .pl-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+    .pl-picker { position: relative; }
+    .pl-picker input {
+      background: var(--bg-elev); color: var(--text);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 6px 11px; font-size: 13px; width: 200px; font-family: var(--font-ui);
+    }
+    .pl-picker input:focus { outline: none; border-color: var(--gold-deep); }
+    .pl-picker .hdr-search__results { left: 0; right: auto; top: calc(100% + 6px); }
+    .pl-toggle { font-size: 12px; color: var(--text-dim); display: flex; gap: 5px; align-items: center; }
+    .pl-ages { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .pl-ages button {
+      border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
+      border-radius: 999px; padding: 4px 12px; font-size: 12.5px; cursor: pointer; font-family: var(--font-ui);
+    }
+    .pl-ages button.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
+    .pl-ages button b { font-weight: 600; }
+    .pl-stats { margin-top: 10px; font-size: 12.5px; color: var(--text-dim); }
+    .pl-board-wrap { overflow: auto; border: 1px solid var(--border); border-radius: var(--radius); margin-top: 10px; background: var(--bg-elev); max-height: 72vh; }
+    .pl-board { position: relative; min-width: 100%; }
+    .pl-band-label {
+      position: absolute; left: 12px; font-family: var(--font-display);
+      font-size: 15px; color: var(--gold-soft); letter-spacing: 0.03em;
+    }
+    .pl-band-label small { color: var(--text-faint); font-family: var(--font-ui); font-size: 11px; margin-left: 8px; }
+    .pnode {
+      position: absolute; width: 178px; height: 30px;
+      display: flex; align-items: center; gap: 6px; padding: 0 8px;
+      background: var(--bg-elev-2); border: 1px solid var(--border);
+      border-radius: 5px; font-size: 11.5px; color: var(--text-soft);
+      cursor: pointer; user-select: none; white-space: nowrap; overflow: hidden;
+    }
+    .pnode img { width: 16px; height: 16px; object-fit: contain; flex: none; }
+    .pnode span { overflow: hidden; text-overflow: ellipsis; }
+    .pnode:hover { border-color: var(--border-strong); z-index: 5; }
+    .pnode.planned { border-color: var(--gold); background: color-mix(in oklab, var(--gold) 16%, var(--bg-elev-2)); color: var(--text); }
+    .pnode.researched { opacity: 0.45; border-style: dashed; }
+    .pnode.national { box-shadow: inset 2px 0 0 var(--accent-2); }
+    .pnode .xage { color: var(--text-faint); font-size: 10px; margin-left: auto; }
+    svg.pl-edges { position: absolute; inset: 0; pointer-events: none; }
+    svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.2; fill: none; opacity: .6; }
+    svg.pl-edges path.hot { stroke: var(--gold); opacity: 1; }
+    .pl-tip {
+      position: fixed; z-index: 90; max-width: 300px; padding: 8px 11px;
+      background: var(--bg-elev-3); border: 1px solid var(--border-strong);
+      border-radius: var(--radius); font-size: 12px; color: var(--text-soft);
+      pointer-events: none; box-shadow: var(--shadow-sm);
+    }
+    .pl-tip b { display: block; color: var(--text); margin-bottom: 2px; }
+    .pl-tip .req { color: var(--text-faint); margin-top: 4px; }
+  </style>
+
+  <script>
+    const root = document.querySelector('[data-pl]')!;
+    const $ = (sel: string) => root.querySelector(sel) as HTMLElement;
+    const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+
+    type Node = { n: string; s: string; a: string; ed: number; sc: string;
+                  t: string | null; c: string[]; i: string | null; r: string[]; m: string[] };
+    type Data = { version: string; vhash: string; order: string[]; ages: string[];
+                  nodes: Record<string, Node>;
+                  countries: { t: string; n: string; col: string | null; cu: string; re: string }[] };
+
+    let D: Data;
+    const idx = new Map<string, number>();   // id → order index
+    let country: string | null = null;        // tag
+    const extraTrees = new Set<string>();
+    const planned = new Set<string>();
+    const researched = new Set<string>();
+    let showAll = false;
+    let activeAge = '';
+
+    const ROW = 36, COL = 208, PADX = 14, BANDPAD = 40;
+
+    // ── URL state ──────────────────────────────────────────────
+    const b36 = (n: number) => n.toString(36);
+    function encodeSet(s: Set<string>) {
+      return [...s].map((id) => b36(idx.get(id)!)).join('.');
+    }
+    function decodeSet(v: string | null, into: Set<string>) {
+      if (!v) return;
+      for (const part of v.split('.')) {
+        const id = D.order[parseInt(part, 36)];
+        if (id) into.add(id);
+      }
+    }
+    function syncUrl() {
+      const p = new URLSearchParams();
+      p.set('v', D.vhash);
+      if (country) p.set('c', country);
+      if (activeAge) p.set('age', String(D.ages.indexOf(activeAge)));
+      if (extraTrees.size) p.set('x', encodeSet(extraTrees));
+      if (planned.size) p.set('p', encodeSet(planned));
+      if (researched.size) p.set('r', encodeSet(researched));
+      history.replaceState(null, '', '?' + p.toString());
+    }
+    function loadUrl() {
+      const p = new URLSearchParams(location.search);
+      if (p.get('v') && p.get('v') !== D.vhash) {
+        $('[data-pl-stats]').textContent =
+          '⚠ this link was made on a different game version — the plan may have shifted.';
+      }
+      country = p.get('c');
+      decodeSet(p.get('x'), extraTrees);
+      decodeSet(p.get('p'), planned);
+      decodeSet(p.get('r'), researched);
+      const ai = parseInt(p.get('age') || '0', 10);
+      activeAge = D.ages[isNaN(ai) ? 0 : ai] || D.ages[0];
+    }
+
+    // ── planning ───────────────────────────────────────────────
+    function addWithPrereqs(id: string) {
+      const stack = [id];
+      while (stack.length) {
+        const cur = stack.pop()!;
+        if (planned.has(cur) || researched.has(cur)) continue;
+        planned.add(cur);
+        for (const r of D.nodes[cur].r) stack.push(r);
+      }
+    }
+    function removeWithDependents(id: string) {
+      // remove the node, then keep dropping planned nodes whose prereq
+      // chain is no longer satisfied
+      planned.delete(id);
+      let changed = true;
+      while (changed) {
+        changed = false;
+        for (const pid of [...planned]) {
+          const broken = D.nodes[pid].r.some((r) => !planned.has(r) && !researched.has(r));
+          if (broken) { planned.delete(pid); changed = true; }
+        }
+      }
+    }
+
+    // ── band assembly & layout ─────────────────────────────────
+    function selCountry() { return D.countries.find((c) => c.t === country) || null; }
+
+    function bandsForAge(age: string) {
+      const inAge = Object.entries(D.nodes).filter(([, n]) => n.a === age);
+      const general = inAge.filter(([, n]) => n.sc === 'general');
+      const byTree = new Map<string, [string, Node][]>();
+      for (const [id, n] of inAge) {
+        if (n.sc === 'general') continue;
+        const t = n.t || (n.c[0] ? `${n.c[0]}` : 'Other national');
+        if (!byTree.has(t)) byTree.set(t, []);
+        byTree.get(t)!.push([id, n]);
+      }
+      const sel = selCountry();
+      const visible: [string, [string, Node][]][] = [];
+      for (const [t, list] of [...byTree.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+        const mine = sel && list.some(([, n]) => n.c.includes(sel.n));
+        if (showAll || mine || extraTrees.has(t)) visible.push([t, list]);
+      }
+      return { general, visible };
+    }
+
+    function layoutBand(list: [string, Node][], y0: number) {
+      const cols = new Map<number, [string, Node][]>();
+      for (const item of list) {
+        const d = item[1].ed;
+        if (!cols.has(d)) cols.set(d, []);
+        cols.get(d)!.push(item);
+      }
+      const pos = new Map<string, { x: number; y: number }>();
+      let maxRows = 0;
+      for (const [d, col] of cols) {
+        col.sort((a, b) => a[1].n.localeCompare(b[1].n));
+        col.forEach(([id], row) => pos.set(id, { x: PADX + d * COL, y: y0 + row * ROW }));
+        maxRows = Math.max(maxRows, col.length);
+      }
+      const maxD = Math.max(...cols.keys(), 0);
+      return { pos, height: maxRows * ROW, width: PADX * 2 + (maxD + 1) * COL };
+    }
+
+    // ── render ─────────────────────────────────────────────────
+    function render() {
+      renderAges();
+      renderContext();
+      renderBoard();
+      renderStats();
+      syncUrl();
+    }
+
+    function renderAges() {
+      const counts = new Map<string, number>();
+      for (const id of planned) {
+        const a = D.nodes[id].a;
+        counts.set(a, (counts.get(a) || 0) + 1);
+      }
+      $('[data-pl-ages]').innerHTML = D.ages.map((a) =>
+        `<button class="${a === activeAge ? 'on' : ''}" data-age="${a}">${a.replace('Age of ', '')}${counts.get(a) ? ` <b>· ${counts.get(a)}</b>` : ''}</button>`).join('');
+    }
+
+    function renderContext() {
+      const sel = selCountry();
+      let html = '';
+      if (sel) html += `<span class="chip" style="border-color:${sel.col ?? 'var(--border)'}">${sel.n}</span><span class="chip">${sel.cu}</span><span class="chip">${sel.re}</span>`;
+      for (const t of extraTrees) html += `<span class="chip" style="cursor:pointer" data-deltree="${t}" title="remove branch">${t} ✕</span>`;
+      $('[data-pl-context]').innerHTML = html;
+    }
+
+    function renderStats() {
+      const total = planned.size;
+      const done = researched.size;
+      $('[data-pl-stats]').textContent =
+        total || done ? `${total} advances planned · ${done} marked researched` : '';
+    }
+
+    function renderBoard() {
+      const board = $('[data-pl-board]');
+      const { general, visible } = bandsForAge(activeAge);
+      let y = 34;
+      let maxW = 600;
+      const allPos = new Map<string, { x: number; y: number }>();
+      const bands: { label: string; count: number; y: number }[] = [];
+
+      const place = (label: string, list: [string, Node][]) => {
+        if (!list.length) return;
+        bands.push({ label, count: list.length, y: y - 24 });
+        const { pos, height, width } = layoutBand(list, y);
+        for (const [id, p] of pos) allPos.set(id, p);
+        y += height + BANDPAD;
+        maxW = Math.max(maxW, width);
+      };
+      place('General', general);
+      for (const [t, list] of visible) place(t, list);
+
+      let html = '';
+      for (const b of bands) {
+        html += `<div class="pl-band-label" style="top:${b.y}px">${b.label}<small>${b.count}</small></div>`;
+      }
+      // edges (same-age, both placed)
+      let paths = '';
+      for (const [id, p] of allPos) {
+        for (const r of D.nodes[id].r) {
+          const rp = allPos.get(r);
+          if (!rp) continue;
+          const x1 = rp.x + 178, y1 = rp.y + 15, x2 = p.x, y2 = p.y + 15;
+          const hot = planned.has(id) && (planned.has(r) || researched.has(r));
+          paths += `<path class="${hot ? 'hot' : ''}" d="M${x1},${y1} C${x1 + 24},${y1} ${x2 - 24},${y2} ${x2},${y2}"/>`;
+        }
+      }
+      html += `<svg class="pl-edges" width="${maxW}" height="${y}">${paths}</svg>`;
+      const sel = selCountry();
+      for (const [id, p] of allPos) {
+        const n = D.nodes[id];
+        const cross = n.r.some((r) => !allPos.has(r));
+        const cls = ['pnode',
+          planned.has(id) ? 'planned' : '',
+          researched.has(id) ? 'researched' : '',
+          n.sc === 'national' ? 'national' : ''].join(' ');
+        html += `<div class="${cls}" style="left:${p.x}px; top:${p.y}px" data-id="${id}">` +
+          (n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '') +
+          `<span>${n.n}</span>${cross ? '<span class="xage" title="has prerequisites in an earlier age">↞</span>' : ''}</div>`;
+      }
+      board.style.width = maxW + 'px';
+      board.style.height = y + 'px';
+      board.innerHTML = html;
+    }
+
+    // ── tooltip ────────────────────────────────────────────────
+    const tip = $('[data-pl-tip]');
+    function showTip(e: MouseEvent, id: string) {
+      const n = D.nodes[id];
+      const reqs = n.r.map((r) => D.nodes[r]?.n).filter(Boolean);
+      tip.innerHTML = `<b>${n.n}</b>` +
+        n.m.map((m) => `<div>${m}</div>`).join('') +
+        (reqs.length ? `<div class="req">requires: ${reqs.join(', ')}</div>` : '') +
+        `<div class="req">click to plan · right-click researched · ⌥-click opens details</div>`;
+      tip.hidden = false;
+      tip.style.left = Math.min(e.clientX + 14, innerWidth - 320) + 'px';
+      tip.style.top = e.clientY + 14 + 'px';
+    }
+
+    // ── wiring ─────────────────────────────────────────────────
+    function wirePicker(sel: string, items: () => { key: string; label: string; small?: string }[],
+                        onPick: (key: string) => void) {
+      const wrap = $(sel);
+      const input = wrap.querySelector('input')!;
+      const results = wrap.querySelector('.hdr-search__results') as HTMLElement;
+      const refresh = () => {
+        const q = input.value.trim().toLowerCase();
+        if (!q) { results.hidden = true; return; }
+        const hits = items().filter((i) => i.label.toLowerCase().includes(q)).slice(0, 12);
+        results.innerHTML = hits.map((h) =>
+          `<a href="#" data-key="${h.key}"><span>${h.label}</span><small>${h.small || ''}</small></a>`).join('');
+        results.hidden = hits.length === 0;
+      };
+      input.addEventListener('input', refresh);
+      input.addEventListener('focus', refresh);
+      results.addEventListener('click', (e) => {
+        e.preventDefault();
+        const a = (e.target as HTMLElement).closest('[data-key]') as HTMLElement | null;
+        if (!a) return;
+        onPick(a.dataset.key!);
+        input.value = '';
+        results.hidden = true;
+      });
+      document.addEventListener('click', (e) => {
+        if (!wrap.contains(e.target as Node)) results.hidden = true;
+      });
+    }
+
+    fetch(`${baseUrl}planner.json`).then((r) => r.json()).then((data) => {
+      D = data;
+      D.order.forEach((id, i) => idx.set(id, i));
+      loadUrl();
+
+      wirePicker('[data-pl-country]',
+        () => D.countries.map((c) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
+        (tag) => { country = tag; render(); });
+
+      const treeNames = () => {
+        const set = new Map<string, number>();
+        for (const n of Object.values(D.nodes)) {
+          if (n.sc !== 'national') continue;
+          const t = n.t || (n.c[0] ? `${n.c[0]}` : 'Other national');
+          set.set(t, (set.get(t) || 0) + 1);
+        }
+        return [...set.entries()].map(([t, c]) => ({ key: t, label: t, small: `${c}` }));
+      };
+      wirePicker('[data-pl-tree]', treeNames, (t) => { extraTrees.add(t); render(); });
+
+      ($('[data-pl-all]') as HTMLInputElement).addEventListener('change', (e) => {
+        showAll = (e.target as HTMLInputElement).checked;
+        render();
+      });
+      $('[data-pl-copy]').addEventListener('click', () => {
+        navigator.clipboard.writeText(location.href);
+        $('[data-pl-copy]').textContent = '✓ Copied';
+        setTimeout(() => ($('[data-pl-copy]').textContent = '⧉ Copy link'), 1200);
+      });
+      $('[data-pl-clear]').addEventListener('click', () => {
+        planned.clear(); researched.clear(); render();
+      });
+      $('[data-pl-ages]').addEventListener('click', (e) => {
+        const btn = (e.target as HTMLElement).closest('[data-age]') as HTMLElement | null;
+        if (btn) { activeAge = btn.dataset.age!; render(); }
+      });
+      $('[data-pl-context]').addEventListener('click', (e) => {
+        const chip = (e.target as HTMLElement).closest('[data-deltree]') as HTMLElement | null;
+        if (chip) { extraTrees.delete(chip.dataset.deltree!); render(); }
+      });
+
+      const board = $('[data-pl-board]');
+      board.addEventListener('click', (e) => {
+        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
+        if (!el) return;
+        const id = el.dataset.id!;
+        if ((e as MouseEvent).altKey) {
+          location.href = `${baseUrl}advances/${D.nodes[id].s}`;
+          return;
+        }
+        if (planned.has(id)) removeWithDependents(id);
+        else addWithPrereqs(id);
+        render();
+      });
+      board.addEventListener('contextmenu', (e) => {
+        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
+        if (!el) return;
+        e.preventDefault();
+        const id = el.dataset.id!;
+        if (researched.has(id)) researched.delete(id);
+        else { researched.add(id); planned.delete(id); }
+        render();
+      });
+      board.addEventListener('mousemove', (e) => {
+        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
+        if (el) showTip(e as MouseEvent, el.dataset.id!);
+        else tip.hidden = true;
+      });
+      board.addEventListener('mouseleave', () => { tip.hidden = true; });
+
+      render();
+    });
+  </script>
+</Base>

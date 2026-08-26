@@ -191,6 +191,40 @@ def plain_text(text: str | None) -> str:
     return ''.join(t[2] if t[0] == 'r' else t[1] for t in toks).strip()
 
 
+# ── icons ───────────────────────────────────────────────────────────────
+
+IMG_DIR = ROOT / 'public' / 'img'
+
+
+def export_icon(entity_obj, etype: str, slug: str) -> str | None:
+    """Convert the entity's game icon (.dds, via the toolkit's IconMixin →
+    NGameIcons defines → gfx/interface/...) to a PNG under public/img/<etype>/
+    and return the web-relative path, or None when the game has no icon.
+    Output is named by the SOURCE file stem so entities sharing an icon share
+    one PNG. Conversion is skipped when the PNG is newer than the source."""
+    try:
+        src = entity_obj.get_icon_path()
+    except Exception:
+        return None
+    if src is None:
+        return None
+    src = Path(src)
+    if not src.exists():
+        return None
+    stem = slugify(src.stem) or slug
+    out = IMG_DIR / etype / f'{stem}.png'
+    web = f'img/{etype}/{stem}.png'
+    if out.exists() and out.stat().st_mtime >= src.stat().st_mtime:
+        return web
+    out.parent.mkdir(parents=True, exist_ok=True)
+    from PIL import Image
+    img = Image.open(src).convert('RGBA')
+    if max(img.size) > 64:
+        img.thumbnail((64, 64), Image.LANCZOS)
+    img.save(out)
+    return web
+
+
 # ── output ──────────────────────────────────────────────────────────────
 
 def write_dataset(name: str, payload: dict) -> None:
@@ -215,7 +249,31 @@ def facet_meta(entities: list[dict], defs: list[tuple[str, str]]) -> list[dict]:
             vs = v if isinstance(v, list) else [v]
             for one in vs:
                 counts[one] = counts.get(one, 0) + 1
-        options = [{'value': v, 'label': v.replace('_', ' ').title(), 'count': c}
+        options = [{'value': v, 'label': pretty(v), 'count': c}
                    for v, c in sorted(counts.items())]
         out.append({'key': key, 'label': label, 'options': options})
+    return out
+
+
+def pretty(v: str) -> str:
+    """Prettify a script token for display — but leave already-humanized
+    strings (anything with uppercase or spaces) untouched."""
+    s = str(v)
+    if s.islower():
+        return s.replace('_', ' ').title()
+    return s
+
+
+def ename(obj) -> str | None:
+    """display_name of a toolkit entity (or None)."""
+    return obj.display_name if obj is not None else None
+
+
+def ref_list(objs, etype: str) -> list[dict]:
+    """Toolkit entities → [{id, label}] for EntityTable kind 'refs'."""
+    out = []
+    for o in objs or []:
+        if o is None:
+            continue
+        out.append({'id': eid(etype, o.name), 'label': o.display_name})
     return out

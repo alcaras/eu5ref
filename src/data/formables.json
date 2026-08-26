@@ -1,0 +1,3725 @@
+{
+ "dataset": "formables",
+ "entities": [
+  {
+   "color": "#f0e69b",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Iberia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Once all of Iberia was commanded by the glorious Muslim rulers of Al-'Andalus, who brought unparalleled beauty and innovation with their reign. Let us now repudiate the shameful Christianity Reconquista, and retake the rightful lands of our ancestors."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:ADU_f",
+   "mods": [],
+   "name": "Al-'Andalus",
+   "slug": "adu-f",
+   "type": "formable"
+  },
+  {
+   "color": "#540100",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Arabia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The sands of Arabia are the home and origin of the Arabian people. Although divided into multiple tribes since their beginnings, their shared identity and traditions are undeniable, crossing the vast sands along with its peoples. Arabia was unified once before, and it conquered nearly the entire world. Now it must do so again."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:AIA_f",
+   "mods": [],
+   "name": "Arabia",
+   "slug": "aia-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1e1fa2",
+   "data": {
+    "areas": [
+     "Air"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The mountains of Air have served as refuge for the Tuareg peoples for centuries, an island of green amidst the sand dunes of the desert. This area is rich in resources and well-fortified, making it a perfect stronghold from which to command our new nation. With our people finally united as one, these mountains will serve as the first step on our quest for expansion."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:AIR_f",
+   "mods": [],
+   "name": "Aïr",
+   "slug": "air-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ba622d",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Traditionally a land of diverse beliefs and disparate clans, we have finally united the Albanian people under a single banner and purpose. Now that we have expelled unwelcome outsiders and created a nascent state, Albania shall emerge as the heroic home nation of all Albanian people."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:ALB_f",
+   "mods": [],
+   "name": "Albania",
+   "slug": "alb-f",
+   "type": "formable"
+  },
+  {
+   "color": "#911e4b",
+   "data": {
+    "areas": [
+     "Armenia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Armenian people are an ancient civilization, with a history beginning before even the time of the Romans. We have endured the rise and fall of conquering empires without losing either our mother tongue or our faith. Now we shall reunite the scattered heirs of Hayk under one banner and one Armenian identity!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:ARM_f",
+   "mods": [],
+   "name": "Armenia",
+   "slug": "arm-f",
+   "type": "formable"
+  },
+  {
+   "color": "#a22041",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:ASK_f",
+   "mods": [],
+   "name": "Ashikaga",
+   "slug": "ask-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3c9846",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "A major trading hub with extensive foreign connections and a large population, the city of Ayutthaya will serve as a new source of power for the Thai, from which we can forge a path towards greater glory. As a united people, we will stand proudly against any who seek to breach our borders."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:AYU_f",
+   "mods": [],
+   "name": "Ayutthaya",
+   "slug": "ayu-f",
+   "type": "formable"
+  },
+  {
+   "color": "#880808",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Mesoamerica"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Aztec Empire stands as a symbol of divinity and imperial destiny. From the sacred city of Tenōchtitlan, our glorious leaders have succeeded in uniting large parts of Mesoamerica under one radiant Sun. Through faith, warfare, and sacrifice, our newfound empire shall reclaim its sacred purpose of ensuring that the heavens burn bright, and the gods are honored."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:AZT_f",
+   "mods": [],
+   "name": "Aztec",
+   "slug": "azt-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ae100f",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "For more than a century, we stood as the dominant Islam power in the south and controlled vast territories across the Deccan, but those splendid ancient cities were left in shambles long ago. Though internal strife and the rampant ambitions of provincial governors eventually split our realm into five successor sultanates, the time has come to restore the glory of the Bahmani people and unite the Deccan under a single, powerful rule."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:BAH_f",
+   "mods": [],
+   "name": "Bahmanis",
+   "slug": "bah-f",
+   "type": "formable"
+  },
+  {
+   "color": "#82194a",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Sundanese from Banten can boast of great prosperity, due to their unfettered access to both overland and maritime trade routes. Being a very well-situated port, Banten serves as a perfect place from which to expand Sundanese power and to spread our influence."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:BAN_f",
+   "mods": [],
+   "name": "Banten",
+   "slug": "ban-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1174c1",
+   "data": {
+    "areas": [
+     "Bavaria"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The once-lofty Duchy of Bavaria was a bastion of economic and diplomatic power, with its enviable location and gifted population. But despite its bright past, it now lies in pieces, divided and weak. We must reunite its former territories and reclaim the glories of the past if we wish to be more than a mere footnote in history!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:BAV_f",
+   "mods": [],
+   "name": "Bavaria",
+   "slug": "bav-f",
+   "type": "formable"
+  },
+  {
+   "color": "#0f080a",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Our people have traditionally been divided among several clans and families, some powerful enough to call themselves kingdoms. However, their apparent strength is in actuality extremely fragile. Only a realm that unites all clans under a single banner can bring true power and prosperity to our people!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:BEJ_f",
+   "mods": [],
+   "name": "Beja",
+   "slug": "bej-f",
+   "type": "formable"
+  },
+  {
+   "color": "#cf3030",
+   "data": {
+    "areas": [
+     "Brabant",
+     "Flanders",
+     "Wallonia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The southern lands of the Low Countries are home to a people divided along linguistic and religious lines. But if we were to bring these squabbling groups together and have them working towards the goal of self-government, perhaps it would flatten the differences between us. To this end, we desire to declare ourselves a new and independent state."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:BEL_f",
+   "mods": [],
+   "name": "Belgium",
+   "slug": "bel-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ebc4e7",
+   "data": {
+    "areas": [
+     "Provence",
+     "Savoy and Dauphiné",
+     "Lyonnais",
+     "Franche-Comté",
+     "Romandy",
+     "Switzerland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Back in the day, the Burgunds came down from Bornholm, settled in these lands, and gave them their name. As their descendants, our honor requires us to recreate that nation and govern these lands until the end of time."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:BGP_f",
+   "mods": [],
+   "name": "Burgundy (BGP)",
+   "slug": "bgp-f",
+   "type": "formable"
+  },
+  {
+   "color": "#246dc2",
+   "data": {
+    "areas": [
+     "Bengal"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The people from Bengal have a very distinct identity, forged on the banks of the mighty Ganges river. Millennia of overlapping cultures and traditions have led to the development of a particularly rich and unique Bengali culture, one that should be the envy of the world. Bengali people are proud of their history and shared traditions — united, we would be as a beacon for the rest of India."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:BNG_f",
+   "mods": [],
+   "name": "Bengal",
+   "slug": "bng-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e30c0b",
+   "data": {
+    "areas": [
+     "North Borneo",
+     "South Borneo"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The island of Borneo is bountiful and rich, both in natural resources and in the variety of peoples and cultures who call it home. Unifying us all under a single identity will ensure that our precious resources remain ours, and that only we will benefit from their exploitation."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:BNO_f",
+   "mods": [],
+   "name": "Borneo",
+   "slug": "bno-f",
+   "type": "formable"
+  },
+  {
+   "color": "#a18b28",
+   "data": {
+    "areas": [
+     "Bohemia",
+     "Moravia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Ever since the Golden Bull of Sicily was granted to Ottokar I in 1212, the lands of Bohemia enjoyed an elevated status within Central Europe. With our control of the area, we will be able to reestablish the old title and align ourselves with the legacies of the old dynasties of Bohemia."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:BOH_f",
+   "mods": [],
+   "name": "Bohemia",
+   "slug": "boh-f",
+   "type": "formable"
+  },
+  {
+   "color": "#f0f0d2",
+   "data": {
+    "areas": [
+     "Bulgaria"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Kingdom of Bulgaria fought for its own survival for centuries, constantly hounded by attacks from its covetous neighbors. It has fallen once, been resurrected, and then again crumbled. But with our steady hand to guide them, the people of Bulgaria will finally rise again as one nation, and this time, achieve the status of a major global empire!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:BUL_f",
+   "mods": [],
+   "name": "Bulgaria",
+   "slug": "bul-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8c3635",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Balkans",
+     "Anatolia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The glorious Byzantine Empire is long gone, but as long as Greeks live in Constantinople, there is hope of its resurrection. Like a phoenix swirling back to life from a pile of ashes, so too must the remnants of Eastern Rome. But before we can reunite into a vital empire, we must quell internal dissent and ensure we are all working towards the same goal. After all, we can take the place of the Byzantine Empire in spirit, but we cannot take its name until we prove worthy of it..."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:BYZ_f",
+   "mods": [],
+   "name": "Byzantine Empire",
+   "slug": "byz-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8c3635",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Balkans",
+     "Anatolia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "We of the Komnenos line are the rightful heirs to the throne the Latins stole in 1204. From our refuge upon the Pontic shore the imperial flame yet burns. Reclaim Constantinople and rally the Greek lands under our banner, and the Roman Empire shall rise once more from Trebizond."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:BYZ_trebizond_f",
+   "mods": [],
+   "name": "Byzantine Empire",
+   "slug": "byz-trebizond-f",
+   "type": "formable"
+  },
+  {
+   "color": "#5e7537",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Canada"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The land of Canada is vast and foreboding, yet incredibly bountiful and rich in resources. Although the terrain can be extremely harsh, there is great promise — and fortune — in these lands. If we were to declare ourselves as a unified Canadian nation and claim it for ourselves, there is no limit to the potential rewards we could reap!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:CAN_f",
+   "mods": [],
+   "name": "Canada",
+   "slug": "can-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b32f2e",
+   "data": {
+    "areas": [
+     "Wales",
+     "Lowlands",
+     "Highlands",
+     "Hebrides",
+     "Brittany"
+    ],
+    "capital_required": true,
+    "regions": [
+     "Ireland"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Celtic peoples have a history spanning millennia. Although over the centuries they have suffered invasions from other peoples and seen their territory reduced to a shadow of their ancestral holdings, they have never fully lost their traditional beliefs, culture, or way of life. If a strong leader were to emerge and show them the way, the Celtic could unite once more, and finally claim their rightful place of power in this world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:CEL_f",
+   "mods": [],
+   "name": "Celtica",
+   "slug": "cel-f",
+   "type": "formable"
+  },
+  {
+   "color": null,
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "West China",
+     "East China",
+     "North China",
+     "South China"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Middle Kingdom refers to China, considered the cultural center of Far East Asia since Antiquity, and therefore in the center — or middle — of the world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:CHI_f",
+   "mods": [],
+   "name": "China",
+   "slug": "chi-f",
+   "type": "formable"
+  },
+  {
+   "color": "#2a6b11",
+   "data": {
+    "areas": [
+     "Matrega"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The division of the Circassian people into separate competing tribes must end. If we wish to grow strong and not succumb to external pressure, we must be brought together under a single powerful leader who can skillfully guide our people towards prosperity — and strike terror deep in the hearts of our enemies."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:CIR_f",
+   "mods": [],
+   "name": "Circassia",
+   "slug": "cir-f",
+   "type": "formable"
+  },
+  {
+   "color": "#803433",
+   "data": {
+    "areas": [
+     "Connaught"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "One of the traditional kingdoms of Ireland, Connacht boasts a long and storied history. Having gained enough influence to obtain High Kingship over the whole island, Connacht has a certain claim to tradition and leadership — but whether we will be able to stand firm in the face of would-be oppressors or not depends on our unification."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:CNN_f",
+   "mods": [],
+   "name": "Connacht",
+   "slug": "cnn-f",
+   "type": "formable"
+  },
+  {
+   "color": "#aee35f",
+   "data": {
+    "areas": [
+     "Croatia",
+     "Slavonia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The land of Croatia has been point of encounter between European West and East for centuries, between the waters of the Mediterranean and the many countries of the interior. Having been traversed by many peoples and cultures, it is under the Croatian identity that it will be able to flourish."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:CRO_f",
+   "mods": [],
+   "name": "Croatia",
+   "slug": "cro-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8ca9b7",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:CSH_f",
+   "mods": [],
+   "name": "Shùn",
+   "slug": "csh-f",
+   "type": "formable"
+  },
+  {
+   "color": "#fff4e8",
+   "data": {
+    "areas": [
+     "Al-Maġrib al-Adna",
+     "Tripoli",
+     "Sicily",
+     "Al-Maġrib al-Awsat"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The foul dogs of the Roman Empire burned the Carthaginian homeland to the ground, trying to erase every single memory of this ancient civilization. Gone may be their identity, culture and religion, but as long as a single Roman pretender exists, so does the need for a foil to these charlatans. We shall become the scourge to all those fools who glorify the Romans; we shall become the Heirs of Carthage!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:CTH_f",
+   "mods": [],
+   "name": "Carthage",
+   "slug": "cth-f",
+   "type": "formable"
+  },
+  {
+   "color": "#0b54b3",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "We have consolidated our territories and will now be able to establish a new country to resist foreign influences."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:DAH_f",
+   "mods": [],
+   "name": "Dahomey",
+   "slug": "dah-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b8ad12",
+   "data": {
+    "areas": [
+     "Croatia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Dalmatia has traditionally been a region dominated by foreigners, as its coasts, islands, and bays are all paramount to dominating the extremely lucrative Adriatic Sea trade routes. But why should foreigners reap the benefit of Dalmatia, when her own people deserve her riches far more? It is finally time to shake off foreign control of the region and establish an independent Dalmatia!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:DAL_f",
+   "mods": [],
+   "name": "Dalmatia",
+   "slug": "dal-f",
+   "type": "formable"
+  },
+  {
+   "color": "#598d8c",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Deccan"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "This land was once foreign to our ancestors, but we have made it our own. Here we have built a new society where Persian influences have met local ancient Indian traditions. We have our own language, our own administrative traditions and our own myths and legends. It is time we show the world that the South has overcome its differences and is united as one."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:DEC_f",
+   "mods": [],
+   "name": "Deccan",
+   "slug": "dec-f",
+   "type": "formable"
+  },
+  {
+   "color": "#9dc82a",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Hindustan"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Delhi was once the capital of the entire Indian subcontinent, and our own modern state is in many ways a continuation of their traditions.<br />The time of our resurgence has finally come. Let us reclaim the heritage of the sultans of Delhi, and rule the subcontinent from their ancient capital in the Doab!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:DLH_f",
+   "mods": [],
+   "name": "Delhi",
+   "slug": "dlh-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b50504",
+   "data": {
+    "areas": [
+     "Ulster",
+     "Hebrides",
+     "Highlands"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Gaelic peoples on the coasts around the Hebrides first united long ago, forming a kingdom famous for its seafaring culture and the strength of its fleet. We must claim this ancestral legacy and revive the kingdom."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:DRD_f",
+   "mods": [],
+   "name": "Dalriada",
+   "slug": "drd-f",
+   "type": "formable"
+  },
+  {
+   "color": "#43b08c",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Egypt"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "While the history of Egypt is beyond ancient, it was for vast stretches of time ruled by foreign invaders, not its native souls. Forging a new Egyptian state free from outside interference could restore our legendary Empire, much as the Nile overflows and replenishes the land along its banks."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:EGY_f",
+   "mods": [],
+   "name": "Egypt",
+   "slug": "egy-f",
+   "type": "formable"
+  },
+  {
+   "color": "#f23030",
+   "data": {
+    "areas": [
+     "Home Counties",
+     "East Anglia",
+     "West Country",
+     "Mercia",
+     "Wales",
+     "Northumbria",
+     "Lowlands"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Trade has long been a foundation of English national policy. By extending our influence across borders and controlling its political development domestically, we have managed to become a major European power. Our colonial expansion is becoming a major factor in promoting our nation's economic growth, reinforcing our position in world affairs."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:ENG_f",
+   "mods": [],
+   "name": "England",
+   "slug": "eng-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3878bf",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Ethiopia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The ancient empire of Ethiopia was the spiritual successor to the Aksumite Empire, the legendary home of King Solomon's son, and a stalwart bulwark of the Coptic faith. The fall of that Empire was a tragedy for the Coptic faithful, but the spirit of a unified Ethiopia still lives on, waiting to be revived by a worthy successor — like us!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:ETH_f",
+   "mods": [],
+   "name": "Ethiopia",
+   "slug": "eth-f",
+   "type": "formable"
+  },
+  {
+   "color": "#990200",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The land of Europe is home to a huge variety of people. With so many cultures, religions, languages, and lifestyles living side by side, Europe has seen its share of neighborly conflicts as well as cultural synthesis and cooperation. The idea of such a diverse population working towards a single goal seems highly improbable. However, if all the different groups in Europe united under a single banner and identity, we would achieve nearly unprecedented global power."
+    ]
+   ],
+   "facets": {
+    "level": "Level 5"
+   },
+   "id": "formable:EUR_f",
+   "mods": [],
+   "name": "Europa",
+   "slug": "eur-f",
+   "type": "formable"
+  },
+  {
+   "color": "#cc9c9b",
+   "data": {
+    "areas": [
+     "Finland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Over the centuries, the Finnish people have been ruled by foreign powers, and their lands controlled by foreign hands. But we have never lost our distinct Finnish ways nor our desire to subdue those who would oppress us for them, and our moment to break away is finally here. The time has come for the state of Finland to be born and take its place among the pantheon of nations!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:FIN_f",
+   "mods": [],
+   "name": "Finland",
+   "slug": "fin-f",
+   "type": "formable"
+  },
+  {
+   "color": "#34baeb",
+   "data": {
+    "areas": [
+     "Franconia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Once the seat of a powerful stem duchy, Franconia has declined over the centuries, and the associated title of Duke of Franconia has become nominal and irrelevant. But if we re-established our authority and were able to solidify control over the old duchy, we could finally resurrect the Franconia and restore its tarnished former splendor."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:FKN_f",
+   "mods": [],
+   "name": "Franconia",
+   "slug": "fkn-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ad2423",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "France"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "This year will mark the beginning of an evolutionary period for our nation. The old feudal ways must make way for a more modern, centralized state."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:FRA_f",
+   "mods": [],
+   "name": "France",
+   "slug": "fra-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e64745",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Britain"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "By uniting our political development domestically and extending our influence beyond our borders, we will be able to reinforce our position in world affairs and transform into one of the foremost European powers, the British Empire."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:GBR_f",
+   "mods": [],
+   "name": "Great Britain",
+   "slug": "gbr-f",
+   "type": "formable"
+  },
+  {
+   "color": "#be2325",
+   "data": {
+    "areas": [
+     "Georgia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The very landscape of Georgia and the ravages of foreign incursion have repeatedly tested our people's resilience, but we have triumphed, proving ourselves as tough as the mountains and highlands that protect us. With grit and determination, we shall see Georgia rise once again and flourish under our leadership."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:GEO_f",
+   "mods": [],
+   "name": "Georgia",
+   "slug": "geo-f",
+   "type": "formable"
+  },
+  {
+   "color": "#4b8287",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Northern Germany",
+     "Southern Germany"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Despite the absence of a strong central authority, our nation is prospering. The wealthy Hanseatic League, formed by hundreds of towns in northern Germany, has made our nation incredibly prosperous. Intellectual growth, combined with sea and overland trading, has also helped spur development and transform our country into a wealthy hub of manufacturing and intellectual innovation."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:GER_f",
+   "mods": [],
+   "name": "Germany",
+   "slug": "ger-f",
+   "type": "formable"
+  },
+  {
+   "color": "#014efe",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "We have gained possession of vast territories in Poland. Rather than impose direct rule over this diverse region, we shall establish the Galicia-Lodomeria as a crown land, allowing us to govern through traditional titles while maintaining imperial control."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:GLD_f",
+   "mods": [],
+   "name": "Galicia-Lodomeria",
+   "slug": "gld-f",
+   "type": "formable"
+  },
+  {
+   "color": "#090967",
+   "data": {
+    "areas": [
+     "Thrace",
+     "Northern Greece",
+     "Macedonia",
+     "Morea",
+     "Aegean Archipelago"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Since the earliest days of our civilization, Hellas has been divided, whether internally by its many competing kingdoms, or occupied by foreigners at the hands of our common enemies. Over the centuries, our power dwindled as we were conquered, split up, and our treasures taken by conquerors. It is an insult to our extensive legacy of art, sport, and invention to exist in such a fragmented state! To unite the Greek lands under one flag and one ruler is our only path back to the greatness of our past."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:GRE_f",
+   "mods": [],
+   "name": "Greece",
+   "slug": "gre-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e7e06b",
+   "data": {
+    "areas": [
+     "Gujarat",
+     "Saurashtra"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Gujarat has always had an identity distinct from the rest of India, and Gujarati people are proud of their ancient history and unique identity. We long for a nation of our own, where we may rule by these idiosyncratic principles. Luckily for us, it seems the moment to seize our independence is quickly approaching…"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:GUJ_f",
+   "mods": [],
+   "name": "Gujarat",
+   "slug": "guj-f",
+   "type": "formable"
+  },
+  {
+   "color": "#dcdcdc",
+   "data": {
+    "areas": [
+     "Lower Austria",
+     "Styria",
+     "Carinthia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "From Wien, the house of Habsburg once held absolute power in the Holy Roman Empire, and the very core of that power was the Archduchy of Austria. Now that empire has long since turned to ash, and the time has come for us to reclaim the Archduchy and the seat of Imperial power!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:HAB_f",
+   "mods": [],
+   "name": "Austria",
+   "slug": "hab-f",
+   "type": "formable"
+  },
+  {
+   "color": "#bf1717",
+   "data": {
+    "areas": [
+     "Lower Saxony"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "With the majority of Lower Saxony under our control, and Hanover secured, we will be able to proclaim ourselves as a new country, a beacon of strength to lead our people into the future! With determination and cunning, we shall establish ourselves as a decisive power within Northern Germany."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:HAN_f",
+   "mods": [],
+   "name": "Hanover",
+   "slug": "han-f",
+   "type": "formable"
+  },
+  {
+   "color": "#30a960",
+   "data": {
+    "areas": [
+     "North Hausaland",
+     "South Hausaland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "After decades of feuds and wars shattering our land, the old rivalries have finally been quashed, and peace realized. For the first time in living memory, the sons of Bawo are again reunited under the same banner. It is time for the Hausa to rise as one again!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:HAU_f",
+   "mods": [],
+   "name": "Hausa",
+   "slug": "hau-f",
+   "type": "formable"
+  },
+  {
+   "color": "#4b4b4b",
+   "data": {
+    "areas": [
+     "Northumbria",
+     "Lowlands"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Brythonic peoples could once be found all over the region of Britain. Although they were first forced away from the southern lands by both the Romans and the Anglo-Saxons, they managed to maintain a strong presence in the northern parts of the island until the arrival of the Gaelic peoples. Over time, we started losing our mother tongue and culture... but no more! It is time to reclaim the old kingdom of the north, and see the Brythonic people unified by law as well as by language."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:HEN_f",
+   "mods": [],
+   "name": "Hen Ogledd",
+   "slug": "hen-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ebffdc",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "People from India, although highly diverse in culture, traditions, and beliefs, all belong to this same land, and share its history. Therefore, we must put aside these differences and work towards a common goal of establishing a strong Hindustan state, presenting ourselves as a unified people against any who might oppose us."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:HIN_f",
+   "mods": [],
+   "name": "Hindustan",
+   "slug": "hin-f",
+   "type": "formable"
+  },
+  {
+   "color": "#96b1a1",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Northern Germany",
+     "Southern Germany"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The glory of the ancient Roman Empire lives in the memory of all in Europe. fra_charlemagne was crowned Roman Emperor, but it was not until the coronation of ogk_otto_liudolfinger that the current Holy Roman Empire was born, with the ambitions of forming a revived and unified European Empire."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:HRE_f",
+   "mods": [],
+   "name": "Holy Roman Empire",
+   "slug": "hre-f",
+   "type": "formable"
+  },
+  {
+   "color": "#98555c",
+   "data": {
+    "areas": [
+     "North Alföld",
+     "South Alföld",
+     "Transdanubia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The old Kingdom of Hungary was once the ultimate power in Carpathia, controlling the region for centuries. But even the strongest walls cannot stand forever, and the old state eventually fell apart, thanks to invasion and expansions by our rivals. Yet we have arrived at the precipice of greatness, and the time to resurrect the fallen Hungary is finally at hand. Let us rise to the great imperial heights we deserve to reach!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:HUN_f",
+   "mods": [],
+   "name": "Hungary",
+   "slug": "hun-f",
+   "type": "formable"
+  },
+  {
+   "color": "#2b3c75",
+   "data": {
+    "areas": [
+     "Iceland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Circumstances have led to our holdings in Iceland developing into the foremost part of our country. Let us embrace this new identity and establish the nation of Iceland. We shall strengthen our local institutions, firmly entrenching our right to rule over the island and bringing our people together at last."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:ICE_f",
+   "mods": [],
+   "name": "Iceland",
+   "slug": "ice-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c8b932",
+   "data": {
+    "areas": [
+     "Irâk al-'Arabi",
+     "Jazira",
+     "Shirvan",
+     "Armenia",
+     "Armenian Highlands",
+     "Georgia",
+     "Pontus",
+     "Cappadocia"
+    ],
+    "capital_required": true,
+    "regions": [
+     "Persia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Our empire once stretched across the world, endless and vibrant. Now it is a mere story, a historical footnote. This cannot stand — we are the heirs to the legacy of hulegu_khan_borjigin, and we deserve more! We shall reform our once-glorious empire, uniting our people and retaking what was once ours. And then more..."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:ILK_f",
+   "mods": [],
+   "name": "Īlkhānān",
+   "slug": "ilk-f",
+   "type": "formable"
+  },
+  {
+   "color": "#7d5c6e",
+   "data": {
+    "areas": [
+     "Acamama",
+     "Puna"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Altiplano is divided among many nations, each inhabiting the valleys and worshiping different gods. We are a people who speak many tongues and have diverse perspectives, yet together we represent a cultural and spiritual force few other nations could stand against. We shall bring all our scattered territories together to follow one strong leader. The sun shall cast its light over a unified realm!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:INC_f",
+   "mods": [],
+   "name": "Tawantinsuyu",
+   "slug": "inc-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3e8114",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Persia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Persia has been the seat of powerful empires since the ancient days of Cyrus the Great. Without these Iranian kingdoms of the past, our modern world would be decades behind where we are now in terms of invention, science, and the arts.\n\nWe now dwell in the dust of that greatness, dreaming of a unified Iranian state, but perhaps not for much longer — the possibility of a resurrected Iranian nation does not seem so intangible anymore. It is time for us to reclaim our glorious legacy, and to elevate one of our own with the title of Šâh."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:IRA_f",
+   "mods": [],
+   "name": "Persia",
+   "slug": "ira-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8c2524",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Ireland"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "For decades, England has attempted to subjugate the Irish population and control the island and its inhabitants from afar. Uniting Irish lands under a single flag and purpose may be our only chance to repel these merciless conquerors!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:IRE_f",
+   "mods": [],
+   "name": "Ireland",
+   "slug": "ire-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8c2524",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": [
+     "Ireland"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "With the mandate of the High King behind us, the patchwork of Irish tuatha, túath and tribe can be drawn together into a single nation under one banner — Ireland made whole."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:IRE_high_kingship_f",
+   "mods": [],
+   "name": "Ireland",
+   "slug": "ire-high-kingship-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8c2524",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": [
+     "Ireland"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Centuries of Anglo-Norman administration have woven the island into a single political fabric. As Lord of Ireland we have the standing to bind those threads into a nation — Ireland made whole, whether held under our existing crown or set apart as a realm in its own right."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:IRE_lordship_of_ireland_f",
+   "mods": [],
+   "name": "Ireland",
+   "slug": "ire-lordship-of-ireland-f",
+   "type": "formable"
+  },
+  {
+   "color": "#57b650",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The tribes of the Haudenosaunee have long coexisted in a formal confederation, although each nation within the tribe retained its own autonomy. But times have changed, and we have made the strategic decision to make our current ties even stronger. With the five nations now led by a central tribe, we can push forward as a newly strengthened confederacy."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:IRO_f",
+   "mods": [],
+   "name": "Haudenosaunee",
+   "slug": "iro-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ab5454",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Italy"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "As the heart of the Renaissance, our nation's culture is blossoming. We seem to have just entered a period of prolonged artistic innovation, especially in the fields of architecture and literature, and are reaping the rewards accordingly. This cultural evolution does not help us maintain peace within our borders, however, and our country is continuously stricken by foreign states seeking power and territorial gain. Perhaps it is time to unite in a decisive demonstration of our power — if for no other reason than to intimidate would-be usurpers by displaying a united front."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:ITA_f",
+   "mods": [],
+   "name": "Italy",
+   "slug": "ita-f",
+   "type": "formable"
+  },
+  {
+   "color": null,
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:JAP_f",
+   "mods": [],
+   "name": "Japan",
+   "slug": "jap-f",
+   "type": "formable"
+  },
+  {
+   "color": "#616687",
+   "data": {
+    "areas": [
+     "Desht-i Kipchak",
+     "Zhetysu"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Across the windswept expanse of the steppes, the kazakh people roam free without a unifying ruler, leaving us vulnerable to outside attacks. But were we to finally be brought together under the command of a single leader, and to share an identity as a nation, we could turn the tide. Thus, we shall unite under one flag to rule the seas of grass as mighty Kazakh."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:KAZ_f",
+   "mods": [],
+   "name": "Kazakh",
+   "slug": "kaz-f",
+   "type": "formable"
+  },
+  {
+   "color": "#8998b7",
+   "data": {
+    "areas": [
+     "Al-Maġrib al-Adna",
+     "Tripoli"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "In days past, the Normans created a Christian kingdom in Africa, bridging both sides of the Mediterranean. But that fledgling nation was decimated, devoured by the enemies of Christ. Now that it is within our reach to do so, it is our duty to recover that territory and bring the glory of our Lord to them once again."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:KOA_f",
+   "mods": [],
+   "name": "Africa",
+   "slug": "koa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d3e6d3",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Jerusalem is the promised land, a sacred city that people of many faiths look to as the birthplace of their beliefs. Thus, a Kingdom of Heaven shall be proclaimed over this holy land. Let all who worship be amazed at our splendor!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:KOJ_f",
+   "mods": [],
+   "name": "Jerusalem",
+   "slug": "koj-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c7a08b",
+   "data": {
+    "areas": [
+     "West Kongo",
+     "Kongo"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Kongo people are a branch of the Bantu. Although great diversity exists among our people, we also have many commonalities in our daily spiritual and cultural practices. If we connect along these shared characteristics and agree to be a united nation rather than an assortment of individual settlements, the Kongo-speaking peoples will be able to achieve more than ever before."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:KON_f",
+   "mods": [],
+   "name": "Kongo",
+   "slug": "kon-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1268b8",
+   "data": {
+    "areas": [
+     "Kordestān"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Kurdish people have always lived in autonomous tribes, without a central unifying figure to lead them. But if we were to establish a Kurdish nation, and to bring our scattered groups together as one, we could easily become the authoritative power in the region."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:KRS_f",
+   "mods": [],
+   "name": "Kurdistan",
+   "slug": "krs-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d7d00e",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Situated on the shores of the Caspian Sea and in the heart of Gilak, Gilan has existed under the shadow of Persia for centuries. The time has come for us to establish its presence on the world stage, and emerge as an independent power."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:KRY_f",
+   "mods": [],
+   "name": "Gilan",
+   "slug": "kry-f",
+   "type": "formable"
+  },
+  {
+   "color": "#bcbcbc",
+   "data": {
+    "areas": [
+     "Northern Greece",
+     "Morea"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The old Roman Empire survived centered around Constantinople, although they followed Orthodoxy instead of the proper Catholicism faith of Rome. As such, it is our sacred duty to supplant them as Eastern Rome, establishing a Catholicism Emperor in Constantinople."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:LAT_REDUCED_REQUIREMENTS_f",
+   "mods": [],
+   "name": "Latin Empire",
+   "slug": "lat-reduced-requirements-f",
+   "type": "formable"
+  },
+  {
+   "color": "#bcbcbc",
+   "data": {
+    "areas": [
+     "Northern Greece",
+     "Morea"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The old Roman Empire survived centered around Constantinople, although they followed Orthodoxy instead of the proper Catholicism faith of Rome. As such, it is our sacred duty to supplant them as Eastern Rome, establishing a Catholicism Emperor in Constantinople."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:LAT_f",
+   "mods": [],
+   "name": "Latin Empire",
+   "slug": "lat-f",
+   "type": "formable"
+  },
+  {
+   "color": "#7d1e64",
+   "data": {
+    "areas": [
+     "Baltic"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The lands of Curonia, Livonia, and Estonia were once part of the Livonian Order, who swore to convert their conquered territories to Christianity. While the Order built a functioning state, it did so on the backs of the very people it had conquered, who planted seeds of resentment alongside their crops. Should the Order fail to uphold the order of society, they would be easy enough to replace with a bit of force and Livonian courage."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:LIV_f",
+   "mods": [],
+   "name": "Livonia",
+   "slug": "liv-f",
+   "type": "formable"
+  },
+  {
+   "color": "#5f6acf",
+   "data": {
+    "areas": [
+     "Lorraine",
+     "Wallonia",
+     "Brabant",
+     "Friesland",
+     "Rhineland",
+     "Alsace"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "As the new claimants to the Lotharingian crown, we confirmed our legitimacy by appealing to the legacy of fra_charlemagne and fra_lothair. Under our patronage, the exploits of our ancestors have once again become common knowledge, both among our own people and throughout the courts of Europe."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:LOT_f",
+   "mods": [],
+   "name": "Lotharingia",
+   "slug": "lot-f",
+   "type": "formable"
+  },
+  {
+   "color": "#960e14",
+   "data": {
+    "areas": [
+     "Baltic",
+     "Lithuania",
+     "Prussia",
+     "Samogitia",
+     "West Novgorod"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The vast lands of the Baltic region have long been divided among various tribes and Germanic states, none of which have been able to assert dominance over the others. However, the time has come for a new power to rise from these lands, uniting the diverse peoples of the Baltic under a single banner and identity."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:LVA_f",
+   "mods": [],
+   "name": "the Baltic",
+   "slug": "lva-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ffffb9",
+   "data": {
+    "areas": [
+     "Mali",
+     "Ghana"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The lands of the Mandinka have a proud history of wealth, cultural influence, and piety, exemplified by our forefather mal_musa_keita. Although this resplendence has been lost to time, if we were united once again, we could restore the commercial networks and political unity that once made the Mandinka masters of trade, and elevate our people to never-before-seen echelons of power."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:MAL_f",
+   "mods": [],
+   "name": "Mali",
+   "slug": "mal-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b55453",
+   "data": {
+    "areas": [
+     "Cháak te' éemal",
+     "Chilapan",
+     "Ma'ya'ab",
+     "Peten",
+     "Pu'uk",
+     "Tezulutlan"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "For centuries, our people have been divided into independent cities, which themselves have been locked in bitter competition with each other. This has created an environment of energy and innovation, but we lack the unity needed to stay strong in the face of external pressures. By unifying all Mayan settlements into a single realm, our nation will thrive, and reach the heights of power it soundly deserves to reach."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:MAY_f",
+   "mods": [],
+   "name": "Maya",
+   "slug": "may-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c3959b",
+   "data": {
+    "areas": [
+     "Mazovia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Despite being one of the major Polish cultures, the Mazovians are culturally and linguistically distinct from other Polish groups. Given this, it seems fitting for our people to demand the unification of all Mazovian lands under a single ruler, as only that way will we be able to fully demonstrate our unique power and glory to the world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MAZ_f",
+   "mods": [],
+   "name": "Mazovia",
+   "slug": "maz-f",
+   "type": "formable"
+  },
+  {
+   "color": "#a58439",
+   "data": {
+    "areas": [
+     "Liáodōng",
+     "Lower Amur",
+     "Middle Amur",
+     "Songhua",
+     "Songnen",
+     "Ussuri"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The people of Manchuria have a long history of both nomadic tribal living and frequent interactions with the Middle Kingdom. As such, we have blended aspects from many cultures and places to create our own distinct way of life. Although we are usually divided into numerous tribes, a united Manchuria may be able to claim hegemony over all China. Shall we press forward with unification?"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MCH_f",
+   "mods": [],
+   "name": "Manchu",
+   "slug": "mch-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d99898",
+   "data": {
+    "areas": [
+     "Munster"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Munster, the great southern province of Ireland, was home to kings such as Brian Boru who once claimed the high kingship of the whole island. With Munster's fertile lands and Atlantic harbours under our banner, we shall revive this ancient kingdom and stand as masters of the south."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MCM_f",
+   "mods": [],
+   "name": "Munster",
+   "slug": "mcm-f",
+   "type": "formable"
+  },
+  {
+   "color": "#db7c8b",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Mesoamerica"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The lands of Mesoamerica are rich and plentiful, with a diverse population and a long history of civilization. Yet we are fractured between different groups, and weakened by internal bickering over power and resources between those groups. It is time we establish a new identity for all of us, one that shows off our strength, power, and enviable history while also presenting a unified and impenetrable front to the rest of the world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MEX_f",
+   "mods": [],
+   "name": "Mexico",
+   "slug": "mex-f",
+   "type": "formable"
+  },
+  {
+   "color": "#82b4f0",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Mongolia",
+     "Persia",
+     "East China",
+     "North China",
+     "South China",
+     "West China",
+     "Pontic Steppe",
+     "Russia",
+     "Khorasan",
+     "Xinjiang"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The empire of GetCharacter('genghis khan') Khān, once the mightiest in the world, has all but disappeared. We are now a fragmented people, scattered and disconnected. But we are still Mongols, and we have never lost hope of capturing what we have lost. We must restore our legacy by replicating the Great Khān's conquests. The Mongol Empire will rise to conquer once more!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:MGE_f",
+   "mods": [],
+   "name": "Mongol Empire",
+   "slug": "mge-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b4f082",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Mongolia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The people of Mongolia have not seen unity since the times of the great GetCharacter('genghis khan') Khān. It is now in our hands to unify the tribes once again and march into a new era of conquests."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MGO_f",
+   "mods": [],
+   "name": "Mongolia",
+   "slug": "mgo-f",
+   "type": "formable"
+  },
+  {
+   "color": "#437cb5",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Deccan"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Marathi peoples have been fragmented for many years, but remain proud of our literary achievements and unique language. While unification may not be foremost in our peoples' minds, Marathi warriors all over Deccan will gather to our banners if we show clear leadership and acquire all the great forts of the Desh. Let us unite the clans, and go forth to rule India once and for all!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MHR_f",
+   "mods": [],
+   "name": "Maratha",
+   "slug": "mhr-f",
+   "type": "formable"
+  },
+  {
+   "color": "#2b2bba",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Madagascar"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Ours is an island of many influences, a conflux of cultures that has created unique syncretic beliefs and ways of life. Although this mixture of differences is part of what makes us great, we should promote the idea of our being a unified people despite these distinctions. A unified Malagasy state under our leadership will allow our island to prosper and ensure stability — and increased power — for our people."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:MIR_f",
+   "mods": [],
+   "name": "Imerina",
+   "slug": "mir-f",
+   "type": "formable"
+  },
+  {
+   "color": "#378c8f",
+   "data": {
+    "areas": [
+     "Mecklenburg"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "With the unification of the Mecklenburgian territories, we can create a new, independent Dukedom within northern Germany. This new state will be able to undo the mistakes of the past, avoiding the fracturing of our territories into multiple sovereign countries and creating a counterbalance to the rivals who covet our lands."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MKL_f",
+   "mods": [],
+   "name": "Mecklenburg",
+   "slug": "mkl-f",
+   "type": "formable"
+  },
+  {
+   "color": "#6460c5",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Situated on a crucial maritime trade route, the straits of Malacca have always maintained control of the trade flowing through, and thus control of its wealth. Perfectly positioned to benefit from this trade, and holding a land itself rich in resources and tradition, the Malay people have always flourished in these lands. With a unified identity, they will flourish even more."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:MLC_f",
+   "mods": [],
+   "name": "Malacca",
+   "slug": "mlc-f",
+   "type": "formable"
+  },
+  {
+   "color": "#889d17",
+   "data": {
+    "areas": [
+     "Moldavia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "For too long, the Moldovans have lived under different warlords, who in turn were subjects of more powerful rulers. But now the moment has come to supplant these odious middlemen and crush the rule of our oppressors! It is time to reunite our people under the banner of the Bull, and ensure the bright and independent future of our nation."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MOL_f",
+   "mods": [],
+   "name": "Moldavia",
+   "slug": "mol-f",
+   "type": "formable"
+  },
+  {
+   "color": "#bf6e3e",
+   "data": {
+    "areas": [
+     "Al-Maġrib al-Aqṣā",
+     "Sūs"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The history of our nation is one of rise and fall, great dynasties collapsing only to be reborn. Yet among the ebb and flow of this dynastic chaos, our culture shines like a precious jewel. We are a people of art, learning, science, and progress, the light in this region. Our nation must achieve lasting stability and grow powerful through unity, ensuring the prosperity of our people and striking fear into the hearts of our enemies."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:MOR_f",
+   "mods": [],
+   "name": "Morocco",
+   "slug": "mor-f",
+   "type": "formable"
+  },
+  {
+   "color": "#500aa5",
+   "data": {
+    "areas": [
+     "Malay Peninsula"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Situated on a crucial maritime trade route, the straits of Malacca have always maintained control of the trade flowing through, and thus control of its wealth. Perfectly positioned to benefit from this trade, and holding a land itself rich in resources and tradition, the Malay people have always flourished in these lands. With a unified identity, they will flourish even more."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MSA_f",
+   "mods": [],
+   "name": "Malaya",
+   "slug": "msa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1b802d",
+   "data": {
+    "areas": [
+     "East Mossi",
+     "West Mossi"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "We are a people deeply devoted to our unique beliefs and traditions, proud of our political acumen and military strength. Yet despite our deeply ingrained culture, our people have failed to unify as a single group, and the consequences of that division have been dire. Only through unity can our people find peace and enjoy prosperity — we must achieve it!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MSI_f",
+   "mods": [],
+   "name": "Mossi",
+   "slug": "msi-f",
+   "type": "formable"
+  },
+  {
+   "color": "#eb3534",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Meath was once counted among the great provinces of Ireland, a kingdom whose kings held sway over much of Leinster and whose territory encompassed the ancient seat of Tara. By consolidating our hold over these lands, we can restore that ancient legacy and reclaim the kingdom's rightful place among the realms of Ireland."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:MTH_f",
+   "mods": [],
+   "name": "Meath",
+   "slug": "mth-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e3a25e",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:MTM_f",
+   "mods": [],
+   "name": "Mataram",
+   "slug": "mtm-f",
+   "type": "formable"
+  },
+  {
+   "color": "#216030",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Hindustan"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Our ruler has begun to lay the foundations for a new empire. Although inferior in numbers, our well-disciplined troops have won several decisive victories against the sultans of India. These battles for India are merely the first great victories in what will surely be a series of successful territorial expansions. With time, the empire of the Mughals will stretch across not only this region, but all the world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:MUG_f",
+   "mods": [],
+   "name": "Mughal",
+   "slug": "mug-f",
+   "type": "formable"
+  },
+  {
+   "color": "#940000",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Originally a march of the Carolingian Empire, the legendary Christianity kingdom founded by the warlord Íñigo Arista has been lost for too long. These lands must be reunited, and the Basque peoples unified under the chained banner of Navarre!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:NAV_f",
+   "mods": [],
+   "name": "Navarre",
+   "slug": "nav-f",
+   "type": "formable"
+  },
+  {
+   "color": "#fa5405",
+   "data": {
+    "areas": [
+     "Brabant",
+     "Flanders",
+     "Friesland",
+     "Holland",
+     "Wallonia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Dutch are emerging as one of Europe's most capable naval and colonial powers. Lucrative trade opportunities, locally and overseas, have resulted in a swift evolution that has transformed the country into one of the first capitalist nations in history. Complementing this superlative economic acumen are the Dutch talents for innovation and creativity, which turn our culture into a light shining all over the world. A unified Dutch state, therefore, stands to be one of the wealthiest and most influential of all time."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:NED_f",
+   "mods": [],
+   "name": "Netherlands",
+   "slug": "ned-f",
+   "type": "formable"
+  },
+  {
+   "color": "#a62a28",
+   "data": {
+    "areas": [
+     "Lowlands",
+     "Northumbria"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "For too long, the lands of the Northumbrians have been governed by southerners or people from across the sea. It is time for us to take the reins of our nation and reclaim the glory our ancestors once knew. The lords of the North shall rise once more!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:NOL_f",
+   "mods": [],
+   "name": "Northumberland",
+   "slug": "nol-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d70c40",
+   "data": {
+    "areas": [
+     "Nepal"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Despite their proud and ancient histories, the Himalayan kingdoms remain fragmented and weak. By uniting the entire region under one ruler, we could become an unstoppable force, capable of challenging the soft, voluptuous rulers of Hindustan. Content to live off their wealth, they have squandered their riches for generations, and will be no match for our hardened armies."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:NPL_f",
+   "mods": [],
+   "name": "Nepal",
+   "slug": "npl-f",
+   "type": "formable"
+  },
+  {
+   "color": "#5b53cb",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Although the Duchy of Nassau was neither the most stable nor the most famous of its peers, our founding dynasty connects us to many crowned heads of Europe, giving us a strong position from which to claim authority. To make our voice within Germany heard, we must unify the lands of Nassau once and for all and reassert the strength of this dynastic legacy, preventing any further fracturing of our rightful territory."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:NSA_f",
+   "mods": [],
+   "name": "Nassau",
+   "slug": "nsa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e05958",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Britain",
+     "Ireland",
+     "Scandinavia",
+     "North Atlantic Islands"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The lands once owned by eng_cnut_the_great extended over both sides of the North Sea, from Scandinavia to Britain. Although this territory has fragmented and reformed into different holdings over time, it has always been lying in wait, eagerly anticipating our rise and reclamation. It is time to establish this incredible empire once again, with all those lands coming together under our banner."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:NSE_f",
+   "mods": [],
+   "name": "North Sea Empire",
+   "slug": "nse-f",
+   "type": "formable"
+  },
+  {
+   "color": "#611515",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "New Zealand"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Māori people of New Zealand have always divided themselves into separate tribes, deeply connected through kinship and marriage. On one hand, our separation and individualism has created a cultural resilience that gives our traditional ways room to thrive. On the other hand, we could more easily repel attempted invaders were we to unite under a single banner and present our people as a holistic power. Perhaps this is the way of our future?"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:NTR_f",
+   "mods": [],
+   "name": "United Tribes",
+   "slug": "ntr-f",
+   "type": "formable"
+  },
+  {
+   "color": "#9c520e",
+   "data": {
+    "areas": [
+     "Nubia",
+     "Butana"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Our nation is ancient, but it has not endured. Divided among competing rulers, we have one by one fallen prey to stronger enemies. The lands before the Nile Cataracts must be unified under a single rule, capable of resisting those enemies and defeating them in battle, if we are ever to rise again as a realized power in this world."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:NUB_f",
+   "mods": [],
+   "name": "Nubia",
+   "slug": "nub-f",
+   "type": "formable"
+  },
+  {
+   "color": "#5b1880",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Indonesia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Indonesia is a rich land, overflowing with precious resources and luxuries. Although its people are varied and diverse, many of their traditional cultural aspects are the same, mainly due to the diffusive effects of maritime trade. Were we to unite these many islands and peoples under one banner, we would be a strong contender for ultimate regional dominance."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:NUS_f",
+   "mods": [],
+   "name": "Nusantara",
+   "slug": "nus-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c8141e",
+   "data": {
+    "areas": [
+     "Provence",
+     "Languedoc"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The lands of Occitania have always had their own distinguishing traits. Even the noun itself denotes that difference, as its appellation as the land of ''òc'', makes it clearly distinct from the lands of ''si'' and ''oïl''. These shared cultural bonds entice the people of Occitania to unite under a single banner, and to proudly display their idiosyncrasy."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:OCC_f",
+   "mods": [],
+   "name": "Occitania",
+   "slug": "occ-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ffba00",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:PGR_f",
+   "mods": [],
+   "name": "Pagarruyung",
+   "slug": "pgr-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b0516f",
+   "data": {
+    "areas": [
+     "Central Poland",
+     "Greater Poland",
+     "Lesser Poland",
+     "Lithuania",
+     "Mazovia",
+     "Prussia",
+     "Samogitia",
+     "Silesia",
+     "Polesia",
+     "Volhynia",
+     "Red Ruthenia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "By uniting the crowns of Lithuania and Poland under the same banner, we will become a beacon of hope and faith in Eastern Europe, bringing our light to the heart of even the darkest forests flourishing across our lands."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:PLC_f",
+   "mods": [],
+   "name": "Commonwealth",
+   "slug": "plc-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c55c6a",
+   "data": {
+    "areas": [
+     "Central Poland",
+     "Greater Poland",
+     "Lesser Poland",
+     "Mazovia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The kingdom that the Piasts once worked so hard to reunify is now divided and without leadership. There is too much glory in our history and too much promise in our future to allow Poland to remain cut into pieces — we must strive to unite the Polish people and create a nation that will shine even brighter than our kingdoms of the past!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:POL_f",
+   "mods": [],
+   "name": "Poland",
+   "slug": "pol-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3d8842",
+   "data": {
+    "areas": [
+     "Pomerania"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Pomeranian territory occupies a vital position along the Baltic coastline. If we want to profit from our strategic position, and take advantage of being on a busy trade route, we must do away with the old divisions and succession squabbles, and reform a united Pomeranian Duchy."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:POM_f",
+   "mods": [],
+   "name": "Pomerania",
+   "slug": "pom-f",
+   "type": "formable"
+  },
+  {
+   "color": "#f8c500",
+   "data": {
+    "areas": [
+     "Pontus",
+     "Crimea"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Founded by Mithridates I Ktistes (meaning ''the Builder''), Pontus became a vibrant and wealthy crossroads between Persian and Anatolian roots, blended with Hellenistic influences. Strategically positioned between easily defensible mountainous terrain and seafaring Greek coastal communities, the Kingdom prospered, including important cities such as Amaseia and Sinope. At the height of its power, the realm stretched from the depths of Cappadocia to the coasts of Crimea. By reasserting such a glorious legacy, we affirm our right to rule these lands in an undisputed manner."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:PON_f",
+   "mods": [],
+   "name": "Pontus",
+   "slug": "pon-f",
+   "type": "formable"
+  },
+  {
+   "color": "#4d100f",
+   "data": {
+    "areas": [
+     "Prussia"
+    ],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The land once conquered and Germanized by the Teutonic Order will always require protection against rapacious outside forces. But should the Order fail in this duty, we can take their place and usher in a new era of prosperity and Prussian discipline."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:PRU_f",
+   "mods": [],
+   "name": "Prussia",
+   "slug": "pru-f",
+   "type": "formable"
+  },
+  {
+   "color": "#128be4",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Descendants of the ancestral Puebloans, the tribes of Ali Shon have retained aspects of their ancestral ways despite having diverged into varying cultures. While we desire unification of these fractured tribes, this means we must contend with new cultural developments that have sprung up in individual pueblos. But these idiosyncrasies will make our union stronger and more unique, if we can find harmony."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:PUE_f",
+   "mods": [],
+   "name": "Pueblo",
+   "slug": "pue-f",
+   "type": "formable"
+  },
+  {
+   "color": "#bb4f56",
+   "data": {
+    "areas": [
+     "Punjab"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Punjabi people are only too familiar with foreign invasions, having endured wave after wave of conquest over the centuries. But these incursions have led to enormous advances in our economic and religious practices, as well as a flourishing of literary arts. But we must unite the Punjabi people if we wish to ever stand on our own against foreign invaders. Together, we will build a modern state with armies capable of taking on anyone who wishes to seize our territories and crush our faith!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:PUN_f",
+   "mods": [],
+   "name": "Punjab",
+   "slug": "pun-f",
+   "type": "formable"
+  },
+  {
+   "color": "#310d16",
+   "data": {
+    "areas": [
+     "Rajputana"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The lands of Rajputana have been shattered and weak ever since the Muslim invasion. But that was centuries ago, and our people have begun to raise their heads from the yoke of our oppressors, seeking a place closer to the stars where we belong. We must reclaim the legendary cities held by the great dynasties that came before us, and unite the princes of Rajputana!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:RJP_f",
+   "mods": [],
+   "name": "Rajputana",
+   "slug": "rjp-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1560b2",
+   "data": {
+    "areas": [
+     "Wallachia",
+     "Transylvania",
+     "Moldavia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The last vestiges of the Roman Empire are gone, and although many pretenders claim the imperial crown, only we are its true descendants. When the lands of our ancestors have finally been reunited under a single flag, only then will we be rewarded with the prosperity that is our birthright. We are the children of Rome - the people of Romania!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:RMN_f",
+   "mods": [],
+   "name": "Romania",
+   "slug": "rmn-f",
+   "type": "formable"
+  },
+  {
+   "color": "#803433",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": [
+     "Italy"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "We are the true successors of the Roman Empire, and we will not allow barbarians to claim our legacy! By reestablishing ourselves in Italia, we will prove to the rump states of the West that we are the true heirs of Rome!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 5"
+   },
+   "id": "formable:ROM_BYZ_f",
+   "mods": [],
+   "name": "Roman Empire",
+   "slug": "rom-byz-f",
+   "type": "formable"
+  },
+  {
+   "color": "#803433",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Italy",
+     "Iberia",
+     "France",
+     "Balkans",
+     "Britain",
+     "Anatolia",
+     "Southern Germany",
+     "Crescent",
+     "Egypt",
+     "Maghreb",
+     "Carpathia",
+     "Caucasus"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Not since the second century has one empire commanded the entirety of the Mediterranean and beyond, and that empire was mighty Rome. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire, and proclaim ourselves as the ''true'' successors of the Roman Empire. ''Cives Romani sumus''!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 5"
+   },
+   "id": "formable:ROM_f",
+   "mods": [],
+   "name": "Roman Empire",
+   "slug": "rom-f",
+   "type": "formable"
+  },
+  {
+   "color": "#1ea0cb",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Anatolia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "At its height, the Sultanate of Rum was the major power in Anatolia. Sadly, it was fragmented by constant brutal invasions and vicious succession disputes, falling into obscurity. But we have the will and the power to reforge the broken pieces of Anatolia under one rule and restore our long-forgotten Sultanate!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:RUM_f",
+   "mods": [],
+   "name": "Rûm",
+   "slug": "rum-f",
+   "type": "formable"
+  },
+  {
+   "color": "#608350",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Russia",
+     "Ural",
+     "Pontic Steppe"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Through conquest and diplomacy, Russia has managed to transform itself from a tiny settlement into a dominant power. After several expeditions in the east, the Mongol hordes have finally been subdued, and a centralized Russian state under the suzerainty of the Tsar is emerging. Influences from Western Europe are helping us modernize and reform our nation, and we are adopting a more modern style of education. Given our history of rapid growth and our modern political and cultural gifts, it seems only natural that the Russian Empire should rise and hold sway over lesser nations."
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:RUS_f",
+   "mods": [],
+   "name": "Russia",
+   "slug": "rus-f",
+   "type": "formable"
+  },
+  {
+   "color": "#5a8a85",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Inhabited by the Ryūkyū people and boasting a unique culture and identity, the islands of Ryūkyū have always been fragmented due to their own nature. However, uniting the kingdoms of the three mountains would build a nation of great prosperity and culture — one that could change the entire course of history."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:RYU_f",
+   "mods": [],
+   "name": "Ryūkyū",
+   "slug": "ryu-f",
+   "type": "formable"
+  },
+  {
+   "color": "#7592a7",
+   "data": {
+    "areas": [
+     "Sardinia"
+    ],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Our island has long been bitterly divided between our Judicates and foreign rulers. These dark times must end, and a ruler who unifies Sardinia shall govern us all, bringing peace and prosperity to our people... and war and devastation to our enemies. As they justly deserve."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SAR_f",
+   "mods": [],
+   "name": "Sardinia",
+   "slug": "sar-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3c82b9",
+   "data": {
+    "areas": [
+     "Sardinia",
+     "Piedmont"
+    ],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The union of the island of Sardinia with the mainland territory of Piedmont provides the perfect staging base from which to exert control over the rest of Italy and become one of the main forces in the Mediterranean."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SAR_piedmont_f",
+   "mods": [],
+   "name": "Sardinia-Piedmont",
+   "slug": "sar-piedmont-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b59594",
+   "data": {
+    "areas": [
+     "Lower Saxony",
+     "Upper Saxony"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Duchy of Saxony was once an influential stem duchy within the old empire. While its core territories have shifted over time, the title has retained its prestige and renown. If we wish to be recognized as the rightful heir to the Saxon title, we must persuade the Emperor of the Holy Roman Empire to become an elector, a role which will be given to the Duke of Saxony."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SAX_f",
+   "mods": [],
+   "name": "Saxony",
+   "slug": "sax-f",
+   "type": "formable"
+  },
+  {
+   "color": "#3e7abd",
+   "data": {
+    "areas": [
+     "Iceland"
+    ],
+    "capital_required": true,
+    "regions": [
+     "Scandinavia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "For untold centuries, the Kingdoms of the North have been divided and locked in internecine power struggles. If we want to stand tall amongst the great powers of the world, we must strive to create a lasting union between our peoples, as difficult as this might seem."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SCA_f",
+   "mods": [],
+   "name": "Scandinavia",
+   "slug": "sca-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c70c0c",
+   "data": {
+    "areas": [
+     "Lowlands",
+     "Highlands",
+     "Hebrides"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The once proud nation of Scotland has fallen into ruin. Yet, despite our shattered state, there remain some among the Clans with the will to restore our kingdom. We will muster our courage and fight for a free and independent Scotland!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SCO_f",
+   "mods": [],
+   "name": "Scotland",
+   "slug": "sco-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b51818",
+   "data": {
+    "areas": [
+     "Serbia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Land of the Serbs has been divided and ruled by foreign powers for far too long, this is an insult to our national pride. Our people long to be ruled by one born among them. The path to unification is hard, but we must not rest until every city and settlement from the Danube to the southern mountains belongs to Serbia once more."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SER_f",
+   "mods": [],
+   "name": "Serbia",
+   "slug": "ser-f",
+   "type": "formable"
+  },
+  {
+   "color": "#faf0d7",
+   "data": {
+    "areas": [
+     "Shan Highland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The [game_concept_ShowLanguageFamilyName(tai_language_family)] peoples of the Shan Highland have long been masters of our domain. We have carved the surrounding hills into terraced farms; we have built temples that will stand forever in testament to our gods. Yet we are also cursed by being trapped between larger, more powerful nations, often swept up in their fighting. But no more — although we were once divided, we Shan now stand as one against them all!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SHA_f",
+   "mods": [],
+   "name": "Shan",
+   "slug": "sha-f",
+   "type": "formable"
+  },
+  {
+   "color": "#dc969e",
+   "data": {
+    "areas": [
+     "Holstein"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "After many years of being controlled by one noble family or another, we have finally established ourselves as the supreme rulers of Holstein. It is our right to reform our territorial possessions into one country, and therefore we shall."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SHL_f",
+   "mods": [],
+   "name": "Holstein",
+   "slug": "shl-f",
+   "type": "formable"
+  },
+  {
+   "color": "#59c2dd",
+   "data": {
+    "areas": [
+     "Chao Phraya",
+     "Northern Tai Highland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Thai people live divided by mountains and river valleys, between overlapping spheres of influence, and thus have always gravitated towards local centers of power rather than a central authority. But a unified Thai homeland would be more beneficial than our current dispersed nature — that consolidation of our power would make it much easier to lead our people to greatness."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SIA_f",
+   "mods": [],
+   "name": "Siam",
+   "slug": "sia-f",
+   "type": "formable"
+  },
+  {
+   "color": "#54a65d",
+   "data": {
+    "areas": [
+     "Silesia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Silesia has been divided into Duchies and ruled from foreign capitals for centuries. Like jewels on a broken necklace, each part yearns to be restored to its whole and perfect state. Therefore, the hour has come for Silesia to cast aside foreign rule and quench the fires of internal division, creating a new, unified Silesian nation."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SIL_f",
+   "mods": [],
+   "name": "Silesia",
+   "slug": "sil-f",
+   "type": "formable"
+  },
+  {
+   "color": "#c9132bc",
+   "data": {
+    "areas": [
+     "North Hausaland",
+     "South Hausaland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The presence of Islam in the region of Western Africa is ever-precarious. With so many different peoples represented in our population, we run the risk of religious conflict erupting at any moment, both inside and coming from outside our borders. Under the guidance of our Root, we must establish an orthodox Islamic state to ensure the survival of Sunnism people in this region."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SKO_f",
+   "mods": [],
+   "name": "Sokoto",
+   "slug": "sko-f",
+   "type": "formable"
+  },
+  {
+   "color": "#2283c1",
+   "data": {
+    "areas": [
+     "Slovakia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Ever since the collapse of the Great Moravian State, the Slovak people have been ruled by foreign powers, who govern over us with little regard to our interests. But during this dark period, we have slowly but surely been growing our power, our people drawing closer together in solidarity. It is finally time to assert our sovereignty and establish a state free from foreign rule."
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SLO_f",
+   "mods": [],
+   "name": "Slovakia",
+   "slug": "slo-f",
+   "type": "formable"
+  },
+  {
+   "color": "#34baeb",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Somalia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "From the grasslands of Africa, to the sands of Arabia, and even to the coasts of India, the Somali people have walked between many different worlds, and absorbed the many lessons these places had to teach us. But if we were to draw our people together as one, using the knowledge gained from such a cosmopolitan history, a united country for all Somalia would be a powerful one."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SOI_f",
+   "mods": [],
+   "name": "Somalia",
+   "slug": "soi-f",
+   "type": "formable"
+  },
+  {
+   "color": "#eba10e",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Iberia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Since the defeat of the Visigoths by the Islam invasion in the 8th century, Iberia has been the seat of several independent kingdoms. Numerous would-be conquerors have since attempted to unify the region, proclaiming themselves rulers of 'Hispania,' 'Spania,' or — as it is now known — 'Spain.' But it is we who shall finally unify the Peninsula once and for all!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:SPA_f",
+   "mods": [],
+   "name": "Spain",
+   "slug": "spa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e16257",
+   "data": {
+    "areas": [
+     "Swabia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "After the decline of central power in Swabia, no ruler was able to restore the old Swabia to its former strength, and the lands slowly fell into the grasp of foreign countries. Now, with large parts of Swabia back under our control, we can finally rescue our legacy from the ashes of history and forge a new state."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SWA_f",
+   "mods": [],
+   "name": "Swabia",
+   "slug": "swa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#997a6c",
+   "data": {
+    "areas": [
+     "Switzerland",
+     "Raetia",
+     "Romandy"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Swiss Confederation began as a mere alliance between different cantons. Each part has developed separately, speaking different languages and even having different laws. To truly unify the Swiss, a sovereign power must establish dominance in the Swiss Plateau. While unifying so many different people will not be easy, we stand to gain much if we are successful."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:SWI_f",
+   "mods": [],
+   "name": "Switzerland",
+   "slug": "swi-f",
+   "type": "formable"
+  },
+  {
+   "color": "#00f03c",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "A short-lived GetCountry('THE') established by the crusaders in Greece in the aftermath of the Fourth Crusade, its rulers wielded great influence in the Empire of Constantinople. While it was destroyed by the_theodoros_komnenos_doukas in 1224, should we manage to reclaim its contested territories, it would make us a considerable power in Greece."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:THE_REDUCED_REQUIREMENTS_f",
+   "mods": [],
+   "name": "Thessalonica",
+   "slug": "the-reduced-requirements-f",
+   "type": "formable"
+  },
+  {
+   "color": "#00f03c",
+   "data": {
+    "areas": [],
+    "capital_required": false,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "A short-lived GetCountry('THE') established by the crusaders in Greece in the aftermath of the Fourth Crusade, its rulers wielded great influence in the Empire of Constantinople. While it was destroyed by the_theodoros_komnenos_doukas in 1224, should we manage to reclaim its contested territories, it would make us a considerable power in Greece."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:THE_f",
+   "mods": [],
+   "name": "Thessalonica",
+   "slug": "the-f",
+   "type": "formable"
+  },
+  {
+   "color": "#b1cfcd",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Tibet"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The Tibetan Plateau was once united under a sprawling empire, which rivaled other great powers of its time for sophistication and wealth. However, over the centuries, that empire fell apart, irrevocably damaged by religious and political strife. But by bringing the Tibetan peoples together once again, we can revive our prodigal legacy and restore our lost kingdom."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:TIB_f",
+   "mods": [],
+   "name": "Tibet",
+   "slug": "tib-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d50027",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Persia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "The many battles fought by our ancestors may have soaked the earth in blood, but that bloodshed in turn fed the soil, and from this adversity was born a race of warriors, architects, artists, and scientists. The time has come to share our many gifts with the world by stepping forward as a great nation. We will follow chg_timur_lame_borjigin's legacy, and lead our people to greatness!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:TIM_f",
+   "mods": [],
+   "name": "The Timurids",
+   "slug": "tim-f",
+   "type": "formable"
+  },
+  {
+   "color": "#d3cfad",
+   "data": {
+    "areas": [
+     "Transylvania"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "'The Lands Beyond the Forest' are rich with mineral resources and fertile farmlands, and populated by peoples of different origins — Vlachs, Magyars, and Germans — all of whom are proud of these lands they inhabit. From our capital, we will rule over this diverse group of newly-minted Transylvanian people, and bring prosperity to them all."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:TRA_f",
+   "mods": [],
+   "name": "Transylvania",
+   "slug": "tra-f",
+   "type": "formable"
+  },
+  {
+   "color": null,
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": null,
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:TUR_f",
+   "mods": [],
+   "name": "Ottomans",
+   "slug": "tur-f",
+   "type": "formable"
+  },
+  {
+   "color": "#546088",
+   "data": {
+    "areas": [
+     "Tuscany"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The ancient March of Tuscany endured for centuries, but after the death of their ruler Matilda of Canossa in 1115, it eventually faded away. Its former territory was carved up and claimed by various ascendant urban communes, and the memory of a united Tuscany faded into darkness. But circumstances have changed, and it may now be time to reunite our dispersed lands and people under one rule again."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:TUS_f",
+   "mods": [],
+   "name": "Tuscany",
+   "slug": "tus-f",
+   "type": "formable"
+  },
+  {
+   "color": "#6b0909",
+   "data": {
+    "areas": [
+     "Basilicata and Calabria",
+     "Apulia",
+     "Abruzzi",
+     "Campania and Principato",
+     "Sicily"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Two Sicilies...not a country, but a dream. A dream to unify the lands kissed by the waters of the Straits of Messina — the Sicilies that stand on both sides of the 'Punta del Faro.' It is our duty to make that dream come true."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:TWS_f",
+   "mods": [],
+   "name": "The Two Sicilies",
+   "slug": "tws-f",
+   "type": "formable"
+  },
+  {
+   "color": "#517bd2",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "Ruthenia"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "Centuries ago, the land of the Rus' was united under a single banner and ruled from the legendary city of Kyiv. But the Mongol hordes advanced from the great steppe, pillaging and burning as they went. Even great Kyiv itself could not avoid this fate. In terror, our people fled north into the hinterlands we today call Russia.<br />Now a new, arrogant northern city is on the rise. Its ruler envisions a new Rus' — A Rus' centered in Moscow and not Kyiv. But we Ruthenians will not allow pretenders to claim the legacy of our forefathers! Kyiv shall rise once again, and so too shall the Rus'!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:UKR_f",
+   "mods": [],
+   "name": "Ruthenia",
+   "slug": "ukr-f",
+   "type": "formable"
+  },
+  {
+   "color": "#cc-4d-4e",
+   "data": {
+    "areas": [
+     "Ulster"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "At the heart of the Gaelic world and one of the traditional ''Cúige'', the Five Provinces of Ireland, Ulster has a unique presence in the world. But our people yearn to do and be more than we already are, and as such, the time has come for Ulster to assert itself as a major player on the world stage."
+    ]
+   ],
+   "facets": {
+    "level": "Level 1"
+   },
+   "id": "formable:ULS_f",
+   "mods": [],
+   "name": "Ulster",
+   "slug": "uls-f",
+   "type": "formable"
+  },
+  {
+   "color": "#459dd0",
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": [
+     "East Coast"
+    ]
+   },
+   "desc": [
+    [
+     "t",
+     "We the people are exhausted: by foreign rulers who see us as property, by oppressive and abusive taxation policies when we ourselves have no say in our government, and by the cruelty of our Loyalist neighbors. Long have these colonies been subject to the greed of European powers, but no more! The surge of liberty in the colonies has granted us an opportunity to form a proud federation of independent states free from tyranny. Give us liberty, or give us death!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 4"
+   },
+   "id": "formable:USA_f",
+   "mods": [],
+   "name": "United States",
+   "slug": "usa-f",
+   "type": "formable"
+  },
+  {
+   "color": "#e7e68a",
+   "data": {
+    "areas": [
+     "Westphalia"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Our people were once held in thrall by severe religious oppression, but we have seen a new way — a better way — a way that will allow us to become a fully realized nation at last. As these religious influences slowly fade into the past, we shall form a new state for Westphalia and proclaim the dawning of a new era for our people."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:WES_f",
+   "mods": [],
+   "name": "Westphalia",
+   "slug": "wes-f",
+   "type": "formable"
+  },
+  {
+   "color": "#ad7574",
+   "data": {
+    "areas": [
+     "Wales"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Free from the influence of faraway rulers, the Welsh people will establish their own state, governing themselves without the intervention or consent of others. Like the great red dragon of legend, the Welsh will emerge triumphant from the throes of conflict!"
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:WLS_f",
+   "mods": [],
+   "name": "Wales",
+   "slug": "wls-f",
+   "type": "formable"
+  },
+  {
+   "color": null,
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The Yamato is ancient, and claims descent from the gods themselves. Their very existence grants them a claim to the divine leadership of all Japan. And who would be so arrogant as to stand against the seed of the gods and their rightful rule?"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:YMT_f",
+   "mods": [],
+   "name": "Yamato",
+   "slug": "ymt-f",
+   "type": "formable"
+  },
+  {
+   "color": null,
+   "data": {
+    "areas": [],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Yuán"
+    ]
+   ],
+   "facets": {
+    "level": "Level 3"
+   },
+   "id": "formable:YUA_f",
+   "mods": [],
+   "name": "Yuán",
+   "slug": "yua-f",
+   "type": "formable"
+  },
+  {
+   "color": "#be4646",
+   "data": {
+    "areas": [
+     "Danmark",
+     "Skåneland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "Denmark, situated between the North Sea and Baltic Sea, is a country with great significance for Scandinavia. If we can control enough of its territory, we could reform it, and restore the legacy birthed by our forebears."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:denmark_f",
+   "mods": [],
+   "name": "Denmark",
+   "slug": "denmark-f",
+   "type": "formable"
+  },
+  {
+   "color": "#a60200",
+   "data": {
+    "areas": [
+     "Svealand",
+     "Götaland",
+     "Norrland",
+     "Finland"
+    ],
+    "capital_required": true,
+    "regions": []
+   },
+   "desc": [
+    [
+     "t",
+     "The vast lands of Sweden were unified for centuries, and this union must be reaffirmed. With significant portions of the Swedish lands now under our control, we can finally revive this ancient legacy and once again claim a united Swedish nation."
+    ]
+   ],
+   "facets": {
+    "level": "Level 2"
+   },
+   "id": "formable:sweden_f",
+   "mods": [],
+   "name": "Sweden",
+   "slug": "sweden-f",
+   "type": "formable"
+  }
+ ],
+ "facets": [
+  {
+   "key": "level",
+   "label": "Level",
+   "options": [
+    {
+     "count": 23,
+     "label": "Level 1",
+     "value": "Level 1"
+    },
+    {
+     "count": 57,
+     "label": "Level 2",
+     "value": "Level 2"
+    },
+    {
+     "count": 52,
+     "label": "Level 3",
+     "value": "Level 3"
+    },
+    {
+     "count": 16,
+     "label": "Level 4",
+     "value": "Level 4"
+    },
+    {
+     "count": 3,
+     "label": "Level 5",
+     "value": "Level 5"
+    }
+   ]
+  }
+ ],
+ "source": "in_game/common/formable_countries"
+}

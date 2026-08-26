@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/advances.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Advance', kind: 'name' },
+  { key: 'age', label: 'Age', kind: 'facet' },
+  { key: 'requires', label: 'Requires', kind: 'refs' },
+  { key: 'mods', label: 'Effects', kind: 'mods' },
+  { key: 'countries', label: 'Countries', kind: 'chips' },
+] as const;
+---
+<Base
+  title="Advances"
+  active="advances"
+  pageMark="🔬"
+  eyebrow="Ages & Advances"
+  pageStats={[
+    { label: 'advances', value: entities.length },
+    { label: 'general', value: entities.filter((e) => e.facets.scope === 'general').length },
+    { label: 'national / cultural', value: entities.filter((e) => e.facets.scope === 'national').length },
+  ]}
+  description="Every advance in Europa Universalis V — age, prerequisites, and effects."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter advances…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="advances" />
+  </div>
+</Base>

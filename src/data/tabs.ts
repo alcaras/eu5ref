@@ -18,7 +18,7 @@ export const TABS: Tab[] = [
   // ── Countries ─────────────────────────────────────────────────────
   {
     slug: 'countries', icon: '👑', label: 'Countries', section: 'Countries',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Every playable tag at 1337 — culture, religion, government, difficulty',
     willContain: [
       'Browser over ~2,200 tags, filterable by region / culture / religion',
@@ -27,19 +27,19 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'formables', icon: '🛠️', label: 'Formable Countries', section: 'Countries',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Formation requirements and rewards for every formable tag',
   },
   {
     slug: 'country-ranks', icon: '🏅', label: 'Country Ranks', section: 'Countries',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Rank tiers, hegemons, and what each rank unlocks',
   },
 
   // ── Ages & Advances ───────────────────────────────────────────────
   {
     slug: 'advances', icon: '🔬', label: 'Advances', section: 'Ages & Advances',
-    status: 'placeholder',
+    status: 'built',
     summary: 'The full advance tree, age by age — costs, prerequisites, unlocks',
     willContain: [
       '~3,000 advances across 7 ages, incl. national/cultural branches',
@@ -48,44 +48,44 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'ages', icon: '⏳', label: 'Ages', section: 'Ages & Advances',
-    status: 'placeholder',
+    status: 'built',
     summary: 'The seven ages — objectives, mechanics unlocked, age transitions',
   },
   {
     slug: 'institutions', icon: '💡', label: 'Institutions', section: 'Ages & Advances',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Spawn conditions and spread mechanics for each institution',
   },
 
   // ── Government & Laws ─────────────────────────────────────────────
   {
     slug: 'government', icon: '🏛️', label: 'Government', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Government types and reforms',
   },
   {
     slug: 'laws', icon: '⚖️', label: 'Laws & Policies', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Every law group and its policies, by government and religion',
   },
   {
     slug: 'estates', icon: '🏰', label: 'Estates & Privileges', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'The estates, their privileges, and equilibrium effects',
   },
   {
     slug: 'parliament', icon: '🗳️', label: 'Parliament', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Parliament types, issues, and agendas',
   },
   {
     slug: 'cabinet', icon: '📜', label: 'Cabinet', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Cabinet actions, regencies, and heir selection',
   },
   {
     slug: 'societal-values', icon: '🧭', label: 'Societal Values', section: 'Government & Laws',
-    status: 'placeholder',
+    status: 'built',
     summary: 'The value sliders and what moves them',
   },
 
@@ -97,7 +97,7 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'buildings', icon: '🏗️', label: 'Buildings', section: 'Economy',
-    status: 'placeholder',
+    status: 'built',
     summary: 'All ~430 buildings with production methods, employment, and gates',
     willContain: [
       'Production methods: inputs → outputs per building',
@@ -106,63 +106,63 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'towns', icon: '🏘️', label: 'Towns & Settlements', section: 'Economy',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Location ranks, town rights, and settlement growth',
   },
 
   // ── Society ───────────────────────────────────────────────────────
   {
     slug: 'pops', icon: '👥', label: 'Pops', section: 'Society',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Pop types, needs, and demand',
   },
   {
     slug: 'cultures', icon: '🎭', label: 'Cultures', section: 'Society',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Culture groups, cultures, languages, and works of art',
   },
   {
     slug: 'religions', icon: '🕌', label: 'Religions', section: 'Society',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Religions, aspects, schools, focuses, and holy sites',
   },
   {
     slug: 'characters', icon: '👤', label: 'Characters', section: 'Society',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Traits, educations, interactions, and chivalric orders',
   },
 
   // ── Military ──────────────────────────────────────────────────────
   {
     slug: 'units', icon: '⚔️', label: 'Units', section: 'Military',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Land and naval unit types by age, plus regional uniques',
   },
   {
     slug: 'levies', icon: '🛡️', label: 'Levies & Recruitment', section: 'Military',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Levy compositions and recruitment methods',
   },
   {
     slug: 'warfare', icon: '🎯', label: 'Warfare', section: 'Military',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Casus belli, war goals, peace treaties, and join-war rules',
   },
 
   // ── Diplomacy ─────────────────────────────────────────────────────
   {
     slug: 'subjects', icon: '🤝', label: 'Subjects', section: 'Diplomacy',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Subject types — stances, payments, and integration',
   },
   {
     slug: 'international-organizations', icon: '🌐', label: 'International Organizations', section: 'Diplomacy',
-    status: 'placeholder',
+    status: 'built',
     summary: 'The HRE, the Papacy, and every other IO — laws, statuses, payments',
   },
   {
     slug: 'diplomatic-actions', icon: '🕊️', label: 'Diplomatic Actions', section: 'Diplomacy',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Country interactions, costs, insults, and rival criteria',
   },
 
@@ -174,12 +174,12 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'terrain', icon: '⛰️', label: 'Terrain & Climate', section: 'World',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Climate, topography, and vegetation modifiers',
   },
   {
     slug: 'situations', icon: '🌋', label: 'Situations & Disasters', section: 'World',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Struggles, disasters, and diseases — triggers, phases, resolutions',
   },
   {
@@ -196,7 +196,7 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'defines', icon: '🔢', label: 'Defines', section: 'Concepts',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Engine constants behind the formulas, grouped and annotated',
   },
 
@@ -208,7 +208,7 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'advance-planner', icon: '🧭', label: 'Advance Planner', section: 'Tools',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Pick target advances → the full prerequisite closure and cost',
   },
   {
@@ -218,7 +218,7 @@ export const TABS: Tab[] = [
   },
   {
     slug: 'patch-notes', icon: '🛠️', label: 'Patch Notes', section: 'Tools',
-    status: 'placeholder',
+    status: 'built',
     summary: 'Per-patch data changes detected by the pipeline',
   },
 ];

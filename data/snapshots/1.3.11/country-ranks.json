@@ -1,0 +1,138 @@
+{
+  "dataset": "country-ranks",
+  "entities": [
+    {
+      "color": "#a12323",
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This [Country Rank] represents the smallest ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "]. Usually those with only a single ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "]. A small tribe may usually be represented by this rank as well."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/country-rank/rank-county.png",
+      "id": "country-rank:rank_county",
+      "mods": [],
+      "name": "County",
+      "slug": "rank-county",
+      "type": "country-rank"
+    },
+    {
+      "color": "#4d3232",
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This [Country Rank] represents a small- to medium-sized ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "], usually with a single ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Province"
+        ],
+        [
+          "t",
+          "], but it is larger or more populous than a County."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/country-rank/rank-duchy.png",
+      "id": "country-rank:rank_duchy",
+      "mods": [],
+      "name": "Duchy",
+      "slug": "rank-duchy",
+      "type": "country-rank"
+    },
+    {
+      "color": "#d9211e",
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the highest [Country Rank] and represents the most prestigious or powerful ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "] in the world."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/country-rank/rank-empire.png",
+      "id": "country-rank:rank_empire",
+      "mods": [],
+      "name": "Empire",
+      "slug": "rank-empire",
+      "type": "country-rank"
+    },
+    {
+      "color": "#bf2a2a",
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This is the [Country Rank] that represents the larger ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Countries"
+        ],
+        [
+          "t",
+          "]. They have multiple ["
+        ],
+        [
+          "r",
+          "concept:province",
+          "Provinces"
+        ],
+        [
+          "t",
+          "] and can project a fair amount of power."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/country-rank/rank-kingdom.png",
+      "id": "country-rank:rank_kingdom",
+      "mods": [],
+      "name": "Kingdom",
+      "slug": "rank-kingdom",
+      "type": "country-rank"
+    }
+  ],
+  "facets": [],
+  "source": "country_ranks"
+}

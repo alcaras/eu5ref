@@ -46,9 +46,19 @@
    "page": "concepts/role"
   },
   {
+   "id": "government-type:steppe_horde",
+   "name": "Steppe Horde",
+   "page": null
+  },
+  {
    "id": "concept:total_ability",
    "name": "Total Ability",
    "page": "concepts/total-ability"
+  },
+  {
+   "id": "government-type:tribe",
+   "name": "Tribe",
+   "page": null
   }
  ],
  "concept:accepted_culture": [
@@ -115,6 +125,11 @@
    "page": "concepts/character-interaction"
   },
   {
+   "id": "subject:conquistador",
+   "name": "Conquistador",
+   "page": null
+  },
+  {
    "id": "concept:country_interaction",
    "name": "Country Interaction",
    "page": "concepts/country-interaction"
@@ -128,6 +143,16 @@
    "id": "concept:situation_action",
    "name": "Situation Action",
    "page": "concepts/situation-action"
+  },
+  {
+   "id": "advance:uc_bey_advance",
+   "name": "Uç Bey",
+   "page": "advances/uc-bey-advance"
+  },
+  {
+   "id": "subject:uc_bey",
+   "name": "Uç Bey",
+   "page": null
   }
  ],
  "concept:adm": [
@@ -380,6 +405,11 @@
    "page": "concepts/stored-research"
   },
   {
+   "id": "subject:samanta",
+   "name": "Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:tolerated_culture",
    "name": "Tolerated Culture",
    "page": "concepts/tolerated-culture"
@@ -444,6 +474,11 @@
    "page": "concepts/alliance-bloc"
   },
   {
+   "id": "parliament-agenda:pa_break_alliance",
+   "name": "Break Alliance",
+   "page": null
+  },
+  {
    "id": "concept:call_to_arms",
    "name": "Call to Arms",
    "page": "concepts/call-to-arms"
@@ -474,6 +509,11 @@
    "page": "concepts/fow"
   },
   {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
+  },
+  {
    "id": "concept:rival",
    "name": "Rival",
    "page": "concepts/rival"
@@ -489,6 +529,11 @@
    "page": "concepts/union"
   },
   {
+   "id": "io:union",
+   "name": "Union",
+   "page": null
+  },
+  {
    "id": "concept:war",
    "name": "War",
    "page": "concepts/war"
@@ -501,17 +546,52 @@
    "page": "concepts/disloyal-subjects"
   },
   {
+   "id": "cabinet-action:frustrate_annexation",
+   "name": "Frustrate Annexation",
+   "page": null
+  },
+  {
    "id": "concept:loyal_subjects",
    "name": "Loyal Subjects",
    "page": "concepts/loyal-subjects"
   },
   {
+   "id": "subject:maha_samanta",
+   "name": "Mahā-Sāmanta",
+   "page": null
+  },
+  {
+   "id": "subject:pradhana_maha_samanta",
+   "name": "Pradhāna-Mahā-Sāmanta",
+   "page": null
+  },
+  {
+   "id": "casus-belli:cb_resist_annexation",
+   "name": "Resist Annexation",
+   "page": null
+  },
+  {
+   "id": "subject:secessionists",
+   "name": "Secessionists",
+   "page": null
+  },
+  {
    "id": "concept:self_control",
    "name": "Self Control",
    "page": "concepts/self-control"
+  },
+  {
+   "id": "subject:samanta",
+   "name": "Sāmanta",
+   "page": null
   }
  ],
  "concept:antagonism": [
+  {
+   "id": "cabinet-action:alleviate_concerns",
+   "name": "Alleviate Concerns",
+   "page": null
+  },
   {
    "id": "concept:antagonism_received_modifier",
    "name": "Antagonism Received",
@@ -526,6 +606,11 @@
    "id": "concept:coalition",
    "name": "Coalition",
    "page": "concepts/coalition"
+  },
+  {
+   "id": "io:coalition",
+   "name": "Coalition",
+   "page": null
   },
   {
    "id": "concept:diplomacy",
@@ -562,6 +647,11 @@
    "page": "concepts/geography"
   },
   {
+   "id": "character-interaction:assign_governor",
+   "name": "Grant Governorship",
+   "page": null
+  },
+  {
    "id": "concept:great_power",
    "name": "Great Power",
    "page": "concepts/great-power"
@@ -570,6 +660,16 @@
    "id": "concept:great_power_points",
    "name": "Great Power Points",
    "page": "concepts/great-power-points"
+  },
+  {
+   "id": "cabinet-action:increase_control_area",
+   "name": "Increase Area Control",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_area",
+   "name": "Integrate Area",
+   "page": null
   },
   {
    "id": "concept:privateer_durability",
@@ -589,9 +689,29 @@
  ],
  "concept:army": [
   {
+   "id": "advance:armory_advance",
+   "name": "Armory",
+   "page": "advances/armory-advance"
+  },
+  {
+   "id": "building:armory",
+   "name": "Armory",
+   "page": "buildings/armory"
+  },
+  {
    "id": "concept:army_based",
    "name": "Army Based Country",
    "page": "concepts/army-based"
+  },
+  {
+   "id": "advance:army_doctrine_law_advance",
+   "name": "Army Doctrine",
+   "page": "advances/army-doctrine-law-advance"
+  },
+  {
+   "id": "law:army_doctrine_law",
+   "name": "Army Doctrine",
+   "page": "laws/army-doctrine-law"
   },
   {
    "id": "concept:army_levy",
@@ -609,14 +729,34 @@
    "page": "concepts/army-tradition"
   },
   {
+   "id": "character-interaction:assume_fort_command",
+   "name": "Assume Fort Command",
+   "page": null
+  },
+  {
    "id": "concept:attrition",
    "name": "Attrition",
    "page": "concepts/attrition"
   },
   {
+   "id": "advance:barracks_advance",
+   "name": "Barracks",
+   "page": "advances/barracks-advance"
+  },
+  {
+   "id": "building:barracks",
+   "name": "Barracks",
+   "page": "buildings/barracks"
+  },
+  {
    "id": "concept:civil_construction",
    "name": "Civil Construction",
    "page": "concepts/civil-construction"
+  },
+  {
+   "id": "wargoal:clan_expansion_wargoal",
+   "name": "Clan Expansion",
+   "page": null
   },
   {
    "id": "concept:combat",
@@ -627,6 +767,16 @@
    "id": "concept:combined_arms",
    "name": "Combined Arms",
    "page": "concepts/combined-arms"
+  },
+  {
+   "id": "advance:conscription_center_advance",
+   "name": "Conscription Center",
+   "page": "advances/conscription-center-advance"
+  },
+  {
+   "id": "building:conscription_center",
+   "name": "Conscription Center",
+   "page": "buildings/conscription-center"
   },
   {
    "id": "concept:corridor",
@@ -682,6 +832,16 @@
    "id": "concept:flank",
    "name": "Flank",
    "page": "concepts/flank"
+  },
+  {
+   "id": "topography:flatland",
+   "name": "Flatland",
+   "page": null
+  },
+  {
+   "id": "topography:flatland_wasteland",
+   "name": "Flatland Wasteland",
+   "page": null
   },
   {
    "id": "concept:food",
@@ -759,6 +919,11 @@
    "page": "concepts/mercenary-income"
   },
   {
+   "id": "cabinet-action:militarize_country",
+   "name": "Militarize Country",
+   "page": null
+  },
+  {
    "id": "concept:military_objective",
    "name": "Military Objective",
    "page": "concepts/military-objective"
@@ -774,6 +939,21 @@
    "page": "concepts/morale"
   },
   {
+   "id": "topography:mountain_wasteland",
+   "name": "Mountain Wasteland",
+   "page": null
+  },
+  {
+   "id": "topography:mountains",
+   "name": "Mountains",
+   "page": null
+  },
+  {
+   "id": "wargoal:nanbokuchou_wargoal",
+   "name": "Nanbokuchō Jidai",
+   "page": null
+  },
+  {
    "id": "concept:navy",
    "name": "Navy",
    "page": "concepts/navy"
@@ -782,6 +962,11 @@
    "id": "concept:occupation",
    "name": "Occupation",
    "page": "concepts/occupation"
+  },
+  {
+   "id": "societal-value:offensive_vs_defensive",
+   "name": "Offensive vs Defensive",
+   "page": null
   },
   {
    "id": "concept:prosperity",
@@ -794,9 +979,29 @@
    "page": "concepts/provincial-food"
   },
   {
+   "id": "societal-value:quality_vs_quantity",
+   "name": "Quality vs Quantity",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:razryadny",
+   "name": "Razryadny",
+   "page": null
+  },
+  {
    "id": "concept:regiment",
    "name": "Regiment",
    "page": "concepts/regiment"
+  },
+  {
+   "id": "advance:regimental_camp_advance",
+   "name": "Regimental Camp",
+   "page": "advances/regimental-camp-advance"
+  },
+  {
+   "id": "building:regimental_camp",
+   "name": "Regimental Camp",
+   "page": "buildings/regimental-camp"
   },
   {
    "id": "concept:regular_army",
@@ -829,6 +1034,16 @@
    "page": "concepts/siege"
   },
   {
+   "id": "casus-belli:cb_slave_raiding",
+   "name": "Slave Raiding",
+   "page": null
+  },
+  {
+   "id": "pop:soldiers",
+   "name": "Soldiers",
+   "page": "pops/soldiers"
+  },
+  {
    "id": "concept:strait",
    "name": "Strait",
    "page": "concepts/strait"
@@ -847,6 +1062,16 @@
    "id": "concept:total_strength",
    "name": "Total Strength",
    "page": "concepts/total-strength"
+  },
+  {
+   "id": "advance:training_fields_advance",
+   "name": "Training Fields",
+   "page": "advances/training-fields-advance"
+  },
+  {
+   "id": "building:training_fields",
+   "name": "Training Fields",
+   "page": "buildings/training-fields"
   },
   {
    "id": "concept:non_avoidable_attrition",
@@ -981,6 +1206,16 @@
    "page": "concepts/artistic-skill"
   },
   {
+   "id": "law:censorship",
+   "name": "Censorship",
+   "page": "laws/censorship"
+  },
+  {
+   "id": "character-interaction:dismiss_artist",
+   "name": "Dismiss Artist",
+   "page": null
+  },
+  {
    "id": "concept:expense",
    "name": "Expense",
    "page": "concepts/expense"
@@ -989,6 +1224,11 @@
    "id": "concept:cultural_maintenance",
    "name": "Investing in Culture",
    "page": "concepts/cultural-maintenance"
+  },
+  {
+   "id": "country-interaction:invite_artist",
+   "name": "Invite Artist",
+   "page": null
   },
   {
    "id": "concept:work_of_art",
@@ -1011,6 +1251,11 @@
    "id": "concept:culture_war_power",
    "name": "Culture War Power",
    "page": "concepts/culture-war-power"
+  },
+  {
+   "id": "cabinet-action:kbo_pop_promote_action",
+   "name": "Egalitarian Integration",
+   "page": null
   },
   {
    "id": "concept:market_language",
@@ -1052,6 +1297,11 @@
    "page": "concepts/food"
   },
   {
+   "id": "trait:hardy_warrior",
+   "name": "Hardy Warrior",
+   "page": "traits/hardy-warrior"
+  },
+  {
    "id": "concept:provincial_food",
    "name": "Provincial Food",
    "page": "concepts/provincial-food"
@@ -1075,6 +1325,13 @@
    "id": "concept:zone_of_control",
    "name": "Zone of Control",
    "page": "concepts/zone-of-control"
+  }
+ ],
+ "concept:avatar": [
+  {
+   "id": "law:hindu_branch_spec",
+   "name": "Tradition",
+   "page": "laws/hindu-branch-spec"
   }
  ],
  "concept:bankrupt": [
@@ -1119,6 +1376,16 @@
    "id": "concept:prosperity",
    "name": "Prosperity",
    "page": "concepts/prosperity"
+  },
+  {
+   "id": "trait:ruthless_blockader",
+   "name": "Ruthless Blockader",
+   "page": "traits/ruthless-blockader"
+  },
+  {
+   "id": "wargoal:naval",
+   "name": "Show Naval Superiority",
+   "page": null
   },
   {
    "id": "concept:war",
@@ -1204,6 +1471,11 @@
    "page": "concepts/stability-investment"
   },
   {
+   "id": "cabinet-action:stabilize_country",
+   "name": "Stabilize Country",
+   "page": null
+  },
+  {
    "id": "concept:subsidization",
    "name": "Subsidization",
    "page": "concepts/subsidization"
@@ -1234,6 +1506,11 @@
    "id": "concept:building_type",
    "name": "Building Type",
    "page": "concepts/building-type"
+  },
+  {
+   "id": "pop:burghers",
+   "name": "Burghers",
+   "page": "pops/burghers"
   },
   {
    "id": "concept:cabinet_efficiency",
@@ -1329,6 +1606,16 @@
    "id": "concept:extraterritorial_country",
    "name": "Extraterritorial Country",
    "page": "concepts/extraterritorial-country"
+  },
+  {
+   "id": "topography:flatland",
+   "name": "Flatland",
+   "page": null
+  },
+  {
+   "id": "topography:flatland_wasteland",
+   "name": "Flatland Wasteland",
+   "page": null
   },
   {
    "id": "concept:food",
@@ -1560,6 +1847,16 @@
    "page": "concepts/adult"
   },
   {
+   "id": "character-interaction:assume_fort_command",
+   "name": "Assume Fort Command",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:oma_bolster_omani_navy",
+   "name": "Bolster Navy",
+   "page": null
+  },
+  {
    "id": "concept:cabinet_action",
    "name": "Cabinet Action",
    "page": "concepts/cabinet-action"
@@ -1595,14 +1892,39 @@
    "page": "concepts/government"
   },
   {
+   "id": "character-interaction:grant_cabinet_right",
+   "name": "Grant Cabinet Right",
+   "page": null
+  },
+  {
    "id": "concept:head_of_the_cabinet",
    "name": "Head of the Cabinet",
    "page": "concepts/head-of-the-cabinet"
   },
   {
+   "id": "cabinet-action:maintain_trunk_road_cabinet_action",
+   "name": "Maintain Grand Trunk Road",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:bironovshchina",
+   "name": "Promote Council of the Empire",
+   "page": null
+  },
+  {
+   "id": "character-interaction:promote_to_head_of_cabinet",
+   "name": "Promote to Head of the Cabinet",
+   "page": null
+  },
+  {
    "id": "concept:ruler",
    "name": "Ruler",
    "page": "concepts/ruler"
+  },
+  {
+   "id": "cabinet-action:settle_the_frontier",
+   "name": "Settle the Frontier",
+   "page": null
   }
  ],
  "concept:cabinet_action": [
@@ -1708,6 +2030,11 @@
    "page": "concepts/court-language"
   },
   {
+   "id": "heir-selection:podesta_elective",
+   "name": "Elective Potestate",
+   "page": null
+  },
+  {
    "id": "concept:exploration",
    "name": "Exploration",
    "page": "concepts/exploration"
@@ -1721,6 +2048,11 @@
    "id": "concept:location_importance",
    "name": "Location Importance",
    "page": "concepts/location-importance"
+  },
+  {
+   "id": "country-interaction:move_subject_capital",
+   "name": "Move Subject's Capital",
+   "page": null
   },
   {
    "id": "concept:overseas",
@@ -1748,6 +2080,11 @@
    "id": "concept:papal_authority",
    "name": "Papal Authority",
    "page": "concepts/papal-authority"
+  },
+  {
+   "id": "heir-selection:papal_election",
+   "name": "Papal Conclave",
+   "page": null
   }
  ],
  "concept:casus_belli": [
@@ -1801,9 +2138,24 @@
  ],
  "concept:character": [
   {
+   "id": "character-interaction:abdicate",
+   "name": "Abdicate",
+   "page": null
+  },
+  {
    "id": "concept:ability",
    "name": "Ability",
    "page": "concepts/ability"
+  },
+  {
+   "id": "cabinet-action:gather_acllas",
+   "name": "Aclla Recruitment",
+   "page": null
+  },
+  {
+   "id": "character-interaction:adapt_culture_for_ruler",
+   "name": "Adapt to Local Culture",
+   "page": null
   },
   {
    "id": "concept:adm",
@@ -1836,9 +2188,19 @@
    "page": "concepts/annexation"
   },
   {
+   "id": "character-interaction:appoint_as_heir",
+   "name": "Appoint as Heir",
+   "page": null
+  },
+  {
    "id": "concept:army",
    "name": "Army",
    "page": "concepts/army"
+  },
+  {
+   "id": "character-interaction:tribal_arrange_marriage",
+   "name": "Arrange Marriage",
+   "page": null
   },
   {
    "id": "concept:artist",
@@ -1849,6 +2211,31 @@
    "id": "concept:artist_trait",
    "name": "Artist Trait",
    "page": "concepts/artist-trait"
+  },
+  {
+   "id": "character-interaction:assign_despot",
+   "name": "Assign as Despótēs",
+   "page": null
+  },
+  {
+   "id": "character-interaction:tur_appoint_dragoman",
+   "name": "Assign as Dragoman",
+   "page": null
+  },
+  {
+   "id": "character-interaction:assume_fort_command",
+   "name": "Assume Fort Command",
+   "page": null
+  },
+  {
+   "id": "character-interaction:banish_character",
+   "name": "Banish",
+   "page": null
+  },
+  {
+   "id": "character-interaction:blind_character",
+   "name": "Blind",
+   "page": null
   },
   {
    "id": "concept:cabinet_efficiency",
@@ -1871,6 +2258,11 @@
    "page": "concepts/canonization"
   },
   {
+   "id": "character-interaction:castrate_character",
+   "name": "Castrate",
+   "page": null
+  },
+  {
    "id": "concept:character_interaction",
    "name": "Character Interaction",
    "page": "concepts/character-interaction"
@@ -1884,6 +2276,21 @@
    "id": "concept:child",
    "name": "Child",
    "page": "concepts/child"
+  },
+  {
+   "id": "character-interaction:choose_theologian_duelist",
+   "name": "Choose Theologian Debater",
+   "page": null
+  },
+  {
+   "id": "character-interaction:commission_art",
+   "name": "Commission Art",
+   "page": null
+  },
+  {
+   "id": "character-interaction:seppuku",
+   "name": "Commit Seppuku",
+   "page": null
   },
   {
    "id": "concept:conquistador",
@@ -1916,6 +2323,11 @@
    "page": "concepts/disease-resistance"
   },
   {
+   "id": "character-interaction:dismiss_prince",
+   "name": "Dismiss Prince",
+   "page": null
+  },
+  {
    "id": "concept:dynasty",
    "name": "Dynasty",
    "page": "concepts/dynasty"
@@ -1936,9 +2348,19 @@
    "page": "concepts/eligibility-rules"
   },
   {
+   "id": "character-interaction:ennoble",
+   "name": "Ennoble",
+   "page": null
+  },
+  {
    "id": "concept:ethnicity",
    "name": "Ethnicity",
    "page": "concepts/ethnicity"
+  },
+  {
+   "id": "character-interaction:execute_character",
+   "name": "Execute",
+   "page": null
   },
   {
    "id": "concept:explorer",
@@ -1949,6 +2371,11 @@
    "id": "concept:explorer_trait",
    "name": "Explorer Trait",
    "page": "concepts/explorer-trait"
+  },
+  {
+   "id": "character-interaction:favor_heir",
+   "name": "Favor Heir",
+   "page": null
   },
   {
    "id": "concept:fertility",
@@ -1964,6 +2391,16 @@
    "id": "concept:general_trait",
    "name": "General Trait",
    "page": "concepts/general-trait"
+  },
+  {
+   "id": "character-interaction:grant_cabinet_right",
+   "name": "Grant Cabinet Right",
+   "page": null
+  },
+  {
+   "id": "character-interaction:assign_governor",
+   "name": "Grant Governorship",
+   "page": null
   },
   {
    "id": "concept:head_of_the_cabinet",
@@ -2001,6 +2438,16 @@
    "page": "concepts/infant"
   },
   {
+   "id": "character-interaction:invite_to_order_of_chivalry",
+   "name": "Invite to Order of Chivalry",
+   "page": null
+  },
+  {
+   "id": "character-interaction:join_foreign_order_of_chivalry",
+   "name": "Join Foreign Order of Chivalry",
+   "page": null
+  },
+  {
    "id": "concept:language",
    "name": "Language",
    "page": "concepts/language"
@@ -2021,9 +2468,29 @@
    "page": "concepts/lowborn"
   },
   {
+   "id": "character-interaction:aclla_distribution",
+   "name": "Marry Aclla",
+   "page": null
+  },
+  {
+   "id": "character-interaction:marry_lowborn",
+   "name": "Marry a Lowborn",
+   "page": null
+  },
+  {
+   "id": "character-interaction:marry_noble",
+   "name": "Marry a Noble",
+   "page": null
+  },
+  {
    "id": "concept:mil",
    "name": "Military Ability",
    "page": "concepts/mil"
+  },
+  {
+   "id": "heir-selection:military_dictatorship",
+   "name": "Military Dictatorship",
+   "page": null
   },
   {
    "id": "concept:modifier",
@@ -2031,14 +2498,49 @@
    "page": "concepts/modifier"
   },
   {
+   "id": "character-interaction:move_child_to_court",
+   "name": "Move Child to Our Court",
+   "page": null
+  },
+  {
    "id": "concept:navy",
    "name": "Navy",
    "page": "concepts/navy"
   },
   {
+   "id": "pop:nobles",
+   "name": "Nobles",
+   "page": "pops/nobles"
+  },
+  {
+   "id": "character-interaction:pardon",
+   "name": "Pardon",
+   "page": null
+  },
+  {
    "id": "concept:people",
    "name": "People",
    "page": "concepts/people"
+  },
+  {
+   "id": "country-interaction:place_relative_on_throne",
+   "name": "Place Relative on Throne",
+   "page": null
+  },
+  {
+   "id": "character-interaction:prefection",
+   "name": "Prefection",
+   "page": null
+  },
+  {
+   "id": "character-interaction:promote_to_head_of_cabinet",
+   "name": "Promote to Head of the Cabinet",
+   "page": null
+  },
+  {
+   "id": "character-interaction:pap_reassign_cleric",
+   "name": "Reassign Cleric",
+   "page": null
   },
   {
    "id": "concept:regency",
@@ -2066,6 +2568,11 @@
    "page": "concepts/religious-head"
   },
   {
+   "id": "character-interaction:resign_as_grand_master",
+   "name": "Resign as Grandmaster",
+   "page": null
+  },
+  {
    "id": "concept:role",
    "name": "Role",
    "page": "concepts/role"
@@ -2086,9 +2593,24 @@
    "page": "concepts/ruler-trait"
   },
   {
+   "id": "country-interaction:send_to_prussian_crusade",
+   "name": "Send Character to Prussian Crusade",
+   "page": null
+  },
+  {
    "id": "concept:heir_selection",
    "name": "Succession Law",
    "page": "concepts/heir-selection"
+  },
+  {
+   "id": "character-interaction:make_regent_ruler",
+   "name": "Take the Throne",
+   "page": null
+  },
+  {
+   "id": "character-interaction:take_the_vows",
+   "name": "Take the Vows",
+   "page": null
   },
   {
    "id": "concept:title_history",
@@ -2104,6 +2626,11 @@
    "id": "concept:trait",
    "name": "Trait",
    "page": "concepts/trait"
+  },
+  {
+   "id": "country-interaction:nusta_marriage",
+   "name": "Ñusta Marriage",
+   "page": null
   }
  ],
  "concept:character_interaction": [
@@ -2289,6 +2816,11 @@
    "id": "concept:colonial_charter",
    "name": "Colonial Charter",
    "page": "concepts/colonial-charter"
+  },
+  {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
   },
   {
    "id": "concept:colonial_range",
@@ -2645,6 +3177,11 @@
    "id": "concept:regency",
    "name": "Regency",
    "page": "concepts/regency"
+  },
+  {
+   "id": "country-interaction:request_divorce",
+   "name": "Request Divorce",
+   "page": null
   }
  ],
  "concept:construction": [
@@ -2733,6 +3270,16 @@
    "page": "concepts/estate-building"
   },
   {
+   "id": "cabinet-action:increase_control_area",
+   "name": "Increase Area Control",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:increase_control_province",
+   "name": "Increase Province Control",
+   "page": null
+  },
+  {
    "id": "concept:maritime_presence",
    "name": "Maritime Presence",
    "page": "concepts/maritime-presence"
@@ -2748,9 +3295,24 @@
    "page": "concepts/max-control"
   },
   {
+   "id": "cabinet-action:noblesse_oblige_cabinet_action",
+   "name": "Noblesse Oblige",
+   "page": null
+  },
+  {
+   "id": "heir-selection:partition_inheritance",
+   "name": "Partition Inheritance",
+   "page": null
+  },
+  {
    "id": "concept:road",
    "name": "Road",
    "page": "concepts/road"
+  },
+  {
+   "id": "cabinet-action:send_secret_royal_inspectors",
+   "name": "Send Secret Royal Inspectors",
+   "page": null
   },
   {
    "id": "concept:sound_toll",
@@ -2837,9 +3399,19 @@
    "page": "concepts/control"
   },
   {
+   "id": "cabinet-action:promote_religion",
+   "name": "Convert Province",
+   "page": null
+  },
+  {
    "id": "concept:state_religion",
    "name": "Primary Religion",
    "page": "concepts/state-religion"
+  },
+  {
+   "id": "cabinet-action:lit_promote_catholicism",
+   "name": "Promote Catholicism",
+   "page": null
   },
   {
    "id": "concept:religion",
@@ -2869,6 +3441,11 @@
    "page": "concepts/integration-status"
   },
   {
+   "id": "country-interaction:subject_return_land",
+   "name": "Return Land",
+   "page": null
+  },
+  {
    "id": "concept:victory_card",
    "name": "Victory Card",
    "page": "concepts/victory-card"
@@ -2879,6 +3456,11 @@
    "id": "concept:accepted_culture",
    "name": "Accepted Culture",
    "page": "concepts/accepted-culture"
+  },
+  {
+   "id": "character-interaction:adapt_culture_for_ruler",
+   "name": "Adapt to Local Culture",
+   "page": null
   },
   {
    "id": "concept:advance",
@@ -2936,9 +3518,19 @@
    "page": "concepts/budget"
   },
   {
+   "id": "character-interaction:banish_character",
+   "name": "Banish",
+   "page": null
+  },
+  {
    "id": "concept:bankrupt",
    "name": "Bankrupt",
    "page": "concepts/bankrupt"
+  },
+  {
+   "id": "societal-value:belligerent_vs_conciliatory",
+   "name": "Belligerent vs Conciliatory",
+   "page": null
   },
   {
    "id": "concept:bias",
@@ -2954,6 +3546,11 @@
    "id": "concept:borrower",
    "name": "Borrower",
    "page": "concepts/borrower"
+  },
+  {
+   "id": "pop:burghers",
+   "name": "Burghers",
+   "page": "pops/burghers"
   },
   {
    "id": "concept:cabinet",
@@ -2991,6 +3588,11 @@
    "page": "concepts/capital"
   },
   {
+   "id": "societal-value:capital_economy_vs_traditional_economy",
+   "name": "Capital Economy vs Traditional Economy",
+   "page": null
+  },
+  {
    "id": "concept:cardinal",
    "name": "Cardinal",
    "page": "concepts/cardinal"
@@ -2999,6 +3601,11 @@
    "id": "concept:casus_belli",
    "name": "Casus Belli",
    "page": "concepts/casus-belli"
+  },
+  {
+   "id": "law:censorship",
+   "name": "Censorship",
+   "page": "laws/censorship"
   },
   {
    "id": "concept:central_bank",
@@ -3016,9 +3623,19 @@
    "page": "concepts/child"
   },
   {
+   "id": "character-interaction:choose_theologian_duelist",
+   "name": "Choose Theologian Debater",
+   "page": null
+  },
+  {
    "id": "concept:civil_war",
    "name": "Civil War",
    "page": "concepts/civil-war"
+  },
+  {
+   "id": "pop:clergy",
+   "name": "Clerics",
+   "page": "pops/clergy"
   },
   {
    "id": "concept:cobelligerent",
@@ -3029,6 +3646,11 @@
    "id": "concept:coalition",
    "name": "Coalition",
    "page": "concepts/coalition"
+  },
+  {
+   "id": "io:coalition",
+   "name": "Coalition",
+   "page": null
   },
   {
    "id": "concept:colonial_charter",
@@ -3086,6 +3708,16 @@
    "page": "concepts/corridor"
   },
   {
+   "id": "estate:cossacks_estate",
+   "name": "Cossacks",
+   "page": "estates/cossacks-estate"
+  },
+  {
+   "id": "cabinet-action:counter_espionage_action",
+   "name": "Counterespionage",
+   "page": null
+  },
+  {
    "id": "concept:counterespionage",
    "name": "Counterespionage",
    "page": "concepts/counterespionage"
@@ -3114,6 +3746,11 @@
    "id": "concept:country_type",
    "name": "Country Type",
    "page": "concepts/country-type"
+  },
+  {
+   "id": "country-rank:rank_county",
+   "name": "County",
+   "page": null
   },
   {
    "id": "concept:court_dialect",
@@ -3181,6 +3818,31 @@
    "page": "concepts/debt"
   },
   {
+   "id": "io:defensive_league",
+   "name": "Defensive League",
+   "page": null
+  },
+  {
+   "id": "peace-treaty:rtr_demand_all_chinese_territories",
+   "name": "Demand All Chinese Territories",
+   "page": null
+  },
+  {
+   "id": "peace-treaty:rtr_demand_complete_annexation",
+   "name": "Demand Complete Annexation",
+   "page": null
+  },
+  {
+   "id": "peace-treaty:rtr_demand_occupied_territories",
+   "name": "Demand Occupied Territories",
+   "page": null
+  },
+  {
+   "id": "estate:dhimmi_estate",
+   "name": "Dhimmi",
+   "page": "estates/dhimmi-estate"
+  },
+  {
    "id": "concept:diplomacy",
    "name": "Diplomacy",
    "page": "concepts/diplomacy"
@@ -3199,6 +3861,11 @@
    "id": "concept:diplomatic_capacity",
    "name": "Diplomatic Capacity",
    "page": "concepts/diplomatic-capacity"
+  },
+  {
+   "id": "cabinet-action:diplomatic_endeavors",
+   "name": "Diplomatic Endeavors",
+   "page": null
   },
   {
    "id": "concept:diplomatic_expense",
@@ -3229,6 +3896,11 @@
    "id": "concept:non_accepted_culture",
    "name": "Discriminated Culture",
    "page": "concepts/non-accepted-culture"
+  },
+  {
+   "id": "character-interaction:dismiss_prince",
+   "name": "Dismiss Prince",
+   "page": null
   },
   {
    "id": "concept:domestic_market",
@@ -3266,6 +3938,11 @@
    "page": "concepts/gold"
   },
   {
+   "id": "country-rank:rank_duchy",
+   "name": "Duchy",
+   "page": null
+  },
+  {
    "id": "concept:dynamic_historical_event",
    "name": "Dynamic Historical Event",
    "page": "concepts/dynamic-historical-event"
@@ -3286,6 +3963,11 @@
    "page": "concepts/economic-support"
   },
   {
+   "id": "heir-selection:podesta_elective",
+   "name": "Elective Potestate",
+   "page": null
+  },
+  {
    "id": "concept:eligibility_rules",
    "name": "Eligibility Rules",
    "page": "concepts/eligibility-rules"
@@ -3294,6 +3976,11 @@
    "id": "concept:embrace",
    "name": "Embrace",
    "page": "concepts/embrace"
+  },
+  {
+   "id": "country-rank:rank_empire",
+   "name": "Empire",
+   "page": null
   },
   {
    "id": "concept:rival_enemy",
@@ -3381,9 +4068,19 @@
    "page": "concepts/foreign-language"
   },
   {
+   "id": "country-interaction:form_closer_bond_iroquois",
+   "name": "Form Closer Bonds",
+   "page": null
+  },
+  {
    "id": "concept:formable_country",
    "name": "Formable Country",
    "page": "concepts/formable-country"
+  },
+  {
+   "id": "country-interaction:formalize_relations",
+   "name": "Formalize Relations",
+   "page": null
   },
   {
    "id": "concept:fort_limit",
@@ -3531,6 +4228,16 @@
    "page": "concepts/institution"
   },
   {
+   "id": "cabinet-action:integrate_area",
+   "name": "Integrate Area",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_province",
+   "name": "Integrate Province",
+   "page": null
+  },
+  {
    "id": "concept:spy_network_fog",
    "name": "Intelligence Fog",
    "page": "concepts/spy-network-fog"
@@ -3551,6 +4258,16 @@
    "page": "concepts/cultural-maintenance"
   },
   {
+   "id": "country-interaction:invite_artist",
+   "name": "Invite Artist",
+   "page": null
+  },
+  {
+   "id": "country-interaction:invite_settlers",
+   "name": "Invite Settlers",
+   "page": null
+  },
+  {
    "id": "concept:isolate",
    "name": "Isolate",
    "page": "concepts/isolate"
@@ -3559,6 +4276,11 @@
    "id": "concept:karma",
    "name": "Karma",
    "page": "concepts/karma"
+  },
+  {
+   "id": "country-rank:rank_kingdom",
+   "name": "Kingdom",
+   "page": null
   },
   {
    "id": "concept:known_world",
@@ -3574,6 +4296,11 @@
    "id": "concept:language_power",
    "name": "Language Power",
    "page": "concepts/language-power"
+  },
+  {
+   "id": "societal-value:latinization_vs_hellenization",
+   "name": "Latinitas vs Rōmanismós",
+   "page": null
   },
   {
    "id": "concept:leader_type",
@@ -3594,6 +4321,16 @@
    "id": "concept:lender",
    "name": "Lender",
    "page": "concepts/lender"
+  },
+  {
+   "id": "wargoal:independence",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence_annexing_me",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
   },
   {
    "id": "concept:liturgical_dialect",
@@ -3661,9 +4398,19 @@
    "page": "concepts/merchant"
   },
   {
+   "id": "country-interaction:merge_tribe_iroquois",
+   "name": "Merge Tribes",
+   "page": null
+  },
+  {
    "id": "concept:migration",
    "name": "Migration",
    "page": "concepts/migration"
+  },
+  {
+   "id": "cabinet-action:militarize_country",
+   "name": "Militarize Country",
+   "page": null
   },
   {
    "id": "concept:military_access",
@@ -3686,9 +4433,24 @@
    "page": "concepts/modifier"
   },
   {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
+  },
+  {
    "id": "concept:monthly_manpower",
    "name": "Monthly Manpower",
    "page": "concepts/monthly-manpower"
+  },
+  {
+   "id": "character-interaction:move_child_to_court",
+   "name": "Move Child to Our Court",
+   "page": null
+  },
+  {
+   "id": "societal-value:mysticism_vs_jurisprudence",
+   "name": "Mysticism vs Jurisprudence",
+   "page": null
   },
   {
    "id": "concept:naval_strength",
@@ -3711,6 +4473,11 @@
    "page": "concepts/navy-tradition"
   },
   {
+   "id": "pop:nobles",
+   "name": "Nobles",
+   "page": "pops/nobles"
+  },
+  {
    "id": "concept:normal_power",
    "name": "Normal Power",
    "page": "concepts/normal-power"
@@ -3719,6 +4486,11 @@
    "id": "concept:opinion",
    "name": "Opinion",
    "page": "concepts/opinion"
+  },
+  {
+   "id": "societal-value:outward_vs_inward",
+   "name": "Outward vs Inward",
+   "page": null
   },
   {
    "id": "concept:overlord",
@@ -3811,6 +4583,11 @@
    "page": "concepts/pop-satisfaction"
   },
   {
+   "id": "cabinet-action:posolsky",
+   "name": "Posolsky",
+   "page": null
+  },
+  {
    "id": "concept:power_projection",
    "name": "Power Projection",
    "page": "concepts/power-projection"
@@ -3871,9 +4648,29 @@
    "page": "concepts/proximity"
   },
   {
+   "id": "country-interaction:request_work_of_art_purchase",
+   "name": "Purchase Work of Art",
+   "page": null
+  },
+  {
    "id": "concept:purity",
    "name": "Purity",
    "page": "concepts/purity"
+  },
+  {
+   "id": "character-interaction:pap_reassign_cleric",
+   "name": "Reassign Cleric",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:rebel_crackdown",
+   "name": "Rebel Crackdown",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:reduce_inflation",
+   "name": "Reduce Inflation",
+   "page": null
   },
   {
    "id": "concept:regent",
@@ -3904,6 +4701,11 @@
    "id": "concept:reinforce",
    "name": "Reinforce",
    "page": "concepts/reinforce"
+  },
+  {
+   "id": "cabinet-action:lat_reintegrate_province",
+   "name": "Reintegrate the Empire of Constantinople",
+   "page": null
   },
   {
    "id": "concept:relation_type",
@@ -3961,9 +4763,24 @@
    "page": "concepts/repair"
   },
   {
+   "id": "country-interaction:request_loan",
+   "name": "Request Loan",
+   "page": null
+  },
+  {
    "id": "concept:research",
    "name": "Research",
    "page": "concepts/research"
+  },
+  {
+   "id": "character-interaction:resign_as_grand_master",
+   "name": "Resign as Grandmaster",
+   "page": null
+  },
+  {
+   "id": "casus-belli:cb_resist_annexation",
+   "name": "Resist Annexation",
+   "page": null
   },
   {
    "id": "concept:resolution",
@@ -4036,6 +4853,11 @@
    "page": "concepts/self-control"
   },
   {
+   "id": "country-interaction:sell_work_of_art",
+   "name": "Sell Work of Art",
+   "page": null
+  },
+  {
    "id": "concept:settled_country",
    "name": "Settled Country",
    "page": "concepts/settled-country"
@@ -4071,6 +4893,16 @@
    "page": "concepts/stability"
   },
   {
+   "id": "cabinet-action:stabilize_country",
+   "name": "Stabilize Country",
+   "page": null
+  },
+  {
+   "id": "government-type:steppe_horde",
+   "name": "Steppe Horde",
+   "page": null
+  },
+  {
    "id": "concept:subject",
    "name": "Subject",
    "page": "concepts/subject"
@@ -4094,6 +4926,16 @@
    "id": "concept:supportrebels",
    "name": "Support Rebels",
    "page": "concepts/supportrebels"
+  },
+  {
+   "id": "country-interaction:take_over_loan",
+   "name": "Take over Loan",
+   "page": null
+  },
+  {
+   "id": "character-interaction:make_regent_ruler",
+   "name": "Take the Throne",
+   "page": null
   },
   {
    "id": "concept:tax_efficiency",
@@ -4171,6 +5013,11 @@
    "page": "concepts/treaty"
   },
   {
+   "id": "estate:tribes_estate",
+   "name": "Tribes",
+   "page": "estates/tribes-estate"
+  },
+  {
    "id": "concept:truce",
    "name": "Truce",
    "page": "concepts/truce"
@@ -4194,6 +5041,11 @@
    "id": "concept:union",
    "name": "Union",
    "page": "concepts/union"
+  },
+  {
+   "id": "io:union",
+   "name": "Union",
+   "page": null
   },
   {
    "id": "concept:upper_class",
@@ -4435,6 +5287,11 @@
  ],
  "concept:culture": [
   {
+   "id": "parliament-agenda:pa_accept_estate_culture",
+   "name": "Accept Estate Culture",
+   "page": null
+  },
+  {
    "id": "concept:accepted_culture",
    "name": "Accepted Culture",
    "page": "concepts/accepted-culture"
@@ -4450,9 +5307,24 @@
    "page": "concepts/antagonism"
   },
   {
+   "id": "country-interaction:improve_cultural_view",
+   "name": "Ask to improve Cultural opinion",
+   "page": null
+  },
+  {
+   "id": "country-interaction:improve_cultural_view_subject",
+   "name": "Ask to improve Cultural opinion",
+   "page": null
+  },
+  {
    "id": "concept:assimilate",
    "name": "Assimilate",
    "page": "concepts/assimilate"
+  },
+  {
+   "id": "cabinet-action:promote_culture",
+   "name": "Assimilate Pops into our Culture",
+   "page": null
   },
   {
    "id": "concept:character",
@@ -4535,9 +5407,19 @@
    "page": "concepts/foreign-culture"
   },
   {
+   "id": "cabinet-action:form_new_culture",
+   "name": "Foster New Culture",
+   "page": null
+  },
+  {
    "id": "concept:graphical_culture",
    "name": "Graphical Culture",
    "page": "concepts/graphical-culture"
+  },
+  {
+   "id": "cabinet-action:gaituguiliu_policy",
+   "name": "Gǎitǔguīliú Policy",
+   "page": null
   },
   {
    "id": "concept:integration",
@@ -4548,6 +5430,11 @@
    "id": "concept:language",
    "name": "Language",
    "page": "concepts/language"
+  },
+  {
+   "id": "law:medieval_levy_law",
+   "name": "Levy Law",
+   "page": "laws/medieval-levy-law"
   },
   {
    "id": "concept:nationalist_rebels",
@@ -4613,6 +5500,11 @@
    "id": "concept:merged_culture_group",
    "name": "Unified Culture Group",
    "page": "concepts/merged-culture-group"
+  },
+  {
+   "id": "cabinet-action:merge_culture_group",
+   "name": "Unify Culture Group",
+   "page": null
   },
   {
    "id": "concept:unit_type",
@@ -4741,6 +5633,16 @@
    "id": "concept:loan",
    "name": "Loan",
    "page": "concepts/loan"
+  },
+  {
+   "id": "country-interaction:pay_off_debt",
+   "name": "Pay off Debt",
+   "page": null
+  },
+  {
+   "id": "country-interaction:request_loan",
+   "name": "Request Loan",
+   "page": null
   }
  ],
  "concept:defender": [
@@ -4797,6 +5699,11 @@
    "id": "concept:blockade_capacity",
    "name": "Blockade Capacity",
    "page": "concepts/blockade-capacity"
+  },
+  {
+   "id": "cabinet-action:develop_province",
+   "name": "Develop Province",
+   "page": null
   },
   {
    "id": "concept:doom",
@@ -4917,6 +5824,11 @@
    "page": "concepts/diplomat"
   },
   {
+   "id": "cabinet-action:diplomatic_endeavors",
+   "name": "Diplomatic Endeavors",
+   "page": null
+  },
+  {
    "id": "concept:heathen",
    "name": "Heathen",
    "page": "concepts/heathen"
@@ -4987,6 +5899,11 @@
    "id": "concept:regional_power",
    "name": "Regional Power",
    "page": "concepts/regional-power"
+  },
+  {
+   "id": "country-interaction:take_over_loan",
+   "name": "Take over Loan",
+   "page": null
   },
   {
    "id": "concept:war",
@@ -5081,6 +5998,16 @@
    "id": "concept:naval_range",
    "name": "Naval Range",
    "page": "concepts/naval-range"
+  },
+  {
+   "id": "country-interaction:share_maps",
+   "name": "Share Maps",
+   "page": null
+  },
+  {
+   "id": "country-interaction:steal_maps",
+   "name": "Steal Maps",
+   "page": null
   },
   {
    "id": "concept:terra_incognita",
@@ -5250,9 +6177,34 @@
    "page": "concepts/lowborn"
   },
   {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
+  },
+  {
+   "id": "country-interaction:propose_ruler",
+   "name": "Propose Ruler",
+   "page": null
+  },
+  {
+   "id": "government-type:republic",
+   "name": "Republic",
+   "page": null
+  },
+  {
    "id": "concept:heir_selection",
    "name": "Succession Law",
    "page": "concepts/heir-selection"
+  },
+  {
+   "id": "government-type:tribe",
+   "name": "Tribe",
+   "page": null
+  },
+  {
+   "id": "country-interaction:nusta_marriage",
+   "name": "Ñusta Marriage",
+   "page": null
   }
  ],
  "concept:dynasty_head": [
@@ -5291,6 +6243,51 @@
  ],
  "concept:election": [
   {
+   "id": "heir-selection:abbess_elective_female",
+   "name": "Abbess Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:abbot_elective",
+   "name": "Abbot Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:bishopric_elective",
+   "name": "Bishopric Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:grandmaster_elective",
+   "name": "Grandmaster Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:oligarchic_elective",
+   "name": "Oligarchic Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:peasant_elective",
+   "name": "Peasant Elective",
+   "page": null
+  },
+  {
+   "id": "government-type:republic",
+   "name": "Republic",
+   "page": null
+  },
+  {
+   "id": "heir-selection:republic_2_year_terms",
+   "name": "Republic 2 Year Terms",
+   "page": null
+  },
+  {
+   "id": "heir-selection:republic_4_year_terms",
+   "name": "Republic 4 Year Terms",
+   "page": null
+  },
+  {
    "id": "concept:republican_tradition",
    "name": "Republican Tradition",
    "page": "concepts/republican-tradition"
@@ -5299,9 +6296,34 @@
    "id": "concept:heir_selection",
    "name": "Succession Law",
    "page": "concepts/heir-selection"
+  },
+  {
+   "id": "government-type:theocracy",
+   "name": "Theocracy",
+   "page": null
+  },
+  {
+   "id": "heir-selection:theocratic_elective",
+   "name": "Theocratic Elective",
+   "page": null
   }
  ],
  "concept:elector": [
+  {
+   "id": "country-interaction:bestow_elector_status",
+   "name": "Bestow Elector Status",
+   "page": null
+  },
+  {
+   "id": "country-interaction:request_elector_status",
+   "name": "Request Elector Status",
+   "page": null
+  },
+  {
+   "id": "country-interaction:rescind_elector_status",
+   "name": "Rescind Elector Status",
+   "page": null
+  },
   {
    "id": "concept:special_status",
    "name": "Special Status",
@@ -5440,6 +6462,21 @@
  ],
  "concept:estate": [
   {
+   "id": "parliament-agenda:pa_accept_estate_culture",
+   "name": "Accept Estate Culture",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:tyranny_of_the_capital_action",
+   "name": "Align Estate",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:appease_estate",
+   "name": "Appease Estate",
+   "page": null
+  },
+  {
    "id": "concept:bond_interest",
    "name": "Bond Interest",
    "page": "concepts/bond-interest"
@@ -5448,6 +6485,11 @@
    "id": "concept:borrower",
    "name": "Borrower",
    "page": "concepts/borrower"
+  },
+  {
+   "id": "parliament-agenda:pa_break_alliance",
+   "name": "Break Alliance",
+   "page": null
   },
   {
    "id": "concept:building",
@@ -5460,6 +6502,111 @@
    "page": "concepts/bureaucracy"
   },
   {
+   "id": "parliament-agenda:pa_change_court_language_to_estate_language",
+   "name": "Change Court Language",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_change_policy",
+   "name": "Change Policy",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_artillery_institution",
+   "name": "Contain Artillery",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_banking",
+   "name": "Contain Banking",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_confessionalism",
+   "name": "Contain Confessionalism",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_enlightenment",
+   "name": "Contain Enlightenment",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_feudalism",
+   "name": "Contain Feudalism",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_global_trade",
+   "name": "Contain Global Trade",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_industrialization",
+   "name": "Contain Industrialization",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_legalism",
+   "name": "Contain Legalism",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_levee_en_masse",
+   "name": "Contain Levée en Masse",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_manufactories",
+   "name": "Contain Manufactories",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_meritocracy",
+   "name": "Contain Meritocracy",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_military_revolution",
+   "name": "Contain Military Revolution",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_new_world",
+   "name": "Contain New World",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_pike_and_shot",
+   "name": "Contain Pike and Shot",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_printing_press",
+   "name": "Contain Printing Press",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_professional_armies",
+   "name": "Contain Professional Armies",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_renaissance",
+   "name": "Contain Renaissance",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_resist_scientific_revolution",
+   "name": "Contain Scientific Revolution",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_convert_to_estate_religion",
+   "name": "Convert to Estate Religion",
+   "page": null
+  },
+  {
    "id": "concept:court_language",
    "name": "Court Language",
    "page": "concepts/court-language"
@@ -5468,6 +6615,11 @@
    "id": "concept:crown_power",
    "name": "Crown Power",
    "page": "concepts/crown-power"
+  },
+  {
+   "id": "parliament-agenda:pa_construct_market_village",
+   "name": "Demand for a New Marketplace",
+   "page": null
   },
   {
    "id": "concept:dominant_upper_class_culture",
@@ -5535,9 +6687,29 @@
    "page": "concepts/government-bond"
   },
   {
+   "id": "parliament-agenda:pa_add_privilege",
+   "name": "Grant Privilege",
+   "page": null
+  },
+  {
    "id": "concept:income",
    "name": "Income",
    "page": "concepts/income"
+  },
+  {
+   "id": "parliament-agenda:pa_increase_entrenchment",
+   "name": "Increase Bureaucratic Entrenchment",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_raise_opinion",
+   "name": "Increase Opinion",
+   "page": null
+  },
+  {
+   "id": "law:medieval_levy_law",
+   "name": "Levy Law",
+   "page": "laws/medieval-levy-law"
   },
   {
    "id": "concept:loan_capacity",
@@ -5590,9 +6762,34 @@
    "page": "concepts/pretender-rebels"
   },
   {
+   "id": "cabinet-action:bironovshchina",
+   "name": "Promote Council of the Empire",
+   "page": null
+  },
+  {
    "id": "concept:rebel_movement",
    "name": "Rebel Movement",
    "page": "concepts/rebel-movement"
+  },
+  {
+   "id": "parliament-agenda:pa_reduce_land_recruitment",
+   "name": "Reduce Army Recruitment",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_decrease_entrenchment",
+   "name": "Reduce Bureaucratic Entrenchment",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_reduce_naval_recruitment",
+   "name": "Reduce Navy Recruitment",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_reduce_opinion",
+   "name": "Reduce Opinion",
+   "page": null
   },
   {
    "id": "concept:regency",
@@ -5605,9 +6802,34 @@
    "page": "concepts/religious-rebels"
   },
   {
+   "id": "government-type:republic",
+   "name": "Republic",
+   "page": null
+  },
+  {
+   "id": "law:crown_rights_laws",
+   "name": "Rights of the Crown",
+   "page": "laws/crown-rights-laws"
+  },
+  {
+   "id": "parliament-type:union_royal_assembly",
+   "name": "Royal Assembly",
+   "page": null
+  },
+  {
    "id": "concept:estate_satisfaction_equilibrium",
    "name": "Satisfaction Equilibrium",
    "page": "concepts/estate-satisfaction-equilibrium"
+  },
+  {
+   "id": "parliament-agenda:pa_rethink_army_academy",
+   "name": "Shake up Army Academy",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_rethink_navy_academy",
+   "name": "Shake up Naval Academy",
+   "page": null
   },
   {
    "id": "concept:slave_rebels",
@@ -5618,6 +6840,11 @@
    "id": "concept:heir_selection",
    "name": "Succession Law",
    "page": "concepts/heir-selection"
+  },
+  {
+   "id": "cabinet-action:taluqdar_tax_collection",
+   "name": "Taluqdar Tax Collection",
+   "page": null
   },
   {
    "id": "concept:tax",
@@ -5638,6 +6865,11 @@
    "id": "concept:tax_rate",
    "name": "Tax Rate",
    "page": "concepts/tax-rate"
+  },
+  {
+   "id": "law:eng_taxation_law",
+   "name": "Taxation",
+   "page": "laws/eng-taxation-law"
   },
   {
    "id": "concept:upper_class",
@@ -5916,9 +7148,24 @@
  ],
  "concept:excommunication": [
   {
+   "id": "country-interaction:excommunicate",
+   "name": "Excommunicate",
+   "page": null
+  },
+  {
+   "id": "country-interaction:lift_excommunication",
+   "name": "Lift Excommunication",
+   "page": null
+  },
+  {
    "id": "concept:papal_authority",
    "name": "Papal Authority",
    "page": "concepts/papal-authority"
+  },
+  {
+   "id": "country-interaction:ask_to_lift_excommunication",
+   "name": "Request Lifting Excommunication",
+   "page": null
   }
  ],
  "concept:exile": [
@@ -5941,6 +7188,11 @@
   }
  ],
  "concept:experience": [
+  {
+   "id": "recruitment-method:elite_training",
+   "name": "Additional",
+   "page": null
+  },
   {
    "id": "concept:damage_taken",
    "name": "Damage Taken",
@@ -6074,6 +7326,13 @@
    "page": "concepts/country"
   }
  ],
+ "concept:favors": [
+  {
+   "id": "country-interaction:renegotiate_loan",
+   "name": "Renegotiate Loan",
+   "page": null
+  }
+ ],
  "concept:flank": [
   {
    "id": "concept:center",
@@ -6190,6 +7449,11 @@
    "id": "concept:goods",
    "name": "Goods",
    "page": "concepts/goods"
+  },
+  {
+   "id": "town-right:granary_town",
+   "name": "Granary Town",
+   "page": null
   },
   {
    "id": "concept:local_food",
@@ -6447,6 +7711,11 @@
    "page": "concepts/occupation"
   },
   {
+   "id": "societal-value:offensive_vs_defensive",
+   "name": "Offensive vs Defensive",
+   "page": null
+  },
+  {
    "id": "concept:siege",
    "name": "Siege",
    "page": "concepts/siege"
@@ -6532,6 +7801,11 @@
    "id": "concept:siege",
    "name": "Siege",
    "page": "concepts/siege"
+  },
+  {
+   "id": "pop:soldiers",
+   "name": "Soldiers",
+   "page": "pops/soldiers"
   }
  ],
  "concept:gathering_food": [
@@ -6585,9 +7859,19 @@
    "page": "concepts/hindu-branch"
   },
   {
+   "id": "io:hindu_branch",
+   "name": "Hindu Branch",
+   "page": null
+  },
+  {
    "id": "concept:omen",
    "name": "Omen",
    "page": "concepts/omen"
+  },
+  {
+   "id": "law:hindu_branch_spec",
+   "name": "Tradition",
+   "page": "laws/hindu-branch-spec"
   }
  ],
  "concept:gold": [
@@ -7175,6 +8459,16 @@
    "id": "concept:town_rights",
    "name": "Urban Rights",
    "page": "concepts/town-rights"
+  },
+  {
+   "id": "advance:uc_bey_advance",
+   "name": "Uç Bey",
+   "page": "advances/uc-bey-advance"
+  },
+  {
+   "id": "subject:uc_bey",
+   "name": "Uç Bey",
+   "page": null
   }
  ],
  "concept:government_type": [
@@ -7306,6 +8600,11 @@
  ],
  "concept:heathen": [
   {
+   "id": "country-interaction:call_order_to_crusade",
+   "name": "Call Military Order to Crusade",
+   "page": null
+  },
+  {
    "id": "concept:religion",
    "name": "Religion",
    "page": "concepts/religion"
@@ -7319,6 +8618,11 @@
    "id": "concept:religious_war",
    "name": "Religious War",
    "page": "concepts/religious-war"
+  },
+  {
+   "id": "societal-value:spiritualist_vs_humanist",
+   "name": "Spiritualist vs Humanist",
+   "page": null
   },
   {
    "id": "concept:tolerance",
@@ -7345,9 +8649,24 @@
  ],
  "concept:heir": [
   {
+   "id": "heir-selection:absolute_cognatic_primogeniture",
+   "name": "Absolute Cognatic Primogeniture",
+   "page": null
+  },
+  {
+   "id": "heir-selection:cognatic_primogeniture",
+   "name": "Cognatic Primogeniture",
+   "page": null
+  },
+  {
    "id": "concept:consort",
    "name": "Consort",
    "page": "concepts/consort"
+  },
+  {
+   "id": "heir-selection:austrian_cognatic_primogeniture",
+   "name": "Dynastic Cognatic Primogeniture",
+   "page": null
   },
   {
    "id": "concept:eligibility_rules",
@@ -7360,14 +8679,44 @@
    "page": "concepts/estate"
   },
   {
+   "id": "law:heir_religion_law",
+   "name": "Heir Religion",
+   "page": "laws/heir-religion-law"
+  },
+  {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
+  },
+  {
+   "id": "character-interaction:prefection",
+   "name": "Prefection",
+   "page": null
+  },
+  {
    "id": "concept:regency",
    "name": "Regency",
    "page": "concepts/regency"
   },
   {
+   "id": "government-type:steppe_horde",
+   "name": "Steppe Horde",
+   "page": null
+  },
+  {
    "id": "concept:heir_selection",
    "name": "Succession Law",
    "page": "concepts/heir-selection"
+  },
+  {
+   "id": "government-type:tribe",
+   "name": "Tribe",
+   "page": null
+  },
+  {
+   "id": "heir-selection:union_of_crowns_succession",
+   "name": "Union of Crowns Succession",
+   "page": null
   }
  ],
  "concept:heir_selection": [
@@ -7451,6 +8800,11 @@
    "id": "concept:religious_status",
    "name": "Religious Status",
    "page": "concepts/religious-status"
+  },
+  {
+   "id": "societal-value:spiritualist_vs_humanist",
+   "name": "Spiritualist vs Humanist",
+   "page": null
   },
   {
    "id": "concept:tolerance",
@@ -7552,6 +8906,11 @@
    "id": "concept:blockade",
    "name": "Blockade",
    "page": "concepts/blockade"
+  },
+  {
+   "id": "country-interaction:call_appanage_to_war",
+   "name": "Call Appanage to War",
+   "page": null
   },
   {
    "id": "concept:combat",
@@ -7718,6 +9077,11 @@
    "id": "concept:minting",
    "name": "Minting",
    "page": "concepts/minting"
+  },
+  {
+   "id": "cabinet-action:reduce_inflation",
+   "name": "Reduce Inflation",
+   "page": null
   }
  ],
  "concept:institution": [
@@ -7730,6 +9094,26 @@
    "id": "concept:embrace",
    "name": "Embrace",
    "page": "concepts/embrace"
+  },
+  {
+   "id": "cabinet-action:study_institutions",
+   "name": "Foster Institutions",
+   "page": null
+  },
+  {
+   "id": "town-right:studium_privileges",
+   "name": "Studium Privileges",
+   "page": null
+  },
+  {
+   "id": "societal-value:traditionalist_vs_innovative",
+   "name": "Traditionalist vs Innovative",
+   "page": null
+  },
+  {
+   "id": "subject:vassal",
+   "name": "Vassal",
+   "page": null
   }
  ],
  "concept:integration": [
@@ -7749,9 +9133,24 @@
    "page": "concepts/culture-war-power"
   },
   {
+   "id": "cabinet-action:integrate_area",
+   "name": "Integrate Area",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_province",
+   "name": "Integrate Province",
+   "page": null
+  },
+  {
    "id": "concept:integration_status",
    "name": "Integration Status",
    "page": "concepts/integration-status"
+  },
+  {
+   "id": "cabinet-action:lat_reintegrate_province",
+   "name": "Reintegrate the Empire of Constantinople",
+   "page": null
   },
   {
    "id": "concept:separatism",
@@ -7806,6 +9205,16 @@
    "id": "concept:loan_capacity",
    "name": "Loan Capacity",
    "page": "concepts/loan-capacity"
+  },
+  {
+   "id": "country-interaction:renegotiate_loan",
+   "name": "Renegotiate Loan",
+   "page": null
+  },
+  {
+   "id": "country-interaction:take_over_loan",
+   "name": "Take over Loan",
+   "page": null
   }
  ],
  "concept:international_organization": [
@@ -8171,6 +9580,11 @@
    "page": "concepts/exploration-expense"
   },
   {
+   "id": "privilege:florence_guilds",
+   "name": "Florence Guilds",
+   "page": "privileges/florence-guilds"
+  },
+  {
    "id": "concept:food_productivity",
    "name": "Food Productivity",
    "page": "concepts/food-productivity"
@@ -8231,6 +9645,11 @@
    "page": "concepts/revolutionary"
   },
   {
+   "id": "parliament-type:union_royal_assembly",
+   "name": "Royal Assembly",
+   "page": null
+  },
+  {
    "id": "concept:societal_value",
    "name": "Societal Value",
    "page": "concepts/societal-value"
@@ -8259,6 +9678,11 @@
    "id": "concept:union",
    "name": "Union",
    "page": "concepts/union"
+  },
+  {
+   "id": "io:union",
+   "name": "Union",
+   "page": null
   },
   {
    "id": "concept:union_integration_level",
@@ -8295,9 +9719,34 @@
    "id": "concept:loan",
    "name": "Loan",
    "page": "concepts/loan"
+  },
+  {
+   "id": "country-interaction:take_over_loan",
+   "name": "Take over Loan",
+   "page": null
   }
  ],
  "concept:levy": [
+  {
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_burghers",
+   "name": "Lessen Levy Obligations",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_clergy",
+   "name": "Lessen Levy Obligations",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_nobles",
+   "name": "Lessen Levy Obligations",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_levy_obligations_for_peasants",
+   "name": "Lessen Levy Obligations",
+   "page": null
+  },
   {
    "id": "concept:levy_combat_efficiency",
    "name": "Levy Combat Efficiency",
@@ -8324,6 +9773,13 @@
    "id": "concept:subject_loyalty",
    "name": "Subject Loyalty",
    "page": "concepts/subject-loyalty"
+  }
+ ],
+ "concept:literacy": [
+  {
+   "id": "town-right:studium_privileges",
+   "name": "Studium Privileges",
+   "page": null
   }
  ],
  "concept:liturgical_language": [
@@ -8385,6 +9841,21 @@
    "page": "concepts/loan-capacity"
   },
   {
+   "id": "country-interaction:renegotiate_loan",
+   "name": "Renegotiate Loan",
+   "page": null
+  },
+  {
+   "id": "country-interaction:take_colony_for_debt",
+   "name": "Take Colonial Charter for Debt",
+   "page": null
+  },
+  {
+   "id": "country-interaction:take_over_loan",
+   "name": "Take over Loan",
+   "page": null
+  },
+  {
    "id": "concept:treasury",
    "name": "Treasury",
    "page": "concepts/treasury"
@@ -8414,6 +9885,11 @@
    "page": "concepts/army-based"
   },
   {
+   "id": "town-right:royal_artisan_rights",
+   "name": "Artisan Rights",
+   "page": null
+  },
+  {
    "id": "concept:attrition",
    "name": "Attrition",
    "page": "concepts/attrition"
@@ -8422,6 +9898,16 @@
    "id": "concept:average_satisfaction",
    "name": "Average Satisfaction",
    "page": "concepts/average-satisfaction"
+  },
+  {
+   "id": "advance:scandinavian_bergslag_privileges_advance",
+   "name": "Bergslagsprivilegier",
+   "page": "advances/scandinavian-bergslag-privileges-advance"
+  },
+  {
+   "id": "town-right:scandinavian_bergslag_privileges",
+   "name": "Bergslagsprivilegier",
+   "page": null
   },
   {
    "id": "concept:blockade_capacity",
@@ -8442,6 +9928,16 @@
    "id": "concept:cardinal",
    "name": "Cardinal",
    "page": "concepts/cardinal"
+  },
+  {
+   "id": "building:fulani_cattle_rearing_pen",
+   "name": "Cattle-Rearing Pen",
+   "page": "buildings/fulani-cattle-rearing-pen"
+  },
+  {
+   "id": "town-right:agrarian_community_town_right",
+   "name": "Charter of Religious Freedom",
+   "page": null
   },
   {
    "id": "concept:civil_construction",
@@ -8484,6 +9980,11 @@
    "page": "concepts/combat"
   },
   {
+   "id": "town-right:enlightened_leadership_reform_town_right",
+   "name": "Commoner Council Rights",
+   "page": null
+  },
+  {
    "id": "concept:conquer",
    "name": "Conquer",
    "page": "concepts/conquer"
@@ -8519,6 +10020,11 @@
    "page": "concepts/country-type"
   },
   {
+   "id": "country-rank:rank_county",
+   "name": "County",
+   "page": null
+  },
+  {
    "id": "concept:crossing",
    "name": "Crossing",
    "page": "concepts/crossing"
@@ -8527,6 +10033,11 @@
    "id": "concept:defender",
    "name": "Defender",
    "page": "concepts/defender"
+  },
+  {
+   "id": "peace-treaty:rtr_demand_all_chinese_territories",
+   "name": "Demand All Chinese Territories",
+   "page": null
   },
   {
    "id": "concept:demote",
@@ -8609,6 +10120,11 @@
    "page": "concepts/employment-system"
   },
   {
+   "id": "cabinet-action:encourage_migration",
+   "name": "Encourage Migration",
+   "page": null
+  },
+  {
    "id": "concept:estate_building",
    "name": "Estate Building",
    "page": "concepts/estate-building"
@@ -8627,6 +10143,16 @@
    "id": "concept:extraterritorial_country",
    "name": "Extraterritorial Country",
    "page": "concepts/extraterritorial-country"
+  },
+  {
+   "id": "advance:scandinavian_fishing_privileges_advance",
+   "name": "Fiskeriprivilegier",
+   "page": "advances/scandinavian-fishing-privileges-advance"
+  },
+  {
+   "id": "town-right:scandinavian_fishing_privileges",
+   "name": "Fiskeriprivilegier",
+   "page": null
   },
   {
    "id": "concept:fow",
@@ -8654,6 +10180,11 @@
    "page": "concepts/food-stockpile"
   },
   {
+   "id": "peace-treaty:force_tributary",
+   "name": "Force Tributary",
+   "page": null
+  },
+  {
    "id": "concept:foreign",
    "name": "Foreign",
    "page": "concepts/foreign"
@@ -8677,6 +10208,16 @@
    "id": "concept:fortification",
    "name": "Fortification",
    "page": "concepts/fortification"
+  },
+  {
+   "id": "town-right:fortress_town",
+   "name": "Fortress Town",
+   "page": null
+  },
+  {
+   "id": "town-right:free_town_charter",
+   "name": "Free Town Charter",
+   "page": null
   },
   {
    "id": "concept:frontage",
@@ -8714,6 +10255,11 @@
    "page": "concepts/government-needs"
   },
   {
+   "id": "town-right:granary_town",
+   "name": "Granary Town",
+   "page": null
+  },
+  {
    "id": "concept:great_power",
    "name": "Great Power",
    "page": "concepts/great-power"
@@ -8734,6 +10280,16 @@
    "page": "concepts/hemisphere"
   },
   {
+   "id": "wargoal:high_kingship_subjugate_wargoal",
+   "name": "High Kingship Subjugation",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_liberate_hre_member",
+   "name": "Holy Roman Empire Liberation",
+   "page": null
+  },
+  {
    "id": "concept:holy_site",
    "name": "Holy Site",
    "page": "concepts/holy-site"
@@ -8747,6 +10303,21 @@
    "id": "concept:impassable",
    "name": "Impassable",
    "page": "concepts/impassable"
+  },
+  {
+   "id": "building:hre_imperial_armory_foreign",
+   "name": "Imperial Armory (Abroad)",
+   "page": "buildings/hre-imperial-armory-foreign"
+  },
+  {
+   "id": "building:hre_imperial_armory_own",
+   "name": "Imperial Armory (Domestic)",
+   "page": "buildings/hre-imperial-armory-own"
+  },
+  {
+   "id": "town-right:imperial_breadbasket_rights",
+   "name": "Imperial Breadbasket",
+   "page": null
   },
   {
    "id": "concept:inland",
@@ -8772,6 +10343,16 @@
    "id": "concept:spy_network_fog",
    "name": "Intelligence Fog",
    "page": "concepts/spy-network-fog"
+  },
+  {
+   "id": "casus-belli:cb_dlh_invasion_of_china",
+   "name": "Invasion of China",
+   "page": null
+  },
+  {
+   "id": "town-right:royal_jewelry_rights",
+   "name": "Jewelry Rights",
+   "page": null
   },
   {
    "id": "concept:land_ownership_rule",
@@ -8809,6 +10390,11 @@
    "page": "concepts/loot"
   },
   {
+   "id": "casus-belli:cb_make_tributary",
+   "name": "Make Tributary",
+   "page": null
+  },
+  {
    "id": "concept:market_access",
    "name": "Market Access",
    "page": "concepts/market-access"
@@ -8824,9 +10410,19 @@
    "page": "concepts/market-center"
   },
   {
+   "id": "town-right:market_charter",
+   "name": "Market Charter",
+   "page": null
+  },
+  {
    "id": "concept:protectionism",
    "name": "Market Protection",
    "page": "concepts/protectionism"
+  },
+  {
+   "id": "town-right:royal_masonry_rights",
+   "name": "Masonry Rights",
+   "page": null
   },
   {
    "id": "concept:max_control",
@@ -8844,6 +10440,11 @@
    "page": "concepts/migration-attraction"
   },
   {
+   "id": "town-right:mining_charter",
+   "name": "Mining Charter",
+   "page": null
+  },
+  {
    "id": "concept:minor_revolt",
    "name": "Minor Revolt",
    "page": "concepts/minor-revolt"
@@ -8852,6 +10453,11 @@
    "id": "concept:modifier",
    "name": "Modifier",
    "page": "concepts/modifier"
+  },
+  {
+   "id": "country-interaction:move_subject_capital",
+   "name": "Move Subject's Capital",
+   "page": null
   },
   {
    "id": "concept:movement",
@@ -8864,6 +10470,11 @@
    "page": "concepts/movement-modifier"
   },
   {
+   "id": "town-right:municipia_privilegia",
+   "name": "Municipia Privileges",
+   "page": null
+  },
+  {
    "id": "concept:natural_harbor_suitability",
    "name": "Natural Harbor Suitability",
    "page": "concepts/natural-harbor-suitability"
@@ -8874,6 +10485,11 @@
    "page": "concepts/navy-levy"
   },
   {
+   "id": "town-right:royal_naval_rights",
+   "name": "Naval Supplies Rights",
+   "page": null
+  },
+  {
    "id": "concept:navy_based",
    "name": "Navy Based Country",
    "page": "concepts/navy-based"
@@ -8882,6 +10498,11 @@
    "id": "concept:occupation",
    "name": "Occupation",
    "page": "concepts/occupation"
+  },
+  {
+   "id": "societal-value:offensive_vs_defensive",
+   "name": "Offensive vs Defensive",
+   "page": null
   },
   {
    "id": "concept:output",
@@ -8964,6 +10585,11 @@
    "page": "concepts/power-projection"
   },
   {
+   "id": "town-right:royal_book_rights",
+   "name": "Printing Rights",
+   "page": null
+  },
+  {
    "id": "concept:profit",
    "name": "Profit",
    "page": "concepts/profit"
@@ -9019,6 +10645,11 @@
    "page": "concepts/reinforce"
   },
   {
+   "id": "wargoal:superiority_restore_roman_borders",
+   "name": "Restore Roman Borders",
+   "page": null
+  },
+  {
    "id": "concept:revolter",
    "name": "Revolter",
    "page": "concepts/revolter"
@@ -9039,9 +10670,19 @@
    "page": "concepts/rural-location"
   },
   {
+   "id": "town-right:scholai_literacy_rights",
+   "name": "Scholai Privileges",
+   "page": null
+  },
+  {
    "id": "concept:seazone",
    "name": "Seazone",
    "page": "concepts/seazone"
+  },
+  {
+   "id": "wargoal:secure_italy_wargoal",
+   "name": "Secure Italy",
+   "page": null
   },
   {
    "id": "concept:sell_price",
@@ -9064,9 +10705,19 @@
    "page": "concepts/siege"
   },
   {
+   "id": "casus-belli:cb_slave_raiding",
+   "name": "Slave Raiding",
+   "page": null
+  },
+  {
    "id": "concept:society_of_pops",
    "name": "Society of Pops",
    "page": "concepts/society-of-pops"
+  },
+  {
+   "id": "building:sofa_barracks",
+   "name": "Sofa Barracks",
+   "page": "buildings/sofa-barracks"
   },
   {
    "id": "concept:sound_toll",
@@ -9074,9 +10725,24 @@
    "page": "concepts/sound-toll"
   },
   {
+   "id": "town-right:royal_brewing_rights",
+   "name": "Spirituous Rights",
+   "page": null
+  },
+  {
+   "id": "town-right:staple_port",
+   "name": "Staple Port",
+   "page": null
+  },
+  {
    "id": "concept:strait",
    "name": "Strait",
    "page": "concepts/strait"
+  },
+  {
+   "id": "town-right:studium_privileges",
+   "name": "Studium Privileges",
+   "page": null
   },
   {
    "id": "concept:subsistence_agriculture",
@@ -9099,6 +10765,61 @@
    "page": "concepts/supported-building-levels"
   },
   {
+   "id": "wargoal:crusade_conquest",
+   "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:jihad_conquest",
+   "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_colony_war",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_enforce_hegemon_demands",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_gag_force_country_into_faction",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_prevent_annexation",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_sound_toll",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_subjugation",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_tributary",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_claim_throne",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip and install game_concept_CHARACTER.GetName as their Ruler",
+   "page": null
+  },
+  {
    "id": "concept:tax",
    "name": "Tax",
    "page": "concepts/tax"
@@ -9114,9 +10835,44 @@
    "page": "concepts/terra-incognita"
   },
   {
+   "id": "town-right:royal_textile_rights",
+   "name": "Textile Rights",
+   "page": null
+  },
+  {
+   "id": "advance:scandinavian_thing_rights_advance",
+   "name": "Tingsrätt",
+   "page": "advances/scandinavian-thing-rights-advance"
+  },
+  {
+   "id": "town-right:scandinavian_thing_rights",
+   "name": "Tingsrätt",
+   "page": null
+  },
+  {
+   "id": "advance:scandinavian_tar_privileges_advance",
+   "name": "Tjärprivilegier",
+   "page": "advances/scandinavian-tar-privileges-advance"
+  },
+  {
+   "id": "town-right:scandinavian_tar_privileges",
+   "name": "Tjärprivilegier",
+   "page": null
+  },
+  {
+   "id": "town-right:royal_tooling_rights",
+   "name": "Tooling Rights",
+   "page": null
+  },
+  {
    "id": "concept:topography",
    "name": "Topography",
    "page": "concepts/topography"
+  },
+  {
+   "id": "country-interaction:transfer_occupation",
+   "name": "Transfer Occupations",
+   "page": null
   },
   {
    "id": "concept:unconditional_surrender",
@@ -9167,6 +10923,11 @@
    "id": "concept:wealth_share",
    "name": "Wealth Share",
    "page": "concepts/wealth-share"
+  },
+  {
+   "id": "town-right:royal_weaponry_rights",
+   "name": "Weaponry Rights",
+   "page": null
   },
   {
    "id": "concept:weather_system",
@@ -9230,6 +10991,13 @@
    "page": "concepts/prosperity"
   }
  ],
+ "concept:lowborn": [
+  {
+   "id": "character-interaction:marry_lowborn",
+   "name": "Marry a Lowborn",
+   "page": null
+  }
+ ],
  "concept:lower_class": [
   {
    "id": "concept:pop_needs",
@@ -9253,9 +11021,44 @@
  ],
  "concept:manpower": [
   {
+   "id": "advance:armory_advance",
+   "name": "Armory",
+   "page": "advances/armory-advance"
+  },
+  {
+   "id": "building:armory",
+   "name": "Armory",
+   "page": "buildings/armory"
+  },
+  {
    "id": "concept:army_levy",
    "name": "Army Levy",
    "page": "concepts/army-levy"
+  },
+  {
+   "id": "advance:barracks_advance",
+   "name": "Barracks",
+   "page": "advances/barracks-advance"
+  },
+  {
+   "id": "building:barracks",
+   "name": "Barracks",
+   "page": "buildings/barracks"
+  },
+  {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
+  },
+  {
+   "id": "advance:conscription_center_advance",
+   "name": "Conscription Center",
+   "page": "advances/conscription-center-advance"
+  },
+  {
+   "id": "building:conscription_center",
+   "name": "Conscription Center",
+   "page": "buildings/conscription-center"
   },
   {
    "id": "concept:control",
@@ -9263,9 +11066,24 @@
    "page": "concepts/control"
   },
   {
+   "id": "town-right:fortress_town",
+   "name": "Fortress Town",
+   "page": null
+  },
+  {
+   "id": "law:military_contribution",
+   "name": "Imperial Register",
+   "page": "laws/military-contribution"
+  },
+  {
    "id": "concept:maximum_strength",
    "name": "Maximum Strength",
    "page": "concepts/maximum-strength"
+  },
+  {
+   "id": "subject:hanseatic_member",
+   "name": "Member of the Hansa",
+   "page": null
   },
   {
    "id": "concept:military_strength",
@@ -9283,6 +11101,11 @@
    "page": "concepts/payment"
   },
   {
+   "id": "subject:pradhana_maha_samanta",
+   "name": "Pradhāna-Mahā-Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:price",
    "name": "Price",
    "page": "concepts/price"
@@ -9298,6 +11121,16 @@
    "page": "concepts/regiment"
   },
   {
+   "id": "advance:regimental_camp_advance",
+   "name": "Regimental Camp",
+   "page": "advances/regimental-camp-advance"
+  },
+  {
+   "id": "building:regimental_camp",
+   "name": "Regimental Camp",
+   "page": "buildings/regimental-camp"
+  },
+  {
    "id": "concept:regular_regiment",
    "name": "Regular Regiment",
    "page": "concepts/regular-regiment"
@@ -9308,6 +11141,11 @@
    "page": "concepts/reinforce"
   },
   {
+   "id": "pop:soldiers",
+   "name": "Soldiers",
+   "page": "pops/soldiers"
+  },
+  {
    "id": "concept:strength_damage_done",
    "name": "Strength Damage Done",
    "page": "concepts/strength-damage-done"
@@ -9316,6 +11154,21 @@
    "id": "concept:strength_damage_taken",
    "name": "Strength Damage Taken",
    "page": "concepts/strength-damage-taken"
+  },
+  {
+   "id": "advance:training_fields_advance",
+   "name": "Training Fields",
+   "page": "advances/training-fields-advance"
+  },
+  {
+   "id": "building:training_fields",
+   "name": "Training Fields",
+   "page": "buildings/training-fields"
+  },
+  {
+   "id": "subject:tributary",
+   "name": "Tributary",
+   "page": null
   }
  ],
  "concept:maritime_presence": [
@@ -9380,6 +11233,11 @@
    "id": "concept:civil_construction",
    "name": "Civil Construction",
    "page": "concepts/civil-construction"
+  },
+  {
+   "id": "law:colonial_policy",
+   "name": "Colonial Policy",
+   "page": "laws/colonial-policy"
   },
   {
    "id": "concept:common_goods",
@@ -9560,6 +11418,11 @@
    "id": "good:slaves_goods",
    "name": "Slaves",
    "page": "goods/slaves-goods"
+  },
+  {
+   "id": "pop:slaves",
+   "name": "Slaves",
+   "page": "pops/slaves"
   },
   {
    "id": "concept:stockpile",
@@ -9752,6 +11615,11 @@
  ],
  "concept:member": [
   {
+   "id": "country-interaction:bestow_kingdom_title",
+   "name": "Bestow Kingdom Title",
+   "page": null
+  },
+  {
    "id": "concept:elector",
    "name": "Elector",
    "page": "concepts/elector"
@@ -9760,6 +11628,11 @@
    "id": "concept:hre_emperor",
    "name": "Emperor",
    "page": "concepts/hre-emperor"
+  },
+  {
+   "id": "country-interaction:grant_county_privileges",
+   "name": "Grant County Privileges",
+   "page": null
   },
   {
    "id": "concept:imperial_religion",
@@ -9896,6 +11769,11 @@
  ],
  "concept:migration": [
   {
+   "id": "law:immigration_law",
+   "name": "Border Controls",
+   "page": "laws/immigration-law"
+  },
+  {
    "id": "concept:colonial_charter",
    "name": "Colonial Charter",
    "page": "concepts/colonial-charter"
@@ -9904,6 +11782,16 @@
    "id": "concept:colonial_migration",
    "name": "Colonial Migration",
    "page": "concepts/colonial-migration"
+  },
+  {
+   "id": "cabinet-action:encourage_migration",
+   "name": "Encourage Migration",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:expel_people",
+   "name": "Expel People",
+   "page": null
   },
   {
    "id": "concept:prosperity",
@@ -10173,9 +12061,24 @@
    "page": "concepts/admiral"
   },
   {
+   "id": "character-interaction:assume_fort_command",
+   "name": "Assume Fort Command",
+   "page": null
+  },
+  {
    "id": "concept:blockade",
    "name": "Blockade",
    "page": "concepts/blockade"
+  },
+  {
+   "id": "advance:boarding_parties",
+   "name": "Boarding Parties",
+   "page": "advances/boarding-parties"
+  },
+  {
+   "id": "cabinet-action:oma_bolster_omani_navy",
+   "name": "Bolster Navy",
+   "page": null
   },
   {
    "id": "concept:civil_construction",
@@ -10248,6 +12151,11 @@
    "page": "concepts/government-needs"
   },
   {
+   "id": "advance:improved_shipyards",
+   "name": "Improved Shipyards",
+   "page": "advances/improved-shipyards"
+  },
+  {
    "id": "concept:exile",
    "name": "In Exile",
    "page": "concepts/exile"
@@ -10288,6 +12196,11 @@
    "page": "concepts/morale"
   },
   {
+   "id": "law:naval_doctrine_law",
+   "name": "Naval Doctrine",
+   "page": "laws/naval-doctrine-law"
+  },
+  {
    "id": "concept:navy_levy",
    "name": "Naval Levy",
    "page": "concepts/navy-levy"
@@ -10306,6 +12219,11 @@
    "id": "concept:navy_tradition",
    "name": "Navy Tradition",
    "page": "concepts/navy-tradition"
+  },
+  {
+   "id": "societal-value:offensive_vs_defensive",
+   "name": "Offensive vs Defensive",
+   "page": null
   },
   {
    "id": "concept:regular_ship",
@@ -10336,6 +12254,11 @@
    "id": "concept:ship",
    "name": "Ship",
    "page": "concepts/ship"
+  },
+  {
+   "id": "pop:soldiers",
+   "name": "Soldiers",
+   "page": "pops/soldiers"
   },
   {
    "id": "concept:strait",
@@ -10465,6 +12388,11 @@
    "page": "concepts/controller"
   },
   {
+   "id": "peace-treaty:rtr_demand_occupied_territories",
+   "name": "Demand Occupied Territories",
+   "page": null
+  },
+  {
    "id": "concept:fow",
    "name": "Fog of War",
    "page": "concepts/fow"
@@ -10473,6 +12401,16 @@
    "id": "concept:fortification",
    "name": "Fortification",
    "page": "concepts/fortification"
+  },
+  {
+   "id": "wargoal:independence",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence_annexing_me",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
   },
   {
    "id": "concept:loot",
@@ -10493,6 +12431,11 @@
    "id": "concept:province_capital",
    "name": "Province Capital",
    "page": "concepts/province-capital"
+  },
+  {
+   "id": "wargoal:superiority_restore_roman_borders",
+   "name": "Restore Roman Borders",
+   "page": null
   },
   {
    "id": "concept:siege",
@@ -10519,6 +12462,11 @@
    "page": "concepts/antagonism"
   },
   {
+   "id": "societal-value:belligerent_vs_conciliatory",
+   "name": "Belligerent vs Conciliatory",
+   "page": null
+  },
+  {
    "id": "concept:bias",
    "name": "Bias",
    "page": "concepts/bias"
@@ -10539,6 +12487,11 @@
    "page": "concepts/culture-group"
   },
   {
+   "id": "cabinet-action:diplomatic_endeavors",
+   "name": "Diplomatic Endeavors",
+   "page": null
+  },
+  {
    "id": "concept:hre_electoral_college",
    "name": "Electoral College",
    "page": "concepts/hre-electoral-college"
@@ -10554,6 +12507,11 @@
    "page": "concepts/improve-relations"
   },
   {
+   "id": "country-interaction:influence_nation",
+   "name": "Influence Nation",
+   "page": null
+  },
+  {
    "id": "concept:true_faith_tolerance",
    "name": "Primary Religion Tolerance",
    "page": "concepts/true-faith-tolerance"
@@ -10562,6 +12520,11 @@
    "id": "concept:religious_opinion",
    "name": "Religious Opinion",
    "page": "concepts/religious-opinion"
+  },
+  {
+   "id": "country-interaction:renegotiate_loan",
+   "name": "Renegotiate Loan",
+   "page": null
   },
   {
    "id": "concept:rival",
@@ -10592,6 +12555,11 @@
    "id": "concept:heretic_tolerance",
    "name": "Tolerance of Heretics",
    "page": "concepts/heretic-tolerance"
+  },
+  {
+   "id": "country-interaction:nusta_marriage",
+   "name": "Ñusta Marriage",
+   "page": null
   }
  ],
  "concept:output": [
@@ -10618,6 +12586,16 @@
    "page": "concepts/annexation"
   },
   {
+   "id": "subject:appanage",
+   "name": "Appanage",
+   "page": null
+  },
+  {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
+  },
+  {
    "id": "concept:court_language",
    "name": "Court Language",
    "page": "concepts/court-language"
@@ -10638,6 +12616,16 @@
    "page": "concepts/dominant-country"
   },
   {
+   "id": "subject:dominion",
+   "name": "Dominion",
+   "page": null
+  },
+  {
+   "id": "subject:fiefdom",
+   "name": "Fiefdom",
+   "page": null
+  },
+  {
    "id": "concept:fow",
    "name": "Fog of War",
    "page": "concepts/fow"
@@ -10648,9 +12636,34 @@
    "page": "concepts/friend"
   },
   {
+   "id": "cabinet-action:frustrate_annexation",
+   "name": "Frustrate Annexation",
+   "page": null
+  },
+  {
    "id": "concept:great_power_score",
    "name": "Great Power Score",
    "page": "concepts/great-power-score"
+  },
+  {
+   "id": "subject:imperial_free_city",
+   "name": "Imperial Free City",
+   "page": null
+  },
+  {
+   "id": "io:independence_movement",
+   "name": "Independence Movement",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence_annexing_me",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
   },
   {
    "id": "concept:liberty_desire",
@@ -10663,6 +12676,21 @@
    "page": "concepts/loyal-subjects"
   },
   {
+   "id": "subject:maha_samanta",
+   "name": "Mahā-Sāmanta",
+   "page": null
+  },
+  {
+   "id": "subject:march",
+   "name": "March",
+   "page": null
+  },
+  {
+   "id": "subject:hanseatic_member",
+   "name": "Member of the Hansa",
+   "page": null
+  },
+  {
    "id": "concept:subject_military_stance",
    "name": "Military Stance",
    "page": "concepts/subject-military-stance"
@@ -10673,9 +12701,34 @@
    "page": "concepts/non-sovereign-subject"
   },
   {
+   "id": "subject:pradhana_maha_samanta",
+   "name": "Pradhāna-Mahā-Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:regency",
    "name": "Regency",
    "page": "concepts/regency"
+  },
+  {
+   "id": "casus-belli:cb_resist_annexation",
+   "name": "Resist Annexation",
+   "page": null
+  },
+  {
+   "id": "subject:secessionists",
+   "name": "Secessionists",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:sow_disloyalty",
+   "name": "Sow Disloyalty",
+   "page": null
+  },
+  {
+   "id": "subject:state_bank",
+   "name": "State Bank",
+   "page": null
   },
   {
    "id": "concept:subject",
@@ -10703,9 +12756,34 @@
    "page": "concepts/subject-type"
   },
   {
+   "id": "subject:samanta",
+   "name": "Sāmanta",
+   "page": null
+  },
+  {
+   "id": "subject:trade_company",
+   "name": "Trade Company",
+   "page": null
+  },
+  {
+   "id": "subject:tributary",
+   "name": "Tributary",
+   "page": null
+  },
+  {
+   "id": "subject:tusi",
+   "name": "Tǔsī",
+   "page": null
+  },
+  {
    "id": "concept:non_avoidable_attrition",
    "name": "Unavoidable Attrition",
    "page": "concepts/non-avoidable-attrition"
+  },
+  {
+   "id": "subject:vassal",
+   "name": "Vassal",
+   "page": null
   },
   {
    "id": "concept:winter_level",
@@ -10716,6 +12794,13 @@
    "id": "concept:zone_of_control",
    "name": "Zone of Control",
    "page": "concepts/zone-of-control"
+  }
+ ],
+ "concept:overseas": [
+  {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
   }
  ],
  "concept:owner": [
@@ -10918,6 +13003,16 @@
   }
  ],
  "concept:parliament": [
+  {
+   "id": "advance:house_of_parliament_advance",
+   "name": "House of Parliament",
+   "page": "advances/house-of-parliament-advance"
+  },
+  {
+   "id": "building:house_of_parliament",
+   "name": "House of Parliament",
+   "page": "buildings/house-of-parliament"
+  },
   {
    "id": "concept:parliament_base_support",
    "name": "Parliament Base Support",
@@ -11159,6 +13254,13 @@
    "page": "concepts/enemy"
   }
  ],
+ "concept:plantation": [
+  {
+   "id": "pop:slaves",
+   "name": "Slaves",
+   "page": "pops/slaves"
+  }
+ ],
  "concept:policy": [
   {
    "id": "concept:cabinet_efficiency",
@@ -11169,6 +13271,26 @@
    "id": "concept:celestial_authority_gc",
    "name": "Celestial Authority",
    "page": "concepts/celestial-authority-gc"
+  },
+  {
+   "id": "country-interaction:change_subject_policy",
+   "name": "Change Policy",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_change_policy",
+   "name": "Change Policy",
+   "page": null
+  },
+  {
+   "id": "subject:direct_imperial_free_city",
+   "name": "Direct Imperial Free City",
+   "page": null
+  },
+  {
+   "id": "subject:imperial_free_city",
+   "name": "Imperial Free City",
+   "page": null
   },
   {
    "id": "concept:law",
@@ -11225,14 +13347,29 @@
    "page": "concepts/unemploy"
   },
   {
+   "id": "cabinet-action:send_people_to_colonial_charter",
+   "name": "Boost Colonial Charter",
+   "page": null
+  },
+  {
    "id": "concept:building",
    "name": "Building",
    "page": "concepts/building"
   },
   {
+   "id": "pop:clergy",
+   "name": "Clerics",
+   "page": "pops/clergy"
+  },
+  {
    "id": "concept:climate",
    "name": "Climate",
    "page": "concepts/climate"
+  },
+  {
+   "id": "building:coastal_settlements",
+   "name": "Coastal Settlement",
+   "page": "buildings/coastal-settlements"
   },
   {
    "id": "concept:colonial_charter",
@@ -11248,6 +13385,11 @@
    "id": "concept:conversion",
    "name": "Conversion",
    "page": "concepts/conversion"
+  },
+  {
+   "id": "cabinet-action:promote_religion",
+   "name": "Convert Province",
+   "page": null
   },
   {
    "id": "concept:country_type",
@@ -11315,6 +13457,11 @@
    "page": "concepts/employ"
   },
   {
+   "id": "cabinet-action:encourage_migration",
+   "name": "Encourage Migration",
+   "page": null
+  },
+  {
    "id": "concept:estate",
    "name": "Estate",
    "page": "concepts/estate"
@@ -11345,6 +13492,11 @@
    "page": "concepts/estate-satisfaction"
   },
   {
+   "id": "cabinet-action:expel_people",
+   "name": "Expel People",
+   "page": null
+  },
+  {
    "id": "concept:food",
    "name": "Food",
    "page": "concepts/food"
@@ -11368,6 +13520,21 @@
    "id": "concept:heretic",
    "name": "Heretic",
    "page": "concepts/heretic"
+  },
+  {
+   "id": "cabinet-action:integrate_area",
+   "name": "Integrate Area",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_province",
+   "name": "Integrate Province",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:oma_zanzibar_integration",
+   "name": "Integrate Swahili Province",
+   "page": null
   },
   {
    "id": "concept:integration_status",
@@ -11418,6 +13585,11 @@
    "id": "concept:navy_levy",
    "name": "Naval Levy",
    "page": "concepts/navy-levy"
+  },
+  {
+   "id": "pop:nobles",
+   "name": "Nobles",
+   "page": "pops/nobles"
   },
   {
    "id": "concept:people",
@@ -11490,6 +13662,11 @@
    "page": "concepts/promote"
   },
   {
+   "id": "cabinet-action:lit_promote_catholicism",
+   "name": "Promote Catholicism",
+   "page": null
+  },
+  {
    "id": "concept:provincial_food",
    "name": "Provincial Food",
    "page": "concepts/provincial-food"
@@ -11510,9 +13687,24 @@
    "page": "concepts/religious-rebels"
   },
   {
+   "id": "cabinet-action:send_people_to_the_colonies",
+   "name": "Send People to the Colonies",
+   "page": null
+  },
+  {
    "id": "concept:separatism",
    "name": "Separatism",
    "page": "concepts/separatism"
+  },
+  {
+   "id": "cabinet-action:settle_the_frontier",
+   "name": "Settle the Frontier",
+   "page": null
+  },
+  {
+   "id": "casus-belli:cb_slave_raiding",
+   "name": "Slave Raiding",
+   "page": null
   },
   {
    "id": "concept:slave_rebels",
@@ -11538,6 +13730,11 @@
    "id": "concept:stockpile",
    "name": "Stockpile",
    "page": "concepts/stockpile"
+  },
+  {
+   "id": "law:eng_taxation_law",
+   "name": "Taxation",
+   "page": "laws/eng-taxation-law"
   },
   {
    "id": "concept:tithe",
@@ -11745,6 +13942,11 @@
  ],
  "concept:population": [
   {
+   "id": "cabinet-action:promote_culture",
+   "name": "Assimilate Pops into our Culture",
+   "page": null
+  },
+  {
    "id": "concept:blockade",
    "name": "Blockade",
    "page": "concepts/blockade"
@@ -11780,9 +13982,19 @@
    "page": "concepts/economical-base"
   },
   {
+   "id": "cabinet-action:kbo_pop_promote_action",
+   "name": "Egalitarian Integration",
+   "page": null
+  },
+  {
    "id": "concept:embrace",
    "name": "Embrace",
    "page": "concepts/embrace"
+  },
+  {
+   "id": "cabinet-action:pop_promote_action",
+   "name": "Encourage Urbanization",
+   "page": null
   },
   {
    "id": "concept:estate_power",
@@ -11813,6 +14025,11 @@
    "id": "concept:location_importance",
    "name": "Location Importance",
    "page": "concepts/location-importance"
+  },
+  {
+   "id": "cabinet-action:pacify_population",
+   "name": "Pacify Population",
+   "page": null
   },
   {
    "id": "concept:population_capacity",
@@ -11906,6 +14123,11 @@
    "id": "concept:art_quality",
    "name": "Art Quality",
    "page": "concepts/art-quality"
+  },
+  {
+   "id": "country-interaction:bribe_voter_for_policy",
+   "name": "Bribe Voter",
+   "page": null
   },
   {
    "id": "concept:canonization",
@@ -12169,6 +14391,16 @@
    "id": "concept:control",
    "name": "Control",
    "page": "concepts/control"
+  },
+  {
+   "id": "cabinet-action:kbo_pop_promote_action",
+   "name": "Egalitarian Integration",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:pop_promote_action",
+   "name": "Encourage Urbanization",
+   "page": null
   }
  ],
  "concept:prosperity": [
@@ -12181,6 +14413,11 @@
    "id": "concept:blockade",
    "name": "Blockade",
    "page": "concepts/blockade"
+  },
+  {
+   "id": "cabinet-action:recovery_effort",
+   "name": "Recovery Effort",
+   "page": null
   }
  ],
  "concept:protectionism": [
@@ -12196,6 +14433,11 @@
   }
  ],
  "concept:province": [
+  {
+   "id": "cabinet-action:aid_constantinople",
+   "name": "Aid Constantinople",
+   "page": null
+  },
   {
    "id": "concept:area",
    "name": "Area",
@@ -12217,6 +14459,21 @@
    "page": "concepts/colonized"
   },
   {
+   "id": "cabinet-action:develop_province",
+   "name": "Develop Province",
+   "page": null
+  },
+  {
+   "id": "country-rank:rank_duchy",
+   "name": "Duchy",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:expel_people",
+   "name": "Expel People",
+   "page": null
+  },
+  {
    "id": "concept:food",
    "name": "Food",
    "page": "concepts/food"
@@ -12232,6 +14489,11 @@
    "page": "concepts/food-stockpile"
   },
   {
+   "id": "cabinet-action:study_institutions",
+   "name": "Foster Institutions",
+   "page": null
+  },
+  {
    "id": "concept:geographical_term",
    "name": "Geographical Term",
    "page": "concepts/geographical-term"
@@ -12242,9 +14504,34 @@
    "page": "concepts/geography"
   },
   {
+   "id": "wargoal:high_kingship_subjugate_wargoal",
+   "name": "High Kingship Subjugation",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_liberate_hre_member",
+   "name": "Holy Roman Empire Liberation",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:increase_control_province",
+   "name": "Increase Province Control",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_province",
+   "name": "Integrate Province",
+   "page": null
+  },
+  {
    "id": "concept:integration",
    "name": "Integration",
    "page": "concepts/integration"
+  },
+  {
+   "id": "country-rank:rank_kingdom",
+   "name": "Kingdom",
+   "page": null
   },
   {
    "id": "concept:local_food",
@@ -12267,9 +14554,24 @@
    "page": "concepts/market-food"
   },
   {
+   "id": "character-interaction:aclla_distribution",
+   "name": "Marry Aclla",
+   "page": null
+  },
+  {
    "id": "concept:max_control",
    "name": "Maximum Control",
    "page": "concepts/max-control"
+  },
+  {
+   "id": "cabinet-action:noblesse_oblige_cabinet_action",
+   "name": "Noblesse Oblige",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:peasant_labor_rights_action",
+   "name": "Oversee Labor Rights",
+   "page": null
   },
   {
    "id": "concept:province_capital",
@@ -12292,14 +14594,94 @@
    "page": "concepts/provincial-food"
   },
   {
+   "id": "cabinet-action:recovery_effort",
+   "name": "Recovery Effort",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:lat_reintegrate_province",
+   "name": "Reintegrate the Empire of Constantinople",
+   "page": null
+  },
+  {
+   "id": "country-interaction:subject_return_land",
+   "name": "Return Land",
+   "page": null
+  },
+  {
+   "id": "wargoal:secure_italy_wargoal",
+   "name": "Secure Italy",
+   "page": null
+  },
+  {
    "id": "concept:selling_food",
    "name": "Selling Food",
    "page": "concepts/selling-food"
   },
   {
+   "id": "cabinet-action:settle_the_frontier",
+   "name": "Settle the Frontier",
+   "page": null
+  },
+  {
    "id": "concept:starving",
    "name": "Starving",
    "page": "concepts/starving"
+  },
+  {
+   "id": "wargoal:crusade_conquest",
+   "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:jihad_conquest",
+   "name": "Take game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_colony_war",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_enforce_hegemon_demands",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_gag_force_country_into_faction",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_prevent_annexation",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_sound_toll",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_subjugation",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_tributary",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:take_capital_claim_throne",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip and install game_concept_CHARACTER.GetName as their Ruler",
+   "page": null
   }
  ],
  "concept:province_capital": [
@@ -12429,9 +14811,24 @@
    "page": "concepts/hostile"
   },
   {
+   "id": "cabinet-action:integrate_area",
+   "name": "Integrate Area",
+   "page": null
+  },
+  {
+   "id": "cabinet-action:integrate_province",
+   "name": "Integrate Province",
+   "page": null
+  },
+  {
    "id": "concept:minor_revolt",
    "name": "Minor Revolt",
    "page": "concepts/minor-revolt"
+  },
+  {
+   "id": "cabinet-action:rebel_crackdown",
+   "name": "Rebel Crackdown",
+   "page": null
   },
   {
    "id": "concept:supportrebels",
@@ -12458,6 +14855,23 @@
    "page": "concepts/papal-authority"
   }
  ],
+ "concept:reformation": [
+  {
+   "id": "io:catholic_league",
+   "name": "Catholic League",
+   "page": null
+  },
+  {
+   "id": "io:protestant_union",
+   "name": "Protestant Union",
+   "page": null
+  },
+  {
+   "id": "casus-belli:cb_religious_superiority",
+   "name": "Religious Superiority",
+   "page": null
+  }
+ ],
  "concept:regency": [
   {
    "id": "concept:election",
@@ -12468,6 +14882,11 @@
    "id": "concept:heir",
    "name": "Heir",
    "page": "concepts/heir"
+  },
+  {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
   },
   {
    "id": "concept:regent",
@@ -12482,9 +14901,19 @@
    "page": "concepts/adult"
   },
   {
+   "id": "country-interaction:lordship_of_ireland_assert_regency",
+   "name": "Assert Regency",
+   "page": null
+  },
+  {
    "id": "concept:character",
    "name": "Character",
    "page": "concepts/character"
+  },
+  {
+   "id": "heir-selection:mamluk_succesion",
+   "name": "Mamlūk Succession",
+   "page": null
   },
   {
    "id": "concept:regency",
@@ -12508,6 +14937,11 @@
   }
  ],
  "concept:regiment": [
+  {
+   "id": "recruitment-method:elite_training",
+   "name": "Additional",
+   "page": null
+  },
   {
    "id": "concept:army",
    "name": "Army",
@@ -12669,6 +15103,11 @@
    "page": "concepts/morale"
   },
   {
+   "id": "recruitment-method:normal_training",
+   "name": "Normal",
+   "page": null
+  },
+  {
    "id": "concept:phase",
    "name": "Phase",
    "page": "concepts/phase"
@@ -12692,6 +15131,11 @@
    "id": "concept:reserves",
    "name": "Reserves",
    "page": "concepts/reserves"
+  },
+  {
+   "id": "recruitment-method:rushed_training",
+   "name": "Rushed",
+   "page": null
   },
   {
    "id": "concept:section",
@@ -12759,6 +15203,16 @@
    "id": "concept:area",
    "name": "Area",
    "page": "concepts/area"
+  },
+  {
+   "id": "heir-selection:podesta_elective",
+   "name": "Elective Potestate",
+   "page": null
+  },
+  {
+   "id": "unit:a_florentine_citizen_militia",
+   "name": "Florentine Citizen Militia",
+   "page": "units/a-florentine-citizen-militia"
   },
   {
    "id": "concept:formable_country",
@@ -12852,9 +15306,24 @@
    "page": "concepts/conversion"
   },
   {
+   "id": "cabinet-action:promote_religion",
+   "name": "Convert Province",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_convert_to_estate_religion",
+   "name": "Convert to Estate Religion",
+   "page": null
+  },
+  {
    "id": "concept:devotion",
    "name": "Devotion",
    "page": "concepts/devotion"
+  },
+  {
+   "id": "estate:dhimmi_estate",
+   "name": "Dhimmi",
+   "page": "estates/dhimmi-estate"
   },
   {
    "id": "concept:dominant_religion",
@@ -12865,6 +15334,11 @@
    "id": "concept:doom",
    "name": "Doom",
    "page": "concepts/doom"
+  },
+  {
+   "id": "country-interaction:enforce_religious_unity",
+   "name": "Enforce Religious Unity",
+   "page": null
   },
   {
    "id": "concept:estate_rebels",
@@ -13323,9 +15797,19 @@
  ],
  "concept:rival": [
   {
+   "id": "casus-belli:attack_threat",
+   "name": "Attack Threatening Rival",
+   "page": null
+  },
+  {
    "id": "concept:complacency",
    "name": "Complacency",
    "page": "concepts/complacency"
+  },
+  {
+   "id": "casus-belli:cb_conquer_enemy",
+   "name": "Destroy Enemy",
+   "page": null
   },
   {
    "id": "concept:rival_enemy",
@@ -13359,6 +15843,11 @@
  ],
  "concept:road": [
   {
+   "id": "privilege:building_roads_rights",
+   "name": "Building Roads Rights",
+   "page": "privileges/building-roads-rights"
+  },
+  {
    "id": "concept:civil_construction",
    "name": "Civil Construction",
    "page": "concepts/civil-construction"
@@ -13377,6 +15866,21 @@
    "id": "concept:market_access",
    "name": "Market Access",
    "page": "concepts/market-access"
+  },
+  {
+   "id": "advance:modern_road_advance",
+   "name": "Modern Road",
+   "page": "advances/modern-road-advance"
+  },
+  {
+   "id": "advance:paved_road_advance",
+   "name": "Paved Road",
+   "page": "advances/paved-road-advance"
+  },
+  {
+   "id": "advance:railroad_advance",
+   "name": "Railroad",
+   "page": "advances/railroad-advance"
   },
   {
    "id": "concept:wealth_impact",
@@ -13425,9 +15929,34 @@
  ],
  "concept:ruler": [
   {
+   "id": "heir-selection:abbess_elective_female",
+   "name": "Abbess Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:abbot_elective",
+   "name": "Abbot Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:absolute_cognatic_primogeniture",
+   "name": "Absolute Cognatic Primogeniture",
+   "page": null
+  },
+  {
    "id": "concept:adult",
    "name": "Adult",
    "page": "concepts/adult"
+  },
+  {
+   "id": "country-interaction:lordship_of_ireland_assert_regency",
+   "name": "Assert Regency",
+   "page": null
+  },
+  {
+   "id": "heir-selection:bishopric_elective",
+   "name": "Bishopric Elective",
+   "page": null
   },
   {
    "id": "concept:canonization",
@@ -13450,6 +15979,21 @@
    "page": "concepts/child"
   },
   {
+   "id": "heir-selection:cognatic_primogeniture",
+   "name": "Cognatic Primogeniture",
+   "page": null
+  },
+  {
+   "id": "character-interaction:compose_strategikon",
+   "name": "Compose Stratēgikòn",
+   "page": null
+  },
+  {
+   "id": "subject:conquistador",
+   "name": "Conquistador",
+   "page": null
+  },
+  {
    "id": "concept:consort",
    "name": "Consort",
    "page": "concepts/consort"
@@ -13460,9 +16004,29 @@
    "page": "concepts/court-maintenance"
   },
   {
+   "id": "heir-selection:diarchic_election",
+   "name": "Diarchic Election",
+   "page": null
+  },
+  {
+   "id": "character-interaction:dismiss_prince",
+   "name": "Dismiss Prince",
+   "page": null
+  },
+  {
+   "id": "heir-selection:doge_election",
+   "name": "Doge Election",
+   "page": null
+  },
+  {
    "id": "concept:doom",
    "name": "Doom",
    "page": "concepts/doom"
+  },
+  {
+   "id": "heir-selection:austrian_cognatic_primogeniture",
+   "name": "Dynastic Cognatic Primogeniture",
+   "page": null
   },
   {
    "id": "concept:dynasty_modifier",
@@ -13475,9 +16039,24 @@
    "page": "concepts/election"
   },
   {
+   "id": "heir-selection:podesta_elective",
+   "name": "Elective Potestate",
+   "page": null
+  },
+  {
+   "id": "country-interaction:lordship_of_ireland_enfeoff_regency",
+   "name": "Enfeoff Regency",
+   "page": null
+  },
+  {
    "id": "concept:estate_privilege",
    "name": "Estate Privilege",
    "page": "concepts/estate-privilege"
+  },
+  {
+   "id": "country-interaction:excommunicate",
+   "name": "Excommunicate",
+   "page": null
   },
   {
    "id": "concept:excommunication",
@@ -13485,9 +16064,29 @@
    "page": "concepts/excommunication"
   },
   {
+   "id": "subject:fiefdom",
+   "name": "Fiefdom",
+   "page": null
+  },
+  {
+   "id": "advance:fratricide_succesion_advance",
+   "name": "Fratricide",
+   "page": "advances/fratricide-succesion-advance"
+  },
+  {
+   "id": "heir-selection:fratricide_succesion",
+   "name": "Fratricide",
+   "page": null
+  },
+  {
    "id": "concept:government",
    "name": "Government",
    "page": "concepts/government"
+  },
+  {
+   "id": "heir-selection:grandmaster_elective",
+   "name": "Grandmaster Elective",
+   "page": null
   },
   {
    "id": "concept:heir",
@@ -13505,14 +16104,74 @@
    "page": "concepts/leader-type"
   },
   {
+   "id": "law:legal_code_law",
+   "name": "Legal Code",
+   "page": "laws/legal-code-law"
+  },
+  {
    "id": "concept:legitimacy",
    "name": "Legitimacy",
    "page": "concepts/legitimacy"
   },
   {
+   "id": "country-interaction:lift_excommunication",
+   "name": "Lift Excommunication",
+   "page": null
+  },
+  {
+   "id": "heir-selection:lottery_election",
+   "name": "Lottery Election",
+   "page": null
+  },
+  {
+   "id": "heir-selection:mamluk_succesion",
+   "name": "Mamlūk Succession",
+   "page": null
+  },
+  {
+   "id": "heir-selection:matrilineal_non_exclusive",
+   "name": "Matrilineal Non-Exclusive",
+   "page": null
+  },
+  {
+   "id": "heir-selection:matrilineal_salic_law",
+   "name": "Matrilineal Salic Law",
+   "page": null
+  },
+  {
+   "id": "government-type:monarchy",
+   "name": "Monarchy",
+   "page": null
+  },
+  {
+   "id": "heir-selection:oligarchic_elective",
+   "name": "Oligarchic Elective",
+   "page": null
+  },
+  {
    "id": "concept:omen",
    "name": "Omen",
    "page": "concepts/omen"
+  },
+  {
+   "id": "heir-selection:partition_inheritance",
+   "name": "Partition Inheritance",
+   "page": null
+  },
+  {
+   "id": "heir-selection:peasant_elective",
+   "name": "Peasant Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:pirate_elective",
+   "name": "Pirate Elective",
+   "page": null
+  },
+  {
+   "id": "country-interaction:place_relative_on_throne",
+   "name": "Place Relative on Throne",
+   "page": null
   },
   {
    "id": "concept:regency",
@@ -13525,9 +16184,34 @@
    "page": "concepts/regent"
   },
   {
+   "id": "government-type:republic",
+   "name": "Republic",
+   "page": null
+  },
+  {
+   "id": "heir-selection:republic_2_year_terms",
+   "name": "Republic 2 Year Terms",
+   "page": null
+  },
+  {
+   "id": "heir-selection:republic_4_year_terms",
+   "name": "Republic 4 Year Terms",
+   "page": null
+  },
+  {
    "id": "concept:republican_tradition",
    "name": "Republican Tradition",
    "page": "concepts/republican-tradition"
+  },
+  {
+   "id": "country-interaction:request_divorce",
+   "name": "Request Divorce",
+   "page": null
+  },
+  {
+   "id": "character-interaction:resign_as_grand_master",
+   "name": "Resign as Grandmaster",
+   "page": null
   },
   {
    "id": "concept:role",
@@ -13545,9 +16229,34 @@
    "page": "concepts/ruler-trait"
   },
   {
+   "id": "heir-selection:salic_law",
+   "name": "Salic Law",
+   "page": null
+  },
+  {
+   "id": "heir-selection:bank_selection",
+   "name": "Selection of the new Bank Executive",
+   "page": null
+  },
+  {
    "id": "concept:self_control",
    "name": "Self Control",
    "page": "concepts/self-control"
+  },
+  {
+   "id": "heir-selection:semi_salic_law",
+   "name": "Semi-Salic Law",
+   "page": null
+  },
+  {
+   "id": "heir-selection:signoria_selection",
+   "name": "Signoria Selection",
+   "page": null
+  },
+  {
+   "id": "government-type:steppe_horde",
+   "name": "Steppe Horde",
+   "page": null
   },
   {
    "id": "concept:heir_selection",
@@ -13555,9 +16264,59 @@
    "page": "concepts/heir-selection"
   },
   {
+   "id": "wargoal:take_capital_claim_throne",
+   "name": "Take the Capital game_concept_PROVINCE.GetNameWithNoTooltip and install game_concept_CHARACTER.GetName as their Ruler",
+   "page": null
+  },
+  {
+   "id": "character-interaction:make_regent_ruler",
+   "name": "Take the Throne",
+   "page": null
+  },
+  {
+   "id": "government-type:theocracy",
+   "name": "Theocracy",
+   "page": null
+  },
+  {
+   "id": "heir-selection:theocratic_elective",
+   "name": "Theocratic Elective",
+   "page": null
+  },
+  {
+   "id": "heir-selection:tribal_matrilineal",
+   "name": "Tribal Matriarchal",
+   "page": null
+  },
+  {
+   "id": "heir-selection:tribal_oldest_male",
+   "name": "Tribal Oldest Male",
+   "page": null
+  },
+  {
    "id": "concept:union",
    "name": "Union",
    "page": "concepts/union"
+  },
+  {
+   "id": "io:union",
+   "name": "Union",
+   "page": null
+  },
+  {
+   "id": "heir-selection:veche_selection",
+   "name": "Veche Selection",
+   "page": null
+  },
+  {
+   "id": "heir-selection:youngest_son_of_ruler",
+   "name": "Youngest Son of Ruler",
+   "page": null
+  },
+  {
+   "id": "country-interaction:nusta_marriage",
+   "name": "Ñusta Marriage",
+   "page": null
   }
  ],
  "concept:rural_location": [
@@ -13589,6 +16348,11 @@
  ],
  "concept:sailors": [
   {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
+  },
+  {
    "id": "concept:control",
    "name": "Control",
    "page": "concepts/control"
@@ -13597,6 +16361,11 @@
    "id": "concept:crew_size",
    "name": "Crew Size",
    "page": "concepts/crew-size"
+  },
+  {
+   "id": "subject:hanseatic_member",
+   "name": "Member of the Hansa",
+   "page": null
   },
   {
    "id": "concept:navy_levy",
@@ -13614,6 +16383,11 @@
    "page": "concepts/payment"
   },
   {
+   "id": "subject:pradhana_maha_samanta",
+   "name": "Pradhāna-Mahā-Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:privateer_maintenance",
    "name": "Privateer Maintenance",
    "page": "concepts/privateer-maintenance"
@@ -13627,6 +16401,16 @@
    "id": "concept:repair",
    "name": "Repair",
    "page": "concepts/repair"
+  },
+  {
+   "id": "pop:soldiers",
+   "name": "Soldiers",
+   "page": "pops/soldiers"
+  },
+  {
+   "id": "subject:tributary",
+   "name": "Tributary",
+   "page": null
   }
  ],
  "concept:score": [
@@ -13790,6 +16574,11 @@
  ],
  "concept:ship": [
   {
+   "id": "trait:accomplished_sailor",
+   "name": "Accomplished Sailor",
+   "page": "traits/accomplished-sailor"
+  },
+  {
    "id": "concept:anti_piracy_warfare",
    "name": "Anti-Piracy Impact",
    "page": "concepts/anti-piracy-warfare"
@@ -13870,6 +16659,11 @@
    "page": "concepts/experience"
   },
   {
+   "id": "trait:extortioner",
+   "name": "Extortioner",
+   "page": "traits/extortioner"
+  },
+  {
    "id": "concept:fleet_basing_rights",
    "name": "Fleet Basing Rights",
    "page": "concepts/fleet-basing-rights"
@@ -13885,6 +16679,11 @@
    "page": "concepts/frontage"
   },
   {
+   "id": "topography:high_lakes",
+   "name": "High Lakes",
+   "page": null
+  },
+  {
    "id": "concept:hull_size",
    "name": "Hull Size",
    "page": "concepts/hull-size"
@@ -13895,9 +16694,19 @@
    "page": "concepts/inland"
   },
   {
+   "id": "trait:ironside",
+   "name": "Ironside",
+   "page": "traits/ironside"
+  },
+  {
    "id": "concept:lake",
    "name": "Lake",
    "page": "concepts/lake"
+  },
+  {
+   "id": "topography:lakes",
+   "name": "Lakes",
+   "page": null
   },
   {
    "id": "concept:maintenance",
@@ -13920,6 +16729,16 @@
    "page": "concepts/naval-damage"
   },
   {
+   "id": "trait:naval_engineer",
+   "name": "Naval Engineer",
+   "page": "traits/naval-engineer"
+  },
+  {
+   "id": "trait:naval_gunner",
+   "name": "Naval Gunner",
+   "page": "traits/naval-gunner"
+  },
+  {
    "id": "concept:navy_levy",
    "name": "Naval Levy",
    "page": "concepts/navy-levy"
@@ -13928,6 +16747,16 @@
    "id": "concept:naval_range",
    "name": "Naval Range",
    "page": "concepts/naval-range"
+  },
+  {
+   "id": "trait:naval_showman",
+   "name": "Naval Showman",
+   "page": "traits/naval-showman"
+  },
+  {
+   "id": "trait:navigator",
+   "name": "Navigator",
+   "page": "traits/navigator"
   },
   {
    "id": "concept:navy",
@@ -13940,6 +16769,11 @@
    "page": "concepts/navy-maintenance"
   },
   {
+   "id": "recruitment-method:normal_navy_method",
+   "name": "Normal (Navy)",
+   "page": null
+  },
+  {
    "id": "concept:pirate",
    "name": "Pirate",
    "page": "concepts/pirate"
@@ -13948,6 +16782,11 @@
    "id": "concept:port",
    "name": "Port",
    "page": "concepts/port"
+  },
+  {
+   "id": "trait:prize_hunter",
+   "name": "Prize Hunter",
+   "page": "traits/prize-hunter"
   },
   {
    "id": "concept:repair",
@@ -14112,6 +16951,11 @@
    "id": "concept:reformation",
    "name": "Reformation",
    "page": "concepts/reformation"
+  },
+  {
+   "id": "peace-treaty:peace_seize_opposition_leadership",
+   "name": "Seize Opposition Leadership",
+   "page": null
   },
   {
    "id": "concept:share_of_power_gc",
@@ -14293,6 +17137,11 @@
    "id": "concept:stability_investment",
    "name": "Stability Investment",
    "page": "concepts/stability-investment"
+  },
+  {
+   "id": "cabinet-action:stabilize_country",
+   "name": "Stabilize Country",
+   "page": null
   }
  ],
  "concept:starving": [
@@ -14468,6 +17317,16 @@
    "page": "concepts/annexation"
   },
   {
+   "id": "subject:appanage",
+   "name": "Appanage",
+   "page": null
+  },
+  {
+   "id": "subject:colonial_nation",
+   "name": "Colonial Nation",
+   "page": null
+  },
+  {
    "id": "concept:conquistador",
    "name": "Conquistador",
    "page": "concepts/conquistador"
@@ -14476,6 +17335,11 @@
    "id": "concept:country_interaction",
    "name": "Country Interaction",
    "page": "concepts/country-interaction"
+  },
+  {
+   "id": "peace-treaty:rtr_demand_all_chinese_territories",
+   "name": "Demand All Chinese Territories",
+   "page": null
   },
   {
    "id": "concept:diplomacy",
@@ -14491,6 +17355,11 @@
    "id": "concept:disloyal_subjects",
    "name": "Disloyal Subjects",
    "page": "concepts/disloyal-subjects"
+  },
+  {
+   "id": "subject:dominion",
+   "name": "Dominion",
+   "page": null
   },
   {
    "id": "concept:gold",
@@ -14528,6 +17397,21 @@
    "page": "concepts/great-power-score"
   },
   {
+   "id": "io:independence_movement",
+   "name": "Independence Movement",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence_annexing_me",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
    "id": "concept:liberty_desire",
    "name": "Liberty Desire",
    "page": "concepts/liberty-desire"
@@ -14538,9 +17422,24 @@
    "page": "concepts/loyal-subjects"
   },
   {
+   "id": "subject:march",
+   "name": "March",
+   "page": null
+  },
+  {
+   "id": "subject:hanseatic_member",
+   "name": "Member of the Hansa",
+   "page": null
+  },
+  {
    "id": "concept:subject_military_stance",
    "name": "Military Stance",
    "page": "concepts/subject-military-stance"
+  },
+  {
+   "id": "country-interaction:move_subject_capital",
+   "name": "Move Subject's Capital",
+   "page": null
   },
   {
    "id": "concept:non_sovereign_subject",
@@ -14553,9 +17452,24 @@
    "page": "concepts/overlord"
   },
   {
+   "id": "subject:pradhana_maha_samanta",
+   "name": "Pradhāna-Mahā-Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:relation_type",
    "name": "Relation Type",
    "page": "concepts/relation-type"
+  },
+  {
+   "id": "subject:secessionists",
+   "name": "Secessionists",
+   "page": null
+  },
+  {
+   "id": "subject:state_bank",
+   "name": "State Bank",
+   "page": null
   },
   {
    "id": "concept:subject_loyalty",
@@ -14578,9 +17492,19 @@
    "page": "concepts/subject-type"
   },
   {
+   "id": "subject:samanta",
+   "name": "Sāmanta",
+   "page": null
+  },
+  {
    "id": "concept:non_avoidable_attrition",
    "name": "Unavoidable Attrition",
    "page": "concepts/non-avoidable-attrition"
+  },
+  {
+   "id": "subject:vassal",
+   "name": "Vassal",
+   "page": null
   },
   {
    "id": "concept:winter_level",
@@ -14820,6 +17744,26 @@
    "page": "concepts/tax-efficiency"
   },
   {
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_burghers",
+   "name": "Tax Exemption",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_clergy",
+   "name": "Tax Exemption",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_nobles",
+   "name": "Tax Exemption",
+   "page": null
+  },
+  {
+   "id": "parliament-agenda:pa_lessen_tax_burden_for_peasants",
+   "name": "Tax Exemption",
+   "page": null
+  },
+  {
    "id": "concept:tax_rate",
    "name": "Tax Rate",
    "page": "concepts/tax-rate"
@@ -14872,6 +17816,11 @@
   }
  ],
  "concept:threat": [
+  {
+   "id": "casus-belli:attack_threat",
+   "name": "Attack Threatening Rival",
+   "page": null
+  },
   {
    "id": "concept:complacency",
    "name": "Complacency",
@@ -15022,6 +17971,11 @@
    "page": "concepts/burgher-trade"
   },
   {
+   "id": "societal-value:capital_economy_vs_traditional_economy",
+   "name": "Capital Economy vs Traditional Economy",
+   "page": null
+  },
+  {
    "id": "concept:estate",
    "name": "Estate",
    "page": "concepts/estate"
@@ -15090,6 +18044,11 @@
    "id": "concept:sound_toll",
    "name": "Sound Toll",
    "page": "concepts/sound-toll"
+  },
+  {
+   "id": "town-right:staple_port",
+   "name": "Staple Port",
+   "page": null
   },
   {
    "id": "concept:merchant_capacity",
@@ -15289,6 +18248,11 @@
    "page": "concepts/union"
   },
   {
+   "id": "io:union",
+   "name": "Union",
+   "page": null
+  },
+  {
    "id": "concept:war_reparations",
    "name": "War Reparations",
    "page": "concepts/war-reparations"
@@ -15332,6 +18296,11 @@
    "page": "concepts/favors"
   },
   {
+   "id": "country-interaction:influence_nation",
+   "name": "Influence Nation",
+   "page": null
+  },
+  {
    "id": "concept:opinion",
    "name": "Opinion",
    "page": "concepts/opinion"
@@ -15351,9 +18320,24 @@
  ],
  "concept:union": [
   {
+   "id": "country-interaction:break_subject_union",
+   "name": "Break from Union",
+   "page": null
+  },
+  {
    "id": "concept:diplomatic_limitation",
    "name": "Diplomatic Limitation",
    "page": "concepts/diplomatic-limitation"
+  },
+  {
+   "id": "subject:dominion",
+   "name": "Dominion",
+   "page": null
+  },
+  {
+   "id": "io:marriage_union",
+   "name": "Marriage Union",
+   "page": null
   },
   {
    "id": "concept:union_integration_level",
@@ -15513,6 +18497,11 @@
  ],
  "concept:unrest": [
   {
+   "id": "cabinet-action:pacify_population",
+   "name": "Pacify Population",
+   "page": null
+  },
+  {
    "id": "concept:pop_satisfaction",
    "name": "Pop Satisfaction",
    "page": "concepts/pop-satisfaction"
@@ -15581,6 +18570,21 @@
    "page": "concepts/antagonism-received-modifier"
   },
   {
+   "id": "country-interaction:bolster_imperial_army",
+   "name": "Bolster Imperial Army",
+   "page": null
+  },
+  {
+   "id": "country-interaction:call_appanage_to_war",
+   "name": "Call Appanage to War",
+   "page": null
+  },
+  {
+   "id": "country-interaction:call_order_to_crusade",
+   "name": "Call Military Order to Crusade",
+   "page": null
+  },
+  {
    "id": "concept:call_to_arms",
    "name": "Call to Arms",
    "page": "concepts/call-to-arms"
@@ -15611,6 +18615,11 @@
    "page": "concepts/coalition"
   },
   {
+   "id": "io:coalition",
+   "name": "Coalition",
+   "page": null
+  },
+  {
    "id": "concept:conquer",
    "name": "Conquer",
    "page": "concepts/conquer"
@@ -15629,6 +18638,11 @@
    "id": "concept:war_defender",
    "name": "Defender",
    "page": "concepts/war-defender"
+  },
+  {
+   "id": "io:defensive_league",
+   "name": "Defensive League",
+   "page": null
   },
   {
    "id": "concept:diplomacy",
@@ -15664,6 +18678,21 @@
    "id": "concept:hostile",
    "name": "Hostile",
    "page": "concepts/hostile"
+  },
+  {
+   "id": "country-interaction:intervene_in_subject_regular_war",
+   "name": "Intervene in War",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
+  },
+  {
+   "id": "wargoal:independence_annexing_me",
+   "name": "Liberate game_concept_PROVINCE.GetCountry.GetNameWithNoTooltip",
+   "page": null
   },
   {
    "id": "concept:location",

@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import situations from '../data/situations.json';
+import disasters from '../data/disasters.json';
+import diseases from '../data/diseases.json';
+
+const cols = [
+  { key: 'name', label: 'Name', kind: 'name' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'desc', label: 'Description', kind: 'rich' },
+];
+---
+<Base title="Situations & Disasters" active="situations" pageMark="🌋" eyebrow="World"
+  pageStats={[
+    { label: 'situations', value: situations.entities.length },
+    { label: 'disasters', value: disasters.entities.length },
+    { label: 'diseases', value: diseases.entities.length },
+  ]}
+  description="Situations, disasters, and diseases in Europa Universalis V.">
+  <SectionTable title="Situations" data={situations} columns={cols} placeholder="Filter situations…" />
+  <SectionTable title="Disasters" data={disasters} columns={cols} placeholder="Filter disasters…" />
+  <SectionTable title="Diseases" data={diseases} columns={cols} placeholder="Filter diseases…" />
+</Base>

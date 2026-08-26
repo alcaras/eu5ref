@@ -1,0 +1,5645 @@
+{
+  "dataset": "traits",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Talking with this individual feels like being constantly slapped in the face, or stabbed in the heart. Hurtful comments, mordant words, and other such verbal attacks are almost everything such a conversation consists of."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/abrasive.png",
+      "id": "trait:abrasive",
+      "mods": [
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "bad",
+          "value": "−1.00"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Abrasive",
+      "slug": "abrasive",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is an Accomplished Sailor. Personal sailing expertise allows this leader to enhance the skills of all captains under him, ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] commanded by the Accomplished Sailor will reach their destinations more quickly."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/accomplished-sailor.png",
+      "id": "trait:accomplished_sailor",
+      "mods": [
+        {
+          "key": "navy_movement_speed",
+          "label": "Navy Movement Speed",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Accomplished Sailor",
+      "slug": "accomplished-sailor",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Skill is the main factor that separates a master from a student. Artists carrying this particular trait will tend to evolve and hone their skills at a much faster pace than they normally would."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/adept.png",
+      "id": "trait:adept",
+      "mods": [
+        {
+          "key": "artist_skill_level_gain",
+          "label": "Artist Skill Development",
+          "polarity": "good",
+          "value": "+0.20"
+        }
+      ],
+      "name": "Adept",
+      "slug": "adept",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Planning, logistics, organization... These are all qualities possessed by this individual, allowing the smooth functioning of our government and our country as a whole. Every need and every action of our administration is accounted for, reducing bureaucratic overhead."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/administrator.png",
+      "id": "trait:administrator",
+      "mods": [
+        {
+          "key": "global_distance_from_capital_speed_propagation",
+          "label": "Proximity Efficiency",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Administrator",
+      "slug": "administrator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is an Aggressive Commander. Ships led by this leader will gain a bonus in combat."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": null,
+      "id": "trait:aggressive_commander",
+      "mods": [
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Aggressive Commander",
+      "slug": "aggressive-commander",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Blessed are those who share with the less favored ones. This individual takes this teaching as the most crucial, giving alms to the poor and sharing both food and coins. A group of disciples emulating these practices also follows, and thus the needs of the lower masses are attended to."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/alms-giver.png",
+      "id": "trait:alms_giver",
+      "mods": [
+        {
+          "key": "peasants_estate_target_satisfaction",
+          "label": "Peasant Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+2.50%"
+        }
+      ],
+      "name": "Alms Giver",
+      "slug": "alms-giver",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Everyone has to start somewhere. Artists with this trait tend to be slow learners, taking longer to improve and sharpen their artistic skills."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/amateur.png",
+      "id": "trait:amateur",
+      "mods": [
+        {
+          "key": "artist_skill_level_gain",
+          "label": "Artist Skill Development",
+          "polarity": "bad",
+          "value": "−0.20"
+        }
+      ],
+      "name": "Amateur",
+      "slug": "amateur",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "From the smallest hut to the loftiest halls, no building is too insignificant to spark this individual's architectural curiosity. In the same way as an architect designs and supervises the construction of a building, this character designs and supervises the construction of our country."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/architect.png",
+      "id": "trait:architect",
+      "mods": [
+        {
+          "key": "global_build_buildings_efficiency",
+          "label": "Buildings Construction Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "bad",
+          "value": "−1.00%"
+        }
+      ],
+      "name": "Architect",
+      "slug": "architect",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Architectural Visionary. Improving the infrastructure is a necessity for any state of our age and this ruler is the one who can do it. Grand visions coupled with a great understanding and talent for keeping costs down makes this ruler a great asset to us."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/architectural-visionary.png",
+      "id": "trait:architectural_visionary",
+      "mods": [
+        {
+          "key": "legislative_efficiency",
+          "label": "Legislative Efficiency",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "global_monthly_development",
+          "label": "Monthly Development",
+          "polarity": "good",
+          "value": "+0.0020"
+        }
+      ],
+      "name": "Architectural Visionary",
+      "slug": "architectural-visionary",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "An army that does not change or adapt is an army that will rust until it falls apart. This individual knows that very well, and is a great proponent of keeping the army constantly updated and adapted to newer forms of warfare."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/army-reformer.png",
+      "id": "trait:army_reformer",
+      "mods": [
+        {
+          "key": "global_manpower_modifier",
+          "label": "Manpower",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−1.00%"
+        }
+      ],
+      "name": "Army Reformer",
+      "slug": "army-reformer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual feels superior to everyone, as if living in a different stratum due to divine blessing. Such a personality is difficult to satisfy, as no matter what we do, it is never enough."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/arrogant.png",
+      "id": "trait:arrogant",
+      "mods": [
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−1.00%"
+        },
+        {
+          "key": "burghers_estate_target_satisfaction",
+          "label": "Burgher Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Arrogant",
+      "slug": "arrogant",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The point of a religious life is to dedicate oneself to the faith, and not to indulge in worldly pleasures. This individual takes these teachings to heart, and refuses to partake in any delight, preferring to live with as little material sustenance as possible."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/ascetic.png",
+      "id": "trait:ascetic",
+      "mods": [
+        {
+          "key": "global_clergy_food_consumption",
+          "label": "Clergy Food Consumption",
+          "polarity": "good",
+          "value": "−5.00%"
+        }
+      ],
+      "name": "Ascetic",
+      "slug": "ascetic",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is considered to be a Babbling Buffoon. While our ruler means well by personally engaging in diplomacy with our neighbors this is not coupled with a talent for conducting negotiations. Anyone is likely to have a harder time seeing the points we want to make and many of our negotiations are hampered by the ineptness of our ruler."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/babbling-buffoon.png",
+      "id": "trait:babbling_buffoon",
+      "mods": [
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "neutral",
+          "value": "−1.00"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "win_war_chance_lower_limit",
+          "label": "Win War Chance Lower Limit",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+50.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "diplomacy_importance_modifier",
+          "label": "Diplomacy Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "bad",
+          "value": "−15.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Babbling Buffoon",
+      "slug": "babbling-buffoon",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is known as a Battlefield Medic. A larger than normal number of soldiers under this leader will be able to recover after battle to reinforce their unit back to strength."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/battlefield-medic.png",
+      "id": "trait:battlefield_medic",
+      "mods": [
+        {
+          "key": "regiment_reinforcement_speed",
+          "label": "Reinforcement Speed",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Battlefield Medic",
+      "slug": "battlefield-medic",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Benevolent. Being seen as wanting to do good is a great asset when it comes to keeping our subjects calm."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/benevolent.png",
+      "id": "trait:benevolent",
+      "mods": [
+        {
+          "key": "subject_loyalty",
+          "label": "Loyalty of Subjects",
+          "polarity": "good",
+          "value": "+5.00"
+        },
+        {
+          "key": "monthly_towards_free_subjects",
+          "label": "Monthly Progress to Free Subjects",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "good",
+          "value": "−5.00%"
+        },
+        {
+          "key": "control_importance_modifier",
+          "label": "Control Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Benevolent",
+      "slug": "benevolent",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has lost the gift of sight."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/blind.png",
+      "id": "trait:blind",
+      "mods": [
+        {
+          "key": "blocked_from_being_leader",
+          "label": "Can Not Lead Armies or Navies",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−10"
+        },
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−20.00"
+        }
+      ],
+      "name": "Blind",
+      "slug": "blind",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Bold Fighter. Believing Shock to be of great importance on the battlefield our ruler is never fearful of the consequences and encourages everyone to lead their troops right into the midst of the enemy should the situation require it."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/bold-fighter.png",
+      "id": "trait:bold_fighter",
+      "mods": [
+        {
+          "key": "army_initiative",
+          "label": "Army Initiative",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "monthly_towards_offensive",
+          "label": "Monthly Progress to Offensive",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "bad",
+          "value": "−5.00%"
+        },
+        {
+          "key": "defence_importance_modifier",
+          "label": "Defense Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "manpower_importance_modifier",
+          "label": "Manpower Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Bold Fighter",
+      "slug": "bold-fighter",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General was born to the Saddle. Cavalry led by this leader will be able to make better use of their flanking advantage."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/born-to-the-saddle.png",
+      "id": "trait:born_to_the_saddle",
+      "mods": [
+        {
+          "key": "army_light_cavalry_power",
+          "label": "Light Cavalry Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "army_heavy_cavalry_power",
+          "label": "Heavy Cavalry Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Born to the Saddle",
+      "slug": "born-to-the-saddle",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has contracted the Black Death. The terrible illness ravages their body — black swellings, raging fever, and a creeping death."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/bubonic-plague-trait.png",
+      "id": "trait:bubonic_plague_trait",
+      "mods": [],
+      "name": "Bubonic Plague",
+      "slug": "bubonic-plague-trait",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Buccaneer. Privateers commanded by this leader will be more efficient."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/buccaneer.png",
+      "id": "trait:buccaneer",
+      "mods": [
+        {
+          "key": "naval_morale_modifier",
+          "label": "Navy Morale",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Buccaneer",
+      "slug": "buccaneer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "For the vast majority of people, bureaucracy is obscure, cryptic, and incomprehensible. For others, like this individual, it comes as easy as breathing, and they are able to disentangle its mysteries with ease."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/bureaucrat.png",
+      "id": "trait:bureaucrat",
+      "mods": [
+        {
+          "key": "global_bureaucracy_entrenchment_speed_modifier",
+          "label": "Bureaucracy Entrenchment Speed Modifier",
+          "polarity": "bad",
+          "value": "+10.00%"
+        },
+        {
+          "key": "remove_government_reform_cost_modifier",
+          "label": "Remove Government Reform Cost",
+          "polarity": "bad",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Bureaucrat",
+      "slug": "bureaucrat",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Calm. By never losing temper or face our ruler will both inspire by example and be able to take well-thought-through decisions, allowing us to recover more quickly from any crisis the world might throw at us."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/calm.png",
+      "id": "trait:calm",
+      "mods": [
+        {
+          "key": "stability_cost_efficiency",
+          "label": "Stability Investment Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "monthly_towards_conciliatory",
+          "label": "Monthly Progress to Conciliatory",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "stability_importance_modifier",
+          "label": "Stability Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "bias_for_administrative_policies",
+          "label": "Bias for Administrative Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Calm",
+      "slug": "calm",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a Cannoneer. Known for a great fascination with gunpowder and cannons artillery commanded by this leader will be more efficient."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/cannoneer.png",
+      "id": "trait:cannoneer",
+      "mods": [
+        {
+          "key": "army_artillery_power",
+          "label": "Artillery Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Cannoneer",
+      "slug": "cannoneer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Careful. By carefully navigating around the various unspoken rules in interstate relations our monarch is able to lessen the impact of our actual transgressions."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/careful.png",
+      "id": "trait:careful",
+      "mods": [
+        {
+          "key": "antagonism_received_modifier",
+          "label": "Antagonism Received",
+          "polarity": "good",
+          "value": "−10.00%"
+        },
+        {
+          "key": "monthly_towards_decentralization",
+          "label": "Monthly Progress to Decentralization",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "mercenary_units_preference_modifier",
+          "label": "Mercenary Units Preference Modifier",
+          "polarity": "good",
+          "value": "+0.25"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "stability_importance_modifier",
+          "label": "Stability Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "defence_importance_modifier",
+          "label": "Defense Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Careful",
+      "slug": "careful",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Is the reddish smudge in the royal's face an error of the careless artist or does it carry a deeper meaning of expressing the anger revolving around dealing with administrative matters? Whatever the case may be, artists with this trait will tend to fumble their art, resulting in lower quality artworks."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/careless.png",
+      "id": "trait:careless",
+      "mods": [
+        {
+          "key": "work_of_art_quality_modifier",
+          "label": "Quality of Art",
+          "polarity": "bad",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Careless",
+      "slug": "careless",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This explorer is a fan of maps and loves discovering uncharted lands. While the mission takes considerably more time, their documentations are of great detail. Also, their love for their work keeps this one happy enough to endure a lower payment."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/cartographer.png",
+      "id": "trait:cartographer",
+      "mods": [
+        {
+          "key": "exploration_maintenance_efficiency",
+          "label": "Exploration Cost Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "exploration_mission_speed",
+          "label": "Exploration Monthly Progress",
+          "polarity": "bad",
+          "value": "−0.10"
+        }
+      ],
+      "name": "Cartographer",
+      "slug": "cartographer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has been castrated, meaning they can no longer father children."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/castrated.png",
+      "id": "trait:castrated",
+      "mods": [
+        {
+          "key": "character_fertility",
+          "label": "Fertility",
+          "polarity": "bad",
+          "value": "−1000.00"
+        },
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−5"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−50.00"
+        }
+      ],
+      "name": "Castrated",
+      "slug": "castrated",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Charismatic Negotiator. Through personal involvement in state diplomacy and negotiations our ruler is able to make others see things our way more often than would otherwise be possible."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/charismatic-negotiator.png",
+      "id": "trait:charismatic_negotiator",
+      "mods": [
+        {
+          "key": "diplomatic_reputation",
+          "label": "Diplomatic Reputation",
+          "polarity": "neutral",
+          "value": "+1.00"
+        },
+        {
+          "key": "monthly_towards_conciliatory",
+          "label": "Monthly Progress to Conciliatory",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "subjugation_preference_modifier",
+          "label": "Subjugation Preference",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "diplomacy_importance_modifier",
+          "label": "Diplomacy Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Charismatic Negotiator",
+      "slug": "charismatic-negotiator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Not everyone has the skills to properly speak in public, and fewer still are those who can capture the listener's attention like this individual, able not only to change others' opinions, but also to convince them that those were originally their own."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/charismatic-orator.png",
+      "id": "trait:charismatic_orator",
+      "mods": [
+        {
+          "key": "parliament_base_support",
+          "label": "Parliament Base Support",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−1.00%"
+        }
+      ],
+      "name": "Charismatic Orator",
+      "slug": "charismatic-orator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child knows what they want, and it is not precisely something menial. If they could, they would take it all."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-ambitious.png",
+      "id": "trait:child_ambitious",
+      "mods": [
+        {
+          "key": "character_adm_child_education",
+          "label": "Administrative Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        },
+        {
+          "key": "character_dip_child_education",
+          "label": "Diplomatic Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        }
+      ],
+      "name": "Ambitious",
+      "slug": "child-ambitious",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Despite being a child, this child is the epitome of chivalry. Brave, stylish, polite and attentive, they will surely be deserving of many poems and stories once they grow up."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-gallant.png",
+      "id": "trait:child_gallant",
+      "mods": [
+        {
+          "key": "character_dip_child_education",
+          "label": "Diplomatic Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        },
+        {
+          "key": "character_mil_child_education",
+          "label": "Military Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        }
+      ],
+      "name": "Gallant",
+      "slug": "child-gallant",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child amazes their adult counterparts with their proven skills and future potential."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-gifted.png",
+      "id": "trait:child_gifted",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.75"
+        }
+      ],
+      "name": "Gifted",
+      "slug": "child-gifted",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child enjoys being constantly surrounded of other people, and revels in the interaction with them."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-gregarious.png",
+      "id": "trait:child_gregarious",
+      "mods": [
+        {
+          "key": "character_dip_child_education",
+          "label": "Diplomatic Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.50"
+        }
+      ],
+      "name": "Gregarious",
+      "slug": "child-gregarious",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child is a complete idiot, and there is very little that can be done to get them a decent future."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-idiot.png",
+      "id": "trait:child_idiot",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "bad",
+          "value": "−0.66"
+        }
+      ],
+      "name": "Idiot",
+      "slug": "child-idiot",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child has shown to have an innate intelligence, which can be further developed."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-intelligent.png",
+      "id": "trait:child_intelligent",
+      "mods": [
+        {
+          "key": "character_adm_child_education",
+          "label": "Administrative Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.50"
+        }
+      ],
+      "name": "Intelligent",
+      "slug": "child-intelligent",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The future of this child is bright, and they are predestined to leave their name into the history books."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-prodigy.png",
+      "id": "trait:child_prodigy",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "good",
+          "value": "+1.50"
+        }
+      ],
+      "name": "Prodigy",
+      "slug": "child-prodigy",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child is anything but calm and quiet, always making their presence known, and not at all in the most peaceful manner."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-rowdy.png",
+      "id": "trait:child_rowdy",
+      "mods": [
+        {
+          "key": "character_mil_child_education",
+          "label": "Military Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.50"
+        }
+      ],
+      "name": "Rowdy",
+      "slug": "child-rowdy",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "No matter where this child is or what they are doing, their mind is always working sharp as a knife. None can beat them in a contest of wits."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-shrewd.png",
+      "id": "trait:child_shrewd",
+      "mods": [
+        {
+          "key": "character_mil_child_education",
+          "label": "Military Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        },
+        {
+          "key": "character_adm_child_education",
+          "label": "Administrative Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        }
+      ],
+      "name": "Shrewd",
+      "slug": "child-shrewd",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This child is not the brightest mind of their generation, and they have to make extra efforts to keep up with their counterparts."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/child-slow.png",
+      "id": "trait:child_slow",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "bad",
+          "value": "−0.33"
+        }
+      ],
+      "name": "Slow",
+      "slug": "child-slow",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a conqueror. We will be able to incorporate new lands into our realm more efficiently under this regime."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/conqueror.png",
+      "id": "trait:conqueror",
+      "mods": [
+        {
+          "key": "global_separatism",
+          "label": "Separatism",
+          "polarity": "good",
+          "value": "−10.00%"
+        },
+        {
+          "key": "monthly_towards_belligerent",
+          "label": "Monthly Progress to Belligerent",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+30.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+15.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "bad",
+          "value": "−5.00%"
+        },
+        {
+          "key": "subjugation_preference_modifier",
+          "label": "Subjugation Preference",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "expected_warscore_modifier",
+          "label": "Expected Warscore Modifier",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+50.00"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Conqueror",
+      "slug": "conqueror",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Every time any sum of money passes through this individual's hands, it mysteriously becomes smaller. Perhaps some of these 'handling costs' should be examined..."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/corrupt.png",
+      "id": "trait:corrupt",
+      "mods": [
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "bad",
+          "value": "−2.00%"
+        },
+        {
+          "key": "revoke_privilege_cost_modifier",
+          "label": "Revoke Privilege Cost",
+          "polarity": "good",
+          "value": "−15.00%"
+        }
+      ],
+      "name": "Corrupt",
+      "slug": "corrupt",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Craven. Desperately fearful of physical combat our ruler stays as far away from the battlefields as possible. Our troops cannot help but notice that they are on their own."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/craven.png",
+      "id": "trait:craven",
+      "mods": [
+        {
+          "key": "land_morale_modifier",
+          "label": "Army Morale",
+          "polarity": "bad",
+          "value": "−5.00%"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "good",
+          "value": "−15.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "expected_warscore_modifier",
+          "label": "Expected Warscore Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "manpower_importance_modifier",
+          "label": "Manpower Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "defence_importance_modifier",
+          "label": "Defense Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "bad",
+          "value": "−15.00"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "bad",
+          "value": "−1.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−15.00"
+        }
+      ],
+      "name": "Craven",
+      "slug": "craven",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is seen as Cruel. Widespread tales of arbitrary and cruel actions by our ruler personally have greatly upset many of our subjects. This may not be enough to incite a rebellion in itself, but any crisis is going to hit public opinion harder as nobody lacks reasons to revolt."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/cruel.png",
+      "id": "trait:cruel",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "−2.50%"
+        },
+        {
+          "key": "monthly_towards_serfdom",
+          "label": "Monthly Progress to Serfdom",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+25.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "can_execute_characters",
+          "label": "Can Execute Characters",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "control_importance_modifier",
+          "label": "Control Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−15.00"
+        }
+      ],
+      "name": "Cruel",
+      "slug": "cruel",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This explorer is a curious fella, not stopping exploring the area until every island has been visited; coastline has been mapped out in order to uncover the secrets of the new world. Unlike other explorers, this one does not care for personal gain."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/curious-adventurer.png",
+      "id": "trait:curious_adventurer",
+      "mods": [
+        {
+          "key": "exploration_preparation_time_modifier",
+          "label": "Exploration Preparation Time Modifier",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "exploration_maintenance_efficiency",
+          "label": "Exploration Cost Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Curious Adventurer",
+      "slug": "curious-adventurer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Almost nothing this individual says can be trusted, and those around are always doubting the intentions and watching their backs. Mistrust and paranoia ensues wherever this character goes."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/deceitful.png",
+      "id": "trait:deceitful",
+      "mods": [
+        {
+          "key": "global_estate_satisfaction_recovery",
+          "label": "Estates Satisfaction Recovery",
+          "polarity": "neutral",
+          "value": "−0.10%"
+        },
+        {
+          "key": "prestige_decay",
+          "label": "Prestige Decay",
+          "polarity": "good",
+          "value": "−0.10%"
+        }
+      ],
+      "name": "Deceitful",
+      "slug": "deceitful",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a Defensive Planner. Any troops led by this leader will be more resilient to shock."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/defensive-planner.png",
+      "id": "trait:defensive_planner",
+      "mods": [
+        {
+          "key": "military_tactics",
+          "label": "Military Tactics",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Defensive Planner",
+      "slug": "defensive-planner",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has barely survived a severe facial trauma, resulting in a terrible disfigurement."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/disfigured.png",
+      "id": "trait:disfigured",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−30.00"
+        }
+      ],
+      "name": "Disfigured",
+      "slug": "disfigured",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The fame of this commander is known across all of East Asia leading to the nickname of a Dragon-Tiger General."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/dragon-tiger.png",
+      "id": "trait:dragon_tiger",
+      "mods": [
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Dragon-Tiger General",
+      "slug": "dragon-tiger",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Indulgent. Always seeking relief from general apathy, our ruler indulges in great amounts of stimulants in the form of alcohol. Having an indulgent ruler reflects poorly on the entire country."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/drunkard.png",
+      "id": "trait:drunkard",
+      "mods": [
+        {
+          "key": "court_spending_efficiency",
+          "label": "Court Spending Efficiency",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "win_war_chance_lower_limit",
+          "label": "Win War Chance Lower Limit",
+          "polarity": "bad",
+          "value": "−50.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+50.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−5"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "stability_importance_modifier",
+          "label": "Stability Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−15.00"
+        }
+      ],
+      "name": "Indulgent",
+      "slug": "drunkard",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Scriptures and holy texts not only provide knowledge about spirituality, but also on how to govern one's everyday life. This individual excels in this kind of knowledge, to the point of being able to influence how others behave too, and administer and direct bureaucratic procedures most efficiently."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/efficient-administrator.png",
+      "id": "trait:efficient_administrator",
+      "mods": [
+        {
+          "key": "character_cabinet_efficiency",
+          "label": "Efficiency in Cabinet",
+          "polarity": "good",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Efficient Administrator",
+      "slug": "efficient-administrator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Embezzler. One of the things that drive our ruler is a great will and talent to use the state revenue for increasing personal wealth."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/embezzler.png",
+      "id": "trait:embezzler",
+      "mods": [
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "neutral",
+          "value": "−5.00%"
+        },
+        {
+          "key": "gold_importance_modifier",
+          "label": "Gold Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "bias_for_administrative_policies",
+          "label": "Bias for Administrative Policies",
+          "polarity": "bad",
+          "value": "−20.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Embezzler",
+      "slug": "embezzler",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Entrepreneur. By seeing the potential for new projects in any obstacle or opportunity our ruler contributes to an ever-growing number of projects to bolster our economy."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/entrepreneur.png",
+      "id": "trait:entrepreneur",
+      "mods": [
+        {
+          "key": "selling_efficiency",
+          "label": "Selling Efficiency",
+          "polarity": "neutral",
+          "value": "+2.50%"
+        },
+        {
+          "key": "trade_importance_modifier",
+          "label": "Trade Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "court_language_is_market_language_importance_modifier",
+          "label": "Prefers Court Language to be Market Language",
+          "polarity": "good",
+          "value": "+0.60"
+        },
+        {
+          "key": "bias_for_capitalist_policies",
+          "label": "Bias for Capitalist Policies",
+          "polarity": "good",
+          "value": "+50.00"
+        }
+      ],
+      "name": "Entrepreneur",
+      "slug": "entrepreneur",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This character was castrated before puberty, or was simply born that way. In courts in polygynous societies, eunuchs often fulfill specific social functions reserved for those who cannot sire heirs."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/eunuch.png",
+      "id": "trait:eunuch",
+      "mods": [
+        {
+          "key": "character_fertility",
+          "label": "Fertility",
+          "polarity": "bad",
+          "value": "−1000.00"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "good",
+          "value": "+10"
+        },
+        {
+          "key": "blocked_from_marriage",
+          "label": "Blocked from Marriage",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Eunuch",
+      "slug": "eunuch",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Expansionist. Our ruler is personally invested in the claiming and settlement of new lands and is dedicated to ensuring that colonial expansion remains a top priority for our state."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/expansionist.png",
+      "id": "trait:expansionist",
+      "mods": [
+        {
+          "key": "colonial_migration_size_modifier",
+          "label": "Monthly Colonial Migration",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "monthly_towards_belligerent",
+          "label": "Monthly Progress to Belligerent",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+40.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+10.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "bad",
+          "value": "−5.00%"
+        },
+        {
+          "key": "expected_warscore_modifier",
+          "label": "Expected Warscore Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "manpower_importance_modifier",
+          "label": "Manpower Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+50.00"
+        },
+        {
+          "key": "bias_for_colonialist_policies",
+          "label": "Bias for Colonialist Policies",
+          "polarity": "good",
+          "value": "+100.00"
+        }
+      ],
+      "name": "Expansionist",
+      "slug": "expansionist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is an Extortioner. Knowing how to best leverage an advantage of force allows our leader to do more with less and ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] commanded by the extortioner will exert greater trade power than those lead by competing captains could."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/extortioner.png",
+      "id": "trait:extortioner",
+      "mods": [
+        {
+          "key": "navy_maintenance_efficiency",
+          "label": "Navy Maintenance Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Extortioner",
+      "slug": "extortioner",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual cannot form an opinion, or is just constantly forming too many and switching between them. Whatever the case, neither firmness nor loyalty to a cause can be expected from someone like that."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/fickle.png",
+      "id": "trait:fickle",
+      "mods": [
+        {
+          "key": "global_estate_max_tax",
+          "label": "Maximum Tax",
+          "polarity": "bad",
+          "value": "−1.00%"
+        },
+        {
+          "key": "remove_government_reform_cost_modifier",
+          "label": "Remove Government Reform Cost",
+          "polarity": "good",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Fickle",
+      "slug": "fickle",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Fierce Negotiator. In any treaty or negotiation, our ruler will not easily cede ground and will instead continue fighting to defend our best interests."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/fierce-negotiator.png",
+      "id": "trait:fierce_negotiator",
+      "mods": [
+        {
+          "key": "global_integration_speed_modifier",
+          "label": "Speed of Integration",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.25"
+        },
+        {
+          "key": "subjugation_preference_modifier",
+          "label": "Subjugation Preference",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "expected_warscore_modifier",
+          "label": "Expected Warscore Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Fierce Negotiator",
+      "slug": "fierce-negotiator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Money begets money, and that is something that this individual knows very well. Through clever tactics and negotiations, our wealth is made greater than it would otherwise seem, and that in turn will bring us more wealth."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/fiscal-hawk.png",
+      "id": "trait:fiscal_hawk",
+      "mods": [
+        {
+          "key": "minting_income_factor",
+          "label": "Income from Minting",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "bank_interest",
+          "label": "Bank Interest",
+          "polarity": "good",
+          "value": "−1.00%"
+        }
+      ],
+      "name": "Fiscal Hawk",
+      "slug": "fiscal-hawk",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Free Thinker. Unbound by strict doctrines our ruler encourages everyone to try new things and reason freely about where to take our great country in the future."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/free-thinker.png",
+      "id": "trait:free_thinker",
+      "mods": [
+        {
+          "key": "research_speed_modifier",
+          "label": "Monthly Research Progress %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "monthly_towards_innovative",
+          "label": "Monthly Progress to Innovative",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "institution_importance_modifier",
+          "label": "Institution Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "bad",
+          "value": "−1.50"
+        },
+        {
+          "key": "language_change_threshold_modifier",
+          "label": "Language Change Threshold Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "bias_for_administrative_policies",
+          "label": "Bias for Administrative Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        },
+        {
+          "key": "bias_for_balanced_policies",
+          "label": "Bias for Balanced Policies",
+          "polarity": "good",
+          "value": "+20.00"
+        }
+      ],
+      "name": "Free Thinker",
+      "slug": "free-thinker",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a glory seeker. Troops led by this general will acquire more Prestige and Army Tradition than they otherwise would as they are always deployed where they will make the most visible difference."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/glory-seeker.png",
+      "id": "trait:glory_seeker",
+      "mods": [
+        {
+          "key": "prestige_from_land_battle",
+          "label": "Prestige from Land Battles",
+          "polarity": "good",
+          "value": "+50.00%"
+        },
+        {
+          "key": "army_tradition_from_battle",
+          "label": "Army Tradition from Battles",
+          "polarity": "good",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Glory Seeker",
+      "slug": "glory-seeker",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is Goal Oriented. Troops commanded by this leader will march more quickly towards their goal."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/goal-oriented.png",
+      "id": "trait:goal_oriented",
+      "mods": [
+        {
+          "key": "army_movement_speed",
+          "label": "Army Movement Speed",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Goal Oriented",
+      "slug": "goal-oriented",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Artists with this trait require considerably more payment as they are paramours to anything shiny and of value. Money makes the world go around and art masters who subscribe to this belief will seek as best a payment as possible."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/gold-loving.png",
+      "id": "trait:gold_loving",
+      "mods": [
+        {
+          "key": "artist_salary_modifier_on_character",
+          "label": "Salary as Artist",
+          "polarity": "bad",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Gold-loving",
+      "slug": "gold-loving",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Greedy. State revenue collection is growing increasingly iron-fisted and short-sighted under our ruler who will stop at nothing to try to increase our income. Destroying or harming every source of revenue the long-term effects of this short-sighted behavior is a great decrease of tax income."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/greedy.png",
+      "id": "trait:greedy",
+      "mods": [
+        {
+          "key": "global_monthly_prosperity",
+          "label": "Monthly Prosperity",
+          "polarity": "bad",
+          "value": "−0.025%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+20.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "mercenary_units_preference_modifier",
+          "label": "Mercenary Units Preference Modifier",
+          "polarity": "bad",
+          "value": "−0.25"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+10.00%"
+        },
+        {
+          "key": "expected_warscore_modifier",
+          "label": "Expected Warscore Modifier",
+          "polarity": "good",
+          "value": "+0.15"
+        },
+        {
+          "key": "gold_importance_modifier",
+          "label": "Gold Importance Modifier",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "court_language_is_market_language_importance_modifier",
+          "label": "Prefers Court Language to be Market Language",
+          "polarity": "good",
+          "value": "+0.60"
+        },
+        {
+          "key": "bias_for_capitalist_policies",
+          "label": "Bias for Capitalist Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Greedy",
+      "slug": "greedy",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual is fascinated by everything that lives and grows, and is constantly immersed in horticultural endeavors. From having a planter besides the desk, to laboring in a personal garden, to overseeing whole farming activities just for entertainment, it seems that no single leaf of grass in the country is beyond such caring attention."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/green-thumb.png",
+      "id": "trait:green_thumb",
+      "mods": [
+        {
+          "key": "global_monthly_food_modifier",
+          "label": "Food Production %",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Green Thumb",
+      "slug": "green-thumb",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is known as a Hardy Warrior. Troops commanded by this leader will be more resilient to harsh conditions and suffer less ["
+        ],
+        [
+          "r",
+          "concept:attrition",
+          "Attrition"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/hardy-warrior.png",
+      "id": "trait:hardy_warrior",
+      "mods": [
+        {
+          "key": "land_unit_attrition",
+          "label": "Army Attrition",
+          "polarity": "good",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Hardy Warrior",
+      "slug": "hardy-warrior",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual enjoys good health and is often in high spirits."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/healthy.png",
+      "id": "trait:healthy",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "good",
+          "value": "+0.33"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "good",
+          "value": "+10"
+        },
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Healthy",
+      "slug": "healthy",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is clear that constant social interaction is not the best for everyone, especially among those that want to dedicate their lives to religion. This individual is among them, preferring to live in seclusion and isolation rather than among the masses, to better commune with the divine, and without taking active interest about the matters of other people."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/hermit.png",
+      "id": "trait:hermit",
+      "mods": [
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "good",
+          "value": "−0.025"
+        }
+      ],
+      "name": "Hermit",
+      "slug": "hermit",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual does not have grain of malice in the soul, and can always be trusted and taken at face value. This allows an administration under such leadership to work harmoniously, without people having to constantly worry about hidden agendas, treachery, or subterfuge."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/honest.png",
+      "id": "trait:honest",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Honest",
+      "slug": "honest",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Despite their proven skill in various arts, artists with this trait will tend to require a modest payment for their services. To them, humility is the foundation of all virtues and a cornerstone of their personalities."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/humble.png",
+      "id": "trait:humble",
+      "mods": [
+        {
+          "key": "artist_salary_modifier_on_character",
+          "label": "Salary as Artist",
+          "polarity": "good",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Humble",
+      "slug": "humble",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual was born with a deformed spine, affecting their posture and appearance."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/hunchback.png",
+      "id": "trait:hunchback",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−25.00"
+        }
+      ],
+      "name": "Hunchbacked",
+      "slug": "hunchback",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a true Hussar Commander. Cavalry charges led by this character will be more effective."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/hussar-commander.png",
+      "id": "trait:hussar_commander",
+      "mods": [
+        {
+          "key": "army_heavy_cavalry_power",
+          "label": "Heavy Cavalry Power",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Hussar Commander",
+      "slug": "hussar-commander",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Creating art is not for the feint of heart. It is a process that requires an amalgamation of some of the most important human skills, baked in with inspiration and confidence. Artist with this skill, however, are lacking in these areas and will therefore be less likely to begin working on new pieces of art."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/idler.png",
+      "id": "trait:idler",
+      "mods": [
+        {
+          "key": "artist_monthly_start_chance",
+          "label": "Artist Monthly Start Chance",
+          "polarity": "bad",
+          "value": "−5.00%"
+        }
+      ],
+      "name": "Idler",
+      "slug": "idler",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Works created by artists with this trait tend to have a lesser impact in the world of culture and art. Truly, individuals carrying this trait are firm believers that sometimes less is more, even when it comes to prestige and cultural fame."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/inconspicious.png",
+      "id": "trait:inconspicious",
+      "mods": [
+        {
+          "key": "artist_impact",
+          "label": "Direct Impact of Art",
+          "polarity": "bad",
+          "value": "−25.00%"
+        }
+      ],
+      "name": "Inconspicuous",
+      "slug": "inconspicious",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Incorruptible. In many ways building a modern state is a constant battle against corruption. State officials are always tempted to take bribes, and wanting to care for one's friends and relatives is a natural human instinct. By firmly rejecting all such notion and fighting it with contempt our ruler sets an example for the entire country to follow."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/incorruptible.png",
+      "id": "trait:incorruptible",
+      "mods": [
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "neutral",
+          "value": "+3.00%"
+        },
+        {
+          "key": "bias_for_administrative_policies",
+          "label": "Bias for Administrative Policies",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Incorruptible",
+      "slug": "incorruptible",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Industrious. Never content to rest and through increasingly long work days our ruler is constantly managing the details of every province in the realm to maximize the output and collected revenue for all resources under state control."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/industrious.png",
+      "id": "trait:industrious",
+      "mods": [
+        {
+          "key": "global_raw_material_output",
+          "label": "Raw Materials Output",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "bias_for_capitalist_policies",
+          "label": "Bias for Capitalist Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        }
+      ],
+      "name": "Industrious",
+      "slug": "industrious",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "People are not made equal, and some have more power and influence than others. This individual is one with such power, whose words have the strength of laws, and whose objectives are forced to become the country's objectives."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/influential.png",
+      "id": "trait:influential",
+      "mods": [
+        {
+          "key": "estate_power_from_cabinet",
+          "label": "Estate Power from Cabinet Position",
+          "polarity": "bad",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Influential",
+      "slug": "influential",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is an Inspirational Leader. Troops commanded by this leader will be quicker to regain morale in the face of defeat."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/inspirational-leader-general.png",
+      "id": "trait:inspirational_leader_general",
+      "mods": [
+        {
+          "key": "land_morale_recovery",
+          "label": "Army Morale Recovery Speed",
+          "polarity": "good",
+          "value": "+2.00%"
+        }
+      ],
+      "name": "Inspirational Leader",
+      "slug": "inspirational-leader-general",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our ruler is an Inspiring Leader. Great personal leadership can lead to even the most cowardly men finding their courage."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/inspiring-leader.png",
+      "id": "trait:inspiring_leader",
+      "mods": [
+        {
+          "key": "land_morale_modifier",
+          "label": "Army Morale",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_towards_quantity",
+          "label": "Monthly Progress to Quantity",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Inspiring Leader",
+      "slug": "inspiring-leader",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Intricate Web-Weaver. Constantly hatching new plots our ruler is able to personally take on a great part of the responsibility for foreign intelligence."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/intricate-web-weaver.png",
+      "id": "trait:intricate_web_weaver",
+      "mods": [
+        {
+          "key": "spy_network_construction",
+          "label": "Spy Network Construction",
+          "polarity": "good",
+          "value": "+30.00%"
+        },
+        {
+          "key": "monthly_towards_belligerent",
+          "label": "Monthly Progress to Belligerent",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.25"
+        },
+        {
+          "key": "diplomacy_importance_modifier",
+          "label": "Diplomacy Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+20.00"
+        }
+      ],
+      "name": "Intricate Webweaver",
+      "slug": "intricate-web-weaver",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is an Ironside. ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] commanded by this leader will suffer fewer damages than those commanded by other captains."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/ironside.png",
+      "id": "trait:ironside",
+      "mods": [
+        {
+          "key": "naval_damage_taken",
+          "label": "Naval Damage Taken",
+          "polarity": "good",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Ironside",
+      "slug": "ironside",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Just. Due to a keen understanding of the many laws and customs of his realm, our subjects trust us to rule rightfully and justly."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/just.png",
+      "id": "trait:just",
+      "mods": [
+        {
+          "key": "global_estate_target_satisfaction",
+          "label": "Estates Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+1.00%"
+        },
+        {
+          "key": "monthly_towards_free_subjects",
+          "label": "Monthly Progress to Free Subjects",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "stability_importance_modifier",
+          "label": "Stability Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Just",
+      "slug": "just",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Kind-Hearted. A great interest in the common men and women of the realm has made our ruler well-loved and our country more resistant to harsh times in general and the ravages of war in particular."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/kind-hearted.png",
+      "id": "trait:kind_hearted",
+      "mods": [
+        {
+          "key": "monthly_war_exhaustion",
+          "label": "Monthly War Exhaustion",
+          "polarity": "good",
+          "value": "−0.05"
+        },
+        {
+          "key": "monthly_towards_conciliatory",
+          "label": "Monthly Progress to Conciliatory",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "good",
+          "value": "−10.00%"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "bad",
+          "value": "−20.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Kind-Hearted",
+      "slug": "kind-hearted",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Lawgiver. Legislation is what builds up and unites a realm. Our ruler is intent on reducing the hundreds of laws and customs of the various parts of our realm to create a more centralized and just set of laws."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/lawgiver.png",
+      "id": "trait:lawgiver",
+      "mods": [
+        {
+          "key": "global_distance_from_capital_speed_propagation",
+          "label": "Proximity Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "stability_importance_modifier",
+          "label": "Stability Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "control_importance_modifier",
+          "label": "Control Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_administrative_policies",
+          "label": "Bias for Administrative Policies",
+          "polarity": "good",
+          "value": "+50.00"
+        }
+      ],
+      "name": "Lawgiver",
+      "slug": "lawgiver",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Why complete the work today when you can complete it tomorrow? Such thoughts permeate the minds of artists with this trait, enabling them to slow down their art creation process to enjoy the finer things in life."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/lazy.png",
+      "id": "trait:lazy",
+      "mods": [
+        {
+          "key": "art_creation_speed",
+          "label": "Creation Speed of Art",
+          "polarity": "bad",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Lazy",
+      "slug": "lazy",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is Level-Headed. By careful drill and a cool mind crews commanded by this leader will be more resilient to morale damage from received hits during naval combat."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/level-headed.png",
+      "id": "trait:level_headed",
+      "mods": [
+        {
+          "key": "naval_damage_done",
+          "label": "Naval Damage Done",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Level-Headed",
+      "slug": "level-headed",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The holy texts and ancient scriptures are the basis of religion. This individual, however, takes that feeling to the extreme, considering them the only religious basis. Not only that, but even the texts themselves are seen as invariable and infallible, where even the order of the words has a purpose."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/literalist.png",
+      "id": "trait:literalist",
+      "mods": [
+        {
+          "key": "monthly_towards_traditionalist",
+          "label": "Monthly Progress to Traditionalist",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "stability_cost_efficiency",
+          "label": "Stability Investment Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Literalist",
+      "slug": "literalist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Often personally responsible for information breaches and leaks this ruler is generally too trusting and easily fooled. Unfortunately, the sum of this is that our ruler does more harm than good to our counterespionage efforts."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/loose-lips.png",
+      "id": "trait:loose_lips",
+      "mods": [
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−5.00"
+        }
+      ],
+      "name": "Loose Lips",
+      "slug": "loose-lips",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has suffered traumatic injuries, resulting in the loss of limb."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/maimed.png",
+      "id": "trait:maimed",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−15.00"
+        }
+      ],
+      "name": "Maimed",
+      "slug": "maimed",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is seen as Malevolent. The actions of our ruler are often seen as motivated by malice or hostile intent. As a result, any subject countries under our control are quick to anger and fear any action we take."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/malevolent.png",
+      "id": "trait:malevolent",
+      "mods": [
+        {
+          "key": "subject_loyalty",
+          "label": "Loyalty of Subjects",
+          "polarity": "bad",
+          "value": "−5.00"
+        },
+        {
+          "key": "monthly_towards_serfdom",
+          "label": "Monthly Progress to Serfdom",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+35.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "can_banish_characters",
+          "label": "Can Banish Characters",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "control_importance_modifier",
+          "label": "Control Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "bad",
+          "value": "−15.00"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+20.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−20.00"
+        }
+      ],
+      "name": "Malevolent",
+      "slug": "malevolent",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is one of the highly trained and specialized Mamālīk, they are originally enslaved and traded, but their aptitude for war makes them stand out to the point that their masters train them into a force of professional warriors."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/mamluk.png",
+      "id": "trait:mamluk",
+      "mods": [
+        {
+          "key": "army_reinforce_efficiency",
+          "label": "Army Reinforcement Efficiency",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "land_morale_modifier",
+          "label": "Army Morale",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Mamlūk",
+      "slug": "mamluk",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Martial Educator. Under the current regiment, the education and training of our officer corps is one of our highest priorities."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/martial-educator.png",
+      "id": "trait:martial_educator",
+      "mods": [
+        {
+          "key": "army_tradition_decay",
+          "label": "Army Tradition Decay",
+          "polarity": "good",
+          "value": "−0.10%"
+        },
+        {
+          "key": "monthly_towards_quality",
+          "label": "Monthly Progress to Quality",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        }
+      ],
+      "name": "Martial Educator",
+      "slug": "martial-educator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a Master of Arms. Infantry commanded by this leader will be more efficient and be able to deal more damage."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/master-of-arms.png",
+      "id": "trait:master_of_arms",
+      "mods": [
+        {
+          "key": "army_heavy_infantry_power",
+          "label": "Heavy Infantry Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Master of Arms",
+      "slug": "master-of-arms",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "To create art and master one's craft is no easy ordeal. Artists with this trait will often-times have impeccable organization skills and are masters of their field. As a result, the artwork created will be of elevated quality and incur more positive bonuses."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/meticulous.png",
+      "id": "trait:meticulous",
+      "mods": [
+        {
+          "key": "work_of_art_quality_modifier",
+          "label": "Quality of Art",
+          "polarity": "good",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Meticulous",
+      "slug": "meticulous",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Midas-Touched. The talent to make every project profitable is a great asset to the ruler of a country. Our state coffers shall never want for money as long as our ruler remains."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/midas-touched.png",
+      "id": "trait:midas_touched",
+      "mods": [
+        {
+          "key": "global_monthly_prosperity",
+          "label": "Monthly Prosperity",
+          "polarity": "good",
+          "value": "+0.10%"
+        },
+        {
+          "key": "court_language_is_market_language_importance_modifier",
+          "label": "Prefers Court Language to be Market Language",
+          "polarity": "good",
+          "value": "+0.60"
+        },
+        {
+          "key": "bias_for_capitalist_policies",
+          "label": "Bias for Capitalist Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        }
+      ],
+      "name": "Midas Touched",
+      "slug": "midas-touched",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is one of the greatest theorists of all time and with the ability to use the theories in practice."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/military-theorist.png",
+      "id": "trait:military_theorist",
+      "mods": [
+        {
+          "key": "military_tactics",
+          "label": "Military Tactics",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "possible_frontage_modifier",
+          "label": "Possible Frontage",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "army_initiative",
+          "label": "Army Initiative",
+          "polarity": "good",
+          "value": "+20.00%"
+        }
+      ],
+      "name": "Military Theorist",
+      "slug": "military-theorist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "To disentangle the threads of fate and be able to pierce the veil of the future is certainly not an easy feat. Many who try get consumed by madness from what they see, if they manage to see anything at all. However, for those that master clairvoyance, the future holds no secrets."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/mystic-seer.png",
+      "id": "trait:mystic_seer",
+      "mods": [
+        {
+          "key": "research_speed_modifier",
+          "label": "Monthly Research Progress %",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Mystic Seer",
+      "slug": "mystic-seer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Naive Enthusiast. Blindly rushing ahead in trusting others and constantly underestimating the consequences, our ruler's naivety will ensure that our neighbors will take advantage of every weakness."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/naive.png",
+      "id": "trait:naive",
+      "mods": [
+        {
+          "key": "improve_relation_impact",
+          "label": "Improve Relations",
+          "polarity": "bad",
+          "value": "−25.00%"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−30.00%"
+        },
+        {
+          "key": "win_war_chance_lower_limit",
+          "label": "Win War Chance Lower Limit",
+          "polarity": "bad",
+          "value": "−30.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+30.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+1.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "peace_offer_fairness",
+          "label": "Peace Offer Fairness",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "diplomacy_importance_modifier",
+          "label": "Diplomacy Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "bad",
+          "value": "−30.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−5.00"
+        }
+      ],
+      "name": "Naive Enthusiast",
+      "slug": "naive",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Naval Engineer. ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] commanded by this leader will be able to recover more quickly from damages sustained underway or during naval engagements."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/naval-engineer.png",
+      "id": "trait:naval_engineer",
+      "mods": [
+        {
+          "key": "ship_repair_at_sea",
+          "label": "Ship Repair Speed at Sea",
+          "polarity": "good",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Naval Engineer",
+      "slug": "naval-engineer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is known as a Naval Gunner. Constant drill of gunnery crews commanded by this leader means heavy ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] will deal more damage."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/naval-gunner.png",
+      "id": "trait:naval_gunner",
+      "mods": [
+        {
+          "key": "navy_heavy_ship_power",
+          "label": "Heavy Ship Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Naval Gunner",
+      "slug": "naval-gunner",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Naval Showman. ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] commanded by this leader will receive more prestige and naval tradition from battles."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/naval-showman.png",
+      "id": "trait:naval_showman",
+      "mods": [
+        {
+          "key": "prestige_from_naval_battle",
+          "label": "Prestige from Naval Battles",
+          "polarity": "good",
+          "value": "+50.00%"
+        },
+        {
+          "key": "navy_tradition_from_battle",
+          "label": "Navy Tradition from Battles",
+          "polarity": "good",
+          "value": "+50.00%"
+        }
+      ],
+      "name": "Naval Showman",
+      "slug": "naval-showman",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This explorer has years of navigational experience and knows how to maneuver their ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ship"
+        ],
+        [
+          "t",
+          "] in dangerous waters."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/navigator.png",
+      "id": "trait:navigator",
+      "mods": [
+        {
+          "key": "exploration_preparation_time_modifier",
+          "label": "Exploration Preparation Time Modifier",
+          "polarity": "good",
+          "value": "−5.00%"
+        },
+        {
+          "key": "exploration_mission_speed",
+          "label": "Exploration Monthly Progress",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Navigator",
+      "slug": "navigator",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is an Obsessive Perfectionist. A keen interest in detail and minutiae is not always coupled with an equal talent for such things. Constantly causing interruptions and delays our ruler is doing a lot more harm than good when it comes to developing our internal infrastructure."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/obsessive-perfectionist.png",
+      "id": "trait:obsessive_perfectionist",
+      "mods": [
+        {
+          "key": "legislative_efficiency",
+          "label": "Legislative Efficiency",
+          "polarity": "bad",
+          "value": "−20.00%"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "good",
+          "value": "+7%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "gold_importance_modifier",
+          "label": "Gold Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "bad",
+          "value": "−15.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−5.00"
+        }
+      ],
+      "name": "Obsessive Perfectionist",
+      "slug": "obsessive-perfectionist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is an Offensive Planner. Troops commanded by this leader will gain a bonus in combat."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": null,
+      "id": "trait:offensive_planner",
+      "mods": [
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Offensive Planner",
+      "slug": "offensive-planner",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has lost the gift of sight in one of their eyes."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/one-eyed.png",
+      "id": "trait:one_eyed",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−5"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−5.00"
+        }
+      ],
+      "name": "One-Eyed",
+      "slug": "one-eyed",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The mysteries of the Divine are indecipherable, except for those blessed by it. This is one of such individuals, able to commune directly with the Divine and transfer wills and petitions between this world and theirs."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/oracle.png",
+      "id": "trait:oracle",
+      "mods": [
+        {
+          "key": "omens_offered",
+          "label": "Omens Offered",
+          "polarity": "good",
+          "value": "+1"
+        }
+      ],
+      "name": "Oracle",
+      "slug": "oracle",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual is an enthusiast of the arts in all their shapes and forms. From painting to sculpture, from architecture to poetry, no art form is undeserving of admiration and promotion."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/patron-of-arts.png",
+      "id": "trait:patron_of_arts",
+      "mods": [
+        {
+          "key": "artist_salary_modifier",
+          "label": "Artist Salary",
+          "polarity": "good",
+          "value": "−20.00%"
+        }
+      ],
+      "name": "Patron of Arts",
+      "slug": "patron-of-arts",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Pious. Religiously devoted, spiritual and religious our ruler ensures that our state will not lose its course and inspire confidence in our faith."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/pious.png",
+      "id": "trait:pious",
+      "mods": [
+        {
+          "key": "monthly_devotion",
+          "label": "Monthly Devotion",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_towards_spiritualist",
+          "label": "Monthly Progress to Spiritualist",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "religious_unity_importance_modifier",
+          "label": "Religious Unity Importance Modifier",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "good",
+          "value": "+0.60"
+        }
+      ],
+      "name": "Pious",
+      "slug": "pious",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The pox has left its mark upon this individual, with great scars and pitting covering their face — a permanent reminder of their brush with smallpox."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/pockmarked-trait.png",
+      "id": "trait:pockmarked_trait",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−5"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Pockmarked",
+      "slug": "pockmarked-trait",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Inspiration is the cornerstone of some of the best and most famous art pieces that defined our history. Artists with this trait will tend to fare better in terms of inspiration and thus will be more likely to commence their artwork rather frequently."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/prescient.png",
+      "id": "trait:prescient",
+      "mods": [
+        {
+          "key": "artist_monthly_start_chance",
+          "label": "Artist Monthly Start Chance",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Prescient",
+      "slug": "prescient",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Prize Hunter. Captains commanded by this leader will be encouraged to seize more prizes and will capture more ["
+        ],
+        [
+          "r",
+          "concept:ship",
+          "Ships"
+        ],
+        [
+          "t",
+          "] than others."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/prize-hunter.png",
+      "id": "trait:prize_hunter",
+      "mods": [
+        {
+          "key": "ship_capture_chance",
+          "label": "Ship Capture Chance",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Prize Hunter",
+      "slug": "prize-hunter",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "What better way to inscribe the legacy of our deeds than with the hiring of a prominent artist? Works created by artists with this trait will have a bigger impact in our cultural influence and growth amongst our subjects and peers."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/prominent.png",
+      "id": "trait:prominent",
+      "mods": [
+        {
+          "key": "artist_impact",
+          "label": "Direct Impact of Art",
+          "polarity": "good",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Prominent",
+      "slug": "prominent",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "There may be many beliefs present in the world, but the true faith is only one. The zeal of turning lost souls into accepting the proper beliefs does not only strengthens the community but also ensures that they walk on the proper path."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/proselytizer.png",
+      "id": "trait:proselytizer",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Proselytizer",
+      "slug": "proselytizer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This character has been surrounded by eunuchs since a very young age and is greatly sympathetic towards them."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/raised-by-eunuchs.png",
+      "id": "trait:raised_by_eunuchs",
+      "mods": [
+        {
+          "key": "eunuch_power",
+          "label": "Eunuch Power Modifier",
+          "polarity": "neutral",
+          "value": "+75.00%"
+        }
+      ],
+      "name": "Raised by Eunuchs",
+      "slug": "raised-by-eunuchs",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Ram Raider. Galleys commanded by this leader will be more efficient and deal more damage in naval battles."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/ram-raider.png",
+      "id": "trait:ram_raider",
+      "mods": [
+        {
+          "key": "navy_galley_power",
+          "label": "Galley Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Ram Raider",
+      "slug": "ram-raider",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "There are few who can be considered wells of knowledge, but those are always sought after for their teachings and instruction. Forming soon a group of loyal disciples, these great teachers are held in high reverence and respect."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/reverend-teacher.png",
+      "id": "trait:reverend_teacher",
+      "mods": [
+        {
+          "key": "global_monthly_literacy",
+          "label": "Monthly Literacy",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Reverend Teacher",
+      "slug": "reverend-teacher",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Righteous. Our people will be less likely to question our authority as they know that a righteous ruler always has their best interest in mind."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/righteous.png",
+      "id": "trait:righteous",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_republican_tradition",
+          "label": "Monthly Republican Tradition",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Righteous",
+      "slug": "righteous",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is Ruthless. Troops under the command of this leader will deal greater fire damage."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/ruthless.png",
+      "id": "trait:ruthless",
+      "mods": [
+        {
+          "key": "assault_ability",
+          "label": "Assault Ability",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Ruthless",
+      "slug": "ruthless",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This Admiral is a Ruthless Blockader. Ships commanded by this leader will be able to maintain a ["
+        ],
+        [
+          "r",
+          "concept:blockade",
+          "Blockade"
+        ],
+        [
+          "t",
+          "] much more efficiently."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/ruthless-blockader.png",
+      "id": "trait:ruthless_blockader",
+      "mods": [
+        {
+          "key": "blockade_efficiency",
+          "label": "Blockade Efficiency",
+          "polarity": "good",
+          "value": "+25.00%"
+        }
+      ],
+      "name": "Ruthless Blockader",
+      "slug": "ruthless-blockader",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has survived a minor facial injury, resulting in a handsome scar."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/scarred.png",
+      "id": "trait:scarred",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "character_life_expectancy",
+          "label": "Character Life Expectancy",
+          "polarity": "bad",
+          "value": "−5"
+        }
+      ],
+      "name": "Scarred",
+      "slug": "scarred",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is difficult to know what this individual is thinking at any given time, as schemes, plots, and subterfuges are always about. People have to sleep with one eye open, and always watch their backs."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/schemer.png",
+      "id": "trait:schemer",
+      "mods": [
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "bad",
+          "value": "−5.00%"
+        },
+        {
+          "key": "spy_network_construction",
+          "label": "Spy Network Construction",
+          "polarity": "good",
+          "value": "+15.00%"
+        }
+      ],
+      "name": "Schemer",
+      "slug": "schemer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Scholar. The ambition to learn about the world and the governing principles of men and nature makes our ruler able to understand and implement new technology much more efficiently than would otherwise be possible."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/scholar.png",
+      "id": "trait:scholar",
+      "mods": [
+        {
+          "key": "global_monthly_literacy",
+          "label": "Monthly Literacy",
+          "polarity": "good",
+          "value": "+0.025"
+        },
+        {
+          "key": "monthly_towards_innovative",
+          "label": "Monthly Progress to Innovative",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "institution_importance_modifier",
+          "label": "Institution Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "good",
+          "value": "+0.60"
+        }
+      ],
+      "name": "Scholar",
+      "slug": "scholar",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This explorer is a scientist first and foremost. Charting the land is less important than studying the flora and fauna of the new world."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/scientist-on-sea.png",
+      "id": "trait:scientist_on_sea",
+      "mods": [
+        {
+          "key": "exploration_mission_speed",
+          "label": "Exploration Monthly Progress",
+          "polarity": "good",
+          "value": "+0.25"
+        }
+      ],
+      "name": "Scientist on Sea",
+      "slug": "scientist-on-sea",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Secretive. A natural instinct to keep doors closed and letters encrypted trickles down and will make our entire government harder to infiltrate for our enemies."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/secretive.png",
+      "id": "trait:secretive",
+      "mods": [
+        {
+          "key": "counter_espionage",
+          "label": "Counterespionage",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "monthly_towards_centralization",
+          "label": "Monthly Progress to Centralization",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Secretive",
+      "slug": "secretive",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual suffers from poor health and is often unwell."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/sickly.png",
+      "id": "trait:sickly",
+      "mods": [
+        {
+          "key": "character_child_education",
+          "label": "Ability Increase During Education",
+          "polarity": "bad",
+          "value": "−0.33"
+        }
+      ],
+      "name": "Sickly",
+      "slug": "sickly",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is a Siege Specialist. Sieges commanded by this leader will be conducted in a more efficient manner and should be concluded more quickly."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/siege-specialist.png",
+      "id": "trait:siege_specialist",
+      "mods": [
+        {
+          "key": "siege_ability",
+          "label": "Siege Ability",
+          "polarity": "good",
+          "value": "+15.00%"
+        }
+      ],
+      "name": "Siege Specialist",
+      "slug": "siege-specialist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is considered to have a Silver Tongue. In our communication with other states, our ruler is able to present our past actions in a much more favorable light. Once our neighbors see the reasons for our actions they are much more likely to forgive us in the long run for any transgressions."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/silver-tongue.png",
+      "id": "trait:silver_tongue",
+      "mods": [
+        {
+          "key": "improve_relation_impact",
+          "label": "Improve Relations",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "good",
+          "value": "+10.00"
+        }
+      ],
+      "name": "Silver Tongue",
+      "slug": "silver-tongue",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is widely regarded as a Sinner. Personal shortcomings in the leadership of our country have turned the religious establishment against us."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/sinner.png",
+      "id": "trait:sinner",
+      "mods": [
+        {
+          "key": "tolerance_own",
+          "label": "Tolerance of the True Faith",
+          "polarity": "bad",
+          "value": "−2.00"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+20.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "religious_unity_importance_modifier",
+          "label": "Religious Unity Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.10"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "bad",
+          "value": "−3.00"
+        },
+        {
+          "key": "marriage_desirability",
+          "label": "Marriage Desirability",
+          "polarity": "bad",
+          "value": "−10.00"
+        }
+      ],
+      "name": "Sinner",
+      "slug": "sinner",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual has contracted smallpox. Fever, vomiting, and weeping blisters cover their body — a slow and agonizing sickness."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/smallpox-trait.png",
+      "id": "trait:smallpox_trait",
+      "mods": [],
+      "name": "Smallpox",
+      "slug": "smallpox-trait",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The stars have fascinated the eyes of humanity since its beginnings, and many are those who seek for divine presence among them. This individual is one of them, always with the sights directed upwards in search for knowledge and answers. As there are many things that can be learned from the starts if one is willing to look."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/stargazer.png",
+      "id": "trait:stargazer",
+      "mods": [
+        {
+          "key": "global_max_literacy",
+          "label": "Max Literacy",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Stargazer",
+      "slug": "stargazer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This General is an unparalleled strategist and military genius. Every move on the battlefield shows brutal effectiveness, and no fort can withstand the cunning abilities of this leader."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/strategist.png",
+      "id": "trait:strategist",
+      "mods": [
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "assault_ability",
+          "label": "Assault Ability",
+          "polarity": "good",
+          "value": "+33.00%"
+        },
+        {
+          "key": "siege_ability",
+          "label": "Siege Ability",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+2.00"
+        }
+      ],
+      "name": "Strategist",
+      "slug": "strategist",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Strict. Due to taking a great interest in the behavior of the troops our ruler is able to instill a strict sense of discipline in everyone in our ranks, from the lowest to the highest."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/strict.png",
+      "id": "trait:strict",
+      "mods": [
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "monthly_towards_defensive",
+          "label": "Monthly Progress to Defensive",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "bad",
+          "value": "−10.00"
+        },
+        {
+          "key": "coalition_strength_tolerance",
+          "label": "Coalition Strength Tolerance",
+          "polarity": "bad",
+          "value": "−0.05"
+        },
+        {
+          "key": "defence_importance_modifier",
+          "label": "Defense Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "control_importance_modifier",
+          "label": "Control Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Strict",
+      "slug": "strict",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "No change is small enough for this individual, all will be seen with reluctance. Set in the established ways, neither opinions nor behavior will be easily found wrong or with room for improvement, and none will be changed without difficulties."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/stubborn.png",
+      "id": "trait:stubborn",
+      "mods": [
+        {
+          "key": "stability_decay",
+          "label": "Stability Decay",
+          "polarity": "good",
+          "value": "−0.05%"
+        }
+      ],
+      "name": "Stubborn",
+      "slug": "stubborn",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Tactical Genius. A great personal interest and investment in battlefield maneuvers and feints will result in a much greater interest and experience in these matters for all our generals."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/tactical-genius.png",
+      "id": "trait:tactical_genius",
+      "mods": [
+        {
+          "key": "military_tactics",
+          "label": "Military Tactics",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "monthly_towards_quality",
+          "label": "Monthly Progress to Quality",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "carefulness_modifier",
+          "label": "Carefulness",
+          "polarity": "good",
+          "value": "+5.00%"
+        },
+        {
+          "key": "defence_importance_modifier",
+          "label": "Defense Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Tactical Genius",
+      "slug": "tactical-genius",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This individual lives among piles of coin and abacuses, always counting and writing down a precise account of all taxes and revenues. With accurate calculations, comparisons, and balances, these actions allow for the taxes to be as high as possible for what the land itself provides."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/tax-optimizer.png",
+      "id": "trait:tax_optimizer",
+      "mods": [
+        {
+          "key": "tax_income_efficiency",
+          "label": "Tax Efficiency",
+          "polarity": "good",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Tax Optimizer",
+      "slug": "tax-optimizer",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Discussions about faith, divinity, and the Beyond are everyday occurrences around this individual, as there is no one more devout; nor is there any more arduous student of the faith and its mysteries."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/theologian.png",
+      "id": "trait:theologian",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+25.00%"
+        },
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "bad",
+          "value": "−1.00"
+        }
+      ],
+      "name": "Theologian",
+      "slug": "theologian",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Tolerant. Religious minorities will thrive during our regime."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/tolerant.png",
+      "id": "trait:tolerant",
+      "mods": [
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        },
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        },
+        {
+          "key": "monthly_towards_innovative",
+          "label": "Monthly Progress to Innovative",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "religious_unity_importance_modifier",
+          "label": "Religious Unity Importance Modifier",
+          "polarity": "bad",
+          "value": "−0.20"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "bad",
+          "value": "−1.50"
+        },
+        {
+          "key": "bias_for_balanced_policies",
+          "label": "Bias for Balanced Policies",
+          "polarity": "good",
+          "value": "+25.00"
+        }
+      ],
+      "name": "Tolerant",
+      "slug": "tolerant",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This explorer cares only for money. They will do anything to find the rarest treasures in the new world - even if it is at the expense of the natives."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/treasure-hunter.png",
+      "id": "trait:treasure_hunter",
+      "mods": [
+        {
+          "key": "exploration_maintenance_efficiency",
+          "label": "Exploration Cost Efficiency",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "exploration_mission_speed",
+          "label": "Exploration Monthly Progress",
+          "polarity": "bad",
+          "value": "−0.20"
+        }
+      ],
+      "name": "Treasure Hunter",
+      "slug": "treasure-hunter",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A general with this trait has been elevated by the Senate of their country after their return from a successful campaign and given the highest honour a military officer can receive, earning both the respect and admiration of all."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/triumphant.png",
+      "id": "trait:triumphant",
+      "mods": [
+        {
+          "key": "military_tactics",
+          "label": "Military Tactics",
+          "polarity": "good",
+          "value": "+0.05"
+        },
+        {
+          "key": "discipline",
+          "label": "Discipline",
+          "polarity": "good",
+          "value": "+7.50%"
+        },
+        {
+          "key": "monthly_experience_gain",
+          "label": "Monthly Experience Gain",
+          "polarity": "good",
+          "value": "+20.00%"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Triumphant",
+      "slug": "triumphant",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Everybody has days in which it is hard to get any work done, but this individual takes that to the extreme. With a constant lack of any kind of motivation or drive, all work takes much longer to complete, if it is ever completed at all."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/unmotivated.png",
+      "id": "trait:unmotivated",
+      "mods": [
+        {
+          "key": "country_cabinet_efficiency",
+          "label": "Efficiency of Our Cabinet",
+          "polarity": "bad",
+          "value": "−2.50%"
+        },
+        {
+          "key": "nobles_estate_target_satisfaction",
+          "label": "Noble Estate Satisfaction Equilibrium",
+          "polarity": "neutral",
+          "value": "+1.00%"
+        }
+      ],
+      "name": "Unmotivated",
+      "slug": "unmotivated",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Although there may be different views of certain aspects of our faith, some positions are generally more accepted than others. This individual holds some of the less common ones, causing at best disrespect from the general religious community, and marginalization at worst. However, there are also many others who share the same views, or ar at least intrigued enough to listen."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/unorthodox.png",
+      "id": "trait:unorthodox",
+      "mods": [
+        {
+          "key": "monthly_towards_innovative",
+          "label": "Monthly Progress to Innovative",
+          "polarity": "neutral",
+          "value": "+0.05"
+        },
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "good",
+          "value": "+0.50"
+        }
+      ],
+      "name": "Unorthodox",
+      "slug": "unorthodox",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A poor grasp on strategy and military tactics result in disaster any time someone like that tries to lead troops, and all close officers only hope for such incompetent general to just stand as a glorified scarecrow without blabbering foolish instructions."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/unsuited-for-army-command.png",
+      "id": "trait:unsuited_for_army_command",
+      "mods": [
+        {
+          "key": "blocked_from_being_leader",
+          "label": "Can Not Lead Armies or Navies",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "bad",
+          "value": "−1.00"
+        }
+      ],
+      "name": "Unsuited for Army Command",
+      "slug": "unsuited-for-army-command",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Leadership and governing a country is not a task everyone is fit for. Although some governments have seen their fair share of incompetent rulers, this person in particular is either not willing or not capable of being the figurehead of any respectable state."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/unsuited-for-country-ruling.png",
+      "id": "trait:unsuited_for_country_ruling",
+      "mods": [
+        {
+          "key": "blocked_from_being_ruler",
+          "label": "Blocked from Rulership",
+          "polarity": "good",
+          "value": "yes"
+        }
+      ],
+      "name": "Unsuited for Country Ruling",
+      "slug": "unsuited-for-country-ruling",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "To be able to lead fleets, one needs a clear sense of orientation, and of course to be able to withstand the roughness of the waves. Someone incapable of that is as useless for leading a ship as an anchor, and just a complete dead weight on deck."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/unsuited-for-naval-command.png",
+      "id": "trait:unsuited_for_naval_command",
+      "mods": [
+        {
+          "key": "blocked_from_being_leader",
+          "label": "Can Not Lead Armies or Navies",
+          "polarity": "good",
+          "value": "yes"
+        },
+        {
+          "key": "commander_combat_bonus",
+          "label": "Commander Combat Bonus",
+          "polarity": "bad",
+          "value": "−1.00"
+        }
+      ],
+      "name": "Unsuited for Naval Command",
+      "slug": "unsuited-for-naval-command",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Well-Advised. Always ready to listen to the wise council of others our ruler attracts a greater number of people to our court and cabinet."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/well-advised.png",
+      "id": "trait:well_advised",
+      "mods": [
+        {
+          "key": "country_cabinet_efficiency",
+          "label": "Efficiency of Our Cabinet",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "bias_for_balanced_policies",
+          "label": "Bias for Balanced Policies",
+          "polarity": "good",
+          "value": "+33.00"
+        }
+      ],
+      "name": "Well Advised",
+      "slug": "well-advised",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is Well Connected. Our court and cabinet benefits from the wide network among the great minds of this era of our ruler."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/well-connected.png",
+      "id": "trait:well_connected",
+      "mods": [
+        {
+          "key": "court_spending_efficiency",
+          "label": "Court Spending Efficiency",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "peace_offer_negotiation_power",
+          "label": "Peace Offer Negotiation Power",
+          "polarity": "good",
+          "value": "+0.25"
+        },
+        {
+          "key": "diplomacy_importance_modifier",
+          "label": "Diplomacy Importance Modifier",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "bias_for_diplomat_policies",
+          "label": "Bias for Diplomat Policies",
+          "polarity": "good",
+          "value": "+33.00"
+        }
+      ],
+      "name": "Well Connected",
+      "slug": "well-connected",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "There's truth in the saying that art masters often forget to nourish themselves or sleep properly. Such is their dedication to their craft that they will not rest or take adequate care of themselves without first finishing their next masterpiece."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/workaholic.png",
+      "id": "trait:workaholic",
+      "mods": [
+        {
+          "key": "art_creation_speed",
+          "label": "Creation Speed of Art",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Workaholic",
+      "slug": "workaholic",
+      "type": "trait"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This ruler is a Zealot. Being fanatically devoted to the true faith allows our ruler to inspire more people to convert and join the state religion."
+        ]
+      ],
+      "facets": {
+        "type": null
+      },
+      "icon": "img/trait/zealot.png",
+      "id": "trait:zealot",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "monthly_towards_traditionalist",
+          "label": "Monthly Progress to Traditionalist",
+          "polarity": "neutral",
+          "value": "+0.10"
+        },
+        {
+          "key": "win_war_chance_threshold",
+          "label": "Win War Chance Threshold",
+          "polarity": "bad",
+          "value": "−10.00%"
+        },
+        {
+          "key": "war_declaration_stab_hit_tolerance",
+          "label": "War Declaration Stability Hit Tolerance",
+          "polarity": "good",
+          "value": "+30.00"
+        },
+        {
+          "key": "war_declaration_war_exhaustion_tolerance",
+          "label": "War Declaration War-Exhaustion Tolerance",
+          "polarity": "good",
+          "value": "+1.00"
+        },
+        {
+          "key": "aggressiveness_modifier",
+          "label": "Aggressiveness",
+          "polarity": "bad",
+          "value": "+5.00%"
+        },
+        {
+          "key": "religious_unity_importance_modifier",
+          "label": "Religious Unity Importance Modifier",
+          "polarity": "good",
+          "value": "+0.20"
+        },
+        {
+          "key": "court_language_is_liturgical_language_importance_modifier",
+          "label": "Prefers Court Language to be Liturgical Language",
+          "polarity": "good",
+          "value": "+0.60"
+        },
+        {
+          "key": "bias_for_militarist_policies",
+          "label": "Bias for Militarist Policies",
+          "polarity": "good",
+          "value": "+15.00"
+        }
+      ],
+      "name": "Zealot",
+      "slug": "zealot",
+      "type": "trait"
+    }
+  ],
+  "facets": [
+    {
+      "key": "type",
+      "label": "Type",
+      "options": []
+    }
+  ],
+  "source": "traits"
+}

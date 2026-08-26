@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/countries.json';
+
+const entities = data.entities;
+// religion & culture have long tails — chip only the big ones, search finds all
+const facets = data.facets
+  .map((f) => ({
+    ...f,
+    options: f.key === 'religion' ? f.options.filter((o) => o.count >= 25)
+      : f.key === 'culture' ? f.options.filter((o) => o.count >= 20)
+      : f.options,
+  }))
+  .filter((f) => f.options.length > 1);
+const columns = [
+  { key: 'name', label: 'Country', kind: 'name' },
+  { key: 'tag', label: 'Tag', kind: 'text' },
+  { key: 'rank', label: 'Rank', kind: 'facet' },
+  { key: 'culture', label: 'Culture', kind: 'facet' },
+  { key: 'religion', label: 'Religion', kind: 'facet' },
+  { key: 'capital', label: 'Capital', kind: 'text' },
+  { key: 'difficulty', label: 'Difficulty', kind: 'num' },
+] as const;
+---
+<Base
+  title="Countries"
+  active="countries"
+  pageMark="👑"
+  eyebrow="The 1337 World"
+  pageStats={[
+    { label: 'countries', value: entities.length },
+    { label: 'religions', value: new Set(entities.map((e) => e.facets.religion)).size },
+    { label: 'cultures', value: new Set(entities.map((e) => e.facets.culture)).size },
+  ]}
+  description="Every country tag at the 1337 start of Europa Universalis V — culture, religion, rank, and capital."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter countries… (big groups as chips; search finds all)" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="countries" />
+  </div>
+</Base>

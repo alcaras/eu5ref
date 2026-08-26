@@ -21,6 +21,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-alum.png",
       "id": "good:alum",
       "mods": [],
       "name": "Alum",
@@ -56,6 +57,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-amber.png",
       "id": "good:amber",
       "mods": [],
       "name": "Amber",
@@ -107,6 +109,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-beer.png",
       "id": "good:beer",
       "mods": [],
       "name": "Beer",
@@ -160,6 +163,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-beeswax.png",
       "id": "good:beeswax",
       "mods": [],
       "name": "Beeswax",
@@ -199,6 +203,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-books.png",
       "id": "good:books",
       "mods": [],
       "name": "Books",
@@ -225,6 +230,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-cannons.png",
       "id": "good:cannons",
       "mods": [],
       "name": "Cannon",
@@ -266,6 +272,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-chili.png",
       "id": "good:chili",
       "mods": [],
       "name": "Chili",
@@ -292,6 +299,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-clay.png",
       "id": "good:clay",
       "mods": [],
       "name": "Clay",
@@ -343,6 +351,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-cloth.png",
       "id": "good:cloth",
       "mods": [],
       "name": "Cloth",
@@ -384,6 +393,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-cloves.png",
       "id": "good:cloves",
       "mods": [],
       "name": "Cloves",
@@ -439,6 +449,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-coal.png",
       "id": "good:coal",
       "mods": [],
       "name": "Coal",
@@ -480,6 +491,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-cocoa.png",
       "id": "good:cocoa",
       "mods": [],
       "name": "Cocoa",
@@ -525,6 +537,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-coffee.png",
       "id": "good:coffee",
       "mods": [],
       "name": "Coffee",
@@ -551,6 +564,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-copper.png",
       "id": "good:copper",
       "mods": [],
       "name": "Copper",
@@ -579,6 +593,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-cotton.png",
       "id": "good:cotton",
       "mods": [],
       "name": "Cotton",
@@ -605,6 +620,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-dyes.png",
       "id": "good:dyes",
       "mods": [],
       "name": "Dyes",
@@ -636,6 +652,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-elephants.png",
       "id": "good:elephants",
       "mods": [],
       "name": "Elephants",
@@ -662,6 +679,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-fiber-crops.png",
       "id": "good:fiber_crops",
       "mods": [],
       "name": "Fiber Crops",
@@ -701,6 +719,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-fine-cloth.png",
       "id": "good:fine_cloth",
       "mods": [],
       "name": "Fine Cloth",
@@ -736,6 +755,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-firearms.png",
       "id": "good:firearms",
       "mods": [],
       "name": "Firearms",
@@ -791,6 +811,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-fish.png",
       "id": "good:fish",
       "mods": [],
       "name": "Fish",
@@ -846,6 +867,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-fruit.png",
       "id": "good:fruit",
       "mods": [],
       "name": "Fruit",
@@ -885,6 +907,7 @@
         "category": "raw_material",
         "method": "hunting"
       },
+      "icon": "img/good/icon-goods-fur.png",
       "id": "good:fur",
       "mods": [],
       "name": "Fur",
@@ -936,6 +959,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-furniture.png",
       "id": "good:furniture",
       "mods": [],
       "name": "Furniture",
@@ -967,6 +991,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-gems.png",
       "id": "good:gems",
       "mods": [],
       "name": "Gems",
@@ -1006,6 +1031,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-glass.png",
       "id": "good:glass",
       "mods": [],
       "name": "Glass",
@@ -1037,6 +1063,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-goods-gold.png",
       "id": "good:goods_gold",
       "mods": [],
       "name": "Gold",
@@ -1070,6 +1097,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-horses.png",
       "id": "good:horses",
       "mods": [],
       "name": "Horses",
@@ -1101,6 +1129,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-incense.png",
       "id": "good:incense",
       "mods": [],
       "name": "Incense",
@@ -1127,6 +1156,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-iron.png",
       "id": "good:iron",
       "mods": [],
       "name": "Iron",
@@ -1158,6 +1188,7 @@
         "category": "raw_material",
         "method": "hunting"
       },
+      "icon": "img/good/icon-goods-ivory.png",
       "id": "good:ivory",
       "mods": [],
       "name": "Ivory",
@@ -1193,6 +1224,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-jewelry.png",
       "id": "good:jewelry",
       "mods": [],
       "name": "Jewelry",
@@ -1228,6 +1260,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-lacquerware.png",
       "id": "good:lacquerware",
       "mods": [],
       "name": "Lacquerware",
@@ -1254,6 +1287,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-lead.png",
       "id": "good:lead",
       "mods": [],
       "name": "Lead",
@@ -1297,6 +1331,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-leather.png",
       "id": "good:leather",
       "mods": [],
       "name": "Leather",
@@ -1352,6 +1387,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-legumes.png",
       "id": "good:legumes",
       "mods": [],
       "name": "Legumes",
@@ -1403,6 +1439,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-liquor.png",
       "id": "good:liquor",
       "mods": [],
       "name": "Liquor",
@@ -1456,6 +1493,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-livestock.png",
       "id": "good:livestock",
       "mods": [],
       "name": "Livestock",
@@ -1511,6 +1549,7 @@
         "category": "raw_material",
         "method": "forestry"
       },
+      "icon": "img/good/icon-goods-lumber.png",
       "id": "good:lumber",
       "mods": [],
       "name": "Lumber",
@@ -1568,6 +1607,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-maize.png",
       "id": "good:maize",
       "mods": [],
       "name": "Maize",
@@ -1599,6 +1639,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-marble.png",
       "id": "good:marble",
       "mods": [],
       "name": "Marble",
@@ -1650,6 +1691,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-masonry.png",
       "id": "good:masonry",
       "mods": [],
       "name": "Masonry",
@@ -1705,6 +1747,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-medicaments.png",
       "id": "good:medicaments",
       "mods": [],
       "name": "Medicaments",
@@ -1760,6 +1803,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-mercury.png",
       "id": "good:mercury",
       "mods": [],
       "name": "Mercury",
@@ -1817,6 +1861,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-millet.png",
       "id": "good:millet",
       "mods": [],
       "name": "Sturdy Grains",
@@ -1843,6 +1888,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-naval-supplies.png",
       "id": "good:naval_supplies",
       "mods": [],
       "name": "Naval Supplies",
@@ -1900,6 +1946,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-olives.png",
       "id": "good:olives",
       "mods": [],
       "name": "Olives",
@@ -1939,6 +1986,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-paper.png",
       "id": "good:paper",
       "mods": [],
       "name": "Paper",
@@ -1974,6 +2022,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-pearls.png",
       "id": "good:pearls",
       "mods": [],
       "name": "Pearls",
@@ -2015,6 +2064,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-pepper.png",
       "id": "good:pepper",
       "mods": [],
       "name": "Pepper",
@@ -2054,6 +2104,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-porcelain.png",
       "id": "good:porcelain",
       "mods": [],
       "name": "Porcelain",
@@ -2115,6 +2166,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-potato.png",
       "id": "good:potato",
       "mods": [],
       "name": "Potatoes",
@@ -2166,6 +2218,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-pottery.png",
       "id": "good:pottery",
       "mods": [],
       "name": "Pottery",
@@ -2223,6 +2276,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-rice.png",
       "id": "good:rice",
       "mods": [],
       "name": "Rice",
@@ -2264,6 +2318,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-saffron.png",
       "id": "good:saffron",
       "mods": [],
       "name": "Saffron",
@@ -2303,6 +2358,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-salt.png",
       "id": "good:salt",
       "mods": [],
       "name": "Salt",
@@ -2329,6 +2385,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-saltpeter.png",
       "id": "good:saltpeter",
       "mods": [],
       "name": "Saltpeter",
@@ -2355,6 +2412,7 @@
         "category": "raw_material",
         "method": "gathering"
       },
+      "icon": "img/good/icon-goods-sand.png",
       "id": "good:sand",
       "mods": [],
       "name": "Sand",
@@ -2381,6 +2439,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-silk.png",
       "id": "good:silk",
       "mods": [],
       "name": "Silk",
@@ -2412,6 +2471,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-silver.png",
       "id": "good:silver",
       "mods": [],
       "name": "Silver",
@@ -2456,6 +2516,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-slaves-goods.png",
       "id": "good:slaves_goods",
       "mods": [],
       "name": "Slaves",
@@ -2482,6 +2543,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-steel.png",
       "id": "good:steel",
       "mods": [],
       "name": "Steel",
@@ -2508,6 +2570,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-stone.png",
       "id": "good:stone",
       "mods": [],
       "name": "Stone",
@@ -2549,6 +2612,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-sugar.png",
       "id": "good:sugar",
       "mods": [],
       "name": "Sugar",
@@ -2575,6 +2639,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-tar.png",
       "id": "good:tar",
       "mods": [],
       "name": "Tar",
@@ -2614,6 +2679,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-tea.png",
       "id": "good:tea",
       "mods": [],
       "name": "Tea",
@@ -2640,6 +2706,7 @@
         "category": "raw_material",
         "method": "mining"
       },
+      "icon": "img/good/icon-goods-tin.png",
       "id": "good:tin",
       "mods": [],
       "name": "Tin",
@@ -2681,6 +2748,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-tobacco.png",
       "id": "good:tobacco",
       "mods": [],
       "name": "Tobacco",
@@ -2712,6 +2780,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-tools.png",
       "id": "good:tools",
       "mods": [],
       "name": "Tools",
@@ -2755,6 +2824,7 @@
         "category": "produced",
         "method": null
       },
+      "icon": "img/good/icon-goods-weaponry.png",
       "id": "good:weaponry",
       "mods": [],
       "name": "Weaponry",
@@ -2808,6 +2878,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-wheat.png",
       "id": "good:wheat",
       "mods": [],
       "name": "Wheat",
@@ -2863,6 +2934,7 @@
         "category": "raw_material",
         "method": "hunting"
       },
+      "icon": "img/good/icon-goods-wild-game.png",
       "id": "good:wild_game",
       "mods": [],
       "name": "Wild Game",
@@ -2916,6 +2988,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-wine.png",
       "id": "good:wine",
       "mods": [],
       "name": "Wine",
@@ -2944,6 +3017,7 @@
         "category": "raw_material",
         "method": "farming"
       },
+      "icon": "img/good/icon-goods-wool.png",
       "id": "good:wool",
       "mods": [],
       "name": "Wool",

@@ -1,0 +1,449 @@
+{
+ "dataset": "societal-values",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "An Absolutist country will focus more on the centralized authority of its ruler while reining in the power of the different estates, while a Liberal country will emphasize the importance of civic liberties and legislative governing bodies."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:absolutism_vs_liberalism",
+   "mods": [],
+   "name": "Absolutism vs Liberalism",
+   "slug": "absolutism-vs-liberalism",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "An aristocratic country is about having the leadership from those with noble blood, while a plutocratic country takes their leadership from the richest and most powerful."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:aristocracy_vs_plutocracy",
+   "mods": [],
+   "name": "Aristocracy vs Plutocracy",
+   "slug": "aristocracy-vs-plutocracy",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A belligerent country is a country that does not worry about the ["
+    ],
+    [
+     "r",
+     "concept:opinion",
+     "Opinion"
+    ],
+    [
+     "t",
+     "] of other ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Countries"
+    ],
+    [
+     "t",
+     "]. A conciliatory country appeases others, either due to being weaker, or it just believes that it is easier to catch flies with honey."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:belligerent_vs_conciliatory",
+   "mods": [],
+   "name": "Belligerent vs Conciliatory",
+   "slug": "belligerent-vs-conciliatory",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] with a capital economy is more focused on earning money, particularly from ["
+    ],
+    [
+     "r",
+     "concept:trade",
+     "Trade"
+    ],
+    [
+     "t",
+     "] and [Urban Locations], while one with a traditional economy is more oriented about living off what the land provides."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:capital_economy_vs_traditional_economy",
+   "mods": [],
+   "name": "Capital Economy vs Traditional Economy",
+   "slug": "capital-economy-vs-traditional-economy",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A centralized country may be more efficient, while a decentralized country is more resilient."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:centralization_vs_decentralization",
+   "mods": [],
+   "name": "Centralization vs Decentralization",
+   "slug": "centralization-vs-decentralization",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A country based on individualism may get more exceptional characters, while one focused on communalism is all about the greater good of society."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:individualism_vs_communalism",
+   "mods": [],
+   "name": "Individualism vs Communalism",
+   "slug": "individualism-vs-communalism",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A country focused on land is usually a country without much of a coastline, while a naval-focused one may be those that values its coastline more than others."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:land_vs_naval",
+   "mods": [],
+   "name": "Land vs Naval",
+   "slug": "land-vs-naval",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] embracing Latinitas looks to the powers of the Latin West—Italian republics, Frankish courts, and the currents of the Renaissance—for support, partnership, and renewal through diplomacy and selective accommodation. One rooted in Rōmanismós holds fast to its unbroken Roman inheritance, upheld by the Orthodox faith, the institutions of the imperial administration, and the enduring tradition of Constantinople."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:latinization_vs_hellenization",
+   "mods": [],
+   "name": "Latinitas vs Rōmanismós",
+   "slug": "latinization-vs-hellenization",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A mercantilist country aims to protect the [Market Price] of the [Produced Goods] in their country, while a country focused on free trade wants to benefit more from trades around the world."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:mercantilism_vs_free_trade",
+   "mods": [],
+   "name": "Mercantilism vs Free Trade",
+   "slug": "mercantilism-vs-free-trade",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] leaning towards Mysticism (a Bāṭin interpretation) looks for hidden and deeper meanings, while with a Jurisprudence (a Ẓāhir interpretation) focuses on the literal meanings of the Quran and Hadiths."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:mysticism_vs_jurisprudence",
+   "mods": [],
+   "name": "Mysticism vs Jurisprudence",
+   "slug": "mysticism-vs-jurisprudence",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A country that is focused on offensive prefers the attack, and using their ["
+    ],
+    [
+     "r",
+     "concept:army",
+     "Armies"
+    ],
+    [
+     "t",
+     "] and ["
+    ],
+    [
+     "r",
+     "concept:navy",
+     "Navies"
+    ],
+    [
+     "t",
+     "] in [War Enemy] ["
+    ],
+    [
+     "r",
+     "concept:location",
+     "Locations"
+    ],
+    [
+     "t",
+     "], while a defensive country relies more on their ["
+    ],
+    [
+     "r",
+     "concept:fortification",
+     "Forts"
+    ],
+    [
+     "t",
+     "] to defeat the enemy."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:offensive_vs_defensive",
+   "mods": [],
+   "name": "Offensive vs Defensive",
+   "slug": "offensive-vs-defensive",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "An outward ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] focuses more on interacting with other ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Countries"
+    ],
+    [
+     "t",
+     "], while an inward country looks inside its borders."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:outward_vs_inward",
+   "mods": [],
+   "name": "Outward vs Inward",
+   "slug": "outward-vs-inward",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "An ["
+    ],
+    [
+     "r",
+     "concept:army",
+     "Army"
+    ],
+    [
+     "t",
+     "] that focuses on quality is focused on making each soldier perform better, while an ["
+    ],
+    [
+     "r",
+     "concept:army",
+     "Army"
+    ],
+    [
+     "t",
+     "] focused on quantity tries to get more people to fight in the battles."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:quality_vs_quantity",
+   "mods": [],
+   "name": "Quality vs Quantity",
+   "slug": "quality-vs-quantity",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A country with high serfdom is about exploiting the peasants as much as possible, whereas a country with free subjects treats peasants as human beings."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:serfdom_vs_free_subjects",
+   "mods": [],
+   "name": "Serfdom vs Free Subjects",
+   "slug": "serfdom-vs-free-subjects",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A Sinicized country falls under the influence of the Middle Kingdom, as an extension of its jurisdiction. Whereas, an Unsinicized country stands as a proud sovereign of their politics and domain."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:sinicized_vs_unsinicized",
+   "mods": [],
+   "name": "Sinicized vs Unsinicized",
+   "slug": "sinicized-vs-unsinicized",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A spiritualist country is pretty much organized around its Clerics, while a humanist country is much more tolerant towards ["
+    ],
+    [
+     "r",
+     "concept:heretic",
+     "Heretic"
+    ],
+    [
+     "t",
+     "] and ["
+    ],
+    [
+     "r",
+     "concept:heathen",
+     "Heathen"
+    ],
+    [
+     "t",
+     "] religions."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:spiritualist_vs_humanist",
+   "mods": [],
+   "name": "Spiritualist vs Humanist",
+   "slug": "spiritualist-vs-humanist",
+   "type": "societal-value"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A traditionalist country prioritizes stability and tradition over all other values, while an innovative country wants a more literate population and faster adoption of any new ["
+    ],
+    [
+     "r",
+     "concept:institution",
+     "Institution"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "societal-value:traditionalist_vs_innovative",
+   "mods": [],
+   "name": "Traditionalist vs Innovative",
+   "slug": "traditionalist-vs-innovative",
+   "type": "societal-value"
+  }
+ ],
+ "facets": [],
+ "source": "societal_values"
+}

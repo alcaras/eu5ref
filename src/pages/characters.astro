@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import traits from '../data/traits.json';
+import educations from '../data/child-educations.json';
+import interactions from '../data/character-interactions.json';
+import orders from '../data/chivalric-orders.json';
+---
+<Base title="Characters" active="characters" pageMark="👤" eyebrow="Society"
+  pageStats={[
+    { label: 'traits', value: traits.entities.length },
+    { label: 'educations', value: educations.entities.length },
+    { label: 'interactions', value: interactions.entities.length },
+    { label: 'chivalric orders', value: orders.entities.length },
+  ]}
+  description="Character traits, educations, interactions, and chivalric orders in Europa Universalis V.">
+  <SectionTable title="Traits" data={traits} pagePrefix="traits" columns={[
+    { key: 'name', label: 'Trait', kind: 'name' },
+    { key: 'type', label: 'Type', kind: 'facet' },
+    { key: 'opposites', label: 'Opposites', kind: 'chips' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  ]} placeholder="Filter traits…" />
+  <SectionTable title="Child Educations" data={educations} columns={[
+    { key: 'name', label: 'Education', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter educations…" />
+  <SectionTable title="Character Interactions" data={interactions} columns={[
+    { key: 'name', label: 'Interaction', kind: 'name' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter interactions…" />
+  <SectionTable title="Chivalric Orders" data={orders} columns={[
+    { key: 'name', label: 'Order', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter orders…" />
+</Base>

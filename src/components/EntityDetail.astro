@@ -1,0 +1,52 @@
+---
+// Generic entity detail layout: icon/chips/description + modifiers on the
+// left, data + backlinks panels on the right. Pages add dataset-specific
+// panels via the default slot (left column) and the "aside" slot (right).
+import Mods from './Mods.astro';
+import Rich from './Rich.astro';
+
+interface Props {
+  entity: any;
+  backlinks?: any[];
+  modsTitle?: string;
+}
+const { entity, backlinks = [], modsTitle = 'Modifiers' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const pretty = (v: string) => {
+  const s = String(v);
+  return s === s.toLowerCase() ? s.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : s;
+};
+const facetChips = Object.values(entity.facets || {}).filter(Boolean);
+---
+<div class="detail-grid">
+  <div>
+    <p class="chips">
+      {!entity.icon && entity.color && (
+        <span class="swatch" style={`background:${entity.color}; width:14px; height:14px;`} />
+      )}
+      {facetChips.map((f: any) => <span class="chip">{pretty(f)}</span>)}
+    </p>
+    {entity.desc && <p><Rich tokens={entity.desc} /></p>}
+    {entity.mods?.length > 0 && (
+      <div class="panel">
+        <h3>{modsTitle}</h3>
+        <Mods mods={entity.mods} />
+      </div>
+    )}
+    <slot />
+  </div>
+  <aside>
+    <slot name="aside" />
+    {backlinks.length > 0 && (
+      <div class="panel">
+        <h3>Referenced by ({backlinks.length})</h3>
+        <ul class="backlinks">
+          {backlinks.slice(0, 50).map((b: any) => (
+            <li>{b.page ? <a href={`${base}${b.page}`}>{b.name}</a> : b.name}</li>
+          ))}
+          {backlinks.length > 50 && <li class="is-empty">… and {backlinks.length - 50} more</li>}
+        </ul>
+      </div>
+    )}
+  </aside>
+</div>

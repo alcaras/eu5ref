@@ -228,6 +228,16 @@ everything linked), but EU5 gets its own skin — this is 1337–1836, not antiq
 
 ## 6. Phased roadmap
 
+> **Status (2026-08-26):** Phase 0 shipped (goods + concepts live). Phase 1
+> (advances, buildings, units, laws, reforms, estates, religions, cultures,
+> pops + game icons) and Phase 2 (countries, formables, subjects, IOs,
+> warfare, terrain, towns, parliament, cabinet, characters, levies,
+> situations, societal values, diplomatic actions) built in one push, plus
+> Phase 3 tools: global search, defines explorer, patch notes, and the
+> interactive Tech Planner (owtt-style, shareable URLs). Remaining:
+> map browser, missions, production calculator, reverse-unlock search,
+> trigger-aware gating in the planner.
+
 **Phase 0 — scaffold + proof of pipeline (small, end-to-end)**
 Repo scaffold (Astro + theme + Base layout + tabs.ts with all planned tabs as
 placeholders), localsettings → this folder, `build_goods.py` → goods page (small,

@@ -15,12 +15,13 @@
 // with zero page-specific wiring.
 import Mods from './Mods.astro';
 import Rich from './Rich.astro';
+import Term from './Term.astro';
 import { richToPlain } from '../lib/entities';
 
 export interface Column {
   key: string;
   label: string;
-  kind: 'name' | 'text' | 'num' | 'chips' | 'facet' | 'mods' | 'rich' | 'pairs';
+  kind: 'name' | 'namePlain' | 'text' | 'num' | 'chips' | 'facet' | 'mods' | 'rich' | 'pairs' | 'refs';
 }
 interface Props {
   entities: any[];
@@ -55,7 +56,7 @@ const cellValue = (e: any, c: Column) =>
 // CSV projection — same column schema, flattened to plain text at build
 // time (the client script only quotes, joins, and downloads).
 function csvCellValue(e: any, c: Column): string {
-  if (c.kind === 'name') return e.name;
+  if (c.kind === 'name' || c.kind === 'namePlain') return e.name;
   const v = cellValue(e, c);
   if (v == null || v === '' || (Array.isArray(v) && v.length === 0)) return '';
   switch (c.kind) {
@@ -65,6 +66,8 @@ function csvCellValue(e: any, c: Column): string {
       return richToPlain(v);
     case 'pairs':
       return v.map((p: any) => `${p.pop ?? p.label ?? p.k}: ${p.value}`).join('; ');
+    case 'refs':
+      return v.map((r: any) => r.label).join('; ');
     case 'chips':
     case 'facet':
       return (Array.isArray(v) ? v : [v]).map(pretty).join('; ');
@@ -96,17 +99,38 @@ const csvData = {
             const empty = v == null || (Array.isArray(v) && v.length === 0) || v === '';
             return (
               <td class={c.kind === 'num' ? 'num' : undefined}>
-                {c.kind === 'name' ? (
-                  <a class="ename" href={`${base}${pagePrefix}/${e.slug}`}>
-                    {e.color && <span class="swatch" style={`background:${e.color}`} />}
-                    {e.name}
-                  </a>
+                {c.kind === 'name' || c.kind === 'namePlain' ? (
+                  <Fragment>
+                    {c.kind === 'name' ? (
+                      <a class="ename" href={`${base}${pagePrefix}/${e.slug}`}>
+                        {e.icon ? (
+                          <img class="eicon" src={`${base}${e.icon}`} alt="" loading="lazy" width="20" height="20" />
+                        ) : (
+                          e.color && <span class="swatch" style={`background:${e.color}`} />
+                        )}
+                        {e.name}
+                      </a>
+                    ) : (
+                      <span class="ename">
+                        {e.icon ? (
+                          <img class="eicon" src={`${base}${e.icon}`} alt="" loading="lazy" width="20" height="20" />
+                        ) : (
+                          e.color && <span class="swatch" style={`background:${e.color}`} />
+                        )}
+                        {e.name}
+                      </span>
+                    )}
+                  </Fragment>
                 ) : empty ? (
                   <span class="is-empty">—</span>
                 ) : c.kind === 'mods' ? (
                   <Mods mods={v} />
                 ) : c.kind === 'rich' ? (
                   <Rich tokens={v} />
+                ) : c.kind === 'refs' ? (
+                  <span class="refs">
+                    {v.map((r: any, i: number) => <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} /></Fragment>)}
+                  </span>
                 ) : c.kind === 'pairs' ? (
                   <ul class="pairs">
                     {v.map((p: any) => (

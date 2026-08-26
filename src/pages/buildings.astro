@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/buildings.json';
+
+const entities = data.entities;
+const facets = data.facets;
+const columns = [
+  { key: 'name', label: 'Building', kind: 'name' },
+  { key: 'category', label: 'Category', kind: 'facet' },
+  { key: 'pop_type', label: 'Pop', kind: 'facet' },
+  { key: 'settlements', label: 'Where', kind: 'chips' },
+  { key: 'max_levels', label: 'Max Lv.', kind: 'num' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Buildings"
+  active="buildings"
+  pageMark="🏗️"
+  eyebrow="Economy"
+  pageStats={[{ label: 'buildings', value: entities.length }]}
+  description="Every building in Europa Universalis V — category, settlement types, and modifiers."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter buildings…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="buildings" />
+  </div>
+</Base>

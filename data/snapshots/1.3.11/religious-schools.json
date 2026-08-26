@@ -1,0 +1,1117 @@
+{
+  "dataset": "religious-schools",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The 'Alawī, also called Nuṣairī, proclaim 'Alī ibn Abī Ṭālib, the first Imām according to Shiism beliefs, to be the manifestation of Allāh Himself. They differ substantially from the rest of the Shiism faith in both rituals and theology, believing in reincarnation and allowing the consumption of alcohol."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "religious-school:alawi_school",
+      "mods": [
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "'Alawī",
+      "slug": "alawi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Following the teachings of Ḥājī Baktāš Walī, Alevism is a syncretic mystical school, emerging from the Imāmīya school but incorporating traditions from Tengrism and older Turkic beliefs. It also takes some aspects of Sufism, like the presence of a spiritual leader and mysticism practices."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/alevism-school.png",
+      "id": "religious-school:alevism_school",
+      "mods": [
+        {
+          "key": "pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "good",
+          "value": "−5.00%"
+        }
+      ],
+      "name": "Alevism",
+      "slug": "alevism-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ash'arī School of Theology is focused on the authority of the scriptures and rationalism, and was founded in the 9th century by Abū al-Ḥasan al-Ash'arī. His teachings of all universe being composed of atoms became the basis of the Ash'arī School proposition that all matter and time has been created by Allāh, believing at the same time in free will and predestination."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/ashari-school.png",
+      "id": "religious-school:ashari_school",
+      "mods": [
+        {
+          "key": "research_speed_modifier",
+          "label": "Monthly Research Progress %",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Ash'arī",
+      "slug": "ashari-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Aṯarī School of Theology rejects a rational interpretation of the scriptures in favor of a stricter reading of the texts of the Qur'ān and Ḥadīth, considering them the sole authorities. Being against any form of religion innovation, refuses any kind of rationality that is not based upon the texts of the Qur'ān."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/athari-school.png",
+      "id": "religious-school:athari_school",
+      "mods": [
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "+0.03"
+        }
+      ],
+      "name": "Aṯarī",
+      "slug": "athari-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A section of Mula Sangh, the Balatkara Gana monastic order of Jainism originated in the 8th century with the founder of the Santaran dynasty. As such, it is among the oldest in Jainism."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/balatkara-gana-school.png",
+      "id": "religious-school:balatkara_gana_school",
+      "mods": [
+        {
+          "key": "cultural_tradition_modifier",
+          "label": "Cultural Tradition %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Balatkara Gana",
+      "slug": "balatkara-gana-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Named after Ḥājī Baktāš Walī, believed to be descendant of 'Alī ibn Abī Ṭālib, the Bektashi of Sufism nonetheless respects all companions of Muḥammad. Although originating from the Sunnism faith, it contains many beliefs and practices present also in other traditions, giving it many similarity to them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/bektashi-school.png",
+      "id": "religious-school:bektashi_school",
+      "mods": [
+        {
+          "key": "army_light_infantry_power",
+          "label": "Light Infantry Power",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Bektashi",
+      "slug": "bektashi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Originating from Chisht-e Sharīf, the Chishtī rejects wordly power and promotes tolerance and love. It also promotes music and poetry as a form to connect with the love of Allāh."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/chishti-school.png",
+      "id": "religious-school:chishti_school",
+      "mods": [
+        {
+          "key": "pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "good",
+          "value": "−10.00%"
+        }
+      ],
+      "name": "Chishtī",
+      "slug": "chishti-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Adopted from the Mongol code, Dīn-i Ilāhī treats all religions as different sects, allowing the freedom of thought within the realm."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/din-i-ilahi-school.png",
+      "id": "religious-school:din_i_ilahi_school",
+      "mods": [
+        {
+          "key": "cultures_capacity",
+          "label": "Cultures Capacity",
+          "polarity": "good",
+          "value": "+2.00"
+        },
+        {
+          "key": "tolerance_own",
+          "label": "Tolerance of the True Faith",
+          "polarity": "bad",
+          "value": "−1.00"
+        },
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Dīn-i Ilāhī",
+      "slug": "din-i-ilahi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ḥanafī Madhhab is named after Abū Ḥanīfa Al-Nu'mān ibn Thābit. The school originated in Kufa and is prominent throughout the Farsi and Turkic world, including northern India. Though textual sources in the Qur'ān and Ḥadīth are given preference, Ḥanafī followers have an inclusive view of sources and also employ analogy (Qiyās), juristic discretion (Istiḥsan), and local customs ('Urf) in their jurisprudence. Some view it as the most flexible of the schools."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/hanafi-school.png",
+      "id": "religious-school:hanafi_school",
+      "mods": [
+        {
+          "key": "global_clergy_max_literacy",
+          "label": "Max Literacy for Clergy",
+          "polarity": "good",
+          "value": "+10.00"
+        },
+        {
+          "key": "monthly_towards_mysticism",
+          "label": "Monthly Progress to Mysticism",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Ḥanafī",
+      "slug": "hanafi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ḥanbalī Madhhab is named after Aḥmad ibn Ḥanbal, and champions withholding from any speculative theology, Kalām. Ḥanbalī followers maintain that the Qur'ān and Sunnah are the only proper sources of jurisprudence and that they should be interpreted in a literal and traditionalist sense. Though it is accepted as a valid Madhhab, very few states actively promote the Ḥanbalī school, and it was banned by the Abbasid Caliphs."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/hanbali-school.png",
+      "id": "religious-school:hanbali_school",
+      "mods": [
+        {
+          "key": "antagonism_received_modifier",
+          "label": "Antagonism Received",
+          "polarity": "good",
+          "value": "−5.00%"
+        },
+        {
+          "key": "monthly_towards_jurisprudence",
+          "label": "Monthly Progress to Jurisprudence",
+          "polarity": "neutral",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Ḥanbalī",
+      "slug": "hanbali-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Believed to be a descendant of the Al-Khawārij, who first were supporters of 'Alī ibn Abī Ṭālib but later rejected his arbitration. The Ibāḍī school distanced itself from the Al-Khawārij following 'Abd Allāh ibn Ibāḍ, taking a more moderate approach and a more positive view towards different Muslim branches, having similarities with many of the other schools."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "religious-school:ibadi_school",
+      "mods": [
+        {
+          "key": "global_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.025%"
+        }
+      ],
+      "name": "Ibāḍī",
+      "slug": "ibadi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Also called 'Twelvers', Imāmīya believes that 'Alī, the successor of Muḥammad, was followed by twelve infallible Imām chosen by divine decree. The last Imām, al-Mahdī, is expected to return as the savior of mankind, finally enforcing justice and peace in the world. They mainly follow Ja'farī jurisprudence."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/imamiya-school.png",
+      "id": "religious-school:imamiya_school",
+      "mods": [
+        {
+          "key": "army_heavy_infantry_power",
+          "label": "Heavy Infantry Power",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Imāmīya",
+      "slug": "imamiya-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Considered the most mystic of the religious schools, the 'Īsāwī has its roots from the lands of Maghreb whose heritage of psalms and prayers developed into rituals featuring dance and music."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/isawiyya-school.png",
+      "id": "religious-school:isawiyya_school",
+      "mods": [
+        {
+          "key": "global_monthly_prosperity",
+          "label": "Monthly Prosperity",
+          "polarity": "good",
+          "value": "+0.10%"
+        }
+      ],
+      "name": "'Īsāwī",
+      "slug": "isawiyya-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ismā'īlī Madhhab is named after Ismā'īl ibn Ja'far, the successor of Ja'far al-Ṣādiq, and was the dominant school of faith in the Fatimid Caliphate but has lost much ground since its fall. The Ismā'īlī school encompasses a number of increasingly divergent branches, and in many ways, they focus on the esoteric elements of Shiism faith more than the Ja'farī or Zaydī."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/ismaili-school.png",
+      "id": "religious-school:ismaili_school",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_republican_tradition",
+          "label": "Monthly Republican Tradition",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_devotion",
+          "label": "Monthly Devotion",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_horde_unity",
+          "label": "Monthly Horde Unity",
+          "polarity": "good",
+          "value": "+0.10"
+        },
+        {
+          "key": "monthly_tribal_cohesion",
+          "label": "Monthly Tribal Cohesion",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Ismā'īlī",
+      "slug": "ismaili-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ja'farī Madhhab is named after Ja'far al-Ṣādiq, the sixth Imām, and it focuses on independent reasoning by experts of Islamic Law, prefering that over analogy when establishing the Law. It also allows for a temporary marriage lasting a predeterminate period of time."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/jafari-school.png",
+      "id": "religious-school:jafari_school",
+      "mods": [
+        {
+          "key": "global_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.025%"
+        }
+      ],
+      "name": "Ja'farī",
+      "slug": "jafari-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A prominent Jainism Digambara monastic school across Northern and Western India, originated with Lohacharya, that is, Sudharmāsvāmī. He was the fifth disciple of Mahāvīra, the 24th (and last) of the Tīrthaṅkara."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/kashtha-sangha-school.png",
+      "id": "religious-school:kashtha_sangha_school",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+5.00%"
+        }
+      ],
+      "name": "Kashtha Sangha",
+      "slug": "kashtha-sangha-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ḵalwātī takes its name from the act of retreating oneself for spiritual exercises in solitary. Thus, it emphasizes the individual ritual and spiritual practices, as well as retreat and asceticism."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/khalwati-school.png",
+      "id": "religious-school:khalwati_school",
+      "mods": [
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "+0.03"
+        }
+      ],
+      "name": "Ḵalwātī",
+      "slug": "khalwati-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Also called ''Vidhisangha'' or ''Vidhimarga'', meaning 'the Assembly' and 'Path of Proper Conduct' respectively, it is a Śvetāmbara monastic order that sees its own practices as the only spiritual correct ones. It encourages strict adherence to purity and religious doctrine and scriptures without deviation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/kharatara-gaccha-school.png",
+      "id": "religious-school:kharatara_gaccha_school",
+      "mods": [
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "+0.01"
+        }
+      ],
+      "name": "Kharatara Gaccha",
+      "slug": "kharatara-gaccha-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Mālikī Madhhab is named after Mālik ibn Anas and is prominent in particular throughout North Africa and Iberia. Jurisprudence is primarily based on the work and interpretations of ibn Anas and his student Saḥnūn as described in the al-Muwaṭṭa' and the Mudawwanah. One of the foremost centers of learning within the Mālikī School is the Great Mosque of Āl Qayrawān, near Tunis."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/maliki-school.png",
+      "id": "religious-school:maliki_school",
+      "mods": [
+        {
+          "key": "global_monthly_development",
+          "label": "Monthly Development",
+          "polarity": "good",
+          "value": "+0.0010"
+        },
+        {
+          "key": "monthly_towards_mysticism",
+          "label": "Monthly Progress to Mysticism",
+          "polarity": "neutral",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Mālikī",
+      "slug": "maliki-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Māturīdī School of Theology, taking the name from 'Abū Manṣūr al-Māturīdī, is a Sunnism school of theology emerging from the theological beliefs of the Ḥanafī School of Jurisprudence. It promotes the rational interpretation of the scriptures, and the importance of faith over one person's deeds."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/maturidi-school.png",
+      "id": "religious-school:maturidi_school",
+      "mods": [
+        {
+          "key": "tolerance_own",
+          "label": "Tolerance of the True Faith",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Māturīdī",
+      "slug": "maturidi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Known for its whirling dervishes, the Mevlevi is formed upon the teachings of Jalāl al-Dīn Muḥammad Rūmī. It proclaims love as central to Islam, and it also emphasizes Sema, the movement meditation ceremony performed by way of whirling."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/mevlevi-school.png",
+      "id": "religious-school:mevlevi_school",
+      "mods": [
+        {
+          "key": "cultural_influence_modifier",
+          "label": "Cultural Influence %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Mevlevi",
+      "slug": "mevlevi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Mīmāṃsā focuses on the methodology of interpretation and critical explanation of texts. As such, it has a greater focus on philology, the philosophy of languages, and linguistic analysis."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/mimamsa-school.png",
+      "id": "religious-school:mimamsa_school",
+      "mods": [
+        {
+          "key": "cultural_tradition_modifier",
+          "label": "Cultural Tradition %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Mīmāṃsā",
+      "slug": "mimamsa-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Meaning 'root', it refers to the original practices of Jainism coming from Kundakunda, a Jainism monk from the second century who authored many texts on Jainism philosophy, and the most important teacher for Digambara Jainism."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/mula-sangh-school.png",
+      "id": "religious-school:mula_sangh_school",
+      "mods": [
+        {
+          "key": "global_max_literacy",
+          "label": "Max Literacy",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Mula Sangh",
+      "slug": "mula-sangh-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Musta'lī stand in opposition to the Nizārī in that they accept the ascension of Al-Musta'lī bi'llāh to the throne of the Fatimid Caliphate. Although originating in Egypt, they later spread to Western India through missionary work."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/mustali-school.png",
+      "id": "religious-school:mustali_school",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Musta'lī",
+      "slug": "mustali-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Mu'tazilī School of Theology developed influenced by Greek and Indian philosophy and rationalism. It rejects the notion that the Qur'ān and Allāh are coexistent, expressing that the scripture must logically come after the originator. It defends reason as long as it serves people to understand religious matters, and it supports that evil originates from errors of humanity due to their free will."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/mutazili-school.png",
+      "id": "religious-school:mutazili_school",
+      "mods": [
+        {
+          "key": "pop_join_rebel_threshold",
+          "label": "Pop Join Rebels Threshold",
+          "polarity": "good",
+          "value": "−5.00%"
+        }
+      ],
+      "name": "Mu'tazilī",
+      "slug": "mutazili-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Tracing its origin to Ja'far ibn Muḥammad al-Ṣādiq, the Naqshbandī places more importance to the Sharī'ah than other related schools. Its practices are organized around the silent invocation and conciousness."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/naqshbandi-school.png",
+      "id": "religious-school:naqshbandi_school",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Naqshbandī",
+      "slug": "naqshbandi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Nizārī claim that Nizār ibn al-Mustanṣir was the true successor to the Fatimid Caliphate after his father death, and oppose al-Afḍal Shāhanshāh's coup to install Al-Musta'lī bi'llāh on the throne. Having originally split from the Ismā'īlī, they have gained adherents from many other branches, and they follow Ja'farī jurisprudence, focusing on pluralism and acceptance of differences."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/nizari-school.png",
+      "id": "religious-school:nizari_school",
+      "mods": [
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Nizārī",
+      "slug": "nizari-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Nyāya is a realist school, focusing on methodology and logic as the means of gaining knowledge. It states that our suffering is caused by mistakes due to incorrect knowledge and that liberation will be gained with the correct knowledge."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/nyaya-school.png",
+      "id": "religious-school:nyaya_school",
+      "mods": [
+        {
+          "key": "global_monthly_literacy",
+          "label": "Monthly Literacy",
+          "polarity": "good",
+          "value": "+0.01"
+        }
+      ],
+      "name": "Nyāya",
+      "slug": "nyaya-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Founded by 'Abdulqādir Gīlānī, the Qādirī promote a strict following of Sunnism law. It also has decentralized leadership, allowing each of its centers freedom of interpretation and practice, which has caused it to differenciate in multiple branches."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/qadiri-school.png",
+      "id": "religious-school:qadiri_school",
+      "mods": [
+        {
+          "key": "monthly_prestige",
+          "label": "Monthly Prestige",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Qādirī",
+      "slug": "qadiri-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Founded by Ṣāfī ad-Dīn Isḥāq Ardabīlī upon the Shāfi'ī teachings, the Ṣafavī has later gotten close to the Imāmīya thought. Its zeal and strength of belief make its followers be certain of their place in the universe."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/safavid-school.png",
+      "id": "religious-school:safavid_school",
+      "mods": [
+        {
+          "key": "monthly_army_tradition",
+          "label": "Monthly Army Tradition",
+          "polarity": "good",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Ṣafavī",
+      "slug": "safavid-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Very influential for the other schools of Indian philosophy, Sāṃkhya is a dualistic school based on rationality. It proposes that the world is composed of both matter and spirit, and that knowledge can only be gained through perception and rational inference."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/samkhya-school.png",
+      "id": "religious-school:samkhya_school",
+      "mods": [
+        {
+          "key": "tolerance_heathen",
+          "label": "Tolerance of Heathen Beliefs",
+          "polarity": "good",
+          "value": "+0.50"
+        },
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "good",
+          "value": "+0.50"
+        }
+      ],
+      "name": "Sāṃkhya",
+      "slug": "samkhya-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Following the teachings of Abū al-Ḥasan al-Shāḏilī, the Shāḏilī promotes a life of contemplation and to be constantly mindful of Allāh, even during normal everyday activities. Applying the teachings of Islam to the follower's own lives is the key to transform their existance."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/shadhili-school.png",
+      "id": "religious-school:shadhili_school",
+      "mods": [
+        {
+          "key": "cultural_tradition_modifier",
+          "label": "Cultural Tradition %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Shāḏilī",
+      "slug": "shadhili-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Shāfi'ī Madhhab is named after Imām Al-Shāfi'ī, and it is prominent in particular among Islam believers in Arabia, East Africa, and East Asia. Unlike other Madhhab, the Shāfi'ī reject Istiḥsan and Istislah as sources of Sharī'ah, instead only relying on what is textually in the Qur'ān or Ḥadīth."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/shafii-school.png",
+      "id": "religious-school:shafii_school",
+      "mods": [
+        {
+          "key": "global_merchant_capacity_modifier",
+          "label": "Trade Capacity",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "monthly_towards_jurisprudence",
+          "label": "Monthly Progress to Jurisprudence",
+          "polarity": "neutral",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Shāfi'ī",
+      "slug": "shafii-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Suhrawardī follows the teachings of Abū al-Najīb Abd al-Qādir Suhrawardī, but it is also influenced by the philosophy of Junayd of Baghdad. It states that people should devote themselves to true knownledge and being faithful to Allāh, renouncing natural desires in favor of the spiritual needs."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/suhrawardi-school.png",
+      "id": "religious-school:suhrawardi_school",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Suhrawardī",
+      "slug": "suhrawardi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Founded by Acharya Jagatchandra Suri, called 'The Meditative One', it is a Śvetāmbara monastic order that encourages veneration of religious figures and pilgrimage to holy temples."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/tapa-gaccha-school.png",
+      "id": "religious-school:tapa_gaccha_school",
+      "mods": [
+        {
+          "key": "monthly_self_control",
+          "label": "Monthly Self Control",
+          "polarity": "good",
+          "value": "+0.05"
+        }
+      ],
+      "name": "Tapa Gaccha",
+      "slug": "tapa-gaccha-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Also known as Agama Gaccha, it is a Śvetāmbara monastic order that focuses on devotion and veneration of the Tīrthaṅkara in its rituals, considering them the only worthy of worship."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/tristutik-gaccha-school.png",
+      "id": "religious-school:tristutik_gaccha_school",
+      "mods": [
+        {
+          "key": "clergy_estate_satisfaction_recovery",
+          "label": "Clergy Estate Satisfaction Recovery",
+          "polarity": "neutral",
+          "value": "+0.25%"
+        }
+      ],
+      "name": "Tristutik Gaccha",
+      "slug": "tristutik-gaccha-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The oldest monastic order of Śvetāmbara Jainism, it follows the lineage of Pārasanātha, the 23rd Tīrthaṅkara, unlike most other schools that follow the lineage of Mahāvīra."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/upkesa-gaccha-school.png",
+      "id": "religious-school:upkesa_gaccha_school",
+      "mods": [
+        {
+          "key": "monthly_legitimacy",
+          "label": "Monthly Legitimacy",
+          "polarity": "good",
+          "value": "+0.10"
+        }
+      ],
+      "name": "Upkeśa Gaccha",
+      "slug": "upkesa-gaccha-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Vaiśeṣika is a naturalist, atomistic school, claiming that all physical universe is formed by atoms and that all our experiences come from the aggregations and interactions of such atoms. A complete understanding of the world of experience is thus what brings us to knowledge."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/vaisheshika-school.png",
+      "id": "religious-school:vaisheshika_school",
+      "mods": [
+        {
+          "key": "global_max_literacy",
+          "label": "Max Literacy",
+          "polarity": "good",
+          "value": "+5.00"
+        }
+      ],
+      "name": "Vaiśeṣika",
+      "slug": "vaisheshika-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A very influential and diverse school, Vedānta focuses on the study of the Vedas, claiming that they are the main source of knowledge, arguing that spiritual matters are beyond any kind of perception and inference by humans."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/vedanta-school.png",
+      "id": "religious-school:vedanta_school",
+      "mods": [
+        {
+          "key": "tolerance_own",
+          "label": "Tolerance of the True Faith",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Vedānta",
+      "slug": "vedanta-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Emerging from the Ḥanbalī School as a revivalist movement, the Wahhābī School of Theology is against common Sufi practices like the veneration of holy people and pilgrimages to their shrines. It encourages a return to the original piety and practices of the first generations of Islam."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/wahhabi-school.png",
+      "id": "religious-school:wahhabi_school",
+      "mods": [
+        {
+          "key": "stability_investment",
+          "label": "Stability Investment",
+          "polarity": "neutral",
+          "value": "+0.02"
+        },
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+10.00%"
+        },
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "bad",
+          "value": "−2.00"
+        }
+      ],
+      "name": "Wahhābī",
+      "slug": "wahhabi-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Similar in many ways to the Sāṃkhya school, Yoga also sees the universe as a duality and perception and rationality as ways of gaining knowledge. However, it adds that systematic practice and experimentation are also required to attain knowledge and liberation."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/yoga-school.png",
+      "id": "religious-school:yoga_school",
+      "mods": [
+        {
+          "key": "global_population_growth",
+          "label": "Population Growth",
+          "polarity": "good",
+          "value": "+0.025%"
+        }
+      ],
+      "name": "Yoga",
+      "slug": "yoga-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Ẓāhirī advocates for a strict adherence to the text of the Qur'ān, and focus on its external or apparent meaning. According to them, there can not be any conclusion drawn from reading the texts that is not in the texts themselves, otherwise Allāh would have explicitly expressed those already."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/zahiri-school.png",
+      "id": "religious-school:zahiri_school",
+      "mods": [
+        {
+          "key": "global_pop_conversion_speed_modifier",
+          "label": "Pop Conversion Speed %",
+          "polarity": "good",
+          "value": "+10.00%"
+        }
+      ],
+      "name": "Ẓāhirī",
+      "slug": "zahiri-school",
+      "type": "religious-school"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Also called 'Fivers', the Zaydī current is named after Zayd ibn 'Alī, the grandson of Muḥammad's son 'Alī, and follows his teachings as described in the Majmu' al-Fiqh. Zaydī followers emphasize justice and human responsibility and descend from those who supported Zayd's original revolt against the Umayyad Caliph. Zaydī people entirely reject religious dissimulation as practiced by many Shiism followers, and it is the most similar to Sunnism."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/religious-school/zaidi-school.png",
+      "id": "religious-school:zaidi_school",
+      "mods": [
+        {
+          "key": "tolerance_heretic",
+          "label": "Tolerance of Heretical Beliefs",
+          "polarity": "good",
+          "value": "+1.00"
+        }
+      ],
+      "name": "Zaydī",
+      "slug": "zaidi-school",
+      "type": "religious-school"
+    }
+  ],
+  "facets": [],
+  "source": "religious_schools"
+}

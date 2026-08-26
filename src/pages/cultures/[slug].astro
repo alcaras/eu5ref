@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/cultures.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="cultures" eyebrow={`Culture · ${entity.facets.group}`}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Data</h3>
+        <div class="kv">
+          <span class="k">Groups</span><span class="v">{entity.data.groups.join(', ') || '—'}</span>
+          <span class="k">Language</span><span class="v">{entity.data.language ?? '—'}</span>
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

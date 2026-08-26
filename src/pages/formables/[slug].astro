@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import data from '../../data/formables.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="formables" eyebrow={`Formable · ${entity.facets.level}`}>
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Formation area</h3>
+        <div class="kv">
+          <span class="k">Capital required</span><span class="v">{entity.data.capital_required ? 'yes' : 'no'}</span>
+          {entity.data.regions.length > 0 && (<Fragment><span class="k">Regions</span><span class="v">{entity.data.regions.join(', ')}</span></Fragment>)}
+          {entity.data.areas.length > 0 && (<Fragment><span class="k">Areas</span><span class="v">{entity.data.areas.join(', ')}</span></Fragment>)}
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

@@ -1,0 +1,873 @@
+{
+  "dataset": "subjects",
+  "entities": [
+    {
+      "color": "#0099ff",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "Appanages are a type of ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] that represents lands ruled by a cadet branch of a ruling dynasty. An Appanage will get increased monthly_prestige, at the cost of reduced country_cabinet_efficiency, while the ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] will get increased monthly_legitimacy at the cost of more stability_decay and less global_crown_estate_power."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/appanage.png",
+      "id": "subject:appanage",
+      "mods": [],
+      "name": "Appanage",
+      "slug": "appanage",
+      "type": "subject"
+    },
+    {
+      "color": "#4dcba1",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A Colonial Nation is a ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] centered around the administration of ["
+        ],
+        [
+          "r",
+          "concept:overseas",
+          "Overseas"
+        ],
+        [
+          "t",
+          "] ["
+        ],
+        [
+          "r",
+          "concept:colonized",
+          "Colonies"
+        ],
+        [
+          "t",
+          "] on behalf of its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]. It benefits from increased global_population_capacity_modifier and the ability to use Slaves to work in the [R], while granting its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] an upsurge of [Trade Advantage], as well as payment in ["
+        ],
+        [
+          "r",
+          "concept:manpower",
+          "Manpower"
+        ],
+        [
+          "t",
+          "] and ["
+        ],
+        [
+          "r",
+          "concept:sailors",
+          "Sailors"
+        ],
+        [
+          "t",
+          "] in addition to [Ducats]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/colonial-nation.png",
+      "id": "subject:colonial_nation",
+      "mods": [],
+      "name": "Colonial Nation",
+      "slug": "colonial-nation",
+      "type": "subject"
+    },
+    {
+      "color": "#ff6666",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "Conquistadors are the leaders of a private army who have signed contracts with their ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Rulers"
+        ],
+        [
+          "t",
+          "] to explore and conquer certain territories in exchange for the title of Governor, and a share of the new lands and spoils. They are unique [Subject Types] only able to be created through the Commission Conquistador ["
+        ],
+        [
+          "r",
+          "concept:action",
+          "Action"
+        ],
+        [
+          "t",
+          "]. They are always [Army Based Country] and they get increased military_tactics, global_max_control, and wrong_culture_levy_size."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/conquistador.png",
+      "id": "subject:conquistador",
+      "mods": [],
+      "name": "Conquistador",
+      "slug": "conquistador",
+      "type": "subject"
+    },
+    {
+      "color": "#e62d2c",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "The Direct Imperial Free City is a special subject bound to the [Emperor] allowed by the Direct Imperial Cities ["
+        ],
+        [
+          "r",
+          "concept:policy",
+          "Policy"
+        ],
+        [
+          "t",
+          "]. This status is active as long as the subject has the status of Free Imperial City of the Holy Roman Empire. They are the same as a normal Imperial Free City, but their autonomy is now vastly reduced, and thus they are can now be annexed, at a greater speed than a normal Vassal."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/direct-imperial-free-city.png",
+      "id": "subject:direct_imperial_free_city",
+      "mods": [],
+      "name": "Direct Imperial Free City",
+      "slug": "direct-imperial-free-city",
+      "type": "subject"
+    },
+    {
+      "color": "#993300",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "A Dominion is a self-governed ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] with relative autonomy, exclusive for a Monarchy of the same [Religion Group] as the ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]. Additionally, to be able to create a Dominion, both countries must be in a ["
+        ],
+        [
+          "r",
+          "concept:union",
+          "Union"
+        ],
+        [
+          "t",
+          "] or the overlord must be either England or Great Britain. A Dominion suffers reduced country_cabinet_efficiency, compared to a regular Vassal, but bigger legislative_efficiency."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/dominion.png",
+      "id": "subject:dominion",
+      "mods": [],
+      "name": "Dominion",
+      "slug": "dominion",
+      "type": "subject"
+    },
+    {
+      "color": "#cc99ff",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "A Fiefdom is a junior title that is the property of its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]'s ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Ruler"
+        ],
+        [
+          "t",
+          "]. Exclusive for a Monarchy of the same [Religion Group] as the overlord, it suffers reduced country_cabinet_efficiency and becomes ruled directly by the overlord's ["
+        ],
+        [
+          "r",
+          "concept:ruler",
+          "Monarch"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/fiefdom.png",
+      "id": "subject:fiefdom",
+      "mods": [],
+      "name": "Fiefdom",
+      "slug": "fiefdom",
+      "type": "subject"
+    },
+    {
+      "color": "#8a3840",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "The Hanseatic League is a confederation of mercantile cities with a defensive and commercial focus, spearheaded by the Hansa. As a member of the Hanseatic League, this ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] country enjoys increased selling_efficiency, loyalty_to_overlord, and merchant_maintenance_efficiency. The ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "], which can only be the Hansa, enjoys increased global_merchant_capacity_modifier, as well as payment in form of ["
+        ],
+        [
+          "r",
+          "concept:manpower",
+          "Manpower"
+        ],
+        [
+          "t",
+          "] and ["
+        ],
+        [
+          "r",
+          "concept:sailors",
+          "Sailors"
+        ],
+        [
+          "t",
+          "] but less [Ducats] compared to a regular Vassal."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/hanseatic-member.png",
+      "id": "subject:hanseatic_member",
+      "mods": [],
+      "name": "Member of the Hansa",
+      "slug": "hanseatic-member",
+      "type": "subject"
+    },
+    {
+      "color": "#e62d2c",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "The Imperial Free City is a special subject bound to the [Emperor]. This status is active as long as the subject has the status of Free Imperial City of the Holy Roman Empire. They can never be annexed, do not give any benefits to their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] nor join them in wars, but they cost no [Diplomatic Capacity] and can be turned into a Direct Imperial Free City through the Direct Imperial Cities ["
+        ],
+        [
+          "r",
+          "concept:policy",
+          "Policy"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/imperial-free-city.png",
+      "id": "subject:imperial_free_city",
+      "mods": [],
+      "name": "Imperial Free City",
+      "slug": "imperial-free-city",
+      "type": "subject"
+    },
+    {
+      "color": "#ff7a33",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "The next step of the Sāmanta, the Mahā-Sāmanta pays a greater deal of tribute to their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] and can be ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annexed"
+        ],
+        [
+          "t",
+          "] by their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "], at a greater speed than a normal Vassal. The ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] can also choose to grant a more trusting and autonomous role to the Mahā-Sāmanta, turning them into a Pradhāna-Mahā-Sāmanta through the Upgrade to Pradhāna-Mahā-Sāmanta [Country Interaction]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/maha-samanta.png",
+      "id": "subject:maha_samanta",
+      "mods": [],
+      "name": "Mahā-Sāmanta",
+      "slug": "maha-samanta",
+      "type": "subject"
+    },
+    {
+      "color": "#72732b",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A March is a ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] country focused on defending their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]'s domain, acting as a barrier between their them and external threats. Marches enjoy greater discipline and global_defensive, and increased fort_maintenance_efficiency as well as reduced payment obligations to their overlord compared to a normal Vassal."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/march.png",
+      "id": "subject:march",
+      "mods": [],
+      "name": "March",
+      "slug": "march",
+      "type": "subject"
+    },
+    {
+      "color": "#ff822f",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "The exaltation of the Mahā-Sāmanta and the loyalest of ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subjects"
+        ],
+        [
+          "t",
+          "]. The Pradhāna-Mahā-Sāmanta cannot be ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annexed"
+        ],
+        [
+          "t",
+          "] and get greater discipline, global_defensive, and increased fort_maintenance_efficiency, at the cost of reduced country_cabinet_efficiency. They also give greater payments of [Ducats], ["
+        ],
+        [
+          "r",
+          "concept:manpower",
+          "Manpower"
+        ],
+        [
+          "t",
+          "], and ["
+        ],
+        [
+          "r",
+          "concept:sailors",
+          "Sailors"
+        ],
+        [
+          "t",
+          "] to their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/pradhana-maha-samanta.png",
+      "id": "subject:pradhana_maha_samanta",
+      "mods": [],
+      "name": "Pradhāna-Mahā-Sāmanta",
+      "slug": "pradhana-maha-samanta",
+      "type": "subject"
+    },
+    {
+      "color": "#8732a0",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "A crucial component of the administrative organization of Byzantium, Prónoiai were originally temporarily appointed fiscal collectors. However, the change in times forced them to change their obligations too. Turned now into hereditary posts that provide military assistance as well as extracting money from the territory, they continue to serve as an extension of the will of the Emperor."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "subject:pronoia",
+      "mods": [],
+      "name": "Prónoia",
+      "slug": "pronoia",
+      "type": "subject"
+    },
+    {
+      "color": "#ff9933",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A Sāmanta is a ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] specific to countries with the Sāmanta Feudalism ["
+        ],
+        [
+          "r",
+          "concept:advance",
+          "Advance"
+        ],
+        [
+          "t",
+          "], unique to Indian countries. They mirror in many ways a normal Vassal, but they have less payment obligations and cannot be ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annexed"
+        ],
+        [
+          "t",
+          "] until their bond with their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] becomes more intimate, turning them into a Mahā-Sāmanta through the Upgrade to Mahā-Sāmanta [Country Interaction]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/samanta.png",
+      "id": "subject:samanta",
+      "mods": [],
+      "name": "Sāmanta",
+      "slug": "samanta",
+      "type": "subject"
+    },
+    {
+      "color": null,
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "This ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] bears a multitude of similarities to its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] in most facets of its administration and are keen to unite with them politically. As such, they can be ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annexed"
+        ],
+        [
+          "t",
+          "] with relative ease. They get increased loyalty_to_overlord and increased annexation_speed."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/secessionists.png",
+      "id": "subject:secessionists",
+      "mods": [],
+      "name": "Secessionists",
+      "slug": "secessionists",
+      "type": "subject"
+    },
+    {
+      "color": "#59189a",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "This ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "] represents the strong connection between the subject as a company and its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "], which can only be a country with the Banking Family [Government Reform]. They get increased diplomatic_reputation, while the overlord gets reduced bank_interest and the ability to siphon half of the State Bank's treasury with the Siphon Income [Country Interaction] instead of the normal amount."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/state-bank.png",
+      "id": "subject:state_bank",
+      "mods": [],
+      "name": "State Bank",
+      "slug": "state-bank",
+      "type": "subject"
+    },
+    {
+      "color": "#945ace",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A Trade Company is an investment conglomerate, directed at incurring monetary benefits for itself and its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]. They are always a Republic and get increased export_efficiency, as well as increased payment obligations to their overlord compared to a regular Vassal."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/trade-company.png",
+      "id": "subject:trade_company",
+      "mods": [],
+      "name": "Trade Company",
+      "slug": "trade-company",
+      "type": "subject"
+    },
+    {
+      "color": "#ffcc00",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A tributary is a country that is forced to pay a periodic tribute to their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] in the form of [Ducats], ["
+        ],
+        [
+          "r",
+          "concept:manpower",
+          "Manpower"
+        ],
+        [
+          "t",
+          "], and ["
+        ],
+        [
+          "r",
+          "concept:sailors",
+          "Sailors"
+        ],
+        [
+          "t",
+          "], and it is exclusive to certain forms of government. Compared to a regular Vassal, tributaries are able to declare their own wars, even among themselves, but they will not automatically join their overlord's wars."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/tributary.png",
+      "id": "subject:tributary",
+      "mods": [],
+      "name": "Tributary",
+      "slug": "tributary",
+      "type": "subject"
+    },
+    {
+      "color": "#ffa000",
+      "data": {
+        "can_be_annexed": false
+      },
+      "desc": [
+        [
+          "t",
+          "A special type of administration of the Middle Kingdom, they are hereditary governors of tribal lands on behalf of the imperial throne. They cannot be annexed, but they get increased monthly_towards_sinicized and are forced to use their ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "]'s [Court Language], while costing less [Diplomatic Capacity]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/tusi.png",
+      "id": "subject:tusi",
+      "mods": [],
+      "name": "Tǔsī",
+      "slug": "tusi",
+      "type": "subject"
+    },
+    {
+      "color": null,
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "The Uç Bey is an [Army Based Country] that serves as a frontier lord under strong Turkic leadership. Tasked with defending borders, leading raids, and expanding territories, these semi-autonomous leaders command loyal Ġuzāt warriors driven by religious fervor, plunder, and land grants, making them crucial to frontier stability and expansion. They can only be created through the Create Uç Bey ["
+        ],
+        [
+          "r",
+          "concept:action",
+          "Action"
+        ],
+        [
+          "t",
+          "], and they get the Uç Bey Government ["
+        ],
+        [
+          "r",
+          "concept:government_reform",
+          "Reform"
+        ],
+        [
+          "t",
+          "] and always_allow_army_levies, while having greatly reduced payment obligations compared to a normal Vassal but costing increased [Diplomatic Capacity] and giving their overlord more monthly_towards_decentralization."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/uc-bey.png",
+      "id": "subject:uc_bey",
+      "mods": [],
+      "name": "Uç Bey",
+      "slug": "uc-bey",
+      "type": "subject"
+    },
+    {
+      "color": "#33cccc",
+      "data": {
+        "can_be_annexed": true
+      },
+      "desc": [
+        [
+          "t",
+          "The most typical type of ["
+        ],
+        [
+          "r",
+          "concept:subject",
+          "Subject"
+        ],
+        [
+          "t",
+          "], a Vassal oversees its territory on behalf of its ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "], pays vassal fees, and joins the military campaigns of its overlord. It suffers reduced country_cabinet_efficiency, while the overlord gets increased monthly_prestige, and both countries get faster spread of ["
+        ],
+        [
+          "r",
+          "concept:institution",
+          "Institutions"
+        ],
+        [
+          "t",
+          "]."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/subject/vassal.png",
+      "id": "subject:vassal",
+      "mods": [],
+      "name": "Vassal",
+      "slug": "vassal",
+      "type": "subject"
+    }
+  ],
+  "facets": [],
+  "source": "subject_types"
+}

@@ -1,0 +1,1849 @@
+{
+  "dataset": "casus-belli",
+  "entities": [
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As they are a ["
+        ],
+        [
+          "r",
+          "concept:threat",
+          "Threat"
+        ],
+        [
+          "t",
+          "] and a ["
+        ],
+        [
+          "r",
+          "concept:rival",
+          "Rival"
+        ],
+        [
+          "t",
+          "] we have an obligation to fight them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/attack-threat.png",
+      "id": "casus-belli:attack_threat",
+      "mods": [],
+      "name": "Attack Threatening Rival",
+      "slug": "attack-threat",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Their country will succumb to our superior might, and we shall annex them into our domain, by force if necessary."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-annex.png",
+      "id": "casus-belli:cb_annex",
+      "mods": [],
+      "name": "Annex",
+      "slug": "cb-annex",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Pirates, buccaneers, and corsairs must be afforded no quarter. We shall sink these sea dogs who prey on our unarmed merchantmen and spread their terror in our waters."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-anti-piracy.png",
+      "id": "casus-belli:cb_anti_piracy",
+      "mods": [],
+      "name": "Anti-Piracy War",
+      "slug": "cb-anti-piracy",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Hunters have hunted our local beaver population into dwindling numbers, we must acquire new hunting grounds to fulfill the demands of the fur trade!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_beaver_wars",
+      "mods": [],
+      "name": "Seize Fur Supply",
+      "slug": "cb-beaver-wars",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Time and trickery have seen our most distant regions fall under the tyrannical rule of our neighbor, but the time has finally arrived to make things right and regain control over all the land that is rightfully ours."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_border_war",
+      "mods": [],
+      "name": "Border Feud",
+      "slug": "cb-border-war",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Casting off the Tatar Yoke will weaken the stranglehold of the Kingdom of Jochi over the Russian principalities."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_break_free_tatar_yoke",
+      "mods": [],
+      "name": "Break free from the Tatar Yoke",
+      "slug": "cb-break-free-tatar-yoke",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The lands of China must once again be united under the single banner of the Middle Kingdom!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_chinese_unification",
+      "mods": [],
+      "name": "Unify China",
+      "slug": "cb-chinese-unification",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "China is lost without a proper and strong leadership. We are such leadership, and is our duty and our destiny to establish ourselves as the leaders of the Middle Kingdom"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-claim-mandate-of-heaven.png",
+      "id": "casus-belli:cb_claim_mandate_of_heaven",
+      "mods": [],
+      "name": "Claim Mandate of Heaven",
+      "slug": "cb-claim-mandate-of-heaven",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The opportunity to install our preferred candidate as the head of another country, is not one we should pass up on. By claiming the throne of a foreign state, we will expand our domain and cement our dynasty's power and influence."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_claim_throne",
+      "mods": [],
+      "name": "Claim Throne",
+      "slug": "cb-claim-throne",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A conflict between a governor within Timurid, the purpose being the claim the realm for themselves."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-claim-timurids.png",
+      "id": "casus-belli:cb_claim_timurids",
+      "mods": [],
+      "name": "Claim Timurid Realm",
+      "slug": "cb-claim-timurids",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The warmongering ways of our neighbors must be curbed, lest we risk falling victim to their expansionist tendencies."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_coalition",
+      "mods": [],
+      "name": "Coalition",
+      "slug": "cb-coalition",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We want to take over their colonial empire, to enrich ourselves."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_colonial_conflict",
+      "mods": [],
+      "name": "Colonial Conflict",
+      "slug": "cb-colonial-conflict",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We want to take over more of the New World."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_colony_war",
+      "mods": [],
+      "name": "Colony War",
+      "slug": "cb-colony-war",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They have declared us as their ["
+        ],
+        [
+          "r",
+          "concept:rival",
+          "Rival"
+        ],
+        [
+          "t",
+          "], so we definitely have a cause to fight them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-conquer-enemy.png",
+      "id": "casus-belli:cb_conquer_enemy",
+      "mods": [],
+      "name": "Destroy Enemy",
+      "slug": "cb-conquer-enemy",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Lands under the jurisdiction of our neighbors should rightfully belong to us, on the basis of a sturdy and legitimate claim!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_conquer_province",
+      "mods": [],
+      "name": "Claims on Province",
+      "slug": "cb-conquer-province",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It falls upon our shoulders to lead the faithful in a successful crusade against our heathen enemies!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_crusade",
+      "mods": [],
+      "name": "Crusade",
+      "slug": "cb-crusade",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The garden of our faith has been infested with a powerful new sect. We must take quick action and protect our believers."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-crush-hussitism.png",
+      "id": "casus-belli:cb_crush_hussitism",
+      "mods": [],
+      "name": "Crush Hussitism",
+      "slug": "cb-crush-hussitism",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our foes have grown too powerful to be ignored. We need to strike decisively and inflict a fatal blow before our rivals can attempt to retaliate."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-cut-down-in-size.png",
+      "id": "casus-belli:cb_cut_down_in_size",
+      "mods": [],
+      "name": "Cut Down in Size",
+      "slug": "cb-cut-down-in-size",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is finally time to teach those cowards a lesson. Those oathbreakers, who run to their homes during our hour of need will see them burn, as we shall rain just wrath, and rightful vengeance upon their cities. "
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-declined-call-to-arms.png",
+      "id": "casus-belli:cb_declined_call_to_arms",
+      "mods": [],
+      "name": "Declined Call to Arms",
+      "slug": "cb-declined-call-to-arms",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Their unreasonable closeness has forced our hand, if they will not allow safe passage to our troops through their land, our forces will carve a way through by sword and fire."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_denied_military_access",
+      "mods": [],
+      "name": "Denied Military Access",
+      "slug": "cb-denied-military-access",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Through vile and backhanded tactics, our enemies have attempted to subvert our authority over our subjects and incited rebellions within our borders! For the safety of our people, justice must be done, and our wretched enemies must be destroyed!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-destabilized-our-state.png",
+      "id": "casus-belli:cb_destabilized_our_state",
+      "mods": [],
+      "name": "Destabilized Our State",
+      "slug": "cb-destabilized-our-state",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They have destroyed our buildings and need to pay for it!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-destroyed-building.png",
+      "id": "casus-belli:cb_destroyed_building",
+      "mods": [],
+      "name": "Destroyed Buildings",
+      "slug": "cb-destroyed-building",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our nation aspires to be the epitome of religious obedience and fervent faith. As such, we cannot allow our general domain to be pestered by heretics or heathens."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_deus_vult",
+      "mods": [],
+      "name": "Religious War",
+      "slug": "cb-deus-vult",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "One of our subjects dares raise its gaze against our authority, as we wish to preserve our overlordship, they must be cut down and brought back in line."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-disloyal-subject.png",
+      "id": "casus-belli:cb_disloyal_subject",
+      "mods": [],
+      "name": "Disloyal Subject",
+      "slug": "cb-disloyal-subject",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The commercial activity of our foes cannot continue to antagonize and sap our income, this matter should be dealt with immediately."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_disrupting_trade",
+      "mods": [],
+      "name": "Disrupting Trade",
+      "slug": "cb-disrupting-trade",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Dismantling the Tatar Yoke will set the Russian principalities free. Let us seize the moment and put an end to the dominance of the Kingdom of Jochi."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_dissolve_tatar_yoke",
+      "mods": [],
+      "name": "Dissolve the Tatar Yoke",
+      "slug": "cb-dissolve-tatar-yoke",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The old wounds between the Middle Kingdom and the forces of India. A mad campaign against old enemies, we will stop at nothing until they are completely crushed.\n\nThis [Casus Belli] allows for cheaper conquest of ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Locations"
+        ],
+        [
+          "t",
+          "] within East Asia."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_dlh_invasion_of_china",
+      "mods": [],
+      "name": "Invasion of China",
+      "slug": "cb-dlh-invasion-of-china",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Their ruler has been excommunicated! They are a disgrace to the Lord and the Holy See, and must be punished!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_excommunication",
+      "mods": [],
+      "name": "Excommunicated Ruler",
+      "slug": "cb-excommunication",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Tatar Yoke is no more. It is time to claim the steppes for ourselves!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_expansion_into_the_steppes",
+      "mods": [],
+      "name": "Expansion into the Steppes",
+      "slug": "cb-expansion-into-the-steppes",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "What lies beyond our shores will soon no longer be a mystery. We must extend our reach and influence to include the folk that live beyond our shores."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-exploration.png",
+      "id": "casus-belli:cb_exploration",
+      "mods": [],
+      "name": "Exploration",
+      "slug": "cb-exploration",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Lands under the jurisdiction of our neighbors should \\\"rightfully\\\" belong to us, on the basis of a sturdy and \\\"legitimate\\\" claim!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_fabricated_conquer_province",
+      "mods": [],
+      "name": "Dubious Claims on Province",
+      "slug": "cb-fabricated-conquer-province",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We shall not permit a false claim to the leadership of the Īlkhānān."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_false_ilkhan_claimant",
+      "mods": [],
+      "name": "Refuse the False Claimant",
+      "slug": "cb-false-ilkhan-claimant",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The maintenance of our empire, and the world, require a constant stream of captives. Only through a state of constant warfare can we ensure that we have access to such a supply. The world cannot afford peace."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_flower_wars",
+      "mods": [],
+      "name": "Flower Wars",
+      "slug": "cb-flower-wars",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We are men of honor, our word is gold, and they will soon learn that we do not speak lightly. Our troops will now teach them that they should have followed our suggestions when we provided them and that going against our wishes is a mistake they will soon regret."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_following_through_on_threat",
+      "mods": [],
+      "name": "Following Through On Threat",
+      "slug": "cb-following-through-on-threat",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We cannot maintain a prosperous community and exploit the land effectively while having local tribes around our borders. We must force them to relocate."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_force_migration",
+      "mods": [],
+      "name": "Force Migration",
+      "slug": "cb-force-migration",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are not one of us! We must show them the error of their faulty ways!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_gag_force_country_into_faction",
+      "mods": [],
+      "name": "Force into our Faction",
+      "slug": "cb-gag-force-country-into-faction",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The ambition and prestige tied to being a Hegemon must only be matched by the most powerful nations. All shall bend the knee against our might and splendor!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_hegemon",
+      "mods": [],
+      "name": "Take Down Hegemon",
+      "slug": "cb-hegemon",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "This pathetic excuse of a state refuses to oblige with our demand. If they do not want to bend their knee willingly, then our sword shall force them."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-hegemon-ultimatum.png",
+      "id": "casus-belli:cb_hegemon_ultimatum",
+      "mods": [],
+      "name": "Hegemon Ultimatum",
+      "slug": "cb-hegemon-ultimatum",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Burn the Heretics! Extinguish their faulty world views in the name of our faith!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_heretic",
+      "mods": [],
+      "name": "Cleanse Heresy",
+      "slug": "cb-heretic",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "As great warriors, High Kings are expected to welcome challengers in war to prove their own worthiness as protectors of the land."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-high-kingship-overthrow.png",
+      "id": "casus-belli:cb_high_kingship_overthrow",
+      "mods": [],
+      "name": "Overthrow High King",
+      "slug": "cb-high-kingship-overthrow",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "High Kings are chosen defenders of the kingship lands, and are expected to use their force to reclaim land taken by external powers."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_high_kingship_reclamation",
+      "mods": [],
+      "name": "Reclaim High Kingship Land",
+      "slug": "cb-high-kingship-reclamation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is our right as a member of the High Kingship to subjugate our neighbors through the use of force. After all, they would do the same to us."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_high_kingship_subjugate",
+      "mods": [],
+      "name": "Subjugate High Kingship Member",
+      "slug": "cb-high-kingship-subjugate",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "There can be no peace between tribes and settlers! Their possessions belong to the Horde!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_horde_vs_civ",
+      "mods": [],
+      "name": "Horde Expansion",
+      "slug": "cb-horde-vs-civ",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We must remind them of their inferiority compared to us!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_humiliate",
+      "mods": [],
+      "name": "Humiliate",
+      "slug": "cb-humiliate",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our rivals think they are better than us. We must prove them fatally wrong!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_humiliate_rival",
+      "mods": [],
+      "name": "Humiliate Rival",
+      "slug": "cb-humiliate-rival",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The conflict over who should rule France can only be settled on the battlefield."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_hundred_years_war",
+      "mods": [],
+      "name": "Conquer the Throne of France",
+      "slug": "cb-hundred-years-war",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The conflict over who should rule France can only be settled on the battlefield."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_hundred_years_war_fra",
+      "mods": [],
+      "name": "Defend the Throne of France",
+      "slug": "cb-hundred-years-war-fra",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They hold Imperial Land! It must be liberated from them!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-imperial-ban.png",
+      "id": "casus-belli:cb_imperial_ban",
+      "mods": [],
+      "name": "Imperial Ban",
+      "slug": "cb-imperial-ban",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They will be better off in our glorious empire!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-imperialism.png",
+      "id": "casus-belli:cb_imperialism",
+      "mods": [],
+      "name": "Imperialism",
+      "slug": "cb-imperialism",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Give us liberty, or give us death!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_independence_war",
+      "mods": [],
+      "name": "Independence",
+      "slug": "cb-independence-war",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They have brought this upon themselves. Long have our people endured their rudeness and disrespect, and it will not continue any longer. We will use their blood to cleanse their last insult from our honor."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-insulted-us.png",
+      "id": "casus-belli:cb_insulted_us",
+      "mods": [],
+      "name": "Insulted Us",
+      "slug": "cb-insulted-us",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our victory in the Italian Wars has earned us the right to bring our former league-mates to heel. The time for negotiation has passed."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_iw_annexation",
+      "mods": [],
+      "name": "Italian League Subjugation",
+      "slug": "cb-iw-annexation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our state has proven itself the dominant power in the Italian Wars. We will force our league's leader to yield command — or crush them in battle.\n\nRequires the Claim League Leadership [Peace Treaty]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_iw_challenge_league_leadership",
+      "mods": [],
+      "name": "Challenge for League Leadership",
+      "slug": "cb-iw-challenge-league-leadership",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We must expand the authority and influence of our clan."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_japanese_clan_expand_authority",
+      "mods": [],
+      "name": "Expand Clan Authority",
+      "slug": "cb-japanese-clan-expand-authority",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Japanese Shogunate is pressing their authority too much, it is time for us to rebel against it."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-japanese-clan-rebel-against-shogunate-authority.png",
+      "id": "casus-belli:cb_japanese_clan_rebel_against_shogunate_authority",
+      "mods": [],
+      "name": "Rebel Against the Shōgun Authority",
+      "slug": "cb-japanese-clan-rebel-against-shogunate-authority",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It falls upon our shoulders to lead the faithful in a successful jihad against the infidels!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_jihad",
+      "mods": [],
+      "name": "Jihād",
+      "slug": "cb-jihad",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "It is time to reclaim the lost lands of the Empire of Constantinople!\n\nUsing the Latin Reconquest [Casus Belli] restricts the conquest of lands outside the Claims of the Latin Empire."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-lat-reconquest.png",
+      "id": "casus-belli:cb_lat_reconquest",
+      "mods": [],
+      "name": "Latin Reconquest",
+      "slug": "cb-lat-reconquest",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The authority of the King of France has grown too powerful! We must forcefully seek concessions from the King to ensure our own autonomy."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_league_of_public_weal",
+      "mods": [],
+      "name": "League of the Public Weal",
+      "slug": "cb-league-of-public-weal",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "An Imperial Prince has fallen under the overlordship of a foreign ruler. We can not risk their influence in the empire to grow and need to liberate this poor country."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_liberate_hre_member",
+      "mods": [],
+      "name": "Imperial Liberation",
+      "slug": "cb-liberate-hre-member",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "A conflict between two powers over the future of the Baltic area. The result of this war will decide who will get to have warm water ports in the lands of the former ''Terra Mariana''."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_livonian_wars",
+      "mods": [],
+      "name": "Livonian War",
+      "slug": "cb-livonian-wars",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "With the Lōdī claims over Delhi, it is time that we declare ourselves the true rulers of India!\n\nEnables the Claim [game concept TARGET COUNTRY] [Peace Treaty]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_lodi_claims",
+      "mods": [],
+      "name": "Lōdī Claims",
+      "slug": "cb-lodi-claims",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Force them to be our Tributary.<br />This war forbids us to conquer any ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] directly"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_make_tributary",
+      "mods": [],
+      "name": "Make Tributary",
+      "slug": "cb-make-tributary",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They threaten our hegemony over the sea!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_maritime_dominance",
+      "mods": [],
+      "name": "Maritime Dominance",
+      "slug": "cb-maritime-dominance",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Nanbokuchō Jidai is a time of conflict. We must take advantage of the situation."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_nanbokuchou",
+      "mods": [],
+      "name": "Nanbokuchō Jidai",
+      "slug": "cb-nanbokuchou",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "People of our culture are under their rule!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_nationalist",
+      "mods": [],
+      "name": "Nationalist",
+      "slug": "cb-nationalist",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Force a [Society of Pops] to accept our rule!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-native-subjugation.png",
+      "id": "casus-belli:cb_native_subjugation",
+      "mods": [],
+      "name": "Native Subjugation",
+      "slug": "cb-native-subjugation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Justice is nothing else than the interest of the stronger. It is our own might that gives us the right to conquer the weak. They shall not request, nor expect leniency as none will be given."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-none.png",
+      "id": "casus-belli:cb_none",
+      "mods": [],
+      "name": "No Casus Belli",
+      "slug": "cb-none",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Lands under the jurisdiction of our neighbors should rightfully belong to us, on the basis of a sturdy and legitimate claim!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_parliament_conquer_province",
+      "mods": [],
+      "name": "Parliament Approved Claims on Province",
+      "slug": "cb-parliament-conquer-province",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Prevent our rivals from illegally annexing their defenseless subjects!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_prevent_annexation",
+      "mods": [],
+      "name": "Prevent Annexation",
+      "slug": "cb-prevent-annexation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We must push back the invaders from our land!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_push_back_colonizers",
+      "mods": [],
+      "name": "Push Back Colonizers",
+      "slug": "cb-push-back-colonizers",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We shall retaliate against the enemies that raided our population."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_raiding_retaliation",
+      "mods": [],
+      "name": "Raiding Retaliation",
+      "slug": "cb-raiding-retaliation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will honor our agreements and join our brothers in their fight against tyranny. Together we will succeed, and finally bring peace and stability to the region."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-rebel-support.png",
+      "id": "casus-belli:cb_rebel_support",
+      "mods": [],
+      "name": "Supported Rebels",
+      "slug": "cb-rebel-support",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Christianity rule over Iberia must end. Let us march and restore Andalusia!\n\nShould we manage to own Córdoba as well as 80% of Andalusia after the war, we will gain an event to become Andalusia"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_reclaim_andalucia",
+      "mods": [],
+      "name": "Restoration of Andalusia",
+      "slug": "cb-reclaim-andalucia",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The tyranny of Yuán has been tolerated for long enough! It is time for China to be ruled by the Chinese once again!\n\nEnables the Rein in Rebellion, Demand Occupied Territories, and Demand All Chinese Territories [Peace Treaties]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_red_turban_rebellions",
+      "mods": [],
+      "name": "Red Turban Rebellions",
+      "slug": "cb-red-turban-rebellions",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Those pretenders assume they can govern China. We must teach them the error of their ways, and conquer their land for ourselves!\n\nEnables the Demand Complete Annexation [Peace Treaty]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_red_turban_rebellions_against_other_rebels",
+      "mods": [],
+      "name": "Regional Supremacy",
+      "slug": "cb-red-turban-rebellions-against-other-rebels",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The pathetic Red Turban Rebels have the audacity to revolt against our rule. They must be reined in!\n\nEnables the Rein in Rebellion, Demand Occupied Territories, and Demand All Chinese Territories [Peace Treaties]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_red_turban_rebellions_rein_in_rebels",
+      "mods": [],
+      "name": "Rein in the Rebels",
+      "slug": "cb-red-turban-rebellions-rein-in-rebels",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The religious conformity of our neighbors is of utmost importance. Matters of faith should not be taken lightly and as such we must intervene, weeding out potential heresies and prevent our flock from going astray."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_religious_conformance",
+      "mods": [],
+      "name": "Religious Conformance",
+      "slug": "cb-religious-conformance",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The religious conflict between the ["
+        ],
+        [
+          "r",
+          "concept:reformation",
+          "Protestant"
+        ],
+        [
+          "t",
+          "] and Catholicism factions of the Holy Roman Empire must find its end - even if it has to be on the battlefield!\n\nEnables the Religious Supremacy [Peace Treaty]"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_religious_superiority",
+      "mods": [],
+      "name": "Religious Superiority",
+      "slug": "cb-religious-superiority",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our ["
+        ],
+        [
+          "r",
+          "concept:overlord",
+          "Overlord"
+        ],
+        [
+          "t",
+          "] has started to ["
+        ],
+        [
+          "r",
+          "concept:annexation",
+          "Annex"
+        ],
+        [
+          "t",
+          "] us! We should fight them before it is too late and our ["
+        ],
+        [
+          "r",
+          "concept:country",
+          "Country"
+        ],
+        [
+          "t",
+          "] ceases to exist."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_resist_annexation",
+      "mods": [],
+      "name": "Resist Annexation",
+      "slug": "cb-resist-annexation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The splendor of the old Empire calls to us. It is time for the phoenix to spread its wings, dooming all those who dare stand between us and our ambition to restore the Roman Borders of old."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-restore-roman-borders.png",
+      "id": "casus-belli:cb_restore_roman_borders",
+      "mods": [],
+      "name": "Restore Roman Borders",
+      "slug": "cb-restore-roman-borders",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The della Scala domains must be reduced to ashes!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-scaligeri-war.png",
+      "id": "casus-belli:cb_scaligeri_war",
+      "mods": [],
+      "name": "Scaliger War",
+      "slug": "cb-scaligeri-war",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our French allies have requested we honor the terms of the Auld Alliance and launch an invasion of England. With England committed to the war in France, this allows Scotland an opportunity to capture the neighboring border provinces."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_sco_invade_england",
+      "mods": [],
+      "name": "Incursion into England",
+      "slug": "cb-sco-invade-england",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Italian Wars are tearing Italy apart. As a member of a league, we have a right to claim Italian territories for our cause.\n\nConquest is restricted to Italy"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-secure-italy.png",
+      "id": "casus-belli:cb_secure_italy",
+      "mods": [],
+      "name": "Secure Italy",
+      "slug": "cb-secure-italy",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The Sengoku Jidai engulfs the whole country in constant wars and conflict."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_sengoku",
+      "mods": [],
+      "name": "Sengoku Jidai",
+      "slug": "cb-sengoku",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The foreign Mongol rule of the Īlkhānān must disappear. We shall unify Persia under our banner."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_shed_shackles_of_the_ilkahante",
+      "mods": [],
+      "name": "Shed the Shackles of the Īlkhānān",
+      "slug": "cb-shed-shackles-of-the-ilkahante",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The many clans under us do not respect our authority as they should, it is time to put them in place."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-shogunate-reassert-authority.png",
+      "id": "casus-belli:cb_shogunate_reassert_authority",
+      "mods": [],
+      "name": "Reassert Shōgun Authority",
+      "slug": "cb-shogunate-reassert-authority",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We need to address our need for more slaves for our markets!\n\nWhenever our ["
+        ],
+        [
+          "r",
+          "concept:army",
+          "Armies"
+        ],
+        [
+          "t",
+          "] take over a ["
+        ],
+        [
+          "r",
+          "concept:location",
+          "Location"
+        ],
+        [
+          "t",
+          "] part of the ["
+        ],
+        [
+          "r",
+          "concept:pop",
+          "Pops"
+        ],
+        [
+          "t",
+          "] will become Slaves in one of our nearby Slave Market buildings."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-slave-raiding.png",
+      "id": "casus-belli:cb_slave_raiding",
+      "mods": [],
+      "name": "Slave Raiding",
+      "slug": "cb-slave-raiding",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They broke the sound toll exemption!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-sound-toll-exemptions-broken.png",
+      "id": "casus-belli:cb_sound_toll_exemptions_broken",
+      "mods": [],
+      "name": "Sound Tolls Exemptions Broken",
+      "slug": "cb-sound-toll-exemptions-broken",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "One of our subjects has had the audacity of rebelling against our rule, openly disobeying our orders and insulting our authority. We shall teach them a lesson in humility and return them to their place under the yoke."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-subject-broke-free.png",
+      "id": "casus-belli:cb_subject_broke_free",
+      "mods": [],
+      "name": "Subject Broke Free",
+      "slug": "cb-subject-broke-free",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are resisting to bend their knees before us. We shall force them to do so!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_subjugation",
+      "mods": [],
+      "name": "Subjugation",
+      "slug": "cb-subjugation",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We have the right to become Shōgun, let us take it."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_take_shogunate",
+      "mods": [],
+      "name": "Take the Shogunate",
+      "slug": "cb-take-shogunate",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "In the name of the great conqueror, their lands shall belong to us!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_timurs_conquests",
+      "mods": [],
+      "name": "chg_timur_lame_borjigin's Conquest",
+      "slug": "cb-timurs-conquests",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are threatening our trade!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-trade-conflict.png",
+      "id": "casus-belli:cb_trade_conflict",
+      "mods": [],
+      "name": "Trade Conflict",
+      "slug": "cb-trade-conflict",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We will no longer continue tolerating their hostile commercial activities. We will defend the interest of our merchants and our economy by any means necessary."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-trade-war-triggered.png",
+      "id": "casus-belli:cb_trade_war_triggered",
+      "mods": [],
+      "name": "Trade War",
+      "slug": "cb-trade-war-triggered",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Our Tribe is mightier than their Tribe!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_tribal_feud",
+      "mods": [],
+      "name": "Tribal Feud",
+      "slug": "cb-tribal-feud",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "All the Īlkhānān shall be unified under our rule!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:cb_unify_ilkahante",
+      "mods": [],
+      "name": "Unify the Īlkhānān",
+      "slug": "cb-unify-ilkahante",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We shall not bend our knee before any false monarch! Our fate is our own!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-union-independence.png",
+      "id": "casus-belli:cb_union_independence",
+      "mods": [],
+      "name": "Union Independence",
+      "slug": "cb-union-independence",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "They are not worthy to represent the great union! We shall enforce our superiority, and take control over the union for ourselves!"
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-union-war-for-seniority.png",
+      "id": "casus-belli:cb_union_war_for_seniority",
+      "mods": [],
+      "name": "War for Seniority",
+      "slug": "cb-union-war-for-seniority",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "Regrettably, the events leading to this situation made the conflict unavoidable, nonetheless, force will succeed where diplomacy failed. We will defend our ideals with the sword and prevail against our wicked enemies."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/cb-war-from-event.png",
+      "id": "casus-belli:cb_war_from_event",
+      "mods": [],
+      "name": "War From Event",
+      "slug": "cb-war-from-event",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "We cannot allow a torrent of despicable ideas to spread across our borders, lest we risk losing our crown as well."
+        ]
+      ],
+      "facets": {},
+      "icon": "img/casus-belli/crush-the-revolution-cb.png",
+      "id": "casus-belli:crush_the_revolution_cb",
+      "mods": [],
+      "name": "Crush the Revolution",
+      "slug": "crush-the-revolution-cb",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "In a bid to challenge the influence of our Scandinavian foes, the decision has been made to take up arms and wrestle over the control of lucrative lands and trade routes across the Baltic."
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:great_northern_conflict",
+      "mods": [],
+      "name": "Great Northern Conflict",
+      "slug": "great-northern-conflict",
+      "type": "casus-belli"
+    },
+    {
+      "color": null,
+      "data": {},
+      "desc": [
+        [
+          "t",
+          "The fires of freedom and revolution will burn brightly beyond our borders. They have nothing to lose but their chains!"
+        ]
+      ],
+      "facets": {},
+      "icon": null,
+      "id": "casus-belli:spread_the_revolution_cb",
+      "mods": [],
+      "name": "Spread the Revolution",
+      "slug": "spread-the-revolution-cb",
+      "type": "casus-belli"
+    }
+  ],
+  "facets": [],
+  "source": "casus_belli"
+}

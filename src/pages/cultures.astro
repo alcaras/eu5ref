@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/cultures.json';
+
+const entities = data.entities;
+// 100+ culture groups — keep only the search box plus the biggest groups.
+const facets = data.facets
+  .map((f) => ({ ...f, options: f.options.filter((o) => o.count >= 20) }))
+  .filter((f) => f.options.length > 1);
+const columns = [
+  { key: 'name', label: 'Culture', kind: 'name' },
+  { key: 'groups', label: 'Groups', kind: 'chips' },
+  { key: 'language', label: 'Language', kind: 'text' },
+  { key: 'mods', label: 'Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Cultures"
+  active="cultures"
+  pageMark="🎭"
+  eyebrow="Society"
+  pageStats={[
+    { label: 'cultures', value: entities.length },
+    { label: 'groups', value: new Set(entities.flatMap((e) => e.data.groups)).size },
+  ]}
+  description="Every culture in Europa Universalis V — groups, languages, and modifiers."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter cultures… (large groups shown as chips; search finds all)" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="cultures" />
+  </div>
+</Base>

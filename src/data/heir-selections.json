@@ -1,0 +1,1372 @@
+{
+ "dataset": "heir-selections",
+ "entities": [
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Theocracy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is an abbess selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/abbess-elective-female.png",
+   "id": "heir-selection:abbess_elective_female",
+   "mods": [],
+   "name": "Abbess Elective",
+   "slug": "abbess-elective-female",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Theocracy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is an abbot selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/abbot-elective.png",
+   "id": "heir-selection:abbot_elective",
+   "mods": [],
+   "name": "Abbot Elective",
+   "slug": "abbot-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy that follows the eldest line of the ruling family regardless of gender. The descendants of a deceased ["
+    ],
+    [
+     "r",
+     "concept:heir",
+     "Heir"
+    ],
+    [
+     "t",
+     "] inherit their parent's place in the line of succession before the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]'s other children."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/absolute-cognatic-primogeniture.png",
+   "id": "heir-selection:absolute_cognatic_primogeniture",
+   "mods": [],
+   "name": "Absolute Cognatic Primogeniture",
+   "slug": "absolute-cognatic-primogeniture",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of an Admiralty Regime, in which the new ruler is elected from the leading admirals. In case no admiral is available, a provisional council will lead the state until a fitting candidate has been found."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/admiralty-regime-heir-selection.png",
+   "id": "heir-selection:admiralty_regime_heir_selection",
+   "mods": [],
+   "name": "Admiral Election",
+   "slug": "admiralty-regime-heir-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy that follows the eldest line of the ruling family, preferring males over females. The descendants of a deceased ["
+    ],
+    [
+     "r",
+     "concept:heir",
+     "Heir"
+    ],
+    [
+     "t",
+     "] inherit their parent's place in the line of succession before the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]'s other children. It is available after granting the Libertas Affectandi. In addition to the rules of cognatic primogeniture, the ruling dynasty has preferential treatment over the direct male line."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/austrian-cognatic-primogeniture.png",
+   "id": "heir-selection:austrian_cognatic_primogeniture",
+   "mods": [],
+   "name": "Dynastic Cognatic Primogeniture",
+   "slug": "austrian-cognatic-primogeniture",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Banker Family in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is chosen among the members of the dynasty."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/bank-selection.png",
+   "id": "heir-selection:bank_selection",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Selection of the new Bank Executive",
+   "slug": "bank-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Theocracy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is a bishop selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "] between possible domestic and international candidates."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/bishopric-elective.png",
+   "id": "heir-selection:bishopric_elective",
+   "mods": [],
+   "name": "Bishopric Elective",
+   "slug": "bishopric-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A complex system of succession that combines elements of primogeniture and elective monarchy, allowing for a more flexible approach to choosing a ruler while still maintaining a connection to the imperial lineage."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/byzantine-succession.png",
+   "id": "heir-selection:byzantine_succession",
+   "mods": [],
+   "name": "Byzantine Succession",
+   "slug": "byzantine-succession",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy that follows the eldest line of the ruling family, preferring males over females. The descendants of a deceased ["
+    ],
+    [
+     "r",
+     "concept:heir",
+     "Heir"
+    ],
+    [
+     "t",
+     "] inherit their parent's place in the line of succession before the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]'s other children."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/cognatic-primogeniture.png",
+   "id": "heir-selection:cognatic_primogeniture",
+   "mods": [],
+   "name": "Cognatic Primogeniture",
+   "slug": "cognatic-primogeniture",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a unique type of [Succession Law] of the Republic of Genoa in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is chosen from the families of Spinola and Doria."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/diarchic-election.png",
+   "id": "heir-selection:diarchic_election",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Diarchic Election",
+   "slug": "diarchic-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is elected from elites of the country and rules for lifetime.<br />However, the Doge can still be ousted should his popularity with the Nobility or with the Burghers drop."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/doge-election.png",
+   "id": "heir-selection:doge_election",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Doge Election",
+   "slug": "doge-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy, in which the new ruler is elected by the Nobility. Only members of the ruling dynasty are eligible to be elected.\n\nThis Succession Law might have unintended repercussions for any of our current or future unions."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/dynastic-elective-succession.png",
+   "id": "heir-selection:dynastic_elective_succession",
+   "mods": [],
+   "name": "Dynastic Elective Succession",
+   "slug": "dynastic-elective-succession",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy, in which the new ruler is elected by the Nobility. Although every noble would be eligible to be elected, the electors prefer a member of the current dynasty for the position of monarch.\n\nThis Succession Law might have unintended repercussions for any of our current or future unions."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/elective-succession.png",
+   "id": "heir-selection:elective_succession",
+   "mods": [],
+   "name": "Elective Succession",
+   "slug": "elective-succession",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] in which the old ruler would favor one of his sons over the others and designate him as heir paying no attention to their age."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/favorite-son-elective-succession.png",
+   "id": "heir-selection:favorite_son_elective_succession",
+   "mods": [],
+   "name": "Favored Son Succession",
+   "slug": "favorite-son-elective-succession",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy in which the new ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] ascends to the throne once he has demonstrated that his fortune is superior to the fortunes of his rivals, usually through the elimination of each one of them."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/fratricide-succesion.png",
+   "id": "heir-selection:fratricide_succesion",
+   "mods": [],
+   "name": "Fratricide",
+   "slug": "fratricide-succesion",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Military Regime, in which the new ruler is elected from the leading generals. In case no general is available, a provisional council will lead the state until a fitting candidate has been found."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/general-heir-selection.png",
+   "id": "heir-selection:general_heir_selection",
+   "mods": [],
+   "name": "General Staff Election",
+   "slug": "general-heir-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Theocracy with the Military Order [Government Reform], in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected from the ranks of the order by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/grandmaster-elective.png",
+   "id": "heir-selection:grandmaster_elective",
+   "mods": [],
+   "name": "Grandmaster Elective",
+   "slug": "grandmaster-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "Only a wise Gurū can lead the country, and in absence of one we will have to wait until one appears."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/guru-election.png",
+   "id": "heir-selection:guru_election",
+   "mods": [],
+   "name": "Gurū Election",
+   "slug": "guru-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy, in which the new ruler is elected from the supreme court. The process is a bureaucratic chaos and can take several months or even years to be resolved."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/judicial-election.png",
+   "id": "heir-selection:judicial_election",
+   "mods": [],
+   "name": "Judicial Election",
+   "slug": "judicial-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is chosen by a single randomly selected ballot."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/lottery-election.png",
+   "id": "heir-selection:lottery_election",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Lottery Election",
+   "slug": "lottery-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "The new ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] as well as any ["
+    ],
+    [
+     "r",
+     "concept:regent",
+     "Regents"
+    ],
+    [
+     "t",
+     "] must come from the discipline and prestigious ranks of the elite Mamlūk troops under our command."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/mamluk-succesion.png",
+   "id": "heir-selection:mamluk_succesion",
+   "mods": [],
+   "name": "Mamlūk Succession",
+   "slug": "mamluk-succesion",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a realm in which the new ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the most capable person in the dynasty of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/matrilineal-non-exclusive.png",
+   "id": "heir-selection:matrilineal_non_exclusive",
+   "mods": [],
+   "name": "Matrilineal Non-Exclusive",
+   "slug": "matrilineal-non-exclusive",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]. Female children can never inherit, but can transfer the right to the throne to their own sons. Children of mothers of the ruling are preferred over children of mothers of different dynasties."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/matrilineal-salic-law.png",
+   "id": "heir-selection:matrilineal_salic_law",
+   "mods": [],
+   "name": "Matrilineal Salic Law",
+   "slug": "matrilineal-salic-law",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the most militarily prominent ["
+    ],
+    [
+     "r",
+     "concept:character",
+     "Character"
+    ],
+    [
+     "t",
+     "] rules for life."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/military-dictatorship.png",
+   "id": "heir-selection:military_dictatorship",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Military Dictatorship",
+   "slug": "military-dictatorship",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected from the ranks of the ruling minority by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/oligarchic-elective.png",
+   "id": "heir-selection:oligarchic_elective",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Oligarchic Elective",
+   "slug": "oligarchic-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "When the Pope dies, the ["
+    ],
+    [
+     "r",
+     "concept:cardinal",
+     "Cardinals"
+    ],
+    [
+     "t",
+     "] gather to debate who will be the new Pope. This can be quick, but sometimes it may take several years."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/papal-election.png",
+   "id": "heir-selection:papal_election",
+   "mods": [],
+   "name": "Papal Conclave",
+   "slug": "papal-election",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] and all other male descendants receive rights to minor titles and territories. Female children can never inherit, nor transfer the right to the throne to their own sons.\n\nWhen a new ruler rises to power the least controlled provinces of the country get further penalties to their ["
+    ],
+    [
+     "r",
+     "concept:control",
+     "Control"
+    ],
+    [
+     "t",
+     "] as they are divided between the brothers of the new ruler."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/partition-inheritance.png",
+   "id": "heir-selection:partition_inheritance",
+   "mods": [],
+   "name": "Partition Inheritance",
+   "slug": "partition-inheritance",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is a peasant selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/peasant-elective.png",
+   "id": "heir-selection:peasant_elective",
+   "mods": [],
+   "name": "Peasant Elective",
+   "slug": "peasant-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Pirate Republic in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is chosen among one or more candidates by the crews."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/pirate-elective.png",
+   "id": "heir-selection:pirate_elective",
+   "mods": [],
+   "name": "Pirate Elective",
+   "slug": "pirate-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected from a ["
+    ],
+    [
+     "r",
+     "concept:country",
+     "Country"
+    ],
+    [
+     "t",
+     "] that has presence in the ["
+    ],
+    [
+     "r",
+     "concept:region",
+     "Region"
+    ],
+    [
+     "t",
+     "] of its ["
+    ],
+    [
+     "r",
+     "concept:capital",
+     "Capital"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/podesta-elective.png",
+   "id": "heir-selection:podesta_elective",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Elective Potestate",
+   "slug": "podesta-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "] for an established tenure of 2 years."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/republic-2-year-terms.png",
+   "id": "heir-selection:republic_2_year_terms",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Republic 2 Year Terms",
+   "slug": "republic-2-year-terms",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "] for an established tenure of 4 years."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/republic-4-year-terms.png",
+   "id": "heir-selection:republic_4_year_terms",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Republic 4 Year Terms",
+   "slug": "republic-4-year-terms",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] used in many cultures all around the world, in which the new ruler is chosen from the sons of the previous ruler through the celebration of a ritual competition where the winner gets the right to rule."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/ritual-selection.png",
+   "id": "heir-selection:ritual_selection",
+   "mods": [],
+   "name": "Ritual Selection",
+   "slug": "ritual-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]. Female children can never inherit, nor transfer the right to the throne to their own sons."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/salic-law.png",
+   "id": "heir-selection:salic_law",
+   "mods": [],
+   "name": "Salic Law",
+   "slug": "salic-law",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Monarchy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]. Female children can never inherit, but can transfer the right to the throne to their own sons."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/semi-salic-law.png",
+   "id": "heir-selection:semi_salic_law",
+   "mods": [],
+   "name": "Semi-Salic Law",
+   "slug": "semi-salic-law",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic, in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is elected for life among the members of a powerful family, and usually it is the child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/signoria-selection.png",
+   "id": "heir-selection:signoria_selection",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Signoria Selection",
+   "slug": "signoria-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A traditional Gaelic form of government in which the ruling clan selects the most competent heir from amongst themselves. Being a patrilineal descendant of a historical ruler does increase one's chances of being selected, though it is considered improper to elect a child of the current ruler.\n\nThe process does tend towards the most qualified individual being selected, but because the rulership often meanders through multiple branches of the family tree in a somewhat arbitrary selection process, it frequently leads to feuds."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/tanistry-elective.png",
+   "id": "heir-selection:tanistry_elective",
+   "mods": [],
+   "name": "Tanistry Elective",
+   "slug": "tanistry-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Theocracy in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is a theocrat selected by ["
+    ],
+    [
+     "r",
+     "concept:election",
+     "Election"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/theocratic-elective.png",
+   "id": "heir-selection:theocratic_elective",
+   "mods": [],
+   "name": "Theocratic Elective",
+   "slug": "theocratic-elective",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Tribe in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest female child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/tribal-matrilineal.png",
+   "id": "heir-selection:tribal_matrilineal",
+   "mods": [],
+   "name": "Tribal Matriarchal",
+   "slug": "tribal-matrilineal",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Tribe in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the oldest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/tribal-oldest-male.png",
+   "id": "heir-selection:tribal_oldest_male",
+   "mods": [],
+   "name": "Tribal Oldest Male",
+   "slug": "tribal-oldest-male",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "A system of inheritance based around having one heir. The ascension of the eldest son of the royal family may mean instability between prospecting inheritors, and members of the ruling dynasty that are in the line of succession. This may result in instability, as other sons may only receive minor titles."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/unigeniture.png",
+   "id": "heir-selection:unigeniture",
+   "mods": [],
+   "name": "Unigeniture",
+   "slug": "unigeniture",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] used by countries which have a special agreement with another Monarchy. In case of the death of one of the rulers of either country without a legitimate male ["
+    ],
+    [
+     "r",
+     "concept:heir",
+     "Heir"
+    ],
+    [
+     "t",
+     "], the other ruler will inherit the throne of the former."
+    ]
+   ],
+   "facets": {},
+   "icon": null,
+   "id": "heir-selection:union_of_crowns_succession",
+   "mods": [],
+   "name": "Union of Crowns Succession",
+   "slug": "union-of-crowns-succession",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Republic in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is chosen among one or more candidates by a popular assembly or Veche.\n\nA new ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is selected with the Invite Prince [Country Interaction]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/veche-selection.png",
+   "id": "heir-selection:veche_selection",
+   "mods": [
+    {
+     "key": "care_about_producing_heirs",
+     "label": "Royal Marriages",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
+   "name": "Veche Selection",
+   "slug": "veche-selection",
+   "type": "heir-selection"
+  },
+  {
+   "color": null,
+   "data": {},
+   "desc": [
+    [
+     "t",
+     "It is a type of [Succession Law] of a Kingdom in which the ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "] is the youngest male child of the previous ["
+    ],
+    [
+     "r",
+     "concept:ruler",
+     "Ruler"
+    ],
+    [
+     "t",
+     "]."
+    ]
+   ],
+   "facets": {},
+   "icon": "img/heir-selection/youngest-son-of-ruler.png",
+   "id": "heir-selection:youngest_son_of_ruler",
+   "mods": [],
+   "name": "Youngest Son of Ruler",
+   "slug": "youngest-son-of-ruler",
+   "type": "heir-selection"
+  }
+ ],
+ "facets": [],
+ "source": "heir_selections"
+}

@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/international-organizations.json';
+---
+<Base title="International Organizations" active="international-organizations" pageMark="🌐" eyebrow="Diplomacy"
+  pageStats={[{ label: 'organizations', value: data.entities.length }]}
+  description="Every international organization in Europa Universalis V — the HRE, the Papacy, and the rest.">
+  <SectionTable data={data} columns={[
+    { key: 'name', label: 'Organization', kind: 'name' },
+    { key: 'mods', label: 'Modifiers', kind: 'mods' },
+    { key: 'desc', label: 'Description', kind: 'rich' },
+  ]} placeholder="Filter organizations…" />
+</Base>

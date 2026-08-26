@@ -1,0 +1,26 @@
+---
+// One dataset table with its own filter scope — the building block for
+// composite pages (several datasets on one page) and simple list pages.
+import EntityTable from './EntityTable.astro';
+import FilterBar from './FilterBar.astro';
+
+interface Props {
+  data: any;              // dataset envelope (entities + facets)
+  columns: any[];
+  pagePrefix?: string;    // omit → no detail links (name renders as text col)
+  title?: string;
+  placeholder?: string;
+  minFacetCount?: number; // hide facet chips rarer than this
+}
+const { data, columns, pagePrefix, title, placeholder = 'Filter…', minFacetCount = 0 } = Astro.props;
+const facets = (data.facets || [])
+  .map((f: any) => ({ ...f, options: f.options.filter((o: any) => o.count >= minFacetCount) }))
+  .filter((f: any) => f.options.length > 1);
+// Without a detail route, degrade the 'name' column to plain text + icon.
+const cols = pagePrefix ? columns : columns.map((c) => (c.kind === 'name' ? { ...c, kind: 'namePlain' } : c));
+---
+{title && <h2 style="margin-top: 34px;">{title}</h2>}
+<div data-filter-scope>
+  {(data.entities.length > 8 || facets.length > 0) && <FilterBar facets={facets} placeholder={placeholder} />}
+  <EntityTable entities={data.entities} columns={cols as any} pagePrefix={pagePrefix || ''} csvName={`eu5ref-${data.dataset}`} />
+</div>
