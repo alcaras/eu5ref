@@ -604,7 +604,7 @@
     ],
     [
      "t",
-     " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
+     " of our Clergy, and the number of Institutions With Icon we have "
     ],
     [
      "r",
@@ -642,7 +642,7 @@
     ],
     [
      "t",
-     " that can be progressed through.\n\nShowDatabase('age')\n\nAt the start of each age, we select our focus between "
+     " that can be progressed through.\n\nAge\n\nAt the start of each age, we select our focus between "
     ],
     [
      "r",
@@ -700,7 +700,7 @@
    "desc": [
     [
      "t",
-     "A country's disposition reflects how it currently views you, shaped by your relative power, whether they hold a claim on your lands, and any formal rivalry. Dispositions are reassessed continuously and can shift as the balance of power changes.\n\nThe dispositions below exist:\nShowValues('ai_disposition')"
+     "A country's disposition reflects how it currently views you, shaped by your relative power, whether they hold a claim on your lands, and any formal rivalry. Dispositions are reassessed continuously and can shift as the balance of power changes.\n\nThe dispositions below exist:\nAi Disposition"
     ]
    ],
    "facets": {
@@ -722,7 +722,7 @@
    "desc": [
     [
      "t",
-     "A nation's personality reflects its fundamental character and approach to statecraft, whether it prefers conquest, caution, diplomacy, or isolation. Personalities are set at the start of the game and can change only through events or game rules.\n\nThe personalities below exist:\nShowDatabase('ai_personality')"
+     "A nation's personality reflects its fundamental character and approach to statecraft, whether it prefers conquest, caution, diplomacy, or isolation. Personalities are set at the start of the game and can change only through events or game rules.\n\nThe personalities below exist:\nAi Personality"
     ]
    ],
    "facets": {
@@ -1022,7 +1022,7 @@
     ],
     [
      "t",
-     ".\n\nThe subject can slow the progress with the ShowCabinetActionName('frustrate_annexation') "
+     ".\n\nThe subject can slow the progress with the Frustrate Annexation "
     ],
     [
      "r",
@@ -1040,7 +1040,7 @@
     ],
     [
      "t",
-     " with their special ShowCasusBelliName('Cb Resist Annexation') "
+     " with their special Cb Resist Annexation "
     ],
     [
      "r",
@@ -1471,7 +1471,7 @@
     ],
     [
      "t",
-     " also has the following effect:\n\nShowModifierEffect('Is Army Levy')"
+     " also has the following effect:\n\nIs Army Levy"
     ]
    ],
    "facets": {
@@ -1734,7 +1734,7 @@
     ],
     [
      "t",
-     " that creates Works Of Art. An artist can be any of the types below.\nShowDatabase('artist')"
+     " that creates Works Of Art. An artist can be any of the types below.\nArtist"
     ]
    ],
    "facets": {
@@ -2254,7 +2254,7 @@
     ],
     [
      "t",
-     " of the same eastern ShowReligionGroupAdjective('christian') "
+     " of the same eastern Christianity "
     ],
     [
      "r",
@@ -2319,7 +2319,7 @@
     ],
     [
      "t",
-     " can take in ShowReligionName('hindu')."
+     " can take in Hinduism."
     ]
    ],
    "facets": {
@@ -2967,7 +2967,7 @@
     ],
     [
      "t",
-     ", such as ShowUnitCategoryName('army_artillery').\n\nEvery hour of the Bombard Phase, valid "
+     ", such as Army Artillery.\n\nEvery hour of the Bombard Phase, valid "
     ],
     [
      "r",
@@ -3687,7 +3687,7 @@
    "desc": [
     [
      "t",
-     "The ShowPopTypeName('burghers') will attempt to address needs for "
+     "The Burghers will attempt to address needs for "
     ],
     [
      "r",
@@ -3890,7 +3890,7 @@
     ],
     [
      "t",
-     " can be assigned to a Cabinet Action. These are performed either until they are finished, or until we decide to change it. \nThese are the different actions available: \n\nAdministrative Actions \nShowCabinetTypeDatabase('adm') \n\nDiplomatic Actions \nShowCabinetTypeDatabase('dip') \n\nMilitary Actions \nShowCabinetTypeDatabase('mil') "
+     " can be assigned to a Cabinet Action. These are performed either until they are finished, or until we decide to change it. \nThese are the different actions available: \n\nAdministrative Actions \nAdm \n\nDiplomatic Actions \nDip \n\nMilitary Actions \nMil "
     ]
    ],
    "facets": {
@@ -4339,7 +4339,7 @@
     ],
     [
      "t",
-     ". This will please the ShowEstateTypeName('clergy_estate') and instantly confer "
+     ". This will please the Clergy and instantly confer "
     ],
     [
      "r",
@@ -4459,7 +4459,7 @@
    "desc": [
     [
      "t",
-     "A Cardinal is a representative of the ShowReligionAdjective('catholic') Church, just immediately behind the "
+     "A Cardinal is a representative of the Catholicism Church, just immediately behind the "
     ],
     [
      "r",
@@ -4486,7 +4486,7 @@
     ],
     [
      "t",
-     " called ShowBuildingTypeName('Seat Of Cardinal'), and they will be loyal to the "
+     " called Seat Of Cardinal, and they will be loyal to the "
     ],
     [
      "r",
@@ -4942,7 +4942,7 @@
     ],
     [
      "t",
-     ". Examples include ShowCharacterInteractionName('marry_noble'), ShowCharacterInteractionName('seppuku'), or ShowCharacterInteractionName('Resign As Grand Master')"
+     ". Examples include Marry Noble, Seppuku, or Resign As Grand Master"
     ]
    ],
    "facets": {
@@ -5557,7 +5557,7 @@
     ],
     [
      "t",
-     ".\n\nThe Climates below exist:\nShowDatabase('climate')"
+     ".\n\nThe Climates below exist:\nClimate"
     ]
    ],
    "facets": {
@@ -5699,7 +5699,7 @@
     ],
     [
      "t",
-     ", such as a ShowBuildingTypeName('wharf') or a ShowBuildingTypeName('dock')."
+     ", such as a Wharf or a Dock."
     ]
    ],
    "facets": {
@@ -6496,7 +6496,7 @@
     ],
     [
      "t",
-     " are ShowUnitCategoryName('Navy Light Ship') and ShowUnitCategoryName('Navy Heavy Ship'), or ShowUnitCategoryName('Army Light Infantry') and ShowUnitCategoryName('Army Heavy Cavalry')."
+     " are Navy Light Ship and Navy Heavy Ship, or Army Light Infantry and Army Heavy Cavalry."
     ]
    ],
    "facets": {
@@ -6572,7 +6572,7 @@
     ],
     [
      "t",
-     " like ShowGoodsName('stone') or ShowGoodsName('clay') can be produced everywhere without the need for an "
+     " like Stone or Clay can be produced everywhere without the need for an "
     ],
     [
      "r",
@@ -6646,7 +6646,7 @@
     ],
     [
      "t",
-     " then the ShowEstateTypeName('peasants_estate') will be happy."
+     " then the Commoners will be happy."
     ]
    ],
    "facets": {
@@ -6981,7 +6981,7 @@
     ],
     [
      "t",
-     ", or a ShowLocationRankName('city').\n\nConstructions require "
+     ", or a City.\n\nConstructions require "
     ],
     [
      "r",
@@ -7905,7 +7905,7 @@
     ],
     [
      "t",
-     ".\n\nExamples include ShowCountryInteractionName('sabotage_reputation'), ShowCountryInteractionName('Pay Off Debt') or ShowCountryInteractionName('Give Location To Subject')."
+     ".\n\nExamples include Sabotage Reputation, Pay Off Debt or Give Location To Subject."
     ]
    ],
    "facets": {
@@ -7981,7 +7981,7 @@
     ],
     [
      "t",
-     ".\nShowDatabaseWithIcon('country_rank')"
+     ".\nCountry Rank"
     ]
    ],
    "facets": {
@@ -8190,7 +8190,7 @@
     ],
     [
      "t",
-     ":\n• The ShowEstateTypeName('nobles_estate') prefer high Language Power With Icon.\n• The ShowEstateTypeName('clergy_estate') prefer the Liturgical Language With Icon.\n• The ShowEstateTypeName('peasants_estate') prefer the Common Language With Icon.\n• Using the Market Language With Icon of our "
+     ":\n• The Nobility prefer high Language Power With Icon.\n• The Clergy prefer the Liturgical Language With Icon.\n• The Commoners prefer the Common Language With Icon.\n• Using the Market Language With Icon of our "
     ],
     [
      "r",
@@ -8720,7 +8720,7 @@
     ],
     [
      "t",
-     ", especially as we advance into the ShowAgeName('Age 5 Absolutism')."
+     ", especially as we advance into the Age 5 Absolutism."
     ]
    ],
    "facets": {
@@ -9492,7 +9492,7 @@
    "desc": [
     [
      "t",
-     "The Curia is the administrative body of the Holy See and therefore of the ShowReligionAdjective('catholic') Church itself. Any ShowReligionAdjective('catholic') "
+     "The Curia is the administrative body of the Holy See and therefore of the Catholicism Church itself. Any Catholicism "
     ],
     [
      "r",
@@ -9548,7 +9548,7 @@
     ],
     [
      "t",
-     " affecting the whole ShowReligionAdjective('catholic') world. Any ShowReligionAdjective('catholic') "
+     " affecting the whole Catholicism world. Any Catholicism "
     ],
     [
      "r",
@@ -9584,7 +9584,7 @@
     ],
     [
      "t",
-     " will be able to influence the outcome of the debate by either supporting or opposing it.\n\nIf passed, the effects will depend on which Curia Action was taken, but will apply to all ShowReligionAdjective('catholic') "
+     " will be able to influence the outcome of the debate by either supporting or opposing it.\n\nIf passed, the effects will depend on which Curia Action was taken, but will apply to all Catholicism "
     ],
     [
      "r",
@@ -10037,7 +10037,7 @@
     ],
     [
      "t",
-     " will demote to ShowPopTypeName('peasants') when there are too many of their current "
+     " will demote to Peasants when there are too many of their current "
     ],
     [
      "r",
@@ -10109,7 +10109,7 @@
     ],
     [
      "t",
-     " inside our country. The higher it is, the more efficiently our ShowGovernmentTypeName('theocracy') will run."
+     " inside our country. The higher it is, the more efficiently our Theocracy will run."
     ]
    ],
    "facets": {
@@ -10728,7 +10728,7 @@
     ],
     [
      "t",
-     " might be diplomatically limited. That means the following diplomatic actions are either not possible or heavily restricted:\n\n•  ShowRelationTypeName('alliance')\n•  ShowRelationTypeName('food_access')\n•  ShowRelationTypeName('guarantee')\n•  ShowRelationTypeName('military_access')\n•  ShowRelationTypeName('Fleet Basing Rights')\n•  ShowGenericActionName('Create Building Subject')\n•  ShowGenericActionName('Create Province Subject')\n\nMost subjects with limited diplomacy are incapable of declaring their own "
+     " might be diplomatically limited. That means the following diplomatic actions are either not possible or heavily restricted:\n\n•  Alliance\n•  Food Access\n•  Guarantee\n•  Military Access\n•  Fleet Basing Rights\n•  Create Building Subject\n•  Create Province Subject\n\nMost subjects with limited diplomacy are incapable of declaring their own "
     ],
     [
      "r",
@@ -10847,7 +10847,7 @@
     ],
     [
      "t",
-     ", and they could last or remain active over a long period of time, until the country manages to overcome it.\n\nSome of the most important Disasters include ShowDisasterName('Ambrosian Republic Disaster') and ShowDisasterName('Dissolution Of Delhi')."
+     ", and they could last or remain active over a long period of time, until the country manages to overcome it.\n\nSome of the most important Disasters include Ambrosian Republic Disaster and Dissolution Of Delhi."
     ]
    ],
    "facets": {
@@ -11073,7 +11073,7 @@
     ],
     [
      "t",
-     ", like the ShowDiseaseName('bubonic_plague')."
+     ", like the Bubonic Plague."
     ]
    ],
    "facets": {
@@ -11743,7 +11743,7 @@
     ],
     [
      "t",
-     " with the ShowReligionAdjective('nahuatl') "
+     " with the Nahua "
     ],
     [
      "r",
@@ -11761,7 +11761,7 @@
     ],
     [
      "t",
-     "—especially Towns And Cities—passively increases Doom.\n\nHaving a high Doom value decreases ShowModifierTypeName('subject_loyalty') and ShowModifierTypeName('Global Estate Target Satisfaction') but increases ShowModifierTypeName('stability_decay').\n\nThere are a number of ways that decrease Doom, including:\n- Killing "
+     "—especially Towns And Cities—passively increases Doom.\n\nHaving a high Doom value decreases Subject Loyalty and Global Estate Target Satisfaction but increases Stability Decay.\n\nThere are a number of ways that decrease Doom, including:\n- Killing "
     ],
     [
      "r",
@@ -12147,7 +12147,7 @@
     ],
     [
      "t",
-     " that harbor a Dynastic Seat will have more ShowPopTypeName('nobles') than usual."
+     " that harbor a Dynastic Seat will have more Nobles than usual."
     ]
    ],
    "facets": {
@@ -13335,7 +13335,7 @@
     ],
     [
      "t",
-     ". Their effects usually go against the interests of the ShowEstateTypeName('crown_estate'). "
+     ". Their effects usually go against the interests of the Crown. "
     ],
     [
      "r",
@@ -13681,7 +13681,7 @@
     ],
     [
      "t",
-     " like ShowPopTypeName('nobles') get far more Estate Power per "
+     " like Nobles get far more Estate Power per "
     ],
     [
      "r",
@@ -13690,7 +13690,7 @@
     ],
     [
      "t",
-     " than ShowPopTypeName('slaves') do.\n\n    • The total power of the "
+     " than Slaves do.\n\n    • The total power of the "
     ],
     [
      "r",
@@ -14373,7 +14373,7 @@
     ],
     [
      "t",
-     " gain ShowBiasValue('opinion_excommunicated') "
+     " gain Opinion Excommunicated "
     ],
     [
      "r",
@@ -14391,7 +14391,7 @@
     ],
     [
      "t",
-     ", and the ShowCasusBelliName('cb_excommunication') "
+     ", and the Cb Excommunication "
     ],
     [
      "r",
@@ -14409,7 +14409,7 @@
     ],
     [
      "t",
-     " receives the following penalties until their next ruler:\nShowModifierEffect('excommunicated')"
+     " receives the following penalties until their next ruler:\nExcommunicated"
     ]
    ],
    "facets": {
@@ -14632,7 +14632,7 @@
     ],
     [
      "t",
-     " can also gain experience by the ShowUnitAbilityName('drill_army') "
+     " can also gain experience by the Drill Army "
     ],
     [
      "r",
@@ -16555,7 +16555,7 @@
     ],
     [
      "t",
-     " with ShowLocationRankName('city') "
+     " with City "
     ],
     [
      "r",
@@ -16564,7 +16564,7 @@
     ],
     [
      "t",
-     ". The ShowSocietyDirectionName('defensive') Societal Value With Icon and some Advances With Icon may also increase it."
+     ". The Defensive Societal Value With Icon and some Advances With Icon may also increase it."
     ]
    ],
    "facets": {
@@ -16990,7 +16990,7 @@
     ],
     [
      "t",
-     ", for example those with ShowVegetationName('forest') "
+     ", for example those with Forest "
     ],
     [
      "r",
@@ -16999,7 +16999,7 @@
     ],
     [
      "t",
-     " or ShowTopographyName('mountains') "
+     " or Mountains "
     ],
     [
      "r",
@@ -17017,7 +17017,7 @@
     ],
     [
      "t",
-     " with the ShowTopographyName('narrows') "
+     " with the Narrows "
     ],
     [
      "r",
@@ -18568,7 +18568,7 @@
     ],
     [
      "t",
-     ".\nShowDatabase('government_type')"
+     ".\nGovernment Type"
     ]
    ],
    "facets": {
@@ -18714,7 +18714,7 @@
     ],
     [
      "t",
-     ", and ShowModifierTypeName('mercenary_range'), as well as the ability to Enforce Peace, Intervene in Wars, and Threaten War anywhere in the world."
+     ", and Mercenary Range, as well as the ability to Enforce Peace, Intervene in Wars, and Threaten War anywhere in the world."
     ]
    ],
    "facets": {
@@ -19110,7 +19110,7 @@
     ],
     [
      "t",
-     " receives the following bonuses:\nShowModifierEffect('Head Of The Cabinet Modifier')"
+     " receives the following bonuses:\nHead Of The Cabinet Modifier"
     ]
    ],
    "facets": {
@@ -19390,7 +19390,7 @@
     ],
     [
      "t",
-     " with the greatest level in each field will be proclaimed to be the Hegemon, earning some nice bonuses.\nShowDatabase('hegemony')"
+     " with the greatest level in each field will be proclaimed to be the Hegemon, earning some nice bonuses.\nHegemony"
     ]
    ],
    "facets": {
@@ -19969,7 +19969,7 @@
    "desc": [
     [
      "t",
-     "A branch is a group of traditions and beliefs inside ShowReligionName('hindu') giving prominence to one or more specific "
+     "A branch is a group of traditions and beliefs inside Hinduism giving prominence to one or more specific "
     ],
     [
      "r",
@@ -20052,7 +20052,7 @@
     ],
     [
      "t",
-     " which dominates the political sphere of ShowRegionName('North German Region'), ShowRegionName('South German Region') and partially ShowRegionName('italy_region') and ShowRegionName('france_region'). The Hre is an amalgamation of countless "
+     " which dominates the political sphere of North German Region, South German Region and partially Italy and France. The Hre is an amalgamation of countless "
     ],
     [
      "r",
@@ -20186,7 +20186,7 @@
     ],
     [
      "t",
-     " belongs to one of the types below.\nShowDatabase('Holy Site Type')"
+     " belongs to one of the types below.\nHoly Site Type"
     ]
    ],
    "facets": {
@@ -20249,7 +20249,7 @@
    "desc": [
     [
      "t",
-     "Horde Unity is a measure of how much support a Khān has from the tribes. It goes down over time and is increased by looting and razing provinces. A ShowGovernmentTypeName('steppe_horde') with low unity is likely to succumb to internal strife."
+     "Horde Unity is a measure of how much support a Khān has from the tribes. It goes down over time and is increased by looting and razing provinces. A Steppe Horde with low unity is likely to succumb to internal strife."
     ]
    ],
    "facets": {
@@ -20321,7 +20321,7 @@
    "desc": [
     [
      "t",
-     "The Electoral College consists of the ShowSpecialStatusNamePlural('elector') of the Hre.\n\nThe law of the ShowLawName('golden_bull') influences the way ShowSpecialStatusNamePluralWithNoTooltip('elector') cast their vote due to the following factors:\n- the influence of the "
+     "The Electoral College consists of the Elector of the Hre.\n\nThe law of the Golden Bull influences the way Elector cast their vote due to the following factors:\n- the influence of the "
     ],
     [
      "r",
@@ -21270,7 +21270,7 @@
     ],
     [
      "t",
-     ", we can try to ShowCabinetActionName('study_institutions')."
+     ", we can try to Study Institutions."
     ]
    ],
    "facets": {
@@ -21759,7 +21759,7 @@
     ],
     [
      "t",
-     " defines its overall structure, such as the interactions that can be had with it, or its leadership structure.\n\nEach International Organization belongs to one of the types below.\nShowDatabaseWithIcon('International Organization Type')"
+     " defines its overall structure, such as the interactions that can be had with it, or its leadership structure.\n\nEach International Organization belongs to one of the types below.\nInternational Organization Type"
     ]
    ],
    "facets": {
@@ -21945,7 +21945,7 @@
    "desc": [
     [
      "t",
-     "A K'atun is a measure of time of the ShowReligionAdjective('mayan') people, it corresponds to 19.7 years. The end of one K'atun and start of a new one was marked by many ceremonies and festivities, making the occasion a truly important date for rulers and their people.\n\nIf by the time the current K'atun ends we have invested enough resources to prepare for the celebrations, we will gain ShowModifier('katun_celebration') for 10 years. On the other hand, if we are not ready we might gain ShowModifier('Katun Celebration Bad') for 10 years. We will be fully ready once our "
+     "A K'atun is a measure of time of the Maya people, it corresponds to 19.7 years. The end of one K'atun and start of a new one was marked by many ceremonies and festivities, making the occasion a truly important date for rulers and their people.\n\nIf by the time the current K'atun ends we have invested enough resources to prepare for the celebrations, we will gain Katun Celebration for 10 years. On the other hand, if we are not ready we might gain Katun Celebration Bad for 10 years. We will be fully ready once our "
     ],
     [
      "r",
@@ -22642,7 +22642,7 @@
     ],
     [
      "t",
-     ". This status may be declared on a woman with the ShowCharacterInteractionName('prefection') "
+     ". This status may be declared on a woman with the Prefection "
     ],
     [
      "r",
@@ -23078,7 +23078,7 @@
     ],
     [
      "t",
-     ". Some religions, like ShowReligionName('catholic'), have a fixed Liturgical Language that can not be changed, but other religions allow countries to change it. The "
+     ". Some religions, like Catholicism, have a fixed Liturgical Language that can not be changed, but other religions allow countries to change it. The "
     ],
     [
      "r",
@@ -23581,7 +23581,7 @@
     ],
     [
      "t",
-     ", if it has a ShowBuildingTypeName('castle'), as well as its "
+     ", if it has a Castle, as well as its "
     ],
     [
      "r",
@@ -23673,7 +23673,7 @@
     ],
     [
      "t",
-     ".\n\nShowDatabaseWithIcon('location_rank')"
+     ".\n\nLocation Rank"
     ]
    ],
    "facets": {
@@ -23891,7 +23891,7 @@
     ],
     [
      "t",
-     " ShowModifier('looted') "
+     " Looted "
     ],
     [
      "r",
@@ -23972,7 +23972,7 @@
     ],
     [
      "t",
-     ":\n    • ShowPopTypeName('laborers')\n    • ShowPopTypeName('soldiers')\n    • ShowPopTypeName('peasants')\n    • ShowPopTypeName('tribesmen')\n    • ShowPopTypeName('slaves')"
+     ":\n    • Laborers\n    • Soldiers\n    • Peasants\n    • Tribesmen\n    • Slaves"
     ]
    ],
    "facets": {
@@ -24865,7 +24865,7 @@
     ],
     [
      "t",
-     " spoken by the majority of the ShowPopTypeName('burghers') in the "
+     " spoken by the majority of the Burghers in the "
     ],
     [
      "r",
@@ -24874,7 +24874,7 @@
     ],
     [
      "t",
-     ".\n\nShowPopTypeNameWithNoTooltip('burghers') who already speak their market's Market Language are reluctant to give it up. Their "
+     ".\n\nBurghers who already speak their market's Market Language are reluctant to give it up. Their "
     ],
     [
      "r",
@@ -25128,7 +25128,7 @@
     ],
     [
      "t",
-     ", as well as with the ShowCabinetActionName('Increase Control Province') "
+     ", as well as with the Increase Control Province "
     ],
     [
      "r",
@@ -26165,7 +26165,7 @@
     ],
     [
      "t",
-     " like ShowPopTypeName('slaves') are permanently restricted from migrating, while others like ShowPopTypeName('peasants') may only move if they are allowed to by their "
+     " like Slaves are permanently restricted from migrating, while others like Peasants may only move if they are allowed to by their "
     ],
     [
      "r",
@@ -26448,7 +26448,7 @@
     ],
     [
      "t",
-     ", but cause a ShowModifier('Minor Rebel Uprising') in the affected "
+     ", but cause a Minor Rebel Uprising in the affected "
     ],
     [
      "r",
@@ -26457,7 +26457,7 @@
     ],
     [
      "t",
-     ", with the following penalties:\n\nShowModifierEffect('Minor Rebel Uprising')."
+     ", with the following penalties:\n\nMinor Rebel Uprising."
     ]
    ],
    "facets": {
@@ -27654,7 +27654,7 @@
     ],
     [
      "t",
-     " also has the following effect:\n\nShowModifierEffect('Is Navy Levy')"
+     " also has the following effect:\n\nIs Navy Levy"
     ]
    ],
    "facets": {
@@ -27927,7 +27927,7 @@
     ],
     [
      "t",
-     ", but some things like the ShowSituationName('black_death') can not be avoided like that."
+     ", but some things like the Black Death can not be avoided like that."
     ]
    ],
    "facets": {
@@ -28216,7 +28216,7 @@
    "desc": [
     [
      "t",
-     "Omens are phenomena in the ShowReligionAdjective('hellenism_religion') "
+     "Omens are phenomena in the Hellenism "
     ],
     [
      "r",
@@ -28234,7 +28234,7 @@
     ],
     [
      "t",
-     ". They are summoned with ShowGenericActionName('Select Omen God') and ShowGenericActionName('select_omen'). Their power is increased by the "
+     ". They are summoned with Select Omen God and Select Omen. Their power is increased by the "
     ],
     [
      "r",
@@ -28665,7 +28665,7 @@
     ],
     [
      "t",
-     ", and other factors.\nEffects apply to all ShowReligionAdjective('catholic') "
+     ", and other factors.\nEffects apply to all Catholicism "
     ],
     [
      "r",
@@ -28683,7 +28683,7 @@
     ],
     [
      "t",
-     " ≥ 75: ShowModifier('High Papal Authority')\n• "
+     " ≥ 75: High Papal Authority\n• "
     ],
     [
      "r",
@@ -28692,7 +28692,7 @@
     ],
     [
      "t",
-     " < 25: ShowModifier('Low Papal Authority')"
+     " < 25: Low Papal Authority"
     ]
    ],
    "facets": {
@@ -28730,7 +28730,7 @@
     ],
     [
      "t",
-     " of the ShowReligionAdjective('catholic') "
+     " of the Catholicism "
     ],
     [
      "r",
@@ -29385,7 +29385,7 @@
    "desc": [
     [
      "t",
-     "Patriarchs are the highest-ranking bishops in certain ShowReligionGroupAdjective('christian') "
+     "Patriarchs are the highest-ranking bishops in certain Christianity "
     ],
     [
      "r",
@@ -29695,7 +29695,7 @@
     ],
     [
      "t",
-     " between them, or even some special treaties like ShowPeaceTreatyTypeName('Abandon Colonial Claim'), ShowPeaceTreatyTypeName('execute_ruler'), or ShowPeaceTreatyTypeName('peace_humiliate')."
+     " between them, or even some special treaties like Abandon Colonial Claim, Execute Ruler, or Peace Humiliate."
     ]
    ],
    "facets": {
@@ -29731,7 +29731,7 @@
     ],
     [
      "t",
-     " belongs to the ShowEstateTypeName('peasants_estate'). The rest is transferred to the ShowEstateTypeName('nobles_estate').\n\nEnfranchisement depends mostly on the ShowSocietyDirectionName('free_subjects') Societal Value With Icon. Towns And Cities have a higher level than "
+     " belongs to the Commoners. The rest is transferred to the Nobility.\n\nEnfranchisement depends mostly on the Free Subjects Societal Value With Icon. Towns And Cities have a higher level than "
     ],
     [
      "r",
@@ -29767,7 +29767,7 @@
    "desc": [
     [
      "t",
-     "The Pentarchy represents the traditional seats of power of ShowReligionName('orthodox'). Each of the "
+     "The Pentarchy represents the traditional seats of power of Orthodoxy. Each of the "
     ],
     [
      "r",
@@ -30000,7 +30000,7 @@
     ],
     [
      "t",
-     " like ShowGoodsName('cotton'), ShowGoodsName('sugar'), and ShowGoodsName('tobacco').\n\nFor these buildings we would specifically need ShowPopTypeName('slaves')."
+     " like Cotton, Sugar, and Tobacco.\n\nFor these buildings we would specifically need Slaves."
     ]
    ],
    "facets": {
@@ -30119,7 +30119,7 @@
     ],
     [
      "t",
-     " they belong to. For example, a Pop belonging to the ShowEstateTypeName('nobles_estate') naturally exerts hundreds of times more Political Power than a Pop belonging to the ShowEstateTypeName('peasants_estate')."
+     " they belong to. For example, a Pop belonging to the Nobility naturally exerts hundreds of times more Political Power than a Pop belonging to the Commoners."
     ]
    ],
    "facets": {
@@ -30283,7 +30283,7 @@
     ],
     [
      "t",
-     ", and where they live. For instance, ShowPopTypeName('nobles') have much higher demands than the "
+     ", and where they live. For instance, Nobles have much higher demands than the "
     ],
     [
      "r",
@@ -30488,7 +30488,7 @@
     ],
     [
      "t",
-     " is defined to belonging to one of the social classes from below.\nShowDatabase('pop_type')"
+     " is defined to belonging to one of the social classes from below.\nPop Type"
     ]
    ],
    "facets": {
@@ -30684,7 +30684,7 @@
     ],
     [
      "t",
-     " with higher Power Projection can exploit nations with less. If ours is higher than another nation's, then we will be able to build a ShowBuildingTypeName('trade_office'), ShowBuildingTypeName('slave_center'), ShowBuildingTypeName('missionary_building'), or other specific buildings in their "
+     " with higher Power Projection can exploit nations with less. If ours is higher than another nation's, then we will be able to build a Trade Office, Slave Center, Mission, or other specific buildings in their "
     ],
     [
      "r",
@@ -31586,7 +31586,7 @@
     ],
     [
      "t",
-     " from ShowPopTypeName('peasants') when there are possible positions for them in their "
+     " from Peasants when there are possible positions for them in their "
     ],
     [
      "r",
@@ -32442,7 +32442,7 @@
     ],
     [
      "t",
-     " varies greatly with Topography With Icon and Vegetation With Icon. On land, it can be reduced by building Roads With Icon, increasing Development With Icon, and the ShowSocietyDirectionName('land') Societal Value With Icon. On sea, it can be reduced by Harbor Capacity With Icon, Maritime Presence With Icon and the ShowSocietyDirectionName('naval') "
+     " varies greatly with Topography With Icon and Vegetation With Icon. On land, it can be reduced by building Roads With Icon, increasing Development With Icon, and the Land Societal Value With Icon. On sea, it can be reduced by Harbor Capacity With Icon, Maritime Presence With Icon and the Naval "
     ],
     [
      "r",
@@ -32478,7 +32478,7 @@
     ],
     [
      "t",
-     " is according to ShowReligionName('shinto'). Purity is lost by contact with anything impure, such as killing and losing "
+     " is according to Shintō. Purity is lost by contact with anything impure, such as killing and losing "
     ],
     [
      "r",
@@ -32823,7 +32823,7 @@
    "desc": [
     [
      "t",
-     "ShowReligionAdjective('catholic') religion has internal conflicts between what is the correct doctrine or not, and about what is part of the faith or not. As time goes by, the desire to reform becomes bigger, and will impact any future discussion about the doctrine of ShowReligionNameWithNoTooltip('catholic')."
+     "Catholicism religion has internal conflicts between what is the correct doctrine or not, and about what is part of the faith or not. As time goes by, the desire to reform becomes bigger, and will impact any future discussion about the doctrine of Catholicism."
     ]
    ],
    "facets": {
@@ -32844,7 +32844,7 @@
    "desc": [
     [
      "t",
-     "The Reformation is an influential movement within the ShowReligionGroupAdjective('christian') World which fragments the ShowReligionAdjective('catholic') faith into several other religions. This movement starts with ShowSituationName('reformation') "
+     "The Reformation is an influential movement within the Christianity World which fragments the Catholicism faith into several other religions. This movement starts with Reformation "
     ],
     [
      "r",
@@ -32853,7 +32853,7 @@
     ],
     [
      "t",
-     ".\nThe following religions are part of the Reformation:\n    • ShowReligionName('hussite')\n    • ShowReligionName('lutheran')\n    • ShowReligionName('calvinist')\n    • ShowReligionName('anglican')"
+     ".\nThe following religions are part of the Reformation:\n    • Hussitism\n    • Lutheranism\n    • Calvinism\n    • Anglicanism"
     ]
    ],
    "facets": {
@@ -32936,7 +32936,7 @@
     ],
     [
      "t",
-     ".\n\nIn a ShowGovernmentTypeName('monarchy'), the "
+     ".\n\nIn a Monarchy, the "
     ],
     [
      "r",
@@ -33167,7 +33167,7 @@
     ],
     [
      "t",
-     ". ShowRegionName('scandinavian_region') would be an example of a Region."
+     ". Scandinavia would be an example of a Region."
     ]
    ],
    "facets": {
@@ -33268,7 +33268,7 @@
     ],
     [
      "t",
-     ", and ShowModifierTypeName('mercenary_range') — but its Enforce Peace, Intervene in Wars, and Threaten War anywhere in the world actions are limited to "
+     ", and Mercenary Range — but its Enforce Peace, Intervene in Wars, and Threaten War anywhere in the world actions are limited to "
     ],
     [
      "r",
@@ -33621,7 +33621,7 @@
     ],
     [
      "t",
-     ".\n\nExamples include ShowRelationTypeName('embargo_nation'), ShowRelationTypeName('Sound Toll Exemption') or ShowRelationTypeName('scutage')."
+     ".\n\nExamples include Embargo Nation, Sound Toll Exemption or Scutage."
     ]
    ],
    "facets": {
@@ -33904,7 +33904,7 @@
     ],
     [
      "t",
-     " directly, we can invite religious figures of other schools to draw inspiration from them and gain some of their benefits. A religious figure can be any of the types below.\nShowDatabase('religious_figures')"
+     " directly, we can invite religious figures of other schools to draw inspiration from them and gain some of their benefits. A religious figure can be any of the types below.\nReligious Figures"
     ]
    ],
    "facets": {
@@ -34471,7 +34471,7 @@
     ],
     [
      "t",
-     " country. The most prominent examples in the game are the Crusades and Jihads of the ShowReligionGroupAdjective('christian') and ShowReligionGroupAdjective('muslim') "
+     " country. The most prominent examples in the game are the Crusades and Jihads of the Christianity and Islam "
     ],
     [
      "r",
@@ -34563,7 +34563,7 @@
    "desc": [
     [
      "t",
-     "Republican Tradition measures how well Republicanism is entrenched in our country. Republican Tradition represents how strong the traditions are in a ShowGovernmentTypeName('republic'). A ShowGovernmentTypeNameWithNoTooltip('republic') elects a new "
+     "Republican Tradition measures how well Republicanism is entrenched in our country. Republican Tradition represents how strong the traditions are in a Republic. A Republic elects a new "
     ],
     [
      "r",
@@ -34647,7 +34647,7 @@
     ],
     [
      "t",
-     " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
+     " of our Clergy, and the number of Institutions With Icon we have "
     ],
     [
      "r",
@@ -34692,7 +34692,7 @@
     ],
     [
      "t",
-     " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
+     " of our Clergy, and the number of Institutions With Icon we have "
     ],
     [
      "r",
@@ -35029,7 +35029,7 @@
     ],
     [
      "t",
-     " during the ShowAgeName('Age 6 Revolutions'). States which go through the ShowDisasterName('revolution_disaster') and fail to defend their absolute state might become "
+     " during the Age 6 Revolutions. States which go through the Revolution Disaster and fail to defend their absolute state might become "
     ],
     [
      "r",
@@ -35220,7 +35220,7 @@
     ],
     [
      "t",
-     ".\n\n    • ShowPopTypeName('laborers')\n    • ShowPopTypeName('slaves')"
+     ".\n\n    • Laborers\n    • Slaves"
     ]
    ],
    "facets": {
@@ -36256,7 +36256,7 @@
    "desc": [
     [
      "t",
-     "A Sect is one of the many branches of ShowReligionGroupName('buddhist'), each one focusing on different teachings and ways of following the path of the Buddha to reach enlightenment."
+     "A Sect is one of the many branches of Buddhism, each one focusing on different teachings and ways of following the path of the Buddha to reach enlightenment."
     ]
    ],
    "facets": {
@@ -36865,7 +36865,7 @@
    "desc": [
     [
      "t",
-     "This is the measure of strength of a particular opposing side during the ShowSituationName('Fall Of Delhi') "
+     "This is the measure of strength of a particular opposing side during the Fall Of Delhi "
     ],
     [
      "r",
@@ -37107,7 +37107,7 @@
     ],
     [
      "t",
-     ", and/or are happening over a period of time.\n\nSome of the most important Situations include the ShowSituationName('black_death') and ShowSituationName('reformation').\n\nThe Situations of the ShowAgeName('Age 1 Traditions'):\n• Hundred Years' War\n• Guelphs and Ghibellines\n• Rise of the Turks\n• Nanbokuchō Jidai\n• Fall of Delhi\n\nThe Situations of the ShowAgeName('Age 2 Renaissance'):\n• Black Death\n• Hussite Wars\n• Red Turban Rebellions\n• Rise of Timur\n• Western Schism\n\nThe Situations of the ShowAgeName('Age 3 Discovery'):\n• Great Pestilence\n• Italian Wars\n• The Reformation\n• Sengoku Jidai\n• Treaty of Tordesillas\n\nThe Situations of the ShowAgeName('Age 4 Reformation'):\n• Council of Trent\n• War of Religions\n\nThe Situations of the ShowAgeName('Age 5 Absolutism'):\n• Columbian Exchange\n• Golden Age of Piracy\n• Little Ice Age\n\nThe Situations of the ShowAgeName('Age 6 Revolutions'):\n• Colonial Revolution\n• People's Uprising"
+     ", and/or are happening over a period of time.\n\nSome of the most important Situations include the Black Death and Reformation.\n\nThe Situations of the Age 1 Traditions:\n• Hundred Years' War\n• Guelphs and Ghibellines\n• Rise of the Turks\n• Nanbokuchō Jidai\n• Fall of Delhi\n\nThe Situations of the Age 2 Renaissance:\n• Black Death\n• Hussite Wars\n• Red Turban Rebellions\n• Rise of Timur\n• Western Schism\n\nThe Situations of the Age 3 Discovery:\n• Great Pestilence\n• Italian Wars\n• The Reformation\n• Sengoku Jidai\n• Treaty of Tordesillas\n\nThe Situations of the Age 4 Reformation:\n• Council of Trent\n• War of Religions\n\nThe Situations of the Age 5 Absolutism:\n• Columbian Exchange\n• Golden Age of Piracy\n• Little Ice Age\n\nThe Situations of the Age 6 Revolutions:\n• Colonial Revolution\n• People's Uprising"
     ]
    ],
    "facets": {
@@ -37145,7 +37145,7 @@
     ],
     [
      "t",
-     " is active. They vanish once the situation is resolved.\n\nSome examples are ShowGenericActionName('Hide From Black Death') and ShowGenericActionName('Rtr Rekindle Revolt')."
+     " is active. They vanish once the situation is resolved.\n\nSome examples are Hide From Black Death and Rtr Rekindle Revolt."
     ]
    ],
    "facets": {
@@ -37163,7 +37163,7 @@
    "desc": [
     [
      "t",
-     "Measures how inflamed the ShowSituationName('italian_wars') have become. It rises passively each month and faster when League leaders are actively at war. Higher Tension makes all League leaders more aggressive and shortens the time between their wars.\n\nTension drops significantly when a League is dissolved via a peace deal."
+     "Measures how inflamed the Italian Wars have become. It rises passively each month and faster when League leaders are actively at war. Higher Tension makes all League leaders more aggressive and shortens the time between their wars.\n\nTension drops significantly when a League is dissolved via a peace deal."
     ]
    ],
    "facets": {
@@ -37336,7 +37336,7 @@
     ],
     [
      "t",
-     ", and it drifts slowly over time towards one of the two poles. However, progress towards one pole will stall at a maximum, determined by the total amount of factors pushing it in that direction. The higher a Societal Value, the more factors are needed to push it further.\n\nShowDatabase('societal_values')"
+     ", and it drifts slowly over time towards one of the two poles. However, progress towards one pole will stall at a maximum, determined by the total amount of factors pushing it in that direction. The higher a Societal Value, the more factors are needed to push it further.\n\nSocietal Values"
     ]
    ],
    "facets": {
@@ -37422,7 +37422,7 @@
     ],
     [
      "t",
-     " traveling past it. For example:\n    • ShowLocationName('oresund')\n    • ShowLocationName('gulf_izmit')\n\nEach Sound Toll is linked to a specific land "
+     " traveling past it. For example:\n    • Oresund\n    • Gulf Izmit\n\nEach Sound Toll is linked to a specific land "
     ],
     [
      "r",
@@ -37736,7 +37736,7 @@
     ],
     [
      "t",
-     " on it or having enough ShowEstateTypeName('clergy_estate') of the "
+     " on it or having enough Clergy of the "
     ],
     [
      "r",
@@ -37801,7 +37801,7 @@
     ],
     [
      "t",
-     " will starve and die.\n\nThis gives the following effect:\nShowModifierEffect('province_starving')"
+     " will starve and die.\n\nThis gives the following effect:\nProvince Starving"
     ]
    ],
    "facets": {
@@ -38242,7 +38242,7 @@
     ],
     [
      "t",
-     ". ShowSubContinentName('western_europe') or India are examples of a Subcontinent."
+     ". Western Europe or India are examples of a Subcontinent."
     ]
    ],
    "facets": {
@@ -38518,7 +38518,7 @@
     ],
     [
      "t",
-     ", and can be further decreased with the ShowCabinetActionName('sow_disloyalty') "
+     ", and can be further decreased with the Sow Disloyalty "
     ],
     [
      "r",
@@ -39994,7 +39994,7 @@
     ],
     [
      "t",
-     " of the ShowReligionAdjective('catholic') faith in countries following the same faith, and given to the Papacy. Countries with negative "
+     " of the Catholicism faith in countries following the same faith, and given to the Papacy. Countries with negative "
     ],
     [
      "r",
@@ -40445,7 +40445,7 @@
     ],
     [
      "t",
-     ", and allows for the flourishing of ShowPopTypeName('burghers'). It is the opposite of a "
+     ", and allows for the flourishing of Burghers. It is the opposite of a "
     ],
     [
      "r",
@@ -40463,7 +40463,7 @@
     ],
     [
      "t",
-     " can be a ShowLocationRankName('town'), a ShowLocationRankName('city'), or a ShowLocationRankName('megalopolis')."
+     " can be a Town, a City, or a Megalopolis."
     ]
    ],
    "facets": {
@@ -40517,7 +40517,7 @@
     ],
     [
      "t",
-     " start with access to historical Urban Rights, and a number of them are granted from 1337. Later on, starting in the ShowAgeName('Age 3 Discovery'), all "
+     " start with access to historical Urban Rights, and a number of them are granted from 1337. Later on, starting in the Age 3 Discovery, all "
     ],
     [
      "r",
@@ -40526,7 +40526,7 @@
     ],
     [
      "t",
-     " can research the advance_iconShowAdvanceName('Town Rights Enable') "
+     " can research the advance_iconTown Rights Enable "
     ],
     [
      "r",
@@ -40553,7 +40553,7 @@
     ],
     [
      "t",
-     ".\n\nBy default, a ShowLocationRankName('town') can have 1 Urban Right, a ShowLocationRankName('city') can have 2, and a ShowLocationRankName('megalopolis') can have 3, although some "
+     ".\n\nBy default, a Town can have 1 Urban Right, a City can have 2, and a Megalopolis can have 3, although some "
     ],
     [
      "r",
@@ -41205,7 +41205,7 @@
    "desc": [
     [
      "t",
-     "Tribal Cohesion is a measure of how aligned the members of our ShowGovernmentTypeName('tribe') are in terms of "
+     "Tribal Cohesion is a measure of how aligned the members of our Tribe are in terms of "
     ],
     [
      "r",
@@ -41223,7 +41223,7 @@
     ],
     [
      "t",
-     ". At low levels, running the ShowGovernmentTypeNameWithNoTooltip('tribe') will be like herding cats, with everyone wanting to do their own thing. This should be kept high for the ShowGovernmentTypeNameWithNoTooltip('tribe') to be run smoothly."
+     ". At low levels, running the Tribe will be like herding cats, with everyone wanting to do their own thing. This should be kept high for the Tribe to be run smoothly."
     ]
    ],
    "facets": {
@@ -41844,7 +41844,7 @@
    "desc": [
     [
      "t",
-     "This is the name for orders like ShowUnitAbilityName('drill_army') or ShowUnitAbilityName('March To Sound Of Guns'), which can be given to "
+     "This is the name for orders like Drill Army or March To Sound Of Guns, which can be given to "
     ],
     [
      "r",
@@ -41893,7 +41893,7 @@
     ],
     [
      "t",
-     " always belongs to one of the following categories.\nShowDatabase('unit_category')"
+     " always belongs to one of the following categories.\nUnit Category"
     ]
    ],
    "facets": {
@@ -42064,7 +42064,7 @@
     ],
     [
      "t",
-     " include ShowUnitDefinitionName('n_cog'), ShowUnitDefinitionName('n_twodecker'), and ShowUnitDefinitionName('n_xebec'), while "
+     " include Cog, Two-decker, and Xebec, while "
     ],
     [
      "r",
@@ -42073,7 +42073,7 @@
     ],
     [
      "t",
-     " include ShowUnitDefinitionName('a_arquebusiers') and ShowUnitDefinitionName('a_cavaliers') amongst many more."
+     " include Arquebusiers and Cavaliers amongst many more."
     ]
    ],
    "facets": {
@@ -42244,7 +42244,7 @@
     ],
     [
      "t",
-     ":\n    • ShowPopTypeName('nobles')\n    • ShowPopTypeName('clergy')\n    • ShowPopTypeName('burghers')"
+     ":\n    • Nobles\n    • Clergy\n    • Burghers"
     ]
    ],
    "facets": {
@@ -42690,7 +42690,7 @@
     ],
     [
      "t",
-     ". These are the effects at 1 War Exhaustion:\nShowAutoModifierEffect('War Exhaustion Impact')"
+     ". These are the effects at 1 War Exhaustion:\nWar Exhaustion Impact"
     ]
    ],
    "facets": {
@@ -43072,7 +43072,7 @@
     ],
     [
      "t",
-     ". If there are ShowPopTypeName('burghers') present in the "
+     ". If there are Burghers present in the "
     ],
     [
      "r",
@@ -43306,7 +43306,7 @@
     ],
     [
      "t",
-     ". ShowPopTypeName('nobles') get a much bigger share per capita than ShowPopTypeName('burghers'), which in turn get a much bigger share per capita than ShowPopTypeName('peasants').\n\nDepending on the ShowModifierTypeName('Local Peasant Enfranchisment') in a "
+     ". Nobles get a much bigger share per capita than Burghers, which in turn get a much bigger share per capita than Peasants.\n\nDepending on the Local Peasant Enfranchisment in a "
     ],
     [
      "r",
@@ -43315,7 +43315,7 @@
     ],
     [
      "t",
-     ", a percentage of the share of the ShowEstateTypeName('peasants_estate') is transferred to the ShowEstateTypeName('nobles_estate')."
+     ", a percentage of the share of the Commoners is transferred to the Nobility."
     ]
    ],
    "facets": {
@@ -43520,7 +43520,7 @@
     ],
     [
      "t",
-     " with ShowTopographyName('mountains') "
+     " with Mountains "
     ],
     [
      "r",
@@ -43601,7 +43601,7 @@
     ],
     [
      "t",
-     ".\n\nThe Winter Levels are as follows:\n- ShowModifier('winter_none')\n- ShowModifier('winter_mild')\n- ShowModifier('winter_normal')\n- ShowModifier('winter_severe')"
+     ".\n\nThe Winter Levels are as follows:\n- Winter None\n- Winter Mild\n- Winter Normal\n- Winter Severe"
     ]
    ],
    "facets": {
@@ -43729,7 +43729,7 @@
    "desc": [
     [
      "t",
-     "Yanantin represents the balance between two complementary but opposing entities. Following the mindset of the ShowCultureGroupName('andean_group') "
+     "Yanantin represents the balance between two complementary but opposing entities. Following the mindset of the Andean "
     ],
     [
      "r",

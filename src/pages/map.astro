@@ -214,10 +214,25 @@ import Base from '../layouts/Base.astro';
     function paintHighlight() {
       if (!filter || !idData || !L) { hl.hidden = true; return; }
       const f = field();
+      // Culture and religion shade by pop share — a location that is 90%
+      // Swedish burns brighter than one that is 20% — which is how the game
+      // shows them. Everything else is present/absent.
+      const shareField = mode === 'culture' ? 'culture' : mode === 'religion' ? 'religion' : null;
+      const shareIx = shareField
+        ? (L.shareNames?.[shareField] || []).indexOf(filter) : -1;
+      const useShare = shareField !== null && shareIx >= 0 && L.shares?.[shareField];
+
       const match = new Uint8Array(L.locations.length);
       const land = new Uint8Array(L.locations.length);
       for (let i = 0; i < L.locations.length; i++) {
-        if (L.locations[i][f] === filter) match[i] = 1;
+        if (useShare) {
+          const row = L.shares[shareField][i] || [];
+          const hit = row.find((e: number[]) => e[0] === shareIx);
+          // keep a floor so a 3% presence is still visible
+          if (hit) match[i] = Math.max(20, Math.min(100, hit[1]));
+        } else if (L.locations[i][f] === filter) {
+          match[i] = 100;
+        }
         if (L.locations[i][13]) land[i] = 1;
       }
       // A bright fixed highlight, not the value's own colour: many in-game
@@ -232,7 +247,12 @@ import Base from '../layouts/Base.astro';
         const k = p * 4;
         const ix = (src[k] << 16) | (src[k + 1] << 8) | src[k + 2];
         if (ix !== 0xFFFFFF && match[ix]) {
-          o[k] = cr; o[k + 1] = cg; o[k + 2] = cb; o[k + 3] = 255;
+          // blend the highlight toward the dim land colour by pop share
+          const a = match[ix] / 100;
+          o[k] = Math.round(58 + (cr - 58) * a);
+          o[k + 1] = Math.round(64 + (cg - 64) * a);
+          o[k + 2] = Math.round(78 + (cb - 78) * a);
+          o[k + 3] = 255;
         } else if (ix !== 0xFFFFFF && land[ix]) {
           o[k] = 58; o[k + 1] = 64; o[k + 2] = 78; o[k + 3] = 255;   // other land
         } else {
@@ -248,7 +268,12 @@ import Base from '../layouts/Base.astro';
       const box = $('[data-mp-list]');
       if (!filter) { box.innerHTML = ''; return; }
       const f = field();
-      const hits = L.locations.filter((r: any) => r[f] === filter);
+      const shareField2 = mode === 'culture' ? 'culture' : mode === 'religion' ? 'religion' : null;
+      const six = shareField2 ? (L.shareNames?.[shareField2] || []).indexOf(filter) : -1;
+      const hits = six >= 0 && L.shares?.[shareField2]
+        ? L.locations.filter((_: any, i: number) =>
+            (L.shares[shareField2][i] || []).some((e: number[]) => e[0] === six))
+        : L.locations.filter((r: any) => r[f] === filter);
       const byArea = new Map<string, any[]>();
       for (const r of hits) {
         const key = r[5] || '—';

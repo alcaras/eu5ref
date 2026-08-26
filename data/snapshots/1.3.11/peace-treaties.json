@@ -4,7 +4,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed2cdf8-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb75e0f6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -23,7 +23,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed95a1a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3398-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -42,7 +42,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed95b8c-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3514-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -61,12 +61,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed95cae-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c362c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "[game concept TARGET COUNTRY] is not fit to rule over the [game concept TARGET COUNTRY]! We shall take over the burden of leadership, and assume the seniority over the Union."
+          "[game_concept_TARGET_COUNTRY] is not fit to rule over the [game concept TARGET COUNTRY]! We shall take over the burden of leadership, and assume the seniority over the Union."
         ]
       ],
       "facets": {},
@@ -80,7 +80,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed95e02-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c378a-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -99,7 +99,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed95f06-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c38ac-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -118,12 +118,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96028-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c39f6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "[game concept TARGET COUNTRY] has gained too much influence within our court. They shall be ousted out of government, and the Union shall no longer dictate our fate."
+          "[game_concept_TARGET_COUNTRY] has gained too much influence within our court. They shall be ousted out of government, and the Union shall no longer dictate our fate."
         ]
       ],
       "facets": {},
@@ -137,7 +137,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9610e-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3adc-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -156,7 +156,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98332-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5db4-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -175,7 +175,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98bb6-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c66b0-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -194,7 +194,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9628a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3c3a-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -213,7 +213,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9646a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3e24-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -232,7 +232,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96a64-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c43f6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -251,7 +251,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96bc2-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4522-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -270,7 +270,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96e7e-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c47d4-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -289,7 +289,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96f50-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c48a6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -308,7 +308,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97018-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4978-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -327,7 +327,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97126-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4acc-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -346,7 +346,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97202-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4b94-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -365,7 +365,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9757c-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4f54-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -384,7 +384,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed977b6-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c51b6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -403,7 +403,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed978d8-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c52ce-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -431,7 +431,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97e82-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c58d2-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -450,7 +450,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97f90-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c59ea-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -469,7 +469,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97c34-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c563e-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -488,7 +488,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97d60-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c579c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -507,7 +507,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98062-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5aa8-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -526,7 +526,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed985f8-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c60c0-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -545,7 +545,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed986d4-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6192-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -564,7 +564,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed983fa-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5e90-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -583,12 +583,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed965be-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c3f78-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "Claim the [game concept TARGET COUNTRY] of [game concept TARGET COUNTRY] for the [game concept COUNTRY] dynasty!"
+          "Claim the [game_concept_TARGET_COUNTRY] of [game_concept_TARGET_COUNTRY] for the [game concept COUNTRY] dynasty!"
         ]
       ],
       "facets": {},
@@ -602,7 +602,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed968f2-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c42b6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -621,7 +621,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96d84-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c46da-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -640,7 +640,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97324-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c4cc0-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -659,7 +659,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed984fe-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5fbc-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -678,7 +678,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed976da-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c50da-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -697,12 +697,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed97ad6-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c54ea-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "[game concept TARGET COUNTRY] changes their allegiance to Country, forcing them to join our cause."
+          "[game_concept_TARGET_COUNTRY] changes their allegiance to Country, forcing them to join our cause."
         ]
       ],
       "facets": {},
@@ -716,7 +716,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed979e6-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c53fa-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -735,7 +735,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98170-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5be8-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -754,7 +754,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed987ec-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c62c8-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -773,7 +773,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99b60-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c7722-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -792,7 +792,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed988c8-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6390-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -811,7 +811,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed96762-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c413a-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -830,7 +830,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98e40-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6958-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -849,12 +849,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed989f4-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c64bc-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "[game concept TARGET COUNTRY] is far too weak to stand up to the influence of Delhi during the Fall of Delhi ["
+          "[game_concept_TARGET_COUNTRY] is far too weak to stand up to the influence of Delhi during the Fall of Delhi ["
         ],
         [
           "r",
@@ -877,7 +877,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99cc8-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c789e-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -896,7 +896,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99da4-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c7984-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -915,7 +915,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98ad0-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c65d4-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -934,7 +934,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98c9c-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c67a0-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -953,7 +953,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98d78-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c687c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -972,7 +972,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed990fc-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6c32-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1018,7 +1018,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9921e-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6d7c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1046,7 +1046,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98fda-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6b10-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1083,7 +1083,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed98f12-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6a34-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1102,7 +1102,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99304-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6e58-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1121,7 +1121,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed996e2-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c727c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1140,7 +1140,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed997d2-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c736c-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1159,7 +1159,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99890-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c7448-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1178,7 +1178,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9998a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c7542-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1197,12 +1197,12 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99a5c-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c761e-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
           "t",
-          "The Gods demand a ready supply of sacrifices wealth, which [game concept TARGET COUNTRY] will provide."
+          "The Gods demand a ready supply of sacrifices wealth, which [game_concept_TARGET_COUNTRY] will provide."
         ]
       ],
       "facets": {},
@@ -1216,7 +1216,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9826a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c5cec-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1235,7 +1235,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed99516-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c70a6-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1254,7 +1254,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed993fe-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c6f66-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [
@@ -1273,7 +1273,7 @@
     {
       "color": null,
       "data": {
-        "cost": "inline_script_value_0ed9961a-a164-11f1-875c-e6607317b287"
+        "cost": "inline_script_value_eb7c71aa-a187-11f1-86bb-e6607317b287"
       },
       "desc": [
         [

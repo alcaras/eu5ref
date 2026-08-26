@@ -130,6 +130,9 @@ _RE_BRACKET = re.compile(r'\[([^\[\]]+)\]')
 # a bare script id left in prose (`byz_andronikos_ii_palaiologos`) — three or
 # more snake_case segments never occur in real sentences
 _RE_BARE_ID = re.compile(r'\b[a-z][a-z0-9]*(?:_[a-z0-9]+){2,}\b')
+# a scope call the toolkit already unwrapped from its brackets, leaving
+# `Target_Character.GetNameWithNoTooltip` sitting in the prose
+_RE_BARE_SCOPE = re.compile(r'\b([A-Za-z][\w]*)\.(?:Get|Show)\w+\b')
 
 
 def _resolve_lockeys(text: str, depth: int = 0) -> str:
@@ -141,6 +144,18 @@ def _resolve_lockeys(text: str, depth: int = 0) -> str:
                 return _resolve_lockeys(val, depth + 1)
         return ''  # runtime variable ($VAL$ etc.) — drop
     return _RE_LOCKEY.sub(sub, text)
+
+
+# Scope names the toolkit leaves behind. ROOT is the country the text is
+# about, which reads better than the raw token.
+_SCOPE_WORDS = {'root': 'our country', 'prev': 'it', 'this': 'it', 'from': 'them'}
+
+
+def _scope_label(scope: str) -> str:
+    tail = scope.split('_')[-1].lower()
+    if tail in _SCOPE_WORDS:
+        return _SCOPE_WORDS[tail]
+    return pretty(scope)
 
 
 def _bracket_to_token(inner: str):
@@ -156,7 +171,8 @@ def _bracket_to_token(inner: str):
     # Scope lookups like `GetCountry('BYZ').GetName` or
     # `GetCharacter('byz_andronikos_iii').GetNicknameWithNoTooltip` — render
     # the thing being named, not the call.
-    m = re.match(r"Get\w+\(\s*'([^']+)'\s*\)", body)
+    # Get…('x') and Show…('x') both name a thing; render the thing.
+    m = re.match(r"(?:Get|Show)\w+\(\s*'([^']+)'\s*\)", body)
     if m:
         key = m.group(1)
         try:
@@ -178,6 +194,12 @@ def rich(text: str | None) -> list | None:
     s = _RE_FORMAT.sub(r'\1', s)
     s = _RE_ICON.sub('', s)
     s = s.replace('\\n', '\n')
+    # chained calls (`x.GetGovernment.GetName`) need more than one pass
+    for _ in range(4):
+        s2 = _RE_BARE_SCOPE.sub(lambda m: _scope_label(m.group(1)), s)
+        if s2 == s:
+            break
+        s = s2
     s = _RE_BARE_ID.sub(lambda m: pretty(m.group(0)), s)
     tokens = []
     pos = 0

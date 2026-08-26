@@ -1,0 +1,2653 @@
+{
+  "dataset": "values",
+  "entities": [
+    {
+      "data": {
+        "id": "centralization_vs_decentralization",
+        "left": {
+          "key": "centralization",
+          "name": "Centralization"
+        },
+        "left_mods": [
+          {
+            "key": "global_crown_estate_power",
+            "label": "Crown Power",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "global_distance_from_capital_speed_propagation",
+            "label": "Proximity Efficiency",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "subject_loyalty",
+            "label": "Loyalty of Subjects",
+            "polarity": "bad",
+            "value": "−20.00"
+          },
+          {
+            "key": "annexation_speed_modifier",
+            "label": "Speed of Annexation",
+            "polarity": "good",
+            "value": "+33.00%"
+          },
+          {
+            "key": "control_importance_modifier",
+            "label": "Control Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          }
+        ],
+        "movers": [
+          "general_archive_of_simancas",
+          "the_cipher_secretary",
+          "merge_culture_group",
+          "autonomous_kadiluks",
+          "autonomous_local_commanders",
+          "peasants_autonomous_villages",
+          "ayans_privilege",
+          "bavarian_share_of_land",
+          "bashtinas_and_pronijas_grants",
+          "building_roads_rights",
+          "peasants_in_administration",
+          "communal_lands",
+          "cossacks_land_rights",
+          "district_paving_privilege",
+          "embellish_great_works_of_faith",
+          "formalized_oath",
+          "noble_fortification_licenses",
+          "french_cardinals",
+          "ghazi_privilege",
+          "hurin_qusqu_privilege",
+          "kormlenije",
+          "manifesto_of_freedom",
+          "manorial_courts",
+          "market_fairs",
+          "monetary_fiefs",
+          "pacta_conventa",
+          "permanent_residence_in_versailles",
+          "petty_bureaucracy",
+          "powerful_italian_families",
+          "recognized_communes",
+          "residence_in_versailles",
+          "sco_statutes_of_iona",
+          "tribes_in_administration",
+          "tribes_land_rights",
+          "villes_franches",
+          "visconti_city_states",
+          "local_administration",
+          "administrative_system",
+          "battle_leadership_law",
+          "jap_buke_shohatto",
+          "legal_framework",
+          "bureaucracy_law",
+          "cabinet_laws",
+          "clan_diplomacy",
+          "colonial_policy",
+          "cultural_traditions_law",
+          "distribution_of_power_law",
+          "sco_clan_holdings",
+          "economic_framework",
+          "por_estudo_geral_law",
+          "imperial_examination_law",
+          "formal_script",
+          "guru_arjan_guruship",
+          "guru_har_rai_guruship",
+          "harem_law",
+          "iqta_law",
+          "tribal_legal_basis_law",
+          "legal_code_law",
+          "medieval_levy_law",
+          "republican_power_law",
+          "burghers_rights_laws",
+          "peasants_rights_laws",
+          "nobles_rights_laws",
+          "royal_court_customs_law",
+          "six_ministries_overseer_law",
+          "fra_taille",
+          "tribal_cultural_identity_law",
+          "tribal_organization_law",
+          "development_of_infrastructure",
+          "found_college_of_justice",
+          "autonomous_estates",
+          "autonomous_swiss_cantons_reform",
+          "celtic_traditions_reform",
+          "centralization_of_power_act",
+          "chosen_rada_reform",
+          "theme_system",
+          "expanded_posadnichestvo_office",
+          "jianzhou_jurchen_reform",
+          "joint_ruling_monarchy",
+          "judicate_reform",
+          "katepanata",
+          "livonian_confederation",
+          "malian_tribute_system",
+          "mandala_system",
+          "manden_kurufa_reform",
+          "mining_communities",
+          "nueva_planta",
+          "oprichnina",
+          "turkish_pashas",
+          "peasant_republic_reform",
+          "prikazi_reform",
+          "privy_council",
+          "provincial_taxation_system",
+          "reformed_nahuatl_society",
+          "representative_assemblies",
+          "the_combination_act",
+          "royal_commission_act",
+          "royal_council_of_castile",
+          "royal_decree",
+          "seven_provinces",
+          "signoria_reform",
+          "lit_grand_duchy_of_lithuania_reform",
+          "dan_the_kings_law",
+          "timurid_diwan_reform",
+          "voivode_reform",
+          "altepetl",
+          "crown_as_head_of_faith",
+          "twelve_emissaries",
+          "fiefdom",
+          "pronoia",
+          "uc_bey",
+          "vassal"
+        ],
+        "right": {
+          "key": "decentralization",
+          "name": "Decentralization"
+        },
+        "right_mods": [
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "medium_permanent_target_satisfaction"
+          },
+          {
+            "key": "global_estate_satisfaction_recovery",
+            "label": "Estates Satisfaction Recovery",
+            "polarity": "neutral",
+            "value": "+0.20%"
+          },
+          {
+            "key": "subject_loyalty",
+            "label": "Loyalty of Subjects",
+            "polarity": "good",
+            "value": "+30.00"
+          },
+          {
+            "key": "annexation_speed_modifier",
+            "label": "Speed of Annexation",
+            "polarity": "bad",
+            "value": "−33.00%"
+          },
+          {
+            "key": "control_importance_modifier",
+            "label": "Control Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.10"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:centralization_vs_decentralization",
+      "mods": [],
+      "name": "Centralization vs Decentralization",
+      "slug": "centralization-vs-decentralization",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "traditionalist_vs_innovative",
+        "left": {
+          "key": "traditionalist",
+          "name": "Traditionalist"
+        },
+        "left_mods": [
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "small_permanent_target_satisfaction"
+          },
+          {
+            "key": "cultural_tradition_modifier",
+            "label": "Cultural Tradition %",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "stability_cost_efficiency",
+            "label": "Stability Investment Efficiency",
+            "polarity": "good",
+            "value": "+40.00%"
+          },
+          {
+            "key": "embrace_institution_cost_modifier",
+            "label": "Embrace Institution Cost",
+            "polarity": "bad",
+            "value": "+200.00%"
+          },
+          {
+            "key": "language_change_threshold_modifier",
+            "label": "Language Change Threshold Modifier",
+            "polarity": "good",
+            "value": "+1.00"
+          },
+          {
+            "key": "societal_value_importance_modifier",
+            "label": "Societal Value Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "institution_importance_modifier",
+            "label": "Institution Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "bias_for_scholar_policies",
+            "label": "Bias for Scholar Policies",
+            "polarity": "bad",
+            "value": "−100.00"
+          },
+          {
+            "key": "national_lutheranism_movement_resistance_modifier",
+            "label": "Lutheranism Resistance Modifier",
+            "polarity": "good",
+            "value": "+5.00%"
+          },
+          {
+            "key": "national_calvinism_movement_resistance_modifier",
+            "label": "Calvinism Resistance Modifier",
+            "polarity": "good",
+            "value": "+5.00%"
+          }
+        ],
+        "movers": [
+          "al_azhar_madrasa",
+          "woodhenge_of_cahokia",
+          "kbo_sharia_courts",
+          "form_new_culture",
+          "commons_petition",
+          "control_over_monetary_policy",
+          "guild_investments",
+          "increased_civic_engagement",
+          "noble_patronage_of_the_arts",
+          "union_privilege",
+          "clergy_literacy_rights",
+          "scholar_officials",
+          "scottish_clans",
+          "treasury_rights",
+          "unity_brethren_privilege",
+          "urban_development_grants",
+          "immigration_law",
+          "cabinet_laws",
+          "censorship",
+          "divine_cause_law",
+          "education_elites_law",
+          "education_masses_law",
+          "formal_script",
+          "guru_amar_das_guruship",
+          "guru_angad_guruship",
+          "guru_arjan_guruship",
+          "guru_gobind_singh_guruship",
+          "guru_granth_sahib_guruship",
+          "harem_law",
+          "person_tenet",
+          "clergy_rights_laws",
+          "royal_court_customs_law",
+          "sharia_law",
+          "society_of_jesus",
+          "tribal_cultural_identity_law",
+          "cc_veneration_of_saints_and_reliquaries",
+          "progress_and_literacy",
+          "sponsor_a_confucian_academy",
+          "sponsor_a_university",
+          "support_religious_education",
+          "administration_of_clerical_lands",
+          "banu_hummay_amendments",
+          "the_espionage_act",
+          "enforce_religious_adherence",
+          "exchange_of_ideas",
+          "haudenosaunee_clan_mothers",
+          "papacy_reform",
+          "judicate_reform",
+          "licensing_of_the_press_act",
+          "the_education_act",
+          "national_assemblies",
+          "patrimonialism",
+          "religious_laws_enforced",
+          "yeren_jurchen_reform",
+          "adult_baptism",
+          "organized_through_bishops",
+          "eastward_prayer",
+          "modalism",
+          "mos_maiorum_aspect",
+          "participation_women",
+          "pietism",
+          "translated_bibles",
+          "latinization_vs_hellenization"
+        ],
+        "right": {
+          "key": "innovative",
+          "name": "Innovative"
+        },
+        "right_mods": [
+          {
+            "key": "global_max_literacy",
+            "label": "Max Literacy",
+            "polarity": "good",
+            "value": "+10.00"
+          },
+          {
+            "key": "cultural_influence_modifier",
+            "label": "Cultural Influence %",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "stability_cost_efficiency",
+            "label": "Stability Investment Efficiency",
+            "polarity": "bad",
+            "value": "−20.00%"
+          },
+          {
+            "key": "embrace_institution_cost_modifier",
+            "label": "Embrace Institution Cost",
+            "polarity": "good",
+            "value": "−50.00%"
+          },
+          {
+            "key": "language_change_threshold_modifier",
+            "label": "Language Change Threshold Modifier",
+            "polarity": "bad",
+            "value": "−1.00"
+          },
+          {
+            "key": "societal_value_importance_modifier",
+            "label": "Societal Value Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "institution_importance_modifier",
+            "label": "Institution Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "bias_for_scholar_policies",
+            "label": "Bias for Scholar Policies",
+            "polarity": "good",
+            "value": "+100.00"
+          },
+          {
+            "key": "national_lutheranism_movement_resistance_modifier",
+            "label": "Lutheranism Resistance Modifier",
+            "polarity": "bad",
+            "value": "−20.00%"
+          },
+          {
+            "key": "national_calvinism_movement_resistance_modifier",
+            "label": "Calvinism Resistance Modifier",
+            "polarity": "bad",
+            "value": "−20.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:traditionalist_vs_innovative",
+      "mods": [],
+      "name": "Traditionalist vs Innovative",
+      "slug": "traditionalist-vs-innovative",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "spiritualist_vs_humanist",
+        "left": {
+          "key": "spiritualist",
+          "name": "Spiritualist"
+        },
+        "left_mods": [
+          {
+            "key": "global_clergy_city_desired_pop_scaled",
+            "label": "Possible Clerics in Towns and Cities for each 1,000 population",
+            "polarity": "good",
+            "value": "+2.00%"
+          },
+          {
+            "key": "tolerance_own",
+            "label": "Tolerance of the True Faith",
+            "polarity": "good",
+            "value": "+2.00"
+          },
+          {
+            "key": "global_pop_conversion_speed_modifier",
+            "label": "Pop Conversion Speed %",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "global_pop_assimilation_speed_modifier",
+            "label": "Pop Assimilation Speed",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "religious_unity_importance_modifier",
+            "label": "Religious Unity Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "court_language_is_liturgical_language_importance_modifier",
+            "label": "Prefers Court Language to be Liturgical Language",
+            "polarity": "good",
+            "value": "+0.75"
+          },
+          {
+            "key": "bias_for_scholar_policies",
+            "label": "Bias for Scholar Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          },
+          {
+            "key": "bias_for_tolerant_policies",
+            "label": "Bias for Tolerant Policies",
+            "polarity": "bad",
+            "value": "−100.00"
+          },
+          {
+            "key": "antagonism_religion_influence",
+            "label": "Antagonism Religion Influence",
+            "polarity": "neutral",
+            "value": "+50.00%"
+          },
+          {
+            "key": "national_lutheranism_movement_resistance_modifier",
+            "label": "Lutheranism Resistance Modifier",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "national_calvinism_movement_resistance_modifier",
+            "label": "Calvinism Resistance Modifier",
+            "polarity": "good",
+            "value": "+10.00%"
+          }
+        ],
+        "movers": [
+          "usa_academy_of_arts_and_sciences",
+          "usa_philosophical_society",
+          "college_of_poets",
+          "greek_latin_academy",
+          "library_of_vijayanagar",
+          "moscow_orphanage",
+          "constantinople_observatory",
+          "stroganov_school_of_iconic_art",
+          "clergy_estate",
+          "dhimmi_estate",
+          "austere_monastic_life",
+          "clergy_in_administration",
+          "dhimmi_pact_of_umar",
+          "lit_equal_status_of_orthodox_nobility",
+          "clerical_advisory_council",
+          "tax_exemption",
+          "waqf_payments",
+          "warrior_tribunal",
+          "dhimmi_in_administration",
+          "principle_of_administration_law",
+          "jap_buke_shohatto",
+          "censorship",
+          "christological_debates_tenet",
+          "cultural_traditions_law",
+          "distribution_of_power_law",
+          "education_elites_law",
+          "education_masses_law",
+          "guru_amar_das_guruship",
+          "guru_gobind_singh_guruship",
+          "guru_har_krishan_guruship",
+          "guru_nanak_guruship",
+          "guru_ram_das_guruship",
+          "heir_religion_law",
+          "holy_mission_law",
+          "khalsa_law",
+          "native_policy",
+          "lat_orthodox_status_with_the_empire",
+          "cc_witchcraft",
+          "clergy_rights_laws",
+          "royal_court_customs_law",
+          "sharia_law",
+          "slave_conversion",
+          "tribal_modernization_law",
+          "increase_non_hindu_control",
+          "presbyterian_education",
+          "support_religious_art",
+          "sponsor_a_cathedral",
+          "tolerance_of_non_hindus",
+          "dan_college_of_missions",
+          "cultural_recognition_act",
+          "enlightened_aristocracy",
+          "feudal_theocracy",
+          "guru_leadership_reform",
+          "spanish_tolerance",
+          "nakaz_reform",
+          "primas_germaniae",
+          "prince_bishopric_reform",
+          "anti_heresy_act",
+          "religious_laws_enforced",
+          "religious_tolerance",
+          "state_controlled_church",
+          "warsaw_confederation",
+          "clergy_estate_regency",
+          "aniconism",
+          "asceticism",
+          "baptism_by_fire",
+          "consolamentum",
+          "gnosticism",
+          "monasticism",
+          "prima_scriptura",
+          "punishment_of_sin",
+          "rejection_of_sacraments",
+          "ritual_purification",
+          "specialized_canon",
+          "five_doors",
+          "latinization_vs_hellenization"
+        ],
+        "right": {
+          "key": "humanist",
+          "name": "Humanist"
+        },
+        "right_mods": [
+          {
+            "key": "tolerance_heretic",
+            "label": "Tolerance of Heretical Beliefs",
+            "polarity": "good",
+            "value": "+1.00"
+          },
+          {
+            "key": "tolerance_heathen",
+            "label": "Tolerance of Heathen Beliefs",
+            "polarity": "good",
+            "value": "+1.00"
+          },
+          {
+            "key": "global_pop_conversion_speed_modifier",
+            "label": "Pop Conversion Speed %",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "global_pop_assimilation_speed_modifier",
+            "label": "Pop Assimilation Speed",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "religious_unity_importance_modifier",
+            "label": "Religious Unity Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "court_language_is_liturgical_language_importance_modifier",
+            "label": "Prefers Court Language to be Liturgical Language",
+            "polarity": "bad",
+            "value": "−0.75"
+          },
+          {
+            "key": "bias_for_scholar_policies",
+            "label": "Bias for Scholar Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          },
+          {
+            "key": "bias_for_tolerant_policies",
+            "label": "Bias for Tolerant Policies",
+            "polarity": "good",
+            "value": "+100.00"
+          },
+          {
+            "key": "antagonism_religion_influence",
+            "label": "Antagonism Religion Influence",
+            "polarity": "neutral",
+            "value": "−50.00%"
+          },
+          {
+            "key": "national_lutheranism_movement_resistance_modifier",
+            "label": "Lutheranism Resistance Modifier",
+            "polarity": "bad",
+            "value": "−20.00%"
+          },
+          {
+            "key": "national_calvinism_movement_resistance_modifier",
+            "label": "Calvinism Resistance Modifier",
+            "polarity": "bad",
+            "value": "−20.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:spiritualist_vs_humanist",
+      "mods": [],
+      "name": "Spiritualist vs Humanist",
+      "slug": "spiritualist-vs-humanist",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "aristocracy_vs_plutocracy",
+        "left": {
+          "key": "aristocracy",
+          "name": "Aristocracy"
+        },
+        "left_mods": [
+          {
+            "key": "discipline",
+            "label": "Discipline",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_nobles_estate_power",
+            "label": "Nobles Power",
+            "polarity": "bad",
+            "value": "+50.00%"
+          },
+          {
+            "key": "global_nobles_city_desired_pop_scaled",
+            "label": "Possible Nobles in Towns and Cities for each 1,000 population",
+            "polarity": "good",
+            "value": "+1.00%"
+          },
+          {
+            "key": "global_nobles_pop_growth",
+            "label": "Nobles Growth",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "court_spending_efficiency",
+            "label": "Court Spending Efficiency",
+            "polarity": "bad",
+            "value": "−25.00%"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "bad",
+            "value": "−1.50"
+          },
+          {
+            "key": "bias_for_patron_of_arts_policies",
+            "label": "Bias for Patron of Arts Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          }
+        ],
+        "movers": [
+          "institute_of_noble_maidens",
+          "munich_residenz_founding",
+          "stroganov_influences",
+          "auxilium_et_consilium",
+          "building_rights",
+          "cardinal_lead_guilds",
+          "dedicated_merchant_courts",
+          "nobility_council",
+          "noble_patronage",
+          "florence_guilds",
+          "formal_guilds",
+          "formalized_oath",
+          "cas_fuero_viejo",
+          "general_privilege",
+          "golden_liberty",
+          "joint_assembly_decrees",
+          "nobles_land_rights",
+          "liberum_veto",
+          "libro_d_oro",
+          "noble_armies",
+          "office_of_the_farima_soura_privilege",
+          "office_of_the_sankar_zouma_privilege",
+          "primacy_of_nobility",
+          "privilege_of_koszyce",
+          "union_privilege",
+          "reduced_taxation_for_the_nobles",
+          "cas_regimiento",
+          "right_to_inherit",
+          "burghers_royal_burgh_commissioners",
+          "statutes_of_piotrkow",
+          "principle_of_administration_law",
+          "administrative_system",
+          "teu_amber_monopoly_law",
+          "battle_leadership_law",
+          "jap_buke_shohatto",
+          "cabinet_laws",
+          "colonial_policy",
+          "distribution_of_power_law",
+          "education_elites_law",
+          "enclosure_movement",
+          "guru_gobind_singh_guruship",
+          "guru_hargobind_guruship",
+          "harem_law",
+          "legal_code_law",
+          "mamluk_rank_system_laws",
+          "mining_law",
+          "recruitment_law",
+          "republican_electorate_law",
+          "burghers_rights_laws",
+          "nobles_rights_laws",
+          "royal_court_customs_law",
+          "sumptuary_law",
+          "tribal_modernization_law",
+          "promote_burghers_member",
+          "sponsor_a_merchant_expedition",
+          "sponsor_a_opera_house",
+          "autocracy",
+          "crown_aragon_reform",
+          "crown_castile_reform",
+          "diarchy_republic",
+          "dutch_republic_reform",
+          "enlightened_aristocracy",
+          "expanded_timariot_system",
+          "french_ducal_vassal_reform",
+          "french_feudal_nobility",
+          "free_market_charters",
+          "indian_sultanate_reform",
+          "irish_earldom_reform",
+          "kilwan_trade_communities",
+          "legacy_of_genghis",
+          "libertas_affectandi",
+          "the_mestnichestvo",
+          "nayankara_system",
+          "noble_elite",
+          "of_noble_bearing",
+          "plutocratic_ethos",
+          "powerful_vizierships_reform",
+          "sbl_restorer_of_the_disinherited",
+          "ruling_commission_of_england",
+          "scottish_shires_reform",
+          "sortition",
+          "speransky_liberalization_reform",
+          "statute_of_monopolies",
+          "sudebnik",
+          "the_court_of_wards_and_liveries",
+          "trade_office_network",
+          "burghers_estate_regency",
+          "nobles_estate_regency",
+          "imperial_cult_aspect",
+          "soli_deo_gloria"
+        ],
+        "right": {
+          "key": "plutocracy",
+          "name": "The Power of Coin"
+        },
+        "right_mods": [
+          {
+            "key": "selling_efficiency",
+            "label": "Selling Efficiency",
+            "polarity": "neutral",
+            "value": "small_trade_efficiency_bonus"
+          },
+          {
+            "key": "global_burghers_estate_power",
+            "label": "Burghers Power",
+            "polarity": "bad",
+            "value": "+50.00%"
+          },
+          {
+            "key": "global_burghers_city_desired_pop_scaled",
+            "label": "Possible Burghers in Towns and Cities for each 1,000 population",
+            "polarity": "good",
+            "value": "+1.00%"
+          },
+          {
+            "key": "market_building_levels",
+            "label": "Trade Building Levels",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "court_spending_efficiency",
+            "label": "Court Spending Efficiency",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "good",
+            "value": "+1.50"
+          },
+          {
+            "key": "bias_for_patron_of_arts_policies",
+            "label": "Bias for Patron of Arts Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "bias_for_capitalist_policies",
+            "label": "Bias for Capitalist Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:aristocracy_vs_plutocracy",
+      "mods": [],
+      "name": "Aristocracy vs The Power of Coin",
+      "slug": "aristocracy-vs-plutocracy",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "serfdom_vs_free_subjects",
+        "left": {
+          "key": "serfdom",
+          "name": "Serfs"
+        },
+        "left_mods": [
+          {
+            "key": "global_raw_material_output",
+            "label": "Raw Materials Output",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "levy_recovery_modifier",
+            "label": "Levy Recovery",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "nobles_estate_target_satisfaction",
+            "label": "Noble Estate Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "large_permanent_target_satisfaction"
+          },
+          {
+            "key": "building_upkeep_efficiency",
+            "label": "Building Upkeep Efficiency",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "peasants_estate_levy_size",
+            "label": "Peasants Levy Size",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "global_peasant_enfranchisment",
+            "label": "Peasant Enfranchisement",
+            "polarity": "bad",
+            "value": "−33.00%"
+          },
+          {
+            "key": "control_importance_modifier",
+            "label": "Control Importance Modifier",
+            "polarity": "good",
+            "value": "+0.10"
+          },
+          {
+            "key": "court_language_is_common_language_importance_modifier",
+            "label": "Prefers Court Language to be Common Language",
+            "polarity": "bad",
+            "value": "−0.75"
+          }
+        ],
+        "movers": [
+          "peasants_estate",
+          "peasants_autonomous_villages",
+          "auxilium_et_consilium",
+          "banal_lordship",
+          "tur_banned_weaponry_for_peasants",
+          "cas_caballeros_villanos",
+          "charter_of_the_nobility",
+          "creaghts_privilege",
+          "peasants_no_poll_tax_privilege",
+          "peasants_fewer_levies",
+          "peasants_free_peasantry",
+          "allow_hunting",
+          "ukr_kholop_protection",
+          "nobles_land_rights",
+          "land_owning_farmers",
+          "masaniellos_fight",
+          "mita_system",
+          "noble_serfdom_rights",
+          "novi_fori",
+          "ordinance_of_laborers",
+          "partial_yield",
+          "peasants_represented_in_parliament",
+          "kbo_serfdom_economy",
+          "ara_sindicat_ara_remenca",
+          "statutes_of_piotrkow",
+          "hab_tractatus_incorporalibus",
+          "peasants_yeomanry",
+          "habshi_advisors_privilege",
+          "teu_amber_monopoly_law",
+          "battle_leadership_law",
+          "legal_framework",
+          "colonial_policy",
+          "distribution_of_power_law",
+          "economical_policies_law",
+          "education_masses_law",
+          "enclosure_movement",
+          "factory_working_conditions_law",
+          "republican_foundation_law",
+          "guru_granth_sahib_guruship",
+          "guru_hargobind_guruship",
+          "language_of_pleading",
+          "tribal_legal_basis_law",
+          "legal_code_law",
+          "maritime_law",
+          "mining_law",
+          "monastic_reformation_movement",
+          "native_policy",
+          "naval_doctrine_law",
+          "press_law",
+          "guilds_of_florence",
+          "recruitment_law",
+          "republican_electorate_law",
+          "nobles_rights_laws",
+          "sharia_law",
+          "sumptuary_law",
+          "trade_unions_law",
+          "tribal_organization_law",
+          "presbyterian_education",
+          "russian_absolutism",
+          "alsno_stadga",
+          "french_feudal_nobility",
+          "frisian_freedom_reform",
+          "gabelle",
+          "humanitarian_administration",
+          "joyous_entry_reform",
+          "local_army_organization",
+          "magna_carta_reform",
+          "ottoman_malikane_tax_reform",
+          "the_mestnichestvo",
+          "military_allotment",
+          "nakaz_reform",
+          "national_assemblies",
+          "land_inheritance_act",
+          "peasant_republic_reform",
+          "petition_of_rights",
+          "razriadnyi_reform",
+          "the_combination_act",
+          "revolutionary_republic",
+          "universal_serfdom",
+          "volok_reform",
+          "voivode_reform",
+          "peasants_estate_regency",
+          "clerical_poverty",
+          "dionysian_mysteries_aspect",
+          "samothracian_mysteries_aspect",
+          "sola_fide"
+        ],
+        "right": {
+          "key": "free_subjects",
+          "name": "Free Subjects"
+        },
+        "right_mods": [
+          {
+            "key": "global_pop_promotion_speed_modifier",
+            "label": "Pop Promotion Speed %",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "levy_combat_efficiency_modifier",
+            "label": "Levy Combat Efficiency",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "peasants_estate_target_satisfaction",
+            "label": "Peasant Estate Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "large_permanent_target_satisfaction"
+          },
+          {
+            "key": "global_devastation_recovery",
+            "label": "Prosperity Recovery",
+            "polarity": "good",
+            "value": "+1.00%"
+          },
+          {
+            "key": "peasants_estate_levy_size",
+            "label": "Peasants Levy Size",
+            "polarity": "bad",
+            "value": "−25.00%"
+          },
+          {
+            "key": "global_peasant_enfranchisment",
+            "label": "Peasant Enfranchisement",
+            "polarity": "good",
+            "value": "+33.00%"
+          },
+          {
+            "key": "control_importance_modifier",
+            "label": "Control Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.05"
+          },
+          {
+            "key": "court_language_is_common_language_importance_modifier",
+            "label": "Prefers Court Language to be Common Language",
+            "polarity": "good",
+            "value": "+0.75"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:serfdom_vs_free_subjects",
+      "mods": [],
+      "name": "Serfs vs Free Subjects",
+      "slug": "serfdom-vs-free-subjects",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "mercantilism_vs_free_trade",
+        "left": {
+          "key": "mercantilism",
+          "name": "Mercantilism"
+        },
+        "left_mods": [
+          {
+            "key": "merchant_maintenance_efficiency",
+            "label": "Merchant Maintenance Efficiency",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "foreign_export_from_market_efficiency",
+            "label": "Foreign Export Efficiency from Market",
+            "polarity": "bad",
+            "value": "−10.00%"
+          },
+          {
+            "key": "export_impact_on_demand",
+            "label": "Export Impact on Demand",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_trade_protection_factor",
+            "label": "Market Protection",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "import_efficiency",
+            "label": "Import Efficiency",
+            "polarity": "neutral",
+            "value": "small_trade_efficiency_penalty"
+          },
+          {
+            "key": "trade_importance_modifier",
+            "label": "Trade Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "bad",
+            "value": "−1.50"
+          },
+          {
+            "key": "bias_for_isolationist_policies",
+            "label": "Bias for Isolationist Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          }
+        ],
+        "movers": [
+          "general_privilege",
+          "kulm_law",
+          "magdeburg_rights",
+          "salt_tax_exemption",
+          "trunk_road_to_erzurum_privilege",
+          "teu_amber_monopoly_law",
+          "french_colonial_ambition_focus",
+          "economical_policies_law",
+          "holy_mission_law",
+          "maritime_law",
+          "native_policy",
+          "naval_doctrine_law",
+          "outwards_view",
+          "precious_metal_distribution_law",
+          "burghers_rights_laws",
+          "sharia_law",
+          "por_casa_de_india",
+          "council_of_forty",
+          "dutch_republic_reform",
+          "east_india_trading_company",
+          "free_market_charters",
+          "kilwan_trade_communities",
+          "shahbandariyya_reform",
+          "signoria_of_venice",
+          "state_sponsored_markets",
+          "trade_office_network",
+          "the_transportation_act"
+        ],
+        "right": {
+          "key": "free_trade",
+          "name": "Free Trade"
+        },
+        "right_mods": [
+          {
+            "key": "global_trades_per_burgher",
+            "label": "Burghers Trade Capacity",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "global_merchant_power",
+            "label": "Trade Advantage",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "global_trade_protection_factor",
+            "label": "Market Protection",
+            "polarity": "bad",
+            "value": "−25.00%"
+          },
+          {
+            "key": "selling_efficiency",
+            "label": "Selling Efficiency",
+            "polarity": "neutral",
+            "value": "small_trade_efficiency_bonus"
+          },
+          {
+            "key": "trade_importance_modifier",
+            "label": "Trade Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "good",
+            "value": "+1.50"
+          },
+          {
+            "key": "bias_for_isolationist_policies",
+            "label": "Bias for Isolationist Policies",
+            "polarity": "bad",
+            "value": "−25.00"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:mercantilism_vs_free_trade",
+      "mods": [],
+      "name": "Mercantilism vs Free Trade",
+      "slug": "mercantilism-vs-free-trade",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "belligerent_vs_conciliatory",
+        "left": {
+          "key": "belligerent",
+          "name": "Belligerent"
+        },
+        "left_mods": [
+          {
+            "key": "global_war_score_efficiency",
+            "label": "War Score Efficiency",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "spy_network_construction",
+            "label": "Spy Network Construction",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "casus_belli_creation_speed_modifier",
+            "label": "Casus Belli Creation Speed",
+            "polarity": "good",
+            "value": "+33.00%"
+          },
+          {
+            "key": "shared_border_impact",
+            "label": "Opinion Impact from Shared Borders",
+            "polarity": "bad",
+            "value": "+200.00%"
+          },
+          {
+            "key": "aggressiveness_modifier",
+            "label": "Aggressiveness",
+            "polarity": "bad",
+            "value": "+15.00%"
+          },
+          {
+            "key": "manpower_importance_modifier",
+            "label": "Manpower Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "diplomacy_importance_modifier",
+            "label": "Diplomacy Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.10"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "antagonism_peace_treaty_demands_giving_modifier",
+            "label": "Antagonism Given from Peace Treaty Demands",
+            "polarity": "neutral",
+            "value": "−50.00%"
+          },
+          {
+            "key": "antagonism_taking_land_giving_modifier",
+            "label": "Antagonism Given from Taking Land Modifier",
+            "polarity": "neutral",
+            "value": "−50.00%"
+          },
+          {
+            "key": "antagonism_breaking_truce_giving_modifier",
+            "label": "Antagonism Given from Breaking Truce Modifier",
+            "polarity": "neutral",
+            "value": "−20.00%"
+          },
+          {
+            "key": "antagonism_declared_war_no_cb_giving_modifier",
+            "label": "Antagonism Given from Declaring War without Casus Belli Modifier",
+            "polarity": "neutral",
+            "value": "−30.00%"
+          }
+        ],
+        "movers": [
+          "office_of_new_converts",
+          "expansionist_zealotry",
+          "reduced_from_military_obligations",
+          "religious_diplomats",
+          "foreign_league_balkan",
+          "foreign_league_france",
+          "foreign_league_hre",
+          "foreign_league_iberia",
+          "principle_of_administration_law",
+          "cabinet_laws",
+          "clan_diplomacy",
+          "cultural_traditions_law",
+          "divine_cause_law",
+          "guru_har_rai_guruship",
+          "guru_hargobind_guruship",
+          "guru_tegh_bahadur_guruship",
+          "harem_law",
+          "intelligence_agency",
+          "khalsa_law",
+          "legal_code_law",
+          "legitimization_of_power_law",
+          "medieval_levy_law",
+          "nav_adaptability",
+          "sharia_law",
+          "support_noble_sponsored_armies",
+          "abbey_reform",
+          "diplomatic_consolidation_act",
+          "crusade_sea_reform",
+          "diplomatic_traditions",
+          "flexible_diplomatic_stance",
+          "galley_lords_reform",
+          "guru_leadership_reform",
+          "joint_ruling_monarchy",
+          "landgraviate",
+          "mercenary_registration_act",
+          "military_order_reform",
+          "modern_assault_tactics",
+          "multilingual_diplomats",
+          "nautical_education_act",
+          "prince_bishopric_reform",
+          "reichshofrat_reform",
+          "warring_state",
+          "fratricide_succesion_regency",
+          "civic_religion_aspect",
+          "justified_conflicts",
+          "pacifism",
+          "punishment_by_stoning",
+          "war_sermons",
+          "pradhana_maha_samanta"
+        ],
+        "right": {
+          "key": "conciliatory",
+          "name": "Conciliatory"
+        },
+        "right_mods": [
+          {
+            "key": "diplomatic_reputation",
+            "label": "Diplomatic Reputation",
+            "polarity": "neutral",
+            "value": "diplomatic_reputation_severe_bonus"
+          },
+          {
+            "key": "country_cabinet_efficiency",
+            "label": "Efficiency of Our Cabinet",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "casus_belli_creation_speed_modifier",
+            "label": "Casus Belli Creation Speed",
+            "polarity": "bad",
+            "value": "−33.00%"
+          },
+          {
+            "key": "shared_border_impact",
+            "label": "Opinion Impact from Shared Borders",
+            "polarity": "good",
+            "value": "−75.00%"
+          },
+          {
+            "key": "aggressiveness_modifier",
+            "label": "Aggressiveness",
+            "polarity": "good",
+            "value": "−15.00%"
+          },
+          {
+            "key": "manpower_importance_modifier",
+            "label": "Manpower Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "diplomacy_importance_modifier",
+            "label": "Diplomacy Importance Modifier",
+            "polarity": "good",
+            "value": "+0.10"
+          },
+          {
+            "key": "bias_for_diplomat_policies",
+            "label": "Bias for Diplomat Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "antagonism_peace_treaty_demands_giving_modifier",
+            "label": "Antagonism Given from Peace Treaty Demands",
+            "polarity": "neutral",
+            "value": "+30.00%"
+          },
+          {
+            "key": "antagonism_taking_land_giving_modifier",
+            "label": "Antagonism Given from Taking Land Modifier",
+            "polarity": "neutral",
+            "value": "+30.00%"
+          },
+          {
+            "key": "antagonism_breaking_truce_giving_modifier",
+            "label": "Antagonism Given from Breaking Truce Modifier",
+            "polarity": "neutral",
+            "value": "+20.00%"
+          },
+          {
+            "key": "antagonism_declared_war_no_cb_giving_modifier",
+            "label": "Antagonism Given from Declaring War without Casus Belli Modifier",
+            "polarity": "neutral",
+            "value": "+30.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:belligerent_vs_conciliatory",
+      "mods": [],
+      "name": "Belligerent vs Conciliatory",
+      "slug": "belligerent-vs-conciliatory",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "quality_vs_quantity",
+        "left": {
+          "key": "quality",
+          "name": "Quality"
+        },
+        "left_mods": [
+          {
+            "key": "military_tactics",
+            "label": "Military Tactics",
+            "polarity": "good",
+            "value": "+0.10"
+          },
+          {
+            "key": "land_morale_recovery",
+            "label": "Army Morale Recovery Speed",
+            "polarity": "good",
+            "value": "+2.00%"
+          },
+          {
+            "key": "army_initiative",
+            "label": "Army Initiative",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "army_maintenance_efficiency",
+            "label": "Army Maintenance Efficiency",
+            "polarity": "bad",
+            "value": "−10.00%"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          }
+        ],
+        "movers": [
+          "lat_latin_crusader_elite",
+          "ghazi_privilege",
+          "jaysh_armies",
+          "libro_d_argento",
+          "mam_refined_furusiyya",
+          "army_doctrine_law",
+          "battle_leadership_law",
+          "jap_buke_shohatto",
+          "guru_har_krishan_guruship",
+          "khalsa_law",
+          "keju_examination",
+          "legal_code_law",
+          "medieval_levy_law",
+          "recruitment_law",
+          "theocratic_leadership",
+          "sponsor_conscription_center",
+          "sponsor_regimental_camp",
+          "mass_levy_system",
+          "conscript_logistics_act",
+          "organized_marines",
+          "prussian_monarchy",
+          "lat_restored_rule_of_the_latins",
+          "songhai_professional_army_reform",
+          "tughlaq_slave_army_reform",
+          "hero_cult_aspect"
+        ],
+        "right": {
+          "key": "quantity",
+          "name": "Quantity"
+        },
+        "right_mods": [
+          {
+            "key": "possible_frontage_modifier",
+            "label": "Possible Frontage",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "food_consumption_modifier",
+            "label": "Unit Food Consumption",
+            "polarity": "good",
+            "value": "−10.00%"
+          },
+          {
+            "key": "army_initiative",
+            "label": "Army Initiative",
+            "polarity": "bad",
+            "value": "−25.00%"
+          },
+          {
+            "key": "army_maintenance_efficiency",
+            "label": "Army Maintenance Efficiency",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:quality_vs_quantity",
+      "mods": [],
+      "name": "Quality vs Quantity",
+      "slug": "quality-vs-quantity",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "offensive_vs_defensive",
+        "left": {
+          "key": "offensive",
+          "name": "Offensive"
+        },
+        "left_mods": [
+          {
+            "key": "siege_ability",
+            "label": "Siege Ability",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "assault_ability",
+            "label": "Assault Ability",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_defensive",
+            "label": "Fort Defense",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "army_movement_speed",
+            "label": "Army Movement Speed",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "army_logistics_distance_modifier",
+            "label": "Logistics Distance",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "defence_importance_modifier",
+            "label": "Defense Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.20"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "antagonism_declared_war_no_cb_giving_modifier",
+            "label": "Antagonism Given from Declaring War without Casus Belli Modifier",
+            "polarity": "neutral",
+            "value": "−10.00%"
+          }
+        ],
+        "movers": [
+          "cossacks_estate",
+          "nobles_offensive_military_doctrine",
+          "zupa_districts",
+          "foreign_league_balkan",
+          "italian_league_1",
+          "foreign_league_france",
+          "foreign_league_hre",
+          "foreign_league_iberia",
+          "italian_league_2",
+          "italian_league_3",
+          "army_doctrine_law",
+          "guru_arjan_guruship",
+          "guru_tegh_bahadur_guruship",
+          "holy_mission_law",
+          "nav_adaptability",
+          "recruitment_law",
+          "promote_artillery_doctrine",
+          "promote_bastion_building",
+          "promote_castle_building",
+          "promote_fortress_building",
+          "promote_pike_and_shot_tactics",
+          "promote_star_fort_building",
+          "asymmetrical_warfare_tactics",
+          "garrison_system",
+          "horse_artillery",
+          "katepanata",
+          "luc_libertas",
+          "margraviate",
+          "mercenary_registration_act",
+          "military_order_reform",
+          "prussian_monarchy",
+          "partitio_reform",
+          "iron_ring_reform",
+          "uc_bey_reform"
+        ],
+        "right": {
+          "key": "defensive",
+          "name": "Defensive"
+        },
+        "right_mods": [
+          {
+            "key": "fort_maintenance_efficiency",
+            "label": "Fortification Maintenance Efficiency",
+            "polarity": "good",
+            "value": "+40.00%"
+          },
+          {
+            "key": "combat_speed_modifier",
+            "label": "Combat Speed",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_defensive",
+            "label": "Fort Defense",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "army_movement_speed",
+            "label": "Army Movement Speed",
+            "polarity": "bad",
+            "value": "−10.00%"
+          },
+          {
+            "key": "regiment_reinforcement_speed",
+            "label": "Reinforcement Speed",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "defence_importance_modifier",
+            "label": "Defense Importance Modifier",
+            "polarity": "good",
+            "value": "+0.20"
+          },
+          {
+            "key": "bias_for_diplomat_policies",
+            "label": "Bias for Diplomat Policies",
+            "polarity": "good",
+            "value": "+50.00"
+          },
+          {
+            "key": "fort_limit_modifier",
+            "label": "Fort Limit",
+            "polarity": "good",
+            "value": "+50.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:offensive_vs_defensive",
+      "mods": [],
+      "name": "Offensive vs Defensive",
+      "slug": "offensive-vs-defensive",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "land_vs_naval",
+        "left": {
+          "key": "land",
+          "name": "Land"
+        },
+        "left_mods": [
+          {
+            "key": "land_cost_on_distance_from_capital_speed_propagation",
+            "label": "Proximity Efficiency through Land",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "global_max_rgo_size_modifier",
+            "label": "Maximum RGO Size",
+            "polarity": "good",
+            "value": "+5.00%"
+          },
+          {
+            "key": "trade_sea_efficiency",
+            "label": "Trade Sea Efficiency",
+            "polarity": "neutral",
+            "value": "huge_trade_sea_efficiency_penalty"
+          },
+          {
+            "key": "trade_land_efficiency",
+            "label": "Trade Land Efficiency",
+            "polarity": "neutral",
+            "value": "medium_trade_land_efficiency_bonus"
+          },
+          {
+            "key": "bias_for_militarist_policies",
+            "label": "Bias for Militarist Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          },
+          {
+            "key": "bias_for_administrative_policies",
+            "label": "Bias for Administrative Policies",
+            "polarity": "good",
+            "value": "+25.00"
+          }
+        ],
+        "movers": [
+          "building_roads_rights",
+          "noble_fortification_licenses",
+          "nobles_land_rights",
+          "noble_sponsored_navy",
+          "shipwright_contracts",
+          "administrative_system",
+          "army_doctrine_law",
+          "cultural_traditions_law",
+          "economical_policies_law",
+          "guru_angad_guruship",
+          "holy_mission_law",
+          "legal_code_law",
+          "maritime_law",
+          "naval_doctrine_law",
+          "recruitment_law",
+          "republican_electorate_law",
+          "royal_court_customs_law",
+          "naval_infrastructure_act",
+          "admiralty_regime_reform",
+          "agricultural_cultivation",
+          "soyurghal_governor_banished_reform",
+          "crusade_sea_reform",
+          "ned_shipbuilding_industry",
+          "family_sagas_reform",
+          "galley_lords_reform",
+          "garrison_system",
+          "harbor_administration",
+          "the_recruiting_act",
+          "military_regime_reform",
+          "navy_board_reform",
+          "pirate_brethren_reform",
+          "naval_armament_act",
+          "cossacks_reform",
+          "town_specialization",
+          "thalassocracy_reform",
+          "the_transportation_act",
+          "unified_admiralty_reform",
+          "wayfinders_reform"
+        ],
+        "right": {
+          "key": "naval",
+          "name": "Naval"
+        },
+        "right_mods": [
+          {
+            "key": "sea_cost_on_distance_from_capital_when_maritime",
+            "label": "Proximity Cost with Maritime Presence",
+            "polarity": "good",
+            "value": "−1.00"
+          },
+          {
+            "key": "global_maritime_presence_modifier",
+            "label": "Maritime Presence %",
+            "polarity": "good",
+            "value": "+30.00%"
+          },
+          {
+            "key": "trade_sea_efficiency",
+            "label": "Trade Sea Efficiency",
+            "polarity": "neutral",
+            "value": "medium_trade_sea_efficiency_bonus"
+          },
+          {
+            "key": "trade_land_efficiency",
+            "label": "Trade Land Efficiency",
+            "polarity": "neutral",
+            "value": "large_trade_land_efficiency_penalty"
+          },
+          {
+            "key": "bias_for_colonialist_policies",
+            "label": "Bias for Colonialist Policies",
+            "polarity": "good",
+            "value": "+100.00"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:land_vs_naval",
+      "mods": [],
+      "name": "Land vs Naval",
+      "slug": "land-vs-naval",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "capital_economy_vs_traditional_economy",
+        "left": {
+          "key": "capital_economy",
+          "name": "Capital Economy"
+        },
+        "left_mods": [
+          {
+            "key": "global_production_efficiency",
+            "label": "Production Efficiency",
+            "polarity": "neutral",
+            "value": "huge_production_efficiency_bonus"
+          },
+          {
+            "key": "bank_interest",
+            "label": "Bank Interest",
+            "polarity": "good",
+            "value": "−3.00%"
+          },
+          {
+            "key": "global_building_establishment_speed",
+            "label": "Building Establishment Speed",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "global_build_buildings_efficiency",
+            "label": "Buildings Construction Efficiency",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "global_monthly_food_modifier",
+            "label": "Food Production %",
+            "polarity": "bad",
+            "value": "−20.00%"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "good",
+            "value": "+1.50"
+          },
+          {
+            "key": "bias_for_capitalist_policies",
+            "label": "Bias for Capitalist Policies",
+            "polarity": "good",
+            "value": "+100.00"
+          }
+        ],
+        "movers": [
+          "free_economic_society",
+          "first_come_first_serve",
+          "capitalism_prioritising_infrastructure_trade_and_culture",
+          "capitalism_prioritising_infrastructure_trade",
+          "capitalism_prioritising_infrastructure",
+          "capitalism",
+          "tribes_estate",
+          "commercial_advisory_council",
+          "creaghts_privilege",
+          "guild_investments",
+          "haudenosaunee_labor_division",
+          "land_of_commerce",
+          "peasant_owns_their_food",
+          "milanese_cloth_guilds_privileges",
+          "royal_factories_privilege",
+          "bureaucracy_law",
+          "coin_laws",
+          "colonial_policy",
+          "kor_currency",
+          "economic_framework",
+          "factory_working_conditions_law",
+          "guru_amar_das_guruship",
+          "intellectual_movements",
+          "iqta_law",
+          "legal_code_law",
+          "maritime_law",
+          "mining_law",
+          "eng_taxation_law",
+          "trade_unions_law",
+          "tribal_cultural_identity_law",
+          "generic_capital_economy",
+          "generic_traditional_economy",
+          "bank_ledgers_system",
+          "celtic_traditions_reform",
+          "east_india_trading_company",
+          "feudal_nobility",
+          "plutocratic_monarchy",
+          "production_quota_bureaus",
+          "bng_industralized_provinces",
+          "royal_factories_reform",
+          "taluqdar_nobility",
+          "weapons_quality_standards",
+          "eleusinian_mysteries_aspect",
+          "usury_allowed"
+        ],
+        "right": {
+          "key": "traditional_economy",
+          "name": "Traditional Economy"
+        },
+        "right_mods": [
+          {
+            "key": "global_raw_material_output",
+            "label": "Raw Materials Output",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "global_population_capacity_modifier",
+            "label": "Population Capacity %",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "global_building_establishment_speed",
+            "label": "Building Establishment Speed",
+            "polarity": "bad",
+            "value": "−25.00%"
+          },
+          {
+            "key": "global_max_rgo_size_modifier_in_rural",
+            "label": "Maximum RGO Size in Rural",
+            "polarity": "good",
+            "value": "+33.00%"
+          },
+          {
+            "key": "global_monthly_food_modifier",
+            "label": "Food Production %",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "court_language_is_market_language_importance_modifier",
+            "label": "Prefers Court Language to be Market Language",
+            "polarity": "bad",
+            "value": "−1.50"
+          },
+          {
+            "key": "bias_for_capitalist_policies",
+            "label": "Bias for Capitalist Policies",
+            "polarity": "bad",
+            "value": "−100.00"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:capital_economy_vs_traditional_economy",
+      "mods": [],
+      "name": "Capital Economy vs Traditional Economy",
+      "slug": "capital-economy-vs-traditional-economy",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "individualism_vs_communalism",
+        "left": {
+          "key": "individualism",
+          "name": "Individualism"
+        },
+        "left_mods": [
+          {
+            "key": "land_morale_modifier",
+            "label": "Army Morale",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "naval_morale_modifier",
+            "label": "Navy Morale",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "small_permanent_target_satisfaction_penalty"
+          },
+          {
+            "key": "global_migration_speed_modifier",
+            "label": "Pop Migration Speed",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "societal_value_importance_modifier",
+            "label": "Societal Value Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.05"
+          }
+        ],
+        "movers": [
+          "bavarian_academy_of_sciences",
+          "academy_of_sciences",
+          "institute_of_noble_maidens",
+          "equality",
+          "capitalism_prioritising_infrastructure_trade_and_culture",
+          "capitalism_prioritising_infrastructure_trade",
+          "capitalism_prioritising_infrastructure",
+          "access_to_royal_and_ecclesiastical_courts",
+          "tribes_allow_gatherings",
+          "burghers_land_rights",
+          "elaborate_court_ceremonies",
+          "clergy_enforced_unity",
+          "haudenosaunee_labor_division",
+          "clergy_religious_state",
+          "clergy_strengthen_faith",
+          "toll_and_tariff_exemptions",
+          "censorship",
+          "colonial_policy",
+          "divine_cause_law",
+          "education_masses_law",
+          "guru_angad_guruship",
+          "guru_har_krishan_guruship",
+          "guru_har_rai_guruship",
+          "guru_nanak_guruship",
+          "language_of_pleading",
+          "tribal_legal_basis_law",
+          "legal_code_law",
+          "legitimization_of_power_law",
+          "monastic_reformation_movement",
+          "press_law",
+          "recruitment_law",
+          "sharia_law",
+          "cc_marriage_of_priest",
+          "tribal_cultural_identity_law",
+          "the_loyalty_act",
+          "court_of_the_star_chamber_reform",
+          "formalized_measures",
+          "haudenosaunee_clan_mothers",
+          "magna_carta_reform",
+          "mandatory_service",
+          "of_noble_bearing",
+          "public_welfare_act",
+          "smooth_integration_act",
+          "religious_tolerance",
+          "scottish_shires_reform",
+          "speransky_liberalization_reform",
+          "visionary_thinkers",
+          "adamite_services",
+          "adoptionism",
+          "freedom_to_preach",
+          "holy_cooperation",
+          "individual_creeds",
+          "mithraic_mysteries_aspect",
+          "name_change",
+          "participation_women",
+          "pietism",
+          "prima_scriptura",
+          "sola_scriptura",
+          "the_perfects"
+        ],
+        "right": {
+          "key": "communalism",
+          "name": "Communalism"
+        },
+        "right_mods": [
+          {
+            "key": "pop_join_rebel_threshold",
+            "label": "Pop Join Rebels Threshold",
+            "polarity": "good",
+            "value": "−5.00%"
+          },
+          {
+            "key": "revoke_privilege_cost_modifier",
+            "label": "Revoke Privilege Cost",
+            "polarity": "good",
+            "value": "−50.00%"
+          },
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "small_permanent_target_satisfaction"
+          },
+          {
+            "key": "global_migration_speed_modifier",
+            "label": "Pop Migration Speed",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "societal_value_importance_modifier",
+            "label": "Societal Value Importance Modifier",
+            "polarity": "good",
+            "value": "+0.05"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:individualism_vs_communalism",
+      "mods": [],
+      "name": "Individualism vs Communalism",
+      "slug": "individualism-vs-communalism",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "outward_vs_inward",
+        "left": {
+          "key": "outward",
+          "name": "Outward"
+        },
+        "left_mods": [
+          {
+            "key": "power_projection",
+            "label": "Power Projection",
+            "polarity": "good",
+            "value": "+5.00"
+          },
+          {
+            "key": "diplomatic_capacity_modifier",
+            "label": "Diplomatic Capacity",
+            "polarity": "good",
+            "value": "+33.00%"
+          },
+          {
+            "key": "colonial_migration_size_modifier",
+            "label": "Monthly Colonial Migration",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "cultural_tradition_modifier",
+            "label": "Cultural Tradition %",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "aggressiveness_modifier",
+            "label": "Aggressiveness",
+            "polarity": "bad",
+            "value": "+5.00%"
+          },
+          {
+            "key": "subjugation_preference_modifier",
+            "label": "Subjugation Preference",
+            "polarity": "good",
+            "value": "+0.10"
+          },
+          {
+            "key": "diplomacy_importance_modifier",
+            "label": "Diplomacy Importance Modifier",
+            "polarity": "good",
+            "value": "+0.05"
+          },
+          {
+            "key": "trade_importance_modifier",
+            "label": "Trade Importance Modifier",
+            "polarity": "good",
+            "value": "+0.05"
+          },
+          {
+            "key": "bias_for_isolationist_policies",
+            "label": "Bias for Isolationist Policies",
+            "polarity": "bad",
+            "value": "−100.00"
+          },
+          {
+            "key": "antagonism_language_influence",
+            "label": "Antagonism Language Influence",
+            "polarity": "neutral",
+            "value": "−50.00%"
+          }
+        ],
+        "movers": [
+          "bironovshchina",
+          "principle_of_administration_law",
+          "colonial_policy",
+          "cultural_traditions_law",
+          "feudal_de_jure_law",
+          "guru_granth_sahib_guruship",
+          "guru_ram_das_guruship",
+          "guru_tegh_bahadur_guruship",
+          "harem_law",
+          "holy_mission_law",
+          "legal_code_law",
+          "naval_doctrine_law",
+          "outwards_view",
+          "jap_sakoku_law",
+          "recruitment_law",
+          "burghers_rights_laws",
+          "royal_court_customs_law",
+          "sharia_law",
+          "the_espionage_act",
+          "colonial_expansion",
+          "recordkeeping_act",
+          "vassal_obligation_act",
+          "ottoman_new_order_army",
+          "policy_of_calculated_delay",
+          "jap_rangaku",
+          "bng_industralized_provinces",
+          "reichshofrat_reform",
+          "state_backed_merchant_fleet",
+          "dii_familiares_aspect"
+        ],
+        "right": {
+          "key": "inward",
+          "name": "Inward"
+        },
+        "right_mods": [
+          {
+            "key": "global_crown_estate_power",
+            "label": "Crown Power",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "global_monthly_control",
+            "label": "Monthly Control",
+            "polarity": "good",
+            "value": "+0.50%"
+          },
+          {
+            "key": "colonial_migration_size_modifier",
+            "label": "Monthly Colonial Migration",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "cultural_tradition_modifier",
+            "label": "Cultural Tradition %",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "aggressiveness_modifier",
+            "label": "Aggressiveness",
+            "polarity": "good",
+            "value": "−10.00%"
+          },
+          {
+            "key": "subjugation_preference_modifier",
+            "label": "Subjugation Preference",
+            "polarity": "bad",
+            "value": "−0.10"
+          },
+          {
+            "key": "diplomacy_importance_modifier",
+            "label": "Diplomacy Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.05"
+          },
+          {
+            "key": "trade_importance_modifier",
+            "label": "Trade Importance Modifier",
+            "polarity": "bad",
+            "value": "−0.05"
+          },
+          {
+            "key": "bias_for_isolationist_policies",
+            "label": "Bias for Isolationist Policies",
+            "polarity": "good",
+            "value": "+100.00"
+          },
+          {
+            "key": "antagonism_language_influence",
+            "label": "Antagonism Language Influence",
+            "polarity": "neutral",
+            "value": "+50.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:outward_vs_inward",
+      "mods": [],
+      "name": "Outward vs Inward",
+      "slug": "outward-vs-inward",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "sinicized_vs_unsinicized",
+        "left": {
+          "key": "sinicized",
+          "name": "Sinicized"
+        },
+        "left_mods": [
+          {
+            "key": "legislative_efficiency",
+            "label": "Legislative Efficiency",
+            "polarity": "good",
+            "value": "+25.00%"
+          },
+          {
+            "key": "research_speed_modifier",
+            "label": "Monthly Research Progress %",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "cultural_tradition_modifier",
+            "label": "Cultural Tradition %",
+            "polarity": "bad",
+            "value": "−50.00%"
+          },
+          {
+            "key": "global_merchant_capacity_modifier",
+            "label": "Trade Capacity",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "tribute_payment_received_modifier",
+            "label": "Middle Kingdom Tribute Received Modifier",
+            "polarity": "good",
+            "value": "+25.00%"
+          }
+        ],
+        "movers": [
+          "confucian_academy",
+          "confucian_school",
+          "tribal_autonomy",
+          "middle_kingdom",
+          "local_administration",
+          "legal_framework",
+          "cabinet_laws",
+          "clan_diplomacy",
+          "tax_obligations",
+          "court_etiquette",
+          "economic_framework",
+          "foreign_cultural_law",
+          "formal_script",
+          "intelligence_agency",
+          "jakun_gusa",
+          "provincial_governorship",
+          "status_of_the_han_law",
+          "trade_relations",
+          "mch_queue_hair",
+          "haixi_jurchen_reform",
+          "jianzhou_jurchen_reform",
+          "yeren_jurchen_reform",
+          "tusi"
+        ],
+        "right": {
+          "key": "unsinicized",
+          "name": "Unsinicized"
+        },
+        "right_mods": [
+          {
+            "key": "prestige_decay",
+            "label": "Prestige Decay",
+            "polarity": "good",
+            "value": "−0.20%"
+          },
+          {
+            "key": "stability_cost_efficiency",
+            "label": "Stability Investment Efficiency",
+            "polarity": "good",
+            "value": "+66.00%"
+          },
+          {
+            "key": "cultural_tradition_modifier",
+            "label": "Cultural Tradition %",
+            "polarity": "good",
+            "value": "+50.00%"
+          },
+          {
+            "key": "global_merchant_capacity_modifier",
+            "label": "Trade Capacity",
+            "polarity": "bad",
+            "value": "−20.00%"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:sinicized_vs_unsinicized",
+      "mods": [],
+      "name": "Sinicized vs Unsinicized",
+      "slug": "sinicized-vs-unsinicized",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "absolutism_vs_liberalism",
+        "left": {
+          "key": "absolutism",
+          "name": "Absolutism"
+        },
+        "left_mods": [
+          {
+            "key": "global_crown_estate_power",
+            "label": "Crown Power",
+            "polarity": "good",
+            "value": "+100.00%"
+          },
+          {
+            "key": "revoke_privilege_cost_modifier",
+            "label": "Revoke Privilege Cost",
+            "polarity": "good",
+            "value": "−30.00%"
+          },
+          {
+            "key": "pop_join_rebel_threshold",
+            "label": "Pop Join Rebels Threshold",
+            "polarity": "good",
+            "value": "−2.50%"
+          },
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "medium_permanent_target_satisfaction_penalty"
+          }
+        ],
+        "movers": [
+          "house_of_parliament",
+          "royal_court",
+          "tax_assessor",
+          "administrative_system",
+          "battle_leadership_law",
+          "immigration_law",
+          "cabinet_laws",
+          "censorship",
+          "distribution_of_power_law",
+          "intelligence_agency",
+          "legitimization_of_power_law",
+          "nature_of_our_faith_law",
+          "press_law",
+          "republican_power_law",
+          "crown_rights_laws",
+          "six_ministries_overseer_law",
+          "trade_unions_law",
+          "establish_a_constitution",
+          "reduce_peasant_taxation",
+          "russian_absolutism",
+          "autocracy",
+          "centralization_of_power_act",
+          "constitutional_state",
+          "nueva_planta",
+          "petition_of_rights",
+          "provincial_taxation_system",
+          "representative_assemblies",
+          "revolutionary_autocracy",
+          "royal_decree",
+          "universal_serfdom",
+          "crown_as_head_of_faith"
+        ],
+        "right": {
+          "key": "liberalism",
+          "name": "Liberalism"
+        },
+        "right_mods": [
+          {
+            "key": "cultures_capacity_modifier",
+            "label": "Cultures Capacity",
+            "polarity": "good",
+            "value": "+20.00%"
+          },
+          {
+            "key": "parliament_request_issue_support_needed",
+            "label": "Parliament Request Issue Support Needed",
+            "polarity": "good",
+            "value": "−10%"
+          },
+          {
+            "key": "pop_join_rebel_threshold",
+            "label": "Pop Join Rebels Threshold",
+            "polarity": "bad",
+            "value": "+2.50%"
+          },
+          {
+            "key": "global_estate_target_satisfaction",
+            "label": "Estates Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "medium_permanent_target_satisfaction"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:absolutism_vs_liberalism",
+      "mods": [],
+      "name": "Absolutism vs Liberalism",
+      "slug": "absolutism-vs-liberalism",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "mysticism_vs_jurisprudence",
+        "left": {
+          "key": "mysticism",
+          "name": "Mysticism"
+        },
+        "left_mods": [
+          {
+            "key": "land_morale_modifier",
+            "label": "Army Morale",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "global_pop_conversion_speed_modifier",
+            "label": "Pop Conversion Speed %",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "clergy_estate_target_satisfaction",
+            "label": "Clergy Estate Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "large_permanent_target_satisfaction"
+          }
+        ],
+        "movers": [
+          "autonomous_kadiluks",
+          "freedom_of_interpretation",
+          "dhimmi_land_rights",
+          "dhimmi_mazalim_court",
+          "uc_bey_reform"
+        ],
+        "right": {
+          "key": "jurisprudence",
+          "name": "Jurisprudence"
+        },
+        "right_mods": [
+          {
+            "key": "research_speed_modifier",
+            "label": "Monthly Research Progress %",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "country_cabinet_efficiency",
+            "label": "Efficiency of Our Cabinet",
+            "polarity": "good",
+            "value": "+10.00%"
+          },
+          {
+            "key": "clergy_estate_target_satisfaction",
+            "label": "Clergy Estate Satisfaction Equilibrium",
+            "polarity": "neutral",
+            "value": "large_permanent_target_satisfaction"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:mysticism_vs_jurisprudence",
+      "mods": [],
+      "name": "Mysticism vs Jurisprudence",
+      "slug": "mysticism-vs-jurisprudence",
+      "type": "societal-value"
+    },
+    {
+      "data": {
+        "id": "latinization_vs_hellenization",
+        "left": {
+          "key": "latinization",
+          "name": "Latinization"
+        },
+        "left_mods": [
+          {
+            "key": "diplomatic_spending_cost",
+            "label": "Expected Diplomatic Spending",
+            "polarity": "good",
+            "value": "−20.00%"
+          },
+          {
+            "key": "selling_efficiency",
+            "label": "Selling Efficiency",
+            "polarity": "neutral",
+            "value": "small_trade_efficiency_bonus"
+          },
+          {
+            "key": "allow_roman_movement",
+            "label": "Allow Latin Revival Movement",
+            "polarity": "good",
+            "value": "yes"
+          },
+          {
+            "key": "monthly_towards_humanist",
+            "label": "Monthly Progress to Humanist",
+            "polarity": "neutral",
+            "value": "societal_value_monthly_move"
+          },
+          {
+            "key": "monthly_towards_innovative",
+            "label": "Monthly Progress to Innovative",
+            "polarity": "neutral",
+            "value": "societal_value_monthly_move"
+          }
+        ],
+        "movers": [
+          "encourage_latin_militarism",
+          "spread_philhellenism",
+          "theme_system",
+          "mos_maiorum",
+          "civic_religion_aspect",
+          "dii_familiares_aspect",
+          "dionysian_mysteries_aspect",
+          "eleusinian_mysteries_aspect",
+          "hero_cult_aspect",
+          "imperial_cult_aspect",
+          "mithraic_mysteries_aspect",
+          "mos_maiorum_aspect",
+          "olympiad_aspect",
+          "samothracian_mysteries_aspect"
+        ],
+        "right": {
+          "key": "hellenization",
+          "name": "Hellenization"
+        },
+        "right_mods": [
+          {
+            "key": "stability_cost_efficiency",
+            "label": "Stability Investment Efficiency",
+            "polarity": "good",
+            "value": "+40.00%"
+          },
+          {
+            "key": "tolerance_own",
+            "label": "Tolerance of the True Faith",
+            "polarity": "good",
+            "value": "+0.50"
+          },
+          {
+            "key": "monthly_towards_spiritualist",
+            "label": "Monthly Progress to Spiritualist",
+            "polarity": "neutral",
+            "value": "societal_value_monthly_move"
+          },
+          {
+            "key": "monthly_towards_traditionalist",
+            "label": "Monthly Progress to Traditionalist",
+            "polarity": "neutral",
+            "value": "societal_value_monthly_move"
+          }
+        ]
+      },
+      "facets": {},
+      "id": "societal-value:latinization_vs_hellenization",
+      "mods": [],
+      "name": "Latinization vs Hellenization",
+      "slug": "latinization-vs-hellenization",
+      "type": "societal-value"
+    }
+  ],
+  "facets": [],
+  "source": "in_game/common/societal_values + everything with monthly_towards_*"
+}

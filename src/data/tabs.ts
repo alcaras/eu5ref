@@ -218,6 +218,11 @@ export const TABS: Tab[] = [
     summary: 'Building + method + prices → goods in/out and profitability',
   },
   {
+    slug: 'values-planner', icon: '⚖️', label: 'Values Planner', section: 'Tools',
+    status: 'built',
+    summary: 'Pick laws, reforms and privileges; see where your societal values drift and what it unlocks',
+  },
+  {
     slug: 'building-calculator', icon: '🧮', label: 'Building Calculator', section: 'Tools',
     status: 'built',
     summary: 'Goods in vs goods out per production method, at prices you set',

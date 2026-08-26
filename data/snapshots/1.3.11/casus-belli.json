@@ -1063,7 +1063,7 @@
       "desc": [
         [
           "t",
-          "With the Lōdī claims over Delhi, it is time that we declare ourselves the true rulers of India!\n\nEnables the Claim [game concept TARGET COUNTRY] [Peace Treaty]"
+          "With the Lōdī claims over Delhi, it is time that we declare ourselves the true rulers of India!\n\nEnables the Claim [game_concept_TARGET_COUNTRY] [Peace Treaty]"
         ]
       ],
       "facets": {},

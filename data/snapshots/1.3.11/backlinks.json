@@ -541,6 +541,11 @@
   ],
   "concept:annexation": [
     {
+      "id": "event:hre.905",
+      "name": "A Prince Undone",
+      "page": "events/hre-905"
+    },
+    {
       "id": "concept:disloyal_subjects",
       "name": "Disloyal Subjects",
       "page": "concepts/disloyal-subjects"
@@ -623,14 +628,14 @@
       "page": "events/overextension-13"
     },
     {
-      "id": "event:overextension.12",
-      "name": "Infamy is RootRoot",
-      "page": "events/overextension-12"
+      "id": "event:overextension.14",
+      "name": "Infamy is against our Country Traditions",
+      "page": "events/overextension-14"
     },
     {
-      "id": "event:overextension.14",
-      "name": "Infamy is against Root Traditions",
-      "page": "events/overextension-14"
+      "id": "event:overextension.12",
+      "name": "Infamy is our Countryour Country",
+      "page": "events/overextension-12"
     }
   ],
   "concept:area": [
@@ -1291,6 +1296,11 @@
       "id": "concept:defender",
       "name": "Defender",
       "page": "concepts/defender"
+    },
+    {
+      "id": "event:colonial_charter.200",
+      "name": "The Failed Colony of Target",
+      "page": "events/colonial-charter-200"
     }
   ],
   "concept:attrition": [
@@ -6023,6 +6033,11 @@
   ],
   "concept:disease": [
     {
+      "id": "event:diseases.1",
+      "name": "A New Outbreak",
+      "page": "events/diseases-1"
+    },
+    {
       "id": "concept:disease_outbreak",
       "name": "Disease Outbreak",
       "page": "concepts/disease-outbreak"
@@ -7227,6 +7242,11 @@
   ],
   "concept:explorer": [
     {
+      "id": "event:exploration_monthly.24",
+      "name": "A Friendly Dog",
+      "page": "events/exploration-monthly-24"
+    },
+    {
       "id": "concept:courtier",
       "name": "Courtier",
       "page": "concepts/courtier"
@@ -7652,6 +7672,11 @@
       "id": "concept:garrison",
       "name": "Garrison",
       "page": "concepts/garrison"
+    },
+    {
+      "id": "event:random_event.74",
+      "name": "Local Fortification Expert Discovered",
+      "page": "events/random-event-74"
     },
     {
       "id": "concept:occupation",
@@ -8534,6 +8559,11 @@
       "page": "events/flavor-csu-210"
     },
     {
+      "id": "event:flavor_por.17",
+      "name": "A Period of Uncertainty",
+      "page": "events/flavor-por-17"
+    },
+    {
       "id": "heir-selection:absolute_cognatic_primogeniture",
       "name": "Absolute Cognatic Primogeniture",
       "page": null
@@ -8597,6 +8627,11 @@
       "id": "concept:heir_selection",
       "name": "Succession Law",
       "page": "concepts/heir-selection"
+    },
+    {
+      "id": "event:flavor_eng_diplomacy.1001",
+      "name": "The Matter of Matrimony",
+      "page": "events/flavor-eng-diplomacy-1001"
     },
     {
       "id": "government-type:tribe",
@@ -10581,6 +10616,11 @@
       "page": null
     },
     {
+      "id": "event:flavor_byz_ven.7",
+      "name": "Target Woa",
+      "page": "events/flavor-byz-ven-7"
+    },
+    {
       "id": "concept:tax",
       "name": "Tax",
       "page": "concepts/tax"
@@ -10599,6 +10639,11 @@
       "id": "town-right:royal_textile_rights",
       "name": "Textile Rights",
       "page": null
+    },
+    {
+      "id": "event:rise_of_the_ottomans.209",
+      "name": "The Conquest of Location",
+      "page": "events/rise-of-the-ottomans-209"
     },
     {
       "id": "advance:scandinavian_thing_rights_advance",
@@ -12284,6 +12329,11 @@
       "page": null
     },
     {
+      "id": "event:flavor_ice.10",
+      "name": "Bishoprics of our Country",
+      "page": "events/flavor-ice-10"
+    },
+    {
       "id": "subject:colonial_nation",
       "name": "Colonial Nation",
       "page": null
@@ -12454,9 +12504,19 @@
       "page": null
     },
     {
+      "id": "event:language.2",
+      "name": "The Enemy's Tongue",
+      "page": "events/language-2"
+    },
+    {
       "id": "subject:trade_company",
       "name": "Trade Company",
       "page": null
+    },
+    {
+      "id": "event:flavor_eng_diplomacy.1100",
+      "name": "Treaty of Medina del Campo",
+      "page": "events/flavor-eng-diplomacy-1100"
     },
     {
       "id": "subject:tributary",
@@ -13205,6 +13265,11 @@
       "page": "concepts/fully-settled"
     },
     {
+      "id": "event:exploration_monthly.21",
+      "name": "Gifted Translator",
+      "page": "events/exploration-monthly-21"
+    },
+    {
       "id": "concept:heathen",
       "name": "Heathen",
       "page": "concepts/heathen"
@@ -13213,6 +13278,11 @@
       "id": "concept:heretic",
       "name": "Heretic",
       "page": "concepts/heretic"
+    },
+    {
+      "id": "event:exploration_monthly.2",
+      "name": "Hostile Natives",
+      "page": "events/exploration-monthly-2"
     },
     {
       "id": "cabinet-action:integrate_area",
@@ -13380,6 +13450,11 @@
       "page": "concepts/religious-rebels"
     },
     {
+      "id": "event:exploration_monthly.17",
+      "name": "Riverboat Ride",
+      "page": "events/exploration-monthly-17"
+    },
+    {
       "id": "cabinet-action:send_people_to_the_colonies",
       "name": "Send People to the Colonies",
       "page": null
@@ -13430,6 +13505,11 @@
       "page": "laws/eng-taxation-law"
     },
     {
+      "id": "event:exploration_monthly.16",
+      "name": "Temple Raider",
+      "page": "events/exploration-monthly-16"
+    },
+    {
       "id": "concept:tithe",
       "name": "Tithe",
       "page": "concepts/tithe"
@@ -13468,6 +13548,11 @@
       "id": "concept:unrest",
       "name": "Unrest",
       "page": "concepts/unrest"
+    },
+    {
+      "id": "event:exploration_monthly.20",
+      "name": "Voices in the Night",
+      "page": "events/exploration-monthly-20"
     }
   ],
   "concept:pop_needs": [
@@ -14510,6 +14595,11 @@
       "page": "concepts/supportrebels"
     },
     {
+      "id": "event:revolution_disaster.2",
+      "name": "The our Country Revolution",
+      "page": "events/revolution-disaster-2"
+    },
+    {
       "id": "concept:enemy",
       "name": "War Enemy",
       "page": "concepts/enemy"
@@ -15185,6 +15275,11 @@
       "page": "concepts/slave-rebels"
     },
     {
+      "id": "event:flavor_eng.16",
+      "name": "The Bloody Union",
+      "page": "events/flavor-eng-16"
+    },
+    {
       "id": "concept:tolerance",
       "name": "Tolerance",
       "page": "concepts/tolerance"
@@ -15238,9 +15333,24 @@
       "page": "concepts/cardinal"
     },
     {
+      "id": "event:devotion_events.107",
+      "name": "Jubilee in our Country",
+      "page": "events/devotion-events-107"
+    },
+    {
       "id": "concept:papal_authority",
       "name": "Papal Authority",
       "page": "concepts/papal-authority"
+    },
+    {
+      "id": "event:devotion_events.109",
+      "name": "The Papacy Reacts to Jubilee in our Country",
+      "page": "events/devotion-events-109"
+    },
+    {
+      "id": "event:flavor_cas.22",
+      "name": "The Title of Catholicism Kings",
+      "page": "events/flavor-cas-22"
     }
   ],
   "concept:religious_influence": [
@@ -15613,6 +15723,11 @@
   ],
   "concept:ruler": [
     {
+      "id": "event:flavor_hun.110",
+      "name": "A Reform for our Country",
+      "page": "events/flavor-hun-110"
+    },
+    {
       "id": "heir-selection:abbess_elective_female",
       "name": "Abbess Elective",
       "page": null
@@ -15956,6 +16071,11 @@
       "id": "character-interaction:make_regent_ruler",
       "name": "Take the Throne",
       "page": null
+    },
+    {
+      "id": "event:language.10",
+      "name": "The Country's Speech",
+      "page": "events/language-10"
     },
     {
       "id": "government-type:theocracy",

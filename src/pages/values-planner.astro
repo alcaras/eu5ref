@@ -1,0 +1,340 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Values Planner" active="values-planner" pageMark="🧭" eyebrow="Tools"
+  description="Pick laws, government reforms and estate privileges and see where your societal values drift, and how long it takes.">
+
+  <p style="max-width: 780px; color: var(--text-soft);">
+    Societal values sit on a −100…+100 axis and drift by a fixed amount each
+    month for every law, estate privilege, cabinet action or building pushing
+    them. Pick what you run and this adds it up: net movement per month, where
+    each axis lands, and <b>what that unlocks and when</b>. Numbers are the
+    game's own — tiny 0.025, minor 0.05, normal 0.1, large 0.2, significant
+    0.33 per month.
+  </p>
+  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
+    The swap-away dance works because a reform's value requirement sits in its
+    <code>allow</code> block — "whether the action can start" — and reforms have
+    no <code>remove_if</code>, so one enacted while you qualified is not undone
+    when the value drifts back. Reforms do take time to implement and their
+    modifiers scale with progress, so hold the position until it completes.
+  </p>
+
+  <div class="vp" data-vp>
+    <div class="vp-controls">
+      <input type="search" data-vp-q placeholder="Search laws, reforms, privileges, buildings…" autocomplete="off" />
+      <span class="chips" data-vp-sources></span>
+      <span class="pl-spacer"></span>
+      <button type="button" class="csv-btn" data-vp-copy>⧉ Copy link</button>
+      <button type="button" class="csv-btn" data-vp-clear>✕ Clear</button>
+    </div>
+
+    <div class="vp-grid">
+      <section class="vp-pane">
+        <h2 class="vp-h">Your picks <small data-vp-count>none</small></h2>
+        <div class="vp-picked" data-vp-picked></div>
+        <h2 class="vp-h" style="margin-top:18px;">Available</h2>
+        <div class="vp-list" data-vp-list></div>
+      </section>
+
+      <section class="vp-pane">
+        <h2 class="vp-h">Drift
+          <small>from your starting position, at <span data-vp-yrs>20</span> years —
+          <input type="range" min="1" max="100" value="20" data-vp-years /></small>
+        </h2>
+        <div class="vp-axes" data-vp-axes></div>
+        <h2 class="vp-h" style="margin-top:18px;">Unlocks along the way <small data-vp-unlocked></small></h2>
+        <div class="vp-unlocks" data-vp-unlocks></div>
+      </section>
+    </div>
+  </div>
+
+  <style is:global>
+    .vp-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+    .vp-controls input {
+      background: var(--bg-elev); color: var(--text); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 6px 11px; font-size: 13px;
+      width: 300px; font-family: var(--font-ui);
+    }
+    .vp-controls input:focus { outline: none; border-color: var(--gold-deep); }
+    .vp-controls .chip { cursor: pointer; }
+    .vp-controls .chip.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
+
+    .vp-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 22px; margin-top: 14px; }
+    @media (max-width: 980px) { .vp-grid { grid-template-columns: 1fr; } }
+    .vp-h { font-size: 15px; color: var(--gold-soft); margin-bottom: 8px; }
+    .vp-h small { font-family: var(--font-ui); font-size: 11px; color: var(--text-faint); margin-left: 8px; }
+    .vp-pane { min-width: 0; }
+    .vp-list, .vp-picked { display: flex; flex-direction: column; gap: 2px; max-height: 62vh; overflow-y: auto; }
+    .vp-list { border: 1px solid var(--border); border-radius: var(--radius); padding: 6px; background: var(--bg-elev); }
+
+    .vp-item {
+      display: flex; align-items: baseline; gap: 8px; padding: 4px 8px;
+      border-radius: 4px; cursor: pointer; border-left: 2px solid transparent;
+      font-size: 12.5px; color: var(--text-soft);
+    }
+    .vp-item:hover { background: var(--bg-elev-2); border-left-color: var(--gold); }
+    .vp-item.on { background: color-mix(in oklab, var(--gold) 14%, var(--bg-elev-2)); border-left-color: var(--gold); }
+    .vp-item .src { color: var(--text-faint); font-size: 11px; }
+    .vp-item .eff { margin-left: auto; font-family: var(--font-mono); font-size: 11px; white-space: nowrap; }
+    .vp-item .eff b { font-weight: 600; }
+
+    .vp-axis { margin-bottom: 12px; }
+    .vp-axis__top { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 3px; }
+    .vp-axis__l { color: var(--text-soft); }
+    .vp-axis__r { color: var(--text-soft); }
+    .vp-axis__bar {
+      position: relative; height: 12px; background: var(--bg-elev-2);
+      border: 1px solid var(--border); border-radius: 3px; overflow: hidden;
+    }
+    .vp-axis__mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border-strong); }
+    .vp-axis__fill { position: absolute; top: 0; bottom: 0; background: var(--gold); opacity: .85; }
+    .vp-axis__num { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+    .vp-axis__num b { color: var(--gold); font-family: var(--font-mono); }
+    .vp-axis.quiet { opacity: .45; }
+    .vp-axis__start {
+      width: 46px; background: var(--bg-elev); color: var(--text);
+      border: 1px solid var(--border); border-radius: 3px; padding: 1px 4px;
+      font-family: var(--font-mono); font-size: 11px;
+    }
+    .vp-axis__now { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--text); opacity: .8; }
+    .vp-h input[type=range] { vertical-align: middle; width: 110px; }
+    .vp-unlocks { display: flex; flex-direction: column; gap: 2px; max-height: 40vh; overflow-y: auto; }
+    .vp-unlock { display: flex; gap: 8px; align-items: baseline; font-size: 12.5px; padding: 3px 8px;
+      border-left: 2px solid var(--good); border-radius: 3px; background: var(--bg-elev-2); }
+    .vp-unlock.later { border-left-color: var(--gold-deep); }
+    .vp-unlock.never { border-left-color: var(--border-strong); opacity: .5; }
+    .vp-unlock .when { margin-left: auto; font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
+  </style>
+
+  <script>
+    const root = document.querySelector('[data-vp]')!;
+    const $ = (s: string) => root.querySelector(s) as HTMLElement;
+    const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+
+    let D: any = null;
+    const picked = new Set<string>();
+    let sourceFilter: string | null = null;
+    let horizonYears = 20;
+    const start: Record<string, number> = {};   // where each axis begins
+    const esc = (t: string) => String(t).replace(/[&<>"]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
+    const uid = (m: any) => `${m.folder}:${m.key}`;
+
+    /** Net monthly drift per axis. Right is positive, left negative — the
+     *  same convention as the -100..+100 axis itself. */
+    function totals() {
+      const out: Record<string, number> = {};
+      for (const m of D.movers) {
+        if (!picked.has(uid(m))) continue;
+        for (const e of m.effects) {
+          const v = (e.perMonth ?? 0) * (e.dir === 'right' ? 1 : -1);
+          out[e.pair] = (out[e.pair] || 0) + v;
+        }
+      }
+      return out;
+    }
+
+    function effLabel(m: any) {
+      return m.effects.map((e: any) => {
+        const p = D.pairs[e.pair];
+        const side = e.dir === 'right' ? p.right.name : p.left.name;
+        return `<b>${e.perMonth ?? '?'}</b>→${esc(side)}`;
+      }).join(' ');
+    }
+
+    function renderList() {
+      const term = ($('[data-vp-q]') as HTMLInputElement).value.trim().toLowerCase();
+      const hits = D.movers.filter((m: any) =>
+        (!sourceFilter || m.source === sourceFilter) &&
+        (!term || m.name.toLowerCase().includes(term) ||
+         m.source.toLowerCase().includes(term) ||
+         m.effects.some((e: any) => {
+           const p = D.pairs[e.pair];
+           return p.left.name.toLowerCase().includes(term) ||
+                  p.right.name.toLowerCase().includes(term);
+         })));
+      $('[data-vp-list]').innerHTML = hits.slice(0, 400).map((m: any) =>
+        `<div class="vp-item ${picked.has(uid(m)) ? 'on' : ''}" data-uid="${esc(uid(m))}">` +
+        `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>` +
+        `<span class="eff">${effLabel(m)}</span></div>`).join('') ||
+        '<div class="pl-empty">Nothing matches.</div>';
+    }
+
+    function renderPicked() {
+      const list = D.movers.filter((m: any) => picked.has(uid(m)));
+      $('[data-vp-count]').textContent = list.length ? `${list.length} selected` : 'none';
+      $('[data-vp-picked]').innerHTML = list.map((m: any) =>
+        `<div class="vp-item on" data-uid="${esc(uid(m))}">` +
+        `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>` +
+        `<span class="eff">${effLabel(m)}</span></div>`).join('') ||
+        '<div style="color:var(--text-faint); font-size:12.5px; padding:4px 8px;">' +
+        'Nothing picked yet — choose from the list below.</div>';
+    }
+
+    /** Where an axis sits after n months, clamped to the -100..100 range. */
+    function positionAt(pid: string, net: number, months: number) {
+      const s = start[pid] ?? 0;
+      return Math.max(-D.scale, Math.min(D.scale, s + net * months));
+    }
+    /** Months until a requirement is met, or null if this drift never gets
+     *  there (already-met returns 0). */
+    function monthsUntil(req: any, net: number) {
+      const s = start[req.pair] ?? 0;
+      const target = req.value;
+      const ok = (v: number) => req.op === '>' ? v > target : req.op === '>=' ? v >= target
+        : req.op === '<' ? v < target : req.op === '<=' ? v <= target : v === target;
+      if (ok(s)) return 0;
+      if (!net) return null;
+      const need = (req.op === '>' || req.op === '>=') ? target - s : target - s;
+      const m = need / net;
+      if (m <= 0) return null;                       // drifting the wrong way
+      const capped = positionAt(req.pair, net, m);
+      return ok(capped) || Math.abs(capped) >= D.scale ? m : null;
+    }
+
+    function renderAxes() {
+      const t = totals();
+      const months = horizonYears * 12;
+      const rows = Object.entries(D.pairs).map(([pid, p]: any) => {
+        const net = t[pid] || 0;
+        const now = positionAt(pid, net, months);
+        const swing = net ? (2 * D.scale) / Math.abs(net) / 12 : 0;
+        const pct = Math.max(-1, Math.min(1, net / 0.6));
+        const w = Math.abs(pct) * 50;
+        const left = net >= 0 ? 50 : 50 - w;
+        return { pid, p, net, now, swing, w, left };
+      });
+      rows.sort((a, b) => Math.abs(b.net) - Math.abs(a.net) ||
+        a.p.left.name.localeCompare(b.p.left.name));
+      $('[data-vp-axes]').innerHTML = rows.map((r) =>
+        `<div class="vp-axis ${r.net ? '' : 'quiet'}">` +
+        `<div class="vp-axis__top"><span class="vp-axis__l">${esc(r.p.left.name)}</span>` +
+        `<span class="vp-axis__r">${esc(r.p.right.name)}</span></div>` +
+        `<div class="vp-axis__bar"><div class="vp-axis__mid"></div>` +
+        (r.net ? `<div class="vp-axis__fill" style="left:${r.left}%; width:${r.w}%"></div>` : '') +
+        `<div class="vp-axis__now" style="left:${50 + (r.now / D.scale) * 50}%"></div>` +
+        `</div>` +
+        `<div class="vp-axis__num">` +
+        `<span>start <input class="vp-axis__start" type="number" step="5" min="-100" max="100" ` +
+        `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → <b>${r.now.toFixed(1)}</b></span>` +
+        (r.net ? `<span>${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month · ` +
+                 `${r.swing.toFixed(1)} yrs full swing</span>` : '<span>no movement</span>') +
+        `</div></div>`).join('');
+    }
+
+    /** What your picks eventually qualify you for, and roughly when. */
+    function renderUnlocks() {
+      const t = totals();
+      const horizon = horizonYears * 12;
+      const rows: any[] = [];
+      for (const r of D.requirements) {
+        let worst: number | null = 0;
+        let impossible = false;
+        for (const req of r.requires) {
+          if (!(req.pair in D.pairs)) continue;
+          const m = monthsUntil(req, t[req.pair] || 0);
+          if (m === null) { impossible = true; break; }
+          worst = Math.max(worst as number, m);
+        }
+        if (impossible || worst === null) { rows.push({ r, months: null }); continue; }
+        rows.push({ r, months: worst });
+      }
+      const reachable = rows.filter((x) => x.months !== null && x.months <= horizon);
+      reachable.sort((a, b) => a.months - b.months);
+      const rest = rows.filter((x) => !(x.months !== null && x.months <= horizon));
+      $('[data-vp-unlocked]').textContent =
+        `${reachable.length} within ${horizonYears} years · ${rows.length} gated in total`;
+      $('[data-vp-unlocks]').innerHTML = [...reachable, ...rest.slice(0, 40)].map((x: any) => {
+        const cls = x.months === null ? 'never' : x.months === 0 ? '' : 'later';
+        const when = x.months === null ? 'not on this path'
+          : x.months === 0 ? 'already qualifies'
+          : `${(x.months / 12).toFixed(1)} yrs`;
+        const need = x.r.requires.map((q: any) => {
+          const p = D.pairs[q.pair];
+          return p ? `${esc(p.left.name)}/${esc(p.right.name)} ${q.op} ${q.value}` : q.pair;
+        }).join(', ');
+        const link = x.r.id ? `${baseUrl}${x.r.folder === 'laws' ? 'laws' :
+          x.r.folder === 'government_reforms' ? 'reforms' :
+          x.r.folder === 'estate_privileges' ? 'privileges' : ''}/${x.r.slug}` : null;
+        const label = link ? `<a href="${link}">${esc(x.r.name)}</a>` : esc(x.r.name);
+        return `<div class="vp-unlock ${cls}">${label}` +
+          `<span class="src" style="color:var(--text-faint);font-size:11px">${esc(x.r.source)}</span>` +
+          `<span class="when" title="${esc(need)}">${when}</span></div>`;
+      }).join('');
+    }
+
+    function syncUrl() {
+      const p = new URLSearchParams();
+      if (picked.size) p.set('p', [...picked].join(','));
+      const st = Object.entries(start).filter(([, v]) => v);
+      if (st.length) p.set('s', st.map(([k, v]) => `${k}:${v}`).join(','));
+      if (horizonYears !== 20) p.set('y', String(horizonYears));
+      history.replaceState(null, '', p.toString() ? '?' + p.toString() : location.pathname);
+    }
+    function render() { renderList(); renderPicked(); renderAxes(); renderUnlocks(); syncUrl(); }
+
+    fetch(`${baseUrl}values.json`).then((r) => r.json()).then((data) => {
+      D = data;
+      const sources = [...new Set(D.movers.map((m: any) => m.source))].sort();
+      $('[data-vp-sources]').innerHTML = sources.map((s: any) =>
+        `<span class="chip" data-src="${esc(s)}">${esc(s)}</span>`).join('');
+      $('[data-vp-sources]').addEventListener('click', (e) => {
+        const c = (e.target as HTMLElement).closest('[data-src]') as HTMLElement | null;
+        if (!c) return;
+        sourceFilter = sourceFilter === c.dataset.src ? null : c.dataset.src!;
+        for (const x of root.querySelectorAll('[data-src]')) x.classList.remove('on');
+        if (sourceFilter) c.classList.add('on');
+        renderList();
+      });
+
+      const qs = new URLSearchParams(location.search);
+      const q = qs.get('p');
+      if (q) for (const id of q.split(',')) picked.add(id);
+      for (const bit of (qs.get('s') || '').split(',').filter(Boolean)) {
+        const [k, v] = bit.split(':');
+        if (k in D.pairs) start[k] = parseFloat(v) || 0;
+      }
+      const y = parseInt(qs.get('y') || '', 10);
+      if (!isNaN(y)) {
+        horizonYears = Math.min(100, Math.max(1, y));
+        ($('[data-vp-years]') as HTMLInputElement).value = String(horizonYears);
+      }
+      $('[data-vp-yrs]').textContent = String(horizonYears);
+      render();
+    });
+
+    for (const sel of ['[data-vp-list]', '[data-vp-picked]']) {
+      root.querySelector(sel)!.addEventListener('click', (e) => {
+        const el = (e.target as HTMLElement).closest('[data-uid]') as HTMLElement | null;
+        if (!el) return;
+        const id = el.dataset.uid!;
+        picked.has(id) ? picked.delete(id) : picked.add(id);
+        render();
+      });
+    }
+    ($('[data-vp-q]') as HTMLInputElement).addEventListener('input', renderList);
+    ($('[data-vp-years]') as HTMLInputElement).addEventListener('input', (e) => {
+      horizonYears = parseInt((e.target as HTMLInputElement).value, 10);
+      $('[data-vp-yrs]').textContent = String(horizonYears);
+      renderAxes(); renderUnlocks(); syncUrl();
+    });
+    $('[data-vp-axes]').addEventListener('change', (e) => {
+      const el = e.target as HTMLInputElement;
+      if (!el.dataset.start) return;
+      start[el.dataset.start] = parseFloat(el.value) || 0;
+      renderAxes(); renderUnlocks(); syncUrl();
+    });
+    $('[data-vp-clear]').addEventListener('click', () => {
+      picked.clear();
+      for (const k of Object.keys(start)) delete start[k];
+      render();
+    });
+    $('[data-vp-copy]').addEventListener('click', () => {
+      syncUrl();
+      navigator.clipboard.writeText(location.href);
+      const b = $('[data-vp-copy]'); b.textContent = '✓ Copied';
+      setTimeout(() => (b.textContent = '⧉ Copy link'), 1200);
+    });
+  </script>
+</Base>

@@ -796,7 +796,7 @@
      "Protect our Coasts",
      "Root Entrepôts",
      "Root Relations",
-     "The ShowBuildingTypeNameWithNoTooltip('marketplace') of Root",
+     "The Marketplace of Root",
      "The Winds of Trade",
      "Trade Capacity",
      "A Solid Approach",
@@ -866,7 +866,7 @@
      {
       "final": false,
       "key": "mission_marketplace_of_capital",
-      "name": "The ShowBuildingTypeNameWithNoTooltip('marketplace') of Root",
+      "name": "The Marketplace of Root",
       "requires": []
      },
      {

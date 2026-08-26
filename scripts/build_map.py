@@ -201,6 +201,25 @@ def main():
             (l.get('slug') or '') if l.get('rank') else '',
             0 if l.get('sea') else 1,
         ])
+    # Per-location pop shares, so the culture and religion maps can shade by
+    # how much of a location actually is that culture rather than painting a
+    # flat colour wherever it happens to be the plurality. Stored as parallel
+    # arrays of [valueIndex, percent] against a shared name table.
+    share_names: dict[str, list[str]] = {'culture': [], 'religion': []}
+    share_ix: dict[str, dict[str, int]] = {'culture': {}, 'religion': {}}
+    shares: dict[str, list] = {'culture': [], 'religion': []}
+    for field, plural in (('culture', 'cultures'), ('religion', 'religions')):
+        names, ixs = share_names[field], share_ix[field]
+        for k in keys:
+            row = []
+            for entry in (by_key.get(k, {}).get(plural) or []):
+                nm = entry['name']
+                if nm not in ixs:
+                    ixs[nm] = len(names)
+                    names.append(nm)
+                row.append([ixs[nm], round(entry['pct'])])
+            shares[field].append(row)
+
     (OUT / 'legend.json').write_text(json.dumps({
         'width': w, 'height': h, 'scale': SCALE,
         'modes': legend,
@@ -211,6 +230,8 @@ def main():
         'modeField': {'good': 2, 'culture': 3, 'religion': 4,
                       'topography': 9, 'climate': 10, 'vegetation': 11},
         'locations': rows,
+        'shareNames': share_names,
+        'shares': shares,
     }, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     print(f'  legend.json: {(OUT / "legend.json").stat().st_size // 1024}KB')
 

@@ -46,7 +46,7 @@
    "desc": [
     [
      "t",
-     "[Wargoal] is to take [game concept PROVINCE]."
+     "[Wargoal] is to take [game_concept_PROVINCE]."
     ]
    ],
    "facets": {},
@@ -111,7 +111,7 @@
    "desc": [
     [
      "t",
-     "Defend the Capital [game concept PROVINCE]"
+     "Defend the Capital [game_concept_PROVINCE]"
     ]
    ],
    "facets": {},
@@ -187,7 +187,7 @@
    "desc": [
     [
      "t",
-     "[Wargoal] is to take [game concept PROVINCE]."
+     "[Wargoal] is to take [game_concept_PROVINCE]."
     ]
    ],
    "facets": {},
@@ -244,7 +244,7 @@
    "desc": [
     [
      "t",
-     "Take [game concept PROVINCE]"
+     "Take [game_concept_PROVINCE]"
     ]
    ],
    "facets": {},
@@ -366,7 +366,7 @@
    "desc": [
     [
      "t",
-     "[Wargoal] is to take [game concept PROVINCE]."
+     "[Wargoal] is to take [game_concept_PROVINCE]."
     ]
    ],
    "facets": {},
@@ -643,7 +643,7 @@
    "desc": [
     [
      "t",
-     "[Wargoal] is to take [game concept PROVINCE]."
+     "[Wargoal] is to take [game_concept_PROVINCE]."
     ]
    ],
    "facets": {},
@@ -700,7 +700,7 @@
    "desc": [
     [
      "t",
-     "[Wargoal] is to take [game concept PROVINCE]."
+     "[Wargoal] is to take [game_concept_PROVINCE]."
     ]
    ],
    "facets": {},
@@ -1293,7 +1293,7 @@
     ],
     [
      "t",
-     "]. Once we win, we can then install [game concept CHARACTER] as their ["
+     "]. Once we win, we can then install [game_concept_CHARACTER] as their ["
     ],
     [
      "r",
@@ -1524,7 +1524,7 @@
    "desc": [
     [
      "t",
-     "Take the Capital [game concept PROVINCE]"
+     "Take the Capital [game_concept_PROVINCE]"
     ]
    ],
    "facets": {},
