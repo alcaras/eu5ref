@@ -37,6 +37,9 @@ import Base from '../layouts/Base.astro';
       <label class="pl-toggle" title="Advances gated to other countries, cultures or religions">
         <input type="checkbox" data-pl-other /> show other countries’
       </label>
+      <label class="pl-toggle" title="Show what each advance does, without hovering">
+        <input type="checkbox" data-pl-expand /> expanded
+      </label>
       <div class="pl-zoom">
         <button type="button" data-zoom="-">−</button>
         <span data-zoom-label>100%</span>
@@ -191,6 +194,20 @@ import Base from '../layouts/Base.astro';
       margin-left: auto; font-size: 10px; font-family: var(--font-mono);
       color: var(--gold); flex: none;
     }
+    /* expanded card: name on top, what it does underneath */
+    .pnode.wide {
+      width: 236px; height: 74px; flex-direction: column; align-items: stretch;
+      gap: 2px; padding: 5px 7px 6px 6px;
+    }
+    .pnode.wide .hd { display: flex; align-items: center; gap: 5px; }
+    .pnode.wide .hd .nm { font-weight: 600; color: var(--text); }
+    .pnode.wide .fx {
+      display: flex; flex-direction: column; gap: 0;
+      font-size: 10px; line-height: 1.35; color: var(--text-dim); overflow: hidden;
+    }
+    .pnode.wide .fx span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .pnode.wide .fx .none { color: var(--text-faint); font-style: italic; }
+
     /* hovering an advance lights its whole prerequisite chain */
     .pl-board.focus .pnode { opacity: .22; }
     .pl-board.focus .pnode.lit { opacity: 1; border-color: var(--gold-soft); }
@@ -244,6 +261,7 @@ import Base from '../layouts/Base.astro';
     const planned = new Set<string>();
     const researched = new Set<string>();
     let showOther = false;
+    let expanded = false;
     let ageIx = 0;
     let zoom = 1;
     let focusCat = 'adm';                       // which age-focus category is shown
@@ -255,7 +273,13 @@ import Base from '../layouts/Base.astro';
     // keep the game's *semantics* (branch, tier, prerequisite edges) but
     // turn each tier into a COLUMN and pack it vertically — depth is only
     // 8–10, so an age fits the viewport width and every name stays legible.
-    const NW = 158, NH = 26, COLW = 170, ROWH = 30, BRANCH_GAP = 30, TOP = 26;
+    let NW = 158, NH = 26, COLW = 170, ROWH = 30;
+    const BRANCH_GAP = 30, TOP = 26;
+    /** Expanded cards carry their effects, so they need room. */
+    function setGeometry() {
+      if (expanded) { NW = 236; NH = 74; COLW = 250; ROWH = 80; }
+      else { NW = 158; NH = 26; COLW = 170; ROWH = 30; }
+    }
 
     // ── three-valued gate evaluation ───────────────────────────
     // TRUE = available to this country, FALSE = never, null = depends on
@@ -325,6 +349,7 @@ import Base from '../layouts/Base.astro';
       if (relOverride) p.set('re', relOverride.k);
       if (ageIx) p.set('age', String(ageIx));
       if (showOther) p.set('all', '1');
+      if (expanded) p.set('x', '1');
       if (planned.size) p.set('p', enc(planned));
       if (researched.size) p.set('r', enc(researched));
       history.replaceState(null, '', p.toString() ? '?' + p.toString() : location.pathname);
@@ -471,6 +496,7 @@ import Base from '../layouts/Base.astro';
 
     // ── render ─────────────────────────────────────────────────
     function render() {
+      setGeometry();
       renderAges(); renderContext(); renderBoard(); syncUrl();
     }
 
@@ -513,9 +539,17 @@ import Base from '../layouts/Base.astro';
       const qn = planned.has(id) ? `<span class="qn">${order.indexOf(id) + 1}</span>` : '';
       const badge = !qn && st !== 'common' && n.gl?.length ? '<span class="badge">◆</span>' : '';
       const style = pos ? ` style="left:${pos.x}px; top:${pos.y}px"` : '';
-      return `<div class="${cls}"${style} data-id="${id}">` +
-        (n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '') +
-        `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
+      const icon = n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '';
+      if (!expanded) {
+        return `<div class="${cls}"${style} data-id="${id}">${icon}` +
+          `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
+      }
+      const fx = [...(n.m || []).slice(0, 3), ...(n.u || []).slice(0, 2)];
+      return `<div class="${cls} wide"${style} data-id="${id}">` +
+        `<div class="hd">${icon}<span class="nm">${n.n}</span>${qn}${badge}</div>` +
+        (fx.length ? `<div class="fx">${fx.map((x: string) => `<span>${x}</span>`).join('')}</div>`
+                   : `<div class="fx"><span class="none">no direct effects</span></div>`) +
+        `</div>`;
     }
 
     function paneHtml(label: string, count: number, list: string[],
@@ -736,6 +770,8 @@ import Base from '../layouts/Base.astro';
       relOverride = D.religions.find((r) => r.k === p.get('re')) || null;
       showOther = p.get('all') === '1';
       ($('[data-pl-other]') as HTMLInputElement).checked = showOther;
+      expanded = p.get('x') === '1';
+      ($('[data-pl-expand]') as HTMLInputElement).checked = expanded;
       ageIx = Math.max(0, Math.min(D.ages.length - 1, parseInt(p.get('age') || '0', 10) || 0));
       dec(p.get('p'), planned);
       dec(p.get('r'), researched);
@@ -744,6 +780,9 @@ import Base from '../layouts/Base.astro';
 
       ($('[data-pl-other]') as HTMLInputElement).addEventListener('change', (e) => {
         showOther = (e.target as HTMLInputElement).checked; render();
+      });
+      ($('[data-pl-expand]') as HTMLInputElement).addEventListener('change', (e) => {
+        expanded = (e.target as HTMLInputElement).checked; render();
       });
       $('[data-pl-copy]').addEventListener('click', () => {
         navigator.clipboard.writeText(location.href);
