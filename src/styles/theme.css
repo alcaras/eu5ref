@@ -1,0 +1,256 @@
+/* eu5ref — sibling of owreference's Tufte/editorial direction, reskinned
+   for early-modern Europe: deep naval navy base (oklch hue 255), warm
+   parchment text, EU-gold accent, EB Garamond display. Dark mode only. */
+
+:root {
+  color-scheme: dark;
+
+  /* Deep navy-slate palette */
+  --bg:           oklch(0.17 0.018 255);
+  --bg-elev:      oklch(0.21 0.020 253);
+  --bg-elev-2:    oklch(0.24 0.021 252);
+  --bg-elev-3:    oklch(0.27 0.022 252);
+  --border:       oklch(0.31 0.020 253);
+  --border-strong:oklch(0.39 0.022 253);
+  --border-faint: oklch(0.27 0.016 253);
+
+  /* Warm parchment text on the cool ground */
+  --text:         oklch(0.94 0.010 85);
+  --text-soft:    oklch(0.82 0.012 85);
+  --text-dim:     oklch(0.63 0.014 85);
+  --text-faint:   oklch(0.48 0.014 85);
+
+  --gold:         oklch(0.81 0.13 85);
+  --gold-soft:    oklch(0.70 0.10 85);
+  --gold-deep:    oklch(0.55 0.08 84);
+  --gold-glow:    oklch(0.81 0.13 85 / 0.18);
+
+  --accent:       var(--gold);
+  --accent-2:     oklch(0.76 0.09 230);   /* link steel-blue */
+
+  /* Modifier polarity — the game's green/red, tuned for dark bg */
+  --good:         oklch(0.78 0.14 150);
+  --bad:          oklch(0.72 0.16 25);
+  --neutral:      var(--text-soft);
+
+  --font-ui:      "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "EB Garamond", "Iowan Old Style", Georgia, serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-lg: 10px;
+
+  --shadow-sm: 0 1px 0 rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.25);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; min-height: 100vh; }
+html { scrollbar-gutter: stable; }
+body {
+  background:
+    radial-gradient(1200px 600px at 20% -10%, oklch(0.24 0.03 260 / .55), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, oklch(0.24 0.03 85 / .20), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+}
+/* Faint chart-grid texture (rgba, not low-alpha oklch — Chromium tint bug) */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.016) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.016) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+main, header, footer { position: relative; z-index: 1; }
+
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code, kbd { font-family: var(--font-mono); font-size: 0.92em; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--text);
+}
+
+/* ── layout shell ── */
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--bg) 82%, black);
+  position: sticky; top: 0; z-index: 40;
+  backdrop-filter: blur(6px);
+}
+.site-header .wrap {
+  display: flex; align-items: baseline; gap: 18px;
+  padding-top: 10px; padding-bottom: 10px;
+}
+.site-title {
+  font-family: var(--font-display);
+  font-size: 20px; font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.site-title a { color: inherit; }
+.site-title a:hover { text-decoration: none; }
+.site-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.site-nav a {
+  color: var(--text-soft); padding: 4px 9px; border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+.site-nav a:hover { background: var(--bg-elev-2); text-decoration: none; color: var(--text); }
+.site-nav a.active { color: var(--gold); background: var(--gold-glow); }
+
+.page-meta { padding: 26px 0 8px; }
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-soft); font-weight: 600; margin-bottom: 4px;
+}
+.page-title { font-size: 34px; line-height: 1.1; }
+.page-stats { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.stat-pill {
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--bg-elev); padding: 3px 11px;
+  font-size: 12px; color: var(--text-dim);
+}
+.stat-pill b { color: var(--text-soft); font-weight: 600; }
+
+.site-footer {
+  margin-top: 60px; border-top: 1px solid var(--border);
+  padding: 18px 0 40px; color: var(--text-faint); font-size: 12px;
+}
+.site-footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; }
+.site-footer .mono { font-family: var(--font-mono); }
+
+/* ── generic entity table ── */
+.etbl-scroll { overflow-x: auto; margin-top: 14px; }
+table.etbl { border-collapse: collapse; width: 100%; font-size: 13px; }
+.etbl th {
+  text-align: left; font-weight: 600; color: var(--text-dim);
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 8px 10px; border-bottom: 1px solid var(--border-strong);
+  /* No sticky here: .etbl-scroll's overflow makes it the sticky container,
+     which pins the header 49px INTO the table. Revisit with a smarter
+     scroll structure when tables get long enough to need it. */
+  background: var(--bg);
+  white-space: nowrap;
+}
+.etbl td {
+  padding: 7px 10px; border-bottom: 1px solid var(--border-faint);
+  vertical-align: top;
+}
+.etbl tr:hover td { background: var(--bg-elev); }
+.etbl td.num { text-align: right; font-family: var(--font-mono); font-size: 12px; white-space: nowrap; }
+.etbl .is-empty { color: var(--text-faint); }
+
+.ename { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; white-space: nowrap; }
+.swatch {
+  width: 11px; height: 11px; border-radius: 3px; flex: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+}
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip {
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: 1px 8px; font-size: 11px; color: var(--text-dim);
+  background: var(--bg-elev); white-space: nowrap;
+}
+
+/* modifiers */
+ul.mods { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+ul.mods li { white-space: nowrap; }
+.mod-val { font-family: var(--font-mono); font-size: 12px; font-weight: 600; }
+.mod-val.good { color: var(--good); }
+.mod-val.bad { color: var(--bad); }
+.mod-val.neutral { color: var(--neutral); }
+.mod-label { color: var(--text-soft); }
+
+/* key–value pair lists (e.g. pop demand) */
+ul.pairs { list-style: none; margin: 0; padding: 0; }
+ul.pairs li { display: flex; gap: 6px; white-space: nowrap; }
+ul.pairs .k { color: var(--text-soft); }
+ul.pairs .v { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); }
+
+/* rich text */
+.rich { color: var(--text-soft); white-space: pre-line; }
+.rich a { color: var(--accent-2); border-bottom: 1px dotted color-mix(in oklab, var(--accent-2) 50%, transparent); }
+.rich a:hover { text-decoration: none; border-bottom-style: solid; }
+
+/* ── filter bar ── */
+.filterbar { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+.filterbar input[type="search"] {
+  background: var(--bg-elev); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 7px 12px; font-size: 13px; width: min(380px, 100%);
+  font-family: var(--font-ui);
+}
+.filterbar input[type="search"]:focus { outline: none; border-color: var(--gold-deep); }
+.facet-group { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.facet-group .facet-label {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-faint); min-width: 70px;
+}
+.facet-group button {
+  border: 1px solid var(--border); background: var(--bg-elev);
+  color: var(--text-dim); border-radius: 999px; padding: 2px 10px;
+  font-size: 12px; cursor: pointer; font-family: var(--font-ui);
+}
+.facet-group button:hover { border-color: var(--border-strong); color: var(--text-soft); }
+.facet-group button.on {
+  background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold);
+}
+.filter-count { font-size: 12px; color: var(--text-faint); }
+
+/* ── index / catalog cards ── */
+.catalog { display: grid; gap: 26px; margin-top: 24px; }
+.catalog h2 { font-size: 21px; margin-bottom: 8px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.card {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-elev); padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 4px;
+  color: inherit;
+}
+a.card:hover { text-decoration: none; border-color: var(--border-strong); background: var(--bg-elev-2); }
+.card .card-title { font-weight: 600; display: flex; gap: 8px; align-items: baseline; }
+.card .card-sum { font-size: 12.5px; color: var(--text-dim); }
+.card.placeholder { opacity: 0.55; }
+.card .badge {
+  margin-left: auto; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-faint);
+}
+.card.built .badge { color: var(--good); }
+
+/* ── detail pages ── */
+.detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 30px; margin-top: 18px; }
+@media (max-width: 860px) { .detail-grid { grid-template-columns: 1fr; } }
+.panel {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-elev); padding: 14px 16px;
+}
+.panel + .panel { margin-top: 12px; }
+.panel h3 {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--font-ui); font-weight: 600; color: var(--text-faint);
+  margin-bottom: 8px;
+}
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; font-size: 13px; }
+.kv .k { color: var(--text-faint); }
+.kv .v { color: var(--text-soft); font-family: var(--font-mono); font-size: 12.5px; }
+.backlinks { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.backlinks li { padding: 2px 0; }

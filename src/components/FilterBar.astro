@@ -1,0 +1,74 @@
+---
+// Client-side search + facet filtering over an EntityTable. Generic:
+// facet definitions come straight from the dataset JSON's `facets` meta,
+// rows carry data-search and data-f-<facet> attributes (EntityTable emits
+// them). Wrap FilterBar + table in a <div data-filter-scope> — the inline
+// script wires every scope on the page independently.
+//
+// Semantics: within a facet, active chips OR together; across facets and
+// with the search text, filters AND together.
+export interface FacetDef {
+  key: string;
+  label: string;
+  options: { value: string; label: string; count: number }[];
+}
+interface Props {
+  facets?: FacetDef[];
+  placeholder?: string;
+}
+const { facets = [], placeholder = 'Filter…' } = Astro.props;
+---
+<div class="filterbar">
+  <input type="search" placeholder={placeholder} data-filter-search />
+  {facets.map((f) => (
+    <div class="facet-group" data-facet-group={f.key}>
+      <span class="facet-label">{f.label}</span>
+      {f.options.map((o) => (
+        <button type="button" data-facet={f.key} data-value={o.value}>
+          {o.label} <small>{o.count}</small>
+        </button>
+      ))}
+    </div>
+  ))}
+  <span class="filter-count" data-filter-count></span>
+</div>
+
+<script>
+  for (const scope of document.querySelectorAll('[data-filter-scope]')) {
+    const search = scope.querySelector('[data-filter-search]') as HTMLInputElement | null;
+    const count = scope.querySelector('[data-filter-count]');
+    const rows = Array.from(scope.querySelectorAll<HTMLElement>('[data-row]'));
+    const active = new Map<string, Set<string>>();
+
+    const apply = () => {
+      const q = (search?.value || '').trim().toLowerCase();
+      let visible = 0;
+      for (const row of rows) {
+        let show = !q || (row.dataset.search || '').includes(q);
+        if (show) {
+          for (const [facet, values] of active) {
+            if (values.size === 0) continue;
+            const rv = row.dataset['f' + facet.charAt(0).toUpperCase() + facet.slice(1)] || '';
+            if (!values.has(rv)) { show = false; break; }
+          }
+        }
+        row.hidden = !show;
+        if (show) visible++;
+      }
+      if (count) count.textContent = visible === rows.length ? '' : `${visible} of ${rows.length} shown`;
+    };
+
+    search?.addEventListener('input', apply);
+    for (const btn of scope.querySelectorAll<HTMLElement>('button[data-facet]')) {
+      btn.addEventListener('click', () => {
+        const facet = btn.dataset.facet!;
+        const value = btn.dataset.value!;
+        if (!active.has(facet)) active.set(facet, new Set());
+        const set = active.get(facet)!;
+        if (set.has(value)) { set.delete(value); btn.classList.remove('on'); }
+        else { set.add(value); btn.classList.add('on'); }
+        apply();
+      });
+    }
+  }
+</script>

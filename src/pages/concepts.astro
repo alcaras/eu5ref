@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import conceptsData from '../data/concepts.json';
+
+const concepts = conceptsData.entities;
+// The family facet has a long tail — only chip the families with >10 members.
+const facets = conceptsData.facets
+  .map((f) => ({ ...f, options: f.options.filter((o) => o.count > 10) }))
+  .filter((f) => f.options.length > 1);
+
+const columns = [
+  { key: 'name', label: 'Concept', kind: 'name' },
+  { key: 'family', label: 'Family', kind: 'facet' },
+  { key: 'desc', label: 'Description', kind: 'rich' },
+] as const;
+---
+<Base
+  title="Concepts"
+  active="concepts"
+  pageMark="📖"
+  eyebrow="Glossary"
+  pageStats={[{ label: 'concepts', value: concepts.length }]}
+  description="The Europa Universalis V in-game encyclopedia — every game concept, cross-linked."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter concepts…" />
+    <EntityTable entities={concepts} columns={columns as any} pagePrefix="concepts" />
+  </div>
+</Base>

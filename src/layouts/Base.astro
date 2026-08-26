@@ -1,0 +1,90 @@
+---
+import '../styles/theme.css';
+import patch from '../../data/patch.json';
+import { TABS, SECTIONS } from '../data/tabs';
+
+interface Props {
+  title: string;
+  active?: string;
+  eyebrow?: string;
+  pageMark?: string;
+  pageStats?: { label: string; value: string | number }[];
+  description?: string;
+}
+const { title, active, eyebrow, pageMark, pageStats, description } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const SITE_NAME = 'EU5 Reference';
+const DEFAULT_DESC =
+  "Reference for Paradox's Europa Universalis V — goods, advances, laws, buildings, countries, and game concepts, generated from the game's own data files each patch.";
+const pageDesc = description || DEFAULT_DESC;
+const fullTitle = `${title} · ${SITE_NAME}`;
+
+const siteOrigin = Astro.site?.origin || 'https://alcaras.github.io';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+
+// Nav = every built tab, grouped by section (single-tab sections flatten).
+const navTabs = TABS.filter((t) => t.status === 'built');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>`} />
+    <meta name="theme-color" content="#141822" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:url" content={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <span class="site-title"><a href={base}>EU5 Reference</a></span>
+        <nav class="site-nav">
+          {navTabs.map((t) => (
+            <a href={`${base}${t.slug}`} class={active === t.slug ? 'active' : undefined}>
+              {t.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      {(title || pageStats) && (
+        <div class="page-meta">
+          {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+          <h1 class="page-title">{pageMark && `${pageMark} `}{title}</h1>
+          {pageStats && (
+            <div class="page-stats">
+              {pageStats.map((s) => (
+                <span class="stat-pill"><b>{s.value}</b> {s.label}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span class="mono">EU5 {patch.version}</span>
+        <span>data generated from the game's own files</span>
+        <a href="https://github.com/alcaras/eu5ref">github.com/alcaras/eu5ref</a>
+      </div>
+    </footer>
+  </body>
+</html>

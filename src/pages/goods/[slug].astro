@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import Mods from '../../components/Mods.astro';
+import Rich from '../../components/Rich.astro';
+import goodsData from '../../data/goods.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return goodsData.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+const pretty = (v: string) => String(v).replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+---
+<Base
+  title={entity.name}
+  active="goods"
+  eyebrow="Goods"
+  description={`${entity.name} in Europa Universalis V — price, demand, and modifiers.`}
+>
+  <div class="detail-grid">
+    <div>
+      {entity.color && (
+        <p><span class="swatch" style={`background:${entity.color}; display:inline-block; width:14px; height:14px;`} />
+        <span class="chips" style="display:inline-flex; margin-left: 8px;">
+          <span class="chip">{pretty(entity.facets.category)}</span>
+          {entity.facets.method && <span class="chip">{pretty(entity.facets.method)}</span>}
+          {entity.data.tags.map((t: string) => <span class="chip">{pretty(t)}</span>)}
+        </span></p>
+      )}
+      {entity.desc && <p><Rich tokens={entity.desc} /></p>}
+
+      {entity.mods.length > 0 && (
+        <div class="panel">
+          <h3>Country modifiers while produced</h3>
+          <Mods mods={entity.mods} />
+        </div>
+      )}
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h3>Data</h3>
+        <div class="kv">
+          <span class="k">Base price</span><span class="v">{entity.data.price}</span>
+          <span class="k">Transport cost</span><span class="v">{entity.data.transport_cost ?? '—'}</span>
+          <span class="k">Base production</span><span class="v">{entity.data.base_production ?? '—'}</span>
+          <span class="k">Food</span><span class="v">{entity.data.food ? 'yes' : 'no'}</span>
+        </div>
+      </div>
+      {entity.data.demand.length > 0 && (
+        <div class="panel">
+          <h3>Pop demand</h3>
+          <ul class="pairs">
+            {entity.data.demand.map((d: any) => (
+              <li><span class="k">{d.pop}</span> <span class="v">{d.value}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {backlinks.length > 0 && (
+        <div class="panel">
+          <h3>Referenced by</h3>
+          <ul class="backlinks">
+            {backlinks.map((b) => (
+              <li>{b.page ? <a href={`${base}${b.page}`}>{b.name}</a> : b.name}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </aside>
+  </div>
+</Base>

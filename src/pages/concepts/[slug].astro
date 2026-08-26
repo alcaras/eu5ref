@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import Rich from '../../components/Rich.astro';
+import conceptsData from '../../data/concepts.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return conceptsData.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base
+  title={entity.name}
+  active="concepts"
+  eyebrow="Concept"
+  description={`${entity.name} — Europa Universalis V game concept.`}
+>
+  <div class="detail-grid">
+    <div>
+      {entity.desc ? <p><Rich tokens={entity.desc} /></p> : <p class="is-empty">No in-game description.</p>}
+      {entity.data.aliases.length > 0 && (
+        <p class="chips">
+          {entity.data.aliases.map((a: string) => <span class="chip">also: {a}</span>)}
+        </p>
+      )}
+    </div>
+    <aside>
+      {backlinks.length > 0 && (
+        <div class="panel">
+          <h3>Referenced by ({backlinks.length})</h3>
+          <ul class="backlinks">
+            {backlinks.slice(0, 50).map((b) => (
+              <li>{b.page ? <a href={`${base}${b.page}`}>{b.name}</a> : b.name}</li>
+            ))}
+            {backlinks.length > 50 && <li class="is-empty">… and {backlinks.length - 50} more</li>}
+          </ul>
+        </div>
+      )}
+    </aside>
+  </div>
+</Base>

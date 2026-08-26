@@ -1,0 +1,27 @@
+---
+// Generic placeholder route for every planned-but-unbuilt tab. A dedicated
+// page file (like goods.astro) wins over this route automatically.
+import Base from '../layouts/Base.astro';
+import { TABS } from '../data/tabs';
+
+export function getStaticPaths() {
+  return TABS.filter((t) => t.status === 'placeholder').map((t) => ({
+    params: { slug: t.slug },
+    props: { tab: t },
+  }));
+}
+const { tab } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<Base title={tab.label} eyebrow={tab.section} pageMark={tab.icon}>
+  <p style="color: var(--text-soft); max-width: 620px;">{tab.summary}</p>
+  {tab.willContain && (
+    <div class="panel" style="max-width: 620px; margin-top: 14px;">
+      <h3>Planned</h3>
+      <ul style="margin: 0; padding-left: 18px; color: var(--text-soft);">
+        {tab.willContain.map((w) => <li>{w}</li>)}
+      </ul>
+    </div>
+  )}
+  <p style="margin-top: 20px;"><a href={base}>← back to the index</a></p>
+</Base>

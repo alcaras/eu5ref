@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import goodsData from '../data/goods.json';
+
+const goods = goodsData.entities;
+const facets = goodsData.facets;
+
+const columns = [
+  { key: 'name', label: 'Good', kind: 'name' },
+  { key: 'category', label: 'Category', kind: 'facet' },
+  { key: 'method', label: 'Method', kind: 'facet' },
+  { key: 'price', label: 'Base Price', kind: 'num' },
+  { key: 'transport_cost', label: 'Transport', kind: 'num' },
+  { key: 'base_production', label: 'Base Prod.', kind: 'num' },
+  { key: 'demand', label: 'Pop Demand', kind: 'pairs' },
+  { key: 'mods', label: 'Country Modifiers', kind: 'mods' },
+] as const;
+---
+<Base
+  title="Goods"
+  active="goods"
+  pageMark="📦"
+  eyebrow="Economy"
+  pageStats={[
+    { label: 'goods', value: goods.length },
+    { label: 'raw materials', value: goods.filter((g) => g.facets.category === 'raw_material').length },
+    { label: 'produced', value: goods.filter((g) => g.facets.category === 'produced').length },
+  ]}
+  description="Every trade good in Europa Universalis V — base price, transport cost, production method, pop demand, and country modifiers."
+>
+  <div data-filter-scope>
+    <FilterBar facets={facets} placeholder="Filter goods…" />
+    <EntityTable entities={goods} columns={columns as any} pagePrefix="goods" />
+  </div>
+</Base>

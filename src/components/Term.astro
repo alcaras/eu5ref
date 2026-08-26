@@ -1,0 +1,19 @@
+---
+// A linked reference to a known entity. Falls back to a plain span when the
+// entity has no detail page yet (honest, never a broken link).
+import { getEntity } from '../lib/entities';
+
+interface Props {
+  id: string;
+  label?: string;
+}
+const { id, label } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const entity = getEntity(id);
+const text = label || entity?.name || id.split(':').pop();
+---
+{entity?.page ? (
+  <a href={`${base}${entity.page}`} data-term={id}>{text}</a>
+) : (
+  <span data-term={id}>{text}</span>
+)}

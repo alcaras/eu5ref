@@ -1,0 +1,6039 @@
+{
+  "aliases": {
+    "abilities": "concept:ability",
+    "ability": "concept:ability",
+    "accept": "concept:accepted_culture",
+    "accepted": "concept:accepted_culture",
+    "accepted culture": "concept:accepted_culture",
+    "accepted cultures": "concept:accepted_culture",
+    "action": "concept:action",
+    "actions": "concept:action",
+    "administrative": "concept:adm",
+    "administrative ability": "concept:adm",
+    "admiral": "concept:admiral",
+    "admiral trait": "concept:admiral_trait",
+    "admiral traits": "concept:admiral_trait",
+    "admirals": "concept:admiral",
+    "adolescent": "concept:adolescent",
+    "adolescents": "concept:adolescent",
+    "adult": "concept:adult",
+    "adults": "concept:adult",
+    "advance": "concept:advance",
+    "advances": "concept:advance",
+    "age": "concept:age",
+    "agenda": "concept:parliament_agenda",
+    "agendas": "concept:parliament_agenda",
+    "ages": "concept:age",
+    "alliance": "concept:alliance",
+    "alliance bloc": "concept:alliance_bloc",
+    "alliance blocs": "concept:alliance_bloc",
+    "alliances": "concept:alliance",
+    "allied": "concept:alliance",
+    "allies": "concept:alliance",
+    "ally": "concept:alliance",
+    "alum": "good:alum",
+    "amber": "good:amber",
+    "annex": "concept:annexation",
+    "annexation": "concept:annexation",
+    "annexations": "concept:annexation",
+    "annexed": "concept:annexation",
+    "annexing": "concept:annexation",
+    "antagonism": "concept:antagonism",
+    "antagonism received": "concept:antagonism_received_modifier",
+    "anti-piracy impact": "concept:anti_piracy_warfare",
+    "area": "concept:area",
+    "areas": "concept:area",
+    "armies": "concept:army",
+    "army": "concept:army",
+    "army based countries": "concept:army_based",
+    "army based country": "concept:army_based",
+    "army experience": "concept:experience",
+    "army levies": "concept:army_levy",
+    "army levy": "concept:army_levy",
+    "army maintenance": "concept:army_maintenance",
+    "army morale": "concept:morale",
+    "army tradition": "concept:army_tradition",
+    "art quality": "concept:art_quality",
+    "artillery barrage": "concept:artillery_barrage",
+    "artillery bonus": "concept:artillery_bonus",
+    "artist": "concept:artist",
+    "artist salary": "concept:artist_salary",
+    "artist trait": "concept:artist_trait",
+    "artist traits": "concept:artist_trait",
+    "artistic skill": "concept:artistic_skill",
+    "artists": "concept:artist",
+    "assault": "concept:assault",
+    "assimilate": "concept:assimilate",
+    "assimilated": "concept:assimilate",
+    "assimilates": "concept:assimilate",
+    "assimilating": "concept:assimilate",
+    "assimilation": "concept:assimilate",
+    "attacker": "concept:attacker",
+    "attackers": "concept:war_attacker",
+    "attrition": "concept:attrition",
+    "attrition loss": "concept:attrition_loss",
+    "attrition losses": "concept:attrition_loss",
+    "autocephalous patriarchate": "concept:autocephalous_patriarchate",
+    "autocephalous patriarchates": "concept:autocephalous_patriarchate",
+    "available": "concept:unemploy",
+    "available population": "concept:unemploy",
+    "avatar": "concept:avatar",
+    "avatars": "concept:avatar",
+    "average morale": "concept:average_morale",
+    "average satisfaction": "concept:average_satisfaction",
+    "balance": "concept:budget",
+    "bankrupt": "concept:bankrupt",
+    "bankruptcy": "concept:bankrupt",
+    "base production": "concept:common_goods",
+    "base support": "concept:parliament_base_support",
+    "battle": "concept:combat",
+    "battles": "concept:combat",
+    "beer": "good:beer",
+    "beeswax": "good:beeswax",
+    "besieged": "concept:siege",
+    "bias": "concept:bias",
+    "blockade": "concept:blockade",
+    "blockade capacity": "concept:blockade_capacity",
+    "blockaded": "concept:blockade",
+    "blockades": "concept:blockade",
+    "blockading": "concept:blockade",
+    "blocked treaties": "concept:blocked_treaties",
+    "bombard": "concept:bombard",
+    "bombard efficiency": "concept:bombard_efficiency",
+    "bombard phase": "concept:bombard_phase",
+    "bombarding": "concept:bombard",
+    "bond interest": "concept:bond_interest",
+    "books": "good:books",
+    "borrower": "concept:borrower",
+    "broken units": "concept:broken_units",
+    "building": "concept:building",
+    "building based country": "concept:extraterritorial_country",
+    "building categories": "concept:building_category",
+    "building category": "concept:building_category",
+    "building maintenance": "concept:building_maintenance",
+    "building subsidies": "concept:subsidy_expense",
+    "building type": "concept:building_type",
+    "building types": "concept:building_type",
+    "buildings": "concept:building",
+    "bureaucracies": "concept:bureaucracy",
+    "bureaucracy": "concept:bureaucracy",
+    "bureaucracy maintenance": "concept:bureaucracy_maintenance",
+    "bureaucracy type": "concept:bureaucracy_type",
+    "burghers exporting": "concept:burgher_trade",
+    "burghers importing": "concept:burgher_trade",
+    "burghers trading": "concept:burgher_trade",
+    "buy": "concept:buying_food",
+    "buy food": "concept:buying_food",
+    "buying food": "concept:buying_food",
+    "cabinet": "concept:cabinet",
+    "cabinet action": "concept:cabinet_action",
+    "cabinet actions": "concept:cabinet_action",
+    "cabinet efficiency": "concept:cabinet_efficiency",
+    "cabinet member": "concept:cabinet_member",
+    "cabinet members": "concept:cabinet_member",
+    "cabinet seat": "concept:cabinet_seats",
+    "cabinet seats": "concept:cabinet_seats",
+    "cabinet trait": "concept:cabinet_trait",
+    "cabinet traits": "concept:cabinet_trait",
+    "call to arms": "concept:call_to_arms",
+    "candidate": "concept:candidate",
+    "candidates": "concept:candidate",
+    "cannon": "good:cannons",
+    "cannons": "concept:cannons",
+    "canonization": "concept:canonization",
+    "canonize": "concept:canonization",
+    "canonized": "concept:canonization",
+    "capital": "concept:capital",
+    "cardinal": "concept:cardinal",
+    "cardinal(s)": "concept:cardinal",
+    "cardinals": "concept:cardinal",
+    "casus belli": "concept:casus_belli",
+    "categories": "concept:unit_category",
+    "category": "concept:unit_category",
+    "celestial authority": "concept:celestial_authority_gc",
+    "center": "concept:center",
+    "central bank": "concept:central_bank",
+    "character": "concept:character",
+    "character interaction": "concept:character_interaction",
+    "character interactions": "concept:character_interaction",
+    "character modifier": "concept:character_modifier",
+    "character modifiers": "concept:character_modifier",
+    "characters": "concept:character",
+    "child": "concept:child",
+    "child education": "concept:child_education",
+    "child trait": "concept:child_trait",
+    "child traits": "concept:child_trait",
+    "children": "concept:child",
+    "chili": "good:chili",
+    "chivalric order": "concept:chivalric_order",
+    "chivalric orders": "concept:chivalric_order",
+    "circle leader": "concept:circle_leader",
+    "circle leaders": "concept:circle_leader",
+    "circle satisfaction": "concept:circle_satisfaction",
+    "civil construction": "concept:civil_construction",
+    "civil constructions": "concept:civil_construction",
+    "civil war": "concept:civil_war",
+    "civil wars": "concept:civil_war",
+    "clay": "good:clay",
+    "climate": "concept:climate",
+    "cloth": "good:cloth",
+    "cloves": "good:cloves",
+    "co-belligerent": "concept:cobelligerent",
+    "co-belligerents": "concept:cobelligerent",
+    "coal": "good:coal",
+    "coalition": "concept:coalition",
+    "coast": "concept:coastal",
+    "coastal": "concept:coastal",
+    "cocoa": "good:cocoa",
+    "coffee": "good:coffee",
+    "colonial charter": "concept:colonial_charter",
+    "colonial charters": "concept:colonial_charter",
+    "colonial migration": "concept:colonial_migration",
+    "colonial range": "concept:colonial_range",
+    "colonies": "concept:colonized",
+    "colonization": "concept:colonized",
+    "colonize": "concept:colonized",
+    "colonized": "concept:colonized",
+    "colony": "concept:colonized",
+    "combat": "concept:combat",
+    "combat phase": "concept:combat_phase",
+    "combat power": "concept:combat_power",
+    "combat speed": "concept:combat_speed",
+    "combats": "concept:combat",
+    "combined arms": "concept:combined_arms",
+    "commander": "concept:commander",
+    "commanders": "concept:commander",
+    "common goods": "concept:common_goods",
+    "common language": "concept:common_language",
+    "common languages": "concept:common_language",
+    "complacency": "concept:complacency",
+    "condition": "concept:trigger",
+    "conditions": "concept:trigger",
+    "conquer": "concept:conquer",
+    "conquered": "concept:conquer",
+    "conquest": "concept:conquer",
+    "conquistador": "concept:conquistador",
+    "conquistadors": "concept:conquistador",
+    "consort": "concept:consort",
+    "consorts": "concept:consort",
+    "construction": "concept:construction",
+    "construction material": "concept:construction_material",
+    "construction materials": "concept:construction_material",
+    "constructions": "concept:construction",
+    "continent": "concept:continent",
+    "continents": "concept:continent",
+    "contract length": "concept:mercenary_contract_length",
+    "control": "concept:control",
+    "controlled": "concept:controller",
+    "controller": "concept:controller",
+    "controls": "concept:controller",
+    "conversion": "concept:conversion",
+    "convert": "concept:conversion",
+    "converted": "concept:conversion",
+    "converting": "concept:conversion",
+    "converts": "concept:conversion",
+    "copper": "good:copper",
+    "core": "concept:core",
+    "cored": "concept:core",
+    "cores": "concept:core",
+    "corridor": "concept:corridor",
+    "corridors": "concept:corridor",
+    "cost": "concept:price",
+    "cost of colonies": "concept:colonial_maintenance",
+    "cost of the court": "concept:court_maintenance",
+    "costs": "concept:price",
+    "cotton": "good:cotton",
+    "counterespionage": "concept:counterespionage",
+    "countries": "concept:country",
+    "country": "concept:country",
+    "country disposition": "concept:ai_disposition",
+    "country dispositions": "concept:ai_disposition",
+    "country interaction": "concept:country_interaction",
+    "country interactions": "concept:country_interaction",
+    "country modifier": "concept:country_modifier",
+    "country modifiers": "concept:country_modifier",
+    "country personalities": "concept:ai_personality",
+    "country personality": "concept:ai_personality",
+    "country rank": "concept:country_rank",
+    "country ranks": "concept:country_rank",
+    "country strength": "concept:country_strength",
+    "country type": "concept:country_type",
+    "country's": "concept:country",
+    "court": "concept:court_maintenance",
+    "court dialect": "concept:court_dialect",
+    "court language": "concept:court_language",
+    "courtier": "concept:courtier",
+    "courtiers": "concept:courtier",
+    "creditworthiness": "concept:creditworthiness",
+    "crew size": "concept:crew_size",
+    "crossing": "concept:crossing",
+    "crown power": "concept:crown_power",
+    "crusade": "concept:religious_war",
+    "cultural capacity": "concept:cultural_capacity",
+    "cultural influence": "concept:cultural_influence",
+    "cultural opinion": "concept:cultural_opinion",
+    "cultural opinions": "concept:cultural_opinion",
+    "cultural status": "concept:cultural_status",
+    "cultural tradition": "concept:cultural_tradition",
+    "cultural unity": "concept:cultural_unity",
+    "culture": "concept:culture",
+    "culture group": "concept:culture_group",
+    "culture groups": "concept:culture_group",
+    "culture investment": "concept:cultural_maintenance",
+    "culture war": "concept:culture_war_power",
+    "culture war power": "concept:culture_war_power",
+    "cultures": "concept:culture",
+    "curia": "concept:curia",
+    "curia action": "concept:curia_action",
+    "curia actions": "concept:curia_action",
+    "d10": "concept:d10",
+    "d100": "concept:d100",
+    "d20": "concept:d20",
+    "daily food consumption": "concept:food_consumption",
+    "damage taken": "concept:damage_taken",
+    "debt": "concept:debt",
+    "debts": "concept:debt",
+    "decaying modifier": "concept:decaying_modifier",
+    "defender": "concept:defender",
+    "defenders": "concept:war_defender",
+    "defensive war": "concept:war",
+    "defensive wars": "concept:war",
+    "demand": "concept:demand",
+    "demands": "concept:demand",
+    "demote": "concept:demote",
+    "demoted": "concept:demote",
+    "demotion": "concept:demote",
+    "development": "concept:development",
+    "devotion": "concept:devotion",
+    "dialect": "concept:dialect",
+    "dialects": "concept:dialect",
+    "dice": "concept:dice",
+    "diplomacy": "concept:diplomacy",
+    "diplomat": "concept:diplomat",
+    "diplomatic": "concept:dip",
+    "diplomatic ability": "concept:dip",
+    "diplomatic action": "concept:diplomatic_action",
+    "diplomatic actions": "concept:diplomatic_action",
+    "diplomatic capacity": "concept:diplomatic_capacity",
+    "diplomatic expense": "concept:diplomatic_expense",
+    "diplomatic income": "concept:diplomatic_income",
+    "diplomatic limitation": "concept:diplomatic_limitation",
+    "diplomatic limitations": "concept:diplomatic_limitation",
+    "diplomatic opinion": "concept:opinion",
+    "diplomatic opinions": "concept:opinion",
+    "diplomatic range": "concept:diplomatic_range",
+    "diplomatic reputation": "concept:diplomatic_reputation",
+    "diplomatic spending": "concept:diplomatic_maintenance",
+    "diplomatic upkeep": "concept:diplomatic_capacity",
+    "diplomatically limited": "concept:diplomatic_limitation",
+    "diplomats": "concept:diplomat",
+    "direct overlord": "concept:overlord",
+    "disaster": "concept:disaster",
+    "disasters": "concept:disaster",
+    "discipline": "concept:discipline",
+    "discover": "concept:discover",
+    "discovered": "concept:discover",
+    "discovering": "concept:discover",
+    "discriminated": "concept:non_accepted_culture",
+    "discriminated culture": "concept:non_accepted_culture",
+    "discriminated cultures": "concept:non_accepted_culture",
+    "disease": "concept:disease",
+    "disease outbreak": "concept:disease_outbreak",
+    "disease outbreaks": "concept:disease_outbreak",
+    "disease resistance": "concept:disease_resistance",
+    "diseases": "concept:disease",
+    "disembark": "concept:embarking",
+    "disembarked": "concept:embarking",
+    "disloyal": "concept:disloyal_subjects",
+    "disloyal subject": "concept:disloyal_subjects",
+    "disloyal subjects": "concept:disloyal_subjects",
+    "distant market": "concept:distant_market",
+    "distant markets": "concept:distant_market",
+    "distribute food": "concept:distributing_food",
+    "distributing food": "concept:distributing_food",
+    "divine emperors": "concept:canonization",
+    "divorce": "concept:divorce",
+    "divorced": "concept:divorce",
+    "domestic market": "concept:domestic_market",
+    "domestic markets": "concept:domestic_market",
+    "dominant": "concept:dominant_country",
+    "dominant country": "concept:dominant_country",
+    "dominant culture": "concept:dominant_culture",
+    "dominant dialect": "concept:dominant_dialect",
+    "dominant language": "concept:dominant_language",
+    "dominant religion": "concept:dominant_religion",
+    "dominant upper class culture": "concept:dominant_upper_class_culture",
+    "doom": "concept:doom",
+    "ducats": "concept:gold",
+    "dyes": "good:dyes",
+    "dynamic historical event": "concept:dynamic_historical_event",
+    "dynamic historical events": "concept:dynamic_historical_event",
+    "dynastic power": "concept:dynastic_power",
+    "dynastic seat": "concept:dynasty_seat",
+    "dynasties": "concept:dynasty",
+    "dynasty": "concept:dynasty",
+    "dynasty founder": "concept:dynasty_founder",
+    "dynasty modifier": "concept:dynasty_modifier",
+    "dynasty modifiers": "concept:dynasty_modifier",
+    "economic base": "concept:economical_base",
+    "economic support": "concept:economic_support",
+    "education": "concept:child_education",
+    "effect": "concept:effect",
+    "effective demand": "concept:effective_demand",
+    "effective supply": "concept:effective_supply",
+    "effects": "concept:effect",
+    "election": "concept:election",
+    "elections": "concept:election",
+    "elector": "concept:elector",
+    "electoral college": "concept:hre_electoral_college",
+    "electors": "concept:elector",
+    "electorship": "concept:elector",
+    "elephants": "good:elephants",
+    "eligibility rules": "concept:eligibility_rules",
+    "embarking": "concept:embarking",
+    "embarkings": "concept:embarking",
+    "embrace": "concept:embrace",
+    "embraced": "concept:embrace",
+    "emperor": "concept:hre_emperor",
+    "employ": "concept:employ",
+    "employed": "concept:employ",
+    "employment": "concept:employ",
+    "employment system": "concept:employment_system",
+    "employment systems": "concept:employment_system",
+    "enemies": "concept:rival_enemy",
+    "enemy": "concept:rival_enemy",
+    "engage": "concept:engagement",
+    "engaged": "concept:engagement",
+    "engagement": "concept:engagement",
+    "entrenched": "concept:entrenchment",
+    "entrenchment": "concept:entrenchment",
+    "establishment": "concept:establishment",
+    "estate": "concept:estate",
+    "estate building": "concept:estate_building",
+    "estate buildings": "concept:estate_building",
+    "estate culture": "concept:estate_culture",
+    "estate cultures": "concept:estate_culture",
+    "estate opinion": "concept:estate_opinion",
+    "estate opinions": "concept:estate_opinion",
+    "estate power": "concept:estate_power",
+    "estate privilege": "concept:estate_privilege",
+    "estate privileges": "concept:estate_privilege",
+    "estate rebels": "concept:estate_rebels",
+    "estate religion": "concept:estate_religion",
+    "estate religions": "concept:estate_religion",
+    "estate satisfaction": "concept:estate_satisfaction",
+    "estate tax base": "concept:estate_tax_base",
+    "estate type": "concept:estate",
+    "estate types": "concept:estate",
+    "estates": "concept:estate",
+    "estates enrichment": "concept:estates_enrichment",
+    "ethnicity": "concept:ethnicity",
+    "event": "concept:event",
+    "event option": "concept:event_option",
+    "events": "concept:event",
+    "excommunicate": "concept:excommunication",
+    "excommunicated": "concept:excommunication",
+    "excommunicates": "concept:excommunication",
+    "excommunication": "concept:excommunication",
+    "excommunications": "concept:excommunication",
+    "exiled": "concept:exile",
+    "expense": "concept:expense",
+    "expenses": "concept:expense",
+    "experience": "concept:experience",
+    "exploration": "concept:exploration",
+    "exploration cost": "concept:exploration_expense",
+    "exploration progress": "concept:exploration_progress",
+    "explorations": "concept:exploration",
+    "explore": "concept:discover",
+    "explored": "concept:discover",
+    "explorer": "concept:explorer",
+    "explorer trait": "concept:explorer_trait",
+    "explorer traits": "concept:explorer_trait",
+    "explorers": "concept:explorer",
+    "exploring": "concept:exploration",
+    "export": "concept:export",
+    "export efficiency": "concept:export_efficiency",
+    "export market": "concept:export_market",
+    "exported": "concept:export",
+    "exporting": "concept:export",
+    "exports": "concept:export",
+    "extraterritorial": "concept:extraterritorial_country",
+    "extraterritorial countries": "concept:extraterritorial_country",
+    "extraterritorial country": "concept:extraterritorial_country",
+    "faith": "concept:religion",
+    "families": "concept:language_family",
+    "family": "concept:language_family",
+    "favor": "concept:favors",
+    "favors": "concept:favors",
+    "fertility": "concept:fertility",
+    "fiber crops": "good:fiber_crops",
+    "finances": "concept:budget",
+    "fine cloth": "good:fine_cloth",
+    "firearms": "good:firearms",
+    "fish": "good:fish",
+    "flank": "concept:flank",
+    "flanking ability": "concept:flanking_ability",
+    "flanks": "concept:flank",
+    "fleet basing rights": "concept:fleet_basing_rights",
+    "fog of war": "concept:fow",
+    "food": "concept:food",
+    "food access": "concept:food_access",
+    "food capacity": "concept:food_capacity",
+    "food consumption": "concept:food_consumption",
+    "food decay": "concept:food_decay",
+    "food productivity": "concept:food_productivity",
+    "food raw material": "concept:food_raw_material",
+    "food raw materials": "concept:food_raw_material",
+    "food source": "concept:food_source",
+    "food stockpile": "concept:food_stockpile",
+    "food storage": "concept:food_storage",
+    "foreign": "concept:foreign",
+    "foreign building": "concept:foreign_building",
+    "foreign buildings": "concept:foreign_building",
+    "foreign culture": "concept:foreign_culture",
+    "foreign language": "concept:foreign_language",
+    "foreign market": "concept:foreign_market",
+    "foreign markets": "concept:foreign_market",
+    "form": "concept:formable_country",
+    "formable": "concept:formable_country",
+    "formable countries": "concept:formable_country",
+    "formable country": "concept:formable_country",
+    "formables": "concept:formable_country",
+    "formation": "concept:formable_country",
+    "formed": "concept:formable_country",
+    "forming": "concept:formable_country",
+    "fort": "concept:fortification",
+    "fort limit": "concept:fort_limit",
+    "fort maintenance": "concept:fort_maintenance",
+    "fortification": "concept:fortification",
+    "fortifications": "concept:fortification",
+    "forts": "concept:fortification",
+    "free cities": "concept:free_city",
+    "free city": "concept:free_city",
+    "free imperial cities": "concept:free_city",
+    "free imperial city": "concept:free_city",
+    "freeze over": "concept:frozen",
+    "friend": "concept:friend",
+    "friendly": "concept:friend",
+    "frontage": "concept:frontage",
+    "frozen over": "concept:frozen",
+    "fruit": "good:fruit",
+    "fully settled": "concept:fully_settled",
+    "fur": "good:fur",
+    "furniture": "good:furniture",
+    "garrison": "concept:garrison",
+    "garrisons": "concept:garrison",
+    "gather food": "concept:gathering_food",
+    "gathering food": "concept:gathering_food",
+    "gdp per capita": "concept:gdp_per_capita",
+    "gems": "good:gems",
+    "general": "concept:general",
+    "general trait": "concept:general_trait",
+    "general traits": "concept:general_trait",
+    "generals": "concept:general",
+    "geographical term": "concept:geographical_term",
+    "geographical terms": "concept:geographical_term",
+    "geography": "concept:geography",
+    "glass": "good:glass",
+    "god": "concept:god",
+    "god emperors": "concept:canonization",
+    "goddess": "concept:god",
+    "goddesses": "concept:god",
+    "gods": "concept:god",
+    "gold": "good:goods_gold",
+    "good": "concept:goods",
+    "good demands": "concept:goods_demand",
+    "goods": "concept:goods",
+    "goods demand": "concept:goods_demand",
+    "government": "concept:government",
+    "government bond": "concept:government_bond",
+    "government bonds": "concept:government_bond",
+    "government needs": "concept:government_needs",
+    "government power": "concept:government_power",
+    "government reform": "concept:government_reform",
+    "government reforms": "concept:government_reform",
+    "government type": "concept:government_type",
+    "government types": "concept:government_type",
+    "graphical culture": "concept:graphical_culture",
+    "great power": "concept:great_power",
+    "great power points": "concept:great_power_points",
+    "great power rank": "concept:great_power_rank",
+    "great power score": "concept:great_power_score",
+    "great powers": "concept:great_power",
+    "group": "concept:culture_group",
+    "groups": "concept:culture_group",
+    "guarantee": "concept:guarantee",
+    "guaranteed": "concept:guarantee",
+    "guaranteeing": "concept:guarantee",
+    "gurus": "concept:canonization",
+    "harbor capacity": "concept:harbor_capacity",
+    "harmony": "concept:harmony",
+    "hausmacht": "concept:dynastic_power",
+    "head of the cabinet": "concept:head_of_the_cabinet",
+    "head of the dynasty": "concept:dynasty_head",
+    "health": "concept:health_trait",
+    "health trait": "concept:health_trait",
+    "health traits": "concept:health_trait",
+    "heathen": "concept:heathen",
+    "heathenry": "concept:heathen",
+    "heathens": "concept:heathen",
+    "hegemon": "concept:hegemony",
+    "hegemonies": "concept:hegemony",
+    "hegemons": "concept:hegemony",
+    "hegemony": "concept:hegemony",
+    "heir": "concept:heir",
+    "heir score": "concept:heir_selection_score",
+    "heirs": "concept:heir",
+    "hemisphere": "concept:hemisphere",
+    "heresy": "concept:heretic",
+    "heretic": "concept:heretic",
+    "heretics": "concept:heretic",
+    "heroes": "concept:canonization",
+    "hidden": "concept:hidden",
+    "hindu branch": "concept:hindu_branch",
+    "hindu branches": "concept:hindu_branch",
+    "hiring fee": "concept:mercenary_hiring_fee",
+    "hiring fees": "concept:mercenary_hiring_fee",
+    "hiring mercenaries": "concept:mercenary_expense",
+    "historical option": "concept:historical_option",
+    "holy roman empire": "concept:holy_roman_empire",
+    "holy site": "concept:holy_site",
+    "holy site importance": "concept:holy_site_importance",
+    "holy site type": "concept:holy_site_type",
+    "holy site types": "concept:holy_site_type",
+    "holy sites": "concept:holy_site",
+    "honor": "concept:honor",
+    "horde unity": "concept:horde_unity",
+    "horses": "good:horses",
+    "hostile": "concept:hostile",
+    "hre": "concept:holy_roman_empire",
+    "hull size": "concept:hull_size",
+    "immortal": "concept:immortality",
+    "immortality": "concept:immortality",
+    "impassable": "concept:impassable",
+    "imperial": "concept:imperial_religion",
+    "imperial circle": "concept:imperial_circle",
+    "imperial circles": "concept:imperial_circle",
+    "imperial law level": "concept:hre_law_level",
+    "imperial religion": "concept:imperial_religion",
+    "import": "concept:import",
+    "import efficiency": "concept:import_efficiency",
+    "import market": "concept:import_market",
+    "importance": "concept:holy_site_importance",
+    "imported": "concept:import",
+    "importing": "concept:import",
+    "imports": "concept:import",
+    "improve relation": "concept:improve_relations",
+    "improve relations": "concept:improve_relations",
+    "in exile": "concept:exile",
+    "incense": "good:incense",
+    "income": "concept:income",
+    "incomes": "concept:income",
+    "infant": "concept:infant",
+    "infants": "concept:infant",
+    "infiltrate administration": "concept:infiltrate_administration",
+    "inflation": "concept:inflation",
+    "influence": "concept:cultural_influence",
+    "initiative": "concept:initiative",
+    "inland": "concept:inland",
+    "institution": "concept:institution",
+    "institutions": "concept:institution",
+    "integrate": "concept:integration",
+    "integrated": "concept:integration",
+    "integrating": "concept:integration",
+    "integration": "concept:integration",
+    "integration level": "concept:union_integration_level",
+    "integration status": "concept:integration_status",
+    "intelligence fog": "concept:spy_network_fog",
+    "interest": "concept:interest",
+    "international organization": "concept:international_organization",
+    "international organization leader": "concept:international_organization_leader",
+    "international organization modifier": "concept:international_organization_modifier",
+    "international organization modifiers": "concept:international_organization_modifier",
+    "international organization type": "concept:international_organization_type",
+    "international organization types": "concept:international_organization_type",
+    "international organization value": "concept:international_organization_variable",
+    "international organizations": "concept:international_organization",
+    "investing in culture": "concept:cultural_maintenance",
+    "invited religious figure": "concept:religious_figure",
+    "invited religious figures": "concept:religious_figure",
+    "iron": "good:iron",
+    "isolate": "concept:isolate",
+    "isolated": "concept:isolate",
+    "isolated language": "concept:isolated_language",
+    "isolated languages": "concept:isolated_language",
+    "isolation": "concept:isolate",
+    "issue": "concept:parliament_issue",
+    "issues": "concept:parliament_issue",
+    "ivory": "good:ivory",
+    "jewelry": "good:jewelry",
+    "jihād": "concept:religious_war",
+    "junior partner": "concept:union",
+    "junior partners": "concept:union",
+    "k'atun": "concept:katun",
+    "karma": "concept:karma",
+    "known world": "concept:known_world",
+    "laborers or slaves": "concept:rgo_pops",
+    "lacquerware": "good:lacquerware",
+    "lake": "concept:lake",
+    "lakes": "concept:lake",
+    "land based country": "concept:settled_country",
+    "land ownership rule": "concept:land_ownership_rule",
+    "language": "concept:language",
+    "language families": "concept:language_family",
+    "language family": "concept:language_family",
+    "language power": "concept:language_power",
+    "languages": "concept:language",
+    "law": "concept:law",
+    "laws": "concept:law",
+    "lead": "good:lead",
+    "leader": "concept:international_organization_leader",
+    "leader change method": "concept:leader_change_method",
+    "leader change trigger": "concept:leader_change_trigger",
+    "leader type": "concept:leader_type",
+    "leadership election resolution": "concept:leadership_election_resolution",
+    "leather": "good:leather",
+    "left flank": "concept:flank",
+    "legal male": "concept:legal_male",
+    "legal males": "concept:legal_male",
+    "legally male": "concept:legal_male",
+    "legislative efficiency": "concept:legislative_efficiency",
+    "legitimacy": "concept:legitimacy",
+    "legumes": "good:legumes",
+    "lend": "concept:loan",
+    "lender": "concept:lender",
+    "lends": "concept:loan",
+    "lent": "concept:loan",
+    "levies": "concept:levy",
+    "levy": "concept:levy",
+    "levy combat efficiency": "concept:levy_combat_efficiency",
+    "liberty desire": "concept:liberty_desire",
+    "limited diplomacy": "concept:diplomatic_limitation",
+    "liquor": "good:liquor",
+    "literacy": "concept:literacy",
+    "liturgical dialect": "concept:liturgical_dialect",
+    "liturgical language": "concept:liturgical_language",
+    "liturgical languages": "concept:liturgical_language",
+    "livestock": "good:livestock",
+    "loan": "concept:loan",
+    "loan capacity": "concept:loan_capacity",
+    "loaned": "concept:loan",
+    "loans": "concept:loan",
+    "local food": "concept:local_food",
+    "location": "concept:location",
+    "location importance": "concept:location_importance",
+    "location modifier": "concept:location_modifier",
+    "location modifiers": "concept:location_modifier",
+    "location rank": "concept:location_rank",
+    "location size": "concept:location_size",
+    "locations": "concept:location",
+    "locked": "concept:locked",
+    "logistics distance": "concept:logistics_distance",
+    "loot": "concept:loot",
+    "looted": "concept:loot",
+    "lowborn": "concept:lowborn",
+    "lower class": "concept:lower_class",
+    "loyal": "concept:loyal_subjects",
+    "loyal subject": "concept:loyal_subjects",
+    "loyal subjects": "concept:loyal_subjects",
+    "lumber": "good:lumber",
+    "maintain": "concept:maintenance",
+    "maintenance": "concept:bureaucracy_maintenance",
+    "maize": "good:maize",
+    "major reform": "concept:major_reform",
+    "major reforms": "concept:major_reform",
+    "manpower": "concept:manpower",
+    "map mode slot": "concept:map_mode_slot",
+    "map mode slots": "concept:map_mode_slot",
+    "marble": "good:marble",
+    "maritime": "concept:maritime_presence",
+    "maritime presence": "concept:maritime_presence",
+    "maritime presence power": "concept:maritime_presence",
+    "maritime trade advantage": "concept:merchant_maritime_power",
+    "market": "concept:market",
+    "market access": "concept:market_access",
+    "market attraction": "concept:market_attraction",
+    "market balance": "concept:market_balance",
+    "market center": "concept:market_center",
+    "market centers": "concept:market_center",
+    "market food": "concept:market_food",
+    "market language": "concept:market_language",
+    "market owner": "concept:market_owner",
+    "market price": "concept:market_price",
+    "market prices": "concept:market_price",
+    "market protection": "concept:protectionism",
+    "market value": "concept:market_value",
+    "markets": "concept:market",
+    "marriage": "concept:royal_marriage",
+    "married": "concept:royal_marriage",
+    "marry": "concept:royal_marriage",
+    "marrying": "concept:royal_marriage",
+    "masonry": "good:masonry",
+    "max tax": "concept:max_tax",
+    "max winter level": "concept:winter_level",
+    "maximum control": "concept:max_control",
+    "maximum strength": "concept:maximum_strength",
+    "maximum tax": "concept:max_tax",
+    "medicaments": "good:medicaments",
+    "member": "concept:member",
+    "member integration level": "concept:union_integration_level",
+    "members": "concept:member",
+    "men": "concept:manpower",
+    "mercenaries": "concept:mercenary",
+    "mercenary": "concept:mercenary",
+    "mercenary income": "concept:mercenary_income",
+    "merchant": "concept:merchant",
+    "merchants": "concept:merchant",
+    "mercury": "good:mercury",
+    "migrate": "concept:migration",
+    "migrated": "concept:migration",
+    "migrates": "concept:migration",
+    "migration": "concept:migration",
+    "migration attraction": "concept:migration_attraction",
+    "military": "concept:mil",
+    "military ability": "concept:mil",
+    "military access": "concept:military_access",
+    "military objective": "concept:military_objective",
+    "military objectives": "concept:military_objective",
+    "military stance": "concept:subject_military_stance",
+    "military stances": "concept:subject_military_stance",
+    "military strength": "concept:military_strength",
+    "military tactics": "concept:military_tactics",
+    "min tax": "concept:min_tax",
+    "minimum tax": "concept:min_tax",
+    "minor revolt": "concept:minor_revolt",
+    "minor revolts": "concept:minor_revolt",
+    "mint": "concept:minting",
+    "minting": "concept:minting",
+    "mission": "concept:mission",
+    "mission task": "concept:mission_task",
+    "mission tasks": "concept:mission_task",
+    "missions": "concept:mission",
+    "modifier": "concept:modifier",
+    "modifiers": "concept:modifier",
+    "monarch": "concept:ruler",
+    "monarchs": "concept:ruler",
+    "monthly fee": "concept:mercenary_monthly_fee",
+    "monthly fees": "concept:mercenary_monthly_fee",
+    "monthly food": "concept:monthly_food",
+    "monthly manpower": "concept:monthly_manpower",
+    "monthly trade & tax income": "concept:monthly_income_trade_and_tax",
+    "morale": "concept:morale",
+    "morale damage done": "concept:morale_damage_done",
+    "morale damage taken": "concept:morale_damage_taken",
+    "mothball": "concept:mothballed",
+    "mothballed": "concept:mothballed",
+    "movement": "concept:movement",
+    "movement modifier": "concept:movement_modifier",
+    "movement modifiers": "concept:movement_modifier",
+    "movement speed": "concept:movement_speed",
+    "movement type": "concept:movement_definition",
+    "movement types": "concept:movement_definition",
+    "movements": "concept:movement",
+    "nation": "concept:country",
+    "nationalist rebels": "concept:nationalist_rebels",
+    "nations": "concept:country",
+    "natural harbor suitability": "concept:natural_harbor_suitability",
+    "naval damage": "concept:naval_damage",
+    "naval levies": "concept:navy_levy",
+    "naval levy": "concept:navy_levy",
+    "naval range": "concept:naval_range",
+    "naval strength": "concept:naval_strength",
+    "naval supplies": "good:naval_supplies",
+    "navies": "concept:navy",
+    "navy": "concept:navy",
+    "navy based countries": "concept:navy_based",
+    "navy based country": "concept:navy_based",
+    "navy experience": "concept:experience",
+    "navy maintenance": "concept:navy_maintenance",
+    "navy morale": "concept:morale",
+    "navy tradition": "concept:navy_tradition",
+    "non-sovereign subject": "concept:non_sovereign_subject",
+    "non-sovereign subjects": "concept:non_sovereign_subject",
+    "normal power": "concept:normal_power",
+    "occupation": "concept:occupation",
+    "occupations": "concept:occupation",
+    "occupied": "concept:occupation",
+    "occupier": "concept:occupation",
+    "occupy": "concept:occupation",
+    "occupying": "concept:occupation",
+    "offensive war": "concept:war",
+    "offensive wars": "concept:war",
+    "offered omens": "concept:offered_omens",
+    "olives": "good:olives",
+    "omen": "concept:omen",
+    "omens": "concept:omen",
+    "opinion": "concept:cultural_opinion",
+    "outbreak": "concept:disease_outbreak",
+    "output": "concept:output",
+    "overlord": "concept:overlord",
+    "overlords": "concept:overlord",
+    "overseas": "concept:overseas",
+    "own": "concept:owner",
+    "owned": "concept:owner",
+    "owner": "concept:owner",
+    "owner's": "concept:owner",
+    "owners": "concept:owner",
+    "ownership": "concept:owner",
+    "owns": "concept:owner",
+    "papal authority": "concept:papal_authority",
+    "papal bull": "concept:papal_bull",
+    "papal bulls": "concept:papal_bull",
+    "paper": "good:paper",
+    "parliament": "concept:parliament",
+    "parliament agenda": "concept:parliament_agenda",
+    "parliament agendas": "concept:parliament_agenda",
+    "parliament base support": "concept:parliament_base_support",
+    "parliament issue": "concept:parliament_issue",
+    "parliament issues": "concept:parliament_issue",
+    "parliament request": "concept:parliament_requests",
+    "parliament requests": "concept:parliament_requests",
+    "parliament seat": "concept:parliament_seat",
+    "parliament support": "concept:parliament_support",
+    "parliament type": "concept:parliament_type",
+    "parliament types": "concept:parliament_type",
+    "passable": "concept:impassable",
+    "patriarch": "concept:patriarch",
+    "patriarchs": "concept:patriarch",
+    "payment": "concept:payment",
+    "payments": "concept:payment",
+    "peace": "concept:peace",
+    "peace offer": "concept:peace_offer",
+    "peace offer value": "concept:peace_cost",
+    "peace treaties": "concept:peace_treaty",
+    "peace treaty": "concept:peace_treaty",
+    "pearls": "good:pearls",
+    "peasant enfranchisement": "concept:peasant_enfranchisement",
+    "pentarchy": "concept:pentarchy",
+    "people": "concept:people",
+    "pepper": "good:pepper",
+    "person": "concept:people",
+    "personal union": "concept:union",
+    "personal unions": "concept:union",
+    "phase": "concept:phase",
+    "phases": "concept:phase",
+    "pirate": "concept:pirate",
+    "pirates": "concept:pirate",
+    "plantation": "concept:plantation",
+    "plantations": "concept:plantation",
+    "points": "concept:great_power_points",
+    "policies": "concept:policy",
+    "policy": "concept:policy",
+    "political power": "concept:political_power",
+    "pop": "concept:pop",
+    "pop based country": "concept:society_of_pops",
+    "pop food consumption": "concept:pop_food_consumption",
+    "pop needs": "concept:pop_needs",
+    "pop satisfaction": "concept:pop_satisfaction",
+    "pope": "concept:religious_head",
+    "pops": "concept:pop",
+    "population": "concept:population",
+    "population capacity": "concept:population_capacity",
+    "population growth": "concept:population_growth",
+    "porcelain": "good:porcelain",
+    "port": "concept:port",
+    "ports": "concept:port",
+    "potatoes": "good:potato",
+    "pottery": "good:pottery",
+    "power": "concept:special_status_power",
+    "power projection": "concept:power_projection",
+    "prestige": "concept:prestige",
+    "pretender rebels": "concept:pretender_rebels",
+    "price": "concept:price",
+    "price impact": "concept:price_impact",
+    "price stability": "concept:price_stability",
+    "prices": "concept:price",
+    "primary": "concept:primary_culture",
+    "primary culture": "concept:primary_culture",
+    "primary cultures": "concept:primary_culture",
+    "primary or accepted culture": "concept:primary_or_accepted_culture",
+    "primary religion": "concept:state_religion",
+    "primary religion tolerance": "concept:true_faith_tolerance",
+    "prisoner": "concept:prisoner",
+    "prisoners": "concept:prisoner",
+    "privateer": "concept:privateer",
+    "privateer durability": "concept:privateer_durability",
+    "privateer maintenance": "concept:privateer_maintenance",
+    "privateers": "concept:privateer",
+    "privilege": "concept:estate_privilege",
+    "privileges": "concept:estate_privilege",
+    "produce": "concept:output",
+    "produced good": "concept:produced_goods",
+    "produced goods": "concept:produced_goods",
+    "produces": "concept:output",
+    "producing": "concept:output",
+    "production efficiency": "concept:production_efficiency",
+    "production method": "concept:production_method",
+    "production methods": "concept:production_method",
+    "profit": "concept:profit",
+    "promote": "concept:promote",
+    "promoted": "concept:promote",
+    "promotes": "concept:promote",
+    "promotion": "concept:promote",
+    "prosperity": "concept:prosperity",
+    "protestant": "concept:reformation",
+    "protestants": "concept:reformation",
+    "province": "concept:province",
+    "province capital": "concept:province_capital",
+    "province capitals": "concept:province_capital",
+    "province definition": "concept:province_definition",
+    "province definitions": "concept:province_definition",
+    "province modifier": "concept:province_modifier",
+    "province modifiers": "concept:province_modifier",
+    "provinces": "concept:province",
+    "provincial food": "concept:provincial_food",
+    "proximity": "concept:proximity",
+    "purity": "concept:purity",
+    "r.g.o.": "concept:rgo",
+    "rank": "concept:great_power_rank",
+    "raw good": "concept:raw_materials",
+    "raw goods": "concept:raw_materials",
+    "rebel": "concept:rebel_movement",
+    "rebel movement": "concept:rebel_movement",
+    "rebel movements": "concept:rebel_movement",
+    "rebellion": "concept:rebel_movement",
+    "rebellions": "concept:rebel_movement",
+    "rebels": "concept:rebel_movement",
+    "recruit": "concept:recruit",
+    "recruiting": "concept:recruit",
+    "recruitment method": "concept:recruitment_method",
+    "recruitment methods": "concept:recruitment_method",
+    "reform": "concept:government_reform",
+    "reform desire": "concept:reform_desire",
+    "reformation": "concept:reformation",
+    "reforms": "concept:government_reform",
+    "regencies": "concept:regency",
+    "regency": "concept:regency",
+    "regent": "concept:regent",
+    "regents": "concept:regent",
+    "regiment": "concept:regiment",
+    "regiments": "concept:regiment",
+    "region": "concept:region",
+    "regional power": "concept:regional_power",
+    "regional powers": "concept:regional_power",
+    "regions": "concept:region",
+    "regular": "concept:regular_regiment",
+    "regular army": "concept:regular_army",
+    "regular regiment": "concept:regular_regiment",
+    "regular regiments": "concept:regular_regiment",
+    "regular ship": "concept:regular_ship",
+    "regular ships": "concept:regular_ship",
+    "regulars": "concept:regular_regiment",
+    "reinforce": "concept:reinforce",
+    "reinforced": "concept:reinforce",
+    "reinforcement": "concept:reinforce",
+    "relation type": "concept:relation_type",
+    "relation types": "concept:relation_type",
+    "religion": "concept:religion",
+    "religion group": "concept:religion_group",
+    "religion groups": "concept:religion_group",
+    "religions": "concept:religion",
+    "religious aspect": "concept:religious_aspect",
+    "religious aspects": "concept:religious_aspect",
+    "religious faction": "concept:religious_faction",
+    "religious factions": "concept:religious_faction",
+    "religious figure": "concept:religious_figure",
+    "religious figure trait": "concept:religious_figure_trait",
+    "religious figure traits": "concept:religious_figure_trait",
+    "religious figures": "concept:religious_figure",
+    "religious focus": "concept:religious_focus",
+    "religious focuses": "concept:religious_focus",
+    "religious head": "concept:religious_head",
+    "religious influence": "concept:religious_influence",
+    "religious opinion": "concept:religious_opinion",
+    "religious opinions": "concept:religious_opinion",
+    "religious rebels": "concept:religious_rebels",
+    "religious reform": "concept:religious_reform",
+    "religious school": "concept:religious_school",
+    "religious schools": "concept:religious_school",
+    "religious status": "concept:religious_status",
+    "religious unity": "concept:religious_unity",
+    "religious war": "concept:religious_war",
+    "repair": "concept:repair",
+    "repaired": "concept:repair",
+    "republican tradition": "concept:republican_tradition",
+    "research": "concept:research",
+    "research progress": "concept:research_progress",
+    "researched": "concept:research",
+    "researching": "concept:research",
+    "reserves": "concept:reserves",
+    "resolution": "concept:resolution",
+    "resolutions": "concept:resolution",
+    "resource gathering operations": "concept:rgo",
+    "retreat": "concept:retreat",
+    "retreating": "concept:retreat",
+    "retreats": "concept:retreat",
+    "revolt": "concept:revolter",
+    "revolter": "concept:revolter",
+    "revolution": "concept:revolutionary",
+    "revolutionary": "concept:revolutionary",
+    "revolutionary target": "concept:revolutionary_target",
+    "rice": "good:rice",
+    "right flank": "concept:flank",
+    "righteousness": "concept:righteousness",
+    "rival": "concept:rival",
+    "rivals": "concept:rival",
+    "river": "concept:river",
+    "river crossing": "concept:crossing",
+    "rivers": "concept:river",
+    "road": "concept:road",
+    "roads": "concept:road",
+    "role": "concept:role",
+    "roles": "concept:role",
+    "royal marriage": "concept:royal_marriage",
+    "royal marriages": "concept:royal_marriage",
+    "ruler": "concept:ruler",
+    "ruler trait": "concept:ruler_trait",
+    "ruler traits": "concept:ruler_trait",
+    "ruler's": "concept:ruler",
+    "rulers": "concept:ruler",
+    "rural": "concept:rural_location",
+    "rural location": "concept:rural_location",
+    "rural locations": "concept:rural_location",
+    "saffron": "good:saffron",
+    "sailors": "concept:sailors",
+    "saint": "concept:canonization",
+    "saints": "concept:canonization",
+    "salt": "good:salt",
+    "saltpeter": "good:saltpeter",
+    "sand": "good:sand",
+    "satisfaction": "concept:estate_satisfaction",
+    "satisfaction equilibrium": "concept:estate_satisfaction_equilibrium",
+    "score": "concept:great_power_score",
+    "sea current": "concept:sea_current",
+    "sea currents": "concept:sea_current",
+    "sea landing": "concept:crossing",
+    "seazone": "concept:seazone",
+    "seazones": "concept:seazone",
+    "secondary culture": "concept:culture",
+    "sect": "concept:sect",
+    "section": "concept:section",
+    "sections": "concept:section",
+    "sects": "concept:sect",
+    "secure flanks": "concept:secure_flanks",
+    "secure flanks defense": "concept:secure_flanks",
+    "self control": "concept:self_control",
+    "sell food": "concept:selling_food",
+    "sell price": "concept:sell_price",
+    "selling efficiency": "concept:selling_efficiency",
+    "selling food": "concept:selling_food",
+    "senior partner": "concept:union",
+    "separatism": "concept:separatism",
+    "settle": "concept:settled_country",
+    "settled": "concept:settled_country",
+    "settled country": "concept:settled_country",
+    "share of power": "concept:share_of_power_gc",
+    "ship": "concept:ship",
+    "ship type": "concept:unit_type",
+    "ships": "concept:ship",
+    "siege": "concept:siege",
+    "sieged": "concept:siege",
+    "sieges": "concept:siege",
+    "silk": "good:silk",
+    "silver": "good:silver",
+    "situation": "concept:situation",
+    "situation action": "concept:situation_action",
+    "situation actions": "concept:situation_action",
+    "situations": "concept:situation",
+    "slave rebels": "concept:slave_rebels",
+    "slaves": "good:slaves_goods",
+    "social class": "concept:pop_type",
+    "social classes": "concept:pop_type",
+    "societal value": "concept:societal_value",
+    "societal values": "concept:societal_value",
+    "societies of pops": "concept:society_of_pops",
+    "society of pops": "concept:society_of_pops",
+    "sound toll": "concept:sound_toll",
+    "sound tolls": "concept:sound_toll",
+    "special status": "concept:special_status",
+    "special status power": "concept:special_status_power",
+    "special statuses": "concept:special_status",
+    "spouse": "concept:consort",
+    "spouses": "concept:consort",
+    "spy network": "concept:spy_network",
+    "spy networks": "concept:spy_network",
+    "stability": "concept:stability",
+    "stability investment": "concept:stability_investment",
+    "starvation": "concept:starving",
+    "starving": "concept:starving",
+    "status": "concept:cultural_status",
+    "steel": "good:steel",
+    "stockpile": "concept:stockpile",
+    "stone": "good:stone",
+    "stored research progress": "concept:stored_research",
+    "strait": "concept:strait",
+    "strait crossing": "concept:crossing",
+    "straits": "concept:strait",
+    "strength": "concept:strength",
+    "strength damage done": "concept:strength_damage_done",
+    "strength damage taken": "concept:strength_damage_taken",
+    "sturdy grains": "good:millet",
+    "subcontinent": "concept:sub_continent",
+    "subcontinents": "concept:sub_continent",
+    "subject": "concept:subject",
+    "subject loyalty": "concept:subject_loyalty",
+    "subject taxation": "concept:subject_taxation",
+    "subject territory connectivity": "concept:subject_territory_connectivity",
+    "subject type": "concept:subject_type",
+    "subject types": "concept:subject_type",
+    "subjects": "concept:subject",
+    "subjugate": "concept:subject",
+    "subjugated": "concept:subject",
+    "subsidization": "concept:subsidization",
+    "subsidize": "concept:subsidization",
+    "subsidized": "concept:subsidization",
+    "subsidy": "concept:subsidy",
+    "subsistence agriculture": "concept:subsistence_agriculture",
+    "subunit": "concept:sub_unit",
+    "subunits": "concept:sub_unit",
+    "succession law": "concept:heir_selection",
+    "succession laws": "concept:heir_selection",
+    "sugar": "good:sugar",
+    "supply": "concept:supply",
+    "supply depot": "concept:supply_depot",
+    "supply depots": "concept:supply_depot",
+    "supply limit": "concept:supply_limit",
+    "support rebels": "concept:supportrebels",
+    "supported building levels": "concept:supported_building_levels",
+    "tar": "good:tar",
+    "target price": "concept:target_price",
+    "task": "concept:mission_task",
+    "tasks": "concept:mission_task",
+    "tax": "concept:tax",
+    "tax base": "concept:tax_base",
+    "tax efficiency": "concept:tax_efficiency",
+    "tax rate": "concept:tax_rate",
+    "taxable profit": "concept:taxable_profit",
+    "taxes": "concept:tax",
+    "tea": "good:tea",
+    "tension": "concept:situation_tension",
+    "terra incognita": "concept:terra_incognita",
+    "threat": "concept:threat",
+    "threatening": "concept:threat",
+    "tier": "concept:tier",
+    "tiers": "concept:tier",
+    "tin": "good:tin",
+    "tithe": "concept:tithe",
+    "title history": "concept:title_history",
+    "tobacco": "good:tobacco",
+    "tolerance": "concept:tolerance",
+    "tolerance of heathens": "concept:heathenry_tolerance",
+    "tolerance of heretics": "concept:heretic_tolerance",
+    "tolerate": "concept:tolerated_culture",
+    "tolerated": "concept:tolerated_culture",
+    "tolerated culture": "concept:tolerated_culture",
+    "tolerated cultures": "concept:tolerated_culture",
+    "tools": "good:tools",
+    "topography": "concept:topography",
+    "total ability": "concept:total_ability",
+    "total population": "concept:total_population",
+    "total strength": "concept:total_strength",
+    "trade": "concept:trade",
+    "trade advantage": "concept:merchant_power",
+    "trade capacity": "concept:merchant_capacity",
+    "trade expense": "concept:trade_expense",
+    "trade income": "concept:trade_income",
+    "trade income share": "concept:trade_income",
+    "trade order": "concept:trade_orders",
+    "trade orders": "concept:trade_orders",
+    "trade profit": "concept:trade_profit",
+    "trade range": "concept:trade_range",
+    "trade route maintenance": "concept:merchant_maintenance",
+    "trades": "concept:trade",
+    "trading": "concept:trade",
+    "trading market": "concept:trading_market",
+    "trading markets": "concept:trading_market",
+    "tradition": "concept:cultural_tradition",
+    "trait": "concept:trait",
+    "traits": "concept:trait",
+    "transport capacity": "concept:transport_capacity",
+    "treasury": "concept:treasury",
+    "treaties": "concept:treaty",
+    "treaty": "concept:treaty",
+    "tribal cohesion": "concept:tribal_cohesion",
+    "trigger": "concept:trigger",
+    "triggers": "concept:trigger",
+    "truce": "concept:truce",
+    "trust": "concept:trust",
+    "trust equilibrium": "concept:trust_equilibrium",
+    "trusted": "concept:trust",
+    "type": "concept:holy_site_type",
+    "type of country": "concept:country_type",
+    "types": "concept:holy_site_type",
+    "unavoidable attrition": "concept:non_avoidable_attrition",
+    "unconditional surrender": "concept:unconditional_surrender",
+    "unconditionally surrender": "concept:unconditional_surrender",
+    "unconditionally surrendered": "concept:unconditional_surrender",
+    "unconditionally surrenders": "concept:unconditional_surrender",
+    "unified": "concept:merged_culture_group",
+    "unified culture": "concept:merged_culture_group",
+    "unified culture group": "concept:merged_culture_group",
+    "unifies": "concept:merged_culture_group",
+    "unify": "concept:merged_culture_group",
+    "unifying": "concept:merged_culture_group",
+    "union": "concept:union",
+    "union integration level": "concept:union_integration_level",
+    "union partner": "concept:union",
+    "union partners": "concept:union",
+    "unit": "concept:unit",
+    "unit abilities": "concept:unit_ability",
+    "unit ability": "concept:unit_ability",
+    "unit categories": "concept:unit_category",
+    "unit category": "concept:unit_category",
+    "unit formation preference": "concept:unit_formation_preference",
+    "unit modifier": "concept:unit_modifier",
+    "unit modifiers": "concept:unit_modifier",
+    "unit template": "concept:unit_template",
+    "unit templates": "concept:unit_template",
+    "unit type": "concept:unit_type",
+    "unit types": "concept:unit_type",
+    "unit weight": "concept:unit_weight",
+    "units": "concept:unit",
+    "unlimited diplomacy": "concept:diplomatic_limitation",
+    "unrest": "concept:unrest",
+    "upper class": "concept:upper_class",
+    "urban location": "concept:town_and_city",
+    "urban locations": "concept:town_and_city",
+    "urban rights": "concept:town_rights",
+    "used diplomatic capacity": "concept:diplomatic_capacity",
+    "vegetation": "concept:vegetation",
+    "victory card": "concept:victory_card",
+    "victory cards": "concept:victory_card",
+    "vision": "concept:fow",
+    "vote": "concept:resolution",
+    "votes": "concept:resolution",
+    "voting": "concept:resolution",
+    "war": "concept:war",
+    "war allies": "concept:war_ally",
+    "war enemies": "concept:enemy",
+    "war enemy": "concept:enemy",
+    "war enthusiasm": "concept:war_enthusiasm",
+    "war exhaustion": "concept:war_exhaustion",
+    "war leader": "concept:war_leader",
+    "war leaders": "concept:war_leader",
+    "war participation": "concept:war_participation",
+    "war reparations": "concept:war_reparations",
+    "wargoal": "concept:war_goal",
+    "wargoals": "concept:war_goal",
+    "wars": "concept:war",
+    "warscore": "concept:war_score",
+    "wasteland": "concept:impassable",
+    "wastelands": "concept:impassable",
+    "wealth": "concept:wealth",
+    "wealth impact": "concept:wealth_impact",
+    "wealth share": "concept:wealth_share",
+    "weaponry": "good:weaponry",
+    "weather system": "concept:weather_system",
+    "weather systems": "concept:weather_system",
+    "wheat": "good:wheat",
+    "white peace": "concept:white_peace",
+    "wild game": "good:wild_game",
+    "wine": "good:wine",
+    "winter": "concept:winter",
+    "winter level": "concept:winter_level",
+    "winter levels": "concept:winter_level",
+    "winters": "concept:winter",
+    "wool": "good:wool",
+    "work of art": "concept:work_of_art",
+    "works of art": "concept:work_of_art",
+    "yanantin": "concept:yanantin",
+    "zone of control": "concept:zone_of_control",
+    "zones of control": "concept:zone_of_control"
+  },
+  "entities": {
+    "concept:ability": {
+      "name": "Ability",
+      "page": "concepts/ability",
+      "slug": "ability",
+      "type": "concept"
+    },
+    "concept:accepted_culture": {
+      "name": "Accepted Culture",
+      "page": "concepts/accepted-culture",
+      "slug": "accepted-culture",
+      "type": "concept"
+    },
+    "concept:action": {
+      "name": "Action",
+      "page": "concepts/action",
+      "slug": "action",
+      "type": "concept"
+    },
+    "concept:adm": {
+      "name": "Administrative Ability",
+      "page": "concepts/adm",
+      "slug": "adm",
+      "type": "concept"
+    },
+    "concept:admiral": {
+      "name": "Admiral",
+      "page": "concepts/admiral",
+      "slug": "admiral",
+      "type": "concept"
+    },
+    "concept:admiral_trait": {
+      "name": "Admiral Trait",
+      "page": "concepts/admiral-trait",
+      "slug": "admiral-trait",
+      "type": "concept"
+    },
+    "concept:adolescent": {
+      "name": "Adolescent",
+      "page": "concepts/adolescent",
+      "slug": "adolescent",
+      "type": "concept"
+    },
+    "concept:adult": {
+      "name": "Adult",
+      "page": "concepts/adult",
+      "slug": "adult",
+      "type": "concept"
+    },
+    "concept:advance": {
+      "name": "Advance",
+      "page": "concepts/advance",
+      "slug": "advance",
+      "type": "concept"
+    },
+    "concept:age": {
+      "name": "Age",
+      "page": "concepts/age",
+      "slug": "age",
+      "type": "concept"
+    },
+    "concept:ai_disposition": {
+      "name": "Country Disposition",
+      "page": "concepts/ai-disposition",
+      "slug": "ai-disposition",
+      "type": "concept"
+    },
+    "concept:ai_personality": {
+      "name": "Country Personality",
+      "page": "concepts/ai-personality",
+      "slug": "ai-personality",
+      "type": "concept"
+    },
+    "concept:alliance": {
+      "name": "Alliance",
+      "page": "concepts/alliance",
+      "slug": "alliance",
+      "type": "concept"
+    },
+    "concept:alliance_bloc": {
+      "name": "Alliance Bloc",
+      "page": "concepts/alliance-bloc",
+      "slug": "alliance-bloc",
+      "type": "concept"
+    },
+    "concept:annexation": {
+      "name": "Annexation",
+      "page": "concepts/annexation",
+      "slug": "annexation",
+      "type": "concept"
+    },
+    "concept:antagonism": {
+      "name": "Antagonism",
+      "page": "concepts/antagonism",
+      "slug": "antagonism",
+      "type": "concept"
+    },
+    "concept:antagonism_received_modifier": {
+      "name": "Antagonism Received",
+      "page": "concepts/antagonism-received-modifier",
+      "slug": "antagonism-received-modifier",
+      "type": "concept"
+    },
+    "concept:anti_piracy_warfare": {
+      "name": "Anti-Piracy Impact",
+      "page": "concepts/anti-piracy-warfare",
+      "slug": "anti-piracy-warfare",
+      "type": "concept"
+    },
+    "concept:area": {
+      "name": "Area",
+      "page": "concepts/area",
+      "slug": "area",
+      "type": "concept"
+    },
+    "concept:army": {
+      "name": "Army",
+      "page": "concepts/army",
+      "slug": "army",
+      "type": "concept"
+    },
+    "concept:army_based": {
+      "name": "Army Based Country",
+      "page": "concepts/army-based",
+      "slug": "army-based",
+      "type": "concept"
+    },
+    "concept:army_levy": {
+      "name": "Army Levy",
+      "page": "concepts/army-levy",
+      "slug": "army-levy",
+      "type": "concept"
+    },
+    "concept:army_maintenance": {
+      "name": "Army Maintenance",
+      "page": "concepts/army-maintenance",
+      "slug": "army-maintenance",
+      "type": "concept"
+    },
+    "concept:army_tradition": {
+      "name": "Army Tradition",
+      "page": "concepts/army-tradition",
+      "slug": "army-tradition",
+      "type": "concept"
+    },
+    "concept:art_quality": {
+      "name": "Art Quality",
+      "page": "concepts/art-quality",
+      "slug": "art-quality",
+      "type": "concept"
+    },
+    "concept:artillery_barrage": {
+      "name": "Artillery Barrage",
+      "page": "concepts/artillery-barrage",
+      "slug": "artillery-barrage",
+      "type": "concept"
+    },
+    "concept:artillery_bonus": {
+      "name": "Artillery Bonus",
+      "page": "concepts/artillery-bonus",
+      "slug": "artillery-bonus",
+      "type": "concept"
+    },
+    "concept:artist": {
+      "name": "Artist",
+      "page": "concepts/artist",
+      "slug": "artist",
+      "type": "concept"
+    },
+    "concept:artist_salary": {
+      "name": "Artist Salary",
+      "page": "concepts/artist-salary",
+      "slug": "artist-salary",
+      "type": "concept"
+    },
+    "concept:artist_trait": {
+      "name": "Artist Trait",
+      "page": "concepts/artist-trait",
+      "slug": "artist-trait",
+      "type": "concept"
+    },
+    "concept:artistic_skill": {
+      "name": "Artistic Skill",
+      "page": "concepts/artistic-skill",
+      "slug": "artistic-skill",
+      "type": "concept"
+    },
+    "concept:assault": {
+      "name": "Assault",
+      "page": "concepts/assault",
+      "slug": "assault",
+      "type": "concept"
+    },
+    "concept:assimilate": {
+      "name": "Assimilate",
+      "page": "concepts/assimilate",
+      "slug": "assimilate",
+      "type": "concept"
+    },
+    "concept:attacker": {
+      "name": "Attacker",
+      "page": "concepts/attacker",
+      "slug": "attacker",
+      "type": "concept"
+    },
+    "concept:attrition": {
+      "name": "Attrition",
+      "page": "concepts/attrition",
+      "slug": "attrition",
+      "type": "concept"
+    },
+    "concept:attrition_loss": {
+      "name": "Attrition Loss",
+      "page": "concepts/attrition-loss",
+      "slug": "attrition-loss",
+      "type": "concept"
+    },
+    "concept:autocephalous_patriarchate": {
+      "name": "Autocephalous Patriarchate",
+      "page": "concepts/autocephalous-patriarchate",
+      "slug": "autocephalous-patriarchate",
+      "type": "concept"
+    },
+    "concept:avatar": {
+      "name": "Avatar",
+      "page": "concepts/avatar",
+      "slug": "avatar",
+      "type": "concept"
+    },
+    "concept:average_morale": {
+      "name": "Average Morale",
+      "page": "concepts/average-morale",
+      "slug": "average-morale",
+      "type": "concept"
+    },
+    "concept:average_satisfaction": {
+      "name": "Average Satisfaction",
+      "page": "concepts/average-satisfaction",
+      "slug": "average-satisfaction",
+      "type": "concept"
+    },
+    "concept:bankrupt": {
+      "name": "Bankrupt",
+      "page": "concepts/bankrupt",
+      "slug": "bankrupt",
+      "type": "concept"
+    },
+    "concept:bias": {
+      "name": "Bias",
+      "page": "concepts/bias",
+      "slug": "bias",
+      "type": "concept"
+    },
+    "concept:blockade": {
+      "name": "Blockade",
+      "page": "concepts/blockade",
+      "slug": "blockade",
+      "type": "concept"
+    },
+    "concept:blockade_capacity": {
+      "name": "Blockade Capacity",
+      "page": "concepts/blockade-capacity",
+      "slug": "blockade-capacity",
+      "type": "concept"
+    },
+    "concept:blocked_treaties": {
+      "name": "Blocked Treaties",
+      "page": "concepts/blocked-treaties",
+      "slug": "blocked-treaties",
+      "type": "concept"
+    },
+    "concept:bombard": {
+      "name": "Bombard",
+      "page": "concepts/bombard",
+      "slug": "bombard",
+      "type": "concept"
+    },
+    "concept:bombard_efficiency": {
+      "name": "Bombard Efficiency",
+      "page": "concepts/bombard-efficiency",
+      "slug": "bombard-efficiency",
+      "type": "concept"
+    },
+    "concept:bombard_phase": {
+      "name": "Bombard Phase",
+      "page": "concepts/bombard-phase",
+      "slug": "bombard-phase",
+      "type": "concept"
+    },
+    "concept:bond_interest": {
+      "name": "Bond Interest",
+      "page": "concepts/bond-interest",
+      "slug": "bond-interest",
+      "type": "concept"
+    },
+    "concept:borrower": {
+      "name": "Borrower",
+      "page": "concepts/borrower",
+      "slug": "borrower",
+      "type": "concept"
+    },
+    "concept:broken_units": {
+      "name": "Broken Units",
+      "page": "concepts/broken-units",
+      "slug": "broken-units",
+      "type": "concept"
+    },
+    "concept:budget": {
+      "name": "Balance",
+      "page": "concepts/budget",
+      "slug": "budget",
+      "type": "concept"
+    },
+    "concept:building": {
+      "name": "Building",
+      "page": "concepts/building",
+      "slug": "building",
+      "type": "concept"
+    },
+    "concept:building_category": {
+      "name": "Building Category",
+      "page": "concepts/building-category",
+      "slug": "building-category",
+      "type": "concept"
+    },
+    "concept:building_maintenance": {
+      "name": "Building Maintenance",
+      "page": "concepts/building-maintenance",
+      "slug": "building-maintenance",
+      "type": "concept"
+    },
+    "concept:building_type": {
+      "name": "Building Type",
+      "page": "concepts/building-type",
+      "slug": "building-type",
+      "type": "concept"
+    },
+    "concept:bureaucracy": {
+      "name": "Bureaucracy",
+      "page": "concepts/bureaucracy",
+      "slug": "bureaucracy",
+      "type": "concept"
+    },
+    "concept:bureaucracy_maintenance": {
+      "name": "Bureaucracy Maintenance",
+      "page": "concepts/bureaucracy-maintenance",
+      "slug": "bureaucracy-maintenance",
+      "type": "concept"
+    },
+    "concept:bureaucracy_type": {
+      "name": "Bureaucracy Type",
+      "page": "concepts/bureaucracy-type",
+      "slug": "bureaucracy-type",
+      "type": "concept"
+    },
+    "concept:burgher_trade": {
+      "name": "Burghers Trading",
+      "page": "concepts/burgher-trade",
+      "slug": "burgher-trade",
+      "type": "concept"
+    },
+    "concept:buying_food": {
+      "name": "Buying Food",
+      "page": "concepts/buying-food",
+      "slug": "buying-food",
+      "type": "concept"
+    },
+    "concept:cabinet": {
+      "name": "Cabinet",
+      "page": "concepts/cabinet",
+      "slug": "cabinet",
+      "type": "concept"
+    },
+    "concept:cabinet_action": {
+      "name": "Cabinet Action",
+      "page": "concepts/cabinet-action",
+      "slug": "cabinet-action",
+      "type": "concept"
+    },
+    "concept:cabinet_efficiency": {
+      "name": "Cabinet Efficiency",
+      "page": "concepts/cabinet-efficiency",
+      "slug": "cabinet-efficiency",
+      "type": "concept"
+    },
+    "concept:cabinet_member": {
+      "name": "Cabinet Member",
+      "page": "concepts/cabinet-member",
+      "slug": "cabinet-member",
+      "type": "concept"
+    },
+    "concept:cabinet_seats": {
+      "name": "Cabinet Seats",
+      "page": "concepts/cabinet-seats",
+      "slug": "cabinet-seats",
+      "type": "concept"
+    },
+    "concept:cabinet_trait": {
+      "name": "Cabinet Trait",
+      "page": "concepts/cabinet-trait",
+      "slug": "cabinet-trait",
+      "type": "concept"
+    },
+    "concept:call_to_arms": {
+      "name": "Call to Arms",
+      "page": "concepts/call-to-arms",
+      "slug": "call-to-arms",
+      "type": "concept"
+    },
+    "concept:candidate": {
+      "name": "Candidate",
+      "page": "concepts/candidate",
+      "slug": "candidate",
+      "type": "concept"
+    },
+    "concept:cannons": {
+      "name": "Cannons",
+      "page": "concepts/cannons",
+      "slug": "cannons",
+      "type": "concept"
+    },
+    "concept:canonization": {
+      "name": "Canonization",
+      "page": "concepts/canonization",
+      "slug": "canonization",
+      "type": "concept"
+    },
+    "concept:capital": {
+      "name": "Capital",
+      "page": "concepts/capital",
+      "slug": "capital",
+      "type": "concept"
+    },
+    "concept:cardinal": {
+      "name": "Cardinal",
+      "page": "concepts/cardinal",
+      "slug": "cardinal",
+      "type": "concept"
+    },
+    "concept:casus_belli": {
+      "name": "Casus Belli",
+      "page": "concepts/casus-belli",
+      "slug": "casus-belli",
+      "type": "concept"
+    },
+    "concept:celestial_authority_gc": {
+      "name": "Celestial Authority",
+      "page": "concepts/celestial-authority-gc",
+      "slug": "celestial-authority-gc",
+      "type": "concept"
+    },
+    "concept:center": {
+      "name": "Center",
+      "page": "concepts/center",
+      "slug": "center",
+      "type": "concept"
+    },
+    "concept:central_bank": {
+      "name": "Central Bank",
+      "page": "concepts/central-bank",
+      "slug": "central-bank",
+      "type": "concept"
+    },
+    "concept:character": {
+      "name": "Character",
+      "page": "concepts/character",
+      "slug": "character",
+      "type": "concept"
+    },
+    "concept:character_interaction": {
+      "name": "Character Interaction",
+      "page": "concepts/character-interaction",
+      "slug": "character-interaction",
+      "type": "concept"
+    },
+    "concept:character_modifier": {
+      "name": "Character Modifier",
+      "page": "concepts/character-modifier",
+      "slug": "character-modifier",
+      "type": "concept"
+    },
+    "concept:child": {
+      "name": "Child",
+      "page": "concepts/child",
+      "slug": "child",
+      "type": "concept"
+    },
+    "concept:child_education": {
+      "name": "Child Education",
+      "page": "concepts/child-education",
+      "slug": "child-education",
+      "type": "concept"
+    },
+    "concept:child_trait": {
+      "name": "Child Trait",
+      "page": "concepts/child-trait",
+      "slug": "child-trait",
+      "type": "concept"
+    },
+    "concept:chivalric_order": {
+      "name": "Chivalric Order",
+      "page": "concepts/chivalric-order",
+      "slug": "chivalric-order",
+      "type": "concept"
+    },
+    "concept:circle_leader": {
+      "name": "Circle Leader",
+      "page": "concepts/circle-leader",
+      "slug": "circle-leader",
+      "type": "concept"
+    },
+    "concept:circle_satisfaction": {
+      "name": "Circle Satisfaction",
+      "page": "concepts/circle-satisfaction",
+      "slug": "circle-satisfaction",
+      "type": "concept"
+    },
+    "concept:civil_construction": {
+      "name": "Civil Construction",
+      "page": "concepts/civil-construction",
+      "slug": "civil-construction",
+      "type": "concept"
+    },
+    "concept:civil_war": {
+      "name": "Civil War",
+      "page": "concepts/civil-war",
+      "slug": "civil-war",
+      "type": "concept"
+    },
+    "concept:climate": {
+      "name": "Climate",
+      "page": "concepts/climate",
+      "slug": "climate",
+      "type": "concept"
+    },
+    "concept:coalition": {
+      "name": "Coalition",
+      "page": "concepts/coalition",
+      "slug": "coalition",
+      "type": "concept"
+    },
+    "concept:coastal": {
+      "name": "Coastal",
+      "page": "concepts/coastal",
+      "slug": "coastal",
+      "type": "concept"
+    },
+    "concept:cobelligerent": {
+      "name": "Co-belligerent",
+      "page": "concepts/cobelligerent",
+      "slug": "cobelligerent",
+      "type": "concept"
+    },
+    "concept:colonial_charter": {
+      "name": "Colonial Charter",
+      "page": "concepts/colonial-charter",
+      "slug": "colonial-charter",
+      "type": "concept"
+    },
+    "concept:colonial_maintenance": {
+      "name": "Cost of Colonies",
+      "page": "concepts/colonial-maintenance",
+      "slug": "colonial-maintenance",
+      "type": "concept"
+    },
+    "concept:colonial_migration": {
+      "name": "Colonial Migration",
+      "page": "concepts/colonial-migration",
+      "slug": "colonial-migration",
+      "type": "concept"
+    },
+    "concept:colonial_range": {
+      "name": "Colonial Range",
+      "page": "concepts/colonial-range",
+      "slug": "colonial-range",
+      "type": "concept"
+    },
+    "concept:colonized": {
+      "name": "Colonized",
+      "page": "concepts/colonized",
+      "slug": "colonized",
+      "type": "concept"
+    },
+    "concept:combat": {
+      "name": "Combat",
+      "page": "concepts/combat",
+      "slug": "combat",
+      "type": "concept"
+    },
+    "concept:combat_phase": {
+      "name": "Combat Phase",
+      "page": "concepts/combat-phase",
+      "slug": "combat-phase",
+      "type": "concept"
+    },
+    "concept:combat_power": {
+      "name": "Combat Power",
+      "page": "concepts/combat-power",
+      "slug": "combat-power",
+      "type": "concept"
+    },
+    "concept:combat_speed": {
+      "name": "Combat Speed",
+      "page": "concepts/combat-speed",
+      "slug": "combat-speed",
+      "type": "concept"
+    },
+    "concept:combined_arms": {
+      "name": "Combined Arms",
+      "page": "concepts/combined-arms",
+      "slug": "combined-arms",
+      "type": "concept"
+    },
+    "concept:commander": {
+      "name": "Commander",
+      "page": "concepts/commander",
+      "slug": "commander",
+      "type": "concept"
+    },
+    "concept:common_goods": {
+      "name": "Common Goods",
+      "page": "concepts/common-goods",
+      "slug": "common-goods",
+      "type": "concept"
+    },
+    "concept:common_language": {
+      "name": "Common Language",
+      "page": "concepts/common-language",
+      "slug": "common-language",
+      "type": "concept"
+    },
+    "concept:complacency": {
+      "name": "Complacency",
+      "page": "concepts/complacency",
+      "slug": "complacency",
+      "type": "concept"
+    },
+    "concept:conquer": {
+      "name": "Conquer",
+      "page": "concepts/conquer",
+      "slug": "conquer",
+      "type": "concept"
+    },
+    "concept:conquistador": {
+      "name": "Conquistador",
+      "page": "concepts/conquistador",
+      "slug": "conquistador",
+      "type": "concept"
+    },
+    "concept:consort": {
+      "name": "Consort",
+      "page": "concepts/consort",
+      "slug": "consort",
+      "type": "concept"
+    },
+    "concept:construction": {
+      "name": "Construction",
+      "page": "concepts/construction",
+      "slug": "construction",
+      "type": "concept"
+    },
+    "concept:construction_material": {
+      "name": "Construction Material",
+      "page": "concepts/construction-material",
+      "slug": "construction-material",
+      "type": "concept"
+    },
+    "concept:continent": {
+      "name": "Continent",
+      "page": "concepts/continent",
+      "slug": "continent",
+      "type": "concept"
+    },
+    "concept:control": {
+      "name": "Control",
+      "page": "concepts/control",
+      "slug": "control",
+      "type": "concept"
+    },
+    "concept:controller": {
+      "name": "Controller",
+      "page": "concepts/controller",
+      "slug": "controller",
+      "type": "concept"
+    },
+    "concept:conversion": {
+      "name": "Conversion",
+      "page": "concepts/conversion",
+      "slug": "conversion",
+      "type": "concept"
+    },
+    "concept:core": {
+      "name": "Core",
+      "page": "concepts/core",
+      "slug": "core",
+      "type": "concept"
+    },
+    "concept:corridor": {
+      "name": "Corridor",
+      "page": "concepts/corridor",
+      "slug": "corridor",
+      "type": "concept"
+    },
+    "concept:counterespionage": {
+      "name": "Counterespionage",
+      "page": "concepts/counterespionage",
+      "slug": "counterespionage",
+      "type": "concept"
+    },
+    "concept:country": {
+      "name": "Country",
+      "page": "concepts/country",
+      "slug": "country",
+      "type": "concept"
+    },
+    "concept:country_interaction": {
+      "name": "Country Interaction",
+      "page": "concepts/country-interaction",
+      "slug": "country-interaction",
+      "type": "concept"
+    },
+    "concept:country_modifier": {
+      "name": "Country Modifier",
+      "page": "concepts/country-modifier",
+      "slug": "country-modifier",
+      "type": "concept"
+    },
+    "concept:country_rank": {
+      "name": "Country Rank",
+      "page": "concepts/country-rank",
+      "slug": "country-rank",
+      "type": "concept"
+    },
+    "concept:country_strength": {
+      "name": "Country Strength",
+      "page": "concepts/country-strength",
+      "slug": "country-strength",
+      "type": "concept"
+    },
+    "concept:country_type": {
+      "name": "Country Type",
+      "page": "concepts/country-type",
+      "slug": "country-type",
+      "type": "concept"
+    },
+    "concept:court_dialect": {
+      "name": "Court Dialect",
+      "page": "concepts/court-dialect",
+      "slug": "court-dialect",
+      "type": "concept"
+    },
+    "concept:court_language": {
+      "name": "Court Language",
+      "page": "concepts/court-language",
+      "slug": "court-language",
+      "type": "concept"
+    },
+    "concept:court_maintenance": {
+      "name": "Cost of the Court",
+      "page": "concepts/court-maintenance",
+      "slug": "court-maintenance",
+      "type": "concept"
+    },
+    "concept:courtier": {
+      "name": "Courtier",
+      "page": "concepts/courtier",
+      "slug": "courtier",
+      "type": "concept"
+    },
+    "concept:creditworthiness": {
+      "name": "Creditworthiness",
+      "page": "concepts/creditworthiness",
+      "slug": "creditworthiness",
+      "type": "concept"
+    },
+    "concept:crew_size": {
+      "name": "Crew Size",
+      "page": "concepts/crew-size",
+      "slug": "crew-size",
+      "type": "concept"
+    },
+    "concept:crossing": {
+      "name": "Crossing",
+      "page": "concepts/crossing",
+      "slug": "crossing",
+      "type": "concept"
+    },
+    "concept:crown_power": {
+      "name": "Crown Power",
+      "page": "concepts/crown-power",
+      "slug": "crown-power",
+      "type": "concept"
+    },
+    "concept:cultural_capacity": {
+      "name": "Cultural Capacity",
+      "page": "concepts/cultural-capacity",
+      "slug": "cultural-capacity",
+      "type": "concept"
+    },
+    "concept:cultural_influence": {
+      "name": "Cultural Influence",
+      "page": "concepts/cultural-influence",
+      "slug": "cultural-influence",
+      "type": "concept"
+    },
+    "concept:cultural_maintenance": {
+      "name": "Investing in Culture",
+      "page": "concepts/cultural-maintenance",
+      "slug": "cultural-maintenance",
+      "type": "concept"
+    },
+    "concept:cultural_opinion": {
+      "name": "Cultural Opinion",
+      "page": "concepts/cultural-opinion",
+      "slug": "cultural-opinion",
+      "type": "concept"
+    },
+    "concept:cultural_status": {
+      "name": "Cultural Status",
+      "page": "concepts/cultural-status",
+      "slug": "cultural-status",
+      "type": "concept"
+    },
+    "concept:cultural_tradition": {
+      "name": "Cultural Tradition",
+      "page": "concepts/cultural-tradition",
+      "slug": "cultural-tradition",
+      "type": "concept"
+    },
+    "concept:cultural_unity": {
+      "name": "Cultural Unity",
+      "page": "concepts/cultural-unity",
+      "slug": "cultural-unity",
+      "type": "concept"
+    },
+    "concept:culture": {
+      "name": "Culture",
+      "page": "concepts/culture",
+      "slug": "culture",
+      "type": "concept"
+    },
+    "concept:culture_group": {
+      "name": "Culture Group",
+      "page": "concepts/culture-group",
+      "slug": "culture-group",
+      "type": "concept"
+    },
+    "concept:culture_war_power": {
+      "name": "Culture War Power",
+      "page": "concepts/culture-war-power",
+      "slug": "culture-war-power",
+      "type": "concept"
+    },
+    "concept:curia": {
+      "name": "Curia",
+      "page": "concepts/curia",
+      "slug": "curia",
+      "type": "concept"
+    },
+    "concept:curia_action": {
+      "name": "Curia Action",
+      "page": "concepts/curia-action",
+      "slug": "curia-action",
+      "type": "concept"
+    },
+    "concept:d10": {
+      "name": "D10",
+      "page": "concepts/d10",
+      "slug": "d10",
+      "type": "concept"
+    },
+    "concept:d100": {
+      "name": "D100",
+      "page": "concepts/d100",
+      "slug": "d100",
+      "type": "concept"
+    },
+    "concept:d20": {
+      "name": "D20",
+      "page": "concepts/d20",
+      "slug": "d20",
+      "type": "concept"
+    },
+    "concept:damage_taken": {
+      "name": "Damage Taken",
+      "page": "concepts/damage-taken",
+      "slug": "damage-taken",
+      "type": "concept"
+    },
+    "concept:debt": {
+      "name": "Debt",
+      "page": "concepts/debt",
+      "slug": "debt",
+      "type": "concept"
+    },
+    "concept:decaying_modifier": {
+      "name": "Decaying Modifier",
+      "page": "concepts/decaying-modifier",
+      "slug": "decaying-modifier",
+      "type": "concept"
+    },
+    "concept:defender": {
+      "name": "Defender",
+      "page": "concepts/defender",
+      "slug": "defender",
+      "type": "concept"
+    },
+    "concept:demand": {
+      "name": "Demand",
+      "page": "concepts/demand",
+      "slug": "demand",
+      "type": "concept"
+    },
+    "concept:demote": {
+      "name": "Demote",
+      "page": "concepts/demote",
+      "slug": "demote",
+      "type": "concept"
+    },
+    "concept:development": {
+      "name": "Development",
+      "page": "concepts/development",
+      "slug": "development",
+      "type": "concept"
+    },
+    "concept:devotion": {
+      "name": "Devotion",
+      "page": "concepts/devotion",
+      "slug": "devotion",
+      "type": "concept"
+    },
+    "concept:dialect": {
+      "name": "Dialect",
+      "page": "concepts/dialect",
+      "slug": "dialect",
+      "type": "concept"
+    },
+    "concept:dice": {
+      "name": "Dice",
+      "page": "concepts/dice",
+      "slug": "dice",
+      "type": "concept"
+    },
+    "concept:dip": {
+      "name": "Diplomatic Ability",
+      "page": "concepts/dip",
+      "slug": "dip",
+      "type": "concept"
+    },
+    "concept:diplomacy": {
+      "name": "Diplomacy",
+      "page": "concepts/diplomacy",
+      "slug": "diplomacy",
+      "type": "concept"
+    },
+    "concept:diplomat": {
+      "name": "Diplomat",
+      "page": "concepts/diplomat",
+      "slug": "diplomat",
+      "type": "concept"
+    },
+    "concept:diplomatic_action": {
+      "name": "Diplomatic Action",
+      "page": "concepts/diplomatic-action",
+      "slug": "diplomatic-action",
+      "type": "concept"
+    },
+    "concept:diplomatic_capacity": {
+      "name": "Diplomatic Capacity",
+      "page": "concepts/diplomatic-capacity",
+      "slug": "diplomatic-capacity",
+      "type": "concept"
+    },
+    "concept:diplomatic_expense": {
+      "name": "Diplomatic Expense",
+      "page": "concepts/diplomatic-expense",
+      "slug": "diplomatic-expense",
+      "type": "concept"
+    },
+    "concept:diplomatic_income": {
+      "name": "Diplomatic Income",
+      "page": "concepts/diplomatic-income",
+      "slug": "diplomatic-income",
+      "type": "concept"
+    },
+    "concept:diplomatic_limitation": {
+      "name": "Diplomatic Limitation",
+      "page": "concepts/diplomatic-limitation",
+      "slug": "diplomatic-limitation",
+      "type": "concept"
+    },
+    "concept:diplomatic_maintenance": {
+      "name": "Diplomatic Spending",
+      "page": "concepts/diplomatic-maintenance",
+      "slug": "diplomatic-maintenance",
+      "type": "concept"
+    },
+    "concept:diplomatic_range": {
+      "name": "Diplomatic Range",
+      "page": "concepts/diplomatic-range",
+      "slug": "diplomatic-range",
+      "type": "concept"
+    },
+    "concept:diplomatic_reputation": {
+      "name": "Diplomatic Reputation",
+      "page": "concepts/diplomatic-reputation",
+      "slug": "diplomatic-reputation",
+      "type": "concept"
+    },
+    "concept:disaster": {
+      "name": "Disaster",
+      "page": "concepts/disaster",
+      "slug": "disaster",
+      "type": "concept"
+    },
+    "concept:discipline": {
+      "name": "Discipline",
+      "page": "concepts/discipline",
+      "slug": "discipline",
+      "type": "concept"
+    },
+    "concept:discover": {
+      "name": "Discover",
+      "page": "concepts/discover",
+      "slug": "discover",
+      "type": "concept"
+    },
+    "concept:disease": {
+      "name": "Disease",
+      "page": "concepts/disease",
+      "slug": "disease",
+      "type": "concept"
+    },
+    "concept:disease_outbreak": {
+      "name": "Disease Outbreak",
+      "page": "concepts/disease-outbreak",
+      "slug": "disease-outbreak",
+      "type": "concept"
+    },
+    "concept:disease_resistance": {
+      "name": "Disease Resistance",
+      "page": "concepts/disease-resistance",
+      "slug": "disease-resistance",
+      "type": "concept"
+    },
+    "concept:disloyal_subjects": {
+      "name": "Disloyal Subjects",
+      "page": "concepts/disloyal-subjects",
+      "slug": "disloyal-subjects",
+      "type": "concept"
+    },
+    "concept:distant_market": {
+      "name": "Distant Market",
+      "page": "concepts/distant-market",
+      "slug": "distant-market",
+      "type": "concept"
+    },
+    "concept:distributing_food": {
+      "name": "Distributing Food",
+      "page": "concepts/distributing-food",
+      "slug": "distributing-food",
+      "type": "concept"
+    },
+    "concept:divorce": {
+      "name": "Divorce",
+      "page": "concepts/divorce",
+      "slug": "divorce",
+      "type": "concept"
+    },
+    "concept:domestic_market": {
+      "name": "Domestic Market",
+      "page": "concepts/domestic-market",
+      "slug": "domestic-market",
+      "type": "concept"
+    },
+    "concept:dominant_country": {
+      "name": "Dominant Country",
+      "page": "concepts/dominant-country",
+      "slug": "dominant-country",
+      "type": "concept"
+    },
+    "concept:dominant_culture": {
+      "name": "Dominant Culture",
+      "page": "concepts/dominant-culture",
+      "slug": "dominant-culture",
+      "type": "concept"
+    },
+    "concept:dominant_dialect": {
+      "name": "Dominant Dialect",
+      "page": "concepts/dominant-dialect",
+      "slug": "dominant-dialect",
+      "type": "concept"
+    },
+    "concept:dominant_language": {
+      "name": "Dominant Language",
+      "page": "concepts/dominant-language",
+      "slug": "dominant-language",
+      "type": "concept"
+    },
+    "concept:dominant_religion": {
+      "name": "Dominant Religion",
+      "page": "concepts/dominant-religion",
+      "slug": "dominant-religion",
+      "type": "concept"
+    },
+    "concept:dominant_upper_class_culture": {
+      "name": "Dominant Upper Class Culture",
+      "page": "concepts/dominant-upper-class-culture",
+      "slug": "dominant-upper-class-culture",
+      "type": "concept"
+    },
+    "concept:doom": {
+      "name": "Doom",
+      "page": "concepts/doom",
+      "slug": "doom",
+      "type": "concept"
+    },
+    "concept:dynamic_historical_event": {
+      "name": "Dynamic Historical Event",
+      "page": "concepts/dynamic-historical-event",
+      "slug": "dynamic-historical-event",
+      "type": "concept"
+    },
+    "concept:dynastic_power": {
+      "name": "Dynastic Power",
+      "page": "concepts/dynastic-power",
+      "slug": "dynastic-power",
+      "type": "concept"
+    },
+    "concept:dynasty": {
+      "name": "Dynasty",
+      "page": "concepts/dynasty",
+      "slug": "dynasty",
+      "type": "concept"
+    },
+    "concept:dynasty_founder": {
+      "name": "Dynasty Founder",
+      "page": "concepts/dynasty-founder",
+      "slug": "dynasty-founder",
+      "type": "concept"
+    },
+    "concept:dynasty_head": {
+      "name": "Head of the Dynasty",
+      "page": "concepts/dynasty-head",
+      "slug": "dynasty-head",
+      "type": "concept"
+    },
+    "concept:dynasty_modifier": {
+      "name": "Dynasty Modifier",
+      "page": "concepts/dynasty-modifier",
+      "slug": "dynasty-modifier",
+      "type": "concept"
+    },
+    "concept:dynasty_seat": {
+      "name": "Dynastic Seat",
+      "page": "concepts/dynasty-seat",
+      "slug": "dynasty-seat",
+      "type": "concept"
+    },
+    "concept:economic_support": {
+      "name": "Economic Support",
+      "page": "concepts/economic-support",
+      "slug": "economic-support",
+      "type": "concept"
+    },
+    "concept:economical_base": {
+      "name": "Economic Base",
+      "page": "concepts/economical-base",
+      "slug": "economical-base",
+      "type": "concept"
+    },
+    "concept:effect": {
+      "name": "Effect",
+      "page": "concepts/effect",
+      "slug": "effect",
+      "type": "concept"
+    },
+    "concept:effective_demand": {
+      "name": "Effective Demand",
+      "page": "concepts/effective-demand",
+      "slug": "effective-demand",
+      "type": "concept"
+    },
+    "concept:effective_supply": {
+      "name": "Effective Supply",
+      "page": "concepts/effective-supply",
+      "slug": "effective-supply",
+      "type": "concept"
+    },
+    "concept:election": {
+      "name": "Election",
+      "page": "concepts/election",
+      "slug": "election",
+      "type": "concept"
+    },
+    "concept:elector": {
+      "name": "Elector",
+      "page": "concepts/elector",
+      "slug": "elector",
+      "type": "concept"
+    },
+    "concept:eligibility_rules": {
+      "name": "Eligibility Rules",
+      "page": "concepts/eligibility-rules",
+      "slug": "eligibility-rules",
+      "type": "concept"
+    },
+    "concept:embarking": {
+      "name": "Embarking",
+      "page": "concepts/embarking",
+      "slug": "embarking",
+      "type": "concept"
+    },
+    "concept:embrace": {
+      "name": "Embrace",
+      "page": "concepts/embrace",
+      "slug": "embrace",
+      "type": "concept"
+    },
+    "concept:employ": {
+      "name": "Employ",
+      "page": "concepts/employ",
+      "slug": "employ",
+      "type": "concept"
+    },
+    "concept:employment_system": {
+      "name": "Employment System",
+      "page": "concepts/employment-system",
+      "slug": "employment-system",
+      "type": "concept"
+    },
+    "concept:enemy": {
+      "name": "War Enemy",
+      "page": "concepts/enemy",
+      "slug": "enemy",
+      "type": "concept"
+    },
+    "concept:engagement": {
+      "name": "Engagement",
+      "page": "concepts/engagement",
+      "slug": "engagement",
+      "type": "concept"
+    },
+    "concept:entrenchment": {
+      "name": "Entrenchment",
+      "page": "concepts/entrenchment",
+      "slug": "entrenchment",
+      "type": "concept"
+    },
+    "concept:establishment": {
+      "name": "Establishment",
+      "page": "concepts/establishment",
+      "slug": "establishment",
+      "type": "concept"
+    },
+    "concept:estate": {
+      "name": "Estate",
+      "page": "concepts/estate",
+      "slug": "estate",
+      "type": "concept"
+    },
+    "concept:estate_building": {
+      "name": "Estate Building",
+      "page": "concepts/estate-building",
+      "slug": "estate-building",
+      "type": "concept"
+    },
+    "concept:estate_culture": {
+      "name": "Estate Culture",
+      "page": "concepts/estate-culture",
+      "slug": "estate-culture",
+      "type": "concept"
+    },
+    "concept:estate_opinion": {
+      "name": "Estate Opinion",
+      "page": "concepts/estate-opinion",
+      "slug": "estate-opinion",
+      "type": "concept"
+    },
+    "concept:estate_power": {
+      "name": "Estate Power",
+      "page": "concepts/estate-power",
+      "slug": "estate-power",
+      "type": "concept"
+    },
+    "concept:estate_privilege": {
+      "name": "Estate Privilege",
+      "page": "concepts/estate-privilege",
+      "slug": "estate-privilege",
+      "type": "concept"
+    },
+    "concept:estate_rebels": {
+      "name": "Estate Rebels",
+      "page": "concepts/estate-rebels",
+      "slug": "estate-rebels",
+      "type": "concept"
+    },
+    "concept:estate_religion": {
+      "name": "Estate Religion",
+      "page": "concepts/estate-religion",
+      "slug": "estate-religion",
+      "type": "concept"
+    },
+    "concept:estate_satisfaction": {
+      "name": "Estate Satisfaction",
+      "page": "concepts/estate-satisfaction",
+      "slug": "estate-satisfaction",
+      "type": "concept"
+    },
+    "concept:estate_satisfaction_equilibrium": {
+      "name": "Satisfaction Equilibrium",
+      "page": "concepts/estate-satisfaction-equilibrium",
+      "slug": "estate-satisfaction-equilibrium",
+      "type": "concept"
+    },
+    "concept:estate_tax_base": {
+      "name": "Estate Tax Base",
+      "page": "concepts/estate-tax-base",
+      "slug": "estate-tax-base",
+      "type": "concept"
+    },
+    "concept:estates_enrichment": {
+      "name": "Estates Enrichment",
+      "page": "concepts/estates-enrichment",
+      "slug": "estates-enrichment",
+      "type": "concept"
+    },
+    "concept:ethnicity": {
+      "name": "Ethnicity",
+      "page": "concepts/ethnicity",
+      "slug": "ethnicity",
+      "type": "concept"
+    },
+    "concept:event": {
+      "name": "Event",
+      "page": "concepts/event",
+      "slug": "event",
+      "type": "concept"
+    },
+    "concept:event_option": {
+      "name": "Event Option",
+      "page": "concepts/event-option",
+      "slug": "event-option",
+      "type": "concept"
+    },
+    "concept:excommunication": {
+      "name": "Excommunication",
+      "page": "concepts/excommunication",
+      "slug": "excommunication",
+      "type": "concept"
+    },
+    "concept:exile": {
+      "name": "In Exile",
+      "page": "concepts/exile",
+      "slug": "exile",
+      "type": "concept"
+    },
+    "concept:expense": {
+      "name": "Expense",
+      "page": "concepts/expense",
+      "slug": "expense",
+      "type": "concept"
+    },
+    "concept:experience": {
+      "name": "Experience",
+      "page": "concepts/experience",
+      "slug": "experience",
+      "type": "concept"
+    },
+    "concept:exploration": {
+      "name": "Exploration",
+      "page": "concepts/exploration",
+      "slug": "exploration",
+      "type": "concept"
+    },
+    "concept:exploration_expense": {
+      "name": "Exploration Cost",
+      "page": "concepts/exploration-expense",
+      "slug": "exploration-expense",
+      "type": "concept"
+    },
+    "concept:exploration_progress": {
+      "name": "Exploration Progress",
+      "page": "concepts/exploration-progress",
+      "slug": "exploration-progress",
+      "type": "concept"
+    },
+    "concept:explorer": {
+      "name": "Explorer",
+      "page": "concepts/explorer",
+      "slug": "explorer",
+      "type": "concept"
+    },
+    "concept:explorer_trait": {
+      "name": "Explorer Trait",
+      "page": "concepts/explorer-trait",
+      "slug": "explorer-trait",
+      "type": "concept"
+    },
+    "concept:export": {
+      "name": "Export",
+      "page": "concepts/export",
+      "slug": "export",
+      "type": "concept"
+    },
+    "concept:export_efficiency": {
+      "name": "Export Efficiency",
+      "page": "concepts/export-efficiency",
+      "slug": "export-efficiency",
+      "type": "concept"
+    },
+    "concept:export_market": {
+      "name": "Export Market",
+      "page": "concepts/export-market",
+      "slug": "export-market",
+      "type": "concept"
+    },
+    "concept:extraterritorial_country": {
+      "name": "Extraterritorial Country",
+      "page": "concepts/extraterritorial-country",
+      "slug": "extraterritorial-country",
+      "type": "concept"
+    },
+    "concept:favors": {
+      "name": "Favors",
+      "page": "concepts/favors",
+      "slug": "favors",
+      "type": "concept"
+    },
+    "concept:fertility": {
+      "name": "Fertility",
+      "page": "concepts/fertility",
+      "slug": "fertility",
+      "type": "concept"
+    },
+    "concept:flank": {
+      "name": "Flank",
+      "page": "concepts/flank",
+      "slug": "flank",
+      "type": "concept"
+    },
+    "concept:flanking_ability": {
+      "name": "Flanking Ability",
+      "page": "concepts/flanking-ability",
+      "slug": "flanking-ability",
+      "type": "concept"
+    },
+    "concept:fleet_basing_rights": {
+      "name": "Fleet Basing Rights",
+      "page": "concepts/fleet-basing-rights",
+      "slug": "fleet-basing-rights",
+      "type": "concept"
+    },
+    "concept:food": {
+      "name": "Food",
+      "page": "concepts/food",
+      "slug": "food",
+      "type": "concept"
+    },
+    "concept:food_access": {
+      "name": "Food Access",
+      "page": "concepts/food-access",
+      "slug": "food-access",
+      "type": "concept"
+    },
+    "concept:food_capacity": {
+      "name": "Food Capacity",
+      "page": "concepts/food-capacity",
+      "slug": "food-capacity",
+      "type": "concept"
+    },
+    "concept:food_consumption": {
+      "name": "Daily Food Consumption",
+      "page": "concepts/food-consumption",
+      "slug": "food-consumption",
+      "type": "concept"
+    },
+    "concept:food_decay": {
+      "name": "Food Decay",
+      "page": "concepts/food-decay",
+      "slug": "food-decay",
+      "type": "concept"
+    },
+    "concept:food_productivity": {
+      "name": "Food Productivity",
+      "page": "concepts/food-productivity",
+      "slug": "food-productivity",
+      "type": "concept"
+    },
+    "concept:food_raw_material": {
+      "name": "Food Raw Material",
+      "page": "concepts/food-raw-material",
+      "slug": "food-raw-material",
+      "type": "concept"
+    },
+    "concept:food_source": {
+      "name": "Food Source",
+      "page": "concepts/food-source",
+      "slug": "food-source",
+      "type": "concept"
+    },
+    "concept:food_stockpile": {
+      "name": "Food Stockpile",
+      "page": "concepts/food-stockpile",
+      "slug": "food-stockpile",
+      "type": "concept"
+    },
+    "concept:food_storage": {
+      "name": "Food Storage",
+      "page": "concepts/food-storage",
+      "slug": "food-storage",
+      "type": "concept"
+    },
+    "concept:foreign": {
+      "name": "Foreign",
+      "page": "concepts/foreign",
+      "slug": "foreign",
+      "type": "concept"
+    },
+    "concept:foreign_building": {
+      "name": "Foreign Building",
+      "page": "concepts/foreign-building",
+      "slug": "foreign-building",
+      "type": "concept"
+    },
+    "concept:foreign_culture": {
+      "name": "Foreign Culture",
+      "page": "concepts/foreign-culture",
+      "slug": "foreign-culture",
+      "type": "concept"
+    },
+    "concept:foreign_language": {
+      "name": "Foreign Language",
+      "page": "concepts/foreign-language",
+      "slug": "foreign-language",
+      "type": "concept"
+    },
+    "concept:foreign_market": {
+      "name": "Foreign Market",
+      "page": "concepts/foreign-market",
+      "slug": "foreign-market",
+      "type": "concept"
+    },
+    "concept:formable_country": {
+      "name": "Formable Country",
+      "page": "concepts/formable-country",
+      "slug": "formable-country",
+      "type": "concept"
+    },
+    "concept:fort_limit": {
+      "name": "Fort Limit",
+      "page": "concepts/fort-limit",
+      "slug": "fort-limit",
+      "type": "concept"
+    },
+    "concept:fort_maintenance": {
+      "name": "Fort Maintenance",
+      "page": "concepts/fort-maintenance",
+      "slug": "fort-maintenance",
+      "type": "concept"
+    },
+    "concept:fortification": {
+      "name": "Fortification",
+      "page": "concepts/fortification",
+      "slug": "fortification",
+      "type": "concept"
+    },
+    "concept:fow": {
+      "name": "Fog of War",
+      "page": "concepts/fow",
+      "slug": "fow",
+      "type": "concept"
+    },
+    "concept:free_city": {
+      "name": "Free City",
+      "page": "concepts/free-city",
+      "slug": "free-city",
+      "type": "concept"
+    },
+    "concept:friend": {
+      "name": "Friend",
+      "page": "concepts/friend",
+      "slug": "friend",
+      "type": "concept"
+    },
+    "concept:frontage": {
+      "name": "Frontage",
+      "page": "concepts/frontage",
+      "slug": "frontage",
+      "type": "concept"
+    },
+    "concept:frozen": {
+      "name": "Frozen Over",
+      "page": "concepts/frozen",
+      "slug": "frozen",
+      "type": "concept"
+    },
+    "concept:fully_settled": {
+      "name": "Fully Settled",
+      "page": "concepts/fully-settled",
+      "slug": "fully-settled",
+      "type": "concept"
+    },
+    "concept:garrison": {
+      "name": "Garrison",
+      "page": "concepts/garrison",
+      "slug": "garrison",
+      "type": "concept"
+    },
+    "concept:gathering_food": {
+      "name": "Gathering Food",
+      "page": "concepts/gathering-food",
+      "slug": "gathering-food",
+      "type": "concept"
+    },
+    "concept:gdp_per_capita": {
+      "name": "GDP per capita",
+      "page": "concepts/gdp-per-capita",
+      "slug": "gdp-per-capita",
+      "type": "concept"
+    },
+    "concept:general": {
+      "name": "General",
+      "page": "concepts/general",
+      "slug": "general",
+      "type": "concept"
+    },
+    "concept:general_trait": {
+      "name": "General Trait",
+      "page": "concepts/general-trait",
+      "slug": "general-trait",
+      "type": "concept"
+    },
+    "concept:geographical_term": {
+      "name": "Geographical Term",
+      "page": "concepts/geographical-term",
+      "slug": "geographical-term",
+      "type": "concept"
+    },
+    "concept:geography": {
+      "name": "Geography",
+      "page": "concepts/geography",
+      "slug": "geography",
+      "type": "concept"
+    },
+    "concept:god": {
+      "name": "God",
+      "page": "concepts/god",
+      "slug": "god",
+      "type": "concept"
+    },
+    "concept:gold": {
+      "name": "Ducats",
+      "page": "concepts/gold",
+      "slug": "gold",
+      "type": "concept"
+    },
+    "concept:goods": {
+      "name": "Goods",
+      "page": "concepts/goods",
+      "slug": "goods",
+      "type": "concept"
+    },
+    "concept:goods_demand": {
+      "name": "Goods Demand",
+      "page": "concepts/goods-demand",
+      "slug": "goods-demand",
+      "type": "concept"
+    },
+    "concept:government": {
+      "name": "Government",
+      "page": "concepts/government",
+      "slug": "government",
+      "type": "concept"
+    },
+    "concept:government_bond": {
+      "name": "Government Bond",
+      "page": "concepts/government-bond",
+      "slug": "government-bond",
+      "type": "concept"
+    },
+    "concept:government_needs": {
+      "name": "Government Needs",
+      "page": "concepts/government-needs",
+      "slug": "government-needs",
+      "type": "concept"
+    },
+    "concept:government_power": {
+      "name": "Government Power",
+      "page": "concepts/government-power",
+      "slug": "government-power",
+      "type": "concept"
+    },
+    "concept:government_reform": {
+      "name": "Government Reform",
+      "page": "concepts/government-reform",
+      "slug": "government-reform",
+      "type": "concept"
+    },
+    "concept:government_type": {
+      "name": "Government Type",
+      "page": "concepts/government-type",
+      "slug": "government-type",
+      "type": "concept"
+    },
+    "concept:graphical_culture": {
+      "name": "Graphical Culture",
+      "page": "concepts/graphical-culture",
+      "slug": "graphical-culture",
+      "type": "concept"
+    },
+    "concept:great_power": {
+      "name": "Great Power",
+      "page": "concepts/great-power",
+      "slug": "great-power",
+      "type": "concept"
+    },
+    "concept:great_power_points": {
+      "name": "Great Power Points",
+      "page": "concepts/great-power-points",
+      "slug": "great-power-points",
+      "type": "concept"
+    },
+    "concept:great_power_rank": {
+      "name": "Great Power Rank",
+      "page": "concepts/great-power-rank",
+      "slug": "great-power-rank",
+      "type": "concept"
+    },
+    "concept:great_power_score": {
+      "name": "Great Power Score",
+      "page": "concepts/great-power-score",
+      "slug": "great-power-score",
+      "type": "concept"
+    },
+    "concept:guarantee": {
+      "name": "Guarantee",
+      "page": "concepts/guarantee",
+      "slug": "guarantee",
+      "type": "concept"
+    },
+    "concept:harbor_capacity": {
+      "name": "Harbor Capacity",
+      "page": "concepts/harbor-capacity",
+      "slug": "harbor-capacity",
+      "type": "concept"
+    },
+    "concept:harmony": {
+      "name": "Harmony",
+      "page": "concepts/harmony",
+      "slug": "harmony",
+      "type": "concept"
+    },
+    "concept:head_of_the_cabinet": {
+      "name": "Head of the Cabinet",
+      "page": "concepts/head-of-the-cabinet",
+      "slug": "head-of-the-cabinet",
+      "type": "concept"
+    },
+    "concept:health_trait": {
+      "name": "Health Trait",
+      "page": "concepts/health-trait",
+      "slug": "health-trait",
+      "type": "concept"
+    },
+    "concept:heathen": {
+      "name": "Heathen",
+      "page": "concepts/heathen",
+      "slug": "heathen",
+      "type": "concept"
+    },
+    "concept:heathenry_tolerance": {
+      "name": "Tolerance of Heathens",
+      "page": "concepts/heathenry-tolerance",
+      "slug": "heathenry-tolerance",
+      "type": "concept"
+    },
+    "concept:hegemony": {
+      "name": "Hegemony",
+      "page": "concepts/hegemony",
+      "slug": "hegemony",
+      "type": "concept"
+    },
+    "concept:heir": {
+      "name": "Heir",
+      "page": "concepts/heir",
+      "slug": "heir",
+      "type": "concept"
+    },
+    "concept:heir_selection": {
+      "name": "Succession Law",
+      "page": "concepts/heir-selection",
+      "slug": "heir-selection",
+      "type": "concept"
+    },
+    "concept:heir_selection_score": {
+      "name": "Heir Score",
+      "page": "concepts/heir-selection-score",
+      "slug": "heir-selection-score",
+      "type": "concept"
+    },
+    "concept:hemisphere": {
+      "name": "Hemisphere",
+      "page": "concepts/hemisphere",
+      "slug": "hemisphere",
+      "type": "concept"
+    },
+    "concept:heretic": {
+      "name": "Heretic",
+      "page": "concepts/heretic",
+      "slug": "heretic",
+      "type": "concept"
+    },
+    "concept:heretic_tolerance": {
+      "name": "Tolerance of Heretics",
+      "page": "concepts/heretic-tolerance",
+      "slug": "heretic-tolerance",
+      "type": "concept"
+    },
+    "concept:hidden": {
+      "name": "Hidden",
+      "page": "concepts/hidden",
+      "slug": "hidden",
+      "type": "concept"
+    },
+    "concept:hindu_branch": {
+      "name": "Hindu Branch",
+      "page": "concepts/hindu-branch",
+      "slug": "hindu-branch",
+      "type": "concept"
+    },
+    "concept:historical_option": {
+      "name": "Historical Option",
+      "page": "concepts/historical-option",
+      "slug": "historical-option",
+      "type": "concept"
+    },
+    "concept:holy_roman_empire": {
+      "name": "Holy Roman Empire",
+      "page": "concepts/holy-roman-empire",
+      "slug": "holy-roman-empire",
+      "type": "concept"
+    },
+    "concept:holy_site": {
+      "name": "Holy Site",
+      "page": "concepts/holy-site",
+      "slug": "holy-site",
+      "type": "concept"
+    },
+    "concept:holy_site_importance": {
+      "name": "Holy Site Importance",
+      "page": "concepts/holy-site-importance",
+      "slug": "holy-site-importance",
+      "type": "concept"
+    },
+    "concept:holy_site_type": {
+      "name": "Holy Site Type",
+      "page": "concepts/holy-site-type",
+      "slug": "holy-site-type",
+      "type": "concept"
+    },
+    "concept:honor": {
+      "name": "Honor",
+      "page": "concepts/honor",
+      "slug": "honor",
+      "type": "concept"
+    },
+    "concept:horde_unity": {
+      "name": "Horde Unity",
+      "page": "concepts/horde-unity",
+      "slug": "horde-unity",
+      "type": "concept"
+    },
+    "concept:hostile": {
+      "name": "Hostile",
+      "page": "concepts/hostile",
+      "slug": "hostile",
+      "type": "concept"
+    },
+    "concept:hre_electoral_college": {
+      "name": "Electoral College",
+      "page": "concepts/hre-electoral-college",
+      "slug": "hre-electoral-college",
+      "type": "concept"
+    },
+    "concept:hre_emperor": {
+      "name": "Emperor",
+      "page": "concepts/hre-emperor",
+      "slug": "hre-emperor",
+      "type": "concept"
+    },
+    "concept:hre_law_level": {
+      "name": "Imperial Law Level",
+      "page": "concepts/hre-law-level",
+      "slug": "hre-law-level",
+      "type": "concept"
+    },
+    "concept:hull_size": {
+      "name": "Hull Size",
+      "page": "concepts/hull-size",
+      "slug": "hull-size",
+      "type": "concept"
+    },
+    "concept:immortality": {
+      "name": "Immortality",
+      "page": "concepts/immortality",
+      "slug": "immortality",
+      "type": "concept"
+    },
+    "concept:impassable": {
+      "name": "Impassable",
+      "page": "concepts/impassable",
+      "slug": "impassable",
+      "type": "concept"
+    },
+    "concept:imperial_circle": {
+      "name": "Imperial Circle",
+      "page": "concepts/imperial-circle",
+      "slug": "imperial-circle",
+      "type": "concept"
+    },
+    "concept:imperial_religion": {
+      "name": "Imperial Religion",
+      "page": "concepts/imperial-religion",
+      "slug": "imperial-religion",
+      "type": "concept"
+    },
+    "concept:import": {
+      "name": "Import",
+      "page": "concepts/import",
+      "slug": "import",
+      "type": "concept"
+    },
+    "concept:import_efficiency": {
+      "name": "Import Efficiency",
+      "page": "concepts/import-efficiency",
+      "slug": "import-efficiency",
+      "type": "concept"
+    },
+    "concept:import_market": {
+      "name": "Import Market",
+      "page": "concepts/import-market",
+      "slug": "import-market",
+      "type": "concept"
+    },
+    "concept:improve_relations": {
+      "name": "Improve Relations",
+      "page": "concepts/improve-relations",
+      "slug": "improve-relations",
+      "type": "concept"
+    },
+    "concept:income": {
+      "name": "Income",
+      "page": "concepts/income",
+      "slug": "income",
+      "type": "concept"
+    },
+    "concept:infant": {
+      "name": "Infant",
+      "page": "concepts/infant",
+      "slug": "infant",
+      "type": "concept"
+    },
+    "concept:infiltrate_administration": {
+      "name": "Infiltrate Administration",
+      "page": "concepts/infiltrate-administration",
+      "slug": "infiltrate-administration",
+      "type": "concept"
+    },
+    "concept:inflation": {
+      "name": "Inflation",
+      "page": "concepts/inflation",
+      "slug": "inflation",
+      "type": "concept"
+    },
+    "concept:initiative": {
+      "name": "Initiative",
+      "page": "concepts/initiative",
+      "slug": "initiative",
+      "type": "concept"
+    },
+    "concept:inland": {
+      "name": "Inland",
+      "page": "concepts/inland",
+      "slug": "inland",
+      "type": "concept"
+    },
+    "concept:institution": {
+      "name": "Institution",
+      "page": "concepts/institution",
+      "slug": "institution",
+      "type": "concept"
+    },
+    "concept:integration": {
+      "name": "Integration",
+      "page": "concepts/integration",
+      "slug": "integration",
+      "type": "concept"
+    },
+    "concept:integration_status": {
+      "name": "Integration Status",
+      "page": "concepts/integration-status",
+      "slug": "integration-status",
+      "type": "concept"
+    },
+    "concept:interest": {
+      "name": "Interest",
+      "page": "concepts/interest",
+      "slug": "interest",
+      "type": "concept"
+    },
+    "concept:international_organization": {
+      "name": "International Organization",
+      "page": "concepts/international-organization",
+      "slug": "international-organization",
+      "type": "concept"
+    },
+    "concept:international_organization_leader": {
+      "name": "International Organization Leader",
+      "page": "concepts/international-organization-leader",
+      "slug": "international-organization-leader",
+      "type": "concept"
+    },
+    "concept:international_organization_modifier": {
+      "name": "International Organization Modifier",
+      "page": "concepts/international-organization-modifier",
+      "slug": "international-organization-modifier",
+      "type": "concept"
+    },
+    "concept:international_organization_type": {
+      "name": "International Organization Type",
+      "page": "concepts/international-organization-type",
+      "slug": "international-organization-type",
+      "type": "concept"
+    },
+    "concept:international_organization_variable": {
+      "name": "International Organization Value",
+      "page": "concepts/international-organization-variable",
+      "slug": "international-organization-variable",
+      "type": "concept"
+    },
+    "concept:isolate": {
+      "name": "Isolate",
+      "page": "concepts/isolate",
+      "slug": "isolate",
+      "type": "concept"
+    },
+    "concept:isolated_language": {
+      "name": "Isolated Language",
+      "page": "concepts/isolated-language",
+      "slug": "isolated-language",
+      "type": "concept"
+    },
+    "concept:karma": {
+      "name": "Karma",
+      "page": "concepts/karma",
+      "slug": "karma",
+      "type": "concept"
+    },
+    "concept:katun": {
+      "name": "K'atun",
+      "page": "concepts/katun",
+      "slug": "katun",
+      "type": "concept"
+    },
+    "concept:known_world": {
+      "name": "Known World",
+      "page": "concepts/known-world",
+      "slug": "known-world",
+      "type": "concept"
+    },
+    "concept:lake": {
+      "name": "Lake",
+      "page": "concepts/lake",
+      "slug": "lake",
+      "type": "concept"
+    },
+    "concept:land_ownership_rule": {
+      "name": "Land Ownership Rule",
+      "page": "concepts/land-ownership-rule",
+      "slug": "land-ownership-rule",
+      "type": "concept"
+    },
+    "concept:language": {
+      "name": "Language",
+      "page": "concepts/language",
+      "slug": "language",
+      "type": "concept"
+    },
+    "concept:language_family": {
+      "name": "Language Family",
+      "page": "concepts/language-family",
+      "slug": "language-family",
+      "type": "concept"
+    },
+    "concept:language_power": {
+      "name": "Language Power",
+      "page": "concepts/language-power",
+      "slug": "language-power",
+      "type": "concept"
+    },
+    "concept:law": {
+      "name": "Law",
+      "page": "concepts/law",
+      "slug": "law",
+      "type": "concept"
+    },
+    "concept:leader_change_method": {
+      "name": "Leader Change Method",
+      "page": "concepts/leader-change-method",
+      "slug": "leader-change-method",
+      "type": "concept"
+    },
+    "concept:leader_change_trigger": {
+      "name": "Leader Change Trigger",
+      "page": "concepts/leader-change-trigger",
+      "slug": "leader-change-trigger",
+      "type": "concept"
+    },
+    "concept:leader_type": {
+      "name": "Leader Type",
+      "page": "concepts/leader-type",
+      "slug": "leader-type",
+      "type": "concept"
+    },
+    "concept:leadership_election_resolution": {
+      "name": "Leadership Election Resolution",
+      "page": "concepts/leadership-election-resolution",
+      "slug": "leadership-election-resolution",
+      "type": "concept"
+    },
+    "concept:legal_male": {
+      "name": "Legal Male",
+      "page": "concepts/legal-male",
+      "slug": "legal-male",
+      "type": "concept"
+    },
+    "concept:legislative_efficiency": {
+      "name": "Legislative Efficiency",
+      "page": "concepts/legislative-efficiency",
+      "slug": "legislative-efficiency",
+      "type": "concept"
+    },
+    "concept:legitimacy": {
+      "name": "Legitimacy",
+      "page": "concepts/legitimacy",
+      "slug": "legitimacy",
+      "type": "concept"
+    },
+    "concept:lender": {
+      "name": "Lender",
+      "page": "concepts/lender",
+      "slug": "lender",
+      "type": "concept"
+    },
+    "concept:levy": {
+      "name": "Levy",
+      "page": "concepts/levy",
+      "slug": "levy",
+      "type": "concept"
+    },
+    "concept:levy_combat_efficiency": {
+      "name": "Levy Combat Efficiency",
+      "page": "concepts/levy-combat-efficiency",
+      "slug": "levy-combat-efficiency",
+      "type": "concept"
+    },
+    "concept:liberty_desire": {
+      "name": "Liberty Desire",
+      "page": "concepts/liberty-desire",
+      "slug": "liberty-desire",
+      "type": "concept"
+    },
+    "concept:literacy": {
+      "name": "Literacy",
+      "page": "concepts/literacy",
+      "slug": "literacy",
+      "type": "concept"
+    },
+    "concept:liturgical_dialect": {
+      "name": "Liturgical Dialect",
+      "page": "concepts/liturgical-dialect",
+      "slug": "liturgical-dialect",
+      "type": "concept"
+    },
+    "concept:liturgical_language": {
+      "name": "Liturgical Language",
+      "page": "concepts/liturgical-language",
+      "slug": "liturgical-language",
+      "type": "concept"
+    },
+    "concept:loan": {
+      "name": "Loan",
+      "page": "concepts/loan",
+      "slug": "loan",
+      "type": "concept"
+    },
+    "concept:loan_capacity": {
+      "name": "Loan Capacity",
+      "page": "concepts/loan-capacity",
+      "slug": "loan-capacity",
+      "type": "concept"
+    },
+    "concept:local_food": {
+      "name": "Local Food",
+      "page": "concepts/local-food",
+      "slug": "local-food",
+      "type": "concept"
+    },
+    "concept:location": {
+      "name": "Location",
+      "page": "concepts/location",
+      "slug": "location",
+      "type": "concept"
+    },
+    "concept:location_importance": {
+      "name": "Location Importance",
+      "page": "concepts/location-importance",
+      "slug": "location-importance",
+      "type": "concept"
+    },
+    "concept:location_modifier": {
+      "name": "Location Modifier",
+      "page": "concepts/location-modifier",
+      "slug": "location-modifier",
+      "type": "concept"
+    },
+    "concept:location_rank": {
+      "name": "Location Rank",
+      "page": "concepts/location-rank",
+      "slug": "location-rank",
+      "type": "concept"
+    },
+    "concept:location_size": {
+      "name": "Location Size",
+      "page": "concepts/location-size",
+      "slug": "location-size",
+      "type": "concept"
+    },
+    "concept:locked": {
+      "name": "Locked",
+      "page": "concepts/locked",
+      "slug": "locked",
+      "type": "concept"
+    },
+    "concept:logistics_distance": {
+      "name": "Logistics Distance",
+      "page": "concepts/logistics-distance",
+      "slug": "logistics-distance",
+      "type": "concept"
+    },
+    "concept:loot": {
+      "name": "Loot",
+      "page": "concepts/loot",
+      "slug": "loot",
+      "type": "concept"
+    },
+    "concept:lowborn": {
+      "name": "Lowborn",
+      "page": "concepts/lowborn",
+      "slug": "lowborn",
+      "type": "concept"
+    },
+    "concept:lower_class": {
+      "name": "Lower Class",
+      "page": "concepts/lower-class",
+      "slug": "lower-class",
+      "type": "concept"
+    },
+    "concept:loyal_subjects": {
+      "name": "Loyal Subjects",
+      "page": "concepts/loyal-subjects",
+      "slug": "loyal-subjects",
+      "type": "concept"
+    },
+    "concept:maintenance": {
+      "name": "Maintenance",
+      "page": "concepts/maintenance",
+      "slug": "maintenance",
+      "type": "concept"
+    },
+    "concept:major_reform": {
+      "name": "Major Reform",
+      "page": "concepts/major-reform",
+      "slug": "major-reform",
+      "type": "concept"
+    },
+    "concept:manpower": {
+      "name": "Manpower",
+      "page": "concepts/manpower",
+      "slug": "manpower",
+      "type": "concept"
+    },
+    "concept:map_mode_slot": {
+      "name": "Map Mode Slot",
+      "page": "concepts/map-mode-slot",
+      "slug": "map-mode-slot",
+      "type": "concept"
+    },
+    "concept:maritime_presence": {
+      "name": "Maritime Presence",
+      "page": "concepts/maritime-presence",
+      "slug": "maritime-presence",
+      "type": "concept"
+    },
+    "concept:market": {
+      "name": "Market",
+      "page": "concepts/market",
+      "slug": "market",
+      "type": "concept"
+    },
+    "concept:market_access": {
+      "name": "Market Access",
+      "page": "concepts/market-access",
+      "slug": "market-access",
+      "type": "concept"
+    },
+    "concept:market_attraction": {
+      "name": "Market Attraction",
+      "page": "concepts/market-attraction",
+      "slug": "market-attraction",
+      "type": "concept"
+    },
+    "concept:market_balance": {
+      "name": "Market Balance",
+      "page": "concepts/market-balance",
+      "slug": "market-balance",
+      "type": "concept"
+    },
+    "concept:market_center": {
+      "name": "Market Center",
+      "page": "concepts/market-center",
+      "slug": "market-center",
+      "type": "concept"
+    },
+    "concept:market_food": {
+      "name": "Market Food",
+      "page": "concepts/market-food",
+      "slug": "market-food",
+      "type": "concept"
+    },
+    "concept:market_language": {
+      "name": "Market Language",
+      "page": "concepts/market-language",
+      "slug": "market-language",
+      "type": "concept"
+    },
+    "concept:market_owner": {
+      "name": "Market Owner",
+      "page": "concepts/market-owner",
+      "slug": "market-owner",
+      "type": "concept"
+    },
+    "concept:market_price": {
+      "name": "Market Price",
+      "page": "concepts/market-price",
+      "slug": "market-price",
+      "type": "concept"
+    },
+    "concept:market_value": {
+      "name": "Market Value",
+      "page": "concepts/market-value",
+      "slug": "market-value",
+      "type": "concept"
+    },
+    "concept:max_control": {
+      "name": "Maximum Control",
+      "page": "concepts/max-control",
+      "slug": "max-control",
+      "type": "concept"
+    },
+    "concept:max_tax": {
+      "name": "Max Tax",
+      "page": "concepts/max-tax",
+      "slug": "max-tax",
+      "type": "concept"
+    },
+    "concept:maximum_strength": {
+      "name": "Maximum Strength",
+      "page": "concepts/maximum-strength",
+      "slug": "maximum-strength",
+      "type": "concept"
+    },
+    "concept:member": {
+      "name": "Member",
+      "page": "concepts/member",
+      "slug": "member",
+      "type": "concept"
+    },
+    "concept:mercenary": {
+      "name": "Mercenary",
+      "page": "concepts/mercenary",
+      "slug": "mercenary",
+      "type": "concept"
+    },
+    "concept:mercenary_contract_length": {
+      "name": "Contract Length",
+      "page": "concepts/mercenary-contract-length",
+      "slug": "mercenary-contract-length",
+      "type": "concept"
+    },
+    "concept:mercenary_expense": {
+      "name": "Hiring Mercenaries",
+      "page": "concepts/mercenary-expense",
+      "slug": "mercenary-expense",
+      "type": "concept"
+    },
+    "concept:mercenary_hiring_fee": {
+      "name": "Hiring Fee",
+      "page": "concepts/mercenary-hiring-fee",
+      "slug": "mercenary-hiring-fee",
+      "type": "concept"
+    },
+    "concept:mercenary_income": {
+      "name": "Mercenary Income",
+      "page": "concepts/mercenary-income",
+      "slug": "mercenary-income",
+      "type": "concept"
+    },
+    "concept:mercenary_monthly_fee": {
+      "name": "Monthly Fee",
+      "page": "concepts/mercenary-monthly-fee",
+      "slug": "mercenary-monthly-fee",
+      "type": "concept"
+    },
+    "concept:merchant": {
+      "name": "Merchant",
+      "page": "concepts/merchant",
+      "slug": "merchant",
+      "type": "concept"
+    },
+    "concept:merchant_capacity": {
+      "name": "Trade Capacity",
+      "page": "concepts/merchant-capacity",
+      "slug": "merchant-capacity",
+      "type": "concept"
+    },
+    "concept:merchant_maintenance": {
+      "name": "Trade Route Maintenance",
+      "page": "concepts/merchant-maintenance",
+      "slug": "merchant-maintenance",
+      "type": "concept"
+    },
+    "concept:merchant_maritime_power": {
+      "name": "Maritime Trade Advantage",
+      "page": "concepts/merchant-maritime-power",
+      "slug": "merchant-maritime-power",
+      "type": "concept"
+    },
+    "concept:merchant_power": {
+      "name": "Trade Advantage",
+      "page": "concepts/merchant-power",
+      "slug": "merchant-power",
+      "type": "concept"
+    },
+    "concept:merged_culture_group": {
+      "name": "Unified Culture Group",
+      "page": "concepts/merged-culture-group",
+      "slug": "merged-culture-group",
+      "type": "concept"
+    },
+    "concept:migration": {
+      "name": "Migration",
+      "page": "concepts/migration",
+      "slug": "migration",
+      "type": "concept"
+    },
+    "concept:migration_attraction": {
+      "name": "Migration Attraction",
+      "page": "concepts/migration-attraction",
+      "slug": "migration-attraction",
+      "type": "concept"
+    },
+    "concept:mil": {
+      "name": "Military Ability",
+      "page": "concepts/mil",
+      "slug": "mil",
+      "type": "concept"
+    },
+    "concept:military_access": {
+      "name": "Military Access",
+      "page": "concepts/military-access",
+      "slug": "military-access",
+      "type": "concept"
+    },
+    "concept:military_objective": {
+      "name": "Military Objective",
+      "page": "concepts/military-objective",
+      "slug": "military-objective",
+      "type": "concept"
+    },
+    "concept:military_strength": {
+      "name": "Military Strength",
+      "page": "concepts/military-strength",
+      "slug": "military-strength",
+      "type": "concept"
+    },
+    "concept:military_tactics": {
+      "name": "Military Tactics",
+      "page": "concepts/military-tactics",
+      "slug": "military-tactics",
+      "type": "concept"
+    },
+    "concept:min_tax": {
+      "name": "Min Tax",
+      "page": "concepts/min-tax",
+      "slug": "min-tax",
+      "type": "concept"
+    },
+    "concept:minor_revolt": {
+      "name": "Minor Revolt",
+      "page": "concepts/minor-revolt",
+      "slug": "minor-revolt",
+      "type": "concept"
+    },
+    "concept:minting": {
+      "name": "Minting",
+      "page": "concepts/minting",
+      "slug": "minting",
+      "type": "concept"
+    },
+    "concept:mission": {
+      "name": "Mission",
+      "page": "concepts/mission",
+      "slug": "mission",
+      "type": "concept"
+    },
+    "concept:mission_task": {
+      "name": "Mission Task",
+      "page": "concepts/mission-task",
+      "slug": "mission-task",
+      "type": "concept"
+    },
+    "concept:modifier": {
+      "name": "Modifier",
+      "page": "concepts/modifier",
+      "slug": "modifier",
+      "type": "concept"
+    },
+    "concept:monthly_food": {
+      "name": "Monthly Food",
+      "page": "concepts/monthly-food",
+      "slug": "monthly-food",
+      "type": "concept"
+    },
+    "concept:monthly_income_trade_and_tax": {
+      "name": "Monthly Trade & Tax Income",
+      "page": "concepts/monthly-income-trade-and-tax",
+      "slug": "monthly-income-trade-and-tax",
+      "type": "concept"
+    },
+    "concept:monthly_manpower": {
+      "name": "Monthly Manpower",
+      "page": "concepts/monthly-manpower",
+      "slug": "monthly-manpower",
+      "type": "concept"
+    },
+    "concept:morale": {
+      "name": "Morale",
+      "page": "concepts/morale",
+      "slug": "morale",
+      "type": "concept"
+    },
+    "concept:morale_damage_done": {
+      "name": "Morale Damage Done",
+      "page": "concepts/morale-damage-done",
+      "slug": "morale-damage-done",
+      "type": "concept"
+    },
+    "concept:morale_damage_taken": {
+      "name": "Morale Damage Taken",
+      "page": "concepts/morale-damage-taken",
+      "slug": "morale-damage-taken",
+      "type": "concept"
+    },
+    "concept:mothballed": {
+      "name": "Mothballed",
+      "page": "concepts/mothballed",
+      "slug": "mothballed",
+      "type": "concept"
+    },
+    "concept:movement": {
+      "name": "Movement",
+      "page": "concepts/movement",
+      "slug": "movement",
+      "type": "concept"
+    },
+    "concept:movement_definition": {
+      "name": "Movement Type",
+      "page": "concepts/movement-definition",
+      "slug": "movement-definition",
+      "type": "concept"
+    },
+    "concept:movement_modifier": {
+      "name": "Movement Modifier",
+      "page": "concepts/movement-modifier",
+      "slug": "movement-modifier",
+      "type": "concept"
+    },
+    "concept:movement_speed": {
+      "name": "Movement Speed",
+      "page": "concepts/movement-speed",
+      "slug": "movement-speed",
+      "type": "concept"
+    },
+    "concept:nationalist_rebels": {
+      "name": "Nationalist Rebels",
+      "page": "concepts/nationalist-rebels",
+      "slug": "nationalist-rebels",
+      "type": "concept"
+    },
+    "concept:natural_harbor_suitability": {
+      "name": "Natural Harbor Suitability",
+      "page": "concepts/natural-harbor-suitability",
+      "slug": "natural-harbor-suitability",
+      "type": "concept"
+    },
+    "concept:naval_damage": {
+      "name": "Naval Damage",
+      "page": "concepts/naval-damage",
+      "slug": "naval-damage",
+      "type": "concept"
+    },
+    "concept:naval_range": {
+      "name": "Naval Range",
+      "page": "concepts/naval-range",
+      "slug": "naval-range",
+      "type": "concept"
+    },
+    "concept:naval_strength": {
+      "name": "Naval Strength",
+      "page": "concepts/naval-strength",
+      "slug": "naval-strength",
+      "type": "concept"
+    },
+    "concept:navy": {
+      "name": "Navy",
+      "page": "concepts/navy",
+      "slug": "navy",
+      "type": "concept"
+    },
+    "concept:navy_based": {
+      "name": "Navy Based Country",
+      "page": "concepts/navy-based",
+      "slug": "navy-based",
+      "type": "concept"
+    },
+    "concept:navy_levy": {
+      "name": "Naval Levy",
+      "page": "concepts/navy-levy",
+      "slug": "navy-levy",
+      "type": "concept"
+    },
+    "concept:navy_maintenance": {
+      "name": "Navy Maintenance",
+      "page": "concepts/navy-maintenance",
+      "slug": "navy-maintenance",
+      "type": "concept"
+    },
+    "concept:navy_tradition": {
+      "name": "Navy Tradition",
+      "page": "concepts/navy-tradition",
+      "slug": "navy-tradition",
+      "type": "concept"
+    },
+    "concept:non_accepted_culture": {
+      "name": "Discriminated Culture",
+      "page": "concepts/non-accepted-culture",
+      "slug": "non-accepted-culture",
+      "type": "concept"
+    },
+    "concept:non_avoidable_attrition": {
+      "name": "Unavoidable Attrition",
+      "page": "concepts/non-avoidable-attrition",
+      "slug": "non-avoidable-attrition",
+      "type": "concept"
+    },
+    "concept:non_sovereign_subject": {
+      "name": "Non-Sovereign Subject",
+      "page": "concepts/non-sovereign-subject",
+      "slug": "non-sovereign-subject",
+      "type": "concept"
+    },
+    "concept:normal_power": {
+      "name": "Normal Power",
+      "page": "concepts/normal-power",
+      "slug": "normal-power",
+      "type": "concept"
+    },
+    "concept:occupation": {
+      "name": "Occupation",
+      "page": "concepts/occupation",
+      "slug": "occupation",
+      "type": "concept"
+    },
+    "concept:offered_omens": {
+      "name": "Offered Omens",
+      "page": "concepts/offered-omens",
+      "slug": "offered-omens",
+      "type": "concept"
+    },
+    "concept:omen": {
+      "name": "Omen",
+      "page": "concepts/omen",
+      "slug": "omen",
+      "type": "concept"
+    },
+    "concept:opinion": {
+      "name": "Opinion",
+      "page": "concepts/opinion",
+      "slug": "opinion",
+      "type": "concept"
+    },
+    "concept:output": {
+      "name": "Output",
+      "page": "concepts/output",
+      "slug": "output",
+      "type": "concept"
+    },
+    "concept:overlord": {
+      "name": "Overlord",
+      "page": "concepts/overlord",
+      "slug": "overlord",
+      "type": "concept"
+    },
+    "concept:overseas": {
+      "name": "Overseas",
+      "page": "concepts/overseas",
+      "slug": "overseas",
+      "type": "concept"
+    },
+    "concept:owner": {
+      "name": "Owner",
+      "page": "concepts/owner",
+      "slug": "owner",
+      "type": "concept"
+    },
+    "concept:papal_authority": {
+      "name": "Papal Authority",
+      "page": "concepts/papal-authority",
+      "slug": "papal-authority",
+      "type": "concept"
+    },
+    "concept:papal_bull": {
+      "name": "Papal Bull",
+      "page": "concepts/papal-bull",
+      "slug": "papal-bull",
+      "type": "concept"
+    },
+    "concept:parliament": {
+      "name": "Parliament",
+      "page": "concepts/parliament",
+      "slug": "parliament",
+      "type": "concept"
+    },
+    "concept:parliament_agenda": {
+      "name": "Parliament Agenda",
+      "page": "concepts/parliament-agenda",
+      "slug": "parliament-agenda",
+      "type": "concept"
+    },
+    "concept:parliament_base_support": {
+      "name": "Parliament Base Support",
+      "page": "concepts/parliament-base-support",
+      "slug": "parliament-base-support",
+      "type": "concept"
+    },
+    "concept:parliament_issue": {
+      "name": "Parliament Issue",
+      "page": "concepts/parliament-issue",
+      "slug": "parliament-issue",
+      "type": "concept"
+    },
+    "concept:parliament_requests": {
+      "name": "Parliament Requests",
+      "page": "concepts/parliament-requests",
+      "slug": "parliament-requests",
+      "type": "concept"
+    },
+    "concept:parliament_seat": {
+      "name": "Parliament Seat",
+      "page": "concepts/parliament-seat",
+      "slug": "parliament-seat",
+      "type": "concept"
+    },
+    "concept:parliament_support": {
+      "name": "Parliament Support",
+      "page": "concepts/parliament-support",
+      "slug": "parliament-support",
+      "type": "concept"
+    },
+    "concept:parliament_type": {
+      "name": "Parliament Type",
+      "page": "concepts/parliament-type",
+      "slug": "parliament-type",
+      "type": "concept"
+    },
+    "concept:patriarch": {
+      "name": "Patriarch",
+      "page": "concepts/patriarch",
+      "slug": "patriarch",
+      "type": "concept"
+    },
+    "concept:payment": {
+      "name": "Payment",
+      "page": "concepts/payment",
+      "slug": "payment",
+      "type": "concept"
+    },
+    "concept:peace": {
+      "name": "Peace",
+      "page": "concepts/peace",
+      "slug": "peace",
+      "type": "concept"
+    },
+    "concept:peace_cost": {
+      "name": "Peace Offer value",
+      "page": "concepts/peace-cost",
+      "slug": "peace-cost",
+      "type": "concept"
+    },
+    "concept:peace_offer": {
+      "name": "Peace Offer",
+      "page": "concepts/peace-offer",
+      "slug": "peace-offer",
+      "type": "concept"
+    },
+    "concept:peace_treaty": {
+      "name": "Peace Treaty",
+      "page": "concepts/peace-treaty",
+      "slug": "peace-treaty",
+      "type": "concept"
+    },
+    "concept:peasant_enfranchisement": {
+      "name": "Peasant Enfranchisement",
+      "page": "concepts/peasant-enfranchisement",
+      "slug": "peasant-enfranchisement",
+      "type": "concept"
+    },
+    "concept:pentarchy": {
+      "name": "Pentarchy",
+      "page": "concepts/pentarchy",
+      "slug": "pentarchy",
+      "type": "concept"
+    },
+    "concept:people": {
+      "name": "People",
+      "page": "concepts/people",
+      "slug": "people",
+      "type": "concept"
+    },
+    "concept:phase": {
+      "name": "Phase",
+      "page": "concepts/phase",
+      "slug": "phase",
+      "type": "concept"
+    },
+    "concept:pirate": {
+      "name": "Pirate",
+      "page": "concepts/pirate",
+      "slug": "pirate",
+      "type": "concept"
+    },
+    "concept:plantation": {
+      "name": "Plantation",
+      "page": "concepts/plantation",
+      "slug": "plantation",
+      "type": "concept"
+    },
+    "concept:policy": {
+      "name": "Policy",
+      "page": "concepts/policy",
+      "slug": "policy",
+      "type": "concept"
+    },
+    "concept:political_power": {
+      "name": "Political Power",
+      "page": "concepts/political-power",
+      "slug": "political-power",
+      "type": "concept"
+    },
+    "concept:pop": {
+      "name": "Pop",
+      "page": "concepts/pop",
+      "slug": "pop",
+      "type": "concept"
+    },
+    "concept:pop_food_consumption": {
+      "name": "Pop Food Consumption",
+      "page": "concepts/pop-food-consumption",
+      "slug": "pop-food-consumption",
+      "type": "concept"
+    },
+    "concept:pop_needs": {
+      "name": "Pop Needs",
+      "page": "concepts/pop-needs",
+      "slug": "pop-needs",
+      "type": "concept"
+    },
+    "concept:pop_satisfaction": {
+      "name": "Pop Satisfaction",
+      "page": "concepts/pop-satisfaction",
+      "slug": "pop-satisfaction",
+      "type": "concept"
+    },
+    "concept:pop_type": {
+      "name": "Social Class",
+      "page": "concepts/pop-type",
+      "slug": "pop-type",
+      "type": "concept"
+    },
+    "concept:population": {
+      "name": "Population",
+      "page": "concepts/population",
+      "slug": "population",
+      "type": "concept"
+    },
+    "concept:population_capacity": {
+      "name": "Population Capacity",
+      "page": "concepts/population-capacity",
+      "slug": "population-capacity",
+      "type": "concept"
+    },
+    "concept:population_growth": {
+      "name": "Population Growth",
+      "page": "concepts/population-growth",
+      "slug": "population-growth",
+      "type": "concept"
+    },
+    "concept:port": {
+      "name": "Port",
+      "page": "concepts/port",
+      "slug": "port",
+      "type": "concept"
+    },
+    "concept:power_projection": {
+      "name": "Power Projection",
+      "page": "concepts/power-projection",
+      "slug": "power-projection",
+      "type": "concept"
+    },
+    "concept:prestige": {
+      "name": "Prestige",
+      "page": "concepts/prestige",
+      "slug": "prestige",
+      "type": "concept"
+    },
+    "concept:pretender_rebels": {
+      "name": "Pretender Rebels",
+      "page": "concepts/pretender-rebels",
+      "slug": "pretender-rebels",
+      "type": "concept"
+    },
+    "concept:price": {
+      "name": "Price",
+      "page": "concepts/price",
+      "slug": "price",
+      "type": "concept"
+    },
+    "concept:price_impact": {
+      "name": "Price Impact",
+      "page": "concepts/price-impact",
+      "slug": "price-impact",
+      "type": "concept"
+    },
+    "concept:price_stability": {
+      "name": "Price Stability",
+      "page": "concepts/price-stability",
+      "slug": "price-stability",
+      "type": "concept"
+    },
+    "concept:primary_culture": {
+      "name": "Primary Culture",
+      "page": "concepts/primary-culture",
+      "slug": "primary-culture",
+      "type": "concept"
+    },
+    "concept:primary_or_accepted_culture": {
+      "name": "Primary or Accepted Culture",
+      "page": "concepts/primary-or-accepted-culture",
+      "slug": "primary-or-accepted-culture",
+      "type": "concept"
+    },
+    "concept:prisoner": {
+      "name": "Prisoner",
+      "page": "concepts/prisoner",
+      "slug": "prisoner",
+      "type": "concept"
+    },
+    "concept:privateer": {
+      "name": "Privateer",
+      "page": "concepts/privateer",
+      "slug": "privateer",
+      "type": "concept"
+    },
+    "concept:privateer_durability": {
+      "name": "Privateer Durability",
+      "page": "concepts/privateer-durability",
+      "slug": "privateer-durability",
+      "type": "concept"
+    },
+    "concept:privateer_maintenance": {
+      "name": "Privateer Maintenance",
+      "page": "concepts/privateer-maintenance",
+      "slug": "privateer-maintenance",
+      "type": "concept"
+    },
+    "concept:produced_goods": {
+      "name": "Produced Goods",
+      "page": "concepts/produced-goods",
+      "slug": "produced-goods",
+      "type": "concept"
+    },
+    "concept:production_efficiency": {
+      "name": "Production Efficiency",
+      "page": "concepts/production-efficiency",
+      "slug": "production-efficiency",
+      "type": "concept"
+    },
+    "concept:production_method": {
+      "name": "Production Method",
+      "page": "concepts/production-method",
+      "slug": "production-method",
+      "type": "concept"
+    },
+    "concept:profit": {
+      "name": "Profit",
+      "page": "concepts/profit",
+      "slug": "profit",
+      "type": "concept"
+    },
+    "concept:promote": {
+      "name": "Promote",
+      "page": "concepts/promote",
+      "slug": "promote",
+      "type": "concept"
+    },
+    "concept:prosperity": {
+      "name": "Prosperity",
+      "page": "concepts/prosperity",
+      "slug": "prosperity",
+      "type": "concept"
+    },
+    "concept:protectionism": {
+      "name": "Market Protection",
+      "page": "concepts/protectionism",
+      "slug": "protectionism",
+      "type": "concept"
+    },
+    "concept:province": {
+      "name": "Province",
+      "page": "concepts/province",
+      "slug": "province",
+      "type": "concept"
+    },
+    "concept:province_capital": {
+      "name": "Province Capital",
+      "page": "concepts/province-capital",
+      "slug": "province-capital",
+      "type": "concept"
+    },
+    "concept:province_definition": {
+      "name": "Province Definition",
+      "page": "concepts/province-definition",
+      "slug": "province-definition",
+      "type": "concept"
+    },
+    "concept:province_modifier": {
+      "name": "Province Modifier",
+      "page": "concepts/province-modifier",
+      "slug": "province-modifier",
+      "type": "concept"
+    },
+    "concept:provincial_food": {
+      "name": "Provincial Food",
+      "page": "concepts/provincial-food",
+      "slug": "provincial-food",
+      "type": "concept"
+    },
+    "concept:proximity": {
+      "name": "Proximity",
+      "page": "concepts/proximity",
+      "slug": "proximity",
+      "type": "concept"
+    },
+    "concept:purity": {
+      "name": "Purity",
+      "page": "concepts/purity",
+      "slug": "purity",
+      "type": "concept"
+    },
+    "concept:raw_materials": {
+      "name": "Raw Goods",
+      "page": "concepts/raw-materials",
+      "slug": "raw-materials",
+      "type": "concept"
+    },
+    "concept:rebel_movement": {
+      "name": "Rebel Movement",
+      "page": "concepts/rebel-movement",
+      "slug": "rebel-movement",
+      "type": "concept"
+    },
+    "concept:recruit": {
+      "name": "Recruit",
+      "page": "concepts/recruit",
+      "slug": "recruit",
+      "type": "concept"
+    },
+    "concept:recruitment_method": {
+      "name": "Recruitment Method",
+      "page": "concepts/recruitment-method",
+      "slug": "recruitment-method",
+      "type": "concept"
+    },
+    "concept:reform_desire": {
+      "name": "Reform Desire",
+      "page": "concepts/reform-desire",
+      "slug": "reform-desire",
+      "type": "concept"
+    },
+    "concept:reformation": {
+      "name": "Reformation",
+      "page": "concepts/reformation",
+      "slug": "reformation",
+      "type": "concept"
+    },
+    "concept:regency": {
+      "name": "Regency",
+      "page": "concepts/regency",
+      "slug": "regency",
+      "type": "concept"
+    },
+    "concept:regent": {
+      "name": "Regent",
+      "page": "concepts/regent",
+      "slug": "regent",
+      "type": "concept"
+    },
+    "concept:regiment": {
+      "name": "Regiment",
+      "page": "concepts/regiment",
+      "slug": "regiment",
+      "type": "concept"
+    },
+    "concept:region": {
+      "name": "Region",
+      "page": "concepts/region",
+      "slug": "region",
+      "type": "concept"
+    },
+    "concept:regional_power": {
+      "name": "Regional Power",
+      "page": "concepts/regional-power",
+      "slug": "regional-power",
+      "type": "concept"
+    },
+    "concept:regular_army": {
+      "name": "Regular Army",
+      "page": "concepts/regular-army",
+      "slug": "regular-army",
+      "type": "concept"
+    },
+    "concept:regular_regiment": {
+      "name": "Regular Regiment",
+      "page": "concepts/regular-regiment",
+      "slug": "regular-regiment",
+      "type": "concept"
+    },
+    "concept:regular_ship": {
+      "name": "Regular Ship",
+      "page": "concepts/regular-ship",
+      "slug": "regular-ship",
+      "type": "concept"
+    },
+    "concept:reinforce": {
+      "name": "Reinforce",
+      "page": "concepts/reinforce",
+      "slug": "reinforce",
+      "type": "concept"
+    },
+    "concept:relation_type": {
+      "name": "Relation Type",
+      "page": "concepts/relation-type",
+      "slug": "relation-type",
+      "type": "concept"
+    },
+    "concept:religion": {
+      "name": "Religion",
+      "page": "concepts/religion",
+      "slug": "religion",
+      "type": "concept"
+    },
+    "concept:religion_group": {
+      "name": "Religion Group",
+      "page": "concepts/religion-group",
+      "slug": "religion-group",
+      "type": "concept"
+    },
+    "concept:religious_aspect": {
+      "name": "Religious Aspect",
+      "page": "concepts/religious-aspect",
+      "slug": "religious-aspect",
+      "type": "concept"
+    },
+    "concept:religious_faction": {
+      "name": "Religious Faction",
+      "page": "concepts/religious-faction",
+      "slug": "religious-faction",
+      "type": "concept"
+    },
+    "concept:religious_figure": {
+      "name": "Religious Figure",
+      "page": "concepts/religious-figure",
+      "slug": "religious-figure",
+      "type": "concept"
+    },
+    "concept:religious_figure_trait": {
+      "name": "Religious Figure Trait",
+      "page": "concepts/religious-figure-trait",
+      "slug": "religious-figure-trait",
+      "type": "concept"
+    },
+    "concept:religious_focus": {
+      "name": "Religious Focus",
+      "page": "concepts/religious-focus",
+      "slug": "religious-focus",
+      "type": "concept"
+    },
+    "concept:religious_head": {
+      "name": "Religious Head",
+      "page": "concepts/religious-head",
+      "slug": "religious-head",
+      "type": "concept"
+    },
+    "concept:religious_influence": {
+      "name": "Religious Influence",
+      "page": "concepts/religious-influence",
+      "slug": "religious-influence",
+      "type": "concept"
+    },
+    "concept:religious_opinion": {
+      "name": "Religious Opinion",
+      "page": "concepts/religious-opinion",
+      "slug": "religious-opinion",
+      "type": "concept"
+    },
+    "concept:religious_rebels": {
+      "name": "Religious Rebels",
+      "page": "concepts/religious-rebels",
+      "slug": "religious-rebels",
+      "type": "concept"
+    },
+    "concept:religious_reform": {
+      "name": "Religious Reform",
+      "page": "concepts/religious-reform",
+      "slug": "religious-reform",
+      "type": "concept"
+    },
+    "concept:religious_school": {
+      "name": "Religious School",
+      "page": "concepts/religious-school",
+      "slug": "religious-school",
+      "type": "concept"
+    },
+    "concept:religious_status": {
+      "name": "Religious Status",
+      "page": "concepts/religious-status",
+      "slug": "religious-status",
+      "type": "concept"
+    },
+    "concept:religious_unity": {
+      "name": "Religious Unity",
+      "page": "concepts/religious-unity",
+      "slug": "religious-unity",
+      "type": "concept"
+    },
+    "concept:religious_war": {
+      "name": "Religious War",
+      "page": "concepts/religious-war",
+      "slug": "religious-war",
+      "type": "concept"
+    },
+    "concept:repair": {
+      "name": "Repair",
+      "page": "concepts/repair",
+      "slug": "repair",
+      "type": "concept"
+    },
+    "concept:republican_tradition": {
+      "name": "Republican Tradition",
+      "page": "concepts/republican-tradition",
+      "slug": "republican-tradition",
+      "type": "concept"
+    },
+    "concept:research": {
+      "name": "Research",
+      "page": "concepts/research",
+      "slug": "research",
+      "type": "concept"
+    },
+    "concept:research_progress": {
+      "name": "Research Progress",
+      "page": "concepts/research-progress",
+      "slug": "research-progress",
+      "type": "concept"
+    },
+    "concept:reserves": {
+      "name": "Reserves",
+      "page": "concepts/reserves",
+      "slug": "reserves",
+      "type": "concept"
+    },
+    "concept:resolution": {
+      "name": "Resolution",
+      "page": "concepts/resolution",
+      "slug": "resolution",
+      "type": "concept"
+    },
+    "concept:retreat": {
+      "name": "Retreat",
+      "page": "concepts/retreat",
+      "slug": "retreat",
+      "type": "concept"
+    },
+    "concept:revolter": {
+      "name": "Revolter",
+      "page": "concepts/revolter",
+      "slug": "revolter",
+      "type": "concept"
+    },
+    "concept:revolutionary": {
+      "name": "Revolutionary",
+      "page": "concepts/revolutionary",
+      "slug": "revolutionary",
+      "type": "concept"
+    },
+    "concept:revolutionary_target": {
+      "name": "Revolutionary Target",
+      "page": "concepts/revolutionary-target",
+      "slug": "revolutionary-target",
+      "type": "concept"
+    },
+    "concept:rgo": {
+      "name": "R.G.O.",
+      "page": "concepts/rgo",
+      "slug": "rgo",
+      "type": "concept"
+    },
+    "concept:rgo_pops": {
+      "name": "Laborers or Slaves",
+      "page": "concepts/rgo-pops",
+      "slug": "rgo-pops",
+      "type": "concept"
+    },
+    "concept:righteousness": {
+      "name": "Righteousness",
+      "page": "concepts/righteousness",
+      "slug": "righteousness",
+      "type": "concept"
+    },
+    "concept:rival": {
+      "name": "Rival",
+      "page": "concepts/rival",
+      "slug": "rival",
+      "type": "concept"
+    },
+    "concept:rival_enemy": {
+      "name": "Enemy",
+      "page": "concepts/rival-enemy",
+      "slug": "rival-enemy",
+      "type": "concept"
+    },
+    "concept:river": {
+      "name": "River",
+      "page": "concepts/river",
+      "slug": "river",
+      "type": "concept"
+    },
+    "concept:road": {
+      "name": "Road",
+      "page": "concepts/road",
+      "slug": "road",
+      "type": "concept"
+    },
+    "concept:role": {
+      "name": "Role",
+      "page": "concepts/role",
+      "slug": "role",
+      "type": "concept"
+    },
+    "concept:royal_marriage": {
+      "name": "Royal Marriage",
+      "page": "concepts/royal-marriage",
+      "slug": "royal-marriage",
+      "type": "concept"
+    },
+    "concept:ruler": {
+      "name": "Ruler",
+      "page": "concepts/ruler",
+      "slug": "ruler",
+      "type": "concept"
+    },
+    "concept:ruler_trait": {
+      "name": "Ruler Trait",
+      "page": "concepts/ruler-trait",
+      "slug": "ruler-trait",
+      "type": "concept"
+    },
+    "concept:rural_location": {
+      "name": "Rural Location",
+      "page": "concepts/rural-location",
+      "slug": "rural-location",
+      "type": "concept"
+    },
+    "concept:sailors": {
+      "name": "Sailors",
+      "page": "concepts/sailors",
+      "slug": "sailors",
+      "type": "concept"
+    },
+    "concept:score": {
+      "name": "Score",
+      "page": "concepts/score",
+      "slug": "score",
+      "type": "concept"
+    },
+    "concept:sea_current": {
+      "name": "Sea Current",
+      "page": "concepts/sea-current",
+      "slug": "sea-current",
+      "type": "concept"
+    },
+    "concept:seazone": {
+      "name": "Seazone",
+      "page": "concepts/seazone",
+      "slug": "seazone",
+      "type": "concept"
+    },
+    "concept:sect": {
+      "name": "Sect",
+      "page": "concepts/sect",
+      "slug": "sect",
+      "type": "concept"
+    },
+    "concept:section": {
+      "name": "Section",
+      "page": "concepts/section",
+      "slug": "section",
+      "type": "concept"
+    },
+    "concept:secure_flanks": {
+      "name": "Secure Flanks",
+      "page": "concepts/secure-flanks",
+      "slug": "secure-flanks",
+      "type": "concept"
+    },
+    "concept:self_control": {
+      "name": "Self Control",
+      "page": "concepts/self-control",
+      "slug": "self-control",
+      "type": "concept"
+    },
+    "concept:sell_price": {
+      "name": "Sell Price",
+      "page": "concepts/sell-price",
+      "slug": "sell-price",
+      "type": "concept"
+    },
+    "concept:selling_efficiency": {
+      "name": "Selling Efficiency",
+      "page": "concepts/selling-efficiency",
+      "slug": "selling-efficiency",
+      "type": "concept"
+    },
+    "concept:selling_food": {
+      "name": "Selling Food",
+      "page": "concepts/selling-food",
+      "slug": "selling-food",
+      "type": "concept"
+    },
+    "concept:separatism": {
+      "name": "Separatism",
+      "page": "concepts/separatism",
+      "slug": "separatism",
+      "type": "concept"
+    },
+    "concept:settled_country": {
+      "name": "Settled Country",
+      "page": "concepts/settled-country",
+      "slug": "settled-country",
+      "type": "concept"
+    },
+    "concept:share_of_power_gc": {
+      "name": "Share of Power",
+      "page": "concepts/share-of-power-gc",
+      "slug": "share-of-power-gc",
+      "type": "concept"
+    },
+    "concept:ship": {
+      "name": "Ship",
+      "page": "concepts/ship",
+      "slug": "ship",
+      "type": "concept"
+    },
+    "concept:siege": {
+      "name": "Siege",
+      "page": "concepts/siege",
+      "slug": "siege",
+      "type": "concept"
+    },
+    "concept:situation": {
+      "name": "Situation",
+      "page": "concepts/situation",
+      "slug": "situation",
+      "type": "concept"
+    },
+    "concept:situation_action": {
+      "name": "Situation Action",
+      "page": "concepts/situation-action",
+      "slug": "situation-action",
+      "type": "concept"
+    },
+    "concept:situation_tension": {
+      "name": "Tension",
+      "page": "concepts/situation-tension",
+      "slug": "situation-tension",
+      "type": "concept"
+    },
+    "concept:slave_rebels": {
+      "name": "Slave Rebels",
+      "page": "concepts/slave-rebels",
+      "slug": "slave-rebels",
+      "type": "concept"
+    },
+    "concept:societal_value": {
+      "name": "Societal Value",
+      "page": "concepts/societal-value",
+      "slug": "societal-value",
+      "type": "concept"
+    },
+    "concept:society_of_pops": {
+      "name": "Society of Pops",
+      "page": "concepts/society-of-pops",
+      "slug": "society-of-pops",
+      "type": "concept"
+    },
+    "concept:sound_toll": {
+      "name": "Sound Toll",
+      "page": "concepts/sound-toll",
+      "slug": "sound-toll",
+      "type": "concept"
+    },
+    "concept:special_status": {
+      "name": "Special Status",
+      "page": "concepts/special-status",
+      "slug": "special-status",
+      "type": "concept"
+    },
+    "concept:special_status_power": {
+      "name": "Special Status Power",
+      "page": "concepts/special-status-power",
+      "slug": "special-status-power",
+      "type": "concept"
+    },
+    "concept:spy_network": {
+      "name": "Spy Network",
+      "page": "concepts/spy-network",
+      "slug": "spy-network",
+      "type": "concept"
+    },
+    "concept:spy_network_fog": {
+      "name": "Intelligence Fog",
+      "page": "concepts/spy-network-fog",
+      "slug": "spy-network-fog",
+      "type": "concept"
+    },
+    "concept:stability": {
+      "name": "Stability",
+      "page": "concepts/stability",
+      "slug": "stability",
+      "type": "concept"
+    },
+    "concept:stability_investment": {
+      "name": "Stability Investment",
+      "page": "concepts/stability-investment",
+      "slug": "stability-investment",
+      "type": "concept"
+    },
+    "concept:starving": {
+      "name": "Starving",
+      "page": "concepts/starving",
+      "slug": "starving",
+      "type": "concept"
+    },
+    "concept:state_religion": {
+      "name": "Primary Religion",
+      "page": "concepts/state-religion",
+      "slug": "state-religion",
+      "type": "concept"
+    },
+    "concept:stockpile": {
+      "name": "Stockpile",
+      "page": "concepts/stockpile",
+      "slug": "stockpile",
+      "type": "concept"
+    },
+    "concept:stored_research": {
+      "name": "Stored Research Progress",
+      "page": "concepts/stored-research",
+      "slug": "stored-research",
+      "type": "concept"
+    },
+    "concept:strait": {
+      "name": "Strait",
+      "page": "concepts/strait",
+      "slug": "strait",
+      "type": "concept"
+    },
+    "concept:strength": {
+      "name": "Strength",
+      "page": "concepts/strength",
+      "slug": "strength",
+      "type": "concept"
+    },
+    "concept:strength_damage_done": {
+      "name": "Strength Damage Done",
+      "page": "concepts/strength-damage-done",
+      "slug": "strength-damage-done",
+      "type": "concept"
+    },
+    "concept:strength_damage_taken": {
+      "name": "Strength Damage Taken",
+      "page": "concepts/strength-damage-taken",
+      "slug": "strength-damage-taken",
+      "type": "concept"
+    },
+    "concept:sub_continent": {
+      "name": "Subcontinent",
+      "page": "concepts/sub-continent",
+      "slug": "sub-continent",
+      "type": "concept"
+    },
+    "concept:sub_unit": {
+      "name": "Subunit",
+      "page": "concepts/sub-unit",
+      "slug": "sub-unit",
+      "type": "concept"
+    },
+    "concept:subject": {
+      "name": "Subject",
+      "page": "concepts/subject",
+      "slug": "subject",
+      "type": "concept"
+    },
+    "concept:subject_loyalty": {
+      "name": "Subject Loyalty",
+      "page": "concepts/subject-loyalty",
+      "slug": "subject-loyalty",
+      "type": "concept"
+    },
+    "concept:subject_military_stance": {
+      "name": "Military Stance",
+      "page": "concepts/subject-military-stance",
+      "slug": "subject-military-stance",
+      "type": "concept"
+    },
+    "concept:subject_taxation": {
+      "name": "Subject Taxation",
+      "page": "concepts/subject-taxation",
+      "slug": "subject-taxation",
+      "type": "concept"
+    },
+    "concept:subject_territory_connectivity": {
+      "name": "Subject Territory Connectivity",
+      "page": "concepts/subject-territory-connectivity",
+      "slug": "subject-territory-connectivity",
+      "type": "concept"
+    },
+    "concept:subject_type": {
+      "name": "Subject Type",
+      "page": "concepts/subject-type",
+      "slug": "subject-type",
+      "type": "concept"
+    },
+    "concept:subsidization": {
+      "name": "Subsidization",
+      "page": "concepts/subsidization",
+      "slug": "subsidization",
+      "type": "concept"
+    },
+    "concept:subsidy": {
+      "name": "Subsidy",
+      "page": "concepts/subsidy",
+      "slug": "subsidy",
+      "type": "concept"
+    },
+    "concept:subsidy_expense": {
+      "name": "Building Subsidies",
+      "page": "concepts/subsidy-expense",
+      "slug": "subsidy-expense",
+      "type": "concept"
+    },
+    "concept:subsistence_agriculture": {
+      "name": "Subsistence Agriculture",
+      "page": "concepts/subsistence-agriculture",
+      "slug": "subsistence-agriculture",
+      "type": "concept"
+    },
+    "concept:supply": {
+      "name": "Supply",
+      "page": "concepts/supply",
+      "slug": "supply",
+      "type": "concept"
+    },
+    "concept:supply_depot": {
+      "name": "Supply Depot",
+      "page": "concepts/supply-depot",
+      "slug": "supply-depot",
+      "type": "concept"
+    },
+    "concept:supply_limit": {
+      "name": "Supply Limit",
+      "page": "concepts/supply-limit",
+      "slug": "supply-limit",
+      "type": "concept"
+    },
+    "concept:supported_building_levels": {
+      "name": "Supported Building Levels",
+      "page": "concepts/supported-building-levels",
+      "slug": "supported-building-levels",
+      "type": "concept"
+    },
+    "concept:supportrebels": {
+      "name": "Support Rebels",
+      "page": "concepts/supportrebels",
+      "slug": "supportrebels",
+      "type": "concept"
+    },
+    "concept:target_price": {
+      "name": "Target Price",
+      "page": "concepts/target-price",
+      "slug": "target-price",
+      "type": "concept"
+    },
+    "concept:tax": {
+      "name": "Tax",
+      "page": "concepts/tax",
+      "slug": "tax",
+      "type": "concept"
+    },
+    "concept:tax_base": {
+      "name": "Tax Base",
+      "page": "concepts/tax-base",
+      "slug": "tax-base",
+      "type": "concept"
+    },
+    "concept:tax_efficiency": {
+      "name": "Tax Efficiency",
+      "page": "concepts/tax-efficiency",
+      "slug": "tax-efficiency",
+      "type": "concept"
+    },
+    "concept:tax_rate": {
+      "name": "Tax Rate",
+      "page": "concepts/tax-rate",
+      "slug": "tax-rate",
+      "type": "concept"
+    },
+    "concept:taxable_profit": {
+      "name": "Taxable Profit",
+      "page": "concepts/taxable-profit",
+      "slug": "taxable-profit",
+      "type": "concept"
+    },
+    "concept:terra_incognita": {
+      "name": "Terra Incognita",
+      "page": "concepts/terra-incognita",
+      "slug": "terra-incognita",
+      "type": "concept"
+    },
+    "concept:threat": {
+      "name": "Threat",
+      "page": "concepts/threat",
+      "slug": "threat",
+      "type": "concept"
+    },
+    "concept:tier": {
+      "name": "Tier",
+      "page": "concepts/tier",
+      "slug": "tier",
+      "type": "concept"
+    },
+    "concept:tithe": {
+      "name": "Tithe",
+      "page": "concepts/tithe",
+      "slug": "tithe",
+      "type": "concept"
+    },
+    "concept:title_history": {
+      "name": "Title History",
+      "page": "concepts/title-history",
+      "slug": "title-history",
+      "type": "concept"
+    },
+    "concept:tolerance": {
+      "name": "Tolerance",
+      "page": "concepts/tolerance",
+      "slug": "tolerance",
+      "type": "concept"
+    },
+    "concept:tolerated_culture": {
+      "name": "Tolerated Culture",
+      "page": "concepts/tolerated-culture",
+      "slug": "tolerated-culture",
+      "type": "concept"
+    },
+    "concept:topography": {
+      "name": "Topography",
+      "page": "concepts/topography",
+      "slug": "topography",
+      "type": "concept"
+    },
+    "concept:total_ability": {
+      "name": "Total Ability",
+      "page": "concepts/total-ability",
+      "slug": "total-ability",
+      "type": "concept"
+    },
+    "concept:total_population": {
+      "name": "Total Population",
+      "page": "concepts/total-population",
+      "slug": "total-population",
+      "type": "concept"
+    },
+    "concept:total_strength": {
+      "name": "Total Strength",
+      "page": "concepts/total-strength",
+      "slug": "total-strength",
+      "type": "concept"
+    },
+    "concept:town_and_city": {
+      "name": "Urban Location",
+      "page": "concepts/town-and-city",
+      "slug": "town-and-city",
+      "type": "concept"
+    },
+    "concept:town_rights": {
+      "name": "Urban Rights",
+      "page": "concepts/town-rights",
+      "slug": "town-rights",
+      "type": "concept"
+    },
+    "concept:trade": {
+      "name": "Trade",
+      "page": "concepts/trade",
+      "slug": "trade",
+      "type": "concept"
+    },
+    "concept:trade_expense": {
+      "name": "Trade Expense",
+      "page": "concepts/trade-expense",
+      "slug": "trade-expense",
+      "type": "concept"
+    },
+    "concept:trade_income": {
+      "name": "Trade Income",
+      "page": "concepts/trade-income",
+      "slug": "trade-income",
+      "type": "concept"
+    },
+    "concept:trade_orders": {
+      "name": "Trade Orders",
+      "page": "concepts/trade-orders",
+      "slug": "trade-orders",
+      "type": "concept"
+    },
+    "concept:trade_profit": {
+      "name": "Trade Profit",
+      "page": "concepts/trade-profit",
+      "slug": "trade-profit",
+      "type": "concept"
+    },
+    "concept:trade_range": {
+      "name": "Trade Range",
+      "page": "concepts/trade-range",
+      "slug": "trade-range",
+      "type": "concept"
+    },
+    "concept:trading_market": {
+      "name": "Trading Market",
+      "page": "concepts/trading-market",
+      "slug": "trading-market",
+      "type": "concept"
+    },
+    "concept:trait": {
+      "name": "Trait",
+      "page": "concepts/trait",
+      "slug": "trait",
+      "type": "concept"
+    },
+    "concept:transport_capacity": {
+      "name": "Transport Capacity",
+      "page": "concepts/transport-capacity",
+      "slug": "transport-capacity",
+      "type": "concept"
+    },
+    "concept:treasury": {
+      "name": "Treasury",
+      "page": "concepts/treasury",
+      "slug": "treasury",
+      "type": "concept"
+    },
+    "concept:treaty": {
+      "name": "Treaty",
+      "page": "concepts/treaty",
+      "slug": "treaty",
+      "type": "concept"
+    },
+    "concept:tribal_cohesion": {
+      "name": "Tribal Cohesion",
+      "page": "concepts/tribal-cohesion",
+      "slug": "tribal-cohesion",
+      "type": "concept"
+    },
+    "concept:trigger": {
+      "name": "Trigger",
+      "page": "concepts/trigger",
+      "slug": "trigger",
+      "type": "concept"
+    },
+    "concept:truce": {
+      "name": "Truce",
+      "page": "concepts/truce",
+      "slug": "truce",
+      "type": "concept"
+    },
+    "concept:true_faith_tolerance": {
+      "name": "Primary Religion Tolerance",
+      "page": "concepts/true-faith-tolerance",
+      "slug": "true-faith-tolerance",
+      "type": "concept"
+    },
+    "concept:trust": {
+      "name": "Trust",
+      "page": "concepts/trust",
+      "slug": "trust",
+      "type": "concept"
+    },
+    "concept:trust_equilibrium": {
+      "name": "Trust Equilibrium",
+      "page": "concepts/trust-equilibrium",
+      "slug": "trust-equilibrium",
+      "type": "concept"
+    },
+    "concept:unconditional_surrender": {
+      "name": "Unconditional Surrender",
+      "page": "concepts/unconditional-surrender",
+      "slug": "unconditional-surrender",
+      "type": "concept"
+    },
+    "concept:unemploy": {
+      "name": "Available Population",
+      "page": "concepts/unemploy",
+      "slug": "unemploy",
+      "type": "concept"
+    },
+    "concept:union": {
+      "name": "Union",
+      "page": "concepts/union",
+      "slug": "union",
+      "type": "concept"
+    },
+    "concept:union_integration_level": {
+      "name": "Union Integration Level",
+      "page": "concepts/union-integration-level",
+      "slug": "union-integration-level",
+      "type": "concept"
+    },
+    "concept:unit": {
+      "name": "Unit",
+      "page": "concepts/unit",
+      "slug": "unit",
+      "type": "concept"
+    },
+    "concept:unit_ability": {
+      "name": "Unit Ability",
+      "page": "concepts/unit-ability",
+      "slug": "unit-ability",
+      "type": "concept"
+    },
+    "concept:unit_category": {
+      "name": "Unit Category",
+      "page": "concepts/unit-category",
+      "slug": "unit-category",
+      "type": "concept"
+    },
+    "concept:unit_formation_preference": {
+      "name": "Unit Formation Preference",
+      "page": "concepts/unit-formation-preference",
+      "slug": "unit-formation-preference",
+      "type": "concept"
+    },
+    "concept:unit_modifier": {
+      "name": "Unit Modifier",
+      "page": "concepts/unit-modifier",
+      "slug": "unit-modifier",
+      "type": "concept"
+    },
+    "concept:unit_template": {
+      "name": "Unit Template",
+      "page": "concepts/unit-template",
+      "slug": "unit-template",
+      "type": "concept"
+    },
+    "concept:unit_type": {
+      "name": "Unit Type",
+      "page": "concepts/unit-type",
+      "slug": "unit-type",
+      "type": "concept"
+    },
+    "concept:unit_weight": {
+      "name": "Unit Weight",
+      "page": "concepts/unit-weight",
+      "slug": "unit-weight",
+      "type": "concept"
+    },
+    "concept:unrest": {
+      "name": "Unrest",
+      "page": "concepts/unrest",
+      "slug": "unrest",
+      "type": "concept"
+    },
+    "concept:upper_class": {
+      "name": "Upper Class",
+      "page": "concepts/upper-class",
+      "slug": "upper-class",
+      "type": "concept"
+    },
+    "concept:vegetation": {
+      "name": "Vegetation",
+      "page": "concepts/vegetation",
+      "slug": "vegetation",
+      "type": "concept"
+    },
+    "concept:victory_card": {
+      "name": "Victory Card",
+      "page": "concepts/victory-card",
+      "slug": "victory-card",
+      "type": "concept"
+    },
+    "concept:war": {
+      "name": "War",
+      "page": "concepts/war",
+      "slug": "war",
+      "type": "concept"
+    },
+    "concept:war_ally": {
+      "name": "War Allies",
+      "page": "concepts/war-ally",
+      "slug": "war-ally",
+      "type": "concept"
+    },
+    "concept:war_attacker": {
+      "name": "Attacker",
+      "page": "concepts/war-attacker",
+      "slug": "war-attacker",
+      "type": "concept"
+    },
+    "concept:war_defender": {
+      "name": "Defender",
+      "page": "concepts/war-defender",
+      "slug": "war-defender",
+      "type": "concept"
+    },
+    "concept:war_enthusiasm": {
+      "name": "War Enthusiasm",
+      "page": "concepts/war-enthusiasm",
+      "slug": "war-enthusiasm",
+      "type": "concept"
+    },
+    "concept:war_exhaustion": {
+      "name": "War Exhaustion",
+      "page": "concepts/war-exhaustion",
+      "slug": "war-exhaustion",
+      "type": "concept"
+    },
+    "concept:war_goal": {
+      "name": "Wargoal",
+      "page": "concepts/war-goal",
+      "slug": "war-goal",
+      "type": "concept"
+    },
+    "concept:war_leader": {
+      "name": "War Leader",
+      "page": "concepts/war-leader",
+      "slug": "war-leader",
+      "type": "concept"
+    },
+    "concept:war_participation": {
+      "name": "War Participation",
+      "page": "concepts/war-participation",
+      "slug": "war-participation",
+      "type": "concept"
+    },
+    "concept:war_reparations": {
+      "name": "War Reparations",
+      "page": "concepts/war-reparations",
+      "slug": "war-reparations",
+      "type": "concept"
+    },
+    "concept:war_score": {
+      "name": "Warscore",
+      "page": "concepts/war-score",
+      "slug": "war-score",
+      "type": "concept"
+    },
+    "concept:wealth": {
+      "name": "Wealth",
+      "page": "concepts/wealth",
+      "slug": "wealth",
+      "type": "concept"
+    },
+    "concept:wealth_impact": {
+      "name": "Wealth Impact",
+      "page": "concepts/wealth-impact",
+      "slug": "wealth-impact",
+      "type": "concept"
+    },
+    "concept:wealth_share": {
+      "name": "Wealth Share",
+      "page": "concepts/wealth-share",
+      "slug": "wealth-share",
+      "type": "concept"
+    },
+    "concept:weather_system": {
+      "name": "Weather System",
+      "page": "concepts/weather-system",
+      "slug": "weather-system",
+      "type": "concept"
+    },
+    "concept:white_peace": {
+      "name": "White Peace",
+      "page": "concepts/white-peace",
+      "slug": "white-peace",
+      "type": "concept"
+    },
+    "concept:winter": {
+      "name": "Winter",
+      "page": "concepts/winter",
+      "slug": "winter",
+      "type": "concept"
+    },
+    "concept:winter_level": {
+      "name": "Winter Level",
+      "page": "concepts/winter-level",
+      "slug": "winter-level",
+      "type": "concept"
+    },
+    "concept:work_of_art": {
+      "name": "Work of Art",
+      "page": "concepts/work-of-art",
+      "slug": "work-of-art",
+      "type": "concept"
+    },
+    "concept:yanantin": {
+      "name": "Yanantin",
+      "page": "concepts/yanantin",
+      "slug": "yanantin",
+      "type": "concept"
+    },
+    "concept:zone_of_control": {
+      "name": "Zone of Control",
+      "page": "concepts/zone-of-control",
+      "slug": "zone-of-control",
+      "type": "concept"
+    },
+    "good:alum": {
+      "color": "#7b322d",
+      "name": "Alum",
+      "page": "goods/alum",
+      "slug": "alum",
+      "type": "good"
+    },
+    "good:amber": {
+      "color": "#ffbf00",
+      "name": "Amber",
+      "page": "goods/amber",
+      "slug": "amber",
+      "type": "good"
+    },
+    "good:beer": {
+      "color": "#400c0b",
+      "name": "Beer",
+      "page": "goods/beer",
+      "slug": "beer",
+      "type": "good"
+    },
+    "good:beeswax": {
+      "color": "#cc2525",
+      "name": "Beeswax",
+      "page": "goods/beeswax",
+      "slug": "beeswax",
+      "type": "good"
+    },
+    "good:books": {
+      "color": "#a1201f",
+      "name": "Books",
+      "page": "goods/books",
+      "slug": "books",
+      "type": "good"
+    },
+    "good:cannons": {
+      "color": "#ff9a99",
+      "name": "Cannon",
+      "page": "goods/cannons",
+      "slug": "cannons",
+      "type": "good"
+    },
+    "good:chili": {
+      "color": "#bf1919",
+      "name": "Chili",
+      "page": "goods/chili",
+      "slug": "chili",
+      "type": "good"
+    },
+    "good:clay": {
+      "color": "#be4646",
+      "name": "Clay",
+      "page": "goods/clay",
+      "slug": "clay",
+      "type": "good"
+    },
+    "good:cloth": {
+      "color": "#db3030",
+      "name": "Cloth",
+      "page": "goods/cloth",
+      "slug": "cloth",
+      "type": "good"
+    },
+    "good:cloves": {
+      "color": "#bf1a19",
+      "name": "Cloves",
+      "page": "goods/cloves",
+      "slug": "cloves",
+      "type": "good"
+    },
+    "good:coal": {
+      "color": "#1f1f1f",
+      "name": "Coal",
+      "page": "goods/coal",
+      "slug": "coal",
+      "type": "good"
+    },
+    "good:cocoa": {
+      "color": "#733617",
+      "name": "Cocoa",
+      "page": "goods/cocoa",
+      "slug": "cocoa",
+      "type": "good"
+    },
+    "good:coffee": {
+      "color": "#382617",
+      "name": "Coffee",
+      "page": "goods/coffee",
+      "slug": "coffee",
+      "type": "good"
+    },
+    "good:copper": {
+      "color": "#d95757",
+      "name": "Copper",
+      "page": "goods/copper",
+      "slug": "copper",
+      "type": "good"
+    },
+    "good:cotton": {
+      "color": "#85ad99",
+      "name": "Cotton",
+      "page": "goods/cotton",
+      "slug": "cotton",
+      "type": "good"
+    },
+    "good:dyes": {
+      "color": "#a12b80",
+      "name": "Dyes",
+      "page": "goods/dyes",
+      "slug": "dyes",
+      "type": "good"
+    },
+    "good:elephants": {
+      "color": "#d26a2f",
+      "name": "Elephants",
+      "page": "goods/elephants",
+      "slug": "elephants",
+      "type": "good"
+    },
+    "good:fiber_crops": {
+      "color": "#4d100f",
+      "name": "Fiber Crops",
+      "page": "goods/fiber-crops",
+      "slug": "fiber-crops",
+      "type": "good"
+    },
+    "good:fine_cloth": {
+      "color": "#b7a99b",
+      "name": "Fine Cloth",
+      "page": "goods/fine-cloth",
+      "slug": "fine-cloth",
+      "type": "good"
+    },
+    "good:firearms": {
+      "color": "#ffb4b3",
+      "name": "Firearms",
+      "page": "goods/firearms",
+      "slug": "firearms",
+      "type": "good"
+    },
+    "good:fish": {
+      "color": "#783231",
+      "name": "Fish",
+      "page": "goods/fish",
+      "slug": "fish",
+      "type": "good"
+    },
+    "good:fruit": {
+      "color": "#f23f3f",
+      "name": "Fruit",
+      "page": "goods/fruit",
+      "slug": "fruit",
+      "type": "good"
+    },
+    "good:fur": {
+      "color": "#8a664f",
+      "name": "Fur",
+      "page": "goods/fur",
+      "slug": "fur",
+      "type": "good"
+    },
+    "good:furniture": {
+      "color": "#82c0c0",
+      "name": "Furniture",
+      "page": "goods/furniture",
+      "slug": "furniture",
+      "type": "good"
+    },
+    "good:gems": {
+      "color": "#ba0100",
+      "name": "Gems",
+      "page": "goods/gems",
+      "slug": "gems",
+      "type": "good"
+    },
+    "good:glass": {
+      "color": "#009973",
+      "name": "Glass",
+      "page": "goods/glass",
+      "slug": "glass",
+      "type": "good"
+    },
+    "good:goods_gold": {
+      "color": "#ffd630",
+      "name": "Gold",
+      "page": "goods/goods-gold",
+      "slug": "goods-gold",
+      "type": "good"
+    },
+    "good:horses": {
+      "color": "#9f8170",
+      "name": "Horses",
+      "page": "goods/horses",
+      "slug": "horses",
+      "type": "good"
+    },
+    "good:incense": {
+      "color": "#e3c978",
+      "name": "Incense",
+      "page": "goods/incense",
+      "slug": "incense",
+      "type": "good"
+    },
+    "good:iron": {
+      "color": "#333333",
+      "name": "Iron",
+      "page": "goods/iron",
+      "slug": "iron",
+      "type": "good"
+    },
+    "good:ivory": {
+      "color": "#bfb3a1",
+      "name": "Ivory",
+      "page": "goods/ivory",
+      "slug": "ivory",
+      "type": "good"
+    },
+    "good:jewelry": {
+      "color": "#ff0d0d",
+      "name": "Jewelry",
+      "page": "goods/jewelry",
+      "slug": "jewelry",
+      "type": "good"
+    },
+    "good:lacquerware": {
+      "color": "#980018",
+      "name": "Lacquerware",
+      "page": "goods/lacquerware",
+      "slug": "lacquerware",
+      "type": "good"
+    },
+    "good:lead": {
+      "color": "#e6302e",
+      "name": "Lead",
+      "page": "goods/lead",
+      "slug": "lead",
+      "type": "good"
+    },
+    "good:leather": {
+      "color": "#261919",
+      "name": "Leather",
+      "page": "goods/leather",
+      "slug": "leather",
+      "type": "good"
+    },
+    "good:legumes": {
+      "color": "#962e2d",
+      "name": "Legumes",
+      "page": "goods/legumes",
+      "slug": "legumes",
+      "type": "good"
+    },
+    "good:liquor": {
+      "color": "#330b0a",
+      "name": "Liquor",
+      "page": "goods/liquor",
+      "slug": "liquor",
+      "type": "good"
+    },
+    "good:livestock": {
+      "color": "#940b0a",
+      "name": "Livestock",
+      "page": "goods/livestock",
+      "slug": "livestock",
+      "type": "good"
+    },
+    "good:lumber": {
+      "color": "#737817",
+      "name": "Lumber",
+      "page": "goods/lumber",
+      "slug": "lumber",
+      "type": "good"
+    },
+    "good:maize": {
+      "color": "#cc1514",
+      "name": "Maize",
+      "page": "goods/maize",
+      "slug": "maize",
+      "type": "good"
+    },
+    "good:marble": {
+      "color": "#f7e6f7",
+      "name": "Marble",
+      "page": "goods/marble",
+      "slug": "marble",
+      "type": "good"
+    },
+    "good:masonry": {
+      "color": "#401313",
+      "name": "Masonry",
+      "page": "goods/masonry",
+      "slug": "masonry",
+      "type": "good"
+    },
+    "good:medicaments": {
+      "color": "#ff7f7f",
+      "name": "Medicaments",
+      "page": "goods/medicaments",
+      "slug": "medicaments",
+      "type": "good"
+    },
+    "good:mercury": {
+      "color": "#e03b50",
+      "name": "Mercury",
+      "page": "goods/mercury",
+      "slug": "mercury",
+      "type": "good"
+    },
+    "good:millet": {
+      "color": "#662929",
+      "name": "Sturdy Grains",
+      "page": "goods/millet",
+      "slug": "millet",
+      "type": "good"
+    },
+    "good:naval_supplies": {
+      "color": "#1c2b66",
+      "name": "Naval Supplies",
+      "page": "goods/naval-supplies",
+      "slug": "naval-supplies",
+      "type": "good"
+    },
+    "good:olives": {
+      "color": "#486600",
+      "name": "Olives",
+      "page": "goods/olives",
+      "slug": "olives",
+      "type": "good"
+    },
+    "good:paper": {
+      "color": "#e6dbb5",
+      "name": "Paper",
+      "page": "goods/paper",
+      "slug": "paper",
+      "type": "good"
+    },
+    "good:pearls": {
+      "color": "#eae0c8",
+      "name": "Pearls",
+      "page": "goods/pearls",
+      "slug": "pearls",
+      "type": "good"
+    },
+    "good:pepper": {
+      "color": "#adc0c0",
+      "name": "Pepper",
+      "page": "goods/pepper",
+      "slug": "pepper",
+      "type": "good"
+    },
+    "good:porcelain": {
+      "color": "#2e91cc",
+      "name": "Porcelain",
+      "page": "goods/porcelain",
+      "slug": "porcelain",
+      "type": "good"
+    },
+    "good:potato": {
+      "color": "#ffae6a",
+      "name": "Potatoes",
+      "page": "goods/potato",
+      "slug": "potato",
+      "type": "good"
+    },
+    "good:pottery": {
+      "color": "#a0c0c0",
+      "name": "Pottery",
+      "page": "goods/pottery",
+      "slug": "pottery",
+      "type": "good"
+    },
+    "good:rice": {
+      "color": "#804e4e",
+      "name": "Rice",
+      "page": "goods/rice",
+      "slug": "rice",
+      "type": "good"
+    },
+    "good:saffron": {
+      "color": "#bf1b1b",
+      "name": "Saffron",
+      "page": "goods/saffron",
+      "slug": "saffron",
+      "type": "good"
+    },
+    "good:salt": {
+      "color": "#ffffff",
+      "name": "Salt",
+      "page": "goods/salt",
+      "slug": "salt",
+      "type": "good"
+    },
+    "good:saltpeter": {
+      "color": "#964b00",
+      "name": "Saltpeter",
+      "page": "goods/saltpeter",
+      "slug": "saltpeter",
+      "type": "good"
+    },
+    "good:sand": {
+      "color": "#f2f26f",
+      "name": "Sand",
+      "page": "goods/sand",
+      "slug": "sand",
+      "type": "good"
+    },
+    "good:silk": {
+      "color": "#b81a1a",
+      "name": "Silk",
+      "page": "goods/silk",
+      "slug": "silk",
+      "type": "good"
+    },
+    "good:silver": {
+      "color": "#c0c0c0",
+      "name": "Silver",
+      "page": "goods/silver",
+      "slug": "silver",
+      "type": "good"
+    },
+    "good:slaves_goods": {
+      "color": "#000000",
+      "name": "Slaves",
+      "page": "goods/slaves-goods",
+      "slug": "slaves-goods",
+      "type": "good"
+    },
+    "good:steel": {
+      "color": "#332424",
+      "name": "Steel",
+      "page": "goods/steel",
+      "slug": "steel",
+      "type": "good"
+    },
+    "good:stone": {
+      "color": "#4d3d3d",
+      "name": "Stone",
+      "page": "goods/stone",
+      "slug": "stone",
+      "type": "good"
+    },
+    "good:sugar": {
+      "color": "#bdf2ad",
+      "name": "Sugar",
+      "page": "goods/sugar",
+      "slug": "sugar",
+      "type": "good"
+    },
+    "good:tar": {
+      "color": "#292929",
+      "name": "Tar",
+      "page": "goods/tar",
+      "slug": "tar",
+      "type": "good"
+    },
+    "good:tea": {
+      "color": "#125417",
+      "name": "Tea",
+      "page": "goods/tea",
+      "slug": "tea",
+      "type": "good"
+    },
+    "good:tin": {
+      "color": "#4d4d4d",
+      "name": "Tin",
+      "page": "goods/tin",
+      "slug": "tin",
+      "type": "good"
+    },
+    "good:tobacco": {
+      "color": "#548f61",
+      "name": "Tobacco",
+      "page": "goods/tobacco",
+      "slug": "tobacco",
+      "type": "good"
+    },
+    "good:tools": {
+      "color": "#140e0e",
+      "name": "Tools",
+      "page": "goods/tools",
+      "slug": "tools",
+      "type": "good"
+    },
+    "good:weaponry": {
+      "color": "#caccce",
+      "name": "Weaponry",
+      "page": "goods/weaponry",
+      "slug": "weaponry",
+      "type": "good"
+    },
+    "good:wheat": {
+      "color": "#d41413",
+      "name": "Wheat",
+      "page": "goods/wheat",
+      "slug": "wheat",
+      "type": "good"
+    },
+    "good:wild_game": {
+      "color": "#de5d5d",
+      "name": "Wild Game",
+      "page": "goods/wild-game",
+      "slug": "wild-game",
+      "type": "good"
+    },
+    "good:wine": {
+      "color": "#5c2147",
+      "name": "Wine",
+      "page": "goods/wine",
+      "slug": "wine",
+      "type": "good"
+    },
+    "good:wool": {
+      "color": "#998a8a",
+      "name": "Wool",
+      "page": "goods/wool",
+      "slug": "wool",
+      "type": "good"
+    }
+  }
+}

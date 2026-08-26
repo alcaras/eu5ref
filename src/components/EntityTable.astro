@@ -1,0 +1,98 @@
+---
+// Schema-driven entity table — the workhorse for every list page. Pages
+// declare columns instead of hand-building <table> markup:
+//
+//   kind 'name'  → entity name linked to its detail page, with color swatch
+//   kind 'text'  → entity.data[key] as plain text
+//   kind 'num'   → entity.data[key] right-aligned mono
+//   kind 'chips' → entity.data[key] (string[] or facet value) as chip row
+//   kind 'facet' → entity.facets[key] prettified as a chip
+//   kind 'mods'  → entity.mods (or entity.data[key]) via <Mods>
+//   kind 'rich'  → entity.desc (or entity.data[key]) via <Rich>
+//   kind 'pairs' → entity.data[key] = [{...label-ish, value}] as k/v list
+//
+// Rows emit data-search plus data-f-<facet> attributes so FilterBar works
+// with zero page-specific wiring.
+import Mods from './Mods.astro';
+import Rich from './Rich.astro';
+import { richToPlain } from '../lib/entities';
+
+export interface Column {
+  key: string;
+  label: string;
+  kind: 'name' | 'text' | 'num' | 'chips' | 'facet' | 'mods' | 'rich' | 'pairs';
+}
+interface Props {
+  entities: any[];
+  columns: Column[];
+  pagePrefix: string; // route prefix for kind 'name' links, e.g. 'goods'
+}
+const { entities, columns, pagePrefix } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const pretty = (v: string) => String(v).replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+function searchText(e: any): string {
+  const parts = [e.name];
+  for (const v of Object.values(e.facets || {})) parts.push(String(v));
+  for (const m of e.mods || []) parts.push(m.label);
+  return parts.join(' ').toLowerCase();
+}
+function facetAttrs(e: any): Record<string, string> {
+  const attrs: Record<string, string> = {};
+  for (const [k, v] of Object.entries(e.facets || {})) {
+    if (v != null) attrs[`data-f-${k}`] = String(v);
+  }
+  return attrs;
+}
+const cellValue = (e: any, c: Column) =>
+  c.kind === 'mods' ? (e.data?.[c.key] ?? e.mods)
+  : c.kind === 'rich' ? (e.data?.[c.key] ?? e.desc)
+  : c.kind === 'facet' ? e.facets?.[c.key]
+  : e.data?.[c.key];
+---
+<div class="etbl-scroll">
+  <table class="etbl">
+    <thead>
+      <tr>{columns.map((c) => <th>{c.label}</th>)}</tr>
+    </thead>
+    <tbody>
+      {entities.map((e) => (
+        <tr data-row data-search={searchText(e)} {...facetAttrs(e)}>
+          {columns.map((c) => {
+            const v = cellValue(e, c);
+            const empty = v == null || (Array.isArray(v) && v.length === 0) || v === '';
+            return (
+              <td class={c.kind === 'num' ? 'num' : undefined}>
+                {c.kind === 'name' ? (
+                  <a class="ename" href={`${base}${pagePrefix}/${e.slug}`}>
+                    {e.color && <span class="swatch" style={`background:${e.color}`} />}
+                    {e.name}
+                  </a>
+                ) : empty ? (
+                  <span class="is-empty">—</span>
+                ) : c.kind === 'mods' ? (
+                  <Mods mods={v} />
+                ) : c.kind === 'rich' ? (
+                  <Rich tokens={v} />
+                ) : c.kind === 'pairs' ? (
+                  <ul class="pairs">
+                    {v.map((p: any) => (
+                      <li><span class="k">{p.pop ?? p.label ?? p.k}</span> <span class="v">{p.value}</span></li>
+                    ))}
+                  </ul>
+                ) : c.kind === 'chips' || c.kind === 'facet' ? (
+                  <span class="chips">
+                    {(Array.isArray(v) ? v : [v]).map((x: any) => <span class="chip">{pretty(x)}</span>)}
+                  </span>
+                ) : (
+                  String(v)
+                )}
+              </td>
+            );
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

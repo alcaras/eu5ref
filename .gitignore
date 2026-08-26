@@ -1,0 +1,23 @@
+# Game data dump (synced from the EU5 install; not ours to redistribute wholesale)
+/game/
+/binaries/
+/clausewitz/
+/jomini/
+
+# Vendored third-party tools (cloned separately; see CLAUDE.md)
+/tools/
+
+# Local toolchain
+/.venv/
+/.toolbin/
+/.cache/
+/.eu5_documents/
+
+# Node / Astro
+node_modules/
+dist/
+.astro/
+
+# OS noise
+.DS_Store
+__pycache__/

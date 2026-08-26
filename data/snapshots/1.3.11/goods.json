@@ -1,0 +1,3004 @@
+{
+  "dataset": "goods",
+  "entities": [
+    {
+      "color": "#7b322d",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Alum is an essential ingredient in dye-making as well as specializing in the tanning process. Seeing use in a variety of artistic and craft contexts, it is primarily utilized in painting and illuminating processes. Originating mostly from the Chad region, it was traded in the markets of the entire Islamic world, but in the Late Middle Ages, other sources started to be exploited in Europe."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:alum",
+      "mods": [],
+      "name": "Alum",
+      "slug": "alum",
+      "type": "good"
+    },
+    {
+      "color": "#ffbf00",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.005
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Amber is a valuable good made from fossilized resin that was primarily used in the manufacture of jewelry and ornaments. Its main source has been depots on the Prussian coast, mentioned for the first time in a 12th-century document."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:amber",
+      "mods": [],
+      "name": "Amber",
+      "slug": "amber",
+      "type": "good"
+    },
+    {
+      "color": "#400c0b",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.024
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.024
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.024
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0072
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0048
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0024
+          }
+        ],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Beer has been a pillar of gastronomy since it was first brewed in the Neolithic. It became a widespread drink in the Middle Ages, and was the object of the oldest food-quality regulation still in use, the Bavarian 'Reinheitsgebot'."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:beer",
+      "mods": [],
+      "name": "Beer",
+      "slug": "beer",
+      "type": "good"
+    },
+    {
+      "color": "#cc2525",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.0016
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0016
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0016
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0008
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0008
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0008
+          }
+        ],
+        "food": true,
+        "price": 2,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Bees have been friends of humanity since prehistoric times, and their wax has been used for many purposes. From candles to molds, from polish finisher to tablets for writing, the presence of beeswax in human society is ubiquitous."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:beeswax",
+      "mods": [],
+      "name": "Beeswax",
+      "slug": "beeswax",
+      "type": "good"
+    },
+    {
+      "color": "#a1201f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Clerics",
+            "value": 0.06
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.03
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.015
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Books have been one of the main custodians of human knowledge since writing was invented thousands of years ago. They were usually made of leather parchment, paper, and other plant fibers. The invention and spread of movable type printing systems in the Middle Ages made books much more widespread and accessible to the population."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:books",
+      "mods": [],
+      "name": "Books",
+      "slug": "books",
+      "type": "good"
+    },
+    {
+      "color": "#ff9a99",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "Although siege weapons have existed since antiquity, the discovery of gunpowder has given rise to some weapons with a potentially destructive power that has never been seen before. The ability to throw bigger projectiles at greater speed and distances than ever before will make all but the sturdiest of fortifications quickly fall before them, without mentioning the effect those projectiles can have when fired towards armies themselves."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:cannons",
+      "mods": [],
+      "name": "Cannon",
+      "slug": "cannons",
+      "type": "good"
+    },
+    {
+      "color": "#bf1919",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [
+          "new_world_goods"
+        ],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Some varieties of plants originating from Central and South America, it is famous for its pungency and ability to spice any dish and make it hot. Cultivated since ancient times in the Americas, its many varieties with a wide range of flavors and heat levels make it a very sought-after spice."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:chili",
+      "mods": [],
+      "name": "Chili",
+      "slug": "chili",
+      "type": "good"
+    },
+    {
+      "color": "#be4646",
+      "data": {
+        "base_production": 0.02,
+        "demand": [],
+        "food": false,
+        "price": 0.5,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Clay is a type of soil that has been used by humanity for the production of pottery and ceramics since prehistoric times. Another main use is in construction, in combination with other materials, or in the creation of bricks. Clay tablets were also one of the first writing methods invented, so its impact in the development of civilization is undeniable."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:clay",
+      "mods": [],
+      "name": "Clay",
+      "slug": "clay",
+      "type": "good"
+    },
+    {
+      "color": "#db3030",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Clerics",
+            "value": 0.09
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.045
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0045
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0034
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0022
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0011
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Cloth represents the various fabrics and clothing made from wool and linen. Later cotton, imported from India and the Americas, became a major material for cloth."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:cloth",
+      "mods": [],
+      "name": "Cloth",
+      "slug": "cloth",
+      "type": "good"
+    },
+    {
+      "color": "#bf1a19",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Cloves are the aromatic flower buds of a tree found in the Moluccas. They became one of the most valued and expensive spices in the Eurasian trade networks, prompting Europeans to find new sources of supply for this and other spices in the Late Middle Ages."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:cloves",
+      "mods": [],
+      "name": "Cloves",
+      "slug": "cloves",
+      "type": "good"
+    },
+    {
+      "color": "#1f1f1f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.0025
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0025
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0001
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0001
+          }
+        ],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Coal has a long history as a source of fuel, but it is not until the invention and dissemination of the practical steam engine that demand would take off. As the Industrial Revolution swept across Europe, the use and export or import of coal would become a major business and an integral part of a modern economy."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:coal",
+      "mods": [],
+      "name": "Coal",
+      "slug": "coal",
+      "type": "good"
+    },
+    {
+      "color": "#733617",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.01
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.01
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [
+          "new_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Cocoa was used as a stimulant by the Aztec, Incan, and Indian rulers since the early medieval times. It was popularized in Europe in the early 16th century when the Spaniards imported it from its American colonies. Cocoa became a luxury enjoyed by the rich."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:cocoa",
+      "mods": [],
+      "name": "Cocoa",
+      "slug": "cocoa",
+      "type": "good"
+    },
+    {
+      "color": "#382617",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.01
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.001
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0005
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Coffee was discovered in the northeast region of Ethiopia and coffee cultivation first took place in southern Arabia. From the Middle East, coffee spread to Italy in the 17th century and was then introduced to the rest of Europe. Coffee became more widely accepted after it was deemed a Christian beverage by Pope Clement VIII in 1600, despite appeals to ban the 'Muslim drink'."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:coffee",
+      "mods": [],
+      "name": "Coffee",
+      "slug": "coffee",
+      "type": "good"
+    },
+    {
+      "color": "#d95757",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Copper has been one of the most important materials since the invention and diffusion of metallurgy thousands of years ago. Its use is very varied, as it can be worked alone, but also in alloys, such as bronze. This makes it especially important for weaponry, being essential in the early production of cannons."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:copper",
+      "mods": [],
+      "name": "Copper",
+      "slug": "copper",
+      "type": "good"
+    },
+    {
+      "color": "#85ad99",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Cotton originated from Central Asia but was not widely used in Europe until it was introduced to the American colonies and used as a cheap but good complement or substitute for wool in the clothing industry of the late 18th century"
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:cotton",
+      "mods": [],
+      "name": "Cotton",
+      "slug": "cotton",
+      "type": "good"
+    },
+    {
+      "color": "#a12b80",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "For as long as textiles have been woven there has been a market for fine dyes. During the late Middle Ages expensive dyes such as indigo would be worth a fortune due to how distant the source in India was.<br />As the world opened up dyes became easier to get hold of, both through the possibilities to produce them in America and the greater accessibility of the Indian market. Nonetheless, dyes remained rare and in the early 19th century; as the dye plantations in India fell into European hands, a veritable gold rush ensued."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:dyes",
+      "mods": [],
+      "name": "Dyes",
+      "slug": "dyes",
+      "type": "good"
+    },
+    {
+      "color": "#d26a2f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [],
+        "transport_cost": 5
+      },
+      "desc": [
+        [
+          "t",
+          "Elephants have been used in warfare since ancient times in India, South East Asia, the Middle East, and North Africa. The use of elephantry persisted in some of these regions into the Middle Ages, although the advent of gunpowder warfare in the Modern Age outpaced its usefulness in battle."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:elephants",
+      "mods": [],
+      "name": "Elephants",
+      "slug": "elephants",
+      "type": "good"
+    },
+    {
+      "color": "#4d100f",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Many different fibrous crops are used all around the world to craft a multitude of products such as sails, ropes, fishing nets, and clothes. Beyond their use to produce coarse textiles, however, many are also used as a core part of the production of finer textiles, used in ceremonies, households, and elsewhere. Some examples are hemp, flax, jute, and sisal."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:fiber_crops",
+      "mods": [],
+      "name": "Fiber Crops",
+      "slug": "fiber-crops",
+      "type": "good"
+    },
+    {
+      "color": "#b7a99b",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.25
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.04
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.03
+          }
+        ],
+        "food": false,
+        "price": 6,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Fine clothing was traditionally a marker of status for the elites and wealthy classes. Textiles such as damasks, muslins, or brocades were marketed and replicated throughout the world as a very profitable business in the Middle and Modern Ages."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:fine_cloth",
+      "mods": [],
+      "name": "Fine Cloth",
+      "slug": "fine-cloth",
+      "type": "good"
+    },
+    {
+      "color": "#ffb4b3",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.2
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.001
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1.0
+      },
+      "desc": [
+        [
+          "t",
+          "The conception and arrival of guns changed the dynamic of battlefields. Wars waged across Asia and Europe will now be subject to cultivating, importing and harnessing the potency of gunpowder. Guns have become a natural evolution of warfare and an essential part of protecting the sovereignty of domains across the earth."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:firearms",
+      "mods": [],
+      "name": "Firearms",
+      "slug": "firearms",
+      "type": "good"
+    },
+    {
+      "color": "#783231",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Laborers",
+            "value": 0.003
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.003
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.003
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.001
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.001
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.001
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Fish was one of the most basic foods for the European population in this age, as meat was more than a luxury for the great majority. Fishermen also provided the basic recruiting pool of the merchant and military navies of most nations."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:fish",
+      "mods": [],
+      "name": "Fish",
+      "slug": "fish",
+      "type": "good"
+    },
+    {
+      "color": "#f23f3f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.004
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.004
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.004
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.002
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.002
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.002
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.002
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Fruits cover a wide range of products found on trees such as citrus, bitter and sweet oranges, apples and more. For many, these products would be unattainable and a source of nutrition only for the elites. Nearly every region across the world is home to a different kind of fruit and the advent of global trade would go on to introduce different populations to various new fruits."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:fruit",
+      "mods": [],
+      "name": "Fruit",
+      "slug": "fruit",
+      "type": "good"
+    },
+    {
+      "color": "#8a664f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.5
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.05
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.05
+          }
+        ],
+        "food": true,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Furs were one of the basic elements of high quality and warm clothing. Skins from all kinds of animals were supplied initially from Russia but more and more from North America where beavers would be the prize of choice at least till the late middle 18th century."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "hunting"
+      },
+      "id": "good:fur",
+      "mods": [],
+      "name": "Fur",
+      "slug": "fur",
+      "type": "good"
+    },
+    {
+      "color": "#82c0c0",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.018
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.009
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.009
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0009
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0009
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0009
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Furniture supplies the need of people to have more than just a roof over their heads. From the most simple beds and tables to more elaborated ones, from plain wood or even stone to more expensive materials, furniture will serve any purpose and fit any taste and budget."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:furniture",
+      "mods": [],
+      "name": "Furniture",
+      "slug": "furniture",
+      "type": "good"
+    },
+    {
+      "color": "#ba0100",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Since the earliest times, stones such as rubies, sapphires, diamonds, emeralds, or jade, have been used in jewelry and ceremonial attire. For centuries the only source of diamonds in the world were the fabled mines at Golconda. While not all precious stones are as rare, they are all highly sought-after commodities."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:gems",
+      "mods": [],
+      "name": "Gems",
+      "slug": "gems",
+      "type": "good"
+    },
+    {
+      "color": "#009973",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.025
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.01
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Glass has been valued for centuries as a useful material for art, architecture, or simply the crafting of vessels for daily use. Eventually, as glassmaking techniques improved, glass would also become crucial to the scientific field of optics, with glass lenses being used in the fabrication of spectacles, telescopes, and a plethora of other devices with wide-ranging applications from maritime navigation to the natural sciences."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:glass",
+      "mods": [],
+      "name": "Glass",
+      "slug": "glass",
+      "type": "good"
+    },
+    {
+      "color": "#ffd630",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.025
+          }
+        ],
+        "food": false,
+        "price": 8,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Gold has traditionally been the most valued metal, widely used for trade and the accumulation of wealth in the form of coins or various types of prestige objects. Its use as the main currency in bimetallic or trimetallic systems leads to a very high demand, making it an object of desire during the exploration of new territories."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:goods_gold",
+      "mods": [],
+      "name": "Gold",
+      "slug": "goods-gold",
+      "type": "good"
+    },
+    {
+      "color": "#9f8170",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.25
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Horses were domesticated at an unknown point of the Eurasian Steppe around six thousand years ago. Since then, they have been used by people for a wide variety of tasks, although the most important has been waging war. In that sense, the Middle Ages were the Golden Age of cavalry, as it was closely linked to the development of feudal societies."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:horses",
+      "mods": [],
+      "name": "Horses",
+      "slug": "horses",
+      "type": "good"
+    },
+    {
+      "color": "#e3c978",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Clerics",
+            "value": 0.01
+          }
+        ],
+        "food": false,
+        "price": 2.5,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "To spread smoke and fragrance through the burning of materials has been common in ceremonial practices for centuries. Frankincense, agarwood, sandalwood, myrrh, and other goods suited for this use can be found in few places and their diffusion was an integral part in the formation of trade networks such as the Silk Road or the fittingly named Incense Route."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:incense",
+      "mods": [],
+      "name": "Incense",
+      "slug": "incense",
+      "type": "good"
+    },
+    {
+      "color": "#333333",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Iron represents not just iron, but other ferrous metals. Iron formed the basis of the metallurgical industry and was used extensively in the production of weapons and other military equipment."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:iron",
+      "mods": [],
+      "name": "Iron",
+      "slug": "iron",
+      "type": "good"
+    },
+    {
+      "color": "#bfb3a1",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Ivory was one of the main exports of Africa apart from slaves. It was highly sought after by Europeans for use in various manufactured goods such as cutlery, gifts, small pieces of art, furniture, etc."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "hunting"
+      },
+      "id": "good:ivory",
+      "mods": [],
+      "name": "Ivory",
+      "slug": "ivory",
+      "type": "good"
+    },
+    {
+      "color": "#ff0d0d",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.005
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Jewelry represents a set of regalia or ornaments that are crafted by skilled smiths using jewels and precious stones. Their value is often associated with high social standing and even royalty."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:jewelry",
+      "mods": [],
+      "name": "Jewelry",
+      "slug": "jewelry",
+      "type": "good"
+    },
+    {
+      "color": "#980018",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.02
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Lacquerware was developed in China and Japan as far back as the Neolithic period, more than ten thousand years ago, and consists in covering products made of wood or metal with a decorative layer of lacquer, a product extracted from resin and wax. This lacquer layer can then be further decorated with paintings, carvings or dustings of gold or silver making it into a luxurious good."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:lacquerware",
+      "mods": [],
+      "name": "Lacquerware",
+      "slug": "lacquerware",
+      "type": "good"
+    },
+    {
+      "color": "#e6302e",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Lead has been obtained since ancient times as a by-product of silver extraction by burning galena. Lead was then used in a wide range of household and manufactured products, especially by the Romans, whose levels of lead production were not reached until the Industrial Revolution. In the Modern Age, it became the main material for making bullets for firearms."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:lead",
+      "mods": [],
+      "name": "Lead",
+      "slug": "lead",
+      "type": "good"
+    },
+    {
+      "color": "#261919",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.025
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.005
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0025
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0003
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "One of humanity's earliest discoveries, leather is largely used in the manufacturing of clothes, footwear, and decoration. Its success is largely attributed to its high level of comfort and durability, eventually becoming the choice material for the making of dinner-related furniture, due to leather being easy to maintain while being resistant to absorbing food odor."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:leather",
+      "mods": [],
+      "name": "Leather",
+      "slug": "leather",
+      "type": "good"
+    },
+    {
+      "color": "#962e2d",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.002
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.002
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.002
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.001
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.001
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Various civilizations across history have utilized legumes as a substantial source of nutrition for thousands of years. Much like maize, Europeans were introduced to new types of them with their eventual arrival on the shores of the New World. Legumes were not only filling but also cheap to produce and move on ships."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:legumes",
+      "mods": [],
+      "name": "Legumes",
+      "slug": "legumes",
+      "type": "good"
+    },
+    {
+      "color": "#330b0a",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.0072
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0036
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0036
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0007
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0007
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0007
+          }
+        ],
+        "food": false,
+        "price": 2.5,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Liquor is an alcoholic beverage produced by distillation of very different types of products of plant origin. Distillation is done to increase the alcohol by volume. Popular liquors distilled and consumed around the world were gin, rum, whisky, vodka, tequila, or shōchū."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:liquor",
+      "mods": [],
+      "name": "Liquor",
+      "slug": "liquor",
+      "type": "good"
+    },
+    {
+      "color": "#940b0a",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.03
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.01
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.01
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.004
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.002
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.001
+          }
+        ],
+        "food": true,
+        "price": 1.5,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Since the dawn of history, the care for domesticated animals has been one of the main occupations of humanity. Livestock includes everything from cows and pigs in rich agricultural areas to the herds of pastoralists in the great plains and deserts of the world."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:livestock",
+      "mods": [],
+      "name": "Livestock",
+      "slug": "livestock",
+      "type": "good"
+    },
+    {
+      "color": "#737817",
+      "data": {
+        "base_production": 0.01,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.0013
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0013
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0013
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0003
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0003
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0003
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0003
+          }
+        ],
+        "food": false,
+        "price": 1.5,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Lumber has been one of the main building materials for humanity throughout all its history. Although less durable than stone, it is more easily accessible, which has made it a staple of any building in all places of the world. Even structures designed to be resistant like castles and fortifications have also their versions made out of wood rather than stone."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "forestry"
+      },
+      "id": "good:lumber",
+      "mods": [],
+      "name": "Lumber",
+      "slug": "lumber",
+      "type": "good"
+    },
+    {
+      "color": "#cc1514",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.016
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.016
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.016
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.008
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.008
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.008
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.008
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "new_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "A cultivated plant that was originally domesticated in Mexico, thousands of years ago, maize was traded between the new and the old world with the arrival of the Europeans in the 15th century. Due to its enduring nature as well as its higher dietary value, maize is destined to become a worldwide commodity."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:maize",
+      "mods": [],
+      "name": "Maize",
+      "slug": "maize",
+      "type": "good"
+    },
+    {
+      "color": "#f7e6f7",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [],
+        "transport_cost": 3
+      },
+      "desc": [
+        [
+          "t",
+          "Marble has been used in sculptures and constructions since Antiquity, being considered a type of luxurious material due to its appearance and ductility. Some of the best works of art made by Renaissance and Baroque artists, such as Michelangelo or Bernini, are made of marble."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:marble",
+      "mods": [],
+      "name": "Marble",
+      "slug": "marble",
+      "type": "good"
+    },
+    {
+      "color": "#401313",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Laborers",
+            "value": 0.0003
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0002
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.0
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0
+          }
+        ],
+        "food": false,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Construction techniques come in all shapes and sizes. The ability to fabricate smaller pieces with a regular size and shape to use in construction greatly increases not only the efficiency in which buildings can be constructed but also their durability once built."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:masonry",
+      "mods": [],
+      "name": "Masonry",
+      "slug": "masonry",
+      "type": "good"
+    },
+    {
+      "color": "#ff7f7f",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.002
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.001
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0006
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0004
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0
+          }
+        ],
+        "food": false,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "A wide variety of plants and animal products have been used throughout history to treat all kinds of illnesses, due to their medicinal properties or supposition thereof. Some were more based on actual properties than others, while in some cases it was more a matter of belief in their effectiveness."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:medicaments",
+      "mods": [],
+      "name": "Medicaments",
+      "slug": "medicaments",
+      "type": "good"
+    },
+    {
+      "color": "#e03b50",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.0001
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0001
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0001
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0001
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0001
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Mercury is used for medicine, but will also be of great importance to refine gold and silver ores of lesser qualities in order to make them profitable."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:mercury",
+      "mods": [],
+      "name": "Mercury",
+      "slug": "mercury",
+      "type": "good"
+    },
+    {
+      "color": "#662929",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.004
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.004
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.004
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.002
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.002
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.002
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.002
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Sturdy Grains are different kinds of cereal grasses that have been domesticated in many parts of the World at different points in time ever since the Neolithic. Their greater resistance to poor quality soils and dry conditions have made them into a more important food source in semi-arid regions compared to other kinds of grain."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:millet",
+      "mods": [],
+      "name": "Sturdy Grains",
+      "slug": "millet",
+      "type": "good"
+    },
+    {
+      "color": "#1c2b66",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Naval Supplies represent everything needed in ship construction, from basic wood to tar, ropes, linen, sails, and various other materials. The Baltic was initially the main supplier until North America became an alternate source of supply in the early 18th century. Colonial expansion into America was in part to secure supplies of such vital goods."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:naval_supplies",
+      "mods": [],
+      "name": "Naval Supplies",
+      "slug": "naval-supplies",
+      "type": "good"
+    },
+    {
+      "color": "#486600",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.002
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.002
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.002
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.001
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.001
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Olives are harvested from the trees of the same name, which have been cultivated around the Mediterranean Sea for thousands of years. They are highly appreciated in gastronomy, especially the olive oil that is used to cook and dress a wide range of foods in Mediterranean cuisine."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:olives",
+      "mods": [],
+      "name": "Olives",
+      "slug": "olives",
+      "type": "good"
+    },
+    {
+      "color": "#e6dbb5",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Clerics",
+            "value": 0.067
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.034
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.017
+          }
+        ],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Paper is a necessity for all types of advanced accounting, administration, and diffusion of knowledge. The process of its production was originally devised in China and then slowly made its way to all corners of the Old World. Far superior to other types of writing materials such as parchment the large scale production of paper requires a specialized set of skills and equipment, making it a rare and sought after commodity."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:paper",
+      "mods": [],
+      "name": "Paper",
+      "slug": "paper",
+      "type": "good"
+    },
+    {
+      "color": "#eae0c8",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Pearls are produced inside different kinds of shelled mollusks. The resulting product is a hard glistening object, ideally round but can take many shapes. They have been appreciated for their beauty and used like gemstones as ornaments all over the world through all human history."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:pearls",
+      "mods": [],
+      "name": "Pearls",
+      "slug": "pearls",
+      "type": "good"
+    },
+    {
+      "color": "#adc0c0",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Although there are many types of plants that have been known as pepper, they all have the same properties of pungent taste that makes pepper ideal to be used as seasoning and also as part of traditional medicines."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:pepper",
+      "mods": [],
+      "name": "Pepper",
+      "slug": "pepper",
+      "type": "good"
+    },
+    {
+      "color": "#2e91cc",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.018
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.012
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.009
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Porcelain is a type of ceramics characterized by its strength and translucence due to the vitrification of the materials caused by high temperatures. It was developed in China over a period of time starting more than three thousand years ago, with proper porcelain being developed already almost two thousand years ago, and from there, it eventually spread to all over the world as a highly sought-after commodity."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:porcelain",
+      "mods": [],
+      "name": "Porcelain",
+      "slug": "porcelain",
+      "type": "good"
+    },
+    {
+      "color": "#ffae6a",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.002
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.002
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.002
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.001
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.001
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.001
+          },
+          {
+            "pop": "Tribesmen",
+            "value": 0.001
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.001
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "new_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "The potato is a starchy tuber domesticated around Lake Titicaca by the native people of the Andes. It helped the rise of the Andean civilizations thanks to its hardiness and high caloric density. After the Columbian exchange, it spread all around the globe and by 1750 it was a staple food in Europe facilitating its 19th-century population boom."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:potato",
+      "mods": [],
+      "name": "Potatoes",
+      "slug": "potato",
+      "type": "good"
+    },
+    {
+      "color": "#a0c0c0",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Burghers",
+            "value": 0.003
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0023
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.0015
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0015
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0015
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0015
+          }
+        ],
+        "food": false,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "One of the oldest signs of human society, the ability to turn clay into various objects it is one of the key factors in the development of humanity. From the crude earthenware vases of prehistoric times, to the more complex forms, pottery is omnipresent in any culture."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:pottery",
+      "mods": [],
+      "name": "Pottery",
+      "slug": "pottery",
+      "type": "good"
+    },
+    {
+      "color": "#804e4e",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.001
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.001
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.001
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0005
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0005
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0005
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0005
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Rice is a type of grain that has been the staple food for Asia since its domestication more than ten thousand years ago. It was also independently domesticated in Africa more than three thousand years ago, and it has also been an important food source there ever since. It was brought to Europe through trade with Asia as far back as Classical Antiquity, although it did not manage to supersede other types of grain there."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:rice",
+      "mods": [],
+      "name": "Rice",
+      "slug": "rice",
+      "type": "good"
+    },
+    {
+      "color": "#bf1b1b",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.002
+          }
+        ],
+        "food": false,
+        "price": 5,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "Known since ancient times, saffron has been used not only for its culinary applications, but also as a source of traditional medicines and as coloring dye for clothes, despite its high cost."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:saffron",
+      "mods": [],
+      "name": "Saffron",
+      "slug": "saffron",
+      "type": "good"
+    },
+    {
+      "color": "#ffffff",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.02
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.02
+          }
+        ],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Salt is essential for human life. In addition, it was the most common means to preserve food for the long winter months. It was either mineral, brought from mines in Central Europe, or natural, from salt wetlands production via evaporation along sunny coastlines."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:salt",
+      "mods": [],
+      "name": "Salt",
+      "slug": "salt",
+      "type": "good"
+    },
+    {
+      "color": "#964b00",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Saltpeter has been known since antiquity, and its uses have been varied such as a fertilizer or as salt for meat processing. However, it was the invention of gunpowder and firearms during the Middle Ages that really raised its importance, as it is one of the main components of it, together with charcoal and sulfur. Mined in great quantities around the world, this metal will go on to acquire an infamous reputation."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:saltpeter",
+      "mods": [],
+      "name": "Saltpeter",
+      "slug": "saltpeter",
+      "type": "good"
+    },
+    {
+      "color": "#f2f26f",
+      "data": {
+        "base_production": 0.01,
+        "demand": [],
+        "food": false,
+        "price": 0.5,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Sand is one of the most common materials on Earth, and its uses are multiple and varied. It has been the most pervasive abrading material used to shape any kind of stone or metal due to it being coarse and rough, as a component of many building materials and as the main material for the production of glass, among many other uses."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "gathering"
+      },
+      "id": "good:sand",
+      "mods": [],
+      "name": "Sand",
+      "slug": "sand",
+      "type": "good"
+    },
+    {
+      "color": "#b81a1a",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 4,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "The finest of all fabrics of the east was the silk produced in India, China, and East Asia. While less iconic than spices, the profits from silk and finely woven cotton cloth would in fact soon dwarf those of the spice trade for the European East India Companies.<br />Due to increasing demand attempts were also made to produce the material locally in mercantilist Europe, with very varied degrees of success."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:silk",
+      "mods": [],
+      "name": "Silk",
+      "slug": "silk",
+      "type": "good"
+    },
+    {
+      "color": "#c0c0c0",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.025
+          }
+        ],
+        "food": false,
+        "price": 6,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Silver was one of the first metals used as money and the most successful along with gold. Central Europe became the center of silver production during the Middle Ages, although the Columbian Exchange shifted the focus of world production to the Americas, making it the main production center of a newborn global network since the 16th century."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:silver",
+      "mods": [],
+      "name": "Silver",
+      "slug": "silver",
+      "type": "good"
+    },
+    {
+      "color": "#000000",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Slaves had been a trading commodity since Antiquity, but demand increased sharply in the late 16th century when Slaves offered one of the cheapest sources of labor for European plantations in the Americas. Unlike other ["
+        ],
+        [
+          "r",
+          "concept:goods",
+          "Goods"
+        ],
+        [
+          "t",
+          "], trading Slaves physically moves {{icon|slaves}} Slaves between ["
+        ],
+        [
+          "r",
+          "concept:market",
+          "Markets"
+        ],
+        [
+          "t",
+          "] to fill vacant slave jobs."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:slaves_goods",
+      "mods": [],
+      "name": "Slaves",
+      "slug": "slaves-goods",
+      "type": "good"
+    },
+    {
+      "color": "#332424",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 5,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Steel is widely used for the crafting of weaponry and guns. Various of its qualities are used for different weapons, blunt steel for axes and high-quality steel for swords and knives. As such, steel is also employed as the main metal for the forging of equipment and tools."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:steel",
+      "mods": [],
+      "name": "Steel",
+      "slug": "steel",
+      "type": "good"
+    },
+    {
+      "color": "#4d3d3d",
+      "data": {
+        "base_production": 0.012,
+        "demand": [],
+        "food": false,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 2
+      },
+      "desc": [
+        [
+          "t",
+          "Stone has been one of the main building materials of humanity throughout all its history. Stronger and more durable than other options like clay or wood, it was the go-to material for any construction built to last. Buildings from long ago like the Pyramids have reached our times still standing due to the durability of the stone they were made of."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:stone",
+      "mods": [],
+      "name": "Stone",
+      "slug": "stone",
+      "type": "good"
+    },
+    {
+      "color": "#bdf2ad",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.005
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Sugar was used not only as a sweetener but also for food preservation. The sugar cane was the only known means of obtaining sugar at this time and had been grown initially in some Mediterranean islands. But the labor-intensive plantation system in America, especially in the Caribbean islands, would soon move the major production sources overseas."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:sugar",
+      "mods": [],
+      "name": "Sugar",
+      "slug": "sugar",
+      "type": "good"
+    },
+    {
+      "color": "#292929",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Originally propped up as a cash crop, tar is a valuable ingredient of the ship-building business. Its appearance, that of a thick black liquid, is due to the aggressive distillation process that is required for its production. Tar is widely used as a seal for ship hulls and as a cheap way to waterproof sails."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:tar",
+      "mods": [],
+      "name": "Tar",
+      "slug": "tar",
+      "type": "good"
+    },
+    {
+      "color": "#125417",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.2
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.01
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.01
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Tea was an important luxury drink in China, India, and South-East Asia. It was often used in religious or social rituals. The English popularized tea in Europe. Never considered as noble a drink as coffee, it still produced large profit merely from the fact that the world supply was low."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:tea",
+      "mods": [],
+      "name": "Tea",
+      "slug": "tea",
+      "type": "good"
+    },
+    {
+      "color": "#4d4d4d",
+      "data": {
+        "base_production": null,
+        "demand": [],
+        "food": false,
+        "price": 2,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Tin was used extensively for the first time in metallurgy as part of the alloy to obtain bronze 5000 years ago. Later it has been widely used to coat other metals and alloys, such as iron, lead or steel, to prevent corrosion, as well as to make pewter, very common in tableware."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "mining"
+      },
+      "id": "good:tin",
+      "mods": [],
+      "name": "Tin",
+      "slug": "tin",
+      "type": "good"
+    },
+    {
+      "color": "#548f61",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.05
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.005
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.005
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [
+          "new_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Tobacco was unknown in Europe until brought from Americans in the late 16th century. It quickly became a fashion for the upper classes who could afford it and ensured the fast and profitable economic growth of the British colonies in North America, as well as in Portuguese Brazil. No one knew what they put in it, but they just couldn't stop smoking it."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:tobacco",
+      "mods": [],
+      "name": "Tobacco",
+      "slug": "tobacco",
+      "type": "good"
+    },
+    {
+      "color": "#140e0e",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Laborers",
+            "value": 0.001
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 0.5
+      },
+      "desc": [
+        [
+          "t",
+          "The production of tools is the main factor that allowed human society to flourish. From the more simple and primitive stone tools to the most advanced and precise implements developed through the use of metallurgy, they allow the further creation of equipment and weapons."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:tools",
+      "mods": [],
+      "name": "Tools",
+      "slug": "tools",
+      "type": "good"
+    },
+    {
+      "color": "#caccce",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.1
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0025
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0005
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0005
+          }
+        ],
+        "food": false,
+        "price": 3,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Various weapons such as swords, pikes, and bows make up the core weaponry of every army. The techniques behind their creation are an art refined throughout the ages. Despite that and regardless of how different the era may be, weaponry will always be a vital instrument to protect one's independence."
+        ]
+      ],
+      "facets": {
+        "category": "produced",
+        "method": null
+      },
+      "id": "good:weaponry",
+      "mods": [],
+      "name": "Weaponry",
+      "slug": "weaponry",
+      "type": "good"
+    },
+    {
+      "color": "#d41413",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Peasants",
+            "value": 0.003
+          },
+          {
+            "pop": "Nobles",
+            "value": 0.0025
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.0025
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.0025
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0025
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0025
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Wheat represents the vegetable foodstuff that was the staple diet for humans and animals. Lack of it would always lead to revolts and riots. Other cereals and vegetable foodstuffs would later be augmented by tomatoes, corn, and even potatoes from America offering a wider choice both in food and agricultural production varieties."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:wheat",
+      "mods": [],
+      "name": "Wheat",
+      "slug": "wheat",
+      "type": "good"
+    },
+    {
+      "color": "#de5d5d",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.008
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.002
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.002
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0004
+          },
+          {
+            "pop": "Slaves",
+            "value": 0.0004
+          }
+        ],
+        "food": true,
+        "price": 1,
+        "tags": [],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Wild game is the source of food and nutrition for local populations, especially in sparsely populated rural communities. The hunt of wild animals such as elk, deer, boars and more, are an important cornerstone of a society due to the fact that the aforementioned animals contribute leather, bones, entrails and nutrition to the populace."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "hunting"
+      },
+      "id": "good:wild_game",
+      "mods": [],
+      "name": "Wild Game",
+      "slug": "wild-game",
+      "type": "good"
+    },
+    {
+      "color": "#5c2147",
+      "data": {
+        "base_production": null,
+        "demand": [
+          {
+            "pop": "Nobles",
+            "value": 0.006
+          },
+          {
+            "pop": "Clerics",
+            "value": 0.004
+          },
+          {
+            "pop": "Burghers",
+            "value": 0.004
+          },
+          {
+            "pop": "Laborers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Soldiers",
+            "value": 0.0004
+          },
+          {
+            "pop": "Peasants",
+            "value": 0.0004
+          }
+        ],
+        "food": false,
+        "price": 2,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Wines have been produced since time immemorial in the southern parts of Europe. It still constituted an essential element of the everyday diet, except maybe in the Muslim world. Wine was not considered a luxury product but probably served as a welcome relief for hundreds to an otherwise dull diet."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:wine",
+      "mods": [],
+      "name": "Wine",
+      "slug": "wine",
+      "type": "good"
+    },
+    {
+      "color": "#998a8a",
+      "data": {
+        "base_production": 0.0005,
+        "demand": [],
+        "food": false,
+        "price": 2.5,
+        "tags": [
+          "old_world_goods"
+        ],
+        "transport_cost": 1
+      },
+      "desc": [
+        [
+          "t",
+          "Wool came mostly from sheep that grazed in the more marginal lands not suited to other forms of agriculture. Prior to the use of cotton, it was the major raw material for clothing."
+        ]
+      ],
+      "facets": {
+        "category": "raw_material",
+        "method": "farming"
+      },
+      "id": "good:wool",
+      "mods": [],
+      "name": "Wool",
+      "slug": "wool",
+      "type": "good"
+    }
+  ],
+  "facets": [
+    {
+      "key": "category",
+      "label": "Category",
+      "options": [
+        {
+          "count": 22,
+          "label": "Produced",
+          "value": "produced"
+        },
+        {
+          "count": 52,
+          "label": "Raw Material",
+          "value": "raw_material"
+        }
+      ]
+    },
+    {
+      "key": "method",
+      "label": "Method",
+      "options": [
+        {
+          "count": 28,
+          "label": "Farming",
+          "value": "farming"
+        },
+        {
+          "count": 1,
+          "label": "Forestry",
+          "value": "forestry"
+        },
+        {
+          "count": 7,
+          "label": "Gathering",
+          "value": "gathering"
+        },
+        {
+          "count": 3,
+          "label": "Hunting",
+          "value": "hunting"
+        },
+        {
+          "count": 13,
+          "label": "Mining",
+          "value": "mining"
+        }
+      ]
+    }
+  ],
+  "source": "in_game/common/goods"
+}

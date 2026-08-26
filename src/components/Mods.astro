@@ -1,0 +1,26 @@
+---
+// The single way modifiers render anywhere on the site: formatted value
+// (colored by polarity) + game-phrased label. Values were formatted in the
+// data layer; this component never interprets numbers.
+export interface Mod {
+  key: string;
+  label: string;
+  value: string;
+  polarity: 'good' | 'bad' | 'neutral';
+  unresolved?: boolean;
+}
+interface Props {
+  mods: Mod[] | null | undefined;
+}
+const { mods } = Astro.props;
+---
+{mods && mods.length > 0 && (
+  <ul class="mods">
+    {mods.map((m) => (
+      <li title={m.unresolved ? `unresolved modifier key: ${m.key}` : m.key}>
+        <span class={`mod-val ${m.polarity}`}>{m.value}</span>{' '}
+        <span class="mod-label">{m.label}</span>
+      </li>
+    ))}
+  </ul>
+)}

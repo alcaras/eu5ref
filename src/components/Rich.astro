@@ -1,0 +1,19 @@
+---
+// Renders a rich-text token stream from the data layer:
+//   ["t", text]           plain text (newlines preserved via .rich CSS)
+//   ["r", entityId, label] linked entity reference
+import Term from './Term.astro';
+import type { RichToken } from '../lib/entities';
+
+interface Props {
+  tokens: RichToken[] | null | undefined;
+}
+const { tokens } = Astro.props;
+---
+{tokens && (
+  <span class="rich">
+    {tokens.map((t) =>
+      t[0] === 'r' ? <Term id={t[1]} label={t[2]} /> : <Fragment>{t[1]}</Fragment>
+    )}
+  </span>
+)}
