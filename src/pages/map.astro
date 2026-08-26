@@ -7,7 +7,8 @@ import Base from '../layouts/Base.astro';
     The 1337 map, repainted from the game's own location image — every one of
     its 28,573 locations. Switch modes to see what a region grows, who lives
     there, or what it believes. Drag to pan, scroll to zoom, hover for the
-    location, click to open its area.
+    location, click to open its area. The URL follows what you are looking at,
+    so a link can point at every iron deposit in the world.
   </p>
 
   <div class="mp" data-mp>
@@ -16,6 +17,7 @@ import Base from '../layouts/Base.astro';
       <input type="search" data-mp-q autocomplete="off" placeholder="Highlight one value…" />
       <div class="mp-suggest" data-mp-suggest hidden></div>
       <span class="chips" data-mp-active></span>
+      <button type="button" class="csv-btn" data-mp-copy>⧉ Copy link</button>
     </div>
     <div class="mp-stage" data-mp-stage>
       <div class="mp-canvas" data-mp-canvas>
@@ -148,12 +150,41 @@ import Base from '../layouts/Base.astro';
     function apply() {
       canvas.style.transform = `translate(${ox}px, ${oy}px) scale(${zoom})`;
     }
+
+    // ── shareable URL ──────────────────────────────────────────
+    // mode + highlighted value + where you are looking, so a link can say
+    // "every iron deposit in the world" or "…zoomed on the Baltic".
+    let fitZoom = 1;
+    let urlTimer: any = null;
+    function syncUrl() {
+      if (!L) return;
+      const p = new URLSearchParams();
+      p.set('m', mode);
+      if (filter) p.set('f', filter);
+      if (Math.abs(zoom - fitZoom) > 0.01) {
+        p.set('z', zoom.toFixed(3));
+        p.set('cx', Math.round((stage.clientWidth / 2 - ox) / zoom).toString());
+        p.set('cy', Math.round((stage.clientHeight / 2 - oy) / zoom).toString());
+      }
+      history.replaceState(null, '', '?' + p.toString());
+    }
+    const syncUrlSoon = () => {
+      clearTimeout(urlTimer);
+      urlTimer = setTimeout(syncUrl, 250);      // panning shouldn't spam it
+    };
+    function centreOn(cx: number, cy: number, z: number) {
+      zoom = z;
+      ox = stage.clientWidth / 2 - cx * zoom;
+      oy = stage.clientHeight / 2 - cy * zoom;
+      apply();
+    }
     function fit() {
       if (!L) return;
-      zoom = Math.max(stage.clientWidth / L.width, stage.clientHeight / L.height);
+      zoom = fitZoom = Math.max(stage.clientWidth / L.width, stage.clientHeight / L.height);
       ox = (stage.clientWidth - L.width * zoom) / 2;
       oy = (stage.clientHeight - L.height * zoom) / 2;
       apply();
+      syncUrlSoon();
     }
 
     function setMode(m: string) {
@@ -163,6 +194,7 @@ import Base from '../layouts/Base.astro';
         b.classList.toggle('on', (b as HTMLElement).dataset.mode === m);
       renderLegend();
       setFilter(null);                 // a value from the old mode means nothing here
+      syncUrl();
       qInput.placeholder = `Highlight one ${L.modes[m].label.toLowerCase()}…`;
     }
 
@@ -247,6 +279,7 @@ import Base from '../layouts/Base.astro';
         ? `<span class="chip mp-clear" data-clear>${esc(v)} ✕</span>` : '';
       paintHighlight();
       renderList();
+      syncUrl();
     }
 
     function renderSuggest() {
@@ -284,8 +317,16 @@ import Base from '../layouts/Base.astro';
       const bimg = $('[data-mp-borders]') as HTMLImageElement;
       bimg.width = L.width; bimg.height = L.height;
       bimg.src = `${baseUrl}map/borders.png`;
-      setMode(mode);
+
+      const q = new URLSearchParams(location.search);
+      const wanted = q.get('m');
+      setMode(wanted && wanted in L.modes ? wanted : mode);
       fit();
+      const z = parseFloat(q.get('z') || ''), cx = parseFloat(q.get('cx') || ''),
+            cy = parseFloat(q.get('cy') || '');
+      if (!isNaN(z) && !isNaN(cx) && !isNaN(cy)) centreOn(cx, cy, z);
+      const f = q.get('f');
+      if (f && L.modes[mode].entries.some((e: any) => e.name === f)) setFilter(f);
       hud.textContent = 'hover a location';
 
       const idImg = new Image();
@@ -347,7 +388,10 @@ import Base from '../layouts/Base.astro';
         `<small>${[l[3], l[4]].filter(Boolean).map(esc).join(' · ')}` +
         `${l[6] ? ` — ${esc(l[6])}, ${esc(l[5])}` : ''}</small>`;
     });
-    addEventListener('mouseup', () => { down = false; stage.classList.remove('dragging'); });
+    addEventListener('mouseup', () => {
+      if (down) syncUrlSoon();
+      down = false; stage.classList.remove('dragging');
+    });
     stage.addEventListener('click', (e) => {
       if (moved || onControls(e.target)) return;
       const l = locAt(e.clientX, e.clientY);
@@ -362,7 +406,7 @@ import Base from '../layouts/Base.astro';
       const nz = Math.min(12, Math.max(0.3, zoom * f));
       ox = mx - (mx - ox) * (nz / zoom);
       oy = my - (my - oy) * (nz / zoom);
-      zoom = nz; apply();
+      zoom = nz; apply(); syncUrlSoon();
     }, { passive: false });
     for (const b of root.querySelectorAll<HTMLElement>('[data-mp-zoom]')) {
       b.addEventListener('click', (e) => {
@@ -373,9 +417,16 @@ import Base from '../layouts/Base.astro';
         const cx = stage.clientWidth / 2, cy = stage.clientHeight / 2;
         ox = cx - (cx - ox) * (nz / zoom);
         oy = cy - (cy - oy) * (nz / zoom);
-        zoom = nz; apply();
+        zoom = nz; apply(); syncUrlSoon();
       });
     }
+    $('[data-mp-copy]').addEventListener('click', () => {
+      syncUrl();
+      navigator.clipboard.writeText(location.href);
+      const btn = $('[data-mp-copy]');
+      btn.textContent = '✓ Copied';
+      setTimeout(() => (btn.textContent = '⧉ Copy link'), 1200);
+    });
     addEventListener('resize', fit);
   </script>
 </Base>
