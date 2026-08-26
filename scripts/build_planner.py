@@ -1,15 +1,19 @@
 """Tech-planner payload → public/planner.json.
 
-Reads src/data/advances.json + countries.json (no parser run). Emits the
-compact graph the /advance-planner page consumes:
+Reads src/data/advances.json + countries.json (no parser run). The planner
+reproduces the game's own advances screen: age tabs, each age a set of
+top-down branch trees, nodes coloured by what they unlock, and gated
+advances badged — so the payload carries structure, not just a flat list.
 
-  version/vhash   patch + 4-char content hash (share-URL versioning)
-  order           stable id list — URLs store base36 indices into this
-  ages            age display names in play order
-  nodes           id → {n name, s slug, a age, ed effective depth, sc scope,
-                        t tree, c [country tags], i icon, r [require ids],
-                        m [first modifier strings]}
-  countries       [{t tag, n name, col color, cu culture, re religion}]
+  version/vhash  patch + 4-char content hash (share-URL versioning)
+  order          stable id list — URLs store base36 indices into this
+  ages           age names in play order, with their icons
+  nodes          id → compact node record (see KEYS below)
+  countries      [{t tag, n name, col, cu culture, re religion, f facts}]
+
+KEYS per node: n name · s slug · a age index · b branch id · d tier ·
+r requires · g compiled gate · gl gate labels · i icon · k unlock category
+(0 none / 1 build+mil / 2 diplo) · m modifier lines · u unlock lines
 """
 import hashlib
 import json
@@ -18,67 +22,95 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'src' / 'data'
 
-AGE_ORDER = ['Age of Traditions', 'Age of Renaissance', 'Age of Discovery',
-             'Age of Reformation', 'Age of Absolutism', 'Age of Revolutions']
+# Play order comes from ages.json, whose entities are keyed age_1_… ⇒ already
+# in order. Never sort age names alphabetically — that puts Absolutism first.
+
+# The game tints an advance's node by what it unlocks
+# (advances_lateralview.gui `template background_advance`):
+#   green  — unlocks nothing
+#   blue   — buildings / units / laws / policies / reforms / abilities /
+#            heir selection / chivalric orders
+#   red    — diplomatic things: casus belli, interactions, subject types,
+#            country interactions, relations, cabinet actions
+CAT_RED = {'Casus belli', 'Diplomacy', 'Subject types', 'Country interactions',
+           'Character interactions', 'Cabinet actions'}
+
+
+def unlock_category(unlocks: list[dict]) -> int:
+    if not unlocks:
+        return 0
+    labels = {u['label'] for u in unlocks}
+    return 2 if labels & CAT_RED else 1
 
 
 def main():
     advances = json.loads((DATA / 'advances.json').read_text())['entities']
     countries = json.loads((DATA / 'countries.json').read_text())['entities']
+    ages_ds = json.loads((DATA / 'ages.json').read_text())['entities']
     patch = json.loads((ROOT / 'data' / 'patch.json').read_text())
 
     ids = {e['id'] for e in advances}
-    by_id = {e['id']: e for e in advances}
-    requires = {e['id']: [r['id'] for r in e['data']['requires'] if r['id'] in ids]
-                for e in advances}
-
-    # effective depth per age: game hint corrected so same-age edges go L→R
-    age_of = {e['id']: e['facets']['age'] for e in advances}
-    depth: dict[str, int] = {}
-
-    def calc(nid, stack=()):
-        if nid in depth:
-            return depth[nid]
-        if nid in stack:
-            return 0
-        hint = by_id[nid]['data'].get('depth') or 0
-        same_age_parents = [p for p in requires[nid] if age_of[p] == age_of[nid]]
-        d = max([calc(p, stack + (nid,)) + 1 for p in same_age_parents] + [hint])
-        depth[nid] = d
-        return d
-
-    for e in advances:
-        calc(e['id'])
+    ages_present = {e['facets']['age'] for e in advances}
+    ages = [e['name'] for e in ages_ds if e['name'] in ages_present]
+    ages += sorted(a for a in ages_present if a not in ages)
+    age_ix = {a: i for i, a in enumerate(ages)}
+    age_icon = {e['name']: e.get('icon') for e in ages_ds}
 
     nodes = {}
     for e in advances:
-        nodes[e['id']] = {
-            'n': e['name'], 's': e['slug'], 'a': e['facets']['age'],
-            'ed': depth[e['id']], 'sc': e['facets']['scope'],
-            't': e['data'].get('tree'), 'c': e['data']['countries'],
-            'i': e.get('icon'), 'r': requires[e['id']],
-            'm': [f"{m['value']} {m['label']}" for m in e['mods'][:4]],
+        d = e['data']
+        unlock_lines = []
+        for u in d.get('unlocks', []):
+            names = ', '.join(x['label'] for x in u['items'][:6])
+            unlock_lines.append(f"{u['label']}: {names}")
+        rec = {
+            'n': e['name'],
+            's': e['slug'],
+            'a': age_ix[e['facets']['age']],
+            'b': d['branch_id'],
+            'd': d['tier'],
+            'r': [r['id'] for r in d['requires'] if r['id'] in ids],
+            'k': unlock_category(d.get('unlocks')),
         }
+        if e.get('icon'):
+            rec['i'] = e['icon']
+        if d.get('gate'):
+            rec['g'] = d['gate']
+            rec['gl'] = d.get('gate_labels') or []
+        mods = [f"{m['value']} {m['label']}" for m in e['mods'][:5]]
+        if mods:
+            rec['m'] = mods
+        if unlock_lines:
+            rec['u'] = unlock_lines
+        if d.get('specialization'):
+            rec['sp'] = d['specialization']
+        if d.get('requires_state'):
+            rec['rs'] = d['requires_state']
+        nodes[e['id']] = rec
 
     order = sorted(nodes)
     vhash = hashlib.sha1(json.dumps(order).encode()).hexdigest()[:4]
 
-    ages_present = {n['a'] for n in nodes.values()}
-    ages = [a for a in AGE_ORDER if a in ages_present] + \
-           sorted(a for a in ages_present if a not in AGE_ORDER)
-
-    clist = [{'t': c['data']['tag'], 'n': c['name'], 'col': c.get('color'),
-              'cu': c['facets']['culture'], 're': c['facets']['religion']}
-             for c in countries]
+    clist = []
+    for c in countries:
+        f = c['data'].get('facts') or {}
+        clist.append({'t': c['data']['tag'], 'n': c['name'], 'col': c.get('color'),
+                      'cu': c['facets']['culture'], 're': c['facets']['religion'],
+                      'f': f})
     clist.sort(key=lambda c: c['n'])
 
-    payload = {'version': patch['version'], 'vhash': vhash, 'order': order,
-               'ages': ages, 'nodes': nodes, 'countries': clist}
+    payload = {
+        'version': patch['version'], 'vhash': vhash, 'order': order,
+        'ages': [{'n': a, 'i': age_icon.get(a)} for a in ages],
+        'nodes': nodes, 'countries': clist,
+    }
     out = ROOT / 'public' / 'planner.json'
-    out.write_text(json.dumps(payload, sort_keys=True, ensure_ascii=False) + '\n',
-                   encoding='utf-8')
+    out.write_text(json.dumps(payload, sort_keys=True, ensure_ascii=False,
+                              separators=(',', ':')) + '\n', encoding='utf-8')
     kb = out.stat().st_size // 1024
-    print(f'  public/planner.json: {len(nodes)} nodes, {len(clist)} countries, {kb}KB')
+    gated = sum(1 for n in nodes.values() if 'g' in n)
+    print(f'  public/planner.json: {len(nodes)} nodes ({gated} gated), '
+          f'{len(clist)} countries, {kb}KB')
 
 
 if __name__ == '__main__':

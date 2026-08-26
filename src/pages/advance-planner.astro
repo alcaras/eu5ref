@@ -2,13 +2,16 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools"
-  description="Interactive Europa Universalis V advance planner — pick a country, plan your research age by age, share the build as a URL.">
-  <p style="max-width: 720px; color: var(--text-soft);">
-    Pick a country — its national branches appear automatically and its culture
-    and religion show as context. Add extra branches if you plan to shift.
-    <b>Click</b> an advance to plan it (prerequisites come along);
-    <b>right-click</b> marks it already researched. The URL always encodes your
-    plan — copy it to share.
+  description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
+
+  <p class="pl-intro">
+    The advances screen, rebuilt: <b>age tabs</b>, each age laid out as its
+    branch trees, top-down, the way the game draws them. Pick a country and
+    everything that can never apply to it is hidden — usually about two
+    thirds of the 3,178 advances. <b>Click</b> to plan an advance (its
+    prerequisites come along), <b>right-click</b> to mark it already
+    researched, <b>⌥-click</b> to open its reference page. The URL always
+    holds your plan.
   </p>
 
   <div class="pl" data-pl>
@@ -18,130 +21,230 @@ import Base from '../layouts/Base.astro';
         <div class="hdr-search__results" hidden></div>
       </div>
       <span class="chips" data-pl-context></span>
-      <div class="pl-picker" data-pl-tree>
-        <input type="search" placeholder="Add a branch…" autocomplete="off" />
-        <div class="hdr-search__results" hidden></div>
+      <span class="pl-spacer"></span>
+      <label class="pl-toggle" title="Advances gated to other countries, cultures or religions">
+        <input type="checkbox" data-pl-other /> show other countries’
+      </label>
+      <div class="pl-zoom">
+        <button type="button" data-zoom="-">−</button>
+        <span data-zoom-label>100%</span>
+        <button type="button" data-zoom="+">+</button>
       </div>
-      <label class="pl-toggle"><input type="checkbox" data-pl-all /> show every branch</label>
       <button type="button" class="csv-btn" data-pl-copy>⧉ Copy link</button>
-      <button type="button" class="csv-btn" data-pl-clear>✕ Clear</button>
+      <button type="button" class="csv-btn" data-pl-clear>✕ Clear plan</button>
     </div>
 
     <div class="pl-ages" data-pl-ages></div>
-    <div class="pl-stats" data-pl-stats></div>
-    <div class="pl-board-wrap"><div class="pl-board" data-pl-board></div></div>
+
+    <div class="pl-legend">
+      <span><i class="sw k1"></i> unlocks buildings, units, laws</span>
+      <span><i class="sw k2"></i> unlocks diplomacy</span>
+      <span><i class="sw k0"></i> modifiers only</span>
+      <span><i class="sw st-planned"></i> planned</span>
+      <span><i class="sw st-res"></i> researched</span>
+      <span><i class="sw st-cond"></i> conditional — needs something you can still acquire</span>
+      <span data-pl-count></span>
+    </div>
+
+    <div class="pl-board-wrap" data-pl-wrap>
+      <div class="pl-board" data-pl-board></div>
+    </div>
     <div class="pl-tip" data-pl-tip hidden></div>
   </div>
 
   <style is:global>
-    .pl-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+    .pl-intro { max-width: 760px; color: var(--text-soft); }
+    .pl-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+    .pl-spacer { flex: 1 1 auto; }
     .pl-picker { position: relative; }
     .pl-picker input {
       background: var(--bg-elev); color: var(--text);
       border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 6px 11px; font-size: 13px; width: 200px; font-family: var(--font-ui);
+      padding: 6px 11px; font-size: 13px; width: 210px; font-family: var(--font-ui);
     }
     .pl-picker input:focus { outline: none; border-color: var(--gold-deep); }
-    .pl-picker .hdr-search__results { left: 0; right: auto; top: calc(100% + 6px); }
-    .pl-toggle { font-size: 12px; color: var(--text-dim); display: flex; gap: 5px; align-items: center; }
+    .pl-picker .hdr-search__results { left: 0; right: auto; top: calc(100% + 6px); min-width: 300px; }
+    .pl-toggle { font-size: 12px; color: var(--text-dim); display: flex; gap: 5px; align-items: center; cursor: pointer; }
+    .pl-zoom { display: flex; align-items: center; gap: 2px; }
+    .pl-zoom button {
+      border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
+      border-radius: var(--radius-sm); width: 26px; height: 24px; cursor: pointer; font-size: 14px;
+      font-family: var(--font-ui); line-height: 1;
+    }
+    .pl-zoom button:hover { color: var(--text); border-color: var(--border-strong); }
+    .pl-zoom span { font-size: 11px; color: var(--text-faint); font-family: var(--font-mono); width: 40px; text-align: center; }
+
+    /* age tabs — the game's secondary tab bar */
     .pl-ages { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
     .pl-ages button {
+      display: flex; align-items: center; gap: 6px;
       border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
-      border-radius: 999px; padding: 4px 12px; font-size: 12.5px; cursor: pointer; font-family: var(--font-ui);
+      border-radius: var(--radius); padding: 5px 12px 5px 8px; font-size: 12.5px;
+      cursor: pointer; font-family: var(--font-ui);
     }
+    .pl-ages button img { width: 20px; height: 20px; object-fit: contain; }
     .pl-ages button.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
-    .pl-ages button b { font-weight: 600; }
-    .pl-stats { margin-top: 10px; font-size: 12.5px; color: var(--text-dim); }
-    .pl-board-wrap { overflow: auto; border: 1px solid var(--border); border-radius: var(--radius); margin-top: 10px; background: var(--bg-elev); max-height: 72vh; }
-    .pl-board { position: relative; min-width: 100%; }
-    .pl-band-label {
-      position: absolute; left: 12px; font-family: var(--font-display);
-      font-size: 15px; color: var(--gold-soft); letter-spacing: 0.03em;
+    .pl-ages button b { font-weight: 600; color: var(--gold); }
+
+    .pl-legend {
+      display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+      margin-top: 12px; font-size: 11.5px; color: var(--text-faint);
     }
-    .pl-band-label small { color: var(--text-faint); font-family: var(--font-ui); font-size: 11px; margin-left: 8px; }
+    .pl-legend span { display: flex; align-items: center; gap: 5px; }
+    .pl-legend i.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+    .sw.k0 { background: var(--good); } .sw.k1 { background: var(--accent-2); } .sw.k2 { background: var(--bad); }
+    .sw.st-planned { background: var(--gold); }
+    .sw.st-res { background: var(--gold-deep); }
+    .sw.st-cond { border: 1px dashed var(--text-dim); }
+
+    .pl-board-wrap {
+      overflow: auto; border: 1px solid var(--border); border-radius: var(--radius);
+      margin-top: 10px; background: var(--bg-elev); height: 74vh; position: relative;
+      cursor: grab;
+    }
+    .pl-board-wrap.dragging { cursor: grabbing; }
+    .pl-board { position: relative; transform-origin: 0 0; }
+
+    .pl-branch-head {
+      position: absolute; font-family: var(--font-display); font-size: 15px;
+      color: var(--gold-soft); letter-spacing: 0.03em; white-space: nowrap;
+    }
+    .pl-branch-head small { color: var(--text-faint); font-family: var(--font-ui); font-size: 11px; margin-left: 7px; }
+    .pl-band-rule { position: absolute; height: 1px; background: var(--border-faint); }
+
+    /* node card — the game's advance card, at web density */
     .pnode {
-      position: absolute; width: 178px; height: 30px;
-      display: flex; align-items: center; gap: 6px; padding: 0 8px;
+      position: absolute; width: 154px; height: 40px; box-sizing: border-box;
+      display: flex; align-items: center; gap: 6px; padding: 0 7px 0 6px;
       background: var(--bg-elev-2); border: 1px solid var(--border);
+      border-left: 3px solid var(--border-strong);
       border-radius: 5px; font-size: 11.5px; color: var(--text-soft);
-      cursor: pointer; user-select: none; white-space: nowrap; overflow: hidden;
+      cursor: pointer; user-select: none; overflow: hidden;
     }
-    .pnode img { width: 16px; height: 16px; object-fit: contain; flex: none; }
-    .pnode span { overflow: hidden; text-overflow: ellipsis; }
-    .pnode:hover { border-color: var(--border-strong); z-index: 5; }
-    .pnode.planned { border-color: var(--gold); background: color-mix(in oklab, var(--gold) 16%, var(--bg-elev-2)); color: var(--text); }
-    .pnode.researched { opacity: 0.45; border-style: dashed; }
-    .pnode.national { box-shadow: inset 2px 0 0 var(--accent-2); }
-    .pnode .xage { color: var(--text-faint); font-size: 10px; margin-left: auto; }
-    svg.pl-edges { position: absolute; inset: 0; pointer-events: none; }
-    svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.2; fill: none; opacity: .6; }
-    svg.pl-edges path.hot { stroke: var(--gold); opacity: 1; }
+    .pnode img { width: 22px; height: 22px; object-fit: contain; flex: none; }
+    .pnode .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.15; }
+    .pnode.k0 { border-left-color: var(--good); }
+    .pnode.k1 { border-left-color: var(--accent-2); }
+    .pnode.k2 { border-left-color: var(--bad); }
+    .pnode:hover { border-color: var(--gold-soft); z-index: 6; }
+    .pnode.planned { background: color-mix(in oklab, var(--gold) 20%, var(--bg-elev-2)); border-color: var(--gold); color: var(--text); }
+    .pnode.researched { background: color-mix(in oklab, var(--gold-deep) 18%, var(--bg-elev-2)); border-color: var(--gold-deep); opacity: .8; }
+    .pnode.conditional { border-style: dashed; }
+    .pnode.foreign { opacity: .38; filter: grayscale(1); }
+    .pnode .badge {
+      margin-left: auto; font-size: 9px; color: var(--gold-soft); flex: none;
+      font-family: var(--font-mono);
+    }
+    .pnode .qn {
+      margin-left: auto; font-size: 10px; font-family: var(--font-mono);
+      color: var(--gold); flex: none;
+    }
+    /* zoomed-out level of detail: icon-only cards, like the game's
+       simplified node */
+    .pl-board.lod .pnode { width: 46px; justify-content: center; padding: 0; }
+    .pl-board.lod .pnode .nm,
+    .pl-board.lod .pnode .badge { display: none; }
+    .pl-board.lod .pnode img { width: 26px; height: 26px; }
+    .pl-board.lod .pnode .qn { margin: 0; }
+
+    svg.pl-edges { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+    svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.6; fill: none; opacity: .55; }
+    svg.pl-edges path.hot { stroke: var(--gold); opacity: 1; stroke-width: 2; }
+
     .pl-tip {
-      position: fixed; z-index: 90; max-width: 300px; padding: 8px 11px;
+      position: fixed; z-index: 90; max-width: 330px; padding: 9px 12px;
       background: var(--bg-elev-3); border: 1px solid var(--border-strong);
       border-radius: var(--radius); font-size: 12px; color: var(--text-soft);
-      pointer-events: none; box-shadow: var(--shadow-sm);
+      pointer-events: none; box-shadow: var(--shadow-sm); line-height: 1.4;
     }
-    .pl-tip b { display: block; color: var(--text); margin-bottom: 2px; }
-    .pl-tip .req { color: var(--text-faint); margin-top: 4px; }
+    .pl-tip b.t { display: block; color: var(--text); font-size: 13px; margin-bottom: 3px; }
+    .pl-tip .gate { color: var(--gold-soft); }
+    .pl-tip .unl { color: var(--accent-2); }
+    .pl-tip .hint { color: var(--text-faint); margin-top: 5px; font-size: 11px; }
+    .pl-empty { padding: 40px; color: var(--text-faint); text-align: center; }
   </style>
 
   <script>
     const root = document.querySelector('[data-pl]')!;
-    const $ = (sel: string) => root.querySelector(sel) as HTMLElement;
+    const $ = (s: string) => root.querySelector(s) as HTMLElement;
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
 
-    type Node = { n: string; s: string; a: string; ed: number; sc: string;
-                  t: string | null; c: string[]; i: string | null; r: string[]; m: string[] };
-    type Data = { version: string; vhash: string; order: string[]; ages: string[];
-                  nodes: Record<string, Node>;
-                  countries: { t: string; n: string; col: string | null; cu: string; re: string }[] };
+    type Node = {
+      n: string; s: string; a: number; b: string; d: number; r: string[];
+      k: number; i?: string; g?: any; gl?: string[]; m?: string[]; u?: string[]; sp?: string;
+    };
+    type Facts = { tag: string; cul: string; cgrp: string[]; lang: string;
+                   rel: string; rgrp: string; cap: Record<string, string> };
+    type Country = { t: string; n: string; col: string | null; cu: string; re: string; f: Facts };
+    type Data = { version: string; vhash: string; order: string[];
+                  ages: { n: string; i: string | null }[];
+                  nodes: Record<string, Node>; countries: Country[] };
 
     let D: Data;
-    const idx = new Map<string, number>();   // id → order index
-    let country: string | null = null;        // tag
-    const extraTrees = new Set<string>();
+    const idx = new Map<string, number>();
+    let country: Country | null = null;
     const planned = new Set<string>();
     const researched = new Set<string>();
-    let showAll = false;
-    let activeAge = '';
+    let showOther = false;
+    let ageIx = 0;
+    let zoom = 1;
+    let autoFit = true;
 
-    const ROW = 36, COL = 208, PADX = 14, BANDPAD = 40;
+    // Geometry — the game uses 330×265 cells; this is the same shape at
+    // web density.
+    const NW = 154, NH = 40, COLW = 172, ROWH = 74, BRANCH_GAP = 64, TOP = 46;
+
+    // ── three-valued gate evaluation ───────────────────────────
+    // TRUE = available to this country, FALSE = never, null = depends on
+    // something dynamic (an institution, an estate, a reform…).
+    function evalGate(e: any, f: Facts): boolean | null {
+      if (!e) return true;
+      const h = e[0];
+      if (h === 'and') {
+        let unk = false;
+        for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === false) return false; if (v === null) unk = true; }
+        return unk ? null : true;
+      }
+      if (h === 'or') {
+        let unk = false;
+        for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === true) return true; if (v === null) unk = true; }
+        return unk ? null : false;
+      }
+      if (h === 'not') { const v = evalGate(e[1], f); return v === null ? null : !v; }
+      if (h === '?') return null;
+      if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
+      if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
+      if (h === 'tag') return f.tag === e[1];
+      if (h === 'cul') return f.cul === e[1];
+      if (h === 'lang') return f.lang === e[1];
+      if (h === 'rel') return f.rel === e[1];
+      if (h === 'rgrp') return f.rgrp === e[1];
+      return null;
+    }
+    // 'common' | 'yours' | 'conditional' | 'other'
+    function statusOf(id: string): string {
+      const n = D.nodes[id];
+      if (!n.g) return 'common';
+      if (!country) return 'conditional';
+      const v = evalGate(n.g, country.f);
+      return v === true ? 'yours' : v === null ? 'conditional' : 'other';
+    }
 
     // ── URL state ──────────────────────────────────────────────
-    const b36 = (n: number) => n.toString(36);
-    function encodeSet(s: Set<string>) {
-      return [...s].map((id) => b36(idx.get(id)!)).join('.');
-    }
-    function decodeSet(v: string | null, into: Set<string>) {
+    const enc = (s: Set<string>) => [...s].map((id) => idx.get(id)!.toString(36)).join('.');
+    function dec(v: string | null, into: Set<string>) {
       if (!v) return;
-      for (const part of v.split('.')) {
-        const id = D.order[parseInt(part, 36)];
-        if (id) into.add(id);
-      }
+      for (const p of v.split('.')) { const id = D.order[parseInt(p, 36)]; if (id) into.add(id); }
     }
     function syncUrl() {
       const p = new URLSearchParams();
       p.set('v', D.vhash);
-      if (country) p.set('c', country);
-      if (activeAge) p.set('age', String(D.ages.indexOf(activeAge)));
-      if (extraTrees.size) p.set('x', encodeSet(extraTrees));
-      if (planned.size) p.set('p', encodeSet(planned));
-      if (researched.size) p.set('r', encodeSet(researched));
-      history.replaceState(null, '', '?' + p.toString());
-    }
-    function loadUrl() {
-      const p = new URLSearchParams(location.search);
-      if (p.get('v') && p.get('v') !== D.vhash) {
-        $('[data-pl-stats]').textContent =
-          '⚠ this link was made on a different game version — the plan may have shifted.';
-      }
-      country = p.get('c');
-      decodeSet(p.get('x'), extraTrees);
-      decodeSet(p.get('p'), planned);
-      decodeSet(p.get('r'), researched);
-      const ai = parseInt(p.get('age') || '0', 10);
-      activeAge = D.ages[isNaN(ai) ? 0 : ai] || D.ages[0];
+      if (country) p.set('c', country.t);
+      if (ageIx) p.set('age', String(ageIx));
+      if (showOther) p.set('all', '1');
+      if (planned.size) p.set('p', enc(planned));
+      if (researched.size) p.set('r', enc(researched));
+      history.replaceState(null, '', p.toString() ? '?' + p.toString() : location.pathname);
     }
 
     // ── planning ───────────────────────────────────────────────
@@ -155,227 +258,326 @@ import Base from '../layouts/Base.astro';
       }
     }
     function removeWithDependents(id: string) {
-      // remove the node, then keep dropping planned nodes whose prereq
-      // chain is no longer satisfied
       planned.delete(id);
       let changed = true;
       while (changed) {
         changed = false;
         for (const pid of [...planned]) {
-          const broken = D.nodes[pid].r.some((r) => !planned.has(r) && !researched.has(r));
-          if (broken) { planned.delete(pid); changed = true; }
+          if (D.nodes[pid].r.some((r) => !planned.has(r) && !researched.has(r))) {
+            planned.delete(pid); changed = true;
+          }
         }
       }
     }
 
-    // ── band assembly & layout ─────────────────────────────────
-    function selCountry() { return D.countries.find((c) => c.t === country) || null; }
-
-    function bandsForAge(age: string) {
-      const inAge = Object.entries(D.nodes).filter(([, n]) => n.a === age);
-      const general = inAge.filter(([, n]) => n.sc === 'general');
-      const byTree = new Map<string, [string, Node][]>();
-      for (const [id, n] of inAge) {
-        if (n.sc === 'general') continue;
-        const t = n.t || (n.c[0] ? `${n.c[0]}` : 'Other national');
-        if (!byTree.has(t)) byTree.set(t, []);
-        byTree.get(t)!.push([id, n]);
+    // ── visible set + tidy top-down layout ─────────────────────
+    function visibleIds(): string[] {
+      const out: string[] = [];
+      for (const [id, n] of Object.entries(D.nodes)) {
+        if (n.a !== ageIx) continue;
+        const st = statusOf(id);
+        if (st === 'other' && !showOther) continue;
+        out.push(id);
       }
-      const sel = selCountry();
-      const visible: [string, [string, Node][]][] = [];
-      for (const [t, list] of [...byTree.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-        const mine = sel && list.some(([, n]) => n.c.includes(sel.n));
-        if (showAll || mine || extraTrees.has(t)) visible.push([t, list]);
-      }
-      return { general, visible };
+      return out;
     }
 
-    function layoutBand(list: [string, Node][], y0: number) {
-      const cols = new Map<number, [string, Node][]>();
-      for (const item of list) {
-        const d = item[1].ed;
-        if (!cols.has(d)) cols.set(d, []);
-        cols.get(d)!.push(item);
+    /** Lay each branch out as a tidy tree: y from the game's own tier,
+     *  x from a leaf counter with parents centred over their children. */
+    function layout(ids: string[]) {
+      const vis = new Set(ids);
+      const parentOf = new Map<string, string | null>();
+      for (const id of ids) {
+        const p = D.nodes[id].r.find((r) => vis.has(r) && D.nodes[r].b === D.nodes[id].b);
+        parentOf.set(id, p ?? null);
       }
+      const kids = new Map<string, string[]>();
+      const byBranch = new Map<string, string[]>();
+      for (const id of ids) {
+        const p = parentOf.get(id)!;
+        if (p) { if (!kids.has(p)) kids.set(p, []); kids.get(p)!.push(id); }
+        const b = D.nodes[id].b;
+        if (!byBranch.has(b)) byBranch.set(b, []);
+        byBranch.get(b)!.push(id);
+      }
+      for (const list of kids.values()) list.sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+
+      // big branches first, singleton branches collected at the end
+      const branches = [...byBranch.entries()].sort((a, b) => b[1].length - a[1].length);
+      const trees = branches.filter(([, l]) => l.length > 1);
+      const loners = branches.filter(([, l]) => l.length === 1).flatMap(([, l]) => l);
+
+      // The game stacks an age's sub-graphs VERTICALLY (a flowcontainer of
+      // dynamicgrid items), so each branch is its own band down the page and
+      // the board stays only as wide as the widest single branch.
       const pos = new Map<string, { x: number; y: number }>();
-      let maxRows = 0;
-      for (const [d, col] of cols) {
-        col.sort((a, b) => a[1].n.localeCompare(b[1].n));
-        col.forEach(([id], row) => pos.set(id, { x: PADX + d * COL, y: y0 + row * ROW }));
-        maxRows = Math.max(maxRows, col.length);
+      const heads: { label: string; count: number; x: number; y: number }[] = [];
+      const rules: number[] = [];
+      let cursorY = 0, maxX = 0;
+
+      for (const [bid, list] of trees) {
+        const local = new Set(list);
+        const roots = list.filter((id) => !parentOf.get(id) || !local.has(parentOf.get(id)!));
+        roots.sort((a, b) => D.nodes[a].d - D.nodes[b].d || D.nodes[a].n.localeCompare(D.nodes[b].n));
+        // tiers are the game's own; rebase so a branch whose top was filtered
+        // away still starts at the top of its band
+        const minTier = Math.min(...list.map((id) => D.nodes[id].d));
+        let leaf = 0, bandH = 0;
+        const place = (id: string, seen: Set<string>): number => {
+          if (seen.has(id)) return (pos.get(id)?.x ?? 0) - 16;
+          seen.add(id);
+          const ch = (kids.get(id) || []).filter((c) => local.has(c));
+          let x: number;
+          if (!ch.length) { x = leaf * COLW; leaf++; }
+          else {
+            const xs = ch.map((c) => place(c, seen));
+            x = (Math.min(...xs) + Math.max(...xs)) / 2;
+          }
+          const y = cursorY + TOP + (D.nodes[id].d - minTier) * ROWH;
+          pos.set(id, { x: 16 + x, y });
+          bandH = Math.max(bandH, y + NH - cursorY);
+          maxX = Math.max(maxX, 16 + x + NW);
+          return x;
+        };
+        const seen = new Set<string>();
+        for (const r of roots) place(r, seen);
+        heads.push({ label: D.nodes[bid]?.n ?? 'Branch', count: list.length, x: 16, y: cursorY + 14 });
+        cursorY += bandH + BRANCH_GAP;
+        rules.push(cursorY - BRANCH_GAP / 2);
       }
-      const maxD = Math.max(...cols.keys(), 0);
-      return { pos, height: maxRows * ROW, width: PADX * 2 + (maxD + 1) * COL };
+
+      // standalone advances (national one-offs) wrap into a grid band
+      if (loners.length) {
+        heads.push({ label: 'Standalone', count: loners.length, x: 16, y: cursorY + 14 });
+        loners.sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+        const perRow = Math.max(4, Math.floor((maxX || 1200) / COLW) || 8);
+        loners.forEach((id, i) => {
+          const x = 16 + (i % perRow) * COLW;
+          const y = cursorY + TOP + Math.floor(i / perRow) * (NH + 12);
+          pos.set(id, { x, y });
+          maxX = Math.max(maxX, x + NW);
+          cursorY = Math.max(cursorY, y + NH - TOP);
+        });
+        cursorY += TOP + NH;
+      }
+      return { pos, heads, rules, width: maxX + 24, height: cursorY + 24 };
     }
 
     // ── render ─────────────────────────────────────────────────
     function render() {
-      renderAges();
-      renderContext();
-      renderBoard();
-      renderStats();
-      syncUrl();
+      renderAges(); renderContext(); renderBoard(); syncUrl();
     }
 
     function renderAges() {
-      const counts = new Map<string, number>();
-      for (const id of planned) {
-        const a = D.nodes[id].a;
-        counts.set(a, (counts.get(a) || 0) + 1);
-      }
-      $('[data-pl-ages]').innerHTML = D.ages.map((a) =>
-        `<button class="${a === activeAge ? 'on' : ''}" data-age="${a}">${a.replace('Age of ', '')}${counts.get(a) ? ` <b>· ${counts.get(a)}</b>` : ''}</button>`).join('');
+      const counts = new Map<number, number>();
+      for (const id of planned) counts.set(D.nodes[id].a, (counts.get(D.nodes[id].a) || 0) + 1);
+      $('[data-pl-ages]').innerHTML = D.ages.map((a, i) =>
+        `<button class="${i === ageIx ? 'on' : ''}" data-age="${i}">` +
+        (a.i ? `<img src="${baseUrl}${a.i}" alt=""/>` : '') +
+        `${a.n.replace('Age of ', '')}${counts.get(i) ? ` <b>${counts.get(i)}</b>` : ''}</button>`).join('');
     }
 
     function renderContext() {
-      const sel = selCountry();
       let html = '';
-      if (sel) html += `<span class="chip" style="border-color:${sel.col ?? 'var(--border)'}">${sel.n}</span><span class="chip">${sel.cu}</span><span class="chip">${sel.re}</span>`;
-      for (const t of extraTrees) html += `<span class="chip" style="cursor:pointer" data-deltree="${t}" title="remove branch">${t} ✕</span>`;
+      if (country) {
+        html += `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${country.n}</span>` +
+                `<span class="chip">${country.cu}</span><span class="chip">${country.re}</span>`;
+      } else {
+        html += `<span class="chip">no country — showing everything</span>`;
+      }
       $('[data-pl-context]').innerHTML = html;
-    }
-
-    function renderStats() {
-      const total = planned.size;
-      const done = researched.size;
-      $('[data-pl-stats]').textContent =
-        total || done ? `${total} advances planned · ${done} marked researched` : '';
     }
 
     function renderBoard() {
       const board = $('[data-pl-board]');
-      const { general, visible } = bandsForAge(activeAge);
-      let y = 34;
-      let maxW = 600;
-      const allPos = new Map<string, { x: number; y: number }>();
-      const bands: { label: string; count: number; y: number }[] = [];
-
-      const place = (label: string, list: [string, Node][]) => {
-        if (!list.length) return;
-        bands.push({ label, count: list.length, y: y - 24 });
-        const { pos, height, width } = layoutBand(list, y);
-        for (const [id, p] of pos) allPos.set(id, p);
-        y += height + BANDPAD;
-        maxW = Math.max(maxW, width);
-      };
-      place('General', general);
-      for (const [t, list] of visible) place(t, list);
+      const ids = visibleIds();
+      if (!ids.length) { board.innerHTML = '<div class="pl-empty">Nothing in this age for that filter.</div>'; return; }
+      const { pos, heads, rules, width, height } = layout(ids);
 
       let html = '';
-      for (const b of bands) {
-        html += `<div class="pl-band-label" style="top:${b.y}px">${b.label}<small>${b.count}</small></div>`;
+      for (const h of heads) {
+        html += `<div class="pl-branch-head" style="left:${h.x}px; top:${h.y}px">${h.label}<small>${h.count}</small></div>`;
       }
-      // edges (same-age, both placed)
+      for (const y of rules) {
+        html += `<div class="pl-band-rule" style="left:8px; top:${y}px; width:${width - 32}px"></div>`;
+      }
       let paths = '';
-      for (const [id, p] of allPos) {
+      for (const [id, p] of pos) {
         for (const r of D.nodes[id].r) {
-          const rp = allPos.get(r);
+          const rp = pos.get(r);
           if (!rp) continue;
-          const x1 = rp.x + 178, y1 = rp.y + 15, x2 = p.x, y2 = p.y + 15;
+          // top-down: leave the parent's bottom edge, enter the child's top
+          const x1 = rp.x + NW / 2, y1 = rp.y + NH, x2 = p.x + NW / 2, y2 = p.y;
+          const my = (y1 + y2) / 2;
           const hot = planned.has(id) && (planned.has(r) || researched.has(r));
-          paths += `<path class="${hot ? 'hot' : ''}" d="M${x1},${y1} C${x1 + 24},${y1} ${x2 - 24},${y2} ${x2},${y2}"/>`;
+          paths += `<path class="${hot ? 'hot' : ''}" d="M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}"/>`;
         }
       }
-      html += `<svg class="pl-edges" width="${maxW}" height="${y}">${paths}</svg>`;
-      const sel = selCountry();
-      for (const [id, p] of allPos) {
+      html += `<svg class="pl-edges" width="${width}" height="${height}">${paths}</svg>`;
+
+      const order = [...planned];
+      for (const [id, p] of pos) {
         const n = D.nodes[id];
-        const cross = n.r.some((r) => !allPos.has(r));
-        const cls = ['pnode',
+        const st = statusOf(id);
+        const cls = ['pnode', 'k' + n.k,
           planned.has(id) ? 'planned' : '',
           researched.has(id) ? 'researched' : '',
-          n.sc === 'national' ? 'national' : ''].join(' ');
+          st === 'conditional' ? 'conditional' : '',
+          st === 'other' ? 'foreign' : ''].filter(Boolean).join(' ');
+        const qn = planned.has(id) ? `<span class="qn">${order.indexOf(id) + 1}</span>` : '';
+        const badge = !qn && st !== 'common' && n.gl?.length ? `<span class="badge">◆</span>` : '';
         html += `<div class="${cls}" style="left:${p.x}px; top:${p.y}px" data-id="${id}">` +
           (n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '') +
-          `<span>${n.n}</span>${cross ? '<span class="xage" title="has prerequisites in an earlier age">↞</span>' : ''}</div>`;
+          `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
       }
-      board.style.width = maxW + 'px';
-      board.style.height = y + 'px';
       board.innerHTML = html;
+      board.style.width = width + 'px';
+      board.style.height = height + 'px';
+      if (autoFit) {
+        // first paint of a view: zoom out to fit the widest branch, but not
+        // so far that the cards stop being cards
+        const avail = $('[data-pl-wrap]').clientWidth - 16;
+        zoom = Math.min(1, Math.max(0.45, avail / width));
+        autoFit = false;
+      }
+      applyZoom();
+      $('[data-pl-wrap]').scrollTop = 0;
+      $('[data-pl-wrap]').scrollLeft = 0;
+
+      const total = Object.values(D.nodes).filter((n) => n.a === ageIx).length;
+      $('[data-pl-count]').textContent =
+        `${ids.length} of ${total} shown in this age · ${planned.size} planned · ${researched.size} researched`;
+      ($('[data-zoom-label]') as HTMLElement).textContent = Math.round(zoom * 100) + '%';
     }
 
     // ── tooltip ────────────────────────────────────────────────
     const tip = $('[data-pl-tip]');
     function showTip(e: MouseEvent, id: string) {
       const n = D.nodes[id];
+      const st = statusOf(id);
       const reqs = n.r.map((r) => D.nodes[r]?.n).filter(Boolean);
-      tip.innerHTML = `<b>${n.n}</b>` +
-        n.m.map((m) => `<div>${m}</div>`).join('') +
-        (reqs.length ? `<div class="req">requires: ${reqs.join(', ')}</div>` : '') +
-        `<div class="req">click to plan · right-click researched · ⌥-click opens details</div>`;
+      let html = `<b class="t">${n.n}</b>`;
+      if (n.gl?.length) {
+        const verb = st === 'other' ? 'Only for' : st === 'conditional' ? 'Needs' : 'Your unique';
+        html += `<div class="gate">${verb}: ${n.gl.slice(0, 6).join(', ')}</div>`;
+      } else if (st === 'conditional') {
+        html += `<div class="gate">Conditional — depends on state you can still acquire</div>`;
+      }
+      for (const rs of n.rs || []) html += `<div class="gate">Requires: ${rs}</div>`;
+      for (const m of n.m || []) html += `<div>${m}</div>`;
+      for (const u of n.u || []) html += `<div class="unl">${u}</div>`;
+      if (reqs.length) html += `<div class="hint">after: ${reqs.join(', ')}</div>`;
+      html += `<div class="hint">click to plan · right-click researched · ⌥-click opens page</div>`;
+      tip.innerHTML = html;
       tip.hidden = false;
-      tip.style.left = Math.min(e.clientX + 14, innerWidth - 320) + 'px';
-      tip.style.top = e.clientY + 14 + 'px';
+      const r = tip.getBoundingClientRect();
+      tip.style.left = Math.min(e.clientX + 14, innerWidth - r.width - 12) + 'px';
+      tip.style.top = Math.min(e.clientY + 14, innerHeight - r.height - 12) + 'px';
     }
 
-    // ── wiring ─────────────────────────────────────────────────
-    function wirePicker(sel: string, items: () => { key: string; label: string; small?: string }[],
-                        onPick: (key: string) => void) {
-      const wrap = $(sel);
-      const input = wrap.querySelector('input')!;
+    // ── country picker ─────────────────────────────────────────
+    function wireCountry() {
+      const wrap = $('[data-pl-country]');
+      const input = wrap.querySelector('input') as HTMLInputElement;
       const results = wrap.querySelector('.hdr-search__results') as HTMLElement;
       const refresh = () => {
         const q = input.value.trim().toLowerCase();
         if (!q) { results.hidden = true; return; }
-        const hits = items().filter((i) => i.label.toLowerCase().includes(q)).slice(0, 12);
-        results.innerHTML = hits.map((h) =>
-          `<a href="#" data-key="${h.key}"><span>${h.label}</span><small>${h.small || ''}</small></a>`).join('');
+        const hits = D.countries
+          .filter((c) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
+          .slice(0, 12);
+        results.innerHTML = hits.map((c) =>
+          `<a href="#" data-tag="${c.t}"><span>${c.n}</span><small>${c.cu} · ${c.re}</small></a>`).join('');
         results.hidden = hits.length === 0;
       };
       input.addEventListener('input', refresh);
       input.addEventListener('focus', refresh);
       results.addEventListener('click', (e) => {
         e.preventDefault();
-        const a = (e.target as HTMLElement).closest('[data-key]') as HTMLElement | null;
+        const a = (e.target as HTMLElement).closest('[data-tag]') as HTMLElement | null;
         if (!a) return;
-        onPick(a.dataset.key!);
-        input.value = '';
-        results.hidden = true;
+        country = D.countries.find((c) => c.t === a.dataset.tag) || null;
+        input.value = ''; results.hidden = true;
+        render();
       });
       document.addEventListener('click', (e) => {
         if (!wrap.contains(e.target as Node)) results.hidden = true;
       });
     }
 
+    // ── pan & zoom ─────────────────────────────────────────────
+    function wirePanZoom() {
+      const wrap = $('[data-pl-wrap]');
+      let down = false, sx = 0, sy = 0, sl = 0, stp = 0;
+      wrap.addEventListener('mousedown', (e) => {
+        if ((e.target as HTMLElement).closest('[data-id]')) return;
+        down = true; sx = e.clientX; sy = e.clientY;
+        sl = wrap.scrollLeft; stp = wrap.scrollTop;
+        wrap.classList.add('dragging');
+      });
+      addEventListener('mousemove', (e) => {
+        if (!down) return;
+        wrap.scrollLeft = sl - (e.clientX - sx);
+        wrap.scrollTop = stp - (e.clientY - sy);
+      });
+      addEventListener('mouseup', () => { down = false; wrap.classList.remove('dragging'); });
+      wrap.addEventListener('wheel', (e) => {
+        if (!e.ctrlKey && !e.metaKey) return;
+        e.preventDefault();
+        setZoom(zoom * (e.deltaY < 0 ? 1.12 : 0.89));
+      }, { passive: false });
+      for (const b of root.querySelectorAll<HTMLElement>('[data-zoom]')) {
+        b.addEventListener('click', () => setZoom(b.dataset.zoom === '+' ? zoom * 1.2 : zoom / 1.2));
+      }
+    }
+    function setZoom(z: number) {
+      zoom = Math.min(1.5, Math.max(0.2, z));
+      applyZoom();
+    }
+    /** The board is scaled with a transform, so the scroll container needs
+     *  padding equal to the scaled size to keep the whole tree reachable. */
+    function applyZoom() {
+      const board = $('[data-pl-board]');
+      board.style.transform = `scale(${zoom})`;
+      // the game drops to a simplified icon-only node when zoomed out
+      board.classList.toggle('lod', zoom < 0.62);
+      const w = parseFloat(board.style.width) * zoom;
+      const h = parseFloat(board.style.height) * zoom;
+      board.style.marginRight = `${Math.max(0, w - parseFloat(board.style.width))}px`;
+      board.style.marginBottom = `${Math.max(0, h - parseFloat(board.style.height))}px`;
+      ($('[data-zoom-label]') as HTMLElement).textContent = Math.round(zoom * 100) + '%';
+    }
+
+    // ── boot ───────────────────────────────────────────────────
     fetch(`${baseUrl}planner.json`).then((r) => r.json()).then((data) => {
       D = data;
       D.order.forEach((id, i) => idx.set(id, i));
-      loadUrl();
 
-      wirePicker('[data-pl-country]',
-        () => D.countries.map((c) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
-        (tag) => { country = tag; render(); });
+      const p = new URLSearchParams(location.search);
+      if (p.get('v') && p.get('v') !== D.vhash) {
+        $('[data-pl-count]').textContent = '⚠ this link was made on another game version — the plan may have shifted.';
+      }
+      country = D.countries.find((c) => c.t === p.get('c')) || null;
+      showOther = p.get('all') === '1';
+      ($('[data-pl-other]') as HTMLInputElement).checked = showOther;
+      ageIx = Math.max(0, Math.min(D.ages.length - 1, parseInt(p.get('age') || '0', 10) || 0));
+      dec(p.get('p'), planned);
+      dec(p.get('r'), researched);
 
-      const treeNames = () => {
-        const set = new Map<string, number>();
-        for (const n of Object.values(D.nodes)) {
-          if (n.sc !== 'national') continue;
-          const t = n.t || (n.c[0] ? `${n.c[0]}` : 'Other national');
-          set.set(t, (set.get(t) || 0) + 1);
-        }
-        return [...set.entries()].map(([t, c]) => ({ key: t, label: t, small: `${c}` }));
-      };
-      wirePicker('[data-pl-tree]', treeNames, (t) => { extraTrees.add(t); render(); });
+      wireCountry(); wirePanZoom();
 
-      ($('[data-pl-all]') as HTMLInputElement).addEventListener('change', (e) => {
-        showAll = (e.target as HTMLInputElement).checked;
-        render();
+      ($('[data-pl-other]') as HTMLInputElement).addEventListener('change', (e) => {
+        showOther = (e.target as HTMLInputElement).checked; render();
       });
       $('[data-pl-copy]').addEventListener('click', () => {
         navigator.clipboard.writeText(location.href);
-        $('[data-pl-copy]').textContent = '✓ Copied';
-        setTimeout(() => ($('[data-pl-copy]').textContent = '⧉ Copy link'), 1200);
+        const b = $('[data-pl-copy]'); b.textContent = '✓ Copied';
+        setTimeout(() => (b.textContent = '⧉ Copy link'), 1200);
       });
-      $('[data-pl-clear]').addEventListener('click', () => {
-        planned.clear(); researched.clear(); render();
-      });
+      $('[data-pl-clear]').addEventListener('click', () => { planned.clear(); researched.clear(); render(); });
       $('[data-pl-ages]').addEventListener('click', (e) => {
-        const btn = (e.target as HTMLElement).closest('[data-age]') as HTMLElement | null;
-        if (btn) { activeAge = btn.dataset.age!; render(); }
-      });
-      $('[data-pl-context]').addEventListener('click', (e) => {
-        const chip = (e.target as HTMLElement).closest('[data-deltree]') as HTMLElement | null;
-        if (chip) { extraTrees.delete(chip.dataset.deltree!); render(); }
+        const b = (e.target as HTMLElement).closest('[data-age]') as HTMLElement | null;
+        if (b) { ageIx = +b.dataset.age!; autoFit = true; render(); }
       });
 
       const board = $('[data-pl-board]');
@@ -383,12 +585,8 @@ import Base from '../layouts/Base.astro';
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
         if (!el) return;
         const id = el.dataset.id!;
-        if ((e as MouseEvent).altKey) {
-          location.href = `${baseUrl}advances/${D.nodes[id].s}`;
-          return;
-        }
-        if (planned.has(id)) removeWithDependents(id);
-        else addWithPrereqs(id);
+        if ((e as MouseEvent).altKey) { location.href = `${baseUrl}advances/${D.nodes[id].s}`; return; }
+        if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id);
         render();
       });
       board.addEventListener('contextmenu', (e) => {
@@ -402,8 +600,7 @@ import Base from '../layouts/Base.astro';
       });
       board.addEventListener('mousemove', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
-        if (el) showTip(e as MouseEvent, el.dataset.id!);
-        else tip.hidden = true;
+        if (el) showTip(e as MouseEvent, el.dataset.id!); else tip.hidden = true;
       });
       board.addEventListener('mouseleave', () => { tip.hidden = true; });
 

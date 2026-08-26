@@ -13,7 +13,37 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
 ---
 <Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>
   <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">
+    {entity.data.unlocks?.length > 0 && (
+      <div class="panel">
+        <h3>Unlocks</h3>
+        <div class="kv">
+          {entity.data.unlocks.map((u: any) => (
+            <Fragment>
+              <span class="k">{u.label}</span>
+              <span class="v">
+                {u.items.map((it: any, i: number) => (
+                  <Fragment>{i > 0 && ', '}{it.id ? <Term id={it.id} label={it.label} showIcon={false} /> : it.label}</Fragment>
+                ))}
+              </span>
+            </Fragment>
+          ))}
+        </div>
+      </div>
+    )}
     <Fragment slot="aside">
+      {(entity.data.gate_labels?.length > 0 || entity.data.requires_state?.length > 0) && (
+        <div class="panel">
+          <h3>Availability</h3>
+          <div class="kv">
+            {entity.data.gate_labels?.length > 0 && (
+              <Fragment><span class="k">Only for</span><span class="v">{entity.data.gate_labels.join(', ')}</span></Fragment>
+            )}
+            {entity.data.requires_state?.map((rs: string) => (
+              <Fragment><span class="k">Requires</span><span class="v">{rs}</span></Fragment>
+            ))}
+          </div>
+        </div>
+      )}
       {(entity.data.requires.length > 0 || entity.data.countries.length > 0 || entity.data.tree) && (
         <div class="panel">
           <h3>Position</h3>

@@ -4,14 +4,22 @@ import EntityTable from '../components/EntityTable.astro';
 import FilterBar from '../components/FilterBar.astro';
 import data from '../data/advances.json';
 
-const entities = data.entities;
+// Flatten unlocks to chip labels for the table column.
+const entities = data.entities.map((e) => ({
+  ...e,
+  data: {
+    ...e.data,
+    unlock_names: (e.data.unlocks || []).flatMap((u: any) => u.items.map((i: any) => i.label)).slice(0, 6),
+  },
+}));
 const facets = data.facets;
 const columns = [
   { key: 'name', label: 'Advance', kind: 'name' },
   { key: 'age', label: 'Age', kind: 'facet' },
   { key: 'requires', label: 'Requires', kind: 'refs' },
   { key: 'mods', label: 'Effects', kind: 'mods' },
-  { key: 'countries', label: 'Countries', kind: 'chips' },
+  { key: 'unlock_names', label: 'Unlocks', kind: 'chips' },
+  { key: 'gate_labels', label: 'Only for', kind: 'chips' },
 ] as const;
 ---
 <Base
