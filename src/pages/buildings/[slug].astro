@@ -15,11 +15,25 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
     {entity.data.production_methods.length > 0 && (
       <div class="panel">
         <h3>Production methods</h3>
-        <ul class="pairs">
-          {entity.data.production_methods.map((pm: any) => (
-            <li><span class="k">{pm.label}</span> <span class="v">{pm.value}</span></li>
-          ))}
-        </ul>
+        {[...new Set(entity.data.production_methods.map((pm: any) => pm.slot ?? 0))].map((slot) => (
+          <div style="margin-bottom: 10px;">
+            <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:4px;">
+              Slot {(slot as number) + 1} — choose one
+            </div>
+            <ul class="pairs">
+              {entity.data.production_methods.filter((pm: any) => (pm.slot ?? 0) === slot).map((pm: any) => (
+                <li style="display:block; margin-bottom:3px;">
+                  <span style="color: var(--text); font-weight:600;">{pm.name}</span>
+                  <span style="color: var(--text-dim);">
+                    {' — '}
+                    {pm.inputs.map((i: any) => `${i.amount} ${i.good}`).join(' + ') || 'no inputs'}
+                    {pm.output ? ` → ${pm.output.amount} ${pm.output.good}` : ''}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     )}
     <Fragment slot="aside">

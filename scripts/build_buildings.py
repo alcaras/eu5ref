@@ -13,9 +13,9 @@ SETTLEMENTS = ['rural_settlement', 'town', 'city', 'megalopolis']
 def pm_record(pm, unique: bool) -> dict | None:
     """One production method → {name, category, inputs, output}.
 
-    EU5 buildings are not Victoria-style input→output factories: 79 of the 90
-    production methods only *consume* goods (upkeep), and just 11 produce one.
-    So we record both sides and let the page say which it is.
+    Most methods both consume and produce: 0.606 iron + 0.505 tools makes 1
+    cannon. Some are upkeep only. `slot` groups the alternatives you choose
+    between.
     """
     name = getattr(pm, 'display_name', None) or ref.pretty(str(getattr(pm, 'name', '')))
     inputs = []
@@ -50,16 +50,33 @@ def pm_record(pm, unique: bool) -> dict | None:
 
 
 def production_methods(b) -> list[dict]:
+    """A building's production methods, keyed by the slot they belong to.
+
+    `unique_production_methods` is a list of GROUPS, each a list of
+    alternative methods for one switchable slot — a cannon maker picks one
+    barrel method (bronze / iron / lumber) and one shot method (stone / lead
+    / iron). Iterating the outer list alone yields lists, not methods, which
+    is why this looked like pure upkeep before.
+    """
     out, seen = [], set()
+
+    def add(pm, unique: bool, group: int):
+        if not hasattr(pm, 'input'):
+            return
+        rec = pm_record(pm, unique)
+        if rec and rec['name'] not in seen:
+            seen.add(rec['name'])
+            rec['slot'] = group
+            out.append(rec)
+
     for attr, unique in (('unique_production_methods', True),
                          ('possible_production_methods', False)):
-        for pm in getattr(b, attr, None) or []:
-            if not hasattr(pm, 'input'):
-                continue          # a raw tree the toolkit did not resolve
-            rec = pm_record(pm, unique)
-            if rec and rec['name'] not in seen:
-                seen.add(rec['name'])
-                out.append(rec)
+        for gi, group in enumerate(getattr(b, attr, None) or []):
+            if isinstance(group, list):
+                for pm in group:
+                    add(pm, unique, gi)
+            else:
+                add(group, unique, gi)
     return out
 
 

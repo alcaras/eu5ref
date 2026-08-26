@@ -20,12 +20,19 @@ const prices = Object.fromEntries(
 <Base title="Building Calculator" active="building-calculator" pageMark="🧮" eyebrow="Tools"
   description="What a Europa Universalis V building's production method costs and returns at market prices.">
 
-  <p style="max-width: 760px; color: var(--text-soft);">
-    EU5 buildings are not Victoria-style input→output factories: of the game's
-    90 production methods, <b>79 only consume goods</b> as upkeep and just
-    <b>11 produce one</b>. So this prices what the files actually define —
-    each method's goods in and (where there is one) goods out, valued at base
-    market prices, which you can override below to match your market.
+  <p style="max-width: 780px; color: var(--text-soft);">
+    A building's production methods come in <b>slots</b>, and each slot offers
+    alternatives you switch between — a cannon maker picks one barrel method
+    (wooden, cast bronze, wrought iron) and one shot method (stone, lead,
+    iron). They convert goods: 0.606 iron + 0.505 tools makes 1 cannon. This
+    prices every method at market prices so you can compare the alternatives
+    in a slot; override any price below to match your own market.
+  </p>
+  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
+    What this does <em>not</em> price is a location's raw goods. Per the game's
+    own encyclopedia those "do not require Buildings to be produced, and rely
+    solely on Laborers" — output scales with how developed the location is, so
+    it is not derivable from these files alone.
   </p>
 
   <div class="bc" data-bc>
@@ -37,6 +44,7 @@ const prices = Object.fromEntries(
       <table class="etbl">
         <thead><tr>
           <th data-bc-sort="name">Building</th>
+          <th data-bc-sort="slot">Slot</th>
           <th data-bc-sort="pm">Production method</th>
           <th>Goods in</th>
           <th>Goods out</th>
@@ -67,7 +75,7 @@ const prices = Object.fromEntries(
     const rows = [];
     for (const b of priced) {
       for (const pm of b.pms) {
-        rows.push({ b, pm, name: b.name, pmName: pm.name });
+        rows.push({ b, pm, name: b.name, pmName: pm.name, slot: (pm.slot ?? 0) + 1 });
       }
     }
 
@@ -107,7 +115,8 @@ const prices = Object.fromEntries(
           : '<span class="is-empty">—</span>';
         const cls = r.net > 0 ? 'good' : r.net < 0 ? 'bad' : 'neutral';
         return `<tr><td><a href="${location.pathname.replace(/building-calculator\/?$/, '')}buildings/${r.b.slug}"><b>${r.name}</b></a></td>` +
-          `<td>${r.pmName}</td><td><span class="chips">${ins}</span></td><td>${out}</td>` +
+          `<td class="num">${r.slot}</td><td>${r.pmName}</td>` +
+          `<td><span class="chips">${ins}</span></td><td>${out}</td>` +
           `<td class="num">${money(r.cost)}</td><td class="num">${money(r.rev)}</td>` +
           `<td class="num"><span class="mod-val ${cls}">${r.net > 0 ? '+' : ''}${money(r.net)}</span></td></tr>`;
       }).join('');
