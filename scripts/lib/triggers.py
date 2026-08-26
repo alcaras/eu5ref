@@ -49,6 +49,7 @@ _SCALAR = {
     'religion': 'rel',
     'has_religion': 'rel',
     'religion.group': 'rgrp',
+    'government_type': 'gov',
     'has_culture_group': 'cgrp',
     'culture.culture_group': 'cgrp',
 }
@@ -149,6 +150,13 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
         cul = _strip_scope(value)
         grp = cgroups.get(cul)
         return ['cgrp', grp] if grp else ['cul', cul]
+    # `has_tribal_government = yes|no` — the only government shape asked as a
+    # boolean rather than `government_type = government_type:x`.
+    if key == 'has_tribal_government':
+        expr = ['gov', 'tribe']
+        # the parser hands this back as a bool, not the literal "yes"
+        yes = value is True or str(value).strip().lower() in ('yes', 'true')
+        return expr if yes else ['not', expr]
     if key in _SCALAR:
         return [_SCALAR[key], _strip_scope(value)]
 
@@ -172,7 +180,7 @@ def _geo_pair(key: str) -> str | None:
 
 # ── build-time helpers ────────────────────────────────────────
 
-def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap')) -> list[tuple[str, str]]:
+def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov')) -> list[tuple[str, str]]:
     """Collect (kind, value) pairs mentioned positively in an expression —
     used to label a gated advance ("Byzantium", "Orthodox")."""
     out: list[tuple[str, str]] = []

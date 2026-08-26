@@ -223,6 +223,11 @@ export const TABS: Tab[] = [
     summary: 'Pick laws, reforms and privileges; see where your societal values drift and what it unlocks',
   },
   {
+    slug: 'value-path', icon: '🧗', label: 'Value Path', section: 'Tools',
+    status: 'built',
+    summary: 'Sequence societal-value targets: what to swap on at each stage and what it banks',
+  },
+  {
     slug: 'building-calculator', icon: '🧮', label: 'Building Calculator', section: 'Tools',
     status: 'built',
     summary: 'Goods in vs goods out per production method, at prices you set',

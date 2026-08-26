@@ -5,12 +5,21 @@ import Base from '../layouts/Base.astro';
   description="Pick laws, government reforms and estate privileges and see where your societal values drift, and how long it takes.">
 
   <p style="max-width: 780px; color: var(--text-soft);">
-    Societal values sit on a −100…+100 axis and drift by a fixed amount each
-    month for every law, estate privilege, cabinet action or building pushing
-    them. Pick what you run and this adds it up: net movement per month, where
-    each axis lands, and <b>what that unlocks and when</b>. Numbers are the
-    game's own — tiny 0.025, minor 0.05, normal 0.1, large 0.2, significant
-    0.33 per month.
+    Societal values sit on a −100…+100 axis, and every law, estate privilege,
+    cabinet action or building applies a monthly push toward one pole. Pick
+    what you run and this sums the push per axis and shows what it can unlock.
+    Magnitudes are the game's own — tiny 0.025, minor 0.05, normal 0.1, large
+    0.2, significant 0.33 per month.
+  </p>
+  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
+    <b>Read the projections as ceilings, not schedules.</b> In the game's own
+    words a value "drifts slowly over time towards one of the two poles", but
+    "progress towards one pole will stall at a maximum, determined by the
+    total amount of factors pushing it in that direction. The higher a
+    Societal Value, the more factors are needed to push it further." The
+    slowdown curve lives in the engine, not the files — so what is shown here
+    is the straight-line case: the value cannot move <em>faster</em> than
+    this, and it will stall somewhere short of it.
   </p>
   <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
     The swap-away dance works because a reform's value requirement sits in its
@@ -35,6 +44,7 @@ import Base from '../layouts/Base.astro';
         <div class="hdr-search__results" hidden></div>
       </div>
       <span class="chips" data-vp-context></span>
+      <button type="button" class="csv-btn" data-vp-reset title="Back to this country's 1337 setup">↺ 1337 setup</button>
       <label class="pl-toggle" title="Include things your country cannot take">
         <input type="checkbox" data-vp-all /> show unavailable
       </label>
@@ -61,7 +71,14 @@ import Base from '../layouts/Base.astro';
           <input type="range" min="1" max="100" value="20" data-vp-years /></small>
         </h2>
         <div class="vp-axes" data-vp-axes></div>
-        <h2 class="vp-h" style="margin-top:18px;">Unlocks along the way <small data-vp-unlocked></small></h2>
+        <h2 class="vp-h" style="margin-top:18px;">Unlocks along the way
+          <small data-vp-unlocked></small></h2>
+        <p style="font-size:12px; color:var(--text-faint); margin:-4px 0 8px;">
+          Earliest possible, ignoring the slowdown near a pole. A reform's
+          requirement sits in its <code>allow</code> block — it gates starting
+          the reform, and reforms have no <code>remove_if</code>, so once
+          implemented it survives the value drifting back.
+        </p>
         <div class="vp-unlocks" data-vp-unlocks></div>
       </section>
     </div>
@@ -134,6 +151,7 @@ import Base from '../layouts/Base.astro';
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
 
     let D: any = null;
+    let STARTS: any = {};                       // tag -> 1337 setup
     const picked = new Set<string>();
     let sourceFilter: string | null = null;
     let horizonYears = 20;
@@ -146,10 +164,25 @@ import Base from '../layouts/Base.astro';
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
     const uid = (m: any) => `${m.folder}:${m.key}`;
 
+    /** Adopt a country's 1337 setup: where each axis begins, and the laws
+     *  and privileges it already runs. Straight from the bookmark's template
+     *  stack, so it is the position you actually start the game in. */
+    function adoptStart(tag: string | null) {
+      picked.clear();
+      for (const k of Object.keys(start)) delete start[k];
+      const rec = tag && STARTS[tag];
+      if (!rec) return;
+      Object.assign(start, rec.values || {});
+      const want = new Set([...(rec.privileges || []),
+                            ...Object.values(rec.laws || {})]);
+      for (const m of D.movers) if (want.has(m.key)) picked.add(uid(m));
+    }
+
     /** Country facts with any culture/religion swap applied. */
     function facts() {
       if (!country) return null;
-      const f = { ...country.f, cap: country.f.cap || {} };
+      const f = { ...country.f, cap: country.f.cap || {},
+                  gov: (STARTS[country.t] || {}).type || null };
       if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l; }
       if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g; }
       return f;
@@ -165,6 +198,7 @@ import Base from '../layouts/Base.astro';
       if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
       if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
       if (h === 'tag') return f.tag === e[1];
+      if (h === 'gov') return f.gov ? f.gov === e[1] : null;
       return f[h] === e[1];
     }
     /** Can this country take it? Unknown counts as yes — it depends on
@@ -182,8 +216,24 @@ import Base from '../layouts/Base.astro';
       for (const m of D.movers) {
         if (!picked.has(uid(m))) continue;
         for (const e of m.effects) {
+          if (e.temp) continue;              // only while a debate runs
           const v = (e.perMonth ?? 0) * (e.dir === 'right' ? 1 : -1);
           out[e.pair] = (out[e.pair] || 0) + v;
+        }
+      }
+      return out;
+    }
+    /** Push toward each pole and how many factors supply it — the game says
+     *  the ceiling is set by the total amount of factors, so both matter. */
+    function sides() {
+      const out: Record<string, { l: number; r: number; n: number }> = {};
+      for (const m of D.movers) {
+        if (!picked.has(uid(m))) continue;
+        for (const e of m.effects) {
+          if (e.temp) continue;
+          const s = out[e.pair] || (out[e.pair] = { l: 0, r: 0, n: 0 });
+          if (e.dir === 'right') s.r += e.perMonth ?? 0; else s.l += e.perMonth ?? 0;
+          s.n++;
         }
       }
       return out;
@@ -203,7 +253,8 @@ import Base from '../layouts/Base.astro';
         ? `<img class="eicon" src="${baseUrl}${m.icon}" alt="" loading="lazy" width="16" height="16"/>` : '';
       const est = m.estate ? `<span class="src">${esc(m.estate)}</span>` : '';
       return `<div class="vp-item ${picked.has(uid(m)) ? 'on' : ''}${dim}" data-uid="${esc(uid(m))}">` +
-        icon + `<span>${esc(m.name)}</span><span class="src">${esc(m.source)}</span>${est}` +
+        icon + `<span>${esc(m.name)}</span>` +
+        `<span class="src">${esc(m.groupName || m.source)}</span>${est}` +
         `<span class="eff">${effLabel(m)}</span></div>`;
     }
 
@@ -254,15 +305,16 @@ import Base from '../layouts/Base.astro';
 
     function renderAxes() {
       const t = totals();
+      const sideTotals = sides();
       const months = horizonYears * 12;
       const rows = Object.entries(D.pairs).map(([pid, p]: any) => {
         const net = t[pid] || 0;
         const now = positionAt(pid, net, months);
-        const swing = net ? (2 * D.scale) / Math.abs(net) / 12 : 0;
+        const sd = sideTotals[pid] || { l: 0, r: 0, n: 0 };
         const pct = Math.max(-1, Math.min(1, net / 0.6));
         const w = Math.abs(pct) * 50;
         const left = net >= 0 ? 50 : 50 - w;
-        return { pid, p, net, now, swing, w, left };
+        return { pid, p, net, now, sd, w, left };
       });
       rows.sort((a, b) => Math.abs(b.net) - Math.abs(a.net) ||
         a.p.left.name.localeCompare(b.p.left.name));
@@ -276,9 +328,10 @@ import Base from '../layouts/Base.astro';
         `</div>` +
         `<div class="vp-axis__num">` +
         `<span>start <input class="vp-axis__start" type="number" step="5" min="-100" max="100" ` +
-        `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → <b>${r.now.toFixed(1)}</b></span>` +
-        (r.net ? `<span>${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month · ` +
-                 `${r.swing.toFixed(1)} yrs full swing</span>` : '<span>no movement</span>') +
+        `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → at most <b>${r.now.toFixed(1)}</b></span>` +
+        (r.net ? `<span title="push: ${r.sd.l.toFixed(3)} left / ${r.sd.r.toFixed(3)} right from ${r.sd.n} factor(s)">` +
+                 `${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month from ${r.sd.n} · ` +
+                 `stalls below this</span>` : '<span>no movement</span>') +
         `</div></div>`).join('');
     }
 
@@ -308,7 +361,7 @@ import Base from '../layouts/Base.astro';
         const cls = x.months === null ? 'never' : x.months === 0 ? '' : 'later';
         const when = x.months === null ? 'not on this path'
           : x.months === 0 ? 'already qualifies'
-          : `${(x.months / 12).toFixed(1)} yrs`;
+          : `no sooner than ${(x.months / 12).toFixed(1)} yrs`;
         const need = x.r.requires.map((q: any) => {
           const p = D.pairs[q.pair];
           return p ? `${esc(p.left.name)}/${esc(p.right.name)} ${q.op} ${q.value}` : q.pair;
@@ -377,8 +430,12 @@ import Base from '../layouts/Base.astro';
 
     function render() { renderContext(); renderList(); renderPicked(); renderAxes(); renderUnlocks(); syncUrl(); }
 
-    fetch(`${baseUrl}values.json`).then((r) => r.json()).then((data) => {
+    Promise.all([
+      fetch(`${baseUrl}values.json`).then((r) => r.json()),
+      fetch(`${baseUrl}country-start.json`).then((r) => r.json()).catch(() => ({})),
+    ]).then(([data, starts]) => {
       D = data;
+      STARTS = starts;
       const sources = [...new Set(D.movers.map((m: any) => m.source))].sort();
       $('[data-vp-sources]').innerHTML = sources.map((s: any) =>
         `<span class="chip" data-src="${esc(s)}">${esc(s)}</span>`).join('');
@@ -394,7 +451,11 @@ import Base from '../layouts/Base.astro';
       wirePicker('[data-vp-country]',
         (q) => D.countries.filter((c: any) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
           .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
-        (tag) => { country = D.countries.find((c: any) => c.t === tag) || null; culOverride = relOverride = null; });
+        (tag) => {
+          country = D.countries.find((c: any) => c.t === tag) || null;
+          culOverride = relOverride = null;
+          adoptStart(tag);
+        });
       wirePicker('[data-vp-culture]',
         (q) => D.cultures.filter((c: any) => c.n.toLowerCase().includes(q))
           .map((c: any) => ({ key: c.k, label: c.n, small: 'culture' })),
@@ -417,6 +478,7 @@ import Base from '../layouts/Base.astro';
       const q = qs.get('p');
       if (q) for (const id of q.split(',')) picked.add(id);
       country = D.countries.find((c: any) => c.t === qs.get('c')) || null;
+      if (country && !q) adoptStart(country.t);
       culOverride = D.cultures.find((c: any) => c.k === qs.get('cu')) || null;
       relOverride = D.religions.find((r: any) => r.k === qs.get('re')) || null;
       for (const bit of (qs.get('s') || '').split(',').filter(Boolean)) {
@@ -437,7 +499,18 @@ import Base from '../layouts/Base.astro';
         const el = (e.target as HTMLElement).closest('[data-uid]') as HTMLElement | null;
         if (!el) return;
         const id = el.dataset.uid!;
-        picked.has(id) ? picked.delete(id) : picked.add(id);
+        if (picked.has(id)) {
+          picked.delete(id);
+        } else {
+          picked.add(id);
+          // One policy per law group — picking one drops its siblings.
+          const m = D.movers.find((x: any) => uid(x) === id);
+          if (m && m.group) {
+            for (const o of D.movers) {
+              if (o.group === m.group && uid(o) !== id) picked.delete(uid(o));
+            }
+          }
+        }
         render();
       });
     }
@@ -452,6 +525,9 @@ import Base from '../layouts/Base.astro';
       if (!el.dataset.start) return;
       start[el.dataset.start] = parseFloat(el.value) || 0;
       renderAxes(); renderUnlocks(); syncUrl();
+    });
+    $('[data-vp-reset]').addEventListener('click', () => {
+      if (country) { adoptStart(country.t); render(); }
     });
     $('[data-vp-clear]').addEventListener('click', () => {
       picked.clear();

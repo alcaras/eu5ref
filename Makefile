@@ -25,6 +25,7 @@ data:
 	$(PY) scripts/build_simple.py
 	$(PY) scripts/build_defines.py
 	$(PY) scripts/build_values.py
+	$(PY) scripts/build_country_start.py
 	$(PY) scripts/build_map.py
 	$(PY) scripts/build_planner.py
 	$(PY) scripts/build_entities.py

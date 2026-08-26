@@ -268,6 +268,66 @@ and the planned `make art` dds→png step that follows.
 
 ---
 
+## Societal values — grounded facts (don't re-derive, don't "improve" past these)
+
+- **Drift is not linear.** The in-game "Societal Value" concept says progress
+  toward a pole "will stall at a maximum, determined by the total amount of
+  factors pushing it in that direction. The higher a Societal Value, the more
+  factors are needed to push it further." The slowdown curve is engine-side —
+  it is NOT in the files. `SOCIETAL_VALUE_INERTIA_SCALE = 100` and
+  `societal_value_min_scaling_monthly_move = 0.01` are the only hints. So
+  every projection we show is labelled an upper bound ("at best", "no sooner
+  than"), never a schedule. Do not restore a "years for a full swing" number.
+- **Sign convention: right pole is positive.** `centralization_vs_decentralization
+  = 85` for 1337 France means heavily *decentralized* (appanages), and its
+  `serfdom_vs_free_subjects = -80` means serfdom. Both check out historically.
+- **Starting values/laws/privileges are real and per-country.** The 1337
+  bookmark gives each tag `include = "<template>"` lines resolved against
+  `game/main_menu/setup/templates/` (205 of them), which carry the societal
+  value block, the `privilege = { … }` grants and the `laws = { group = option }`
+  selections. `scripts/build_country_start.py` resolves the stack →
+  `public/country-start.json`, 2,337 tags. Both planners default from it.
+- **Laws are groups of mutually exclusive OPTIONS.** A law block holds
+  metadata (see `LAW_META`) plus one sub-block per selectable policy, each
+  with its own `country_modifier`. Emitting one mover per *group* merges
+  opposing options and nets them to zero — `feudal_de_jure_law` looked like it
+  did nothing when `by_tradition` pushes inward and `by_blood` outward. We
+  emit one mover per option with `group`/`groupName`, and the UI treats a
+  group as pick-one.
+- A law option's gate is **its own `potential`/`allow` AND its group's** — the
+  group says which governments run the law at all, the option is often one
+  country's version of it.
+- **`monthly_towards_*` only counts inside a modifier block.** The same key
+  also appears in `limit`/`add`/`value` blocks, where it is an AI weighting
+  term, not something applied to the country. `walk()` tracks the parent block
+  and keeps only `modifier` / `*_modifier` / `high_power` / `low_power`, plus
+  `modifier_when_in_debate` and `modifier_while_progressing` flagged
+  `temp: true` (transient — excluded from sustained drift).
+- **Requirements must be read with their block path.** Scanning an entity body
+  for `societal_value:x > n` catches AI weights: noble parliament issues came
+  out "requiring" a plutocratic country because the comparison sat in
+  `chance = { multiply = { if = { limit = … } } }`. `scan_requirements()`
+  accepts only `allow`/`locked`/`potential`/`can_start`/`trigger`, rejects
+  `_AI_BLOCKS`, and flips the operator under an odd number of `NOT`/`NOR`.
+  This took requirements from 125 (inflated) to 91 (real).
+- **Reforms bank, laws and privileges do not.** Per
+  `common/government_reforms/readme.txt`, `allow` is "whether the action can
+  start" and there is no `remove_if`, so a reform enacted while you qualified
+  survives the value drifting back — that is what makes the swap-away path
+  work. Law/privilege modifiers apply only while run.
+- Only **8 cabinet actions** move a value, and they are niche (Foster New
+  Culture, Unify Culture Group, Stroganov Influences, …). There is no generic
+  "promote value" cabinet action — don't claim one.
+- Estate-privilege capacity is bounded by **estate satisfaction**
+  (`GRANT_PRIVILEGE_SATISFACTION_IMPACT = 3`), not a slot count, and that
+  budget is not computable from the files. The path planner ranks candidates
+  by push and says so.
+- The parser hands booleans back as Python `True`, not the literal `"yes"` —
+  `has_tribal_government = yes` compiled to its own negation until that was
+  handled. Check the type before comparing to `'yes'`.
+
+---
+
 ## Git / deploy
 
 - Commit as **alcaras <alcaras@subcreation.net>** (repo-local git config —
