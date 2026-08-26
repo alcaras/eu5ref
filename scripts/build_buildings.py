@@ -10,20 +10,56 @@ from ref import (eid, ename, export_icon, mods_from_tree, rich, slugify,
 SETTLEMENTS = ['rural_settlement', 'town', 'city', 'megalopolis']
 
 
-def production_methods(b) -> list[dict]:
-    out = []
-    for pm in getattr(b, 'unique_production_methods', None) or []:
-        try:
-            pairs = pm if isinstance(pm, list) else list(pm)
-            for pm_name, tree in pairs:
-                goods = []
-                for k, v in tree:
-                    if k == 'category' or not isinstance(v, (int, float, str)):
-                        continue
-                    goods.append(f'{v} {ref.pretty(k)}')
-                out.append({'label': ref.pretty(str(pm_name)), 'value': ', '.join(goods)})
-        except Exception:
+def pm_record(pm, unique: bool) -> dict | None:
+    """One production method → {name, category, inputs, output}.
+
+    EU5 buildings are not Victoria-style input→output factories: 79 of the 90
+    production methods only *consume* goods (upkeep), and just 11 produce one.
+    So we record both sides and let the page say which it is.
+    """
+    name = getattr(pm, 'display_name', None) or ref.pretty(str(getattr(pm, 'name', '')))
+    inputs = []
+    for cost in getattr(pm, 'input', None) or []:
+        good = getattr(cost, 'resource', None)
+        val = getattr(cost, 'value', None)
+        if good is None or val is None:
             continue
+        inputs.append({
+            'good': getattr(good, 'display_name', None) or str(good),
+            'id': eid('good', good.name) if getattr(good, 'name', None) else None,
+            'amount': round(val, 4) if isinstance(val, float) else val,
+        })
+    produced = getattr(pm, 'produced', None)
+    amount = getattr(pm, 'output', None) or 0
+    output = None
+    if produced is not None and amount:
+        output = {
+            'good': getattr(produced, 'display_name', None) or str(produced),
+            'id': eid('good', produced.name) if getattr(produced, 'name', None) else None,
+            'amount': round(amount, 4) if isinstance(amount, float) else amount,
+        }
+    if not inputs and not output:
+        return None
+    return {
+        'name': name,
+        'category': ref.pretty(str(getattr(pm, 'category', '') or '')),
+        'inputs': inputs,
+        'output': output,
+        'unique': unique,
+    }
+
+
+def production_methods(b) -> list[dict]:
+    out, seen = [], set()
+    for attr, unique in (('unique_production_methods', True),
+                         ('possible_production_methods', False)):
+        for pm in getattr(b, attr, None) or []:
+            if not hasattr(pm, 'input'):
+                continue          # a raw tree the toolkit did not resolve
+            rec = pm_record(pm, unique)
+            if rec and rec['name'] not in seen:
+                seen.add(rec['name'])
+                out.append(rec)
     return out
 
 

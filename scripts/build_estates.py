@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
+import triggers
 from ref import (eid, ename, export_icon, hex_color, mods_from_tree, rich,
                  slugify, write_dataset, facet_meta)
 
@@ -39,6 +40,15 @@ def main():
         mods = mods_from_tree(getattr(p, 'modifier', None))
         mods += mods_from_tree(getattr(p, 'country_modifier', None))
         estate_obj = p.estate if not isinstance(p.estate, str) else None
+        # Privileges are gated in several different ways — a country tag, a
+        # culture or religion, an advance, an age — and the file gives no
+        # single field for it. Compile the country-ish gate, and summarise
+        # the rest of `allow` / `unlocked_by` so the page can show both.
+        gate, gate_labels = ref.gate_of(p, 'potential', 'allow')
+        requires = triggers.summarize(getattr(p, 'allow', None), ref.label_map(), limit=4)
+        unlocked_by = getattr(p, 'unlocked_by', None)
+        if unlocked_by is not None and not isinstance(unlocked_by, (str, int, float)):
+            unlocked_by = getattr(unlocked_by, 'display_name', None)
         pents.append({
             'id': eid('privilege', name),
             'type': 'privilege',
@@ -52,6 +62,10 @@ def main():
             'mods': mods,
             'data': {
                 'can_revoke': bool(getattr(p, 'can_revoke', True)),
+                'gate': gate,
+                'gate_labels': gate_labels,
+                'requires': requires,
+                'unlocked_by': unlocked_by if isinstance(unlocked_by, str) else None,
             },
         })
     write_dataset('estate-privileges', {

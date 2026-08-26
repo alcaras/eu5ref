@@ -48,36 +48,71 @@ REWARD_KEYS = {
 }
 
 
-def effect_keys(effect) -> list[str]:
-    """Top-level keys of an effect block, in file order."""
+# Inside an effect block, the key that names *what* it applies.
+# `add_country_modifier = { modifier = trusted_merchants months = 121 }`
+_SUBJECT_KEYS = ('modifier', 'name', 'type', 'advance', 'building', 'law',
+                 'reform', 'religion', 'culture', 'goods', 'estate', 'value',
+                 'amount', 'target', 'who')
+_DURATION_KEYS = ('months', 'years', 'days')
+
+
+def effect_lines(effect, labels) -> tuple[list[str], list[str]]:
+    """(readable lines, raw top-level keys) for an option's effect block.
+
+    "add_country_modifier" alone says nothing — the modifier's name lives one
+    level in, so we read that one level and stop. Going deeper only yields
+    scripted-effect plumbing."""
     tree = getattr(effect, 'tree', None) or effect
     if tree is None or not hasattr(tree, 'iterate_with_duplicates'):
-        return []
-    out = []
+        return [], []
+    lines, keys = [], []
     try:
-        for k, _ in tree.iterate_with_duplicates():
-            out.append(str(k))
+        pairs = list(tree.iterate_with_duplicates())
     except Exception:
-        return []
-    return out
+        return [], []
+    for k, v in pairs:
+        k = str(k)
+        keys.append(k)
+        label = ref.pretty(k)
+        if hasattr(v, 'iterate_with_duplicates'):
+            inner = {}
+            try:
+                for ik, iv in v.iterate_with_duplicates():
+                    inner.setdefault(str(ik), iv)
+            except Exception:
+                pass
+            subject = next((inner[s] for s in _SUBJECT_KEYS if s in inner), None)
+            dur = next(((d, inner[d]) for d in _DURATION_KEYS if d in inner), None)
+            if isinstance(subject, (str, int, float, bool)):
+                tok = str(subject)
+                name = labels.get(tok) or ref.pretty(tok)
+                line = f'{label}: {name}'
+                if dur:
+                    line += f' ({dur[1]} {dur[0]})'
+                lines.append(line)
+            else:
+                lines.append(label)
+        elif v is not None and str(v) not in ('yes', ''):
+            tok = str(v)
+            lines.append(f'{label}: {labels.get(tok) or ref.pretty(tok)}')
+        else:
+            lines.append(label)
+    return lines, keys
 
 
 def collect_options(e, labels) -> tuple[list[dict], list[str]]:
     options, rewards = [], []
     opts = getattr(e, 'option', None) or {}
     for key, opt in opts.items():
-        keys = effect_keys(getattr(opt, 'effect', None))
+        lines, keys = effect_lines(getattr(opt, 'effect', None), labels)
         for k in keys:
             tag = REWARD_KEYS.get(k)
             if tag and tag not in rewards:
                 rewards.append(tag)
-        # The effect block's own top-level keys ARE the outcome ("add_prestige",
-        # "change_gold_effect"). Walking inside them yields scripted-effect
-        # plumbing ("scale: -5", "text: …tt"), so we don't.
         options.append({
             'key': key,
             'name': ref.plain_text(str(getattr(opt, 'display_name', '') or '')) or key.rsplit('.', 1)[-1],
-            'effects': [ref.pretty(k) for k in keys[:8]],
+            'effects': lines[:8],
         })
     return options, sorted(rewards)
 

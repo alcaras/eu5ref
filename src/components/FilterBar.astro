@@ -69,6 +69,11 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
       if (count) count.textContent = visible === rows.length ? '' : `${visible} of ${rows.length} shown`;
     };
 
+    // ?q=… prefills the filter, so other pages can deep-link a filtered view
+    // (a country page linking to just its own flavour events, say).
+    const q0 = new URLSearchParams(location.search).get('q');
+    if (q0 && search) search.value = q0;
+
     search?.addEventListener('input', apply);
     for (const btn of scope.querySelectorAll<HTMLElement>('button[data-facet]')) {
       btn.addEventListener('click', () => {
@@ -81,5 +86,6 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
         apply();
       });
     }
+    apply();
   }
 </script>

@@ -35,14 +35,23 @@ const CAP = 40;
           unique[key]?.length > 0 && (
             <div class="uniq">
               <span class="uniq__label">{label}</span>
-              <span class="chips">
+              <div class="uniq__items">
                 {unique[key].slice(0, CAP).map((x: any) => (
-                  <a class="chip" href={`${base}${x.page}/${x.slug}`}>{x.name}</a>
+                  <a class="uitem" href={`${base}${x.page}/${x.slug}`}>
+                    <span class="uitem__n">{x.name}</span>
+                    {x.fx?.length > 0 && (
+                      <span class="uitem__fx">{x.fx.join(' · ')}</span>
+                    )}
+                  </a>
                 ))}
                 {unique[key].length > CAP && (
-                  <a class="chip" href={`${base}events`}>… and {unique[key].length - CAP} more</a>
+                  <a class="uitem"
+                     href={`${base}${unique[key][0].page}?q=${encodeURIComponent(entity.name)}`}>
+                    <span class="uitem__n">… and {unique[key].length - CAP} more</span>
+                    <span class="uitem__fx">see all {entity.name} {key}</span>
+                  </a>
                 )}
-              </span>
+              </div>
             </div>
           )
         )}
@@ -74,10 +83,23 @@ const CAP = 40;
 </Base>
 
 <style>
-  .uniq { display: flex; gap: 10px; align-items: baseline; margin-bottom: 8px; }
+  .uniq { margin-bottom: 16px; }
   .uniq__label {
-    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--text-faint); min-width: 150px; flex: none;
+    display: block; font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-faint); margin-bottom: 6px;
   }
+  /* Each entry shows what it does inline — the point is to read a country's
+     bespoke content without clicking or hovering through it. */
+  .uniq__items {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 4px 14px;
+  }
+  a.uitem {
+    display: flex; flex-direction: column; gap: 1px; padding: 4px 8px;
+    border-left: 2px solid var(--border-strong); border-radius: 0 3px 3px 0;
+    color: inherit; background: var(--bg-elev-2);
+  }
+  a.uitem:hover { text-decoration: none; border-left-color: var(--gold); background: var(--bg-elev-3); }
+  .uitem__n { font-size: 12.5px; color: var(--text-soft); font-weight: 600; }
+  .uitem__fx { font-size: 11.5px; color: var(--text-dim); }
   a.chip:hover { border-color: var(--gold-deep); color: var(--gold); text-decoration: none; }
 </style>

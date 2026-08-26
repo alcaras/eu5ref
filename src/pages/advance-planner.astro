@@ -5,9 +5,11 @@ import Base from '../layouts/Base.astro';
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
   <p class="pl-intro">
-    The advances screen, made scannable: <b>age tabs</b>, then each of the
-    game's branches as a band, with every prerequisite step as a column left
-    to right. Same branches and same tiers as in game, without the sprawl.
+    The advances screen, made scannable: <b>age tabs</b>, then one pane per
+    branch, with every prerequisite step as a column left to right. Same
+    branches and tiers as in game, without the sprawl — and each pane is only
+    as wide as its own branch, so the page never scrolls sideways. Click a
+    pane header to collapse it.
     Pick a country and everything that can never apply to it disappears —
     usually about two thirds of the 3,178 advances.
     <b>Hover</b> to light up an advance's whole prerequisite chain,
@@ -56,9 +58,8 @@ import Base from '../layouts/Base.astro';
       <span data-pl-count></span>
     </div>
 
-    <div class="pl-board-wrap" data-pl-wrap>
-      <div class="pl-board" data-pl-board></div>
-    </div>
+    <div class="pl-choices" data-pl-choices></div>
+    <div class="pl-panes" data-pl-panes></div>
     <div class="pl-tip" data-pl-tip hidden></div>
   </div>
 
@@ -107,13 +108,45 @@ import Base from '../layouts/Base.astro';
     .sw.st-res { background: var(--gold-deep); }
     .sw.st-cond { border: 1px dashed var(--text-dim); }
 
-    .pl-board-wrap {
-      overflow: auto; border: 1px solid var(--border); border-radius: var(--radius);
-      margin-top: 10px; background: var(--bg-elev); height: 74vh; position: relative;
-      cursor: grab;
+    /* One pane per root branch: each is only as wide as its own depth, so a
+       short branch never inherits the widest branch's scrollbar, and the page
+       itself only ever scrolls vertically. */
+    .pl-panes { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+    .pl-pane {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-elev); overflow: hidden;
     }
-    .pl-board-wrap.dragging { cursor: grabbing; }
+    .pl-pane__head {
+      display: flex; align-items: baseline; gap: 8px; cursor: pointer;
+      padding: 8px 12px; border-bottom: 1px solid var(--border-faint);
+      font-family: var(--font-display); font-size: 15px; color: var(--gold-soft);
+      user-select: none;
+    }
+    .pl-pane__head:hover { background: var(--bg-elev-2); }
+    .pl-pane__head small { font-family: var(--font-ui); font-size: 11px; color: var(--text-faint); }
+    .pl-pane__head .caret { margin-left: auto; color: var(--text-faint); font-size: 11px; }
+    .pl-pane__body { overflow-x: auto; overflow-y: hidden; }
+    .pl-pane.collapsed .pl-pane__body { display: none; }
     .pl-board { position: relative; transform-origin: 0 0; }
+
+    /* age focus picks — a choice per age, so they sit above the trees */
+    .pl-choices { margin-top: 14px; }
+    .pl-choices__bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .pl-choices__label {
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .pl-choices__bar button {
+      border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
+      border-radius: 999px; padding: 3px 12px; font-size: 12px; cursor: pointer;
+      font-family: var(--font-ui);
+    }
+    .pl-choices__bar button.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
+    .pl-choices__list {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 4px; margin-top: 8px;
+    }
+    .pl-choices__list .pnode { position: static; width: auto; }
 
     .pl-branch-head {
       position: absolute; font-family: var(--font-display); font-size: 14px;
@@ -210,7 +243,8 @@ import Base from '../layouts/Base.astro';
     let showOther = false;
     let ageIx = 0;
     let zoom = 1;
-    let autoFit = true;
+    let focusCat = 'adm';                       // which age-focus category is shown
+    const collapsedPanes = new Set<string>();   // per-branch collapse state
 
     // Geometry. The game draws each branch as a top-down tidy tree, which
     // is why its own screen sprawls: centring a parent over a wide subtree
@@ -319,119 +353,59 @@ import Base from '../layouts/Base.astro';
       return out;
     }
 
-    /** Lay each branch out as a tidy tree: y from the game's own tier,
-     *  x from a leaf counter with parents centred over their children. */
-    function layout(ids: string[]) {
+    /** Lay ONE branch out: tier = column, packed vertically, children
+     *  ordered by their parent's row so edges stay short. */
+    function layoutBranch(list: string[], parentOf: Map<string, string | null>) {
+      const local = new Set(list);
+      const minTier = Math.min(...list.map((id) => D.nodes[id].d));
+      const byTier = new Map<number, string[]>();
+      for (const id of list) {
+        const t = D.nodes[id].d - minTier;
+        if (!byTier.has(t)) byTier.set(t, []);
+        byTier.get(t)!.push(id);
+      }
+      const rowOf = new Map<string, number>();
+      const pos = new Map<string, { x: number; y: number }>();
+      let tallest = 0, maxX = 0;
+      for (const t of [...byTier.keys()].sort((a, b) => a - b)) {
+        const col = byTier.get(t)!;
+        col.sort((a, b) => {
+          const pa = parentOf.get(a), pb = parentOf.get(b);
+          const ra = pa && local.has(pa) && rowOf.has(pa) ? rowOf.get(pa)! : -1;
+          const rb = pb && local.has(pb) && rowOf.has(pb) ? rowOf.get(pb)! : -1;
+          return ra - rb || D.nodes[a].n.localeCompare(D.nodes[b].n);
+        });
+        col.forEach((id, row) => {
+          rowOf.set(id, row);
+          const x = 12 + t * COLW, y = 12 + row * ROWH;
+          pos.set(id, { x, y });
+          maxX = Math.max(maxX, x + NW);
+        });
+        tallest = Math.max(tallest, col.length);
+      }
+      return { pos, width: maxX + 12, height: tallest * ROWH + 24 };
+    }
+
+    /** Group the visible advances of this age into branches. */
+    function branchesOf(ids: string[]) {
       const vis = new Set(ids);
       const parentOf = new Map<string, string | null>();
       for (const id of ids) {
         const p = D.nodes[id].r.find((r) => vis.has(r) && D.nodes[r].b === D.nodes[id].b);
         parentOf.set(id, p ?? null);
       }
-      // The age's focus picks (common/advances/4_choices_{adm,dip,mil}.txt —
-      // 10 per category per age) are a choice, not a tree: give them their
-      // own band instead of burying them among the one-offs.
-      const choices = ids.filter((id) => D.nodes[id].sp);
-      const choiceSet = new Set(choices);
-
-      const kids = new Map<string, string[]>();
       const byBranch = new Map<string, string[]>();
       for (const id of ids) {
-        if (choiceSet.has(id)) continue;
-        const p = parentOf.get(id)!;
-        if (p) { if (!kids.has(p)) kids.set(p, []); kids.get(p)!.push(id); }
         const b = D.nodes[id].b;
         if (!byBranch.has(b)) byBranch.set(b, []);
         byBranch.get(b)!.push(id);
       }
-      for (const list of kids.values()) list.sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
-
-      // big branches first, singleton branches collected at the end
-      const branches = [...byBranch.entries()].sort((a, b) => b[1].length - a[1].length);
-      const trees = branches.filter(([, l]) => l.length > 1);
-      const loners = branches.filter(([, l]) => l.length === 1).flatMap(([, l]) => l);
-
-      // Each branch is a band down the page; inside a band, tier = column,
-      // packed top-to-bottom with no gaps. Within a column, nodes are
-      // ordered by their parent's row so children sit beside their parent
-      // and edges stay short.
-      const pos = new Map<string, { x: number; y: number }>();
-      const heads: { label: string; count: number; x: number; y: number; sub?: boolean }[] = [];
-      const rules: number[] = [];
-      let cursorY = 0, maxX = 0;
-
-      for (const [bid, list] of trees) {
-        const local = new Set(list);
-        const minTier = Math.min(...list.map((id) => D.nodes[id].d));
-        const byTier = new Map<number, string[]>();
-        for (const id of list) {
-          const t = D.nodes[id].d - minTier;
-          if (!byTier.has(t)) byTier.set(t, []);
-          byTier.get(t)!.push(id);
-        }
-        const rowOf = new Map<string, number>();
-        let tallest = 0;
-        for (const t of [...byTier.keys()].sort((a, b) => a - b)) {
-          const col = byTier.get(t)!;
-          col.sort((a, b) => {
-            const pa = parentOf.get(a), pb = parentOf.get(b);
-            const ra = pa && rowOf.has(pa) ? rowOf.get(pa)! : -1;
-            const rb = pb && rowOf.has(pb) ? rowOf.get(pb)! : -1;
-            return ra - rb || D.nodes[a].n.localeCompare(D.nodes[b].n);
-          });
-          col.forEach((id, row) => {
-            rowOf.set(id, row);
-            const x = 16 + t * COLW;
-            const y = cursorY + TOP + row * ROWH;
-            pos.set(id, { x, y });
-            maxX = Math.max(maxX, x + NW);
-          });
-          tallest = Math.max(tallest, col.length);
-        }
-        heads.push({ label: D.nodes[bid]?.n ?? 'Branch', count: list.length, x: 16, y: cursorY + 4 });
-        cursorY += TOP + tallest * ROWH + BRANCH_GAP;
-        rules.push(cursorY - BRANCH_GAP / 2);
-      }
-
-      // age focus picks: one labelled column per category
-      if (choices.length) {
-        heads.push({ label: 'Age Choices', count: choices.length, x: 16, y: cursorY + 4 });
-        const SPEC: [string, string][] = [['adm', 'Administrative'], ['dip', 'Diplomatic'], ['mil', 'Military']];
-        let tallest = 0;
-        SPEC.forEach(([key, label], col) => {
-          const list = choices.filter((id) => D.nodes[id].sp === key)
-            .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
-          if (!list.length) return;
-          const x = 16 + col * COLW;
-          heads.push({ label, count: list.length, x, y: cursorY + TOP - 4, sub: true });
-          list.forEach((id, row) => {
-            const y = cursorY + TOP + 16 + row * ROWH;
-            pos.set(id, { x, y });
-            maxX = Math.max(maxX, x + NW);
-          });
-          tallest = Math.max(tallest, list.length);
-        });
-        cursorY += TOP + 16 + tallest * ROWH + BRANCH_GAP;
-        rules.push(cursorY - BRANCH_GAP / 2);
-      }
-
-      // standalone advances (national one-offs) wrap into a compact grid
-      if (loners.length) {
-        heads.push({ label: 'Standalone', count: loners.length, x: 16, y: cursorY + 4 });
-        loners.sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
-        const perRow = Math.max(4, Math.round((maxX - 16) / COLW) || 8);
-        let lastY = cursorY;
-        loners.forEach((id, i) => {
-          const x = 16 + (i % perRow) * COLW;
-          const y = cursorY + TOP + Math.floor(i / perRow) * ROWH;
-          pos.set(id, { x, y });
-          maxX = Math.max(maxX, x + NW);
-          lastY = Math.max(lastY, y);
-        });
-        cursorY = lastY + NH;
-      }
-      if (rules.length) rules.pop();
-      return { pos, heads, rules, width: maxX + 24, height: cursorY + 20 };
+      const trees = [...byBranch.entries()].filter(([, l]) => l.length > 1)
+        .sort((a, b) => b[1].length - a[1].length);
+      const loners = [...byBranch.entries()].filter(([, l]) => l.length === 1)
+        .flatMap(([, l]) => l)
+        .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+      return { trees, loners, parentOf };
     }
 
     // ── render ─────────────────────────────────────────────────
@@ -466,73 +440,111 @@ import Base from '../layouts/Base.astro';
       $('[data-pl-context]').innerHTML = html;
     }
 
-    function renderBoard() {
-      const board = $('[data-pl-board]');
-      const ids = visibleIds();
-      if (!ids.length) { board.innerHTML = '<div class="pl-empty">Nothing in this age for that filter.</div>'; return; }
-      const { pos, heads, rules, width, height } = layout(ids);
+    function nodeHtml(id: string, pos?: { x: number; y: number }) {
+      const n = D.nodes[id];
+      const st = statusOf(id);
+      const order = [...planned];
+      const cls = ['pnode', 'k' + n.k,
+        planned.has(id) ? 'planned' : '',
+        researched.has(id) ? 'researched' : '',
+        st === 'conditional' ? 'conditional' : '',
+        st === 'other' ? 'foreign' : ''].filter(Boolean).join(' ');
+      const qn = planned.has(id) ? `<span class="qn">${order.indexOf(id) + 1}</span>` : '';
+      const badge = !qn && st !== 'common' && n.gl?.length ? '<span class="badge">◆</span>' : '';
+      const style = pos ? ` style="left:${pos.x}px; top:${pos.y}px"` : '';
+      return `<div class="${cls}"${style} data-id="${id}">` +
+        (n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '') +
+        `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
+    }
 
-      childIndex = new Map();
-      for (const id of pos.keys()) {
-        for (const r of D.nodes[id].r) {
-          if (!pos.has(r)) continue;
-          if (!childIndex.has(r)) childIndex.set(r, []);
-          childIndex.get(r)!.push(id);
-        }
-      }
-
-      let html = '';
-      for (const h of heads) {
-        html += `<div class="pl-branch-head${h.sub ? ' sub' : ''}" style="left:${h.x}px; top:${h.y}px">` +
-          `${h.label}<small>${h.count}</small></div>`;
-      }
-      for (const y of rules) {
-        html += `<div class="pl-band-rule" style="left:8px; top:${y}px; width:${width - 32}px"></div>`;
-      }
+    function paneHtml(label: string, count: number, list: string[],
+                      parentOf: Map<string, string | null>, key: string) {
+      const { pos, width, height } = layoutBranch(list, parentOf);
       let paths = '';
-      for (const [id, p] of pos) {
+      for (const [id, pt] of pos) {
         for (const r of D.nodes[id].r) {
           const rp = pos.get(r);
           if (!rp) continue;
-          // tier columns: leave the prerequisite's right edge, enter the
-          // dependant's left edge
-          const x1 = rp.x + NW, y1 = rp.y + NH / 2, x2 = p.x, y2 = p.y + NH / 2;
+          const x1 = rp.x + NW, y1 = rp.y + NH / 2, x2 = pt.x, y2 = pt.y + NH / 2;
           const mx = (x1 + x2) / 2;
           const hot = planned.has(id) && (planned.has(r) || researched.has(r));
           paths += `<path class="${hot ? 'hot' : ''}" data-a="${r}" data-b="${id}" ` +
             `d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/>`;
         }
       }
-      html += `<svg class="pl-edges" width="${width}" height="${height}">${paths}</svg>`;
+      let inner = `<svg class="pl-edges" width="${width}" height="${height}">${paths}</svg>`;
+      for (const [id, pt] of pos) inner += nodeHtml(id, pt);
+      const collapsed = collapsedPanes.has(key) ? ' collapsed' : '';
+      return `<section class="pl-pane${collapsed}" data-pane="${key}">` +
+        `<header class="pl-pane__head" data-pane-toggle>${label}<small>${count}</small>` +
+        `<span class="caret">${collapsed ? '▸' : '▾'}</span></header>` +
+        `<div class="pl-pane__body"><div class="pl-board" style="width:${width}px;height:${height}px;` +
+        `transform:scale(${zoom})">${inner}</div></div></section>`;
+    }
 
-      const order = [...planned];
-      for (const [id, p] of pos) {
-        const n = D.nodes[id];
-        const st = statusOf(id);
-        const cls = ['pnode', 'k' + n.k,
-          planned.has(id) ? 'planned' : '',
-          researched.has(id) ? 'researched' : '',
-          st === 'conditional' ? 'conditional' : '',
-          st === 'other' ? 'foreign' : ''].filter(Boolean).join(' ');
-        const qn = planned.has(id) ? `<span class="qn">${order.indexOf(id) + 1}</span>` : '';
-        const badge = !qn && st !== 'common' && n.gl?.length ? `<span class="badge">◆</span>` : '';
-        html += `<div class="${cls}" style="left:${p.x}px; top:${p.y}px" data-id="${id}">` +
-          (n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '') +
-          `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
+    function renderBoard() {
+      const ids = visibleIds();
+      const panes = $('[data-pl-panes]');
+      const choices = $('[data-pl-choices]');
+      if (!ids.length) {
+        panes.innerHTML = '<div class="pl-empty">Nothing in this age for that filter.</div>';
+        choices.innerHTML = '';
+        return;
       }
-      board.innerHTML = html;
-      board.style.width = width + 'px';
-      board.style.height = height + 'px';
-      if (autoFit) {
-        // first paint of a view: zoom out to fit the widest branch, but not
-        // so far that the cards stop being cards
-        const avail = $('[data-pl-wrap]').clientWidth - 16;
-        zoom = Math.min(1, Math.max(0.62, avail / width));
-        autoFit = false;
+
+      // Each age offers one focus pick per category, so they belong above
+      // the trees as a choice — not buried in a band at the bottom.
+      const choiceIds = ids.filter((id) => D.nodes[id].sp);
+      if (choiceIds.length) {
+        const SPEC: [string, string][] = [['adm', 'Administrative'], ['dip', 'Diplomatic'], ['mil', 'Military']];
+        const avail = SPEC.filter(([k]) => choiceIds.some((id) => D.nodes[id].sp === k));
+        if (!avail.some(([k]) => k === focusCat)) focusCat = avail[0]?.[0] || 'adm';
+        const list = choiceIds.filter((id) => D.nodes[id].sp === focusCat)
+          .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+        choices.innerHTML =
+          `<div class="pl-choices__bar"><span class="pl-choices__label">Age focus</span>` +
+          avail.map(([k, lab]) =>
+            `<button data-focus="${k}" class="${k === focusCat ? 'on' : ''}">${lab}` +
+            `<small> ${choiceIds.filter((id) => D.nodes[id].sp === k).length}</small></button>`).join('') +
+          `</div><div class="pl-choices__list">${list.map((id) => nodeHtml(id)).join('')}</div>`;
+      } else {
+        choices.innerHTML = '';
       }
-      applyZoom();
-      $('[data-pl-wrap]').scrollTop = 0;
-      $('[data-pl-wrap]').scrollLeft = 0;
+
+      const rest = ids.filter((id) => !D.nodes[id].sp);
+      const { trees, loners, parentOf } = branchesOf(rest);
+      childIndex = new Map();
+      for (const id of rest) {
+        for (const r of D.nodes[id].r) {
+          if (!childIndex.has(r)) childIndex.set(r, []);
+          childIndex.get(r)!.push(id);
+        }
+      }
+
+      let html = '';
+      for (const [bid, list] of trees) {
+        html += paneHtml(D.nodes[bid]?.n ?? 'Branch', list.length, list, parentOf, bid);
+      }
+      if (loners.length) {
+        const per = Math.max(3, Math.floor(($('[data-pl-panes]').clientWidth - 40) / COLW) || 5);
+        const fake = new Map<string, string | null>();
+        // lay the one-offs out as a plain grid by faking tiers
+        const pos = new Map<string, { x: number; y: number }>();
+        loners.forEach((id, k) => pos.set(id, {
+          x: 12 + (k % per) * COLW, y: 12 + Math.floor(k / per) * ROWH,
+        }));
+        const w = 12 + Math.min(loners.length, per) * COLW;
+        const h = 24 + Math.ceil(loners.length / per) * ROWH;
+        let inner = '';
+        for (const [id, pt] of pos) inner += nodeHtml(id, pt);
+        const collapsed = collapsedPanes.has('__loners') ? ' collapsed' : '';
+        html += `<section class="pl-pane${collapsed}" data-pane="__loners">` +
+          `<header class="pl-pane__head" data-pane-toggle>Standalone<small>${loners.length}</small>` +
+          `<span class="caret">${collapsed ? '▸' : '▾'}</span></header>` +
+          `<div class="pl-pane__body"><div class="pl-board" style="width:${w}px;height:${h}px;` +
+          `transform:scale(${zoom})">${inner}</div></div></section>`;
+      }
+      panes.innerHTML = html;
 
       const total = Object.values(D.nodes).filter((n) => n.a === ageIx).length;
       $('[data-pl-count]').textContent =
@@ -620,44 +632,23 @@ import Base from '../layouts/Base.astro';
       });
     }
 
-    // ── pan & zoom ─────────────────────────────────────────────
-    function wirePanZoom() {
-      const wrap = $('[data-pl-wrap]');
-      let down = false, sx = 0, sy = 0, sl = 0, stp = 0;
-      wrap.addEventListener('mousedown', (e) => {
-        if ((e.target as HTMLElement).closest('[data-id]')) return;
-        down = true; sx = e.clientX; sy = e.clientY;
-        sl = wrap.scrollLeft; stp = wrap.scrollTop;
-        wrap.classList.add('dragging');
-      });
-      addEventListener('mousemove', (e) => {
-        if (!down) return;
-        wrap.scrollLeft = sl - (e.clientX - sx);
-        wrap.scrollTop = stp - (e.clientY - sy);
-      });
-      addEventListener('mouseup', () => { down = false; wrap.classList.remove('dragging'); });
-      wrap.addEventListener('wheel', (e) => {
-        if (!e.ctrlKey && !e.metaKey) return;
-        e.preventDefault();
-        setZoom(zoom * (e.deltaY < 0 ? 1.12 : 0.89));
-      }, { passive: false });
+    // ── zoom (panes scroll on their own; no canvas dragging needed) ──
+    function wireZoom() {
       for (const b of root.querySelectorAll<HTMLElement>('[data-zoom]')) {
-        b.addEventListener('click', () => setZoom(b.dataset.zoom === '+' ? zoom * 1.2 : zoom / 1.2));
+        b.addEventListener('click', () => setZoom(b.dataset.zoom === '+' ? zoom * 1.15 : zoom / 1.15));
       }
     }
     function setZoom(z: number) {
-      zoom = Math.min(1.5, Math.max(0.2, z));
+      zoom = Math.min(1.4, Math.max(0.5, z));
       applyZoom();
     }
-    /** The board is scaled with a transform, so the scroll container needs
-     *  padding equal to the scaled size to keep the whole tree reachable. */
     function applyZoom() {
-      const board = $('[data-pl-board]');
-      board.style.transform = `scale(${zoom})`;
-      const w = parseFloat(board.style.width) * zoom;
-      const h = parseFloat(board.style.height) * zoom;
-      board.style.marginRight = `${Math.max(0, w - parseFloat(board.style.width))}px`;
-      board.style.marginBottom = `${Math.max(0, h - parseFloat(board.style.height))}px`;
+      for (const board of root.querySelectorAll<HTMLElement>('.pl-board')) {
+        const w = parseFloat(board.style.width), h = parseFloat(board.style.height);
+        board.style.transform = `scale(${zoom})`;
+        board.style.marginRight = `${Math.max(0, w * zoom - w)}px`;
+        board.style.marginBottom = `${Math.max(0, h * zoom - h)}px`;
+      }
       ($('[data-zoom-label]') as HTMLElement).textContent = Math.round(zoom * 100) + '%';
     }
 
@@ -683,7 +674,7 @@ import Base from '../layouts/Base.astro';
       dec(p.get('p'), planned);
       dec(p.get('r'), researched);
 
-      wirePickers(); wirePanZoom();
+      wirePickers(); wireZoom();
 
       ($('[data-pl-other]') as HTMLInputElement).addEventListener('change', (e) => {
         showOther = (e.target as HTMLInputElement).checked; render();
@@ -696,10 +687,10 @@ import Base from '../layouts/Base.astro';
       $('[data-pl-clear]').addEventListener('click', () => { planned.clear(); researched.clear(); render(); });
       $('[data-pl-ages]').addEventListener('click', (e) => {
         const b = (e.target as HTMLElement).closest('[data-age]') as HTMLElement | null;
-        if (b) { ageIx = +b.dataset.age!; autoFit = true; render(); }
+        if (b) { ageIx = +b.dataset.age!; render(); }
       });
 
-      const board = $('[data-pl-board]');
+      const board = $('[data-pl-panes]');
       board.addEventListener('click', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
         if (!el) return;
@@ -717,6 +708,32 @@ import Base from '../layouts/Base.astro';
         else { researched.add(id); planned.delete(id); }
         render();
       });
+      // pane headers collapse their branch
+      board.addEventListener('click', (e) => {
+        const h = (e.target as HTMLElement).closest('[data-pane-toggle]') as HTMLElement | null;
+        if (!h) return;
+        const key = (h.closest('[data-pane]') as HTMLElement).dataset.pane!;
+        if (collapsedPanes.has(key)) collapsedPanes.delete(key); else collapsedPanes.add(key);
+        render();
+      });
+      // the age-focus picks are interactive too
+      const choicesEl = $('[data-pl-choices]');
+      choicesEl.addEventListener('click', (e) => {
+        const f = (e.target as HTMLElement).closest('[data-focus]') as HTMLElement | null;
+        if (f) { focusCat = f.dataset.focus!; render(); return; }
+        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
+        if (!el) return;
+        const id = el.dataset.id!;
+        if ((e as MouseEvent).altKey) { location.href = `${baseUrl}advances/${D.nodes[id].s}`; return; }
+        if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id);
+        render();
+      });
+      choicesEl.addEventListener('mousemove', (e) => {
+        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
+        if (el) showTip(e as MouseEvent, el.dataset.id!); else tip.hidden = true;
+      });
+      choicesEl.addEventListener('mouseleave', () => { tip.hidden = true; });
+
       let lit: string | null = null;
       board.addEventListener('mousemove', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
@@ -731,7 +748,7 @@ import Base from '../layouts/Base.astro';
       function focusChain(id: string | null) {
         if (id === lit) return;
         lit = id;
-        const board = $('[data-pl-board]');
+        const board = $('[data-pl-panes]');
         for (const el of board.querySelectorAll('.lit')) el.classList.remove('lit');
         if (!id) { board.classList.remove('focus'); return; }
         const chain = new Set<string>([id]);

@@ -67,8 +67,19 @@ def unique_index() -> dict[str, dict[str, list]]:
                 bucket = idx.setdefault(val, {})
                 lst = bucket.setdefault(key, [])
                 if not any(x['id'] == e['id'] for x in lst):
+                    # Carry a short "what it does" so the country page is
+                    # scannable without clicking or hovering through.
+                    fx = [f"{m['value']} {m['label']}" for m in (e.get('mods') or [])[:3]]
+                    if not fx and key == 'events':
+                        fx = [o for opt in data.get('options', [])[:2]
+                              for o in opt.get('effects', [])[:2]]
+                    if not fx and key == 'units':
+                        d = data
+                        fx = [f"{lbl} {d[k]}" for k, lbl in
+                              (('combat_power', 'power'), ('max_strength', 'strength'))
+                              if d.get(k)]
                     lst.append({'id': e['id'], 'name': e['name'], 'slug': e['slug'],
-                                'page': page})
+                                'page': page, 'fx': fx[:3]})
     for buckets in idx.values():
         for lst in buckets.values():
             lst.sort(key=lambda x: x['name'])
