@@ -169,8 +169,8 @@ export const TABS: Tab[] = [
   // ── World ─────────────────────────────────────────────────────────
   {
     slug: 'map', icon: '🗺️', label: 'Map', section: 'World',
-    status: 'placeholder',
-    summary: 'Continents → regions → areas → provinces, with a location index',
+    status: 'built',
+    summary: 'The 1337 world painted by good, culture, religion, terrain or climate',
   },
   {
     slug: 'locations', icon: '📍', label: 'Locations', section: 'World',

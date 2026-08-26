@@ -1,0 +1,194 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Map" active="map" pageMark="🗺️" eyebrow="World"
+  description="The Europa Universalis V world map at 1337, painted by trade good, culture, religion, terrain or climate.">
+  <p style="max-width: 740px; color: var(--text-soft);">
+    The 1337 map, repainted from the game's own location image — every one of
+    its 28,573 locations. Switch modes to see what a region grows, who lives
+    there, or what it believes. Drag to pan, scroll to zoom, hover for the
+    location, click to open its area.
+  </p>
+
+  <div class="mp" data-mp>
+    <div class="mp-modes" data-mp-modes></div>
+    <div class="mp-stage" data-mp-stage>
+      <div class="mp-canvas" data-mp-canvas>
+        <img data-mp-img alt="" draggable="false" />
+      </div>
+      <div class="mp-hud" data-mp-hud>loading map…</div>
+      <div class="mp-zoom">
+        <button type="button" data-mp-zoom="-">−</button>
+        <button type="button" data-mp-zoom="0">reset</button>
+        <button type="button" data-mp-zoom="+">+</button>
+      </div>
+    </div>
+    <div class="mp-legend" data-mp-legend></div>
+  </div>
+
+  <style is:global>
+    .mp-modes { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .mp-modes button {
+      border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
+      border-radius: var(--radius); padding: 5px 13px; font-size: 12.5px;
+      cursor: pointer; font-family: var(--font-ui);
+    }
+    .mp-modes button.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
+    .mp-stage {
+      position: relative; margin-top: 10px; height: 68vh; overflow: hidden;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: #0d1018; cursor: grab;
+    }
+    .mp-stage.dragging { cursor: grabbing; }
+    .mp-canvas { position: absolute; transform-origin: 0 0; }
+    .mp-canvas img { display: block; image-rendering: pixelated; }
+    .mp-hud {
+      position: absolute; left: 10px; bottom: 10px; z-index: 5;
+      background: color-mix(in oklab, var(--bg-elev-3) 92%, transparent);
+      border: 1px solid var(--border-strong); border-radius: var(--radius);
+      padding: 7px 11px; font-size: 12.5px; color: var(--text-soft);
+      pointer-events: none; max-width: 340px; line-height: 1.45;
+    }
+    .mp-hud b { color: var(--text); display: block; }
+    .mp-hud small { color: var(--text-faint); }
+    .mp-zoom { position: absolute; right: 10px; top: 10px; z-index: 5; display: flex; gap: 3px; }
+    .mp-zoom button {
+      border: 1px solid var(--border-strong); background: var(--bg-elev);
+      color: var(--text-dim); border-radius: var(--radius-sm);
+      padding: 3px 9px; font-size: 12px; cursor: pointer; font-family: var(--font-ui);
+    }
+    .mp-zoom button:hover { color: var(--text); }
+    .mp-legend {
+      display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px;
+      font-size: 11.5px; color: var(--text-dim);
+    }
+    .mp-legend span { display: flex; align-items: center; gap: 5px; }
+    .mp-legend i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+    .mp-legend small { color: var(--text-faint); }
+  </style>
+
+  <script>
+    const root = document.querySelector('[data-mp]')!;
+    const $ = (s: string) => root.querySelector(s) as HTMLElement;
+    const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+    const stage = $('[data-mp-stage]');
+    const canvas = $('[data-mp-canvas]');
+    const img = $('[data-mp-img]') as HTMLImageElement;
+    const hud = $('[data-mp-hud]');
+
+    let L: any = null;
+    let mode = 'religion';
+    let zoom = 1, ox = 0, oy = 0;
+    // the id map, drawn once into an offscreen canvas so we can read which
+    // location a pixel belongs to
+    let idCtx: CanvasRenderingContext2D | null = null;
+
+    function apply() {
+      canvas.style.transform = `translate(${ox}px, ${oy}px) scale(${zoom})`;
+    }
+    function fit() {
+      if (!L) return;
+      zoom = Math.max(stage.clientWidth / L.width, stage.clientHeight / L.height);
+      ox = (stage.clientWidth - L.width * zoom) / 2;
+      oy = (stage.clientHeight - L.height * zoom) / 2;
+      apply();
+    }
+    function setMode(m: string) {
+      mode = m;
+      img.src = `${baseUrl}map/${m}.png`;
+      for (const b of root.querySelectorAll('[data-mode]')) b.classList.toggle('on',
+        (b as HTMLElement).dataset.mode === m);
+      const entries = L.modes[m].entries.slice(0, 26);
+      $('[data-mp-legend]').innerHTML = entries.map((e: any) =>
+        `<span><i style="background:${e.color}"></i>${e.name} <small>${e.count}</small></span>`).join('') +
+        (L.modes[m].entries.length > entries.length
+          ? `<span><small>+${L.modes[m].entries.length - entries.length} more</small></span>` : '');
+    }
+
+    function locAt(clientX: number, clientY: number) {
+      if (!idCtx || !L) return null;
+      const r = stage.getBoundingClientRect();
+      const x = Math.floor((clientX - r.left - ox) / zoom);
+      const y = Math.floor((clientY - r.top - oy) / zoom);
+      if (x < 0 || y < 0 || x >= L.width || y >= L.height) return null;
+      const [r8, g8, b8] = idCtx.getImageData(x, y, 1, 1).data;
+      const ix = (r8 << 16) | (g8 << 8) | b8;
+      if (ix === 0xFFFFFF) return null;
+      return L.locations[ix] || null;
+    }
+
+    fetch(`${baseUrl}map/legend.json`).then((r) => r.json()).then((data) => {
+      L = data;
+      $('[data-mp-modes]').innerHTML = Object.entries(L.modes).map(([k, v]: any) =>
+        `<button data-mode="${k}">${v.label}</button>`).join('');
+      $('[data-mp-modes]').addEventListener('click', (e) => {
+        const b = (e.target as HTMLElement).closest('[data-mode]') as HTMLElement | null;
+        if (b) setMode(b.dataset.mode!);
+      });
+      img.width = L.width; img.height = L.height;
+      setMode(mode);
+      fit();
+      hud.textContent = 'hover a location';
+
+      // load the id map for hit-testing
+      const idImg = new Image();
+      idImg.onload = () => {
+        const c = document.createElement('canvas');
+        c.width = L.width; c.height = L.height;
+        const ctx = c.getContext('2d', { willReadFrequently: true })!;
+        ctx.drawImage(idImg, 0, 0);
+        idCtx = ctx;
+      };
+      idImg.src = `${baseUrl}map/index.png`;
+    });
+
+    // pan
+    let down = false, sx = 0, sy = 0, bx = 0, by = 0, moved = false;
+    stage.addEventListener('mousedown', (e) => {
+      down = true; moved = false;
+      sx = e.clientX; sy = e.clientY; bx = ox; by = oy;
+      stage.classList.add('dragging');
+    });
+    addEventListener('mousemove', (e) => {
+      if (down) {
+        ox = bx + (e.clientX - sx); oy = by + (e.clientY - sy);
+        if (Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) > 3) moved = true;
+        apply();
+        return;
+      }
+      const l = locAt(e.clientX, e.clientY);
+      if (!l) { hud.textContent = 'hover a location'; return; }
+      hud.innerHTML = `<b>${l[0]}</b>` +
+        (l[2] ? `${l[2]}<br>` : '') +
+        `<small>${[l[3], l[4]].filter(Boolean).join(' · ')}</small>`;
+    });
+    addEventListener('mouseup', () => { down = false; stage.classList.remove('dragging'); });
+    stage.addEventListener('click', (e) => {
+      if (moved) return;
+      const l = locAt(e.clientX, e.clientY);
+      if (l && l[1]) location.href = `${baseUrl}areas/${l[1]}`;
+    });
+    stage.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const r = stage.getBoundingClientRect();
+      const mx = e.clientX - r.left, my = e.clientY - r.top;
+      const f = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+      const nz = Math.min(12, Math.max(0.3, zoom * f));
+      ox = mx - (mx - ox) * (nz / zoom);
+      oy = my - (my - oy) * (nz / zoom);
+      zoom = nz; apply();
+    }, { passive: false });
+    for (const b of root.querySelectorAll<HTMLElement>('[data-mp-zoom]')) {
+      b.addEventListener('click', () => {
+        const k = b.dataset.mpZoom;
+        if (k === '0') return fit();
+        const nz = Math.min(12, Math.max(0.3, zoom * (k === '+' ? 1.4 : 1 / 1.4)));
+        const cx = stage.clientWidth / 2, cy = stage.clientHeight / 2;
+        ox = cx - (cx - ox) * (nz / zoom);
+        oy = cy - (cy - oy) * (nz / zoom);
+        zoom = nz; apply();
+      });
+    }
+    addEventListener('resize', fit);
+  </script>
+</Base>
