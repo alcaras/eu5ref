@@ -30,8 +30,15 @@ interface Props {
   columns: Column[];
   pagePrefix: string; // route prefix for kind 'name' links, e.g. 'goods'
   csvName?: string;   // download filename (default: eu5ref-<pagePrefix>)
+  // Column to sort by on load, e.g. {key:'age', dir:'asc'}
+  defaultSort?: { key: string; dir?: 'asc' | 'desc' };
+  // Columns whose values have a meaningful order that is not alphabetical
+  // (ages run Traditions → Revolutions, not Absolutism → Revolutions).
+  // key → values in order; cells get a numeric data-sort from it.
+  sortOrder?: Record<string, string[]>;
 }
-const { entities, columns, pagePrefix, csvName = `eu5ref-${pagePrefix}` } = Astro.props;
+const { entities, columns, pagePrefix, csvName = `eu5ref-${pagePrefix}`,
+        defaultSort, sortOrder = {} } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const pretty = (v: string) => String(v).replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
@@ -49,8 +56,20 @@ const cellValue = (e: any, c: Column) =>
   : c.kind === 'facet' ? e.facets?.[c.key]
   : e.data?.[c.key];
 
+/** Explicit sort rank for a cell whose column declares a custom order. */
+function sortRank(e: any, c: Column): number | undefined {
+  const order = sortOrder[c.key];
+  if (!order) return undefined;
+  const v = cellValue(e, c);
+  const i = order.indexOf(Array.isArray(v) ? v[0] : (v as string));
+  return i === -1 ? order.length : i;
+}
+const defaultSortIx = defaultSort
+  ? columns.findIndex((c) => c.key === defaultSort.key)
+  : -1;
+
 ---
-<div class="etbl-wrap" data-etbl>
+<div class="etbl-wrap" data-etbl data-default-sort={defaultSortIx >= 0 ? String(defaultSortIx) : undefined} data-default-dir={defaultSort?.dir || 'asc'}>
   <div class="etbl-tools">
     <button type="button" class="csv-btn" data-csv-btn data-csv-name={csvName}
             title="Download the rows currently shown as CSV">⤓ CSV</button>
@@ -58,7 +77,12 @@ const cellValue = (e: any, c: Column) =>
   <div class="etbl-scroll">
   <table class="etbl">
     <thead>
-      <tr>{columns.map((c) => <th>{c.label}</th>)}</tr>
+      <tr>{columns.map((c, i) => (
+        <th data-sort-col={i} tabindex="0" role="button"
+            class={i === defaultSortIx ? `sorted-${defaultSort?.dir || 'asc'}` : undefined}>
+          {c.label}<span class="sort-caret"></span>
+        </th>
+      ))}</tr>
     </thead>
     <tbody>
       {entities.map((e) => (
@@ -66,8 +90,10 @@ const cellValue = (e: any, c: Column) =>
           {columns.map((c) => {
             const v = cellValue(e, c);
             const empty = v == null || (Array.isArray(v) && v.length === 0) || v === '';
+            const rank = sortRank(e, c);
             return (
-              <td class={c.kind === 'num' ? 'num' : undefined}>
+              <td class={c.kind === 'num' ? 'num' : undefined}
+                  data-sort={rank === undefined ? undefined : String(rank)}>
                 {c.kind === 'name' || c.kind === 'namePlain' ? (
                   <Fragment>
                     {c.kind === 'name' ? (
@@ -124,6 +150,69 @@ const cellValue = (e: any, c: Column) =>
 </div>
 
 <script>
+  // Click any header to sort. Cells may carry an explicit data-sort rank for
+  // columns whose order is not alphabetical (ages); otherwise we sort
+  // numerically when the whole column parses as numbers, else by text.
+  // Blanks always sink, in both directions — an empty cell is never what
+  // someone is sorting toward.
+  function wireSort(wrap: Element) {
+    const table = wrap.querySelector('table.etbl') as HTMLElement | null;
+    const body = wrap.querySelector('tbody') as HTMLElement | null;
+    if (!table || !body) return;
+    const heads = [...wrap.querySelectorAll<HTMLElement>('th[data-sort-col]')];
+    const txt = (el: Element) => (el.textContent || '').replace(/\s+/g, ' ').trim();
+
+    const sortBy = (ix: number, dir: 'asc' | 'desc') => {
+      const rows = [...body.querySelectorAll<HTMLElement>('tr')];
+      const keyed = rows.map((tr, i) => {
+        const td = tr.children[ix] as HTMLElement | undefined;
+        const explicit = td?.dataset.sort;
+        const raw = td ? txt(td) : '';
+        const blank = raw === '' || raw === '—';
+        let k: number | string;
+        if (explicit !== undefined) k = Number(explicit);
+        else {
+          const n = Number(raw.replace(/[, ]/g, ''));
+          k = raw !== '' && !Number.isNaN(n) ? n : raw.toLowerCase();
+        }
+        return { tr, k, blank, i };
+      });
+      const mul = dir === 'asc' ? 1 : -1;
+      keyed.sort((a, b) => {
+        if (a.blank && b.blank) return a.i - b.i;
+        if (a.blank) return 1;
+        if (b.blank) return -1;
+        if (typeof a.k === 'number' && typeof b.k === 'number') {
+          return (a.k - b.k) * mul || a.i - b.i;
+        }
+        return String(a.k).localeCompare(String(b.k), undefined,
+          { numeric: true, sensitivity: 'base' }) * mul || a.i - b.i;
+      });
+      const frag = document.createDocumentFragment();
+      for (const r of keyed) frag.appendChild(r.tr);
+      body.appendChild(frag);
+      for (const h of heads) h.classList.remove('sorted-asc', 'sorted-desc');
+      heads[ix]?.classList.add(`sorted-${dir}`);
+    };
+
+    heads.forEach((th, ix) => {
+      const run = () => {
+        const dir = th.classList.contains('sorted-asc') ? 'desc' : 'asc';
+        sortBy(ix, dir);
+      };
+      th.addEventListener('click', run);
+      th.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); run(); }
+      });
+    });
+
+    const ds = (wrap as HTMLElement).dataset.defaultSort;
+    if (ds !== undefined) {
+      sortBy(Number(ds), ((wrap as HTMLElement).dataset.defaultDir as 'asc' | 'desc') || 'asc');
+    }
+  }
+  for (const wrap of document.querySelectorAll('[data-etbl]')) wireSort(wrap);
+
   // CSV export reads the rendered table rather than a duplicate JSON copy —
   // on a 7,500-row page that copy doubled the HTML. Cell text is what the
   // reader sees; hidden (filtered-out) rows are skipped. BOM so Excel opens

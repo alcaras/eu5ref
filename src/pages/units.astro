@@ -6,6 +6,7 @@ import data from '../data/units.json';
 
 const entities = data.entities;
 const facets = data.facets;
+const AGE_ORDER = ['Traditions','Renaissance','Discovery','Reformation','Absolutism','Revolutions'];
 const columns = [
   { key: 'name', label: 'Unit', kind: 'name' },
   { key: 'category', label: 'Category', kind: 'facet' },
@@ -30,6 +31,6 @@ const columns = [
 >
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter units…" />
-    <EntityTable entities={entities} columns={columns as any} pagePrefix="units" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="units" defaultSort={{ key: "age" }} sortOrder={{ age: AGE_ORDER }} />
   </div>
 </Base>

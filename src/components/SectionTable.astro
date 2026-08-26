@@ -11,8 +11,11 @@ interface Props {
   title?: string;
   placeholder?: string;
   minFacetCount?: number; // hide facet chips rarer than this
+  defaultSort?: { key: string; dir?: 'asc' | 'desc' };
+  sortOrder?: Record<string, string[]>;
 }
-const { data, columns, pagePrefix, title, placeholder = 'Filter…', minFacetCount = 0 } = Astro.props;
+const { data, columns, pagePrefix, title, placeholder = 'Filter…', minFacetCount = 0,
+        defaultSort, sortOrder } = Astro.props;
 const facets = (data.facets || [])
   .map((f: any) => ({ ...f, options: f.options.filter((o: any) => o.count >= minFacetCount) }))
   .filter((f: any) => f.options.length > 1);
@@ -22,5 +25,5 @@ const cols = pagePrefix ? columns : columns.map((c) => (c.kind === 'name' ? { ..
 {title && <h2 style="margin-top: 34px;">{title}</h2>}
 <div data-filter-scope>
   {(data.entities.length > 8 || facets.length > 0) && <FilterBar facets={facets} placeholder={placeholder} />}
-  <EntityTable entities={data.entities} columns={cols as any} pagePrefix={pagePrefix || ''} csvName={`eu5ref-${data.dataset}`} />
+  <EntityTable entities={data.entities} columns={cols as any} pagePrefix={pagePrefix || ''} csvName={`eu5ref-${data.dataset}`} defaultSort={defaultSort} sortOrder={sortOrder} />
 </div>

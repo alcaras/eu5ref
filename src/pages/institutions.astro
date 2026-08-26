@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import SectionTable from '../components/SectionTable.astro';
 import data from '../data/institutions.json';
+// Ages have a play order, not an alphabetical one.
+const AGE_ORDER = ['Traditions','Renaissance','Discovery','Reformation','Absolutism','Revolutions'];
 ---
 <Base title="Institutions" active="institutions" pageMark="💡" eyebrow="Ages & Advances"
   pageStats={[{ label: 'institutions', value: data.entities.length }]}
@@ -11,5 +13,6 @@ import data from '../data/institutions.json';
     { key: 'age', label: 'Age', kind: 'facet' },
     { key: 'mods', label: 'Modifiers', kind: 'mods' },
     { key: 'desc', label: 'Description', kind: 'rich' },
-  ]} placeholder="Filter institutions…" />
+  ]} placeholder="Filter institutions…"
+     defaultSort={{ key: 'age' }} sortOrder={{ age: AGE_ORDER }} />
 </Base>

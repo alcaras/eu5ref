@@ -189,6 +189,7 @@ h1, h2, h3 {
 table.etbl { border-collapse: collapse; width: 100%; font-size: 13px; }
 .etbl th {
   text-align: left; font-weight: 600; color: var(--text-dim);
+  cursor: pointer; user-select: none;
   font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
   padding: 8px 10px; border-bottom: 1px solid var(--border-strong);
   /* No sticky here: .etbl-scroll's overflow makes it the sticky container,
@@ -197,6 +198,16 @@ table.etbl { border-collapse: collapse; width: 100%; font-size: 13px; }
   background: var(--bg);
   white-space: nowrap;
 }
+.etbl th:hover { color: var(--text); }
+.etbl th:focus-visible { outline: 1px solid var(--gold-deep); outline-offset: -2px; }
+.etbl th .sort-caret { margin-left: 5px; opacity: 0; font-size: 9px; }
+.etbl th:hover .sort-caret { opacity: .5; }
+.etbl th.sorted-asc, .etbl th.sorted-desc { color: var(--gold); }
+.etbl th.sorted-asc .sort-caret, .etbl th.sorted-desc .sort-caret { opacity: 1; }
+.etbl th.sorted-asc .sort-caret::after { content: "▲"; }
+.etbl th.sorted-desc .sort-caret::after { content: "▼"; }
+.etbl th:not(.sorted-asc):not(.sorted-desc) .sort-caret::after { content: "▲"; }
+
 .etbl td {
   padding: 7px 10px; border-bottom: 1px solid var(--border-faint);
   vertical-align: top;

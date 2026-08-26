@@ -13,6 +13,7 @@ const entities = data.entities.map((e) => ({
   },
 }));
 const facets = data.facets;
+const AGE_ORDER = ['Traditions','Renaissance','Discovery','Reformation','Absolutism','Revolutions'];
 const columns = [
   { key: 'name', label: 'Advance', kind: 'name' },
   { key: 'age', label: 'Age', kind: 'facet' },
@@ -36,6 +37,6 @@ const columns = [
 >
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter advances…" />
-    <EntityTable entities={entities} columns={columns as any} pagePrefix="advances" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="advances" defaultSort={{ key: "age" }} sortOrder={{ age: AGE_ORDER }} />
   </div>
 </Base>
