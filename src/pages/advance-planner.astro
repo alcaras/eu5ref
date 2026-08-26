@@ -5,13 +5,15 @@ import Base from '../layouts/Base.astro';
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
   <p class="pl-intro">
-    The advances screen, rebuilt: <b>age tabs</b>, each age laid out as its
-    branch trees, top-down, the way the game draws them. Pick a country and
-    everything that can never apply to it is hidden — usually about two
-    thirds of the 3,178 advances. <b>Click</b> to plan an advance (its
-    prerequisites come along), <b>right-click</b> to mark it already
-    researched, <b>⌥-click</b> to open its reference page. The URL always
-    holds your plan.
+    The advances screen, made scannable: <b>age tabs</b>, then each of the
+    game's branches as a band, with every prerequisite step as a column left
+    to right. Same branches and same tiers as in game, without the sprawl.
+    Pick a country and everything that can never apply to it disappears —
+    usually about two thirds of the 3,178 advances.
+    <b>Hover</b> to light up an advance's whole prerequisite chain,
+    <b>click</b> to plan it (its prerequisites come along),
+    <b>right-click</b> to mark it already researched,
+    <b>⌥-click</b> to open its reference page. The URL always holds your plan.
   </p>
 
   <div class="pl" data-pl>
@@ -106,22 +108,22 @@ import Base from '../layouts/Base.astro';
     .pl-board { position: relative; transform-origin: 0 0; }
 
     .pl-branch-head {
-      position: absolute; font-family: var(--font-display); font-size: 15px;
+      position: absolute; font-family: var(--font-display); font-size: 14px;
       color: var(--gold-soft); letter-spacing: 0.03em; white-space: nowrap;
     }
     .pl-branch-head small { color: var(--text-faint); font-family: var(--font-ui); font-size: 11px; margin-left: 7px; }
     .pl-band-rule { position: absolute; height: 1px; background: var(--border-faint); }
 
-    /* node card — the game's advance card, at web density */
+    /* node card — compact row: icon + name, tier column packing */
     .pnode {
-      position: absolute; width: 154px; height: 40px; box-sizing: border-box;
-      display: flex; align-items: center; gap: 6px; padding: 0 7px 0 6px;
+      position: absolute; width: 158px; height: 26px; box-sizing: border-box;
+      display: flex; align-items: center; gap: 5px; padding: 0 6px 0 5px;
       background: var(--bg-elev-2); border: 1px solid var(--border);
       border-left: 3px solid var(--border-strong);
-      border-radius: 5px; font-size: 11.5px; color: var(--text-soft);
+      border-radius: 4px; font-size: 11px; color: var(--text-soft);
       cursor: pointer; user-select: none; overflow: hidden;
     }
-    .pnode img { width: 22px; height: 22px; object-fit: contain; flex: none; }
+    .pnode img { width: 17px; height: 17px; object-fit: contain; flex: none; }
     .pnode .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.15; }
     .pnode.k0 { border-left-color: var(--good); }
     .pnode.k1 { border-left-color: var(--accent-2); }
@@ -139,16 +141,14 @@ import Base from '../layouts/Base.astro';
       margin-left: auto; font-size: 10px; font-family: var(--font-mono);
       color: var(--gold); flex: none;
     }
-    /* zoomed-out level of detail: icon-only cards, like the game's
-       simplified node */
-    .pl-board.lod .pnode { width: 46px; justify-content: center; padding: 0; }
-    .pl-board.lod .pnode .nm,
-    .pl-board.lod .pnode .badge { display: none; }
-    .pl-board.lod .pnode img { width: 26px; height: 26px; }
-    .pl-board.lod .pnode .qn { margin: 0; }
+    /* hovering an advance lights its whole prerequisite chain */
+    .pl-board.focus .pnode { opacity: .22; }
+    .pl-board.focus .pnode.lit { opacity: 1; border-color: var(--gold-soft); }
+    .pl-board.focus svg.pl-edges path { opacity: .08; }
+    .pl-board.focus svg.pl-edges path.lit { opacity: 1; stroke: var(--gold-soft); stroke-width: 2; }
 
     svg.pl-edges { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
-    svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.6; fill: none; opacity: .55; }
+    svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.4; fill: none; opacity: .45; }
     svg.pl-edges path.hot { stroke: var(--gold); opacity: 1; stroke-width: 2; }
 
     .pl-tip {
@@ -190,9 +190,13 @@ import Base from '../layouts/Base.astro';
     let zoom = 1;
     let autoFit = true;
 
-    // Geometry — the game uses 330×265 cells; this is the same shape at
-    // web density.
-    const NW = 154, NH = 40, COLW = 172, ROWH = 74, BRANCH_GAP = 64, TOP = 46;
+    // Geometry. The game draws each branch as a top-down tidy tree, which
+    // is why its own screen sprawls: centring a parent over a wide subtree
+    // opens huge gaps, and deep-but-sparse branches leave dead space. We
+    // keep the game's *semantics* (branch, tier, prerequisite edges) but
+    // turn each tier into a COLUMN and pack it vertically — depth is only
+    // 8–10, so an age fits the viewport width and every name stays legible.
+    const NW = 158, NH = 26, COLW = 170, ROWH = 30, BRANCH_GAP = 30, TOP = 26;
 
     // ── three-valued gate evaluation ───────────────────────────
     // TRUE = available to this country, FALSE = never, null = depends on
@@ -307,9 +311,10 @@ import Base from '../layouts/Base.astro';
       const trees = branches.filter(([, l]) => l.length > 1);
       const loners = branches.filter(([, l]) => l.length === 1).flatMap(([, l]) => l);
 
-      // The game stacks an age's sub-graphs VERTICALLY (a flowcontainer of
-      // dynamicgrid items), so each branch is its own band down the page and
-      // the board stays only as wide as the widest single branch.
+      // Each branch is a band down the page; inside a band, tier = column,
+      // packed top-to-bottom with no gaps. Within a column, nodes are
+      // ordered by their parent's row so children sit beside their parent
+      // and edges stay short.
       const pos = new Map<string, { x: number; y: number }>();
       const heads: { label: string; count: number; x: number; y: number }[] = [];
       const rules: number[] = [];
@@ -317,50 +322,54 @@ import Base from '../layouts/Base.astro';
 
       for (const [bid, list] of trees) {
         const local = new Set(list);
-        const roots = list.filter((id) => !parentOf.get(id) || !local.has(parentOf.get(id)!));
-        roots.sort((a, b) => D.nodes[a].d - D.nodes[b].d || D.nodes[a].n.localeCompare(D.nodes[b].n));
-        // tiers are the game's own; rebase so a branch whose top was filtered
-        // away still starts at the top of its band
         const minTier = Math.min(...list.map((id) => D.nodes[id].d));
-        let leaf = 0, bandH = 0;
-        const place = (id: string, seen: Set<string>): number => {
-          if (seen.has(id)) return (pos.get(id)?.x ?? 0) - 16;
-          seen.add(id);
-          const ch = (kids.get(id) || []).filter((c) => local.has(c));
-          let x: number;
-          if (!ch.length) { x = leaf * COLW; leaf++; }
-          else {
-            const xs = ch.map((c) => place(c, seen));
-            x = (Math.min(...xs) + Math.max(...xs)) / 2;
-          }
-          const y = cursorY + TOP + (D.nodes[id].d - minTier) * ROWH;
-          pos.set(id, { x: 16 + x, y });
-          bandH = Math.max(bandH, y + NH - cursorY);
-          maxX = Math.max(maxX, 16 + x + NW);
-          return x;
-        };
-        const seen = new Set<string>();
-        for (const r of roots) place(r, seen);
-        heads.push({ label: D.nodes[bid]?.n ?? 'Branch', count: list.length, x: 16, y: cursorY + 14 });
-        cursorY += bandH + BRANCH_GAP;
+        const byTier = new Map<number, string[]>();
+        for (const id of list) {
+          const t = D.nodes[id].d - minTier;
+          if (!byTier.has(t)) byTier.set(t, []);
+          byTier.get(t)!.push(id);
+        }
+        const rowOf = new Map<string, number>();
+        let tallest = 0;
+        for (const t of [...byTier.keys()].sort((a, b) => a - b)) {
+          const col = byTier.get(t)!;
+          col.sort((a, b) => {
+            const pa = parentOf.get(a), pb = parentOf.get(b);
+            const ra = pa && rowOf.has(pa) ? rowOf.get(pa)! : -1;
+            const rb = pb && rowOf.has(pb) ? rowOf.get(pb)! : -1;
+            return ra - rb || D.nodes[a].n.localeCompare(D.nodes[b].n);
+          });
+          col.forEach((id, row) => {
+            rowOf.set(id, row);
+            const x = 16 + t * COLW;
+            const y = cursorY + TOP + row * ROWH;
+            pos.set(id, { x, y });
+            maxX = Math.max(maxX, x + NW);
+          });
+          tallest = Math.max(tallest, col.length);
+        }
+        heads.push({ label: D.nodes[bid]?.n ?? 'Branch', count: list.length, x: 16, y: cursorY + 4 });
+        cursorY += TOP + tallest * ROWH + BRANCH_GAP;
         rules.push(cursorY - BRANCH_GAP / 2);
       }
 
-      // standalone advances (national one-offs) wrap into a grid band
+      // standalone advances (national one-offs) wrap into a compact grid
       if (loners.length) {
-        heads.push({ label: 'Standalone', count: loners.length, x: 16, y: cursorY + 14 });
+        heads.push({ label: 'Standalone', count: loners.length, x: 16, y: cursorY + 4 });
         loners.sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
-        const perRow = Math.max(4, Math.floor((maxX || 1200) / COLW) || 8);
+        const perRow = Math.max(4, Math.round((maxX - 16) / COLW) || 8);
+        let lastY = cursorY;
         loners.forEach((id, i) => {
           const x = 16 + (i % perRow) * COLW;
-          const y = cursorY + TOP + Math.floor(i / perRow) * (NH + 12);
+          const y = cursorY + TOP + Math.floor(i / perRow) * ROWH;
           pos.set(id, { x, y });
           maxX = Math.max(maxX, x + NW);
-          cursorY = Math.max(cursorY, y + NH - TOP);
+          lastY = Math.max(lastY, y);
         });
-        cursorY += TOP + NH;
+        cursorY = lastY + NH;
       }
-      return { pos, heads, rules, width: maxX + 24, height: cursorY + 24 };
+      if (rules.length) rules.pop();
+      return { pos, heads, rules, width: maxX + 24, height: cursorY + 20 };
     }
 
     // ── render ─────────────────────────────────────────────────
@@ -394,6 +403,15 @@ import Base from '../layouts/Base.astro';
       if (!ids.length) { board.innerHTML = '<div class="pl-empty">Nothing in this age for that filter.</div>'; return; }
       const { pos, heads, rules, width, height } = layout(ids);
 
+      childIndex = new Map();
+      for (const id of pos.keys()) {
+        for (const r of D.nodes[id].r) {
+          if (!pos.has(r)) continue;
+          if (!childIndex.has(r)) childIndex.set(r, []);
+          childIndex.get(r)!.push(id);
+        }
+      }
+
       let html = '';
       for (const h of heads) {
         html += `<div class="pl-branch-head" style="left:${h.x}px; top:${h.y}px">${h.label}<small>${h.count}</small></div>`;
@@ -406,11 +424,13 @@ import Base from '../layouts/Base.astro';
         for (const r of D.nodes[id].r) {
           const rp = pos.get(r);
           if (!rp) continue;
-          // top-down: leave the parent's bottom edge, enter the child's top
-          const x1 = rp.x + NW / 2, y1 = rp.y + NH, x2 = p.x + NW / 2, y2 = p.y;
-          const my = (y1 + y2) / 2;
+          // tier columns: leave the prerequisite's right edge, enter the
+          // dependant's left edge
+          const x1 = rp.x + NW, y1 = rp.y + NH / 2, x2 = p.x, y2 = p.y + NH / 2;
+          const mx = (x1 + x2) / 2;
           const hot = planned.has(id) && (planned.has(r) || researched.has(r));
-          paths += `<path class="${hot ? 'hot' : ''}" d="M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}"/>`;
+          paths += `<path class="${hot ? 'hot' : ''}" data-a="${r}" data-b="${id}" ` +
+            `d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/>`;
         }
       }
       html += `<svg class="pl-edges" width="${width}" height="${height}">${paths}</svg>`;
@@ -437,7 +457,7 @@ import Base from '../layouts/Base.astro';
         // first paint of a view: zoom out to fit the widest branch, but not
         // so far that the cards stop being cards
         const avail = $('[data-pl-wrap]').clientWidth - 16;
-        zoom = Math.min(1, Math.max(0.45, avail / width));
+        zoom = Math.min(1, Math.max(0.62, avail / width));
         autoFit = false;
       }
       applyZoom();
@@ -539,14 +559,16 @@ import Base from '../layouts/Base.astro';
     function applyZoom() {
       const board = $('[data-pl-board]');
       board.style.transform = `scale(${zoom})`;
-      // the game drops to a simplified icon-only node when zoomed out
-      board.classList.toggle('lod', zoom < 0.62);
       const w = parseFloat(board.style.width) * zoom;
       const h = parseFloat(board.style.height) * zoom;
       board.style.marginRight = `${Math.max(0, w - parseFloat(board.style.width))}px`;
       board.style.marginBottom = `${Math.max(0, h - parseFloat(board.style.height))}px`;
       ($('[data-zoom-label]') as HTMLElement).textContent = Math.round(zoom * 100) + '%';
     }
+
+    /** children of an advance, across the whole age (index built per render) */
+    let childIndex = new Map<string, string[]>();
+    function kidsOf(id: string): string[] { return childIndex.get(id) || []; }
 
     // ── boot ───────────────────────────────────────────────────
     fetch(`${baseUrl}planner.json`).then((r) => r.json()).then((data) => {
@@ -598,11 +620,42 @@ import Base from '../layouts/Base.astro';
         else { researched.add(id); planned.delete(id); }
         render();
       });
+      let lit: string | null = null;
       board.addEventListener('mousemove', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
-        if (el) showTip(e as MouseEvent, el.dataset.id!); else tip.hidden = true;
+        if (el) { showTip(e as MouseEvent, el.dataset.id!); focusChain(el.dataset.id!); }
+        else { tip.hidden = true; focusChain(null); }
       });
-      board.addEventListener('mouseleave', () => { tip.hidden = true; });
+      board.addEventListener('mouseleave', () => { tip.hidden = true; focusChain(null); });
+
+      /** Light up an advance's whole prerequisite chain (and what it leads
+       *  to) and dim the rest — the fastest way to read "what do I need
+       *  for this" off a dense board. */
+      function focusChain(id: string | null) {
+        if (id === lit) return;
+        lit = id;
+        const board = $('[data-pl-board]');
+        for (const el of board.querySelectorAll('.lit')) el.classList.remove('lit');
+        if (!id) { board.classList.remove('focus'); return; }
+        const chain = new Set<string>([id]);
+        const up = [id];
+        while (up.length) {
+          const cur = up.pop()!;
+          for (const r of D.nodes[cur]?.r || []) if (!chain.has(r)) { chain.add(r); up.push(r); }
+        }
+        const down = [id];
+        while (down.length) {
+          const cur = down.pop()!;
+          for (const c of kidsOf(cur)) if (!chain.has(c)) { chain.add(c); down.push(c); }
+        }
+        board.classList.add('focus');
+        for (const cid of chain) {
+          board.querySelector(`[data-id="${cid}"]`)?.classList.add('lit');
+        }
+        for (const path of board.querySelectorAll<SVGPathElement>('path[data-a]')) {
+          if (chain.has(path.dataset.a!) && chain.has(path.dataset.b!)) path.classList.add('lit');
+        }
+      }
 
       render();
     });

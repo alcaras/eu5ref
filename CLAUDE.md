@@ -144,11 +144,21 @@ is what lets the planner draw the game's layout.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):
-age tabs → per-age sub-graphs **stacked vertically**, each laid out top-down
-with bspline edges on a 0.1–1.5 pan/zoom canvas, nodes tinted by unlock type
-(green none / blue buildings-units-laws / red diplomatic) and switched to a
-simplified icon-only rendering when zoomed out. The planner mirrors all of
-that at web density.
+age tabs → per-age sub-graphs stacked vertically, each a top-down tidy tree
+on a 340px rank pitch with bspline edges and a 0.1–1.5 pan/zoom canvas,
+nodes tinted by unlock type (green none / blue buildings-units-laws / red
+diplomatic).
+
+**We deliberately do NOT copy that geometry — don't "fix" it back.** A tidy
+tree centres each parent over its subtree, which with 170-leaf branches
+opens enormous gaps; the in-game screen sprawls for exactly this reason and
+is hard to read there too. The planner keeps the game's *semantics* —
+same branches, same tiers, same edges, same node tinting — but **transposes
+the axes: tier becomes a column, packed vertically with no gaps**. Depth is
+only 8–10, so a whole age fits the viewport width with every name legible
+(≈1,400px vs ≈4,800px for the tidy version). Within a column, nodes are
+ordered by their parent's row so children sit beside their parent. Hovering
+lights an advance's full prerequisite chain and dims the rest.
 
 ### The long-tail builder
 
