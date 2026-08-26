@@ -31,6 +31,9 @@ import Base from '../layouts/Base.astro';
         <input type="search" autocomplete="off" />
         <div class="hdr-search__results" hidden></div>
       </div>
+      <label class="pl-toggle" title="Government type — gates a few advances, and you can plan a change">
+        government <select data-pl-gov></select>
+      </label>
       <span class="chips" data-pl-context></span>
       <span class="pl-spacer"></span>
       <label class="pl-toggle" title="Advances gated to other countries, cultures or religions">
@@ -70,16 +73,6 @@ import Base from '../layouts/Base.astro';
   <style is:global>
     .pl-intro { max-width: 760px; color: var(--text-soft); }
     .pl-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
-    .pl-spacer { flex: 1 1 auto; }
-    .pl-picker { position: relative; }
-    .pl-picker input {
-      background: var(--bg-elev); color: var(--text);
-      border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 6px 11px; font-size: 13px; width: 210px; font-family: var(--font-ui);
-    }
-    .pl-picker input:focus { outline: none; border-color: var(--gold-deep); }
-    .pl-picker .hdr-search__results { left: 0; right: auto; top: calc(100% + 6px); min-width: 300px; }
-    .pl-toggle { font-size: 12px; color: var(--text-dim); display: flex; gap: 5px; align-items: center; cursor: pointer; }
     .pl-zoom { display: flex; align-items: center; gap: 2px; }
     .pl-zoom button {
       border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
@@ -257,6 +250,10 @@ import Base from '../layouts/Base.astro';
     // once a country is picked; the gates re-evaluate against the override.
     let formables: Record<string, any> = {};   // tag → who may form it
     let culOverride: Cul | null = null;
+    let govOverride: string | null = null;
+    const GOVS = [['monarchy', 'Monarchy'], ['republic', 'Republic'],
+                  ['theocracy', 'Theocracy'], ['tribe', 'Tribe'],
+                  ['steppe_horde', 'Steppe Horde']];
     let relOverride: Rel | null = null;
     const planned = new Set<string>();
     const researched = new Set<string>();
@@ -318,6 +315,7 @@ import Base from '../layouts/Base.astro';
       if (h === 'lang') return f.lang === e[1];
       if (h === 'rel') return f.rel === e[1];
       if (h === 'rgrp') return f.rgrp === e[1];
+      if (h === 'gov') return (f as any).gov ? (f as any).gov === e[1] : null;
       return null;
     }
     /** The country's facts with any culture / religion override applied. */
@@ -326,6 +324,7 @@ import Base from '../layouts/Base.astro';
       const f: Facts = { ...country.f, cap: country.f.cap || {} };
       if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l!; }
       if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g!; }
+      if (govOverride) (f as any).gov = govOverride;
       return f;
     }
     // 'common' | 'yours' | 'conditional' | 'other'
@@ -348,6 +347,7 @@ import Base from '../layouts/Base.astro';
       const p = new URLSearchParams();
       p.set('v', D.vhash);
       if (country) p.set('c', country.t);
+      if (govOverride) p.set('g', govOverride);
       if (culOverride) p.set('cu', culOverride.k);
       if (relOverride) p.set('re', relOverride.k);
       if (ageIx) p.set('age', String(ageIx));
@@ -385,7 +385,8 @@ import Base from '../layouts/Base.astro';
     // History covers what you *decided* — the plan, and the country /
     // culture / religion it is for — not view state like the age tab, zoom
     // or a collapsed pane. Undo should never move you somewhere else.
-    type Snap = { c: string | null; cu: string | null; re: string | null; p: string[]; r: string[] };
+    type Snap = { c: string | null; cu: string | null; re: string | null;
+                  g: string | null; p: string[]; r: string[] };
     // NB: not `history` — that shadows window.history and breaks syncUrl().
     let undoStack: Snap[] = [];
     let histIx = -1;
@@ -393,10 +394,10 @@ import Base from '../layouts/Base.astro';
 
     const snap = (): Snap => ({
       c: country?.t ?? null, cu: culOverride?.k ?? null, re: relOverride?.k ?? null,
-      p: [...planned], r: [...researched],
+      g: govOverride, p: [...planned], r: [...researched],
     });
     const sameSnap = (a: Snap, b: Snap) =>
-      a.c === b.c && a.cu === b.cu && a.re === b.re &&
+      a.c === b.c && a.cu === b.cu && a.re === b.re && a.g === b.g &&
       a.p.length === b.p.length && a.r.length === b.r.length &&
       a.p.every((x, i) => x === b.p[i]) && a.r.every((x, i) => x === b.r[i]);
 
@@ -415,6 +416,7 @@ import Base from '../layouts/Base.astro';
       country = s.c ? D.countries.find((c) => c.t === s.c) || null : null;
       culOverride = s.cu ? D.cultures.find((c) => c.k === s.cu) || null : null;
       relOverride = s.re ? D.religions.find((r) => r.k === s.re) || null : null;
+      govOverride = s.g ?? null;
       planned.clear(); for (const x of s.p) planned.add(x);
       researched.clear(); for (const x of s.r) researched.add(x);
       restoring = false;
@@ -517,6 +519,11 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderContext() {
+      const govSel = $('[data-pl-gov]') as HTMLSelectElement;
+      const curGov = (effectiveFacts() as any)?.gov || null;
+      govSel.innerHTML = GOVS.map(([k, label]) =>
+        `<option value="${k}"${k === curGov ? ' selected' : ''}>${label}</option>`).join('');
+      govSel.disabled = !country;
       const culWrap = $('[data-pl-culture]'), relWrap = $('[data-pl-religion]');
       culWrap.hidden = relWrap.hidden = !country;
       let html = '';
@@ -722,7 +729,11 @@ import Base from '../layouts/Base.astro';
         (tag) => {
           country = D.countries.find((c) => c.t === tag) || null;
           culOverride = relOverride = null;   // a new country resets the shifts
+          govOverride = null;
         });
+      ($('[data-pl-gov]') as HTMLSelectElement).addEventListener('change', (e) => {
+        mutate(() => { govOverride = (e.target as HTMLSelectElement).value; });
+      });
       wirePicker('[data-pl-culture]',
         (q) => D.cultures.filter((c) => c.n.toLowerCase().includes(q))
           .map((c) => ({ key: c.k, label: c.n, small: 'culture' })),
@@ -774,6 +785,8 @@ import Base from '../layouts/Base.astro';
         $('[data-pl-count]').textContent = '⚠ this link was made on another game version — the plan may have shifted.';
       }
       country = D.countries.find((c) => c.t === p.get('c')) || null;
+      const g0 = p.get('g');
+      govOverride = g0 && GOVS.some(([k]) => k === g0) ? g0 : null;
       culOverride = D.cultures.find((c) => c.k === p.get('cu')) || null;
       relOverride = D.religions.find((r) => r.k === p.get('re')) || null;
       showOther = p.get('all') === '1';

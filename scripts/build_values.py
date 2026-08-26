@@ -62,6 +62,25 @@ def magnitudes() -> dict[str, float]:
     return out
 
 
+def ages() -> list[dict]:
+    """The six ages with the year each begins — age 1 uses `year = 1`, i.e.
+    the campaign start. Gives the path planner a real timeline to schedule
+    against, since a lot of laws and reforms are gated to one age."""
+    out = []
+    path = ref.ROOT / 'game' / 'in_game' / 'common' / 'age' / '00_default.txt'
+    if not path.exists():
+        return out
+    txt = path.read_text(encoding='utf-8-sig', errors='replace')
+    for m in re.finditer(r'^(age_\d+_[a-z_]+)\s*=\s*\{(.*?)^\}', txt, re.M | re.S):
+        y = re.search(r'^\s*year\s*=\s*(\d+)', m.group(2), re.M)
+        year = int(y.group(1)) if y else 0
+        out.append({'key': m.group(1),
+                    'name': ref.plain_text(ref.parser.localize(m.group(1), default='')) or ref.pretty(m.group(1)),
+                    'year': 1337 if year <= 1 else year})
+    out.sort(key=lambda a: a['year'])
+    return out
+
+
 def value_pairs() -> dict[str, dict]:
     """The 17 axes. The id names both ends: left_vs_right."""
     pairs = {}
@@ -438,6 +457,7 @@ def main():
         'pairs': pairs,
         'movers': movers,
         'requirements': reqs,
+        'ages': ages(),
         'countries': countries,
         'cultures': cultures,
         'religions': religions,

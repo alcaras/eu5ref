@@ -49,7 +49,12 @@ _SCALAR = {
     'religion': 'rel',
     'has_religion': 'rel',
     'religion.group': 'rgrp',
+    'religion_group': 'rgrp',
     'government_type': 'gov',
+    # `current_age = age_3_discovery` is an exact match on the age you are
+    # in, not "this age or later" — a thing gated to age 1 is gone by age 2.
+    'current_age': 'age',
+    'has_advance': 'adv',
     'has_culture_group': 'cgrp',
     'culture.culture_group': 'cgrp',
 }
@@ -180,7 +185,8 @@ def _geo_pair(key: str) -> str | None:
 
 # ── build-time helpers ────────────────────────────────────────
 
-def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov')) -> list[tuple[str, str]]:
+def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov',
+                          'age', 'adv')) -> list[tuple[str, str]]:
     """Collect (kind, value) pairs mentioned positively in an expression —
     used to label a gated advance ("Byzantium", "Orthodox")."""
     out: list[tuple[str, str]] = []

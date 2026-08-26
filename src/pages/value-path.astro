@@ -2,25 +2,23 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Value Path" active="value-path" pageMark="🧗" eyebrow="Tools"
-  description="Sequence societal-value targets: what to swap on at each stage, what it banks, and why that order.">
+  description="Sequence societal-value targets: what to swap on at each stage, when each age opens the tools for it, and what it banks.">
 
-  <p style="max-width: 800px; color: var(--text-soft);">
+  <p style="max-width: 820px; color: var(--text-soft);">
     A societal value only drifts while something pushes it, and it stalls once
     the push runs out. So you do not hold every value at once — you push one
-    axis to a threshold, take what that threshold unlocks, then swap the push
-    onto the next axis. List the positions you want in the order you want them
-    and this works out what to run at each stage, starting from your country's
-    real 1337 position.
+    axis to a position, take what that position unlocks, then swap the push
+    onto the next axis. List the positions you want and this schedules them
+    against the campaign clock, starting from your country's real 1337 setup.
   </p>
-  <p style="max-width: 800px; color: var(--text-dim); font-size: 13px;">
+  <p style="max-width: 820px; color: var(--text-dim); font-size: 13px;">
     <b>Why the swap does not undo your progress.</b> A government reform's value
     requirement sits in its <code>allow</code> block — per the game's own reform
     readme that is "whether the action can start" — and reforms carry no
     <code>remove_if</code>. Once implemented, a reform stays implemented after
     the value drifts back off its threshold. Laws and privileges are different:
     their modifiers apply only while you run them, so anything you swap away
-    stops pushing immediately. Reforms take time to implement and their
-    modifiers scale in with progress, so hold the position until one completes.
+    stops pushing immediately.
   </p>
 
   <div class="vp-controls">
@@ -28,10 +26,13 @@ import Base from '../layouts/Base.astro';
       <input type="search" placeholder="Pick a country…" autocomplete="off" />
       <div class="hdr-search__results" hidden></div>
     </div>
+    <label class="pl-toggle">government
+      <select data-pp-gov></select>
+    </label>
     <span class="chips" data-pp-context></span>
     <span class="pl-spacer"></span>
     <button type="button" class="csv-btn" data-pp-example>⤵ Load example path</button>
-    <button type="button" class="csv-btn" data-pp-order>⇅ Order by cost</button>
+    <button type="button" class="csv-btn" data-pp-order>✦ Best order</button>
     <button type="button" class="csv-btn" data-pp-copy>⧉ Copy link</button>
     <button type="button" class="csv-btn" data-pp-clear>✕ Clear</button>
   </div>
@@ -41,6 +42,7 @@ import Base from '../layouts/Base.astro';
     <select data-pp-goal>
       <option value="right">→ push right</option>
       <option value="left">← push left</option>
+      <option value="auto">⇄ hold at a value</option>
     </select>
     <label style="font-size:12.5px; color:var(--text-dim);">
       until <input type="number" data-pp-at value="" placeholder="pole" step="5" min="-100" max="100"
@@ -49,6 +51,7 @@ import Base from '../layouts/Base.astro';
     <button type="button" class="csv-btn" data-pp-push>+ Add stage</button>
   </div>
 
+  <div data-pp-path></div>
   <div data-pp-out></div>
 
   <script>
@@ -57,18 +60,30 @@ import Base from '../layouts/Base.astro';
     const esc = (t: any) => String(t).replace(/[&<>"]/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
 
+    const START_YEAR = 1337;
+    const END_YEAR = 1837;          // the campaign's own horizon
+    /** Government types you can be, for gating and for planning a change of
+     *  government part-way along a path. */
+    const GOVS = [['monarchy', 'Monarchy'], ['republic', 'Republic'],
+                  ['theocracy', 'Theocracy'], ['tribe', 'Tribe'],
+                  ['steppe_horde', 'Steppe Horde']];
+    /** How many new movers one stage may switch on. Estate satisfaction is
+     *  the real bound and it is not in the files, so this is a stated cap
+     *  rather than a computed one. */
+    const TAKE = 6;
+
     let D: any = null;
     let STARTS: any = {};
     let country: any = null;
+    let govOverride: string | null = null;
     /** Each stage: which axis, which way, and how far (null = to the pole). */
-    let path: { pair: string; dir: 'left' | 'right'; at: number | null }[] = [];
+    let path: { pair: string; dir: 'left' | 'right' | 'auto'; at: number | null }[] = [];
 
-    /* The path from the request that prompted this tool, as a starting point.
-       `at` is a hard number where one was named, otherwise push to the pole. */
+    /* The path this tool was built around, as a starting point. Aristocracy
+       is a hold-at-0, not a run to the plutocratic pole. */
     const EXAMPLE: any[] = [
       ['individualism_vs_communalism', 'right', null],
-      ['aristocracy_vs_plutocracy', 'right', 0],
-      ['aristocracy_vs_plutocracy', 'right', null],
+      ['aristocracy_vs_plutocracy', 'auto', 0],
       ['land_vs_naval', 'right', 50],
       ['centralization_vs_decentralization', 'right', null],
       ['traditionalist_vs_innovative', 'right', null],
@@ -85,20 +100,44 @@ import Base from '../layouts/Base.astro';
     const uid = (m: any) => `${m.folder}:${m.key}`;
     const poleName = (pid: string, dir: string) => D.pairs[pid][dir].name;
 
-    /** Where this stage wants the axis to end up. */
-    function goalOf(st: any) {
-      return st.at === null ? sign(st.dir) * D.scale : st.at;
+    /* ---- stage goals ----------------------------------------------------- */
+
+    /** Which way this stage has to push. `auto` means "hold this axis at a
+     *  value" — which way that is depends on where the axis currently sits,
+     *  so it is resolved live rather than fixed when the stage is added. */
+    function dirOf(st: any, from: number): 'left' | 'right' {
+      if (st.dir !== 'auto') return st.dir;
+      return from < (st.at ?? 0) ? 'right' : 'left';
+    }
+    function goalOf(st: any, from = 0) {
+      return st.at === null ? sign(dirOf(st, from)) * D.scale : st.at;
     }
     function reached(pos: number, st: any) {
-      return st.dir === 'right' ? pos >= goalOf(st) : pos <= goalOf(st);
+      if (st.dir === 'auto') return Math.abs(pos - (st.at ?? 0)) < 0.5;
+      return st.dir === 'right' ? pos >= goalOf(st, pos) : pos <= goalOf(st, pos);
     }
 
-    /* ---- country context ------------------------------------------------ */
+    /* ---- ages ------------------------------------------------------------ */
 
-    function facts() {
+    const ages = () => (D.ages && D.ages.length ? D.ages
+      : [{ key: 'age_1_traditions', name: 'Traditions', year: START_YEAR }]);
+    function ageAt(year: number) {
+      let a = ages()[0];
+      for (const x of ages()) if (year >= x.year) a = x;
+      return a;
+    }
+    function nextAgeYear(year: number) {
+      for (const x of ages()) if (x.year > year) return x.year;
+      return Infinity;
+    }
+
+    /* ---- country context ------------------------------------------------- */
+
+    const govOf = () =>
+      govOverride || (country && (STARTS[country.t] || {}).type) || null;
+    function facts(ageKey: string) {
       if (!country) return null;
-      return { ...country.f, cap: country.f.cap || {},
-               gov: (STARTS[country.t] || {}).type || null };
+      return { ...country.f, cap: country.f.cap || {}, gov: govOf(), age: ageKey };
     }
     function evalGate(e: any, f: any): boolean | null {
       if (!e) return true;
@@ -111,27 +150,19 @@ import Base from '../layouts/Base.astro';
       if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
       if (h === 'tag') return f.tag === e[1];
       if (h === 'gov') return f.gov ? f.gov === e[1] : null;
+      if (h === 'age') return f.age ? f.age === e[1] : null;
+      if (h === 'adv') return null;              // research it and you have it
       return f[h] === e[1];
     }
-    /** Usable unless the country provably cannot take it. */
-    function usable(m: any) {
-      const f = facts();
-      if (!f || !m.gate) return true;
-      return evalGate(m.gate, f) !== false;
-    }
-    /** True only when the gate resolves cleanly. Some gates hang off scripted
-     *  triggers we cannot evaluate, and those stay openly unproven rather
-     *  than being presented as available. */
-    function confirmed(m: any) {
-      const f = facts();
-      if (!f) return true;
-      if (!m.gate) return true;
-      return evalGate(m.gate, f) === true;
-    }
-    function startRec() {
-      return (country && STARTS[country.t]) || null;
-    }
-    /** The 1337 position of every axis, 0 where the setup says nothing. */
+    const usable = (m: any, f: any) => !f || !m.gate || evalGate(m.gate, f) !== false;
+    /** True only when the gate resolves cleanly. Some hang off scripted
+     *  triggers we cannot read, and those stay openly unproven. */
+    const confirmed = (m: any, f: any) => !f || !m.gate || evalGate(m.gate, f) === true;
+    /** Advances a mover needs — the tech half of "when can I run this". */
+    const needsAdv = (m: any) =>
+      (m.gateLabels || []).filter((g: any) => g[1] === 'adv').map((g: any) => g[0]);
+
+    const startRec = () => (country && STARTS[country.t]) || null;
     function startValues(): Record<string, number> {
       const rec = startRec();
       const out: Record<string, number> = {};
@@ -141,17 +172,15 @@ import Base from '../layouts/Base.astro';
     /** Movers the country already runs at the bookmark. */
     function running(): Set<string> {
       const rec = startRec();
-      if (!rec) return new Set();
+      if (!rec) return new Set<string>();
       const want = new Set([...(rec.privileges || []), ...Object.values(rec.laws || {})]);
       const out = new Set<string>();
       for (const m of D.movers) if (want.has(m.key)) out.add(uid(m));
       return out;
     }
 
-    /* ---- the plan -------------------------------------------------------- */
+    /* ---- push ------------------------------------------------------------ */
 
-    /** Push this mover contributes toward `dir` on `pid` — negative if it
-     *  pulls the other way, 0 if it does not touch the axis at all. */
     function pushOf(m: any, pid: string, dir: string) {
       let v = 0;
       for (const e of m.effects) {
@@ -161,7 +190,7 @@ import Base from '../layouts/Base.astro';
       return v;
     }
     /** A parliament debate pushes hard but only while the debate runs, so it
-     *  is listed as a nudge rather than counted into the sustained drift. */
+     *  is a nudge rather than part of the sustained drift. */
     function nudgeOf(m: any, pid: string, dir: string) {
       let v = 0;
       for (const e of m.effects) {
@@ -170,122 +199,288 @@ import Base from '../layouts/Base.astro';
       }
       return v;
     }
-    /** Everything else this mover moves — the side effects of running it. */
-    function collateral(m: any, pid: string) {
-      return m.effects.filter((e: any) => e.pair !== pid && !e.temp);
+    const collateral = (m: any, pid: string) =>
+      m.effects.filter((e: any) => e.pair !== pid && !e.temp);
+
+    /* Ranking every mover for every axis, direction and age is a couple of
+       hundred passes over 800 movers. Done once per country that is a few
+       hundred milliseconds; done inside the order search below it would be
+       millions of gate evaluations. So it is cached here, and the search only
+       ever reads from this table. */
+    let TABLE: Record<string, any[]> = {};
+    function buildTable() {
+      TABLE = {};
+      if (!D) return;
+      for (const a of ages()) {
+        const f = facts(a.key);
+        for (const pid of Object.keys(D.pairs)) {
+          for (const dir of ['left', 'right']) {
+            const rows = [];
+            for (const m of D.movers) {
+              const p = pushOf(m, pid, dir);
+              if (p > 0 && usable(m, f)) rows.push({ m, push: p });
+            }
+            rows.sort((x: any, y: any) => y.push - x.push);
+            TABLE[`${pid}|${dir}|${a.key}`] = rows;
+          }
+        }
+      }
+    }
+    const helpersFor = (pid: string, dir: string, ageKey: string) =>
+      TABLE[`${pid}|${dir}|${ageKey}`] || [];
+
+    /** Net sustained push for one stage in one age, and which movers supply
+     *  it. Anything already running that helps is free; beyond that we take
+     *  the strongest few that are not running yet. */
+    function netIn(pid: string, dir: string, ageKey: string, on: Set<string>) {
+      let net = 0;
+      const take: any[] = [];
+      for (const h of helpersFor(pid, dir, ageKey)) {
+        if (on.has(uid(h.m))) { net += h.push; continue; }
+        if (take.length < TAKE) { take.push(h); net += h.push; }
+      }
+      return { net, take };
     }
 
-    /** Walk the stages in order, carrying the axis positions forward. */
-    function plan() {
+    /* ---- the schedule ---------------------------------------------------- */
+
+    /** Walk the stages in order against the campaign clock. Each stage runs
+     *  at whatever push its age affords; when an age offers nothing at all,
+     *  the clock jumps to the next age rather than calling the stage
+     *  impossible — which is what lets late-age targets sort late. */
+    function plan(order = path) {
       const pos = startValues();
       const on = running();
-      /* Reforms whose requirement we passed. They stay unlocked once taken,
-         so we never revoke them when the value drifts back. */
       const banked: any[] = [];
       const out: any[] = [];
+      let year = START_YEAR;
 
-      for (const st of path) {
+      for (const st of order) {
         const from = pos[st.pair] ?? 0;
-        const goal = goalOf(st);
+        const dir = dirOf(st, from);
+        const goal = goalOf(st, from);
         const done = reached(from, st);
+        const startedAt = year;
 
-        /* What is already running that fights this stage, and what we could
-           switch on to help. Laws replace within their group; privileges and
-           reforms stack. */
-        const helpers = D.movers
-          .filter((m: any) => usable(m) && pushOf(m, st.pair, st.dir) > 0 && !on.has(uid(m)))
-          .map((m: any) => ({ m, push: pushOf(m, st.pair, st.dir) }))
-          .sort((a: any, b: any) => b.push - a.push);
+        let remaining = Math.abs(goal - from);
+        let take: any[] = [];
+        let net = 0;
+        let stalled = false;
+
+        if (!done) {
+          let guard = 0;
+          while (remaining > 0 && year < END_YEAR && guard++ < 24) {
+            const a = ageAt(year);
+            const r = netIn(st.pair, dir, a.key, on);
+            const boundary = Math.min(nextAgeYear(year), END_YEAR);
+            if (r.net > 0) {
+              if (!take.length) { take = r.take; net = r.net; }
+              const yearsNeeded = remaining / r.net / 12;
+              if (year + yearsNeeded <= boundary) { year += yearsNeeded; remaining = 0; }
+              else { remaining -= r.net * 12 * (boundary - year); year = boundary; }
+            } else {
+              if (boundary >= END_YEAR) { stalled = true; break; }
+              year = boundary;                  // nothing yet; wait for the age
+            }
+          }
+          if (remaining > 0) stalled = true;
+        }
+
+        const f = facts(ageAt(startedAt).key);
         const fighting = D.movers
-          .filter((m: any) => on.has(uid(m)) && pushOf(m, st.pair, st.dir) < 0)
-          .map((m: any) => ({ m, push: pushOf(m, st.pair, st.dir) }))
+          .filter((m: any) => on.has(uid(m)) && pushOf(m, st.pair, dir) < 0)
+          .map((m: any) => ({ m, push: pushOf(m, st.pair, dir) }))
           .sort((a: any, b: any) => a.push - b.push);
-        const nudges = D.movers
-          .filter((m: any) => usable(m) && nudgeOf(m, st.pair, st.dir) > 0)
-          .map((m: any) => ({ m, push: nudgeOf(m, st.pair, st.dir) }))
-          .sort((a: any, b: any) => b.push - a.push)
-          .slice(0, 3);
         const already = D.movers
-          .filter((m: any) => on.has(uid(m)) && pushOf(m, st.pair, st.dir) > 0)
-          .map((m: any) => ({ m, push: pushOf(m, st.pair, st.dir) }))
+          .filter((m: any) => on.has(uid(m)) && pushOf(m, st.pair, dir) > 0)
+          .map((m: any) => ({ m, push: pushOf(m, st.pair, dir) }))
           .sort((a: any, b: any) => b.push - a.push);
+        const nudges = D.movers
+          .filter((m: any) => usable(m, f) && nudgeOf(m, st.pair, dir) > 0)
+          .map((m: any) => ({ m, push: nudgeOf(m, st.pair, dir) }))
+          .sort((a: any, b: any) => b.push - a.push).slice(0, 3);
 
-        /* Take the swaps: drop what fights, add the strongest helpers. A law
-           swap is free of slot cost (one policy per group either way); the
-           rest is bounded by estate satisfaction, which the files do not
-           expose, so we cap the suggestion rather than pretend otherwise. */
-        const take = helpers.slice(0, 6);
-        const net = already.reduce((s: number, h: any) => s + h.push, 0) +
-                    take.reduce((s: number, h: any) => s + h.push, 0);
-
-        const dist = Math.abs(goal - from);
-        const months = done ? 0 : net > 0 ? dist / net : null;
-
-        /* Apply the stage: the axis ends at its goal if reachable, and the
-           swapped-in movers keep running into the next stage unless a later
-           stage swaps them off. */
-        if (!done && months !== null) pos[st.pair] = goal;
+        if (!done && !stalled) pos[st.pair] = goal;
         for (const h of take) {
           on.add(uid(h.m));
-          if (h.m.group) {
+          if (h.m.group) {                       // one policy per law group
             for (const o of D.movers) {
               if (o.group === h.m.group && uid(o) !== uid(h.m)) on.delete(uid(o));
             }
           }
-          for (const e of collateral(h.m, st.pair)) {
-            pos[e.pair] = Math.max(-D.scale, Math.min(D.scale,
-              (pos[e.pair] ?? 0) + sign(e.dir) * 0));   // direction noted, not simulated
-          }
         }
         for (const h of fighting) on.delete(uid(h.m));
 
-        /* What this position qualifies for. Reforms bank; the rest hold only
-           while the value stays put. */
         const seenU = new Set<string>();
         const unlocks = D.requirements.filter((r: any) =>
           !seenU.has(`${r.source}:${r.name}`) && seenU.add(`${r.source}:${r.name}`) &&
           r.requires.some((q: any) => {
             if (q.pair !== st.pair) return false;
-            const v = pos[st.pair];
-            const before = from;
             const ok = (x: number) => q.op === '>' ? x > q.value : q.op === '>=' ? x >= q.value
               : q.op === '<' ? x < q.value : q.op === '<=' ? x <= q.value : x === q.value;
-            return ok(v) && !ok(before);
+            return ok(pos[st.pair]) && !ok(from);
           }));
         for (const u of unlocks) if (u.source === 'Reform') banked.push(u);
 
-        out.push({ st, from, goal, done, net, months, take, fighting, already, nudges, unlocks,
+        out.push({ st, dir, from, goal, done, net, take, fighting, already, nudges,
+                   unlocks, stalled, startedAt, doneAt: stalled ? null : year,
                    banked: banked.slice() });
       }
-      return { steps: out, endPos: pos };
+      return { steps: out, endYear: year };
+    }
+
+    /** What an order costs: when the last stage lands, then how early the
+     *  rest land, with anything that never finishes dominating both. */
+    function score(order: any[]) {
+      const { steps } = plan(order);
+      let last = START_YEAR, sum = 0, stalls = 0;
+      for (const s of steps) {
+        if (s.stalled) { stalls++; sum += END_YEAR; continue; }
+        last = Math.max(last, s.doneAt ?? START_YEAR);
+        sum += s.doneAt ?? START_YEAR;
+      }
+      return stalls * 1e6 + last * 1e3 + sum;
+    }
+
+    /** Order the path for the earliest finish.
+     *
+     *  Two stages on the same axis keep their given order — a reversal like
+     *  decentralize-then-centralize is deliberate and the second leg has to
+     *  stay second. Beyond that: seed greedily by taking whichever remaining
+     *  stage finishes soonest from the current clock, then improve by
+     *  relocating single stages while that helps. Both halves read only the
+     *  cached push table, so evaluating hundreds of candidate orders costs
+     *  milliseconds. A target whose movers only exist in a later age scores
+     *  badly early and falls to the back on its own.
+     */
+    function bestOrder() {
+      const n = path.length;
+      if (n < 2) return;
+      const rank = new Map<any, number>();
+      const seen: Record<string, number> = {};
+      for (const st of path) rank.set(st, (seen[st.pair] = (seen[st.pair] ?? -1) + 1));
+      const ok = (order: any[]) => {
+        const last: Record<string, number> = {};
+        for (const st of order) {
+          const r = rank.get(st)!;
+          if (r < (last[st.pair] ?? -1)) return false;
+          last[st.pair] = r;
+        }
+        return true;
+      };
+
+      const remaining = path.slice();
+      const order: any[] = [];
+      while (remaining.length) {
+        let best = 0, bestScore = Infinity;
+        for (let i = 0; i < remaining.length; i++) {
+          const cand = [...order, remaining[i], ...remaining.filter((_, j) => j !== i)];
+          if (!ok(cand)) continue;
+          const s = score(cand);
+          if (s < bestScore) { bestScore = s; best = i; }
+        }
+        order.push(remaining.splice(best, 1)[0]);
+      }
+
+      let cur = order, curScore = score(cur);
+      for (let pass = 0; pass < 3; pass++) {
+        let improved = false;
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n; j++) {
+            if (i === j) continue;
+            const cand = cur.slice();
+            cand.splice(j, 0, cand.splice(i, 1)[0]);
+            if (!ok(cand)) continue;
+            const s = score(cand);
+            if (s < curScore - 1e-6) { cur = cand; curScore = s; improved = true; }
+          }
+        }
+        if (!improved) break;
+      }
+      path = cur;
     }
 
     /* ---- rendering ------------------------------------------------------- */
 
-    function iconHtml(m: any, cls = 'eicon') {
-      return m.icon ? `<img class="${cls}" src="${baseUrl}${m.icon}" alt="" width="16" height="16"
-        loading="lazy" style="vertical-align:-3px;border-radius:2px;" />` : '';
-    }
-    function moverLine(h: any, pid: string, cls: string) {
+    const iconHtml = (m: any) => m.icon
+      ? `<img class="eicon" src="${baseUrl}${m.icon}" alt="" width="16" height="16"
+         loading="lazy" style="vertical-align:-3px;border-radius:2px;" />` : '';
+
+    function moverLine(h: any, pid: string, cls: string, f: any) {
       const side = collateral(h.m, pid);
       const extra = side.length
         ? `<span class="pp-side">also ${side.slice(0, 3).map((e: any) =>
             `${esc(poleName(e.pair, e.dir))} ${(e.perMonth ?? 0).toFixed(3)}`).join(', ')}` +
           `${side.length > 3 ? ` +${side.length - 3}` : ''}</span>`
         : '';
-      const where = h.m.groupName ? `${esc(h.m.groupName)} · ${esc(h.m.source)}` : esc(h.m.source);
-      const iffy = confirmed(h.m) ? ''
-        : '<span class="pp-iffy" title="Its trigger rests on state we cannot read from ' +
-          'the files — check in game whether it is open to you">unverified</span>';
+      const adv = needsAdv(h.m);
+      const tech = adv.length
+        ? `<span class="pp-need">needs ${esc(adv.slice(0, 2).join(', '))}</span>` : '';
+      const iffy = confirmed(h.m, f) ? ''
+        : `<span class="pp-iffy" data-tip="Its trigger rests on state we cannot read ` +
+          `from the files — check in game whether it is open to you">unverified</span>`;
+      const where = h.m.groupName ? esc(h.m.groupName) : esc(h.m.source);
       return `<div class="pp-mover ${cls}">${iconHtml(h.m)}` +
         `<span class="pp-mover__n">${esc(h.m.name)}</span>` +
-        `<span class="pp-mover__s">${where}</span>${iffy}${extra}` +
+        `<span class="pp-mover__s">${where}</span>${iffy}${tech}${extra}` +
         `<span class="pp-mover__p">${h.push > 0 ? '+' : ''}${h.push.toFixed(3)}/mo</span></div>`;
+    }
+
+    /** Reforms, privileges and laws are different kinds of commitment — a
+     *  reform banks, a law is a swap inside its group, a privilege costs
+     *  estate satisfaction — so each gets its own heading. */
+    const SOURCE_ORDER = ['Reform', 'Estate privilege', 'Law', 'Cabinet action'];
+    function groupBySource(list: any[], pid: string, cls: string, f: any) {
+      const buckets = new Map<string, any[]>();
+      for (const h of list) {
+        if (!buckets.has(h.m.source)) buckets.set(h.m.source, []);
+        buckets.get(h.m.source)!.push(h);
+      }
+      const keys = [...buckets.keys()].sort((a, b) => {
+        const ia = SOURCE_ORDER.indexOf(a), ib = SOURCE_ORDER.indexOf(b);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
+      });
+      return keys.map((k) =>
+        `<div class="pp-kind">${esc(k)}${k === 'Reform' ? ' — banks once implemented'
+          : k === 'Law' ? ' — one policy per group' : ''}</div>` +
+        buckets.get(k)!.map((h) => moverLine(h, pid, cls, f)).join('')).join('');
+    }
+
+    function renderPath() {
+      const host = $('[data-pp-path]');
+      if (!path.length) { host.innerHTML = ''; return; }
+      const axisOptions = (sel: string) => Object.entries(D.pairs).map(([pid, p]: any) =>
+        `<option value="${esc(pid)}"${pid === sel ? ' selected' : ''}>` +
+        `${esc(p.left.name)} ←→ ${esc(p.right.name)}</option>`).join('');
+      host.innerHTML =
+        `<h2 class="vp-h">Your path <small>${path.length} stages — edit any of them</small></h2>` +
+        `<ol class="pp-path">` + path.map((st, i) => {
+          const p = D.pairs[st.pair];
+          return `<li class="pp-row">
+            <span class="pp-num">${i + 1}</span>
+            <select data-edit="pair:${i}">${axisOptions(st.pair)}</select>
+            <select data-edit="dir:${i}">
+              <option value="right"${st.dir === 'right' ? ' selected' : ''}>→ ${esc(p.right.name)}</option>
+              <option value="left"${st.dir === 'left' ? ' selected' : ''}>← ${esc(p.left.name)}</option>
+              <option value="auto"${st.dir === 'auto' ? ' selected' : ''}>⇄ hold at</option>
+            </select>
+            <label class="pp-until">until
+              <input type="number" step="5" min="-100" max="100" placeholder="pole"
+                data-edit="at:${i}" value="${st.at === null ? '' : st.at}" />
+            </label>
+            <span class="pp-mv">
+              <button type="button" data-mv="${i}:-1" title="Earlier">↑</button>
+              <button type="button" data-mv="${i}:1" title="Later">↓</button>
+              <button type="button" data-rm="${i}" title="Remove">✕</button>
+            </span>
+          </li>`;
+        }).join('') + `</ol>`;
     }
 
     function render() {
       if (!D) return;
       renderContext();
+      renderPath();
       if (!path.length) {
         $('[data-pp-out]').innerHTML =
           '<div class="pl-empty" style="margin-top:18px;">No stages yet — add one above, ' +
@@ -295,40 +490,43 @@ import Base from '../layouts/Base.astro';
       }
       const { steps } = plan();
       const rec = startRec();
+      const govLabel = (GOVS.find((g) => g[0] === govOf()) || ['', 'country'])[1].toLowerCase();
       const head = country
         ? `<p class="pp-note">Starting from <b>${esc(country.n)}</b>'s 1337 setup` +
           (rec ? ` — ${Object.keys(rec.values || {}).length} axes placed, ` +
                  `${(rec.privileges || []).length} privileges and ` +
-                 `${Object.keys(rec.laws || {}).length} laws already running` : '') + '.</p>'
+                 `${Object.keys(rec.laws || {}).length} laws already running` : '') +
+          `, as a ${esc(govLabel)}.</p>`
         : '<p class="pp-note">Pick a country to start from its real 1337 position, ' +
           'granted privileges and laws. Without one every axis starts at 0.</p>';
 
       $('[data-pp-out]').innerHTML = head + steps.map((s: any, i: number) => {
         const p = D.pairs[s.st.pair];
-        const goalTxt = s.st.at === null ? `${esc(poleName(s.st.pair, s.st.dir))} pole`
-          : `${esc(poleName(s.st.pair, s.st.dir))} ${s.goal > 0 ? '+' : ''}${s.goal}`;
+        const goalTxt = s.st.dir === 'auto'
+          ? `${esc(p.left.name)} / ${esc(p.right.name)} at ${s.goal}`
+          : s.st.at === null ? `${esc(poleName(s.st.pair, s.dir))} pole`
+          : `${esc(poleName(s.st.pair, s.dir))} ${s.goal > 0 ? '+' : ''}${s.goal}`;
+        const a = ageAt(s.startedAt);
         const status = s.done
-          ? '<span class="pp-ok">already there at this point in the path</span>'
-          : s.months === null
+          ? '<span class="pp-ok">already there when this stage comes up</span>'
+          : s.stalled
             ? '<span class="pp-bad">nothing available pushes this way — not reachable</span>'
-            : `<span class="pp-when">${(s.months / 12).toFixed(1)} yrs at best</span>`;
+            : `<span class="pp-when">${Math.round(s.startedAt)} → ${Math.round(s.doneAt)}` +
+              ` · ${(s.doneAt - s.startedAt).toFixed(0)} yrs at best</span>`;
+        const f = facts(a.key);
 
-        const swaps = s.take.length
-          ? `<div class="pp-sub">Switch on</div>` +
-            s.take.map((h: any) => moverLine(h, s.st.pair, 'add')).join('')
-          : '';
         const drops = s.fighting.length
           ? `<div class="pp-sub">Swap off — these pull the other way</div>` +
-            s.fighting.map((h: any) => moverLine(h, s.st.pair, 'drop')).join('')
-          : '';
-        const pushes = s.nudges.length
-          ? `<div class="pp-sub">Extra push while a debate runs</div>` +
-            s.nudges.map((h: any) => moverLine(h, s.st.pair, 'temp')).join('')
-          : '';
+            groupBySource(s.fighting, s.st.pair, 'drop', f) : '';
+        const swaps = s.take.length
+          ? `<div class="pp-sub">Switch on</div>` +
+            groupBySource(s.take, s.st.pair, 'add', f) : '';
         const keeps = s.already.length
           ? `<div class="pp-sub">Already helping</div>` +
-            s.already.slice(0, 5).map((h: any) => moverLine(h, s.st.pair, 'keep')).join('')
-          : '';
+            groupBySource(s.already.slice(0, 6), s.st.pair, 'keep', f) : '';
+        const pushes = s.nudges.length
+          ? `<div class="pp-sub">Extra push while a debate runs</div>` +
+            s.nudges.map((h: any) => moverLine(h, s.st.pair, 'temp', f)).join('') : '';
         const gains = s.unlocks.length
           ? `<div class="pp-sub">This position opens</div>` +
             s.unlocks.map((u: any) =>
@@ -345,32 +543,27 @@ import Base from '../layouts/Base.astro';
           <header>
             <span class="pp-num">${i + 1}</span>
             <b>${goalTxt}</b>
-            <span class="pp-axis">${esc(p.left.name)} ←→ ${esc(p.right.name)}</span>
-            <span class="pp-from">${s.from.toFixed(0)} → ${s.done ? s.from.toFixed(0) : s.goal}</span>
+            <span class="pp-axis">${esc(p.left.key)} ←→ ${esc(p.right.key)}</span>
+            <span class="pp-from">${s.from.toFixed(0)} → ${s.stalled ? '—' : s.goal}</span>
+            <span class="pp-age">${esc(a.name)}</span>
             ${status}
-            <span class="pp-mv">
-              <button type="button" data-mv="${i}:-1" title="Earlier">↑</button>
-              <button type="button" data-mv="${i}:1" title="Later">↓</button>
-              <button type="button" data-rm="${i}" title="Remove">✕</button>
-            </span>
           </header>
           <div class="pp-body">
             <div class="pp-col">${drops}${swaps}${keeps}${pushes}
-              <div class="pp-net">net push toward ${esc(poleName(s.st.pair, s.st.dir))}:
+              <div class="pp-net">net push toward ${esc(poleName(s.st.pair, s.dir))}:
                 <b>${s.net > 0 ? '+' : ''}${s.net.toFixed(3)}</b>/month</div>
             </div>
             <div class="pp-col">${gains}</div>
           </div>
         </section>`;
       }).join('') + `<p class="pp-note">
-        Times are the straight-line case and so are floors, not schedules: the
-        game slows a value's drift as it climbs, and stalls it once the push
-        runs out. Stage order is yours — "Order by cost" sorts by how far each
-        axis has to travel while keeping two stages on the same axis in
-        sequence, which is what makes a reversal like decentralize-then-
-        centralize work. How many privileges you can actually run at once is
-        bounded by estate satisfaction, which is not something the game files
-        state, so treat the switch-on lists as candidates ranked by push.
+        Years are the straight-line case and so are floors, not schedules: the
+        game slows a value's drift as it climbs and stalls it once the push
+        runs out. A stage whose tools only open in a later age waits for that
+        age rather than being called impossible, which is why "Best order"
+        moves those to the back. How many privileges you can run at once is
+        bounded by estate satisfaction, which the files do not state, so each
+        stage takes at most ${TAKE} new movers, ranked by push.
       </p>`;
       syncUrl();
     }
@@ -381,22 +574,10 @@ import Base from '../layouts/Base.astro';
           `<span class="chip">${esc(country.cu)}</span>` +
           `<span class="chip">${esc(country.re)}</span>`
         : '';
-    }
-
-    /* ---- ordering -------------------------------------------------------- */
-
-    /** Cheapest-first, but two stages on one axis keep their given order —
-     *  a reversal is deliberate and the later leg has to stay later. */
-    function orderByCost() {
-      const pos = startValues();
-      const seen: Record<string, number> = {};
-      const keyed = path.map((st, i) => {
-        const from = pos[st.pair] ?? 0;
-        const rank = (seen[st.pair] = (seen[st.pair] ?? -1) + 1);
-        return { st, i, rank, dist: reached(from, st) ? -1 : Math.abs(goalOf(st) - from) };
-      });
-      keyed.sort((a, b) => a.rank - b.rank || a.dist - b.dist || a.i - b.i);
-      path = keyed.map((k) => k.st);
+      const sel = $('[data-pp-gov]') as HTMLSelectElement;
+      const cur = govOf();
+      sel.innerHTML = GOVS.map(([k, label]) =>
+        `<option value="${k}"${k === cur ? ' selected' : ''}>${label}</option>`).join('');
     }
 
     /* ---- url ------------------------------------------------------------- */
@@ -404,11 +585,11 @@ import Base from '../layouts/Base.astro';
     function syncUrl() {
       const qs = new URLSearchParams();
       if (country) qs.set('c', country.t);
+      if (govOverride) qs.set('g', govOverride);
       if (path.length) {
         qs.set('p', path.map((s) => `${s.pair}:${s.dir}${s.at === null ? '' : ':' + s.at}`).join(','));
       }
-      const url = `${location.pathname}${qs.toString() ? '?' + qs : ''}`;
-      history.replaceState(null, '', url);
+      history.replaceState(null, '', `${location.pathname}${qs.toString() ? '?' + qs : ''}`);
     }
 
     /* ---- wiring ---------------------------------------------------------- */
@@ -453,22 +634,34 @@ import Base from '../layouts/Base.astro';
       wirePicker('[data-pp-country]',
         (q) => D.countries.filter((c: any) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
           .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
-        (tag) => { country = D.countries.find((c: any) => c.t === tag) || null; });
+        (tag) => {
+          country = D.countries.find((c: any) => c.t === tag) || null;
+          govOverride = null;
+          buildTable();
+        });
 
       const qs = new URLSearchParams(location.search);
       country = D.countries.find((c: any) => c.t === qs.get('c')) || null;
+      const g = qs.get('g');
+      if (g && GOVS.some(([k]) => k === g)) govOverride = g;
       for (const bit of (qs.get('p') || '').split(',').filter(Boolean)) {
         const [pair, dir, at] = bit.split(':');
-        if (pair in D.pairs && (dir === 'left' || dir === 'right')) {
-          path.push({ pair, dir, at: at === undefined || at === '' ? null : parseFloat(at) });
+        if (pair in D.pairs && (dir === 'left' || dir === 'right' || dir === 'auto')) {
+          path.push({ pair, dir: dir as any, at: at === undefined || at === '' ? null : parseFloat(at) });
         }
       }
+      buildTable();
       render();
     });
 
+    ($('[data-pp-gov]') as HTMLSelectElement).addEventListener('change', (e) => {
+      govOverride = (e.target as HTMLSelectElement).value;
+      buildTable();
+      render();
+    });
     $('[data-pp-push]').addEventListener('click', () => {
       const pair = ($('[data-pp-axis]') as HTMLSelectElement).value;
-      const dir = ($('[data-pp-goal]') as HTMLSelectElement).value as 'left' | 'right';
+      const dir = ($('[data-pp-goal]') as HTMLSelectElement).value as any;
       const raw = ($('[data-pp-at]') as HTMLInputElement).value.trim();
       path.push({ pair, dir, at: raw === '' ? null : parseFloat(raw) });
       render();
@@ -477,7 +670,11 @@ import Base from '../layouts/Base.astro';
       path = EXAMPLE.map(([pair, dir, at]) => ({ pair, dir, at }));
       render();
     });
-    $('[data-pp-order]').addEventListener('click', () => { orderByCost(); render(); });
+    $('[data-pp-order]').addEventListener('click', () => {
+      const b = $('[data-pp-order]');
+      b.textContent = '… working';
+      setTimeout(() => { bestOrder(); render(); b.textContent = '✦ Best order'; }, 10);
+    });
     $('[data-pp-clear]').addEventListener('click', () => { path = []; render(); });
     $('[data-pp-copy]').addEventListener('click', () => {
       syncUrl();
@@ -485,7 +682,18 @@ import Base from '../layouts/Base.astro';
       const b = $('[data-pp-copy]'); b.textContent = '✓ Copied';
       setTimeout(() => (b.textContent = '⧉ Copy link'), 1200);
     });
-    $('[data-pp-out]').addEventListener('click', (e) => {
+    $('[data-pp-path]').addEventListener('change', (e) => {
+      const el = e.target as HTMLInputElement;
+      if (!el.dataset.edit) return;
+      const [field, idx] = el.dataset.edit.split(':');
+      const st = path[parseInt(idx, 10)];
+      if (!st) return;
+      if (field === 'pair') st.pair = el.value;
+      else if (field === 'dir') st.dir = el.value as any;
+      else st.at = el.value.trim() === '' ? null : parseFloat(el.value);
+      render();
+    });
+    $('[data-pp-path]').addEventListener('click', (e) => {
       const el = (e.target as HTMLElement).closest('[data-mv],[data-rm]') as HTMLElement | null;
       if (!el) return;
       if (el.dataset.rm !== undefined) {
@@ -501,15 +709,32 @@ import Base from '../layouts/Base.astro';
   </script>
 
   <style is:global>
-    .pp-add select {
+    .pp-add select, .pl-toggle select {
       background: var(--bg-elev); color: var(--text); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 6px 10px; font-size: 13px; font-family: var(--font-ui);
     }
+    .pl-toggle select { padding: 4px 8px; font-size: 12.5px; }
     .pp-add input[type=number] {
       background: var(--bg-elev); color: var(--text); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 5px 8px; font-family: var(--font-mono); font-size: 12px;
     }
-    .pp-note { max-width: 800px; color: var(--text-dim); font-size: 12.5px; margin: 14px 0; }
+    .pp-note { max-width: 820px; color: var(--text-dim); font-size: 12.5px; margin: 14px 0; }
+
+    .pp-path { list-style: none; margin: 6px 0 4px; padding: 0;
+      display: flex; flex-direction: column; gap: 4px; }
+    .pp-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      padding: 5px 10px; border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-elev); }
+    .pp-row select {
+      background: var(--bg-elev-2); color: var(--text); border: 1px solid var(--border);
+      border-radius: 3px; padding: 3px 7px; font-size: 12.5px; font-family: var(--font-ui);
+    }
+    .pp-row .pp-until { font-size: 12px; color: var(--text-faint); }
+    .pp-row input[type=number] {
+      width: 62px; background: var(--bg-elev-2); color: var(--text);
+      border: 1px solid var(--border); border-radius: 3px; padding: 2px 6px;
+      font-family: var(--font-mono); font-size: 12px;
+    }
 
     .pp-step { border: 1px solid var(--border); border-radius: var(--radius);
       background: var(--bg-elev); margin-top: 12px; overflow: hidden; }
@@ -518,8 +743,10 @@ import Base from '../layouts/Base.astro';
     .pp-num { font-family: var(--font-mono); font-size: 11px; color: var(--bg);
       background: var(--gold); border-radius: 3px; padding: 1px 6px; }
     .pp-step header b { color: var(--gold-soft); font-size: 14px; }
-    .pp-axis { font-size: 11.5px; color: var(--text-faint); }
+    .pp-axis { font-size: 11px; color: var(--text-faint); font-family: var(--font-mono); }
     .pp-from { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
+    .pp-age { font-size: 11px; color: var(--text-dim); border: 1px solid var(--border-strong);
+      border-radius: 3px; padding: 0 5px; }
     .pp-when { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-dim); }
     .pp-ok { font-size: 11.5px; color: var(--good); }
     .pp-bad { font-size: 11.5px; color: var(--bad); }
@@ -531,27 +758,42 @@ import Base from '../layouts/Base.astro';
     .pp-body { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 18px; padding: 10px 12px; }
     @media (max-width: 900px) { .pp-body { grid-template-columns: 1fr; } }
     .pp-sub { font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
-      color: var(--text-faint); margin: 8px 0 4px; }
+      color: var(--text-faint); margin: 10px 0 4px; }
     .pp-sub:first-child { margin-top: 0; }
     .pp-sub.quiet { text-transform: none; letter-spacing: 0; font-size: 12px; }
+    .pp-kind { font-size: 11.5px; color: var(--gold-soft); margin: 7px 0 3px; }
     .pp-mover { display: flex; align-items: baseline; gap: 8px; font-size: 12.5px;
       color: var(--text-soft); padding: 3px 8px; border-radius: 3px;
       border-left: 2px solid var(--border-strong); background: var(--bg-elev-2); margin-bottom: 2px; }
     .pp-mover.add { border-left-color: var(--good); }
     .pp-mover.drop { border-left-color: var(--bad); }
     .pp-mover.keep { border-left-color: var(--gold-deep); }
-    .pp-mover.temp { border-left-color: var(--border-strong); opacity: .8; }
     .pp-mover.bank { border-left-color: var(--good); }
     .pp-mover.hold { border-left-color: var(--gold-deep); }
+    .pp-mover.temp { border-left-color: var(--border-strong); opacity: .8; }
     .pp-mover__n { flex: none; }
     .pp-mover__s { font-size: 11px; color: var(--text-faint); }
     .pp-side { font-size: 11px; color: var(--text-faint); font-style: italic; }
-    .pp-iffy { font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
-      color: var(--text-faint); border: 1px solid var(--border-strong);
-      border-radius: 3px; padding: 0 4px; }
+    .pp-need { font-size: 10.5px; color: var(--gold-soft); }
     .pp-mover__p { margin-left: auto; font-family: var(--font-mono); font-size: 11px;
       color: var(--text-dim); white-space: nowrap; }
     .pp-net { margin-top: 8px; font-size: 12px; color: var(--text-dim); }
     .pp-net b { font-family: var(--font-mono); color: var(--gold); }
+
+    /* Badge tooltip — the native title box renders unstyled and lands far
+       from the badge, so it is drawn in place instead. */
+    .pp-iffy { position: relative; font-size: 10px; text-transform: uppercase;
+      letter-spacing: .05em; color: var(--text-faint);
+      border: 1px solid var(--border-strong); border-radius: 3px; padding: 0 4px; cursor: help; }
+    .pp-iffy::after {
+      content: attr(data-tip); position: absolute; left: 0; bottom: calc(100% + 6px);
+      width: 260px; padding: 7px 9px; z-index: 80;
+      background: var(--bg-elev); color: var(--text-soft);
+      border: 1px solid var(--border-strong); border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); font-size: 11.5px; line-height: 1.45;
+      text-transform: none; letter-spacing: 0;
+      opacity: 0; visibility: hidden; transition: opacity .12s ease;
+    }
+    .pp-iffy:hover::after { opacity: 1; visibility: visible; }
   </style>
 </Base>

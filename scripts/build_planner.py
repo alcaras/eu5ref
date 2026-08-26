@@ -91,9 +91,19 @@ def main():
     order = sorted(nodes)
     vhash = hashlib.sha1(json.dumps(order).encode()).hexdigest()[:4]
 
+    # Government type comes from the 1337 template stack, so a monarchy is
+    # not offered advances gated to tribes and republics.
+    starts = {}
+    sp = ROOT / 'public' / 'country-start.json'
+    if sp.exists():
+        starts = json.loads(sp.read_text())
+
     clist = []
     for c in countries:
-        f = c['data'].get('facts') or {}
+        f = dict(c['data'].get('facts') or {})
+        gov = (starts.get(c['data']['tag']) or {}).get('type')
+        if gov:
+            f['gov'] = gov
         clist.append({'t': c['data']['tag'], 'n': c['name'], 'col': c.get('color'),
                       'cu': c['facets']['culture'], 're': c['facets']['religion'],
                       'f': f})

@@ -1053,12 +1053,12 @@
        [
         "or",
         [
-         "?",
-         "government type"
+         "gov",
+         "tribe"
         ],
         [
-         "?",
-         "government type"
+         "gov",
+         "steppe_horde"
         ]
        ]
       ]
@@ -40902,8 +40902,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "government type"
+      "gov",
+      "monarchy"
      ],
      [
       "or",
@@ -40918,10 +40918,16 @@
      ]
     ],
     "gate_labels": [
+     "Monarchy",
      "Vietnamese",
      "Austroasiatic"
     ],
     "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ],
      [
       "Vietnamese",
       "cul",
@@ -96264,12 +96270,12 @@
        [
         "or",
         [
-         "?",
-         "government type"
+         "gov",
+         "tribe"
         ],
         [
-         "?",
-         "government type"
+         "gov",
+         "steppe_horde"
         ]
        ]
       ]
@@ -156382,8 +156388,11 @@
     "branch_id": "advance:written_alphabet",
     "countries": [],
     "gate": [
-     "?",
-     "has tribal government"
+     "not",
+     [
+      "gov",
+      "tribe"
+     ]
     ],
     "gate_labels": [],
     "gate_lits": [],
