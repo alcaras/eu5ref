@@ -16690,11 +16690,11 @@
       "or",
       [
        "?",
-       "this"
+       "culture this"
       ],
       [
        "?",
-       "this"
+       "culture this"
       ]
      ],
      [
@@ -17129,7 +17129,7 @@
    "data": {
     "gate": [
      "?",
-     "religion group"
+     "group NOT EQUAL"
     ],
     "gate_labels": [],
     "max_levels": null,
@@ -19068,7 +19068,7 @@
      ],
      [
       "?",
-      "any subject total effective building levels:trade company headquarters"
+      "total effective building levels:trade company headquarters GREATER THAN"
      ]
     ],
     "gate_labels": [],
@@ -19122,7 +19122,7 @@
      ],
      [
       "?",
-      "any subject total effective building levels:trade company headquarters"
+      "total effective building levels:trade company headquarters GREATER THAN"
      ]
     ],
     "gate_labels": [],
@@ -19176,7 +19176,7 @@
      ],
      [
       "?",
-      "any subject total effective building levels:trade company headquarters"
+      "total effective building levels:trade company headquarters GREATER THAN"
      ]
     ],
     "gate_labels": [],
@@ -19236,7 +19236,7 @@
      ],
      [
       "?",
-      "any subject total effective building levels:trade company headquarters"
+      "total effective building levels:trade company headquarters GREATER THAN"
      ]
     ],
     "gate_labels": [],
@@ -19304,7 +19304,7 @@
        "not",
        [
         "?",
-        "has variable"
+        "custom tooltip has variable"
        ]
       ]
      ],
@@ -19388,7 +19388,7 @@
      ],
      [
       "?",
-      "any subject total effective building levels:trade company headquarters"
+      "total effective building levels:trade company headquarters GREATER THAN"
      ]
     ],
     "gate_labels": [],

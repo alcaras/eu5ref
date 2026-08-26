@@ -53,11 +53,17 @@ _SCALAR = {
     'culture.culture_group': 'cgrp',
 }
 
-# Capital geography. These appear both dotted (`original_capital.region`)
-# and inside a capital scope block; in a country-scoped potential the bare
-# forms are the game's shorthand for "my capital's <tier>".
+# Capital geography. Verified against every geography predicate in
+# common/advances: they are ALWAYS explicitly scoped — `original_capital ?=
+# { region = … }`, `capital = { area = … }`, or dotted
+# `original_capital.region`. A bare `region =` is never the capital's, so we
+# do not guess: other scopes (notably `any_owned_location`, which is about
+# territory you hold and can change) stay dynamic.
 _GEO_TIERS = ('area', 'province', 'region', 'sub_continent', 'continent')
 _CAPITAL_SCOPES = ('capital', 'original_capital', 'capital_location')
+# scopes that talk about owned territory rather than the capital
+_TERRITORY_SCOPES = ('any_owned_location', 'any_owned_province',
+                     'any_owned_area', 'any_location', 'any_subject_country')
 
 
 def _strip_scope(v):
@@ -83,15 +89,19 @@ def compile_trigger(tree, culture_groups: dict[str, str] | None = None):
     return expr
 
 
-def _compile_block(tree, cgroups) -> list | None:
-    """A block is an implicit AND over its (possibly duplicate) keys."""
+def _compile_block(tree, cgroups, scope: str | None = None) -> list | None:
+    """A block is an implicit AND over its (possibly duplicate) keys.
+
+    `scope` is the enclosing scope name, so a bare `region =` nested inside
+    `original_capital ?= { OR = { … } }` still resolves against the capital
+    — and one inside `any_owned_location` never does."""
     parts = []
     try:
         pairs = list(tree.iterate_with_duplicates())
     except AttributeError:
         return ['?', 'unparsed']
     for key, value in pairs:
-        node = _compile_pair(str(key), value, cgroups)
+        node = _compile_pair(str(key), value, cgroups, scope)
         if node is not None:
             parts.append(node)
     if not parts:
@@ -99,26 +109,23 @@ def _compile_block(tree, cgroups) -> list | None:
     return parts[0] if len(parts) == 1 else ['and', *parts]
 
 
-def _compile_pair(key: str, value, cgroups) -> list | None:
-    # ── boolean combinators ────────────────────────────────────
+def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | None:
+    # ── boolean combinators (keep the enclosing scope) ─────────
     if key in ('OR', 'any'):
-        inner = _compile_block(value, cgroups)
+        inner = _compile_block(value, cgroups, scope)
         if inner is None:
             return None
         return ['or', *inner[1:]] if inner[0] == 'and' else inner
     if key in ('AND', 'all'):
-        return _compile_block(value, cgroups)
+        return _compile_block(value, cgroups, scope)
     if key == 'NOT':
-        inner = _compile_block(value, cgroups)
+        inner = _compile_block(value, cgroups, scope)
         return ['not', inner] if inner else None
     if key in ('NOR', 'NAND'):
-        inner = _compile_block(value, cgroups)
+        inner = _compile_block(value, cgroups, scope)
         if inner is None:
             return None
-        if key == 'NOR':
-            body = ['or', *inner[1:]] if inner[0] == 'and' else inner
-        else:
-            body = inner
+        body = (['or', *inner[1:]] if inner[0] == 'and' else inner) if key == 'NOR' else inner
         return ['not', body]
 
     # `exists = capital` guards a following capital check; every country has
@@ -126,11 +133,22 @@ def _compile_pair(key: str, value, cgroups) -> list | None:
     if key == 'exists' and str(value).strip() in _CAPITAL_SCOPES:
         return None
 
-    # ── scoped blocks: culture = { ... }, religion = { ... } ───
+    # ── scoped blocks: culture = { … }, original_capital = { … } ──
     if hasattr(value, 'iterate_with_duplicates'):
-        return _compile_scope(key, value, cgroups)
+        if key in _TERRITORY_SCOPES:
+            UNHANDLED[key] += 1
+            return ['?', _pretty(key)]
+        return _compile_block(value, cgroups, scope=key)
 
-    # ── scalar predicates ─────────────────────────────────────
+    # ── scalar predicates, resolved against the enclosing scope ──
+    if scope in _CAPITAL_SCOPES and key in _GEO_TIERS:
+        return ['cap', key, _strip_scope(value)]
+    if key == 'merged_culture_group_contains_culture':
+        # "shares a (merged) culture group with culture X" — lower to that
+        # culture's own group when we can resolve it
+        cul = _strip_scope(value)
+        grp = cgroups.get(cul)
+        return ['cgrp', grp] if grp else ['cul', cul]
     if key in _SCALAR:
         return [_SCALAR[key], _strip_scope(value)]
 
@@ -138,47 +156,18 @@ def _compile_pair(key: str, value, cgroups) -> list | None:
     if geo:
         return ['cap', geo, _strip_scope(value)]
 
-    UNHANDLED[key] += 1
-    return ['?', _pretty(key)]
+    label = f'{scope}.{key}' if scope else key
+    UNHANDLED[label] += 1
+    return ['?', _pretty(f'{scope} {key}' if scope else key)]
 
 
 def _geo_pair(key: str) -> str | None:
-    """`region` / `original_capital.sub_continent` → the geography tier."""
-    base = key.split('.')[-1]
-    head = key.split('.')[0]
-    if base in _GEO_TIERS and (head == base or head in _CAPITAL_SCOPES):
-        return base
+    """`original_capital.sub_continent` → the geography tier. Only the
+    dotted capital form; a bare `region =` is not the capital's."""
+    parts = key.split('.')
+    if len(parts) == 2 and parts[0] in _CAPITAL_SCOPES and parts[1] in _GEO_TIERS:
+        return parts[1]
     return None
-
-
-def _compile_scope(key: str, block, cgroups) -> list | None:
-    """`culture = { has_culture_group = X }` and friends."""
-    parts = []
-    for k, v in block.iterate_with_duplicates():
-        k = str(k)
-        if k in ('OR', 'AND', 'NOT', 'NOR', 'NAND', 'any', 'all'):
-            node = _compile_pair(k, v, cgroups)
-        elif k == 'merged_culture_group_contains_culture':
-            # "shares a (merged) culture group with culture X" — lower to
-            # that culture's own group when we can resolve it.
-            cul = _strip_scope(v)
-            grp = cgroups.get(cul)
-            node = ['cgrp', grp] if grp else ['cul', cul]
-        elif k in _SCALAR:
-            node = [_SCALAR[k], _strip_scope(v)]
-        elif key == 'culture' and k in ('has_culture_group', 'culture_group'):
-            node = ['cgrp', _strip_scope(v)]
-        elif key in _CAPITAL_SCOPES and k in _GEO_TIERS:
-            node = ['cap', k, _strip_scope(v)]
-        else:
-            UNHANDLED[f'{key}.{k}'] += 1
-            node = ['?', f'{_pretty(key)} {_pretty(k)}']
-        if node is not None:
-            parts.append(node)
-    if not parts:
-        UNHANDLED[f'{key}.<empty>'] += 1
-        return ['?', _pretty(key)]
-    return parts[0] if len(parts) == 1 else ['and', *parts]
 
 
 # ── build-time helpers ────────────────────────────────────────

@@ -28,6 +28,7 @@ TYPE_PAGES = {
     'country': 'countries',
     'formable': 'formables',
     'trait': 'traits',
+    'event': 'events',
 }
 
 SKIP_FILES = {'entities.json', 'backlinks.json'}

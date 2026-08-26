@@ -18,9 +18,13 @@ const UNIQUE_SECTIONS: [string, string][] = [
   ['units', 'Unique units'],
   ['buildings', 'Unique buildings'],
   ['reforms', 'Unique government reforms'],
+  ['events', 'Flavour events'],
 ];
 const unique = entity.data.unique || {};
 const uniqueTotal = Object.values(unique).reduce((n: number, v: any) => n + v.length, 0);
+// A big tag can have 200+ flavour events — show a readable slice and send
+// the rest to the events browser.
+const CAP = 40;
 ---
 <Base title={entity.name} active="countries" eyebrow={`Country · ${entity.data.tag}`}>
   <EntityDetail entity={entity} backlinks={backlinks}>
@@ -32,9 +36,12 @@ const uniqueTotal = Object.values(unique).reduce((n: number, v: any) => n + v.le
             <div class="uniq">
               <span class="uniq__label">{label}</span>
               <span class="chips">
-                {unique[key].map((x: any) => (
+                {unique[key].slice(0, CAP).map((x: any) => (
                   <a class="chip" href={`${base}${x.page}/${x.slug}`}>{x.name}</a>
                 ))}
+                {unique[key].length > CAP && (
+                  <a class="chip" href={`${base}events`}>… and {unique[key].length - CAP} more</a>
+                )}
               </span>
             </div>
           )

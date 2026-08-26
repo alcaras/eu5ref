@@ -40,11 +40,22 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
     const rows = Array.from(scope.querySelectorAll<HTMLElement>('[data-row]'));
     const active = new Map<string, Set<string>>();
 
+    // Row text is indexed lazily on first search and cached on the element,
+    // so the HTML carries no duplicate copy of it.
+    const textOf = (row: HTMLElement) => {
+      let t = (row as any).__s;
+      if (t === undefined) {
+        t = (row.textContent || '').replace(/\s+/g, ' ').toLowerCase();
+        (row as any).__s = t;
+      }
+      return t;
+    };
+
     const apply = () => {
       const q = (search?.value || '').trim().toLowerCase();
       let visible = 0;
       for (const row of rows) {
-        let show = !q || (row.dataset.search || '').includes(q);
+        let show = !q || textOf(row).includes(q);
         if (show) {
           for (const [facet, values] of active) {
             if (values.size === 0) continue;

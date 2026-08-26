@@ -10,13 +10,15 @@
 //   kind 'mods'  → entity.mods (or entity.data[key]) via <Mods>
 //   kind 'rich'  → entity.desc (or entity.data[key]) via <Rich>
 //   kind 'pairs' → entity.data[key] = [{...label-ish, value}] as k/v list
+//   kind 'refs'  → entity.data[key] = [{id,label}] as linked <Term>s
 //
-// Rows emit data-search plus data-f-<facet> attributes so FilterBar works
-// with zero page-specific wiring.
+// Rows emit data-f-<facet> attributes so FilterBar works with zero
+// page-specific wiring; free-text search reads the row's own text (a
+// data-search attribute would duplicate every cell into the HTML, which on
+// the 7,500-row events page cost megabytes).
 import Mods from './Mods.astro';
 import Rich from './Rich.astro';
 import Term from './Term.astro';
-import { richToPlain } from '../lib/entities';
 
 export interface Column {
   key: string;
@@ -34,12 +36,6 @@ const base = import.meta.env.BASE_URL;
 
 const pretty = (v: string) => String(v).replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 
-function searchText(e: any): string {
-  const parts = [e.name];
-  for (const v of Object.values(e.facets || {})) parts.push(String(v));
-  for (const m of e.mods || []) parts.push(m.label);
-  return parts.join(' ').toLowerCase();
-}
 function facetAttrs(e: any): Record<string, string> {
   const attrs: Record<string, string> = {};
   for (const [k, v] of Object.entries(e.facets || {})) {
@@ -53,39 +49,12 @@ const cellValue = (e: any, c: Column) =>
   : c.kind === 'facet' ? e.facets?.[c.key]
   : e.data?.[c.key];
 
-// CSV projection — same column schema, flattened to plain text at build
-// time (the client script only quotes, joins, and downloads).
-function csvCellValue(e: any, c: Column): string {
-  if (c.kind === 'name' || c.kind === 'namePlain') return e.name;
-  const v = cellValue(e, c);
-  if (v == null || v === '' || (Array.isArray(v) && v.length === 0)) return '';
-  switch (c.kind) {
-    case 'mods':
-      return v.map((m: any) => `${m.value} ${m.label}`).join('; ');
-    case 'rich':
-      return richToPlain(v);
-    case 'pairs':
-      return v.map((p: any) => `${p.pop ?? p.label ?? p.k}: ${p.value}`).join('; ');
-    case 'refs':
-      return v.map((r: any) => r.label).join('; ');
-    case 'chips':
-    case 'facet':
-      return (Array.isArray(v) ? v : [v]).map(pretty).join('; ');
-    default:
-      return String(v);
-  }
-}
-const csvData = {
-  name: csvName,
-  header: columns.map((c) => c.label),
-  rows: entities.map((e) => columns.map((c) => csvCellValue(e, c))),
-};
 ---
 <div class="etbl-wrap" data-etbl>
   <div class="etbl-tools">
-    <button type="button" class="csv-btn" data-csv-btn title="Download the rows currently shown as CSV">⤓ CSV</button>
+    <button type="button" class="csv-btn" data-csv-btn data-csv-name={csvName}
+            title="Download the rows currently shown as CSV">⤓ CSV</button>
   </div>
-  <script type="application/json" data-csv-data set:html={JSON.stringify(csvData)} />
   <div class="etbl-scroll">
   <table class="etbl">
     <thead>
@@ -93,7 +62,7 @@ const csvData = {
     </thead>
     <tbody>
       {entities.map((e) => (
-        <tr data-row data-search={searchText(e)} {...facetAttrs(e)}>
+        <tr data-row {...facetAttrs(e)}>
           {columns.map((c) => {
             const v = cellValue(e, c);
             const empty = v == null || (Array.isArray(v) && v.length === 0) || v === '';
@@ -155,20 +124,27 @@ const csvData = {
 </div>
 
 <script>
-  // CSV export: data was flattened at build time; here we only respect the
-  // current filter (skip hidden rows), quote, and download. BOM so Excel
-  // opens UTF-8 correctly.
+  // CSV export reads the rendered table rather than a duplicate JSON copy —
+  // on a 7,500-row page that copy doubled the HTML. Cell text is what the
+  // reader sees; hidden (filtered-out) rows are skipped. BOM so Excel opens
+  // UTF-8 correctly.
   const csvCell = (v: string) =>
     /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  const cellText = (el: Element) =>
+    (el.textContent || '').replace(/\s+/g, ' ').trim();
 
   for (const wrap of document.querySelectorAll('[data-etbl]')) {
-    const btn = wrap.querySelector('[data-csv-btn]');
-    const dataEl = wrap.querySelector('[data-csv-data]');
-    if (!btn || !dataEl) continue;
+    const btn = wrap.querySelector('[data-csv-btn]') as HTMLElement | null;
+    if (!btn) continue;
     btn.addEventListener('click', () => {
-      const { name, header, rows } = JSON.parse(dataEl.textContent || '{}');
-      const domRows = wrap.querySelectorAll<HTMLElement>('[data-row]');
-      const visible = rows.filter((_: string[], i: number) => !domRows[i]?.hidden);
+      const name = btn.dataset.csvName || 'eu5ref';
+      const header = [...wrap.querySelectorAll('thead th')].map(cellText);
+      const visible = [...wrap.querySelectorAll<HTMLElement>('[data-row]')]
+        .filter((tr) => !tr.hidden)
+        .map((tr) => [...tr.children].map((td) => {
+          const t = cellText(td);
+          return t === '—' ? '' : t;
+        }));
       if (!visible.length) return;
       const csv = '﻿' + [header, ...visible]
         .map((r: string[]) => r.map(csvCell).join(',')).join('\r\n');

@@ -50,16 +50,20 @@ def unique_index() -> dict[str, dict[str, list]]:
     sources = [('advances.json', 'advances', 'advances'),
                ('units.json', 'units', 'units'),
                ('buildings.json', 'buildings', 'buildings'),
-               ('reforms.json', 'reforms', 'reforms')]
+               ('reforms.json', 'reforms', 'reforms'),
+               ('events.json', 'events', 'events')]
     for fname, key, page in sources:
         path = ref.DATA_DIR / fname
         if not path.exists():
             continue
         for e in json.loads(path.read_text())['entities']:
-            gate = (e.get('data') or {}).get('gate')
-            if not gate:
-                continue
-            for kind, val in literals(gate, kinds=('tag',)):
+            data = e.get('data') or {}
+            gate = data.get('gate')
+            # `tags` covers events, which name their country in
+            # dynamic_historical_event rather than in a trigger
+            tags = list(data.get('tags') or [])
+            tags += [v for _, v in literals(gate, kinds=('tag',))] if gate else []
+            for val in dict.fromkeys(tags):
                 bucket = idx.setdefault(val, {})
                 lst = bucket.setdefault(key, [])
                 if not any(x['id'] == e['id'] for x in lst):

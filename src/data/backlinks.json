@@ -616,6 +616,21 @@
    "id": "concept:diplomacy",
    "name": "Diplomacy",
    "page": "concepts/diplomacy"
+  },
+  {
+   "id": "event:overextension.13",
+   "name": "Infamy has consequenses!",
+   "page": "events/overextension-13"
+  },
+  {
+   "id": "event:overextension.12",
+   "name": "Infamy is RootRoot",
+   "page": "events/overextension-12"
+  },
+  {
+   "id": "event:overextension.14",
+   "name": "Infamy is against Root Traditions",
+   "page": "events/overextension-14"
   }
  ],
  "concept:area": [
@@ -3281,6 +3296,11 @@
    "page": "concepts/max-control"
   },
   {
+   "id": "event:flavor_orm_oma.1",
+   "name": "Nabhan Control of Oman",
+   "page": "events/flavor-orm-oma-1"
+  },
+  {
    "id": "cabinet-action:noblesse_oblige_cabinet_action",
    "name": "Noblesse Oblige",
    "page": null
@@ -4867,6 +4887,11 @@
    "id": "concept:society_of_pops",
    "name": "Society of Pops",
    "page": "concepts/society-of-pops"
+  },
+  {
+   "id": "event:qa_debug.28",
+   "name": "Special Units Menu",
+   "page": "events/qa-debug-28"
   },
   {
    "id": "concept:spy_network",
@@ -8504,6 +8529,11 @@
  ],
  "concept:heir": [
   {
+   "id": "event:flavor_csu.210",
+   "name": "A Devious Plan",
+   "page": "events/flavor-csu-210"
+  },
+  {
    "id": "heir-selection:absolute_cognatic_primogeniture",
    "name": "Absolute Cognatic Primogeniture",
    "page": null
@@ -8537,6 +8567,11 @@
    "id": "law:heir_religion_law",
    "name": "Heir Religion",
    "page": "laws/heir-religion-law"
+  },
+  {
+   "id": "event:flavor_csu.211",
+   "name": "Kidnapped Heir",
+   "page": "events/flavor-csu-211"
   },
   {
    "id": "government-type:monarchy",
@@ -11054,6 +11089,11 @@
    "page": "concepts/isolate"
   },
   {
+   "id": "event:trade.10",
+   "name": "Lack of protection",
+   "page": "events/trade-10"
+  },
+  {
    "id": "concept:maritime_presence",
    "name": "Maritime Presence",
    "page": "concepts/maritime-presence"
@@ -11399,6 +11439,11 @@
    "id": "concept:mercenary_expense",
    "name": "Hiring Mercenaries",
    "page": "concepts/mercenary-expense"
+  },
+  {
+   "id": "event:mercs.11",
+   "name": "Mercenaries Abandoning Contract",
+   "page": "events/mercs-11"
   },
   {
    "id": "concept:mercenary_income",
@@ -15294,6 +15339,11 @@
    "page": "concepts/leadership-election-resolution"
   },
   {
+   "id": "event:imperial_circles.20",
+   "name": "Our Vote Has Been Bought",
+   "page": "events/imperial-circles-20"
+  },
+  {
    "id": "concept:special_status_power",
    "name": "Special Status Power",
    "page": "concepts/special-status-power"
@@ -15444,6 +15494,11 @@
    "id": "concept:rival_enemy",
    "name": "Enemy",
    "page": "concepts/rival-enemy"
+  },
+  {
+   "id": "event:trade.10",
+   "name": "Lack of protection",
+   "page": "events/trade-10"
   }
  ],
  "concept:rival_enemy": [
@@ -16729,6 +16784,11 @@
    "page": "concepts/gold"
   },
   {
+   "id": "event:regencies.2",
+   "name": "No Hard Feelings",
+   "page": "events/regencies-2"
+  },
+  {
    "id": "concept:power_projection",
    "name": "Power Projection",
    "page": "concepts/power-projection"
@@ -17889,6 +17949,11 @@
    "id": "io:marriage_union",
    "name": "Marriage Union",
    "page": null
+  },
+  {
+   "id": "event:succession.102",
+   "name": "The Union of Crowns",
+   "page": "events/succession-102"
   },
   {
    "id": "concept:union_integration_level",

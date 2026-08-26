@@ -188,6 +188,12 @@ export const TABS: Tab[] = [
     summary: 'Mission trees per country and group',
   },
 
+  {
+    slug: 'events', icon: '📜', label: 'Events', section: 'World',
+    status: 'built',
+    summary: 'Every narrative event — options, rewards, and who it fires for',
+  },
+
   // ── Concepts ──────────────────────────────────────────────────────
   {
     slug: 'concepts', icon: '📖', label: 'Concepts', section: 'Concepts',

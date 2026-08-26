@@ -147078,11 +147078,11 @@
             "or",
             [
               "?",
-              "international organization has policy"
+              "any international organizations member of international organization has policy"
             ],
             [
               "?",
-              "international organization has policy"
+              "any international organizations member of international organization has policy"
             ]
           ]
         ],
@@ -153111,22 +153111,10 @@
         "branch_id": "advance:printing_press_advance",
         "countries": [],
         "gate": [
-          "or",
-          [
-            "cap",
-            "area",
-            "left_bank_ukraine_area"
-          ],
-          [
-            "cap",
-            "area",
-            "right_bank_ukraine_area"
-          ]
+          "?",
+          "any owned location"
         ],
-        "gate_labels": [
-          "Left Bank Ukraine",
-          "Right Bank Ukraine"
-        ],
+        "gate_labels": [],
         "requires": [
           {
             "id": "advance:lumber_improvements_discovery",

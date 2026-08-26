@@ -2485,7 +2485,7 @@
           ],
           [
             "?",
-            "and government type"
+            "government type NOT EQUAL"
           ]
         ],
         "gate_labels": [],

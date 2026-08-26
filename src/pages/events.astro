@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionTable from '../components/SectionTable.astro';
+import data from '../data/events.json';
+
+// Deliberately project a slim row here: the full descriptions live on the
+// detail pages, and inlining 7,500 of them would bloat this page.
+const entities = data.entities.map((e) => ({
+  id: e.id, type: e.type, slug: e.slug, name: e.name, facets: e.facets, mods: [],
+  data: {
+    gives: e.facets.rewards || null,
+    years: e.data.years ? `${e.data.years.from || '?'} – ${e.data.years.to || '?'}` : null,
+    options: e.data.options.length || null,
+    gate_labels: e.data.gate_labels?.slice(0, 3) || null,
+  },
+}));
+const ds = { ...data, entities };
+const withRewards = entities.filter((e) => e.facets.rewards).length;
+---
+<Base title="Events" active="events" pageMark="📜" eyebrow="Events"
+  pageStats={[
+    { label: 'events', value: entities.length },
+    { label: 'with tagged rewards', value: withRewards },
+    { label: 'groups', value: new Set(entities.map((e) => e.facets.namespace)).size },
+  ]}
+  description="Every narrative event in Europa Universalis V — options, what each one gives, when it can fire, and which country it belongs to.">
+  <SectionTable data={ds} pagePrefix="events" minFacetCount={60} columns={[
+    { key: 'name', label: 'Event', kind: 'name' },
+    { key: 'kind', label: 'Kind', kind: 'facet' },
+    { key: 'gate_labels', label: 'For', kind: 'chips' },
+    { key: 'gives', label: 'Gives', kind: 'chips' },
+    { key: 'years', label: 'Years', kind: 'text' },
+    { key: 'options', label: 'Options', kind: 'num' },
+  ]} placeholder="Filter events… (search covers title, group and rewards)" />
+</Base>
