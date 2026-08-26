@@ -35,8 +35,45 @@ def capital_geography(c) -> dict:
     return geo
 
 
+def unique_index() -> dict[str, dict[str, list]]:
+    """tag → {advances/units/buildings/reforms: [{id,name,slug}]}.
+
+    Built by inverting the compiled `potential` gates the other datasets
+    already emit: an entity gated on `has_or_had_tag = CAS` *is* Castile's
+    unique content. Reading their JSON keeps this a pure projection — no
+    second parse, and it stays correct as those datasets grow."""
+    import json
+    sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+    from triggers import literals
+
+    idx: dict[str, dict[str, list]] = {}
+    sources = [('advances.json', 'advances', 'advances'),
+               ('units.json', 'units', 'units'),
+               ('buildings.json', 'buildings', 'buildings'),
+               ('reforms.json', 'reforms', 'reforms')]
+    for fname, key, page in sources:
+        path = ref.DATA_DIR / fname
+        if not path.exists():
+            continue
+        for e in json.loads(path.read_text())['entities']:
+            gate = (e.get('data') or {}).get('gate')
+            if not gate:
+                continue
+            for kind, val in literals(gate, kinds=('tag',)):
+                bucket = idx.setdefault(val, {})
+                lst = bucket.setdefault(key, [])
+                if not any(x['id'] == e['id'] for x in lst):
+                    lst.append({'id': e['id'], 'name': e['name'], 'slug': e['slug'],
+                                'page': page})
+    for buckets in idx.values():
+        for lst in buckets.values():
+            lst.sort(key=lambda x: x['name'])
+    return idx
+
+
 def main():
     countries = ref.parser.countries
+    uniques = unique_index()
     entities = []
     for tag, c in sorted(countries.items()):
         if tag in ('DUMMY', 'PIR', 'MER'):
@@ -73,6 +110,7 @@ def main():
             'data': {
                 'tag': tag,
                 'facts': facts,
+                'unique': uniques.get(tag, {}),
                 'capital': ename(getattr(c, 'capital', None)),
                 'difficulty': getattr(c, 'difficulty', None),
                 'historic': bool(getattr(c, 'is_historic', False)),

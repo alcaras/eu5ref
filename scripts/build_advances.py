@@ -46,34 +46,6 @@ UNLOCK_FIELDS = {
 }
 
 
-def gate_label_map() -> dict[str, str]:
-    """script name → display name, for labelling what a gate demands."""
-    m: dict[str, str] = {}
-    for tag, c in ref.parser.countries.items():
-        m[tag] = c.display_name
-    for group in ('cultures', 'culture_groups', 'languages', 'religions',
-                  'religion_groups', 'areas', 'regions', 'sub_continents',
-                  'continents', 'provinces', 'institution', 'estates',
-                  'government_reforms', 'societal_values', 'subject_types',
-                  'buildings', 'unit_types'):
-        try:
-            for k, v in getattr(ref.parser, group).items():
-                m.setdefault(k, getattr(v, 'display_name', None) or ref.pretty(k))
-        except Exception:
-            continue
-    return m
-
-
-def culture_group_map() -> dict[str, str]:
-    """culture script name → its (first) culture group script name."""
-    out = {}
-    for name, c in ref.parser.cultures.items():
-        groups = getattr(c, 'culture_groups', None) or []
-        if groups:
-            out[name] = groups[0].name
-    return out
-
-
 def collect_unlocks(a) -> list[dict]:
     out = []
     for field, (label, etype) in UNLOCK_FIELDS.items():
@@ -92,8 +64,8 @@ def collect_unlocks(a) -> list[dict]:
 
 def main():
     advances = ref.parser.advances
-    cgroups = culture_group_map()
-    labels = gate_label_map()
+    cgroups = ref.culture_group_keys()
+    labels = ref.label_map()
 
     # ── pass 1: raw records ────────────────────────────────────
     recs = {}

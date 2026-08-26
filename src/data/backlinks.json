@@ -618,13 +618,6 @@
    "page": "concepts/diplomacy"
   }
  ],
- "concept:anti_piracy_warfare": [
-  {
-   "id": "concept:privateer_durability",
-   "name": "Privateer Durability",
-   "page": "concepts/privateer-durability"
-  }
- ],
  "concept:area": [
   {
    "id": "concept:exploration",
@@ -1802,13 +1795,6 @@
    "id": "concept:entrenchment",
    "name": "Entrenchment",
    "page": "concepts/entrenchment"
-  }
- ],
- "concept:bureaucracy_maintenance": [
-  {
-   "id": "concept:bureaucracy",
-   "name": "Bureaucracy",
-   "page": "concepts/bureaucracy"
   }
  ],
  "concept:burgher_trade": [
@@ -5531,11 +5517,6 @@
  ],
  "concept:culture_war_power": [
   {
-   "id": "concept:assimilate",
-   "name": "Assimilate",
-   "page": "concepts/assimilate"
-  },
-  {
    "id": "concept:cultural_influence",
    "name": "Cultural Influence",
    "page": "concepts/cultural-influence"
@@ -6063,11 +6044,6 @@
    "page": "concepts/annexation"
   },
   {
-   "id": "concept:subject",
-   "name": "Subject",
-   "page": "concepts/subject"
-  },
-  {
    "id": "concept:subject_loyalty",
    "name": "Subject Loyalty",
    "page": "concepts/subject-loyalty"
@@ -6114,25 +6090,6 @@
    "id": "concept:court_language",
    "name": "Court Language",
    "page": "concepts/court-language"
-  }
- ],
- "concept:dominant_upper_class_culture": [
-  {
-   "id": "concept:political_power",
-   "name": "Political Power",
-   "page": "concepts/political-power"
-  }
- ],
- "concept:dynamic_historical_event": [
-  {
-   "id": "concept:event",
-   "name": "Event",
-   "page": "concepts/event"
-  },
-  {
-   "id": "concept:event_option",
-   "name": "Event Option",
-   "page": "concepts/event-option"
   }
  ],
  "concept:dynasty": [
@@ -7362,13 +7319,6 @@
    "page": "concepts/section"
   }
  ],
- "concept:fleet_basing_rights": [
-  {
-   "id": "concept:repair",
-   "name": "Repair",
-   "page": "concepts/repair"
-  }
- ],
  "concept:food": [
   {
    "id": "concept:attrition",
@@ -7569,33 +7519,6 @@
    "page": "concepts/local-food"
   }
  ],
- "concept:food_raw_material": [
-  {
-   "id": "concept:food",
-   "name": "Food",
-   "page": "concepts/food"
-  },
-  {
-   "id": "concept:goods",
-   "name": "Goods",
-   "page": "concepts/goods"
-  },
-  {
-   "id": "concept:local_food",
-   "name": "Local Food",
-   "page": "concepts/local-food"
-  },
-  {
-   "id": "concept:market_food",
-   "name": "Market Food",
-   "page": "concepts/market-food"
-  },
-  {
-   "id": "concept:subsistence_agriculture",
-   "name": "Subsistence Agriculture",
-   "page": "concepts/subsistence-agriculture"
-  }
- ],
  "concept:food_source": [
   {
    "id": "concept:logistics_distance",
@@ -7741,11 +7664,6 @@
    "id": "concept:hidden",
    "name": "Hidden",
    "page": "concepts/hidden"
-  },
-  {
-   "id": "concept:infiltrate_administration",
-   "name": "Infiltrate Administration",
-   "page": "concepts/infiltrate-administration"
   }
  ],
  "concept:friend": [
@@ -7780,13 +7698,6 @@
    "id": "concept:reserves",
    "name": "Reserves",
    "page": "concepts/reserves"
-  }
- ],
- "concept:frozen": [
-  {
-   "id": "concept:winter_level",
-   "name": "Winter Level",
-   "page": "concepts/winter-level"
   }
  ],
  "concept:fully_settled": [
@@ -8535,67 +8446,11 @@
    "page": "concepts/subject"
   }
  ],
- "concept:great_power_points": [
-  {
-   "id": "concept:great_power",
-   "name": "Great Power",
-   "page": "concepts/great-power"
-  },
-  {
-   "id": "concept:regional_power",
-   "name": "Regional Power",
-   "page": "concepts/regional-power"
-  }
- ],
- "concept:great_power_score": [
-  {
-   "id": "concept:dynastic_power",
-   "name": "Dynastic Power",
-   "page": "concepts/dynastic-power"
-  },
-  {
-   "id": "concept:hre_electoral_college",
-   "name": "Electoral College",
-   "page": "concepts/hre-electoral-college"
-  },
-  {
-   "id": "concept:great_power_rank",
-   "name": "Great Power Rank",
-   "page": "concepts/great-power-rank"
-  },
-  {
-   "id": "concept:overlord",
-   "name": "Overlord",
-   "page": "concepts/overlord"
-  },
-  {
-   "id": "concept:rival",
-   "name": "Rival",
-   "page": "concepts/rival"
-  },
-  {
-   "id": "concept:subject",
-   "name": "Subject",
-   "page": "concepts/subject"
-  },
-  {
-   "id": "concept:subject_type",
-   "name": "Subject Type",
-   "page": "concepts/subject-type"
-  }
- ],
  "concept:harbor_capacity": [
   {
    "id": "concept:natural_harbor_suitability",
    "name": "Natural Harbor Suitability",
    "page": "concepts/natural-harbor-suitability"
-  }
- ],
- "concept:head_of_the_cabinet": [
-  {
-   "id": "concept:cabinet_trait",
-   "name": "Cabinet Trait",
-   "page": "concepts/cabinet-trait"
   }
  ],
  "concept:heathen": [
@@ -8771,13 +8626,6 @@
    "page": "concepts/subject-type"
   }
  ],
- "concept:heir_selection_score": [
-  {
-   "id": "concept:heir_selection",
-   "name": "Succession Law",
-   "page": "concepts/heir-selection"
-  }
- ],
  "concept:hemisphere": [
   {
    "id": "concept:winter",
@@ -8843,28 +8691,6 @@
    "page": "concepts/event-option"
   }
  ],
- "concept:holy_roman_empire": [
-  {
-   "id": "concept:hre_emperor",
-   "name": "Emperor",
-   "page": "concepts/hre-emperor"
-  },
-  {
-   "id": "concept:imperial_circle",
-   "name": "Imperial Circle",
-   "page": "concepts/imperial-circle"
-  },
-  {
-   "id": "concept:hre_law_level",
-   "name": "Imperial Law Level",
-   "page": "concepts/hre-law-level"
-  },
-  {
-   "id": "concept:imperial_religion",
-   "name": "Imperial Religion",
-   "page": "concepts/imperial-religion"
-  }
- ],
  "concept:holy_site": [
   {
    "id": "concept:autocephalous_patriarchate",
@@ -8885,13 +8711,6 @@
    "id": "concept:purity",
    "name": "Purity",
    "page": "concepts/purity"
-  }
- ],
- "concept:holy_site_importance": [
-  {
-   "id": "concept:holy_site",
-   "name": "Holy Site",
-   "page": "concepts/holy-site"
   }
  ],
  "concept:horde_unity": [
@@ -9349,93 +9168,7 @@
    "page": "concepts/special-status-power"
   }
  ],
- "concept:international_organization_leader": [
-  {
-   "id": "concept:autocephalous_patriarchate",
-   "name": "Autocephalous Patriarchate",
-   "page": "concepts/autocephalous-patriarchate"
-  },
-  {
-   "id": "concept:candidate",
-   "name": "Candidate",
-   "page": "concepts/candidate"
-  },
-  {
-   "id": "concept:court_language",
-   "name": "Court Language",
-   "page": "concepts/court-language"
-  },
-  {
-   "id": "concept:elector",
-   "name": "Elector",
-   "page": "concepts/elector"
-  },
-  {
-   "id": "concept:hre_emperor",
-   "name": "Emperor",
-   "page": "concepts/hre-emperor"
-  },
-  {
-   "id": "concept:holy_roman_empire",
-   "name": "Holy Roman Empire",
-   "page": "concepts/holy-roman-empire"
-  },
-  {
-   "id": "concept:imperial_religion",
-   "name": "Imperial Religion",
-   "page": "concepts/imperial-religion"
-  },
-  {
-   "id": "concept:international_organization_variable",
-   "name": "International Organization Value",
-   "page": "concepts/international-organization-variable"
-  },
-  {
-   "id": "concept:leader_change_method",
-   "name": "Leader Change Method",
-   "page": "concepts/leader-change-method"
-  },
-  {
-   "id": "concept:leader_change_trigger",
-   "name": "Leader Change Trigger",
-   "page": "concepts/leader-change-trigger"
-  },
-  {
-   "id": "concept:leader_type",
-   "name": "Leader Type",
-   "page": "concepts/leader-type"
-  },
-  {
-   "id": "concept:leadership_election_resolution",
-   "name": "Leadership Election Resolution",
-   "page": "concepts/leadership-election-resolution"
-  },
-  {
-   "id": "concept:special_status",
-   "name": "Special Status",
-   "page": "concepts/special-status"
-  }
- ],
- "concept:international_organization_modifier": [
-  {
-   "id": "concept:modifier",
-   "name": "Modifier",
-   "page": "concepts/modifier"
-  }
- ],
- "concept:international_organization_variable": [
-  {
-   "id": "concept:papal_authority",
-   "name": "Papal Authority",
-   "page": "concepts/papal-authority"
-  }
- ],
  "concept:isolated_language": [
-  {
-   "id": "concept:language",
-   "name": "Language",
-   "page": "concepts/language"
-  },
   {
    "id": "concept:language_family",
    "name": "Language Family",
@@ -9688,13 +9421,6 @@
    "id": "concept:union_integration_level",
    "name": "Union Integration Level",
    "page": "concepts/union-integration-level"
-  }
- ],
- "concept:leadership_election_resolution": [
-  {
-   "id": "concept:leader_change_method",
-   "name": "Leader Change Method",
-   "page": "concepts/leader-change-method"
   }
  ],
  "concept:legitimacy": [
@@ -11005,13 +10731,6 @@
    "page": "concepts/pop-needs"
   }
  ],
- "concept:loyal_subjects": [
-  {
-   "id": "concept:subject",
-   "name": "Subject",
-   "page": "concepts/subject"
-  }
- ],
  "concept:major_reform": [
   {
    "id": "concept:government_reform",
@@ -11697,13 +11416,6 @@
    "page": "concepts/regiment"
   }
  ],
- "concept:mercenary_contract_length": [
-  {
-   "id": "concept:mercenary_hiring_fee",
-   "name": "Hiring Fee",
-   "page": "concepts/mercenary-hiring-fee"
-  }
- ],
  "concept:merchant_capacity": [
   {
    "id": "concept:foreign_market",
@@ -11758,13 +11470,6 @@
    "id": "concept:merchant",
    "name": "Merchant",
    "page": "concepts/merchant"
-  }
- ],
- "concept:merged_culture_group": [
-  {
-   "id": "concept:culture_group",
-   "name": "Culture Group",
-   "page": "concepts/culture-group"
   }
  ],
  "concept:migration": [
@@ -12007,25 +11712,6 @@
    "page": "concepts/section"
   }
  ],
- "concept:morale_damage_done": [
-  {
-   "id": "concept:morale",
-   "name": "Morale",
-   "page": "concepts/morale"
-  }
- ],
- "concept:morale_damage_taken": [
-  {
-   "id": "concept:damage_taken",
-   "name": "Damage Taken",
-   "page": "concepts/damage-taken"
-  },
-  {
-   "id": "concept:morale",
-   "name": "Morale",
-   "page": "concepts/morale"
-  }
- ],
  "concept:movement": [
   {
    "id": "concept:movement_modifier",
@@ -12038,13 +11724,6 @@
    "id": "concept:movement",
    "name": "Movement",
    "page": "concepts/movement"
-  }
- ],
- "concept:natural_harbor_suitability": [
-  {
-   "id": "concept:harbor_capacity",
-   "name": "Harbor Capacity",
-   "page": "concepts/harbor-capacity"
   }
  ],
  "concept:naval_range": [
@@ -12338,37 +12017,6 @@
    "id": "concept:maintenance",
    "name": "Maintenance",
    "page": "concepts/maintenance"
-  }
- ],
- "concept:non_accepted_culture": [
-  {
-   "id": "concept:cultural_status",
-   "name": "Cultural Status",
-   "page": "concepts/cultural-status"
-  },
-  {
-   "id": "concept:culture",
-   "name": "Culture",
-   "page": "concepts/culture"
-  },
-  {
-   "id": "concept:tolerated_culture",
-   "name": "Tolerated Culture",
-   "page": "concepts/tolerated-culture"
-  }
- ],
- "concept:non_avoidable_attrition": [
-  {
-   "id": "concept:attrition",
-   "name": "Attrition",
-   "page": "concepts/attrition"
-  }
- ],
- "concept:non_sovereign_subject": [
-  {
-   "id": "concept:subject",
-   "name": "Subject",
-   "page": "concepts/subject"
   }
  ],
  "concept:occupation": [
@@ -13777,13 +13425,6 @@
    "page": "concepts/unrest"
   }
  ],
- "concept:pop_food_consumption": [
-  {
-   "id": "concept:local_food",
-   "name": "Local Food",
-   "page": "concepts/local-food"
-  }
- ],
  "concept:pop_needs": [
   {
    "id": "concept:goods_demand",
@@ -14301,11 +13942,6 @@
    "page": "concepts/prestige"
   },
   {
-   "id": "concept:primary_or_accepted_culture",
-   "name": "Primary or Accepted Culture",
-   "page": "concepts/primary-or-accepted-culture"
-  },
-  {
    "id": "concept:separatism",
    "name": "Separatism",
    "page": "concepts/separatism"
@@ -14324,13 +13960,6 @@
    "id": "concept:work_of_art",
    "name": "Work of Art",
    "page": "concepts/work-of-art"
-  }
- ],
- "concept:primary_or_accepted_culture": [
-  {
-   "id": "concept:fully_settled",
-   "name": "Fully Settled",
-   "page": "concepts/fully-settled"
   }
  ],
  "concept:privateer": [
@@ -17037,13 +16666,6 @@
    "page": "concepts/heretic-tolerance"
   }
  ],
- "concept:society_of_pops": [
-  {
-   "id": "concept:country",
-   "name": "Country",
-   "page": "concepts/country"
-  }
- ],
  "concept:sound_toll": [
   {
    "id": "concept:trade_profit",
@@ -17081,18 +16703,6 @@
    "id": "concept:special_status_power",
    "name": "Special Status Power",
    "page": "concepts/special-status-power"
-  }
- ],
- "concept:special_status_power": [
-  {
-   "id": "concept:parliament",
-   "name": "Parliament",
-   "page": "concepts/parliament"
-  },
-  {
-   "id": "concept:parliament_agenda",
-   "name": "Parliament Agenda",
-   "page": "concepts/parliament-agenda"
   }
  ],
  "concept:spy_network": [
@@ -17262,13 +16872,6 @@
    "id": "concept:unit_weight",
    "name": "Unit Weight",
    "page": "concepts/unit-weight"
-  }
- ],
- "concept:strength_damage_taken": [
-  {
-   "id": "concept:damage_taken",
-   "name": "Damage Taken",
-   "page": "concepts/damage-taken"
   }
  ],
  "concept:sub_continent": [
@@ -17909,54 +17512,9 @@
  ],
  "concept:town_and_city": [
   {
-   "id": "concept:burgher_trade",
-   "name": "Burghers Trading",
-   "page": "concepts/burgher-trade"
-  },
-  {
-   "id": "concept:construction_material",
-   "name": "Construction Material",
-   "page": "concepts/construction-material"
-  },
-  {
-   "id": "concept:doom",
-   "name": "Doom",
-   "page": "concepts/doom"
-  },
-  {
-   "id": "concept:food_productivity",
-   "name": "Food Productivity",
-   "page": "concepts/food-productivity"
-  },
-  {
-   "id": "concept:local_food",
-   "name": "Local Food",
-   "page": "concepts/local-food"
-  },
-  {
-   "id": "concept:location",
-   "name": "Location",
-   "page": "concepts/location"
-  },
-  {
    "id": "concept:location_rank",
    "name": "Location Rank",
    "page": "concepts/location-rank"
-  },
-  {
-   "id": "concept:peasant_enfranchisement",
-   "name": "Peasant Enfranchisement",
-   "page": "concepts/peasant-enfranchisement"
-  },
-  {
-   "id": "concept:rural_location",
-   "name": "Rural Location",
-   "page": "concepts/rural-location"
-  },
-  {
-   "id": "concept:topography",
-   "name": "Topography",
-   "page": "concepts/topography"
   },
   {
    "id": "concept:town_rights",
@@ -18270,13 +17828,6 @@
    "id": "concept:treaty",
    "name": "Treaty",
    "page": "concepts/treaty"
-  }
- ],
- "concept:true_faith_tolerance": [
-  {
-   "id": "concept:estate_religion",
-   "name": "Estate Religion",
-   "page": "concepts/estate-religion"
   }
  ],
  "concept:trust": [
@@ -18983,60 +18534,6 @@
    "id": "concept:winter",
    "name": "Winter",
    "page": "concepts/winter"
-  }
- ],
- "concept:work_of_art": [
-  {
-   "id": "concept:art_quality",
-   "name": "Art Quality",
-   "page": "concepts/art-quality"
-  },
-  {
-   "id": "concept:artist",
-   "name": "Artist",
-   "page": "concepts/artist"
-  },
-  {
-   "id": "concept:artistic_skill",
-   "name": "Artistic Skill",
-   "page": "concepts/artistic-skill"
-  },
-  {
-   "id": "concept:cultural_influence",
-   "name": "Cultural Influence",
-   "page": "concepts/cultural-influence"
-  },
-  {
-   "id": "concept:cultural_maintenance",
-   "name": "Investing in Culture",
-   "page": "concepts/cultural-maintenance"
-  }
- ],
- "concept:zone_of_control": [
-  {
-   "id": "concept:fortification",
-   "name": "Fortification",
-   "page": "concepts/fortification"
-  },
-  {
-   "id": "concept:logistics_distance",
-   "name": "Logistics Distance",
-   "page": "concepts/logistics-distance"
-  },
-  {
-   "id": "concept:occupation",
-   "name": "Occupation",
-   "page": "concepts/occupation"
-  },
-  {
-   "id": "concept:non_avoidable_attrition",
-   "name": "Unavoidable Attrition",
-   "page": "concepts/non-avoidable-attrition"
-  },
-  {
-   "id": "concept:winter_level",
-   "name": "Winter Level",
-   "page": "concepts/winter-level"
   }
  ]
 }

@@ -75,7 +75,7 @@
       "desc": [
         [
           "t",
-          "A century of overextension and a crumbling central authority have hurt the rule and reputation of the mighty Delhi. Beyond their borders are vultures and enemies, waiting to strike at any moment. The great GetCountry('DLH') of their forefathers will be brought to its knees in but an instant lest they succeed in safeguarding their people from internal and external threats."
+          "A century of overextension and a crumbling central authority have hurt the rule and reputation of the mighty Delhi. Beyond their borders are vultures and enemies, waiting to strike at any moment. The great Delhi of their forefathers will be brought to its knees in but an instant lest they succeed in safeguarding their people from internal and external threats."
         ]
       ],
       "facets": {},
@@ -126,7 +126,7 @@
       "desc": [
         [
           "t",
-          "The Guelphs and Ghibellines have been fighting for dominance over Italy for centuries, ever since the Investiture Controversy pitted the GetUniqueInternationalOrganization('catholic church') and the GetUniqueInternationalOrganization('hre') against each other. The Guelphs support the Roman authority over the peninsula, while Ghibellines are considered Imperial loyalists holding their allegiance true to the Holy Roman Empire. But matters have spiraled well beyond their initial positions, and both sides now represent a diversity of interests; the different countries are no strangers to switching sides when doing so might benefit them."
+          "The Guelphs and Ghibellines have been fighting for dominance over Italy for centuries, ever since the Investiture Controversy pitted the Catholic Church and the Hre against each other. The Guelphs support the Roman authority over the peninsula, while Ghibellines are considered Imperial loyalists holding their allegiance true to the Holy Roman Empire. But matters have spiraled well beyond their initial positions, and both sides now represent a diversity of interests; the different countries are no strangers to switching sides when doing so might benefit them."
         ]
       ],
       "facets": {},
@@ -211,7 +211,7 @@
       "desc": [
         [
           "t",
-          "Following the dismantling of the Kamakura Shogunate, Imperial rule was reinstated under jap_go_daigo_tenno with the help of jap_ashikaga_takauji in what is known as the Kenmu Restoration. However, the two former allies quickly became bitter rivals. jap_go_daigo_tenno wanted to restore the supremacy of the Imperial rule like it was in the Heian Period, which earned GetCharacter('jap go daigo tenno') the discontent of many in the warrior class, including jap_ashikaga_takauji. The latter was pushed out from the capital and forced to flee to Kyūshū, but was able to return to Kyōto in 1336 and seize it, establishing a new Japanese Shogunate under GetCharacter('jap ashikaga takauji') and enthroning a new Emperor. In January 1337, jap_go_daigo_tenno fled the capital and established GetCharacter('jap go daigo tenno') own court at Yoshino, starting the period known as Nanbokuchō Jidai, the Northern and Southern Courts."
+          "Following the dismantling of the Kamakura Shogunate, Imperial rule was reinstated under Jap Go Daigo Tenno with the help of Jap Ashikaga Takauji in what is known as the Kenmu Restoration. However, the two former allies quickly became bitter rivals. Jap Go Daigo Tenno wanted to restore the supremacy of the Imperial rule like it was in the Heian Period, which earned Jap Go Daigo Tenno the discontent of many in the warrior class, including Jap Ashikaga Takauji. The latter was pushed out from the capital and forced to flee to Kyūshū, but was able to return to Kyōto in 1336 and seize it, establishing a new Japanese Shogunate under Jap Ashikaga Takauji and enthroning a new Emperor. In January 1337, Jap Go Daigo Tenno fled the capital and established Jap Go Daigo Tenno own court at Yoshino, starting the period known as Nanbokuchō Jidai, the Northern and Southern Courts."
         ]
       ],
       "facets": {},
@@ -228,7 +228,7 @@
       "desc": [
         [
           "t",
-          "The Chinese are revolting against their GetCountry('CHI') overlords. The rebels have declared the establishment of their independent states, throwing the entirety of China into a civil war that threatens to devour the Yuán dynasty..."
+          "The Chinese are revolting against their Yuán(CHI) overlords. The rebels have declared the establishment of their independent states, throwing the entirety of China into a civil war that threatens to devour the Yuán dynasty..."
         ]
       ],
       "facets": {},
@@ -279,7 +279,7 @@
       "desc": [
         [
           "t",
-          "Fueled by the ambition to follow in the steps of GetCharacter('genghis khan') Khān and Caliphs, GetCountry('TIM') rallied GetCountry('TIM') soldiers and loyalists, and founded a nascent Empire built on ruthless expansion and brilliant tactics. To GetCountry('TIM'), the lands of Central Asia, Middle East, and India are the ripest for GetCountry('TIM') conquest, which will indelibly shape these regions over the coming centuries..."
+          "Fueled by the ambition to follow in the steps of Genghis Khan Khān and Caliphs, Timurid rallied Timurid soldiers and loyalists, and founded a nascent Empire built on ruthless expansion and brilliant tactics. To Timurid, the lands of Central Asia, Middle East, and India are the ripest for Timurid conquest, which will indelibly shape these regions over the coming centuries..."
         ]
       ],
       "facets": {},
@@ -296,7 +296,7 @@
       "desc": [
         [
           "t",
-          "It is a time of upheaval. The central authority of the GetUniqueInternationalOrganization('japanese shogunate') has waned, and GetUniqueInternationalOrganization('japanese shogunate') power to control the different clans diminished. Fueled by their own conflicts, the clans have increased their autonomy and independence, and have become masters of their own territory. Japan will be engulfed in war unless someone is powerful enough to grab the reins of government once again..."
+          "It is a time of upheaval. The central authority of the Japanese Shogunate has waned, and Japanese Shogunate power to control the different clans diminished. Fueled by their own conflicts, the clans have increased their autonomy and independence, and have become masters of their own territory. Japan will be engulfed in war unless someone is powerful enough to grab the reins of government once again..."
         ]
       ],
       "facets": {},
@@ -330,7 +330,7 @@
       "desc": [
         [
           "t",
-          "This treaty was signed in GetSituationByKey('treaty of tordesillas') by the GetSituationByKey('treaty of tordesillas') and the GetSituationByKey('treaty of tordesillas'). The document establishes a set of rules and parameters that allow the two powers to claim exclusive rights to the colonization and exploitation of any newly discovered lands on the continent of America."
+          "This treaty was signed in Treaty Of Tordesillas by the Treaty Of Tordesillas and the Treaty Of Tordesillas. The document establishes a set of rules and parameters that allow the two powers to claim exclusive rights to the colonization and exploitation of any newly discovered lands on the continent of America."
         ]
       ],
       "facets": {},
@@ -364,7 +364,7 @@
       "desc": [
         [
           "t",
-          "A Schism has struck Catholicism and has thrown the Curia in petty factionalism!\n\nEven if the Church has been divided before, this Schism seems to be of a different nature. After the death of the last GetInternationalOrganization('catholic church'), a faction of Italian cardinals is pushing for the return of the Holy See into their own control, something they have desired ever since the Papacy fell under French control. Opposing them, the French faction insists on the new GetInternationalOrganization('catholic church') remaining under their control. The demands of both factions seems irreconcilable and Catholicism world is swiftly descending into factionalism, leaving the good Catholicism people of the Catholic Church without their shepherds. As long as this division persists, they will have to navigate a world without their usual authority and decide for their own who the true representative of divine will is."
+          "A Schism has struck Catholicism and has thrown the Curia in petty factionalism!\n\nEven if the Church has been divided before, this Schism seems to be of a different nature. After the death of the last Catholic Church, a faction of Italian cardinals is pushing for the return of the Holy See into their own control, something they have desired ever since the Papacy fell under French control. Opposing them, the French faction insists on the new Catholic Church remaining under their control. The demands of both factions seems irreconcilable and Catholicism world is swiftly descending into factionalism, leaving the good Catholicism people of the Catholic Church without their shepherds. As long as this division persists, they will have to navigate a world without their usual authority and decide for their own who the true representative of divine will is."
         ]
       ],
       "facets": {},

@@ -35,6 +35,8 @@ def main():
             'mods': mods_from_tree(getattr(r, 'definition_modifier', None)),
             'data': {
                 'mechanics': mechanics,
+                # script name — advance gates test this, not the display name
+                'group_key': getattr(getattr(r, 'group', None), 'name', None),
             },
         })
     write_dataset('religions', {

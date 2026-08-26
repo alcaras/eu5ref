@@ -32,6 +32,7 @@ def main():
     entities = []
     for name, b in sorted(buildings.items()):
         slug = slugify(name)
+        gate, gate_labels = ref.gate_of(b, 'country_potential')
         settlements = [s for s in SETTLEMENTS if getattr(b, s, False)]
         entities.append({
             'id': eid('building', name),
@@ -47,6 +48,7 @@ def main():
             },
             'mods': mods_from_tree(getattr(b, 'modifier', None)),
             'data': {
+                'gate': gate, 'gate_labels': gate_labels,
                 'settlements': settlements,
                 'max_levels': (lambda ml: ml if isinstance(ml, (int, float)) else None)(getattr(b, 'max_levels', None)),
                 'special': bool(getattr(b, 'is_special', False)),

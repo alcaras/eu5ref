@@ -99,10 +99,24 @@ def main():
                       'f': f})
     clist.sort(key=lambda c: c['n'])
 
+    # Culture and religion are not fixed for a run — you can culture-shift or
+    # convert — so the planner lets you swap them after picking a country.
+    # These lists carry the script keys the gates actually test.
+    cultures_ds = json.loads((DATA / 'cultures.json').read_text())['entities']
+    religions_ds = json.loads((DATA / 'religions.json').read_text())['entities']
+    cultures = [{'k': c['id'].split(':', 1)[1], 'n': c['name'],
+                 'g': c['data'].get('group_keys') or [],
+                 'l': c['data'].get('language_key')}
+                for c in cultures_ds]
+    religions = [{'k': r['id'].split(':', 1)[1], 'n': r['name'],
+                  'g': r['data'].get('group_key')}
+                 for r in religions_ds]
+
     payload = {
         'version': patch['version'], 'vhash': vhash, 'order': order,
         'ages': [{'n': a, 'i': age_icon.get(a)} for a in ages],
         'nodes': nodes, 'countries': clist,
+        'cultures': cultures, 'religions': religions,
     }
     out = ROOT / 'public' / 'planner.json'
     out.write_text(json.dumps(payload, sort_keys=True, ensure_ascii=False,

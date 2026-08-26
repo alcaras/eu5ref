@@ -1337,7 +1337,7 @@
       "desc": [
         [
           "t",
-          "The authority of the GetUniqueInternationalOrganization('hre') is undermined due to internal conflicts within the Holy Roman Empire. It is in the Empire's interest to enforce internal peace and stability."
+          "The authority of the Hre is undermined due to internal conflicts within the Holy Roman Empire. It is in the Empire's interest to enforce internal peace and stability."
         ]
       ],
       "facets": {
@@ -1375,7 +1375,7 @@
       "desc": [
         [
           "t",
-          "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the GetUniqueInternationalOrganization('hre') and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
+          "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the Hre and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
         ]
       ],
       "facets": {
@@ -1394,7 +1394,7 @@
       "desc": [
         [
           "t",
-          "The rule of the GetUniqueInternationalOrganization('hre') has been judged by the Prince-Elector as insufficient. The Imperial Diet has been called to discuss the future of the leadership of the Holy Roman Empire."
+          "The rule of the Hre has been judged by the Prince-Elector as insufficient. The Imperial Diet has been called to discuss the future of the leadership of the Holy Roman Empire."
         ]
       ],
       "facets": {
@@ -1432,7 +1432,7 @@
       "desc": [
         [
           "t",
-          "The Holy Roman Empire is under the threat of foreign invasion. The GetUniqueInternationalOrganization('hre') sees itself forced to request the military might of the whole Empire and all its members."
+          "The Holy Roman Empire is under the threat of foreign invasion. The Hre sees itself forced to request the military might of the whole Empire and all its members."
         ]
       ],
       "facets": {
@@ -1451,7 +1451,7 @@
       "desc": [
         [
           "t",
-          "The treasury of the Holy Roman Empire has been running dry as of late. The GetUniqueInternationalOrganization('hre') requests the finanical support of the members of the Empire to ensure its security."
+          "The treasury of the Holy Roman Empire has been running dry as of late. The Hre requests the finanical support of the members of the Empire to ensure its security."
         ]
       ],
       "facets": {

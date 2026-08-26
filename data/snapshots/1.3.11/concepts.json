@@ -158,7 +158,7 @@
         ],
         [
           "t",
-          ".\n\npops_with_icon belonging to an Accepted Culture will see their pop_satisfaction_with_icon increased by GetDefine('NPop','ACCEPTED_CULTURE_SATISFACTION')."
+          ".\n\nPops With Icon belonging to an Accepted Culture will see their Pop Satisfaction With Icon increased by GetDefine('NPop','ACCEPTED_CULTURE_SATISFACTION')."
         ]
       ],
       "facets": {
@@ -541,7 +541,7 @@
         ],
         [
           "t",
-          " can research them depends on their research_progress_with_icon.\n\nWith every "
+          " can research them depends on their Research Progress With Icon.\n\nWith every "
         ],
         [
           "r",
@@ -595,7 +595,7 @@
         ],
         [
           "t",
-          " the appropriate institutions_with_icon.\n\nThe speed at which we progress towards new advances_with_icon depends mainly on the power of our liturgical_language_with_icon, the average literacy_with_icon of our pops_with_icon, the "
+          " the appropriate Institutions With Icon.\n\nThe speed at which we progress towards new Advances With Icon depends mainly on the power of our Liturgical Language With Icon, the average Literacy With Icon of our Pops With Icon, the "
         ],
         [
           "r",
@@ -604,7 +604,7 @@
         ],
         [
           "t",
-          " of our ShowEstateTypeName('clergy_estate'), and the number of institutions_with_icon we have "
+          " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
         ],
         [
           "r",
@@ -1040,7 +1040,7 @@
         ],
         [
           "t",
-          " with their special ShowCasusBelliName('cb_resist_annexation') "
+          " with their special ShowCasusBelliName('Cb Resist Annexation') "
         ],
         [
           "r",
@@ -1471,7 +1471,7 @@
         ],
         [
           "t",
-          " also has the following effect:\n\nShowModifierEffect('is_army_levy')"
+          " also has the following effect:\n\nShowModifierEffect('Is Army Levy')"
         ]
       ],
       "facets": {
@@ -1597,16 +1597,7 @@
       "desc": [
         [
           "t",
-          "The quality of the "
-        ],
-        [
-          "r",
-          "concept:work_of_art",
-          "Works of Art"
-        ],
-        [
-          "t",
-          " impacts how much "
+          "The quality of the Works Of Art impacts how much "
         ],
         [
           "r",
@@ -1743,16 +1734,7 @@
         ],
         [
           "t",
-          " that creates "
-        ],
-        [
-          "r",
-          "concept:work_of_art",
-          "Works of Art"
-        ],
-        [
-          "t",
-          ". An artist can be any of the types below.\nShowDatabase('artist')"
+          " that creates Works Of Art. An artist can be any of the types below.\nShowDatabase('artist')"
         ]
       ],
       "facets": {
@@ -1862,16 +1844,7 @@
         ],
         [
           "t",
-          " of the "
-        ],
-        [
-          "r",
-          "concept:work_of_art",
-          "Work of Art"
-        ],
-        [
-          "t",
-          " that an "
+          " of the Work Of Art that an "
         ],
         [
           "r",
@@ -1993,16 +1966,7 @@
         ],
         [
           "t",
-          " has a high "
-        ],
-        [
-          "r",
-          "concept:culture_war_power",
-          "Culture War Power"
-        ],
-        [
-          "t",
-          " versus the "
+          " has a high Culture War Power versus the "
         ],
         [
           "r",
@@ -2137,16 +2101,7 @@
         ],
         [
           "t",
-          " it also damages the actual ship. Some attrition is "
-        ],
-        [
-          "r",
-          "concept:non_avoidable_attrition",
-          "Unavoidable Attrition"
-        ],
-        [
-          "t",
-          " and the main sources for attrition include the following:\n    • "
+          " it also damages the actual ship. Some attrition is Non Avoidable Attrition and the main sources for attrition include the following:\n    • "
         ],
         [
           "r",
@@ -2317,16 +2272,7 @@
         ],
         [
           "t",
-          ". The "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of the Autocephalous Patriarchate is conferred extra benefits, and being a member can have benefits too, until the member "
+          ". The International Organization Leader Short of the Autocephalous Patriarchate is conferred extra benefits, and being a member can have benefits too, until the member "
         ],
         [
           "r",
@@ -2335,16 +2281,7 @@
         ],
         [
           "t",
-          " outgrows the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          ", at which time it may be beneficial to branch out and create their own. If the patriarchate has a "
+          " outgrows the International Organization Leader Short, at which time it may be beneficial to branch out and create their own. If the patriarchate has a "
         ],
         [
           "r",
@@ -3636,16 +3573,7 @@
         ],
         [
           "t",
-          " spent on "
-        ],
-        [
-          "r",
-          "concept:bureaucracy_maintenance",
-          "Maintenance"
-        ],
-        [
-          "t",
-          " impacts whether the negative or positive modifier is more dominant.\n\n"
+          " spent on Bureaucracy Maintenance Short impacts whether the negative or positive modifier is more dominant.\n\n"
         ],
         [
           "r",
@@ -3777,16 +3705,7 @@
         ],
         [
           "t",
-          " that their "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Location"
-        ],
-        [
-          "t",
-          " is located in, by doing their own "
+          " that their Town Or City is located in, by doing their own "
         ],
         [
           "r",
@@ -4220,16 +4139,7 @@
         ],
         [
           "t",
-          " that employs them.\n\nThe effects of a Cabinet Trait are doubled if the Character is promoted to "
-        ],
-        [
-          "r",
-          "concept:head_of_the_cabinet",
-          "Head of the Cabinet"
-        ],
-        [
-          "t",
-          "."
+          " that employs them.\n\nThe effects of a Cabinet Trait are doubled if the Character is promoted to Head Of The Cabinet."
         ]
       ],
       "facets": {
@@ -4330,16 +4240,7 @@
         ],
         [
           "t",
-          " that are currently considered as the next "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          " that are currently considered as the next International Organization Leader Short of an "
         ],
         [
           "r",
@@ -4585,7 +4486,7 @@
         ],
         [
           "t",
-          " called ShowBuildingTypeName('seat_of_cardinal'), and they will be loyal to the "
+          " called ShowBuildingTypeName('Seat Of Cardinal'), and they will be loyal to the "
         ],
         [
           "r",
@@ -4704,7 +4605,7 @@
       "desc": [
         [
           "t",
-          "This is the measure of the legitimacy of the leader of the GetUniqueInternationalOrganization('middle kingdom'). It is used to pass "
+          "This is the measure of the legitimacy of the leader of the Middle Kingdom. It is used to pass "
         ],
         [
           "r",
@@ -5041,7 +4942,7 @@
         ],
         [
           "t",
-          ". Examples include ShowCharacterInteractionName('marry_noble'), ShowCharacterInteractionName('seppuku'), or ShowCharacterInteractionName('resign_as_grand_master')"
+          ". Examples include ShowCharacterInteractionName('marry_noble'), ShowCharacterInteractionName('seppuku'), or ShowCharacterInteractionName('Resign As Grand Master')"
         ]
       ],
       "facets": {
@@ -6595,7 +6496,7 @@
         ],
         [
           "t",
-          " are ShowUnitCategoryName('navy_light_ship') and ShowUnitCategoryName('navy_heavy_ship'), or ShowUnitCategoryName('army_light_infantry') and ShowUnitCategoryName('army_heavy_cavalry')."
+          " are ShowUnitCategoryName('Navy Light Ship') and ShowUnitCategoryName('Navy Heavy Ship'), or ShowUnitCategoryName('Army Light Infantry') and ShowUnitCategoryName('Army Heavy Cavalry')."
         ]
       ],
       "facets": {
@@ -7181,16 +7082,7 @@
         ],
         [
           "t",
-          ", and are usually essential for the development of "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          "."
+          ", and are usually essential for the development of Towns And Cities."
         ]
       ],
       "facets": {
@@ -7957,16 +7849,7 @@
         ],
         [
           "t",
-          ", or a "
-        ],
-        [
-          "r",
-          "concept:society_of_pops",
-          "Society of Pops"
-        ],
-        [
-          "t",
-          ".\n\nEach Country is played either by a human player or by an AI."
+          ", or a Society Of Pops.\n\nEach Country is played either by a human player or by an AI."
         ]
       ],
       "facets": {
@@ -8022,7 +7905,7 @@
         ],
         [
           "t",
-          ".\n\nExamples include ShowCountryInteractionName('sabotage_reputation'), ShowCountryInteractionName('pay_off_debt') or ShowCountryInteractionName('give_location_to_subject')."
+          ".\n\nExamples include ShowCountryInteractionName('sabotage_reputation'), ShowCountryInteractionName('Pay Off Debt') or ShowCountryInteractionName('Give Location To Subject')."
         ]
       ],
       "facets": {
@@ -8289,7 +8172,7 @@
       "desc": [
         [
           "t",
-          "The language_with_icon of government in a country_with_icon.\n\nCertain Languages may affect the "
+          "The Language With Icon of government in a Country With Icon.\n\nCertain Languages may affect the "
         ],
         [
           "r",
@@ -8307,7 +8190,7 @@
         ],
         [
           "t",
-          ":\n• The ShowEstateTypeName('nobles_estate') prefer high language_power_with_icon.\n• The ShowEstateTypeName('clergy_estate') prefer the liturgical_language_with_icon.\n• The ShowEstateTypeName('peasants_estate') prefer the common_language_with_icon.\n• Using the market_language_with_icon of our "
+          ":\n• The ShowEstateTypeName('nobles_estate') prefer high Language Power With Icon.\n• The ShowEstateTypeName('clergy_estate') prefer the Liturgical Language With Icon.\n• The ShowEstateTypeName('peasants_estate') prefer the Common Language With Icon.\n• Using the Market Language With Icon of our "
         ],
         [
           "r",
@@ -8424,16 +8307,7 @@
         ],
         [
           "t",
-          " of an "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "International Organization Leader"
-        ],
-        [
-          "t",
-          ",\n• The "
+          " of an International Organization Leader,\n• The "
         ],
         [
           "r",
@@ -8846,7 +8720,7 @@
         ],
         [
           "t",
-          ", especially as we advance into the ShowAgeName('age_5_absolutism')."
+          ", especially as we advance into the ShowAgeName('Age 5 Absolutism')."
         ]
       ],
       "facets": {
@@ -8947,16 +8821,7 @@
         ],
         [
           "t",
-          ", representing how impressive it appears to other cultures, and the reach it has beyond its own borders.\n\nIt has a monthly increase upon the completion of a "
-        ],
-        [
-          "r",
-          "concept:work_of_art",
-          "Work of Art"
-        ],
-        [
-          "t",
-          " and has some monthly increase from many sources such as "
+          ", representing how impressive it appears to other cultures, and the reach it has beyond its own borders.\n\nIt has a monthly increase upon the completion of a Work Of Art and has some monthly increase from many sources such as "
         ],
         [
           "r",
@@ -9021,16 +8886,7 @@
         ],
         [
           "t",
-          ", so that they can create better "
-        ],
-        [
-          "r",
-          "concept:work_of_art",
-          "Work of Art"
-        ],
-        [
-          "t",
-          ". It also directly increases the "
+          ", so that they can create better Work Of Art. It also directly increases the "
         ],
         [
           "r",
@@ -9197,16 +9053,7 @@
         ],
         [
           "t",
-          "\n    • "
-        ],
-        [
-          "r",
-          "concept:non_accepted_culture",
-          "Discriminated Culture"
-        ],
-        [
-          "t",
-          "\n    • "
+          "\n    • Non Accepted Culture\n    • "
         ],
         [
           "r",
@@ -9432,16 +9279,7 @@
         ],
         [
           "t",
-          " in addition. All other Cultures in the country are considered "
-        ],
-        [
-          "r",
-          "concept:non_accepted_culture",
-          "Discriminated Cultures"
-        ],
-        [
-          "t",
-          ". Cultures can be "
+          " in addition. All other Cultures in the country are considered Non Accepted Cultures. Cultures can be "
         ],
         [
           "r",
@@ -9535,16 +9373,7 @@
         ],
         [
           "t",
-          " can eventually be "
-        ],
-        [
-          "r",
-          "concept:merged_culture_group",
-          "Unified"
-        ],
-        [
-          "t",
-          "."
+          " can eventually be Merged Culture Group Merged."
         ]
       ],
       "facets": {
@@ -9953,25 +9782,7 @@
         ],
         [
           "t",
-          ", "
-        ],
-        [
-          "r",
-          "concept:strength_damage_taken",
-          "Strength Damage Taken"
-        ],
-        [
-          "t",
-          ", or "
-        ],
-        [
-          "r",
-          "concept:morale_damage_taken",
-          "Morale Damage Taken"
-        ],
-        [
-          "t",
-          " can reduce it."
+          ", Strength Damage Taken, or Morale Damage Taken can reduce it."
         ]
       ],
       "facets": {
@@ -10917,7 +10728,7 @@
         ],
         [
           "t",
-          " might be diplomatically limited. That means the following diplomatic actions are either not possible or heavily restricted:\n\n•  ShowRelationTypeName('alliance')\n•  ShowRelationTypeName('food_access')\n•  ShowRelationTypeName('guarantee')\n•  ShowRelationTypeName('military_access')\n•  ShowRelationTypeName('fleet_basing_rights')\n•  ShowGenericActionName('create_building_subject')\n•  ShowGenericActionName('create_province_subject')\n\nMost subjects with limited diplomacy are incapable of declaring their own "
+          " might be diplomatically limited. That means the following diplomatic actions are either not possible or heavily restricted:\n\n•  ShowRelationTypeName('alliance')\n•  ShowRelationTypeName('food_access')\n•  ShowRelationTypeName('guarantee')\n•  ShowRelationTypeName('military_access')\n•  ShowRelationTypeName('Fleet Basing Rights')\n•  ShowGenericActionName('Create Building Subject')\n•  ShowGenericActionName('Create Province Subject')\n\nMost subjects with limited diplomacy are incapable of declaring their own "
         ],
         [
           "r",
@@ -10944,7 +10755,7 @@
       "desc": [
         [
           "t",
-          "Should we ever need it, the amount of diplomats_with_icon and diplomatic_capacity_with_icon at our disposal can be increased by spending extra "
+          "Should we ever need it, the amount of Diplomats With Icon and Diplomatic Capacity With Icon at our disposal can be increased by spending extra "
         ],
         [
           "r",
@@ -10953,7 +10764,7 @@
         ],
         [
           "t",
-          ".\n\nDiplomatic Spending also improves subject_loyalty_with_icon."
+          ".\n\nDiplomatic Spending also improves Subject Loyalty With Icon."
         ]
       ],
       "facets": {
@@ -11036,7 +10847,7 @@
         ],
         [
           "t",
-          ", and they could last or remain active over a long period of time, until the country manages to overcome it.\n\nSome of the most important Disasters include ShowDisasterName('ambrosian_republic_disaster') and ShowDisasterName('dissolution_of_delhi')."
+          ", and they could last or remain active over a long period of time, until the country manages to overcome it.\n\nSome of the most important Disasters include ShowDisasterName('Ambrosian Republic Disaster') and ShowDisasterName('Dissolution Of Delhi')."
         ]
       ],
       "facets": {
@@ -11357,7 +11168,7 @@
       "desc": [
         [
           "t",
-          "A Distant Market is a market_with_icon that lies beyond the trade_range_with_icon of all of your domestic_markets_with_icon, so you cannot conduct any trade_with_icon with them."
+          "A Distant Market is a Market With Icon that lies beyond the Trade Range With Icon of all of your Domestic Markets With Icon, so you cannot conduct any Trade With Icon with them."
         ]
       ],
       "facets": {
@@ -11489,7 +11300,7 @@
       "desc": [
         [
           "t",
-          "A Domestic Market is a market_with_icon in which you own locations_with_icon. Your "
+          "A Domestic Market is a Market With Icon in which you own Locations With Icon. Your "
         ],
         [
           "r",
@@ -11507,7 +11318,7 @@
         ],
         [
           "t",
-          " to buy all the stuff they need, be it for government construction_with_icon, buildings_with_icon, pop_needs_with_icon, or food_with_icon.\n\nEnsuring the supply of "
+          " to buy all the stuff they need, be it for government Construction With Icon, Buildings With Icon, Pop Needs With Icon, or Food With Icon.\n\nEnsuring the supply of "
         ],
         [
           "r",
@@ -11950,16 +11761,7 @@
         ],
         [
           "t",
-          "—especially "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          "—passively increases Doom.\n\nHaving a high Doom value decreases ShowModifierTypeName('subject_loyalty') and ShowModifierTypeName('global_estate_target_satisfaction') but increases ShowModifierTypeName('stability_decay').\n\nThere are a number of ways that decrease Doom, including:\n- Killing "
+          "—especially Towns And Cities—passively increases Doom.\n\nHaving a high Doom value decreases ShowModifierTypeName('subject_loyalty') and ShowModifierTypeName('Global Estate Target Satisfaction') but increases ShowModifierTypeName('stability_decay').\n\nThere are a number of ways that decrease Doom, including:\n- Killing "
         ],
         [
           "r",
@@ -12098,16 +11900,7 @@
         ],
         [
           "t",
-          ". It plays a major role within the GetUniqueInternationalOrganization('hre'), and is calculated by multiplying the "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          " and ownership over "
+          ". It plays a major role within the Hre, and is calculated by multiplying the Great Power Score and ownership over "
         ],
         [
           "r",
@@ -12820,16 +12613,7 @@
         ],
         [
           "t",
-          " which allows them to decide who will be the next "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          " which allows them to decide who will be the next International Organization Leader Short of an "
         ],
         [
           "r",
@@ -13246,7 +13030,7 @@
       "desc": [
         [
           "t",
-          "When a combat_with_icon starts, regiments_with_icon in the front sections_with_icon roll initiative_with_icon every hour until they become engaged. When a "
+          "When a Combat With Icon starts, Regiments With Icon in the front Sections With Icon roll Initiative With Icon every hour until they become engaged. When a "
         ],
         [
           "r",
@@ -13273,7 +13057,7 @@
         ],
         [
           "t",
-          ".\n\nOnly a certain amount of frontage_with_icon can be engaged at once in a "
+          ".\n\nOnly a certain amount of Frontage With Icon can be engaged at once in a "
         ],
         [
           "r",
@@ -13405,7 +13189,7 @@
       "desc": [
         [
           "t",
-          "Special interest groups within a country_with_icon, Estates have estate_power_with_icon representing their political strength within government, estate_satisfaction_with_icon representing how well their needs are fulfilled, an estate_culture_with_icon and estate_religion_with_icon inherited from their dominant "
+          "Special interest groups within a Country With Icon, Estates have Estate Power With Icon representing their political strength within government, Estate Satisfaction With Icon representing how well their needs are fulfilled, an Estate Culture With Icon and Estate Religion With Icon inherited from their dominant "
         ],
         [
           "r",
@@ -13423,7 +13207,7 @@
         ],
         [
           "t",
-          " of other Countries.\n\nEstates may also have estate_privileges_with_icon, which are special rights that increase their power and can be granted or revoked by the government. In turn, "
+          " of other Countries.\n\nEstates may also have Estate Privileges With Icon, which are special rights that increase their power and can be granted or revoked by the government. In turn, "
         ],
         [
           "r",
@@ -13432,7 +13216,7 @@
         ],
         [
           "t",
-          " provide taxes_with_icon, army_levies_with_icon, and navy_levies_with_icon to their "
+          " provide Taxes With Icon, Army Levies With Icon, and Navy Levies With Icon to their "
         ],
         [
           "r",
@@ -13441,7 +13225,7 @@
         ],
         [
           "t",
-          ".\n\nEstates collect the tax_base_with_icon from the locations_with_icon, as well as part of the profit of "
+          ".\n\nEstates collect the Tax Base With Icon from the Locations With Icon, as well as part of the profit of "
         ],
         [
           "r",
@@ -13450,7 +13234,7 @@
         ],
         [
           "t",
-          ", and they use that wealth to build buildings_with_icon and pay for pop_needs_with_icon. If their "
+          ", and they use that wealth to build Buildings With Icon and pay for Pop Needs With Icon. If their "
         ],
         [
           "r",
@@ -13468,7 +13252,7 @@
         ],
         [
           "t",
-          ".\n\nEach character_with_icon belongs to one of the Estates and increase its power when appointed to the cabinet_with_icon, or when commanding "
+          ".\n\nEach Character With Icon belongs to one of the Estates and increase its power when appointed to the Cabinet With Icon, or when commanding "
         ],
         [
           "r",
@@ -14155,16 +13939,7 @@
         ],
         [
           "t",
-          "'s tolerance of the estate's religion — "
-        ],
-        [
-          "r",
-          "concept:true_faith_tolerance",
-          "Primary Religion Tolerance"
-        ],
-        [
-          "t",
-          " when it matches the "
+          "'s tolerance of the estate's religion — Primary Religion Tolerance when it matches the "
         ],
         [
           "r",
@@ -14512,16 +14287,7 @@
         ],
         [
           "t",
-          " have access to "
-        ],
-        [
-          "r",
-          "concept:dynamic_historical_event",
-          "Dynamic Historical Events"
-        ],
-        [
-          "t",
-          "."
+          " have access to Dynamic Historical Events."
         ]
       ],
       "facets": {
@@ -14548,16 +14314,7 @@
         ],
         [
           "t",
-          " has at least one option that the player can choose. If the event is a "
-        ],
-        [
-          "r",
-          "concept:dynamic_historical_event",
-          "Dynamic Historical Event"
-        ],
-        [
-          "t",
-          ", it may have a "
+          " has at least one option that the player can choose. If the event is a Dynamic Historical Event, it may have a "
         ],
         [
           "r",
@@ -15765,16 +15522,7 @@
         ],
         [
           "t",
-          ". "
-        ],
-        [
-          "r",
-          "concept:food_raw_material",
-          "Food Raw Materials"
-        ],
-        [
-          "t",
-          " are the primary source of Food, although some "
+          ". Food Raw Materials are the primary source of Food, although some "
         ],
         [
           "r",
@@ -16096,16 +15844,7 @@
         ],
         [
           "t",
-          " can also affect it. "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          " are less efficient at producing Food than "
+          " can also affect it. Towns And Cities are less efficient at producing Food than "
         ],
         [
           "r",
@@ -16664,7 +16403,7 @@
       "desc": [
         [
           "t",
-          "A Foreign Market is a market_with_icon in which you do not "
+          "A Foreign Market is a Market With Icon in which you do not "
         ],
         [
           "r",
@@ -16673,7 +16412,7 @@
         ],
         [
           "t",
-          " any territory, nor have any merchant_capacity_with_icon. That means you cannot conduct trade_with_icon from them, but you can still trade with them using your "
+          " any territory, nor have any Merchant Capacity With Icon. That means you cannot conduct Trade With Icon from them, but you can still trade with them using your "
         ],
         [
           "r",
@@ -16691,7 +16430,7 @@
         ],
         [
           "t",
-          " within trade_range_with_icon."
+          " within Trade Range With Icon."
         ]
       ],
       "facets": {
@@ -16798,7 +16537,7 @@
       "desc": [
         [
           "t",
-          "The Fort Limit of a country_with_icon represents its ability to maintain its fortifications_with_icon without overburdening the administration. A "
+          "The Fort Limit of a Country With Icon represents its ability to maintain its Fortifications With Icon without overburdening the administration. A "
         ],
         [
           "r",
@@ -16807,7 +16546,7 @@
         ],
         [
           "t",
-          " can surpass its Fort Limit, but doing so will incur progressively higher fort_maintenance_with_icon costs.\n\nThe Fort Limit increases chiefly with the number of owned locations_with_icon, but also with the country_rank_with_icon and the number of "
+          " can surpass its Fort Limit, but doing so will incur progressively higher Fort Maintenance With Icon costs.\n\nThe Fort Limit increases chiefly with the number of owned Locations With Icon, but also with the Country Rank With Icon and the number of "
         ],
         [
           "r",
@@ -16825,7 +16564,7 @@
         ],
         [
           "t",
-          ". The ShowSocietyDirectionName('defensive') societal_value_with_icon and some advances_with_icon may also increase it."
+          ". The ShowSocietyDirectionName('defensive') Societal Value With Icon and some Advances With Icon may also increase it."
         ]
       ],
       "facets": {
@@ -17005,16 +16744,7 @@
         ],
         [
           "t",
-          " them.\n\nForts have a "
-        ],
-        [
-          "r",
-          "concept:zone_of_control",
-          "Zone of Control"
-        ],
-        [
-          "t",
-          " over adjacent "
+          " them.\n\nForts have a Zone Of Control over adjacent "
         ],
         [
           "r",
@@ -17023,7 +16753,7 @@
         ],
         [
           "t",
-          ".\n\nForts have fort_maintenance_with_icon costs that go directly to the Country's "
+          ".\n\nForts have Fort Maintenance With Icon costs that go directly to the Country's "
         ],
         [
           "r",
@@ -17327,7 +17057,7 @@
       "desc": [
         [
           "t",
-          "These are miniscule political entities which are based around a single, populous city. Protected by the GetUniqueInternationalOrganization('hre'), these cities serve as administrative hubs within the GetUniqueInternationalOrganization('hre')."
+          "These are miniscule political entities which are based around a single, populous city. Protected by the Hre, these cities serve as administrative hubs within the Hre."
         ]
       ],
       "facets": {
@@ -17583,16 +17313,7 @@
         ],
         [
           "t",
-          " is the "
-        ],
-        [
-          "r",
-          "concept:primary_or_accepted_culture",
-          "Primary or Accepted Culture"
-        ],
-        [
-          "t",
-          " and official "
+          " is the Primary Or Accepted Culture and official "
         ],
         [
           "r",
@@ -18256,16 +17977,7 @@
         ],
         [
           "t",
-          " which are primarily created in towns or cities.\n\nThe "
-        ],
-        [
-          "r",
-          "concept:food_raw_material",
-          "Food Raw Materials"
-        ],
-        [
-          "t",
-          " are also a source of "
+          " which are primarily created in towns or cities.\n\nThe Food Raw Materials are also a source of "
         ],
         [
           "r",
@@ -18921,16 +18633,7 @@
         ],
         [
           "t",
-          " that has accumulated enough "
-        ],
-        [
-          "r",
-          "concept:great_power_points",
-          "Great Power Points"
-        ],
-        [
-          "t",
-          " by dominating areas of high economic value to project its influence across the world.\n\nA "
+          " that has accumulated enough Great Power Points by dominating areas of high economic value to project its influence across the world.\n\nA "
         ],
         [
           "r",
@@ -18966,16 +18669,7 @@
         ],
         [
           "t",
-          " at a reduced rate. Each area is worth 1–10 "
-        ],
-        [
-          "r",
-          "concept:great_power_points",
-          "Great Power Points"
-        ],
-        [
-          "t",
-          " depending on its potential tax base relative to the world median.\n\nOnce a "
+          " at a reduced rate. Each area is worth 1–10 Great Power Points depending on its potential tax base relative to the world median.\n\nOnce a "
         ],
         [
           "r",
@@ -18984,16 +18678,7 @@
         ],
         [
           "t",
-          " crosses the "
-        ],
-        [
-          "r",
-          "concept:great_power_points",
-          "Great Power Points"
-        ],
-        [
-          "t",
-          " threshold it gains extra "
+          " crosses the Great Power Points threshold it gains extra "
         ],
         [
           "r",
@@ -19141,16 +18826,7 @@
         ],
         [
           "t",
-          " holds in the race for final victory. The Rank is decided by the sum of the "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          "."
+          " holds in the race for final victory. The Rank is decided by the sum of the Great Power Score."
         ]
       ],
       "facets": {
@@ -19344,16 +19020,7 @@
         ],
         [
           "t",
-          " depends mainly on its "
-        ],
-        [
-          "r",
-          "concept:natural_harbor_suitability",
-          "Natural Harbor Suitability"
-        ],
-        [
-          "t",
-          ", but many port-related "
+          " depends mainly on its Natural Harbor Suitability, but many port-related "
         ],
         [
           "r",
@@ -19389,7 +19056,7 @@
         ],
         [
           "t",
-          " is following the principles of the Dào, having to balance between being influenced by GetAutoModifier('negative harmony') or GetAutoModifier('positive harmony'). The country will get many effects nudging it towards one or the other, mainly through "
+          " is following the principles of the Dào, having to balance between being influenced by Negative Harmony or Positive Harmony. The country will get many effects nudging it towards one or the other, mainly through "
         ],
         [
           "r",
@@ -19398,7 +19065,7 @@
         ],
         [
           "t",
-          ", and should try to keep GetAutoModifier('balanced harmony')."
+          ", and should try to keep Balanced Harmony."
         ]
       ],
       "facets": {
@@ -19443,7 +19110,7 @@
         ],
         [
           "t",
-          " receives the following bonuses:\nShowModifierEffect('head_of_the_cabinet_modifier')"
+          " receives the following bonuses:\nShowModifierEffect('Head Of The Cabinet Modifier')"
         ]
       ],
       "facets": {
@@ -19863,16 +19530,7 @@
         ],
         [
           "t",
-          " before the succession occurs based on the "
-        ],
-        [
-          "r",
-          "concept:heir_selection_score",
-          "Heir Score"
-        ],
-        [
-          "t",
-          " of that character, while others trigger an "
+          " before the succession occurs based on the Heir Selection Score of that character, while others trigger an "
         ],
         [
           "r",
@@ -20385,7 +20043,7 @@
       "desc": [
         [
           "t",
-          "The GetUniqueInternationalOrganization('hre') is an "
+          "The Hre is an "
         ],
         [
           "r",
@@ -20394,7 +20052,7 @@
         ],
         [
           "t",
-          " which dominates the political sphere of ShowRegionName('north_german_region'), ShowRegionName('south_german_region') and partially ShowRegionName('italy_region') and ShowRegionName('france_region'). The GetUniqueInternationalOrganization('hre') is an amalgamation of countless "
+          " which dominates the political sphere of ShowRegionName('North German Region'), ShowRegionName('South German Region') and partially ShowRegionName('italy_region') and ShowRegionName('france_region'). The Hre is an amalgamation of countless "
         ],
         [
           "r",
@@ -20403,16 +20061,7 @@
         ],
         [
           "t",
-          " of insignificant to medium power who all fall under the protection of their "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          ".\n\nThe GetUniqueInternationalOrganization('hre') is the head of this organization which gets elected into this position."
+          " of insignificant to medium power who all fall under the protection of their International Organization Leader Short.\n\nThe Hre is the head of this organization which gets elected into this position."
         ]
       ],
       "facets": {
@@ -20459,16 +20108,7 @@
         ],
         [
           "t",
-          ", which are scaled by its "
-        ],
-        [
-          "r",
-          "concept:holy_site_importance",
-          "Importance"
-        ],
-        [
-          "t",
-          "."
+          ", which are scaled by its Holy Site Importance Short."
         ]
       ],
       "facets": {
@@ -20546,7 +20186,7 @@
         ],
         [
           "t",
-          " belongs to one of the types below.\nShowDatabase('holy_site_type')"
+          " belongs to one of the types below.\nShowDatabase('Holy Site Type')"
         ]
       ],
       "facets": {
@@ -20681,7 +20321,7 @@
       "desc": [
         [
           "t",
-          "The Electoral College consists of the ShowSpecialStatusNamePlural('elector') of the GetUniqueInternationalOrganization('hre').\n\nThe law of the ShowLawName('golden_bull') influences the way ShowSpecialStatusNamePluralWithNoTooltip('elector') cast their vote due to the following factors:\n- the influence of the "
+          "The Electoral College consists of the ShowSpecialStatusNamePlural('elector') of the Hre.\n\nThe law of the ShowLawName('golden_bull') influences the way ShowSpecialStatusNamePluralWithNoTooltip('elector') cast their vote due to the following factors:\n- the influence of the "
         ],
         [
           "r",
@@ -20699,16 +20339,7 @@
         ],
         [
           "t",
-          " is halved\n- the influence of the "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          " is quadrupled"
+          " is halved\n- the influence of the Great Power Score is quadrupled"
         ]
       ],
       "facets": {
@@ -20726,25 +20357,7 @@
       "desc": [
         [
           "t",
-          "The Emperor is the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of the "
-        ],
-        [
-          "r",
-          "concept:holy_roman_empire",
-          "Holy Roman Empire"
-        ],
-        [
-          "t",
-          ". It is the duty of the Emperor to protect the "
+          "The Emperor is the International Organization Leader Short of the Holy Roman Empire. It is the duty of the Emperor to protect the "
         ],
         [
           "r",
@@ -20771,16 +20384,7 @@
       "desc": [
         [
           "t",
-          "The law level describes how decentralized versus centralized the specific law for the "
-        ],
-        [
-          "r",
-          "concept:holy_roman_empire",
-          "Holy Roman Empire"
-        ],
-        [
-          "t",
-          " is. A lower level represents higher power of the "
+          "The law level describes how decentralized versus centralized the specific law for the Holy Roman Empire is. A lower level represents higher power of the "
         ],
         [
           "r",
@@ -20950,16 +20554,7 @@
       "desc": [
         [
           "t",
-          "A regional grouping of "
-        ],
-        [
-          "r",
-          "concept:holy_roman_empire",
-          "Holy Roman Empire"
-        ],
-        [
-          "t",
-          " members. The "
+          "A regional grouping of Holy Roman Empire members. The "
         ],
         [
           "r",
@@ -21024,25 +20619,7 @@
         ],
         [
           "t",
-          " has to follow to be able to be elected to become the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of the "
-        ],
-        [
-          "r",
-          "concept:holy_roman_empire",
-          "Holy Roman Empire"
-        ],
-        [
-          "t",
-          ". It is also possible that the Imperial Religion can either be a "
+          " has to follow to be able to be elected to become the International Organization Leader Short of the Holy Roman Empire. It is also possible that the Imperial Religion can either be a "
         ],
         [
           "r",
@@ -21385,16 +20962,7 @@
       "desc": [
         [
           "t",
-          "This allows us to remove "
-        ],
-        [
-          "r",
-          "concept:fow",
-          "Fog of War"
-        ],
-        [
-          "t",
-          " over another "
+          "This allows us to remove Fog Of War over another "
         ],
         [
           "r",
@@ -22088,16 +21656,7 @@
         ],
         [
           "t",
-          " as its "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          ". Each "
+          " as its International Organization Leader Short. Each "
         ],
         [
           "r",
@@ -22133,25 +21692,7 @@
         ],
         [
           "t",
-          " that has to be the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          ", while others rely on other systems to define their leadership, and others may have no "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " at all."
+          " that has to be the International Organization Leader Short, while others rely on other systems to define their leadership, and others may have no International Organization Leader Short at all."
         ]
       ],
       "facets": {
@@ -22218,7 +21759,7 @@
         ],
         [
           "t",
-          " defines its overall structure, such as the interactions that can be had with it, or its leadership structure.\n\nEach International Organization belongs to one of the types below.\nShowDatabaseWithIcon('international_organization_type')"
+          " defines its overall structure, such as the interactions that can be had with it, or its leadership structure.\n\nEach International Organization belongs to one of the types below.\nShowDatabaseWithIcon('International Organization Type')"
         ]
       ],
       "facets": {
@@ -22245,16 +21786,7 @@
         ],
         [
           "t",
-          " can be used to represent different mechanics depending on the International Organization. In some cases, it represents the authority of the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of the organization, like in the GetUniqueInternationalOrganization('hre') or the GetUniqueInternationalOrganization('middle kingdom'). In others, like the GetInternationalOrganizationType('sect'), it represents the influence of the International Organization itself. There may be other uses for the values, and it will depend on each International Organization type."
+          " can be used to represent different mechanics depending on the International Organization. In some cases, it represents the authority of the International Organization Leader Short of the organization, like in the Hre or the Middle Kingdom. In others, like the Sect, it represents the influence of the International Organization itself. There may be other uses for the values, and it will depend on each International Organization type."
         ]
       ],
       "facets": {
@@ -22350,16 +21882,7 @@
         ],
         [
           "t",
-          " is "
-        ],
-        [
-          "r",
-          "concept:isolated_language",
-          "Isolated"
-        ],
-        [
-          "t",
-          " when it does not share a "
+          " is Isolated Language Short when it does not share a "
         ],
         [
           "r",
@@ -22422,7 +21945,7 @@
       "desc": [
         [
           "t",
-          "A K'atun is a measure of time of the ShowReligionAdjective('mayan') people, it corresponds to 19.7 years. The end of one K'atun and start of a new one was marked by many ceremonies and festivities, making the occasion a truly important date for rulers and their people.\n\nIf by the time the current K'atun ends we have invested enough resources to prepare for the celebrations, we will gain ShowModifier('katun_celebration') for 10 years. On the other hand, if we are not ready we might gain ShowModifier('katun_celebration_bad') for 10 years. We will be fully ready once our "
+          "A K'atun is a measure of time of the ShowReligionAdjective('mayan') people, it corresponds to 19.7 years. The end of one K'atun and start of a new one was marked by many ceremonies and festivities, making the occasion a truly important date for rulers and their people.\n\nIf by the time the current K'atun ends we have invested enough resources to prepare for the celebrations, we will gain ShowModifier('katun_celebration') for 10 years. On the other hand, if we are not ready we might gain ShowModifier('Katun Celebration Bad') for 10 years. We will be fully ready once our "
         ],
         [
           "r",
@@ -22687,16 +22210,7 @@
         ],
         [
           "t",
-          ", whereas some others are "
-        ],
-        [
-          "r",
-          "concept:isolated_language",
-          "Isolated"
-        ],
-        [
-          "t",
-          "."
+          ", whereas some others are Isolated Language Short."
         ]
       ],
       "facets": {
@@ -22736,16 +22250,7 @@
         ],
         [
           "t",
-          " do not belong to a "
-        ],
-        [
-          "r",
-          "concept:language_family",
-          "Family"
-        ],
-        [
-          "t",
-          " and are therefore "
+          " do not belong to a Language Family Short and are therefore "
         ],
         [
           "r",
@@ -22972,16 +22477,7 @@
       "desc": [
         [
           "t",
-          "This determines how the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          "This determines how the International Organization Leader Short of an "
         ],
         [
           "r",
@@ -22990,16 +22486,7 @@
         ],
         [
           "t",
-          " gets chosen. There are five methods to accomplish this:\n- Rotation - The current leader will be the last in line for leadership once their turn is up\n- Vote - The leader will be elected via a "
-        ],
-        [
-          "r",
-          "concept:leadership_election_resolution",
-          "Leadership Election Resolution"
-        ],
-        [
-          "t",
-          "\n- Lottery - The leader will be chosen from possible candidates at random\n- Score - The leader will be chosen dynamically based on an internal point system specific to the International Organization\n- Undefined - The terms of how a leader for the International Organization is chosen are not defined, as no leader is needed or the International Organization has not codified the leadership yet"
+          " gets chosen. There are five methods to accomplish this:\n- Rotation - The current leader will be the last in line for leadership once their turn is up\n- Vote - The leader will be elected via a Leadership Election Resolution\n- Lottery - The leader will be chosen from possible candidates at random\n- Score - The leader will be chosen dynamically based on an internal point system specific to the International Organization\n- Undefined - The terms of how a leader for the International Organization is chosen are not defined, as no leader is needed or the International Organization has not codified the leadership yet"
         ]
       ],
       "facets": {
@@ -23017,16 +22504,7 @@
       "desc": [
         [
           "t",
-          "This determines under what conditions the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          "This determines under what conditions the International Organization Leader Short of an "
         ],
         [
           "r",
@@ -23053,16 +22531,7 @@
       "desc": [
         [
           "t",
-          "This determines who actually is the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          "This determines who actually is the International Organization Leader Short of an "
         ],
         [
           "r",
@@ -23125,16 +22594,7 @@
         ],
         [
           "t",
-          " used to determine how the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of an "
+          " used to determine how the International Organization Leader Short of an "
         ],
         [
           "r",
@@ -23894,25 +23354,7 @@
         ],
         [
           "t",
-          ", but the bulk of the Food production happens in Locations with "
-        ],
-        [
-          "r",
-          "concept:food_raw_material",
-          "Food Raw Materials"
-        ],
-        [
-          "t",
-          ".\n\nEvery Location will also have some "
-        ],
-        [
-          "r",
-          "concept:pop_food_consumption",
-          "Pop Food Consumption"
-        ],
-        [
-          "t",
-          " depending on the "
+          ", but the bulk of the Food production happens in Locations with Food Raw Materials.\n\nEvery Location will also have some Pop Food Consumption depending on the "
         ],
         [
           "r",
@@ -23921,16 +23363,7 @@
         ],
         [
           "t",
-          " living therein.\n\n"
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          " will often have negative Local Food balances, but that is not a problem as long as the Provincial Food is positive."
+          " living therein.\n\nTowns And Cities will often have negative Local Food balances, but that is not a problem as long as the Provincial Food is positive."
         ]
       ],
       "facets": {
@@ -24040,16 +23473,7 @@
         ],
         [
           "t",
-          ", but they can also be granted "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Location"
-        ],
-        [
-          "t",
-          " status.\n\nEach Location can be "
+          ", but they can also be granted Town Or City status.\n\nEach Location can be "
         ],
         [
           "r",
@@ -24402,16 +23826,7 @@
         ],
         [
           "t",
-          " army or "
-        ],
-        [
-          "r",
-          "concept:zone_of_control",
-          "Zone of Control"
-        ],
-        [
-          "t",
-          " will block this."
+          " army or Zone Of Control will block this."
         ]
       ],
       "facets": {
@@ -25104,7 +24519,7 @@
         ],
         [
           "t",
-          ".\n\nMarket Access is important in three key ways:\n\n• Locations will have higher market_attraction_with_icon towards "
+          ".\n\nMarket Access is important in three key ways:\n\n• Locations will have higher Market Attraction With Icon towards "
         ],
         [
           "r",
@@ -25149,7 +24564,7 @@
         ],
         [
           "t",
-          " buy goods_with_icon and food_with_icon in order of their Market Access.\n\n• Low Market Access harms local industry by reducing the "
+          " buy Goods With Icon and Food With Icon in order of their Market Access.\n\n• Low Market Access harms local industry by reducing the "
         ],
         [
           "r",
@@ -25158,7 +24573,7 @@
         ],
         [
           "t",
-          " of buildings_with_icon, and the profit of rgo_with_icon\n\nMarket Access propagates better over seas and "
+          " of Buildings With Icon, and the profit of Rgo With Icon\n\nMarket Access propagates better over seas and "
         ],
         [
           "r",
@@ -25268,7 +24683,7 @@
         ],
         [
           "t",
-          " is the difference between the supply_with_icon and the demand_with_icon of that "
+          " is the difference between the Supply With Icon and the Demand With Icon of that "
         ],
         [
           "r",
@@ -25277,7 +24692,7 @@
         ],
         [
           "t",
-          " inside a market_with_icon."
+          " inside a Market With Icon."
         ]
       ],
       "facets": {
@@ -25423,16 +24838,7 @@
         ],
         [
           "t",
-          " of "
-        ],
-        [
-          "r",
-          "concept:food_raw_material",
-          "Food Raw Materials"
-        ],
-        [
-          "t",
-          " to move Food between Markets."
+          " of Food Raw Materials to move Food between Markets."
         ]
       ],
       "facets": {
@@ -25722,7 +25128,7 @@
         ],
         [
           "t",
-          ", as well as with the ShowCabinetActionName('increase_control_province') "
+          ", as well as with the ShowCabinetActionName('Increase Control Province') "
         ],
         [
           "r",
@@ -25993,16 +25399,7 @@
       "desc": [
         [
           "t",
-          "This is the upfront cost of hiring this mercenary company, notwithstanding the "
-        ],
-        [
-          "r",
-          "concept:mercenary_contract_length",
-          "Contract Length"
-        ],
-        [
-          "t",
-          "."
+          "This is the upfront cost of hiring this mercenary company, notwithstanding the Mercenary Contract Length."
         ]
       ],
       "facets": {
@@ -26588,16 +25985,7 @@
         ],
         [
           "t",
-          " that are in the same "
-        ],
-        [
-          "r",
-          "concept:culture_group",
-          "Group"
-        ],
-        [
-          "t",
-          " and use the same "
+          " that are in the same Culture Group Short and use the same "
         ],
         [
           "r",
@@ -27060,7 +26448,7 @@
         ],
         [
           "t",
-          ", but cause a ShowModifier('minor_rebel_uprising') in the affected "
+          ", but cause a ShowModifier('Minor Rebel Uprising') in the affected "
         ],
         [
           "r",
@@ -27069,7 +26457,7 @@
         ],
         [
           "t",
-          ", with the following penalties:\n\nShowModifierEffect('minor_rebel_uprising')."
+          ", with the following penalties:\n\nShowModifierEffect('Minor Rebel Uprising')."
         ]
       ],
       "facets": {
@@ -27277,16 +26665,7 @@
         ],
         [
           "t",
-          " and "
-        ],
-        [
-          "r",
-          "concept:international_organization_modifier",
-          "International Organization Modifiers"
-        ],
-        [
-          "t",
-          " to "
+          " and International Organization Modifiers to "
         ],
         [
           "r",
@@ -27478,25 +26857,7 @@
         ],
         [
           "t",
-          " inflicts "
-        ],
-        [
-          "r",
-          "concept:morale_damage_done",
-          "Morale Damage Done"
-        ],
-        [
-          "t",
-          " upon its opponent, the effect of which is modified by the opponent's "
-        ],
-        [
-          "r",
-          "concept:morale_damage_taken",
-          "Morale Damage Taken"
-        ],
-        [
-          "t",
-          ". Once Morale hits zero, the Army or Navy will "
+          " inflicts Morale Damage Done upon its opponent, the effect of which is modified by the opponent's Morale Damage Taken. Once Morale hits zero, the Army or Navy will "
         ],
         [
           "r",
@@ -28293,7 +27654,7 @@
         ],
         [
           "t",
-          " also has the following effect:\n\nShowModifierEffect('is_navy_levy')"
+          " also has the following effect:\n\nShowModifierEffect('Is Navy Levy')"
         ]
       ],
       "facets": {
@@ -28539,16 +27900,7 @@
         ],
         [
           "t",
-          " if they are within the "
-        ],
-        [
-          "r",
-          "concept:zone_of_control",
-          "Zone of Control"
-        ],
-        [
-          "t",
-          " of a "
+          " if they are within the Zone Of Control of a "
         ],
         [
           "r",
@@ -28736,16 +28088,7 @@
         ],
         [
           "t",
-          " falls within the "
-        ],
-        [
-          "r",
-          "concept:zone_of_control",
-          "Zone of Control"
-        ],
-        [
-          "t",
-          " of a "
+          " falls within the Zone Of Control of a "
         ],
         [
           "r",
@@ -28891,7 +28234,7 @@
         ],
         [
           "t",
-          ". They are summoned with ShowGenericActionName('select_omen_god') and ShowGenericActionName('select_omen'). Their power is increased by the "
+          ". They are summoned with ShowGenericActionName('Select Omen God') and ShowGenericActionName('select_omen'). Their power is increased by the "
         ],
         [
           "r",
@@ -29108,16 +28451,7 @@
         ],
         [
           "t",
-          "'s "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          ". The exact rules are dependent on each "
+          "'s Great Power Score. The exact rules are dependent on each "
         ],
         [
           "r",
@@ -29304,16 +28638,7 @@
         ],
         [
           "t",
-          " is. It is an "
-        ],
-        [
-          "r",
-          "concept:international_organization_variable",
-          "International Organization Value"
-        ],
-        [
-          "t",
-          " of the GetInternationalOrganizationType('catholic church'), with monthly changes driven by: "
+          " is. It is an International Organization Variable of the Catholic Church, with monthly changes driven by: "
         ],
         [
           "r",
@@ -29358,7 +28683,7 @@
         ],
         [
           "t",
-          " ≥ 75: ShowModifier('high_papal_authority')\n• "
+          " ≥ 75: ShowModifier('High Papal Authority')\n• "
         ],
         [
           "r",
@@ -29367,7 +28692,7 @@
         ],
         [
           "t",
-          " < 25: ShowModifier('low_papal_authority')"
+          " < 25: ShowModifier('Low Papal Authority')"
         ]
       ],
       "facets": {
@@ -29621,7 +28946,7 @@
         ],
         [
           "t",
-          " such as the GetUniqueInternationalOrganization('hre') can have a Parliament, too. However, the parliament system depends on the type of Organization as some require the support of "
+          " such as the Hre can have a Parliament, too. However, the parliament system depends on the type of Organization as some require the support of "
         ],
         [
           "r",
@@ -29639,16 +28964,7 @@
         ],
         [
           "t",
-          " and their "
-        ],
-        [
-          "r",
-          "concept:special_status_power",
-          "Special Status Power"
-        ],
-        [
-          "t",
-          " to pass."
+          " and their Special Status Power to pass."
         ]
       ],
       "facets": {
@@ -29724,16 +29040,7 @@
         ],
         [
           "t",
-          " will instead present their Parliament Agenda. Accepting those may either give their guaranteed support in form of their "
-        ],
-        [
-          "r",
-          "concept:special_status_power",
-          "Special Status Power"
-        ],
-        [
-          "t",
-          "."
+          " will instead present their Parliament Agenda. Accepting those may either give their guaranteed support in form of their Special Status Power."
         ]
       ],
       "facets": {
@@ -30388,7 +29695,7 @@
         ],
         [
           "t",
-          " between them, or even some special treaties like ShowPeaceTreatyTypeName('abandon_colonial_claim'), ShowPeaceTreatyTypeName('execute_ruler'), or ShowPeaceTreatyTypeName('peace_humiliate')."
+          " between them, or even some special treaties like ShowPeaceTreatyTypeName('Abandon Colonial Claim'), ShowPeaceTreatyTypeName('execute_ruler'), or ShowPeaceTreatyTypeName('peace_humiliate')."
         ]
       ],
       "facets": {
@@ -30424,16 +29731,7 @@
         ],
         [
           "t",
-          " belongs to the ShowEstateTypeName('peasants_estate'). The rest is transferred to the ShowEstateTypeName('nobles_estate').\n\nEnfranchisement depends mostly on the ShowSocietyDirectionName('free_subjects') societal_value_with_icon. "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          " have a higher level than "
+          " belongs to the ShowEstateTypeName('peasants_estate'). The rest is transferred to the ShowEstateTypeName('nobles_estate').\n\nEnfranchisement depends mostly on the ShowSocietyDirectionName('free_subjects') Societal Value With Icon. Towns And Cities have a higher level than "
         ],
         [
           "r",
@@ -30794,16 +30092,7 @@
         ],
         [
           "t",
-          ", as well as the "
-        ],
-        [
-          "r",
-          "concept:dominant_upper_class_culture",
-          "Dominant Upper Class Culture"
-        ],
-        [
-          "t",
-          " of each "
+          ", as well as the Dominant Upper Class Culture of each "
         ],
         [
           "r",
@@ -30967,7 +30256,7 @@
       "desc": [
         [
           "t",
-          "A pop_with_icon has a list of goods_with_icon they need for their life, which depends on their "
+          "A Pop With Icon has a list of Goods With Icon they need for their life, which depends on their "
         ],
         [
           "r",
@@ -31003,7 +30292,7 @@
         ],
         [
           "t",
-          ". If they cannot fulfill these needs, their pop_satisfaction_with_icon will suffer.\n\nThe amount of "
+          ". If they cannot fulfill these needs, their Pop Satisfaction With Icon will suffer.\n\nThe amount of "
         ],
         [
           "r",
@@ -31021,7 +30310,7 @@
         ],
         [
           "t",
-          " increases with the development_with_icon of the "
+          " increases with the Development With Icon of the "
         ],
         [
           "r",
@@ -31843,7 +31132,7 @@
         ],
         [
           "t",
-          " will see their pop_satisfaction_with_icon increased by GetDefine('NPop','PRIMARY_CULTURE_SATISFACTION')."
+          " will see their Pop Satisfaction With Icon increased by GetDefine('NPop','PRIMARY_CULTURE_SATISFACTION')."
         ]
       ],
       "facets": {
@@ -31870,16 +31159,7 @@
         ],
         [
           "t",
-          " that is either a "
-        ],
-        [
-          "r",
-          "concept:primary_culture",
-          "Primary"
-        ],
-        [
-          "t",
-          " or "
+          " that is either a Primary Culture Short or "
         ],
         [
           "r",
@@ -32014,16 +31294,7 @@
         ],
         [
           "t",
-          " can be damaged and destroyed by "
-        ],
-        [
-          "r",
-          "concept:anti_piracy_warfare",
-          "Anti-Piracy Impact"
-        ],
-        [
-          "t",
-          " in their "
+          " can be damaged and destroyed by Anti Piracy Warfare in their "
         ],
         [
           "r",
@@ -32827,7 +32098,7 @@
         ],
         [
           "t",
-          " are created throughout the game.\n\nareas_with_icon are divided into Province Definitions, which in turn contain locations_with_icon. All "
+          " are created throughout the game.\n\nAreas With Icon are divided into Province Definitions, which in turn contain Locations With Icon. All "
         ],
         [
           "r",
@@ -32845,7 +32116,7 @@
         ],
         [
           "t",
-          " by the same country_with_icon will belong to the same "
+          " by the same Country With Icon will belong to the same "
         ],
         [
           "r",
@@ -32890,7 +32161,7 @@
         ],
         [
           "t",
-          ", each with its own province_capital_with_icon and food_stockpile_with_icon."
+          ", each with its own Province Capital With Icon and Food Stockpile With Icon."
         ]
       ],
       "facets": {
@@ -33063,7 +32334,7 @@
       "desc": [
         [
           "t",
-          "The Proximity of a location_with_icon measures how close it is to the capital_with_icon of its "
+          "The Proximity of a Location With Icon measures how close it is to the Capital With Icon of its "
         ],
         [
           "r",
@@ -33072,7 +32343,7 @@
         ],
         [
           "t",
-          ", and it determines how much control_with_icon "
+          ", and it determines how much Control With Icon "
         ],
         [
           "r",
@@ -33171,7 +32442,7 @@
         ],
         [
           "t",
-          " varies greatly with topography_with_icon and vegetation_with_icon. On land, it can be reduced by building roads_with_icon, increasing development_with_icon, and the ShowSocietyDirectionName('land') societal_value_with_icon. On sea, it can be reduced by harbor_capacity_with_icon, maritime_presence_with_icon and the ShowSocietyDirectionName('naval') "
+          " varies greatly with Topography With Icon and Vegetation With Icon. On land, it can be reduced by building Roads With Icon, increasing Development With Icon, and the ShowSocietyDirectionName('land') Societal Value With Icon. On sea, it can be reduced by Harbor Capacity With Icon, Maritime Presence With Icon and the ShowSocietyDirectionName('naval') "
         ],
         [
           "r",
@@ -33934,16 +33205,7 @@
         ],
         [
           "t",
-          " that has accumulated enough "
-        ],
-        [
-          "r",
-          "concept:great_power_points",
-          "Great Power Points"
-        ],
-        [
-          "t",
-          " to dominate its region but has not yet reached "
+          " that has accumulated enough Great Power Points to dominate its region but has not yet reached "
         ],
         [
           "r",
@@ -34359,7 +33621,7 @@
         ],
         [
           "t",
-          ".\n\nExamples include ShowRelationTypeName('embargo_nation'), ShowRelationTypeName('sound_toll_exemption') or ShowRelationTypeName('scutage')."
+          ".\n\nExamples include ShowRelationTypeName('embargo_nation'), ShowRelationTypeName('Sound Toll Exemption') or ShowRelationTypeName('scutage')."
         ]
       ],
       "facets": {
@@ -35256,16 +34518,7 @@
         ],
         [
           "t",
-          " or where we have "
-        ],
-        [
-          "r",
-          "concept:fleet_basing_rights",
-          "Fleet Basing Rights"
-        ],
-        [
-          "t",
-          ", by drawing "
+          " or where we have Fleet Basing Rights, by drawing "
         ],
         [
           "r",
@@ -35385,7 +34638,7 @@
         ],
         [
           "t",
-          " reaches the cost of the advance.\n\nThe speed at which we progress towards new advances_with_icon depends mainly on the power of our liturgical_language_with_icon, the average literacy_with_icon of our pops_with_icon, the "
+          " reaches the cost of the advance.\n\nThe speed at which we progress towards new Advances With Icon depends mainly on the power of our Liturgical Language With Icon, the average Literacy With Icon of our Pops With Icon, the "
         ],
         [
           "r",
@@ -35394,7 +34647,7 @@
         ],
         [
           "t",
-          " of our ShowEstateTypeName('clergy_estate'), and the number of institutions_with_icon we have "
+          " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
         ],
         [
           "r",
@@ -35430,7 +34683,7 @@
         ],
         [
           "t",
-          " depends mainly on the power of our liturgical_language_with_icon, the average literacy_with_icon of our pops_with_icon, the "
+          " depends mainly on the power of our Liturgical Language With Icon, the average Literacy With Icon of our Pops With Icon, the "
         ],
         [
           "r",
@@ -35439,7 +34692,7 @@
         ],
         [
           "t",
-          " of our ShowEstateTypeName('clergy_estate'), and the number of institutions_with_icon we have "
+          " of our ShowEstateTypeName('clergy_estate'), and the number of Institutions With Icon we have "
         ],
         [
           "r",
@@ -35776,7 +35029,7 @@
         ],
         [
           "t",
-          " during the ShowAgeName('age_6_revolutions'). States which go through the ShowDisasterName('revolution_disaster') and fail to defend their absolute state might become "
+          " during the ShowAgeName('Age 6 Revolutions'). States which go through the ShowDisasterName('revolution_disaster') and fail to defend their absolute state might become "
         ],
         [
           "r",
@@ -36091,16 +35344,7 @@
         ],
         [
           "t",
-          " with similar "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          " and not very good "
+          " with similar Great Power Score and not very good "
         ],
         [
           "r",
@@ -36736,16 +35980,7 @@
         ],
         [
           "t",
-          ". It is the opposite of "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Location"
-        ],
-        [
-          "t",
-          "."
+          ". It is the opposite of Town Or City."
         ]
       ],
       "facets": {
@@ -37041,7 +36276,7 @@
       "desc": [
         [
           "t",
-          "Each side in a combat_with_icon has four Sections: three at the front of the "
+          "Each side in a Combat With Icon has four Sections: three at the front of the "
         ],
         [
           "r",
@@ -37140,7 +36375,7 @@
         ],
         [
           "t",
-          " will attempt to move up to replace them by rolling combat_speed_with_icon. The "
+          " will attempt to move up to replace them by rolling Combat Speed With Icon. The "
         ],
         [
           "r",
@@ -37630,7 +36865,7 @@
       "desc": [
         [
           "t",
-          "This is the measure of strength of a particular opposing side during the ShowSituationName('fall_of_delhi') "
+          "This is the measure of strength of a particular opposing side during the ShowSituationName('Fall Of Delhi') "
         ],
         [
           "r",
@@ -37639,7 +36874,7 @@
         ],
         [
           "t",
-          ". GetCountry('DLH') can increase it through the following means:\n- Situation Actions\n- "
+          ". Delhi can increase it through the following means:\n- Situation Actions\n- "
         ],
         [
           "r",
@@ -37657,7 +36892,7 @@
         ],
         [
           "t",
-          "\n\nOpposers can increase theirs through offensive wars and victories against GetCountry('DLH')."
+          "\n\nOpposers can increase theirs through offensive wars and victories against Delhi."
         ]
       ],
       "facets": {
@@ -37872,7 +37107,7 @@
         ],
         [
           "t",
-          ", and/or are happening over a period of time.\n\nSome of the most important Situations include the ShowSituationName('black_death') and ShowSituationName('reformation').\n\nThe Situations of the ShowAgeName('age_1_traditions'):\n• Hundred Years' War\n• Guelphs and Ghibellines\n• Rise of the Turks\n• Nanbokuchō Jidai\n• Fall of Delhi\n\nThe Situations of the ShowAgeName('age_2_renaissance'):\n• Black Death\n• Hussite Wars\n• Red Turban Rebellions\n• Rise of Timur\n• Western Schism\n\nThe Situations of the ShowAgeName('age_3_discovery'):\n• Great Pestilence\n• Italian Wars\n• The Reformation\n• Sengoku Jidai\n• Treaty of Tordesillas\n\nThe Situations of the ShowAgeName('age_4_reformation'):\n• Council of Trent\n• War of Religions\n\nThe Situations of the ShowAgeName('age_5_absolutism'):\n• Columbian Exchange\n• Golden Age of Piracy\n• Little Ice Age\n\nThe Situations of the ShowAgeName('age_6_revolutions'):\n• Colonial Revolution\n• People's Uprising"
+          ", and/or are happening over a period of time.\n\nSome of the most important Situations include the ShowSituationName('black_death') and ShowSituationName('reformation').\n\nThe Situations of the ShowAgeName('Age 1 Traditions'):\n• Hundred Years' War\n• Guelphs and Ghibellines\n• Rise of the Turks\n• Nanbokuchō Jidai\n• Fall of Delhi\n\nThe Situations of the ShowAgeName('Age 2 Renaissance'):\n• Black Death\n• Hussite Wars\n• Red Turban Rebellions\n• Rise of Timur\n• Western Schism\n\nThe Situations of the ShowAgeName('Age 3 Discovery'):\n• Great Pestilence\n• Italian Wars\n• The Reformation\n• Sengoku Jidai\n• Treaty of Tordesillas\n\nThe Situations of the ShowAgeName('Age 4 Reformation'):\n• Council of Trent\n• War of Religions\n\nThe Situations of the ShowAgeName('Age 5 Absolutism'):\n• Columbian Exchange\n• Golden Age of Piracy\n• Little Ice Age\n\nThe Situations of the ShowAgeName('Age 6 Revolutions'):\n• Colonial Revolution\n• People's Uprising"
         ]
       ],
       "facets": {
@@ -37910,7 +37145,7 @@
         ],
         [
           "t",
-          " is active. They vanish once the situation is resolved.\n\nSome examples are ShowGenericActionName('hide_from_black_death') and ShowGenericActionName('rtr_rekindle_revolt')."
+          " is active. They vanish once the situation is resolved.\n\nSome examples are ShowGenericActionName('Hide From Black Death') and ShowGenericActionName('Rtr Rekindle Revolt')."
         ]
       ],
       "facets": {
@@ -38252,16 +37487,7 @@
         ],
         [
           "t",
-          " enjoy certain privileges or have certain duties to fulfill. In some cases, the "
-        ],
-        [
-          "r",
-          "concept:international_organization_leader",
-          "Leader"
-        ],
-        [
-          "t",
-          " of the organization has a special status to emphasize their unique position. Other organizations have "
+          " enjoy certain privileges or have certain duties to fulfill. In some cases, the International Organization Leader Short of the organization has a special status to emphasize their unique position. Other organizations have "
         ],
         [
           "r",
@@ -39148,16 +38374,7 @@
         ],
         [
           "t",
-          ", and have a certain percentage of their "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          " exacted by their "
+          ", and have a certain percentage of their Great Power Score exacted by their "
         ],
         [
           "r",
@@ -39211,25 +38428,7 @@
         ],
         [
           "t",
-          " - both of which indicate their current stance on their subordination, for example whether they are "
-        ],
-        [
-          "r",
-          "concept:loyal_subjects",
-          "Loyal"
-        ],
-        [
-          "t",
-          " or "
-        ],
-        [
-          "r",
-          "concept:disloyal_subjects",
-          "Disloyal"
-        ],
-        [
-          "t",
-          ".\n\nAny subject may in turn be the "
+          " - both of which indicate their current stance on their subordination, for example whether they are Loyal Subjects Short or Disloyal Subjects Short.\n\nAny subject may in turn be the "
         ],
         [
           "r",
@@ -39256,16 +38455,7 @@
         ],
         [
           "t",
-          " relationships.\n\nSome subjects are "
-        ],
-        [
-          "r",
-          "concept:non_sovereign_subject",
-          "Non-Sovereign Subjects"
-        ],
-        [
-          "t",
-          "."
+          " relationships.\n\nSome subjects are Non Sovereign Subjects."
         ]
       ],
       "facets": {
@@ -39584,16 +38774,7 @@
         ],
         [
           "t",
-          " and "
-        ],
-        [
-          "r",
-          "concept:great_power_score",
-          "Great Power Score"
-        ],
-        [
-          "t",
-          " that each "
+          " and Great Power Score that each "
         ],
         [
           "r",
@@ -39835,16 +39016,7 @@
         ],
         [
           "t",
-          " work in Subsistence Agriculture. They will generate food in smaller quantities than Resource Gathering Operations working "
-        ],
-        [
-          "r",
-          "concept:food_raw_material",
-          "Food Raw Materials"
-        ],
-        [
-          "t",
-          ", often barely enough to cater for their own needs. All "
+          " work in Subsistence Agriculture. They will generate food in smaller quantities than Resource Gathering Operations working Food Raw Materials, often barely enough to cater for their own needs. All "
         ],
         [
           "r",
@@ -41006,16 +40178,7 @@
         ],
         [
           "t",
-          " that are treated better than "
-        ],
-        [
-          "r",
-          "concept:non_accepted_culture",
-          "Discriminated Cultures"
-        ],
-        [
-          "t",
-          " but not as good as "
+          " that are treated better than Non Accepted Cultures but not as good as "
         ],
         [
           "r",
@@ -41069,7 +40232,7 @@
         ],
         [
           "t",
-          ".\n\npops_with_icon belonging to an Tolerated Culture will see their pop_satisfaction_with_icon increased by GetDefine('NPop','TOLERATED_CULTURE_SATISFACTION')."
+          ".\n\nPops With Icon belonging to an Tolerated Culture will see their Pop Satisfaction With Icon increased by GetDefine('NPop','TOLERATED_CULTURE_SATISFACTION')."
         ]
       ],
       "facets": {
@@ -41096,16 +40259,7 @@
         ],
         [
           "t",
-          ". Flatter Topography is generally better for growing "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Locations"
-        ],
-        [
-          "t",
-          ", while rougher Topography is easier to defend."
+          ". Flatter Topography is generally better for growing Towns And Cities, while rougher Topography is easier to defend."
         ]
       ],
       "facets": {
@@ -41336,16 +40490,7 @@
         ],
         [
           "t",
-          " can grant to a "
-        ],
-        [
-          "r",
-          "concept:town_and_city",
-          "Urban Location"
-        ],
-        [
-          "t",
-          ". These can impact the "
+          " can grant to a Town Or City. These can impact the "
         ],
         [
           "r",
@@ -41372,7 +40517,7 @@
         ],
         [
           "t",
-          " start with access to historical Urban Rights, and a number of them are granted from 1337. Later on, starting in the ShowAgeName('age_3_discovery'), all "
+          " start with access to historical Urban Rights, and a number of them are granted from 1337. Later on, starting in the ShowAgeName('Age 3 Discovery'), all "
         ],
         [
           "r",
@@ -41381,7 +40526,7 @@
         ],
         [
           "t",
-          " can research the advance_iconShowAdvanceName('town_rights_enable') "
+          " can research the advance_iconShowAdvanceName('Town Rights Enable') "
         ],
         [
           "r",
@@ -41492,7 +40637,7 @@
         ],
         [
           "t",
-          " is split between the Crown and the estates_with_icon according to their estate_power_with_icon. Only the percentage of crown_power_with_icon goes to the "
+          " is split between the Crown and the Estates With Icon according to their Estate Power With Icon. Only the percentage of Crown Power With Icon goes to the "
         ],
         [
           "r",
@@ -41575,7 +40720,7 @@
       "desc": [
         [
           "t",
-          "This is the money gained from trades_with_icon when selling goods_with_icon to markets_with_icon.\n\nTrade income is split between the Crown and the estates_with_icon according to their estate_power_with_icon. Only the percentage of crown_power_with_icon goes to the "
+          "This is the money gained from Trades With Icon when selling Goods With Icon to Markets With Icon.\n\nTrade income is split between the Crown and the Estates With Icon according to their Estate Power With Icon. Only the percentage of Crown Power With Icon goes to the "
         ],
         [
           "r",
@@ -41786,7 +40931,7 @@
       "desc": [
         [
           "t",
-          "A Trading Market is a market_with_icon in which you do not "
+          "A Trading Market is a Market With Icon in which you do not "
         ],
         [
           "r",
@@ -41795,7 +40940,7 @@
         ],
         [
           "t",
-          " any territory, but have merchant_capacity_with_icon from your foreign_buildings_with_icon.\n\nThis means that you do not necessarily care about the good_with_icon needs of that "
+          " any territory, but have Merchant Capacity With Icon from your Foreign Buildings With Icon.\n\nThis means that you do not necessarily care about the Good With Icon needs of that "
         ],
         [
           "r",
@@ -41831,7 +40976,7 @@
         ],
         [
           "t",
-          " there to make profit, or to supply your domestic_markets_with_icon."
+          " there to make profit, or to supply your Domestic Markets With Icon."
         ]
       ],
       "facets": {
@@ -42699,7 +41844,7 @@
       "desc": [
         [
           "t",
-          "This is the name for orders like ShowUnitAbilityName('drill_army') or ShowUnitAbilityName('march_to_sound_of_guns'), which can be given to "
+          "This is the name for orders like ShowUnitAbilityName('drill_army') or ShowUnitAbilityName('March To Sound Of Guns'), which can be given to "
         ],
         [
           "r",
@@ -43426,7 +42571,7 @@
       "desc": [
         [
           "t",
-          "In a war_with_icon, the Attacker is the side whose leader initiated the conflict and chose the casus_belli_with_icon.\n\nIn order to earn war_score_with_icon, the Attacker side needs to fulfil the war_goal_with_icon."
+          "In a War With Icon, the Attacker is the side whose leader initiated the conflict and chose the Casus Belli With Icon.\n\nIn order to earn War Score With Icon, the Attacker side needs to fulfil the War Goal With Icon."
         ]
       ],
       "facets": {
@@ -43446,7 +42591,7 @@
       "desc": [
         [
           "t",
-          "In a war_with_icon, the Defender is the side whose leader was declared war upon. The Defender side will automatically call their allies_with_icon into the "
+          "In a War With Icon, the Defender is the side whose leader was declared war upon. The Defender side will automatically call their Allies With Icon into the "
         ],
         [
           "r",
@@ -43455,7 +42600,7 @@
         ],
         [
           "t",
-          ".\n\nIn order to earn war_score_with_icon, the Defender side needs to prevent the "
+          ".\n\nIn order to earn War Score With Icon, the Defender side needs to prevent the "
         ],
         [
           "r",
@@ -43464,7 +42609,7 @@
         ],
         [
           "t",
-          " from fulfilling the war_goal_with_icon."
+          " from fulfilling the War Goal With Icon."
         ]
       ],
       "facets": {
@@ -43545,7 +42690,7 @@
         ],
         [
           "t",
-          ". These are the effects at 1 War Exhaustion:\nShowAutoModifierEffect('war_exhaustion_impact')"
+          ". These are the effects at 1 War Exhaustion:\nShowAutoModifierEffect('War Exhaustion Impact')"
         ]
       ],
       "facets": {
@@ -44161,7 +43306,7 @@
         ],
         [
           "t",
-          ". ShowPopTypeName('nobles') get a much bigger share per capita than ShowPopTypeName('burghers'), which in turn get a much bigger share per capita than ShowPopTypeName('peasants').\n\nDepending on the ShowModifierTypeName('local_peasant_enfranchisment') in a "
+          ". ShowPopTypeName('nobles') get a much bigger share per capita than ShowPopTypeName('burghers'), which in turn get a much bigger share per capita than ShowPopTypeName('peasants').\n\nDepending on the ShowModifierTypeName('Local Peasant Enfranchisment') in a "
         ],
         [
           "r",
@@ -44348,16 +43493,7 @@
         ],
         [
           "t",
-          " and even "
-        ],
-        [
-          "r",
-          "concept:frozen",
-          "Freeze Over"
-        ],
-        [
-          "t",
-          " some shallow "
+          " and even Frozen Freeze Over some shallow "
         ],
         [
           "r",
@@ -44420,16 +43556,7 @@
         ],
         [
           "t",
-          " or within its "
-        ],
-        [
-          "r",
-          "concept:zone_of_control",
-          "Zone of Control"
-        ],
-        [
-          "t",
-          " do not suffer winter "
+          " or within its Zone Of Control do not suffer winter "
         ],
         [
           "r",

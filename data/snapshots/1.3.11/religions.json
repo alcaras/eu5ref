@@ -4,6 +4,7 @@
     {
       "color": "#33312c",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -43,6 +44,7 @@
     {
       "color": "#462b99",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -76,6 +78,7 @@
     {
       "color": "#564164",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -115,6 +118,7 @@
     {
       "color": "#3c2805",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -154,6 +158,7 @@
     {
       "color": "#4b73aa",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -187,6 +192,7 @@
     {
       "color": "#dc6423",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -220,6 +226,7 @@
     {
       "color": "#c9c57c",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -259,6 +266,7 @@
     {
       "color": "#b2d2dd",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -298,6 +306,7 @@
     {
       "color": "#a32819",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -337,6 +346,7 @@
     {
       "color": "#20bbc9",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -376,6 +386,7 @@
     {
       "color": "#8296d8",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -415,6 +426,7 @@
     {
       "color": "#00721b",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -448,6 +460,7 @@
     {
       "color": "#dc1e1e",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -481,6 +494,7 @@
     {
       "color": "#5fa05a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -520,6 +534,7 @@
     {
       "color": "#874dff",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -567,6 +582,7 @@
     {
       "color": "#7b7a14",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -600,6 +616,7 @@
     {
       "color": "#e3a2a7",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -639,6 +656,7 @@
     {
       "color": "#643207",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -672,6 +690,7 @@
     {
       "color": "#3b7843",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -705,6 +724,7 @@
     {
       "color": "#1b9364",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -744,6 +764,7 @@
     {
       "color": "#8cffc8",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -783,6 +804,7 @@
     {
       "color": "#b8b799",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -816,6 +838,7 @@
     {
       "color": "#dc6978",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -855,6 +878,7 @@
     {
       "color": "#c8c33c",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -894,6 +918,7 @@
     {
       "color": "#82432f",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -933,6 +958,7 @@
     {
       "color": "#614351",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -972,6 +998,7 @@
     {
       "color": "#b45a0f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1005,6 +1032,7 @@
     {
       "color": "#8c780f",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1044,6 +1072,7 @@
     {
       "color": "#8c2d0f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1077,6 +1106,7 @@
     {
       "color": "#cd6812",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1116,6 +1146,7 @@
     {
       "color": "#50dc73",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1155,6 +1186,7 @@
     {
       "color": "#fc0048",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -1214,6 +1246,7 @@
     {
       "color": "#0aebff",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "karma"
         ]
@@ -1261,6 +1294,7 @@
     {
       "color": "#8a163b",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -1300,6 +1334,7 @@
     {
       "color": "#997586",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence",
           "canonization"
@@ -1366,6 +1401,7 @@
     {
       "color": "#825a3c",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1405,6 +1441,7 @@
     {
       "color": "#194a22",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -1444,6 +1481,7 @@
     {
       "color": "#d1cb1f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -1477,6 +1515,7 @@
     {
       "color": "#aba01f",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -1516,6 +1555,7 @@
     {
       "color": "#a36209",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -1549,6 +1589,7 @@
     {
       "color": "#4c4ce5",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -1614,6 +1655,7 @@
     {
       "color": "#b4b4e6",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -1667,6 +1709,7 @@
     {
       "color": "#b27f00",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "cardinals",
           "religious_head",
@@ -1741,6 +1784,7 @@
     {
       "color": "#d6d9b0",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -1780,6 +1824,7 @@
     {
       "color": "#1dd739",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -1819,6 +1864,7 @@
     {
       "color": "#e54f67",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -1858,6 +1904,7 @@
     {
       "color": "#550f93",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -1891,6 +1938,7 @@
     {
       "color": "#b35222",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -1924,6 +1972,7 @@
     {
       "color": "#610b0b",
       "data": {
+        "group_key": "tonal_group",
         "mechanics": []
       },
       "desc": [
@@ -1957,6 +2006,7 @@
     {
       "color": "#f82a56",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -1996,6 +2046,7 @@
     {
       "color": "#9c39d5",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2029,6 +2080,7 @@
     {
       "color": "#aacdcd",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2068,6 +2120,7 @@
     {
       "color": "#642424",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -2101,6 +2154,7 @@
     {
       "color": "#393dcc",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2140,6 +2194,7 @@
     {
       "color": "#c8418c",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2173,6 +2228,7 @@
     {
       "color": "#4a3f54",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -2206,6 +2262,7 @@
     {
       "color": "#121b98",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -2239,6 +2296,7 @@
     {
       "color": "#a8fc1b",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -2272,6 +2330,7 @@
     {
       "color": "#d2af14",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2311,6 +2370,7 @@
     {
       "color": "#c94e15",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2350,6 +2410,7 @@
     {
       "color": "#a9c7a3",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -2389,6 +2450,7 @@
     {
       "color": "#af3c5a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2434,6 +2496,7 @@
     {
       "color": "#37965a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2473,6 +2536,7 @@
     {
       "color": "#3e6853",
       "data": {
+        "group_key": "folk_australian_group",
         "mechanics": []
       },
       "desc": [
@@ -2506,6 +2570,7 @@
     {
       "color": "#4db31a",
       "data": {
+        "group_key": "druze_group",
         "mechanics": []
       },
       "desc": [
@@ -2545,6 +2610,7 @@
     {
       "color": "#147d0f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2578,6 +2644,7 @@
     {
       "color": "#3d322d",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2617,6 +2684,7 @@
     {
       "color": "#292405",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2656,6 +2724,7 @@
     {
       "color": "#aac81e",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2689,6 +2758,7 @@
     {
       "color": "#ce3c3f",
       "data": {
+        "group_key": "folk_permic_group",
         "mechanics": []
       },
       "desc": [
@@ -2722,6 +2792,7 @@
     {
       "color": "#0a1834",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2761,6 +2832,7 @@
     {
       "color": "#45b22f",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2800,6 +2872,7 @@
     {
       "color": "#e0bfb4",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2839,6 +2912,7 @@
     {
       "color": "#b49641",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -2878,6 +2952,7 @@
     {
       "color": "#f58719",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2917,6 +2992,7 @@
     {
       "color": "#2519d7",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -2950,6 +3026,7 @@
     {
       "color": "#142864",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -2989,6 +3066,7 @@
     {
       "color": "#e6ebaf",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3022,6 +3100,7 @@
     {
       "color": "#cd82d7",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3055,6 +3134,7 @@
     {
       "color": "#25cbec",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -3094,6 +3174,7 @@
     {
       "color": "#644b23",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3133,6 +3214,7 @@
     {
       "color": "#fcc205",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -3166,6 +3248,7 @@
     {
       "color": "#bfa014",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -3205,6 +3288,7 @@
     {
       "color": "#610504",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -3238,6 +3322,7 @@
     {
       "color": "#aa824b",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3277,6 +3362,7 @@
     {
       "color": "#f9cead",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": [
           "religious_influence",
           "canonization"
@@ -3337,6 +3423,7 @@
     {
       "color": "#ff2929",
       "data": {
+        "group_key": "dharmic",
         "mechanics": [
           "avatars"
         ]
@@ -3378,6 +3465,7 @@
     {
       "color": "#29404c",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3411,6 +3499,7 @@
     {
       "color": "#f43709",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -3464,6 +3553,7 @@
     {
       "color": "#0f980a",
       "data": {
+        "group_key": "muslim",
         "mechanics": []
       },
       "desc": [
@@ -3527,6 +3617,7 @@
     {
       "color": "#2d5e3c",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -3566,6 +3657,7 @@
     {
       "color": "#2a4c7c",
       "data": {
+        "group_key": "folk_papuan_group",
         "mechanics": []
       },
       "desc": [
@@ -3605,6 +3697,7 @@
     {
       "color": "#407373",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -3644,6 +3737,7 @@
     {
       "color": "#158466",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -3677,6 +3771,7 @@
     {
       "color": "#2959ae",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -3710,6 +3805,7 @@
     {
       "color": "#9b6912",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -3743,6 +3839,7 @@
     {
       "color": "#bdecb6",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -3776,6 +3873,7 @@
     {
       "color": "#d3b8b3",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -3815,6 +3913,7 @@
     {
       "color": "#63625c",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -3848,6 +3947,7 @@
     {
       "color": "#bff074",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -3881,6 +3981,7 @@
     {
       "color": "#e7a914",
       "data": {
+        "group_key": "dharmic",
         "mechanics": [
           "karma"
         ]
@@ -3934,6 +4035,7 @@
     {
       "color": "#3b9287",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -3973,6 +4075,7 @@
     {
       "color": "#af5569",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4012,6 +4115,7 @@
     {
       "color": "#a01932",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4051,6 +4155,7 @@
     {
       "color": "#555532",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4090,6 +4195,7 @@
     {
       "color": "#5a7099",
       "data": {
+        "group_key": "israelite_group",
         "mechanics": []
       },
       "desc": [
@@ -4129,6 +4235,7 @@
     {
       "color": "#02b255",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -4168,6 +4275,7 @@
     {
       "color": "#c33250",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4207,6 +4315,7 @@
     {
       "color": "#154f03",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -4240,6 +4349,7 @@
     {
       "color": "#d74b37",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -4279,6 +4389,7 @@
     {
       "color": "#dc3278",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4312,6 +4423,7 @@
     {
       "color": "#3198fc",
       "data": {
+        "group_key": "folk_micronesian_group",
         "mechanics": []
       },
       "desc": [
@@ -4345,6 +4457,7 @@
     {
       "color": "#ae0d0d",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -4384,6 +4497,7 @@
     {
       "color": "#612120",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4423,6 +4537,7 @@
     {
       "color": "#3c82b4",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4456,6 +4571,7 @@
     {
       "color": "#6079a6",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -4489,6 +4605,7 @@
     {
       "color": "#640b7f",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -4522,6 +4639,7 @@
     {
       "color": "#37aa41",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -4561,6 +4679,7 @@
     {
       "color": "#57a639",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -4594,6 +4713,7 @@
     {
       "color": "#3278dc",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4633,6 +4753,7 @@
     {
       "color": "#d21e32",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4672,6 +4793,7 @@
     {
       "color": "#8f4caa",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -4711,6 +4833,7 @@
     {
       "color": "#917c57",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -4744,6 +4867,7 @@
     {
       "color": "#730a1e",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4783,6 +4907,7 @@
     {
       "color": "#d2c32d",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4822,6 +4947,7 @@
     {
       "color": "#2121aa",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -4861,6 +4987,7 @@
     {
       "color": "#a52373",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4900,6 +5027,7 @@
     {
       "color": "#d20f5a",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4933,6 +5061,7 @@
     {
       "color": "#469696",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -4972,6 +5101,7 @@
     {
       "color": "#b0e840",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5005,6 +5135,7 @@
     {
       "color": "#dc727f",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -5038,6 +5169,7 @@
     {
       "color": "#679636",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5077,6 +5209,7 @@
     {
       "color": "#b4b46e",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5116,6 +5249,7 @@
     {
       "color": "#2f3439",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -5155,6 +5289,7 @@
     {
       "color": "#b9c328",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5194,6 +5329,7 @@
     {
       "color": "#2837a5",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5227,6 +5363,7 @@
     {
       "color": "#b93769",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5260,6 +5397,7 @@
     {
       "color": "#afca5b",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -5293,6 +5431,7 @@
     {
       "color": "#910e84",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -5326,6 +5465,7 @@
     {
       "color": "#c3693c",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5365,6 +5505,7 @@
     {
       "color": "#eb3434",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -5418,6 +5559,7 @@
     {
       "color": "#39b2f7",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -5457,6 +5599,7 @@
     {
       "color": "#0000b2",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -5504,6 +5647,7 @@
     {
       "color": "#9df8a0",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -5543,6 +5687,7 @@
     {
       "color": "#cc4c7f",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "karma"
         ]
@@ -5590,6 +5735,7 @@
     {
       "color": "#6704c3",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -5623,6 +5769,7 @@
     {
       "color": "#0d403e",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -5656,6 +5803,7 @@
     {
       "color": "#cd0f4b",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5689,6 +5837,7 @@
     {
       "color": "#80bf4d",
       "data": {
+        "group_key": "mandean_group",
         "mechanics": []
       },
       "desc": [
@@ -5722,6 +5871,7 @@
     {
       "color": "#fcfc90",
       "data": {
+        "group_key": "manichaean_group",
         "mechanics": []
       },
       "desc": [
@@ -5755,6 +5905,7 @@
     {
       "color": "#827e50",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5794,6 +5945,7 @@
     {
       "color": "#4b87cd",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -5827,6 +5979,7 @@
     {
       "color": "#7f9696",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -5860,6 +6013,7 @@
     {
       "color": "#534813",
       "data": {
+        "group_key": "tonal_group",
         "mechanics": [
           "religious_influence"
         ]
@@ -5895,6 +6049,7 @@
     {
       "color": "#cfcd90",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -5934,6 +6089,7 @@
     {
       "color": "#7f19b2",
       "data": {
+        "group_key": "tonal_group",
         "mechanics": []
       },
       "desc": [
@@ -5967,6 +6123,7 @@
     {
       "color": "#b2264c",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "autocephalous_patriarchates",
           "religious_influence",
@@ -6034,6 +6191,7 @@
     {
       "color": "#4a6d20",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -6067,6 +6225,7 @@
     {
       "color": "#28960f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6100,6 +6259,7 @@
     {
       "color": "#aa965a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6139,6 +6299,7 @@
     {
       "color": "#c76a69",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -6172,6 +6333,7 @@
     {
       "color": "#af19af",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6205,6 +6367,7 @@
     {
       "color": "#28a564",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6244,6 +6407,7 @@
     {
       "color": "#bf0091",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6277,6 +6441,7 @@
     {
       "color": "#ff5599",
       "data": {
+        "group_key": "folk_permic_group",
         "mechanics": []
       },
       "desc": [
@@ -6310,6 +6475,7 @@
     {
       "color": "#f03c3c",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6343,6 +6509,7 @@
     {
       "color": "#a01937",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6382,6 +6549,7 @@
     {
       "color": "#4609f9",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -6421,6 +6589,7 @@
     {
       "color": "#bfa831",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -6454,6 +6623,7 @@
     {
       "color": "#aec850",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -6487,6 +6657,7 @@
     {
       "color": "#7aabd8",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -6520,6 +6691,7 @@
     {
       "color": "#3c1e50",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6559,6 +6731,7 @@
     {
       "color": "#613130",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6598,6 +6771,7 @@
     {
       "color": "#9aa627",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -6637,6 +6811,7 @@
     {
       "color": "#316650",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -6676,6 +6851,7 @@
     {
       "color": "#612020",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -6715,6 +6891,7 @@
     {
       "color": "#840de2",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -6748,6 +6925,7 @@
     {
       "color": "#32afaf",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -6787,6 +6965,7 @@
     {
       "color": "#407340",
       "data": {
+        "group_key": "tonal_group",
         "mechanics": []
       },
       "desc": [
@@ -6832,6 +7011,7 @@
     {
       "color": "#ffa746",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -6871,6 +7051,7 @@
     {
       "color": "#708ed0",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -6910,6 +7091,7 @@
     {
       "color": "#46fe81",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -6943,6 +7125,7 @@
     {
       "color": "#445c7a",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -6976,6 +7159,7 @@
     {
       "color": "#466eb9",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7009,6 +7193,7 @@
     {
       "color": "#cb7908",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -7048,6 +7233,7 @@
     {
       "color": "#cc4393",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -7081,6 +7267,7 @@
     {
       "color": "#1206cb4",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "autocephalous_patriarchates",
           "religious_influence",
@@ -7142,6 +7329,7 @@
     {
       "color": "#facde6",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7181,6 +7369,7 @@
     {
       "color": "#822f22",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7220,6 +7409,7 @@
     {
       "color": "#5d5210",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7259,6 +7449,7 @@
     {
       "color": "#c33c5a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7298,6 +7489,7 @@
     {
       "color": "#bfbfbf",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -7325,6 +7517,7 @@
     {
       "color": "#32b4e6",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7364,6 +7557,7 @@
     {
       "color": "#aa9632",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7403,6 +7597,7 @@
     {
       "color": "#645739",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7442,6 +7637,7 @@
     {
       "color": "#cd960f",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7475,6 +7671,7 @@
     {
       "color": "#ae1842",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7514,6 +7711,7 @@
     {
       "color": "#412b24",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7553,6 +7751,7 @@
     {
       "color": "#d96432",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -7586,6 +7785,7 @@
     {
       "color": "#613130",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7625,6 +7825,7 @@
     {
       "color": "#d300af",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7664,6 +7865,7 @@
     {
       "color": "#917850",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7703,6 +7905,7 @@
     {
       "color": "#e6b45a",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7736,6 +7939,7 @@
     {
       "color": "#145a0a",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7769,6 +7973,7 @@
     {
       "color": "#fba79c",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -7808,6 +8013,7 @@
     {
       "color": "#8c3635",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "patriarchs",
           "autocephalous_patriarchates",
@@ -7864,6 +8070,7 @@
     {
       "color": "#8a2cbe",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -7903,6 +8110,7 @@
     {
       "color": "#4b1426",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -7936,6 +8144,7 @@
     {
       "color": "#077d0a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -7975,6 +8184,7 @@
     {
       "color": "#d82490",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -8028,6 +8238,7 @@
     {
       "color": "#8f50fc",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -8067,6 +8278,7 @@
     {
       "color": "#666857",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -8100,6 +8312,7 @@
     {
       "color": "#c8320a",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8133,6 +8346,7 @@
     {
       "color": "#dc9623",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8166,6 +8380,7 @@
     {
       "color": "#d53032",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -8199,6 +8414,7 @@
     {
       "color": "#df6d0e",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -8238,6 +8454,7 @@
     {
       "color": "#cd5abe",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8271,6 +8488,7 @@
     {
       "color": "#a5b4c8",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -8304,6 +8522,7 @@
     {
       "color": "#6c2cef",
       "data": {
+        "group_key": "folk_micronesian_group",
         "mechanics": []
       },
       "desc": [
@@ -8337,6 +8556,7 @@
     {
       "color": "#d3c897",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -8370,6 +8590,7 @@
     {
       "color": "#464164",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8409,6 +8630,7 @@
     {
       "color": "#b2e3e8",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -8448,6 +8670,7 @@
     {
       "color": "#4cc77f",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8481,6 +8704,7 @@
     {
       "color": "#1b802d",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -8520,6 +8744,7 @@
     {
       "color": "#574d52",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -8553,6 +8778,7 @@
     {
       "color": "#41b464",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -8586,6 +8812,7 @@
     {
       "color": "#1acccc",
       "data": {
+        "group_key": "israelite_group",
         "mechanics": []
       },
       "desc": [
@@ -8619,6 +8846,7 @@
     {
       "color": "#af5a32",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "karma"
         ]
@@ -8666,6 +8894,7 @@
     {
       "color": "#5b64f5",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -8699,6 +8928,7 @@
     {
       "color": "#fc7f73",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8732,6 +8962,7 @@
     {
       "color": "#4b8237",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8765,6 +8996,7 @@
     {
       "color": "#d6e58c",
       "data": {
+        "group_key": "buddhist",
         "mechanics": []
       },
       "desc": [
@@ -8816,6 +9048,7 @@
     {
       "color": "#f0438b",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -8855,6 +9088,7 @@
     {
       "color": "#fcd116",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -8888,6 +9122,7 @@
     {
       "color": "#be91c3",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8927,6 +9162,7 @@
     {
       "color": "#137391",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8960,6 +9196,7 @@
     {
       "color": "#55a0c8",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -8999,6 +9236,7 @@
     {
       "color": "#eb6a0e",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -9032,6 +9270,7 @@
     {
       "color": "#7f3232",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9065,6 +9304,7 @@
     {
       "color": "#1bae14",
       "data": {
+        "group_key": "muslim",
         "mechanics": []
       },
       "desc": [
@@ -9122,6 +9362,7 @@
     {
       "color": "#cc0000",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "honor",
           "purity"
@@ -9170,6 +9411,7 @@
     {
       "color": "#009999",
       "data": {
+        "group_key": "dharmic",
         "mechanics": []
       },
       "desc": [
@@ -9203,6 +9445,7 @@
     {
       "color": "#0c7579",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -9236,6 +9479,7 @@
     {
       "color": "#3eaf97",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -9275,6 +9519,7 @@
     {
       "color": "#dc785a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9314,6 +9559,7 @@
     {
       "color": "#c33c4b",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9353,6 +9599,7 @@
     {
       "color": "#fffcb8",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "patriarchs",
           "autocephalous_patriarchates",
@@ -9415,6 +9662,7 @@
     {
       "color": "#72572e",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9454,6 +9702,7 @@
     {
       "color": "#9b50cd",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9487,6 +9736,7 @@
     {
       "color": "#9c1716",
       "data": {
+        "group_key": "muslim",
         "mechanics": []
       },
       "desc": [
@@ -9544,6 +9794,7 @@
     {
       "color": "#08c0db",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -9577,6 +9828,7 @@
     {
       "color": "#cc2c34",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -9616,6 +9868,7 @@
     {
       "color": "#e3a538",
       "data": {
+        "group_key": "folk_polynesian_group",
         "mechanics": []
       },
       "desc": [
@@ -9655,6 +9908,7 @@
     {
       "color": "#194cd9",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9688,6 +9942,7 @@
     {
       "color": "#ec7c26",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -9721,6 +9976,7 @@
     {
       "color": "#e87b46",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "karma"
         ]
@@ -9768,6 +10024,7 @@
     {
       "color": "#b1cfcd",
       "data": {
+        "group_key": "buddhist",
         "mechanics": [
           "karma"
         ]
@@ -9815,6 +10072,7 @@
     {
       "color": "#d78723",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9854,6 +10112,7 @@
     {
       "color": "#bfa8d7",
       "data": {
+        "group_key": "folk_polynesian_group",
         "mechanics": []
       },
       "desc": [
@@ -9893,6 +10152,7 @@
     {
       "color": "#ac52cf",
       "data": {
+        "group_key": "folk_argentinian_group",
         "mechanics": []
       },
       "desc": [
@@ -9932,6 +10192,7 @@
     {
       "color": "#3c961e",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9965,6 +10226,7 @@
     {
       "color": "#4b1482",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -9998,6 +10260,7 @@
     {
       "color": "#c81e55",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10031,6 +10294,7 @@
     {
       "color": "#7f7373",
       "data": {
+        "group_key": "folk_north_american_group",
         "mechanics": []
       },
       "desc": [
@@ -10064,6 +10328,7 @@
     {
       "color": "#7f3d38",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10097,6 +10362,7 @@
     {
       "color": "#2aae65",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -10136,6 +10402,7 @@
     {
       "color": "#a072de",
       "data": {
+        "group_key": "folk_brazilian_group",
         "mechanics": []
       },
       "desc": [
@@ -10175,6 +10442,7 @@
     {
       "color": "#bfdc91",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -10208,6 +10476,7 @@
     {
       "color": "#aa924b",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -10247,6 +10516,7 @@
     {
       "color": "#5a8a85",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10286,6 +10556,7 @@
     {
       "color": "#c96c28",
       "data": {
+        "group_key": "folk_melanesian_group",
         "mechanics": []
       },
       "desc": [
@@ -10319,6 +10590,7 @@
     {
       "color": "#2dd620",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -10352,6 +10624,7 @@
     {
       "color": "#e5b8e3",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10391,6 +10664,7 @@
     {
       "color": "#112c07",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -10430,6 +10704,7 @@
     {
       "color": "#009aff",
       "data": {
+        "group_key": "folk_european_group",
         "mechanics": []
       },
       "desc": [
@@ -10463,6 +10738,7 @@
     {
       "color": "#aa3c61",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10502,6 +10778,7 @@
     {
       "color": "#e3cae7",
       "data": {
+        "group_key": "folk_african_group",
         "mechanics": []
       },
       "desc": [
@@ -10541,6 +10818,7 @@
     {
       "color": "#663380",
       "data": {
+        "group_key": "christian",
         "mechanics": [
           "religious_influence"
         ]
@@ -10600,6 +10878,7 @@
     {
       "color": "#cc0a0a",
       "data": {
+        "group_key": "folk_central_american_group",
         "mechanics": []
       },
       "desc": [
@@ -10633,6 +10912,7 @@
     {
       "color": "#1098fa",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -10666,6 +10946,7 @@
     {
       "color": "#7da019",
       "data": {
+        "group_key": "folk_se_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10699,6 +10980,7 @@
     {
       "color": "#be96aa",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10738,6 +11020,7 @@
     {
       "color": "#104d3b",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -10771,6 +11054,7 @@
     {
       "color": "#f8246d",
       "data": {
+        "group_key": "folk_micronesian_group",
         "mechanics": []
       },
       "desc": [
@@ -10804,6 +11088,7 @@
     {
       "color": "#6464a5",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10843,6 +11128,7 @@
     {
       "color": "#5d6698",
       "data": {
+        "group_key": "folk_peruvian_group",
         "mechanics": []
       },
       "desc": [
@@ -10882,6 +11168,7 @@
     {
       "color": "#3333b3",
       "data": {
+        "group_key": "yazidi_group",
         "mechanics": []
       },
       "desc": [
@@ -10921,6 +11208,7 @@
     {
       "color": "#8cd354",
       "data": {
+        "group_key": "folk_south_american_group",
         "mechanics": []
       },
       "desc": [
@@ -10954,6 +11242,7 @@
     {
       "color": "#22b2dd",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -10987,6 +11276,7 @@
     {
       "color": "#3b83bd",
       "data": {
+        "group_key": "folk_aridoamerica_group",
         "mechanics": []
       },
       "desc": [
@@ -11020,6 +11310,7 @@
     {
       "color": "#f4c35a",
       "data": {
+        "group_key": "folk_asian_group",
         "mechanics": []
       },
       "desc": [
@@ -11053,6 +11344,7 @@
     {
       "color": "#763c28",
       "data": {
+        "group_key": "folk_caribbean_group",
         "mechanics": []
       },
       "desc": [
@@ -11086,6 +11378,7 @@
     {
       "color": "#690201",
       "data": {
+        "group_key": "zoroastrian_group",
         "mechanics": []
       },
       "desc": [

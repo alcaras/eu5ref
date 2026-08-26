@@ -127,6 +127,9 @@ _RE_FORMAT = re.compile(r'#\S*? (.*?)#!', re.DOTALL)   # "#b text#!" → "text"
 _RE_ICON = re.compile(r'£[^£\s]*£\s?|@[!-~]+?!\s?')     # inline icons → drop
 _RE_LOCKEY = re.compile(r'\$([A-Za-z0-9_.|+=%*-]+)\$')
 _RE_BRACKET = re.compile(r'\[([^\[\]]+)\]')
+# a bare script id left in prose (`byz_andronikos_ii_palaiologos`) — three or
+# more snake_case segments never occur in real sentences
+_RE_BARE_ID = re.compile(r'\b[a-z][a-z0-9]*(?:_[a-z0-9]+){2,}\b')
 
 
 def _resolve_lockeys(text: str, depth: int = 0) -> str:
@@ -150,7 +153,18 @@ def _bracket_to_token(inner: str):
     if canonical:
         label = concepts[key].display_name if key in concepts else concepts[canonical].display_name
         return ['r', eid('concept', canonical), label]
-    if '.' in body:  # scope function — humanize the scope name
+    # Scope lookups like `GetCountry('BYZ').GetName` or
+    # `GetCharacter('byz_andronikos_iii').GetNicknameWithNoTooltip` — render
+    # the thing being named, not the call.
+    m = re.match(r"Get\w+\(\s*'([^']+)'\s*\)", body)
+    if m:
+        key = m.group(1)
+        try:
+            resolved = label_map().get(key)
+        except Exception:
+            resolved = None
+        return ['t', resolved or pretty(key.replace("'", ''))]
+    if '.' in body:  # other scope function — humanize the scope name
         scope = body.split('.')[0].replace('_', ' ').strip()
         return ['t', scope.title() if scope.isupper() or scope.islower() else scope]
     return ['t', body]
@@ -164,6 +178,7 @@ def rich(text: str | None) -> list | None:
     s = _RE_FORMAT.sub(r'\1', s)
     s = _RE_ICON.sub('', s)
     s = s.replace('\\n', '\n')
+    s = _RE_BARE_ID.sub(lambda m: pretty(m.group(0)), s)
     tokens = []
     pos = 0
     for m in _RE_BRACKET.finditer(s):
@@ -189,6 +204,71 @@ def plain_text(text: str | None) -> str:
     if not toks:
         return ''
     return ''.join(t[2] if t[0] == 'r' else t[1] for t in toks).strip()
+
+
+# ── gate labels ─────────────────────────────────────────────────────────
+
+_label_map: dict[str, str] | None = None
+
+
+def label_map() -> dict[str, str]:
+    """script name → display name, for saying what a gate demands
+    ("BYZ" → "Byzantium", "orthodox" → "Orthodoxy"). Cached; used by every
+    builder that compiles a `potential` trigger."""
+    global _label_map
+    if _label_map is None:
+        m: dict[str, str] = {}
+        for tag, c in parser.countries.items():
+            m[tag] = c.display_name
+        for group in ('cultures', 'culture_groups', 'languages', 'religions',
+                      'religion_groups', 'areas', 'regions', 'sub_continents',
+                      'continents', 'provinces', 'institution', 'estates',
+                      'government_reforms', 'societal_values', 'subject_types',
+                      'buildings', 'unit_types'):
+            try:
+                for k, v in getattr(parser, group).items():
+                    m.setdefault(k, getattr(v, 'display_name', None) or pretty(k))
+            except Exception:
+                continue
+        _label_map = m
+    return _label_map
+
+
+def gate_of(obj, *fields: str) -> tuple[list | None, list[str]]:
+    """Compile the first present trigger field into (expr, labels)."""
+    import triggers
+    labels = label_map()
+    for f in fields:
+        v = getattr(obj, f, None)
+        if v is None or not hasattr(v, 'iterate_with_duplicates'):
+            continue
+        expr = triggers.compile_trigger(v, culture_group_keys())
+        if not expr:
+            continue
+        seen, out = set(), []
+        for _, val in triggers.literals(expr):
+            lab = labels.get(val) or pretty(val)
+            if lab not in seen:
+                seen.add(lab)
+                out.append(lab)
+        return expr, out
+    return None, []
+
+
+_cgroup_keys: dict[str, str] | None = None
+
+
+def culture_group_keys() -> dict[str, str]:
+    """culture script name → its (first) culture group script name."""
+    global _cgroup_keys
+    if _cgroup_keys is None:
+        out = {}
+        for name, c in parser.cultures.items():
+            groups = getattr(c, 'culture_groups', None) or []
+            if groups:
+                out[name] = groups[0].name
+        _cgroup_keys = out
+    return _cgroup_keys
 
 
 # ── icons ───────────────────────────────────────────────────────────────
@@ -255,13 +335,18 @@ def facet_meta(entities: list[dict], defs: list[tuple[str, str]]) -> list[dict]:
     return out
 
 
+_ROMAN = {'ii', 'iii', 'iv', 'vi', 'vii', 'viii', 'ix', 'xi', 'xii', 'xiii', 'xiv'}
+
+
 def pretty(v: str) -> str:
     """Prettify a script token for display — but leave already-humanized
-    strings (anything with uppercase or spaces) untouched."""
+    strings (anything with uppercase or spaces) untouched. Regnal numerals
+    are restored ("andronikos_ii" → "Andronikos II", not "Ii")."""
     s = str(v)
-    if s.islower():
-        return s.replace('_', ' ').title()
-    return s
+    if not s.islower():
+        return s
+    words = s.replace('_', ' ').split()
+    return ' '.join(w.upper() if w in _ROMAN else w.title() for w in words)
 
 
 def ename(obj) -> str | None:

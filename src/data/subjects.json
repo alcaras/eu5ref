@@ -18,7 +18,7 @@
     ],
     [
      "t",
-     "] that represents lands ruled by a cadet branch of a ruling dynasty. An Appanage will get increased monthly_prestige, at the cost of reduced country_cabinet_efficiency, while the ["
+     "] that represents lands ruled by a cadet branch of a ruling dynasty. An Appanage will get increased monthly_prestige, at the cost of reduced Country Cabinet Efficiency, while the ["
     ],
     [
      "r",
@@ -27,7 +27,7 @@
     ],
     [
      "t",
-     "] will get increased monthly_legitimacy at the cost of more stability_decay and less global_crown_estate_power."
+     "] will get increased monthly_legitimacy at the cost of more stability_decay and less Global Crown Estate Power."
     ]
    ],
    "facets": {},
@@ -82,7 +82,7 @@
     ],
     [
      "t",
-     "]. It benefits from increased global_population_capacity_modifier and the ability to use Slaves to work in the [R], while granting its ["
+     "]. It benefits from increased Global Population Capacity Modifier and the ability to use Slaves to work in the [R], while granting its ["
     ],
     [
      "r",
@@ -146,7 +146,7 @@
     ],
     [
      "t",
-     "]. They are always [Army Based Country] and they get increased military_tactics, global_max_control, and wrong_culture_levy_size."
+     "]. They are always [Army Based Country] and they get increased military_tactics, Global Max Control, and Wrong Culture Levy Size."
     ]
    ],
    "facets": {},
@@ -220,7 +220,7 @@
     ],
     [
      "t",
-     "] or the overlord must be either England or Great Britain. A Dominion suffers reduced country_cabinet_efficiency, compared to a regular Vassal, but bigger legislative_efficiency."
+     "] or the overlord must be either England or Great Britain. A Dominion suffers reduced Country Cabinet Efficiency, compared to a regular Vassal, but bigger legislative_efficiency."
     ]
    ],
    "facets": {},
@@ -257,7 +257,7 @@
     ],
     [
      "t",
-     "]. Exclusive for a Monarchy of the same [Religion Group] as the overlord, it suffers reduced country_cabinet_efficiency and becomes ruled directly by the overlord's ["
+     "]. Exclusive for a Monarchy of the same [Religion Group] as the overlord, it suffers reduced Country Cabinet Efficiency and becomes ruled directly by the overlord's ["
     ],
     [
      "r",
@@ -294,7 +294,7 @@
     ],
     [
      "t",
-     "] country enjoys increased selling_efficiency, loyalty_to_overlord, and merchant_maintenance_efficiency. The ["
+     "] country enjoys increased selling_efficiency, Loyalty To Overlord, and Merchant Maintenance Efficiency. The ["
     ],
     [
      "r",
@@ -303,7 +303,7 @@
     ],
     [
      "t",
-     "], which can only be the Hansa, enjoys increased global_merchant_capacity_modifier, as well as payment in form of ["
+     "], which can only be the Hansa, enjoys increased Global Merchant Capacity Modifier, as well as payment in form of ["
     ],
     [
      "r",
@@ -450,7 +450,7 @@
     ],
     [
      "t",
-     "]'s domain, acting as a barrier between their them and external threats. Marches enjoy greater discipline and global_defensive, and increased fort_maintenance_efficiency as well as reduced payment obligations to their overlord compared to a normal Vassal."
+     "]'s domain, acting as a barrier between their them and external threats. Marches enjoy greater discipline and global_defensive, and increased Fort Maintenance Efficiency as well as reduced payment obligations to their overlord compared to a normal Vassal."
     ]
    ],
    "facets": {},
@@ -487,7 +487,7 @@
     ],
     [
      "t",
-     "] and get greater discipline, global_defensive, and increased fort_maintenance_efficiency, at the cost of reduced country_cabinet_efficiency. They also give greater payments of [Ducats], ["
+     "] and get greater discipline, global_defensive, and increased Fort Maintenance Efficiency, at the cost of reduced Country Cabinet Efficiency. They also give greater payments of [Ducats], ["
     ],
     [
      "r",
@@ -537,7 +537,7 @@
     ]
    ],
    "facets": {},
-   "icon": null,
+   "icon": "img/subject/pronoia.png",
    "id": "subject:pronoia",
    "mods": [],
    "name": "Prónoia",
@@ -634,7 +634,7 @@
     ],
     [
      "t",
-     "] with relative ease. They get increased loyalty_to_overlord and increased annexation_speed."
+     "] with relative ease. They get increased Loyalty To Overlord and increased annexation_speed."
     ]
    ],
    "facets": {},
@@ -764,7 +764,7 @@
    "desc": [
     [
      "t",
-     "A special type of administration of the Middle Kingdom, they are hereditary governors of tribal lands on behalf of the imperial throne. They cannot be annexed, but they get increased monthly_towards_sinicized and are forced to use their ["
+     "A special type of administration of the Middle Kingdom, they are hereditary governors of tribal lands on behalf of the imperial throne. They cannot be annexed, but they get increased Monthly Towards Sinicized and are forced to use their ["
     ],
     [
      "r",
@@ -810,7 +810,7 @@
     ],
     [
      "t",
-     "] and always_allow_army_levies, while having greatly reduced payment obligations compared to a normal Vassal but costing increased [Diplomatic Capacity] and giving their overlord more monthly_towards_decentralization."
+     "] and Always Allow Army Levies, while having greatly reduced payment obligations compared to a normal Vassal but costing increased [Diplomatic Capacity] and giving their overlord more Monthly Towards Decentralization."
     ]
    ],
    "facets": {},
@@ -847,7 +847,7 @@
     ],
     [
      "t",
-     "], pays vassal fees, and joins the military campaigns of its overlord. It suffers reduced country_cabinet_efficiency, while the overlord gets increased monthly_prestige, and both countries get faster spread of ["
+     "], pays vassal fees, and joins the military campaigns of its overlord. It suffers reduced Country Cabinet Efficiency, while the overlord gets increased monthly_prestige, and both countries get faster spread of ["
     ],
     [
      "r",

@@ -19,6 +19,7 @@ def main():
     entities = []
     for name, u in sorted(units.items()):
         slug = slugify(name)
+        gate, gate_labels = ref.gate_of(u, 'country_potential')
         entities.append({
             'id': eid('unit', name),
             'type': 'unit',
@@ -34,6 +35,7 @@ def main():
             },
             'mods': [],
             'data': {
+                'gate': gate, 'gate_labels': gate_labels,
                 'combat_power': num(u.combat_power),
                 'max_strength': num(u.max_strength),
                 'movement_speed': num(u.movement_speed),

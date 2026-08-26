@@ -2362,7 +2362,7 @@
       "desc": [
        [
         "t",
-        "The GetInternationalOrganization('catholic church') has strong prerogatives and powers over the Catholic Church. The GetInternationalOrganization('catholic church') is infallibale."
+        "The Catholic Church has strong prerogatives and powers over the Catholic Church. The Catholic Church is infallibale."
        ]
       ],
       "key": "ultramontanism",
@@ -2380,7 +2380,7 @@
       "desc": [
        [
         "t",
-        "Rejecting the total authority of the GetInternationalOrganization('catholic church'), Gallicanism places similar importance on the authority of the state."
+        "Rejecting the total authority of the Catholic Church, Gallicanism places similar importance on the authority of the state."
        ]
       ],
       "key": "gallicanism",
@@ -2391,7 +2391,7 @@
       "desc": [
        [
         "t",
-        "Conciliarism rejects the total authority of the GetInternationalOrganization('catholic church') as a single person, placing it in the hand of an ecumenical council instead."
+        "Conciliarism rejects the total authority of the Catholic Church as a single person, placing it in the hand of an ecumenical council instead."
        ]
       ],
       "key": "conciliarism",
@@ -2402,7 +2402,7 @@
       "desc": [
        [
         "t",
-        "The GetInternationalOrganization('catholic church') is a mere representetive role in the faith, with the authority on questions of faith placed on the ruler of the individual country."
+        "The Catholic Church is a mere representetive role in the faith, with the authority on questions of faith placed on the ruler of the individual country."
        ]
       ],
       "key": "invisible_church",
@@ -2521,7 +2521,7 @@
       "desc": [
        [
         "t",
-        "The Society of Jesus is the official representative of the GetInternationalOrganization('catholic church') and is allowed to spread the faith with all its might."
+        "The Society of Jesus is the official representative of the Catholic Church and is allowed to spread the faith with all its might."
        ]
       ],
       "key": "society_of_jesus_allowed",
@@ -2669,7 +2669,7 @@
       "desc": [
        [
         "t",
-        "Countries will naturally recognize the superiority of the GetUniqueInternationalOrganization('middle kingdom') and prostrate themselves before the Dragon Throne with their tribute, without the need for rules or regulations to that effect."
+        "Countries will naturally recognize the superiority of the Middle Kingdom and prostrate themselves before the Dragon Throne with their tribute, without the need for rules or regulations to that effect."
        ]
       ],
       "key": "free_cefeng_tizhi_policy",
@@ -2680,7 +2680,7 @@
       "desc": [
        [
         "t",
-        "A codified, hierarchical tributary system best serves the GetUniqueInternationalOrganization('middle kingdom'), as it makes it clear which states provide the greatest benefit to the Dragon Throne and therefore deserve commensurate rewards."
+        "A codified, hierarchical tributary system best serves the Middle Kingdom, as it makes it clear which states provide the greatest benefit to the Dragon Throne and therefore deserve commensurate rewards."
        ]
       ],
       "key": "codified_cefeng_tizhi_policy",
@@ -2696,7 +2696,7 @@
    "desc": [
     [
      "t",
-     "The tributary system has been present in the Middle Kingdom since its inception, as all nations around it dutifully recognize the authority of the GetUniqueInternationalOrganization('middle kingdom')."
+     "The tributary system has been present in the Middle Kingdom since its inception, as all nations around it dutifully recognize the authority of the Middle Kingdom."
     ]
    ],
    "facets": {
@@ -3320,7 +3320,7 @@
       "desc": [
        [
         "t",
-        "The various clan leaders have specific posts appointed by the GetUniqueInternationalOrganization('japanese shogunate'), to whom they own their allegiance. This allows flexibility in how the country is administred."
+        "The various clan leaders have specific posts appointed by the Japanese Shogunate, to whom they own their allegiance. This allows flexibility in how the country is administred."
        ]
       ],
       "key": "appointed_posts_policy",
@@ -5152,7 +5152,7 @@
       "desc": [
        [
         "t",
-        "The Gbara is the deliberative assembly of Mali and is defined in the Malian constitution, the Kouroukan Fouga. The Nobility represent the many clans in our state, and check the power of the ruling GetCountry('MAL')."
+        "The Gbara is the deliberative assembly of Mali and is defined in the Malian constitution, the Kouroukan Fouga. The Nobility represent the many clans in our state, and check the power of the ruling Mali."
        ]
       ],
       "key": "dop_law_gbara",
@@ -5194,7 +5194,7 @@
       "desc": [
        [
         "t",
-        "Parliament is the de facto successor of the ''Magnum Concilium'', and a major pillar of the English government. Parliament's primary function is to check the power of the GetCountry('ENG') by requiring mandatory consultation on taxation and legislation, preventing absolute rule."
+        "Parliament is the de facto successor of the ''Magnum Concilium'', and a major pillar of the English government. Parliament's primary function is to check the power of the England by requiring mandatory consultation on taxation and legislation, preventing absolute rule."
        ]
       ],
       "key": "dop_law_english_parliament",
@@ -7055,7 +7055,7 @@
       "desc": [
        [
         "t",
-        "The Prince-Elector are at their peak of their power as they expand their ranks by three additional seats, and also add three additional Archbishop-Elector. Additionally, they gain the right to elect an Anti-King who can replace the current GetUniqueInternationalOrganization('hre') in the Imperial Diet if left unchallenged. This gives the Electors the de facto power to force a re-election of the current GetUniqueInternationalOrganization('hre')."
+        "The Prince-Elector are at their peak of their power as they expand their ranks by three additional seats, and also add three additional Archbishop-Elector. Additionally, they gain the right to elect an Anti-King who can replace the current Hre in the Imperial Diet if left unchallenged. This gives the Electors the de facto power to force a re-election of the current Hre."
        ]
       ],
       "key": "elector_council_policy",
@@ -7132,7 +7132,7 @@
       "desc": [
        [
         "t",
-        "The Prince-Elector are curtailed, and one of their voting rights is transferred to the GetUniqueInternationalOrganization('hre')."
+        "The Prince-Elector are curtailed, and one of their voting rights is transferred to the Hre."
        ]
       ],
       "key": "integrated_electors_policy",
@@ -7164,7 +7164,7 @@
    "desc": [
     [
      "t",
-     "The Prince-Elector are a group of powerful Nobility and Clergy who have the privilege to vote for their next GetUniqueInternationalOrganization('hre')."
+     "The Prince-Elector are a group of powerful Nobility and Clergy who have the privilege to vote for their next Hre."
     ]
    ],
    "facets": {
@@ -8509,7 +8509,7 @@
       "desc": [
        [
         "t",
-        "Special privileges have been given to the Lutheranism population throughout France, preventing their persecution. However, the GetCountry('FRA')'s policy is seen as heresy by the Catholicism Clergy."
+        "Special privileges have been given to the Lutheranism population throughout France, preventing their persecution. However, the France's policy is seen as heresy by the Catholicism Clergy."
        ]
       ],
       "key": "protestant_tolerance",
@@ -8861,7 +8861,7 @@
       "desc": [
        [
         "t",
-        "The Free Imperial Cities are no more. No town or city will be under the protection of the GetUniqueInternationalOrganization('hre')."
+        "The Free Imperial Cities are no more. No town or city will be under the protection of the Hre."
        ]
       ],
       "key": "no_free_cities_policy",
@@ -8872,7 +8872,7 @@
       "desc": [
        [
         "t",
-        "Free Cities no longer enjoy the protection of the GetUniqueInternationalOrganization('hre') when defending themselves from ambitious princes."
+        "Free Cities no longer enjoy the protection of the Hre when defending themselves from ambitious princes."
        ]
       ],
       "key": "no_emperor_allegiance_policy",
@@ -8883,7 +8883,7 @@
       "desc": [
        [
         "t",
-        "Free Cities are protected by the GetUniqueInternationalOrganization('hre') and enjoy extensive autonomy over facilitating trade in their markets."
+        "Free Cities are protected by the Hre and enjoy extensive autonomy over facilitating trade in their markets."
        ]
       ],
       "key": "free_cities_policy",
@@ -8901,7 +8901,7 @@
       "desc": [
        [
         "t",
-        "Free Cities autonomy is limited by the GetUniqueInternationalOrganization('hre'). Though still capable of performing diplomacy of their own, the cities are now one step closer to becoming part of the administration of the GetUniqueInternationalOrganization('hre')."
+        "Free Cities autonomy is limited by the Hre. Though still capable of performing diplomacy of their own, the cities are now one step closer to becoming part of the administration of the Hre."
        ]
       ],
       "key": "cities_of_the_emperor_policy",
@@ -8912,7 +8912,7 @@
       "desc": [
        [
         "t",
-        "Free Cities are now under the direct administration of the GetUniqueInternationalOrganization('hre'). With heavily limited autonomy, the city-states are de facto outposts within the Holy Roman Empire for the Imperial Crown."
+        "Free Cities are now under the direct administration of the Hre. With heavily limited autonomy, the city-states are de facto outposts within the Holy Roman Empire for the Imperial Crown."
        ]
       ],
       "key": "direct_imperial_cities_policy",
@@ -8982,7 +8982,7 @@
       "desc": [
        [
         "t",
-        "The status of a Free Imperial City is no longer tied to geography or culture. Every nation who wishes to may petition the GetUniqueInternationalOrganization('hre') for this title."
+        "The status of a Free Imperial City is no longer tied to geography or culture. Every nation who wishes to may petition the Hre for this title."
        ]
       ],
       "key": "empire_wide_free_cities_policy",
@@ -8999,7 +8999,7 @@
    "desc": [
     [
      "t",
-     "Obtaining the status of a Free Imperial City is not easy. This exclusive title must be conferred by the GetUniqueInternationalOrganization('hre')."
+     "Obtaining the status of a Free Imperial City is not easy. This exclusive title must be conferred by the Hre."
     ]
    ],
    "facets": {
@@ -9386,7 +9386,7 @@
       "desc": [
        [
         "t",
-        "Meaning 'act towards happiness', it is the wedding ceremony for Sikhism as defined by guru_amar_das. The hymns sung in it celebrate the union with the divine."
+        "Meaning 'act towards happiness', it is the wedding ceremony for Sikhism as defined by Guru Amar Das. The hymns sung in it celebrate the union with the divine."
        ]
       ],
       "key": "ananda_karaja",
@@ -9440,7 +9440,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_amar_das."
+     "The teachings established by Guru Amar Das."
     ]
    ],
    "facets": {
@@ -9710,7 +9710,7 @@
       "desc": [
        [
         "t",
-        "A collection of various texts of poetry composed by guru_gobind_singh, it is considered equal in status to the Adi Granth and it is enshrined next to it in the temples."
+        "A collection of various texts of poetry composed by Guru Gobind Singh, it is considered equal in status to the Adi Granth and it is enshrined next to it in the temples."
        ]
       ],
       "key": "dasam_granth",
@@ -9740,7 +9740,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_gobind_singh."
+     "The teachings established by Guru Gobind Singh."
     ]
    ],
    "facets": {
@@ -9940,7 +9940,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_har_krishan."
+     "The teachings established by Guru Har Krishan."
     ]
    ],
    "facets": {
@@ -10040,7 +10040,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_har_rai."
+     "The teachings established by Guru Har Rai."
     ]
    ],
    "facets": {
@@ -10346,7 +10346,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_ram_das."
+     "The teachings established by Guru Ram Das."
     ]
    ],
    "facets": {
@@ -10446,7 +10446,7 @@
    "desc": [
     [
      "t",
-     "The teachings established by guru_tegh_bahadur."
+     "The teachings established by Guru Tegh Bahadur."
     ]
    ],
    "facets": {
@@ -11941,7 +11941,7 @@
       "desc": [
        [
         "t",
-        "The mark of the Holy See carries unprecedented influence throughout the Catholicism world. By making the gravitas and authority of the GetCountry('PAP') a driving force behind our state's religious policies, we will accelerate the conversion of the non-believers while maintaining general social order."
+        "The mark of the Holy See carries unprecedented influence throughout the Catholicism world. By making the gravitas and authority of the Rome a driving force behind our state's religious policies, we will accelerate the conversion of the non-believers while maintaining general social order."
        ]
       ],
       "key": "papal_control",
@@ -11994,7 +11994,7 @@
       "desc": [
        [
         "t",
-        "The Inquisition is a matter for the state to oversee, not the GetCountry('PAP') nor local authorities. State-selected Inquisitors hold the power to spy on all suspected enemies of the realm and subsequently to bring charges against them."
+        "The Inquisition is a matter for the state to oversee, not the Rome nor local authorities. State-selected Inquisitors hold the power to spy on all suspected enemies of the realm and subsequently to bring charges against them."
        ]
       ],
       "key": "state_inquisitors",
@@ -14239,7 +14239,7 @@
       "desc": [
        [
         "t",
-        "A compendium of translated Greek Byzantine books of law and great works of ancient philosophy into the Serbian language, issued by Emperor ser_stefan_dusan."
+        "A compendium of translated Greek Byzantine books of law and great works of ancient philosophy into the Serbian language, issued by Emperor Ser Stefan Dusan."
        ]
       ],
       "key": "law_of_the_pious_emperor",
@@ -14806,7 +14806,7 @@
       "desc": [
        [
         "t",
-        "The codified customs of the Duchy of Normandy emphasize feudal land rights, noble privilege, and local autonomy. While favoring a decentralized and traditional society, these laws form a robust legal framework that ensures the power of the nobility and preserves the distinct identity of the GetCountry('NRM')."
+        "The codified customs of the Duchy of Normandy emphasize feudal land rights, noble privilege, and local autonomy. While favoring a decentralized and traditional society, these laws form a robust legal framework that ensures the power of the nobility and preserves the distinct identity of the Normandy."
        ]
       ],
       "key": "couteume_de_normaundie",
@@ -17161,7 +17161,7 @@
    "desc": [
     [
      "t",
-     "Imperial decrees are the key to the well functioning of the Middle Kingdom, ensuring that the authority of the GetUniqueInternationalOrganization('middle kingdom') gets enforced throughout."
+     "Imperial decrees are the key to the well functioning of the Middle Kingdom, ensuring that the authority of the Middle Kingdom gets enforced throughout."
     ]
    ],
    "facets": {
@@ -17183,7 +17183,7 @@
       "desc": [
        [
         "t",
-        "None of the estates are obligated to provide the GetUniqueInternationalOrganization('hre') with additional troops."
+        "None of the estates are obligated to provide the Hre with additional troops."
        ]
       ],
       "key": "no_military_contribution",
@@ -17194,7 +17194,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('hre') gains the privilege to construct Imperial Armory (Abroad) within the lands of the Empire."
+        "The Hre gains the privilege to construct Imperial Armory (Abroad) within the lands of the Empire."
        ]
       ],
       "key": "imperial_armory_implementation",
@@ -17245,7 +17245,7 @@
        ],
        [
         "t",
-        "] from the Empire shall allow the GetUniqueInternationalOrganization('hre') to create a proper, standing army."
+        "] from the Empire shall allow the Hre to create a proper, standing army."
        ]
       ],
       "key": "imperial_standing_army",
@@ -17269,7 +17269,7 @@
       "desc": [
        [
         "t",
-        "The final legislative level for Imperial Armory (Abroad). Once enacted, the potential of the army under the direct control of the GetUniqueInternationalOrganization('hre') will reach a never-before-seen height."
+        "The final legislative level for Imperial Armory (Abroad). Once enacted, the potential of the army under the direct control of the Hre will reach a never-before-seen height."
        ]
       ],
       "key": "great_imperial_army",
@@ -17307,7 +17307,7 @@
    "desc": [
     [
      "t",
-     "The Imperial Register is a list that specifies the exact number of troops each estate must supply to the GetUniqueInternationalOrganization('hre')."
+     "The Imperial Register is a list that specifies the exact number of troops each estate must supply to the Hre."
     ]
    ],
    "facets": {
@@ -17682,7 +17682,7 @@
       "desc": [
        [
         "t",
-        "While the GetUniqueInternationalOrganization('hre') can open their own coffers to solve many issues, a financial buffer in the form of a proper treasury would allow the current and future emperors to better finance internal affairs in the Holy Roman Empire."
+        "While the Hre can open their own coffers to solve many issues, a financial buffer in the form of a proper treasury would allow the current and future emperors to better finance internal affairs in the Holy Roman Empire."
        ]
       ],
       "key": "only_treasury_payment",
@@ -17706,7 +17706,7 @@
       "desc": [
        [
         "t",
-        "The Roman Month is not enough to cover the protection of the Holy Roman Empire. A new tax needs to be established which directly finances the GetUniqueInternationalOrganization('hre')."
+        "The Roman Month is not enough to cover the protection of the Holy Roman Empire. A new tax needs to be established which directly finances the Hre."
        ]
       ],
       "key": "only_emperor_payment",
@@ -19413,7 +19413,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('hre') and other representatives will travel to different cities across the Holy Roman Empire, convening Diets where and when needed rather on a regular schedule or in a set location."
+        "The Hre and other representatives will travel to different cities across the Holy Roman Empire, convening Diets where and when needed rather on a regular schedule or in a set location."
        ]
       ],
       "key": "no_perpetual_diet_policy",
@@ -19424,7 +19424,7 @@
       "desc": [
        [
         "t",
-        "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the GetUniqueInternationalOrganization('hre') and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
+        "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the Hre and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
        ]
       ],
       "key": "perpetual_diet_policy",
@@ -19440,7 +19440,7 @@
    "desc": [
     [
      "t",
-     "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the GetUniqueInternationalOrganization('hre') and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
+     "Previously, Imperial Diets convened irregularly in various cities across the Holy Roman Empire, requiring the Hre and other representatives to travel each time. By establishing a permanent, continuously-sitting Diet, we shall create a standing assembly that operates on a system of constant deliberation, rather than sporadic meetings."
     ]
    ],
    "facets": {
@@ -19683,7 +19683,7 @@
    "desc": [
     [
      "t",
-     "The por_estudo_geral is a national University that aims to educate the citizens of our humble state. Its location and proximity to the capital is a crucial matter to us."
+     "The Por Estudo Geral is a national University that aims to educate the citizens of our humble state. Its location and proximity to the capital is a crucial matter to us."
     ]
    ],
    "facets": {
@@ -19705,7 +19705,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('hre') is no longer a monarch with power within the Holy Roman Empire. All laws and policies are now in the hands of the Imperial Diet and the Prince-Elector."
+        "The Hre is no longer a monarch with power within the Holy Roman Empire. All laws and policies are now in the hands of the Imperial Diet and the Prince-Elector."
        ]
       ],
       "key": "holy_roman_figurehead_policy",
@@ -19723,7 +19723,7 @@
       "desc": [
        [
         "t",
-        "The power held by the GetUniqueInternationalOrganization('hre') is carefully balanced: strong enough to protect and reform the Holy Roman Empire, yet not so overwhelming as to threaten our Prince-Elector or member states."
+        "The power held by the Hre is carefully balanced: strong enough to protect and reform the Holy Roman Empire, yet not so overwhelming as to threaten our Prince-Elector or member states."
        ]
       ],
       "key": "kaisertum_policy",
@@ -19741,7 +19741,7 @@
       "desc": [
        [
         "t",
-        "The authority of the GetUniqueInternationalOrganization('hre') is vastly expanded, allowing them to enforce policies in the Imperial Diet for the betterment of the Holy Roman Empire."
+        "The authority of the Hre is vastly expanded, allowing them to enforce policies in the Imperial Diet for the betterment of the Holy Roman Empire."
        ]
       ],
       "key": "improved_imperial_authority_policy",
@@ -19777,7 +19777,7 @@
       "desc": [
        [
         "t",
-        "The many liberties and privileges granted to the Imperial Princes are hereby abolished. The GetUniqueInternationalOrganization('hre') shall centralize authority, turning the Holy Roman Empire into a unified entity under singular rule."
+        "The many liberties and privileges granted to the Imperial Princes are hereby abolished. The Hre shall centralize authority, turning the Holy Roman Empire into a unified entity under singular rule."
        ]
       ],
       "key": "revoke_privilegia_policy",
@@ -19857,7 +19857,7 @@
    "desc": [
     [
      "t",
-     "The Power of the GetUniqueInternationalOrganization('hre') is a complicated topic. Members of the Holy Roman Empire and Prince-Elector alike have conflicting interests with those of the GetUniqueInternationalOrganization('hre'), yet they recognize that a powerless  GetUniqueInternationalOrganization('hre') is in no position to protect the Empire."
+     "The Power of the Hre is a complicated topic. Members of the Holy Roman Empire and Prince-Elector alike have conflicting interests with those of the Hre, yet they recognize that a powerless  Hre is in no position to protect the Empire."
     ]
    ],
    "facets": {
@@ -20385,7 +20385,7 @@
       "desc": [
        [
         "t",
-        "The territory of the Middle Kingdom is too vast for simple governors to handle. Let us establish the position of the Zǒngdū, a viceroy overseeing more than one province. They will be directing the provincial affairs as the GetUniqueInternationalOrganization('middle kingdom')'s representative so that the less crucial matters do not have to be reported to the capital."
+        "The territory of the Middle Kingdom is too vast for simple governors to handle. Let us establish the position of the Zǒngdū, a viceroy overseeing more than one province. They will be directing the provincial affairs as the Middle Kingdom's representative so that the less crucial matters do not have to be reported to the capital."
        ]
       ],
       "key": "zongdu_policy",
@@ -22071,7 +22071,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation shall be chosen every 2 years."
+        "The Swiss Confederation of the Swiss Confederation shall be chosen every 2 years."
        ]
       ],
       "key": "sc_biyearly_elections",
@@ -22082,7 +22082,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation shall be chosen every 4 years."
+        "The Swiss Confederation of the Swiss Confederation shall be chosen every 4 years."
        ]
       ],
       "key": "sc_four_yearly_elections",
@@ -22093,7 +22093,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation shall be chosen every 8 years."
+        "The Swiss Confederation of the Swiss Confederation shall be chosen every 8 years."
        ]
       ],
       "key": "sc_eight_yearly_elections",
@@ -22110,7 +22110,7 @@
    "desc": [
     [
      "t",
-     "As the matters of the Ruling Period are cleared, a new topic arises which handles the frequency of the elections of a new GetUniqueInternationalOrganization('swiss confederation')."
+     "As the matters of the Ruling Period are cleared, a new topic arises which handles the frequency of the elections of a new Swiss Confederation."
     ]
    ],
    "facets": {
@@ -22132,7 +22132,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') is directly elected by the members of the Swiss Confederation. Every member has a singular vote, and every member shall be eligible to represent the Confederation."
+        "The Swiss Confederation is directly elected by the members of the Swiss Confederation. Every member has a singular vote, and every member shall be eligible to represent the Confederation."
        ]
       ],
       "key": "sc_direct_vote",
@@ -22154,7 +22154,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') is decided by turns. Every member of the Swiss Confederation shall represent the confederation at least once before a former leader can take over the mantle once again."
+        "The Swiss Confederation is decided by turns. Every member of the Swiss Confederation shall represent the confederation at least once before a former leader can take over the mantle once again."
        ]
       ],
       "key": "sc_rotation",
@@ -22171,7 +22171,7 @@
    "desc": [
     [
      "t",
-     "The process of electing the GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation is a delicate matter which requires an exact legislature to be handled properly."
+     "The process of electing the Swiss Confederation of the Swiss Confederation is a delicate matter which requires an exact legislature to be handled properly."
     ]
    ],
    "facets": {
@@ -22373,7 +22373,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') has the right to request aid from the members of the Swiss Confederation which can range from financial to military support."
+        "The Swiss Confederation has the right to request aid from the members of the Swiss Confederation which can range from financial to military support."
        ]
       ],
       "key": "sc_sovereign_representative_power",
@@ -22384,7 +22384,7 @@
       "desc": [
        [
         "t",
-        "The power of the GetUniqueInternationalOrganization('swiss confederation') is limited with the exception in the matters of religious affairs of the Swiss Confederation."
+        "The power of the Swiss Confederation is limited with the exception in the matters of religious affairs of the Swiss Confederation."
        ]
       ],
       "key": "sc_sovereign_religious_power",
@@ -22395,7 +22395,7 @@
       "desc": [
        [
         "t",
-        "The leading GetUniqueInternationalOrganization('swiss confederation') rules over the Swiss Confederation as if it was a singular state. As such, they enjoy all the privileges and duties as if they were a monarch of the Confederation."
+        "The leading Swiss Confederation rules over the Swiss Confederation as if it was a singular state. As such, they enjoy all the privileges and duties as if they were a monarch of the Confederation."
        ]
       ],
       "key": "sc_sovereign_absolute_power",
@@ -22581,7 +22581,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation is only in charge for a set period of time. Afterwards, their term ends and a new GetUniqueInternationalOrganization('swiss confederation') shall be elected."
+        "The Swiss Confederation of the Swiss Confederation is only in charge for a set period of time. Afterwards, their term ends and a new Swiss Confederation shall be elected."
        ]
       ],
       "key": "sc_timed",
@@ -22592,7 +22592,7 @@
       "desc": [
        [
         "t",
-        "The GetUniqueInternationalOrganization('swiss confederation') of the Swiss Confederation serves for their entire life. Only upon their death or expulsion, an election shall be held."
+        "The Swiss Confederation of the Swiss Confederation serves for their entire life. Only upon their death or expulsion, an election shall be held."
        ]
       ],
       "key": "sc_lifelong",
@@ -22608,7 +22608,7 @@
    "desc": [
     [
      "t",
-     "The Confederation might have a GetUniqueInternationalOrganization('swiss confederation') representing it. Yet, it must be determined if said GetUniqueInternationalOrganization('swiss confederation') shall serve the union lifelong or until a certain time has passed."
+     "The Confederation might have a Swiss Confederation representing it. Yet, it must be determined if said Swiss Confederation shall serve the union lifelong or until a certain time has passed."
     ]
    ],
    "facets": {
@@ -24193,7 +24193,7 @@
       "desc": [
        [
         "t",
-        "Due to the overwhelming influence of the Han Chinese, the supremacy of the old GetUniqueInternationalOrganization('middle kingdom') guard is threatened. They must be expelled from the upper echelons of society."
+        "Due to the overwhelming influence of the Han Chinese, the supremacy of the old Middle Kingdom guard is threatened. They must be expelled from the upper echelons of society."
        ]
       ],
       "key": "limit_the_han_powers",

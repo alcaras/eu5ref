@@ -194,7 +194,7 @@
    "desc": [
     [
      "t",
-     "Our servitude to the highest authority of the Catholicism faith can never be mere promises. By committing to support the GetCountry('PAP'), we are sure to win his favor."
+     "Our servitude to the highest authority of the Catholicism faith can never be mere promises. By committing to support the Rome, we are sure to win his favor."
     ]
    ],
    "facets": {
@@ -1870,7 +1870,7 @@
    "desc": [
     [
      "t",
-     "The legates and other emissaries of the GetCountry('PAP') are most welcome in our territory. Moreover, we shall also commit to obeying their judgment, and to never interfere in relations between our local Clergy and the GetCountry('PAP')."
+     "The legates and other emissaries of the Rome are most welcome in our territory. Moreover, we shall also commit to obeying their judgment, and to never interfere in relations between our local Clergy and the Rome."
     ]
    ],
    "facets": {
@@ -4400,7 +4400,7 @@
    "desc": [
     [
      "t",
-     "Since the death of pap_boniface_viii and the court's relocation to Avignon, most of the cardinals flocking to it are French and under the influence of the GetCountry('FRA') of France, whose grip on the Rome will not allow a return to Rome."
+     "Since the death of Pap Boniface VIII and the court's relocation to Avignon, most of the cardinals flocking to it are French and under the influence of the France of France, whose grip on the Rome will not allow a return to Rome."
     ]
    ],
    "facets": {
@@ -6024,7 +6024,7 @@
    "facets": {
     "estate": "Commoners"
    },
-   "icon": null,
+   "icon": "img/privilege/lat-compromise-with-greek-populace.png",
    "id": "privilege:lat_compromise_with_greek_populace",
    "mods": [
     {
@@ -6087,7 +6087,7 @@
    "facets": {
     "estate": "Nobility"
    },
-   "icon": null,
+   "icon": "img/privilege/lat-latin-crusader-elite.png",
    "id": "privilege:lat_latin_crusader_elite",
    "mods": [
     {
@@ -6150,7 +6150,7 @@
    "facets": {
     "estate": "Clergy"
    },
-   "icon": null,
+   "icon": "img/privilege/lat-protector-of-the-constantinople-patriarchate.png",
    "id": "privilege:lat_protector_of_the_constantinople_patriarchate",
    "mods": [
     {
@@ -6252,7 +6252,7 @@
    "desc": [
     [
      "t",
-     "Together with the ''Libro d'Oro'' that list all the noble families of the Most Serene Republic of Venice, the ''Libro d'Argento'' contains the names of all the ''Originarii'' families, who despite being commoners descend from the original inhabitants of the lagoon, and have gained thus the right to trade as citizens of Venice and take jobs in the administration of the GetCountry('VEN')."
+     "Together with the ''Libro d'Oro'' that list all the noble families of the Most Serene Republic of Venice, the ''Libro d'Argento'' contains the names of all the ''Originarii'' families, who despite being commoners descend from the original inhabitants of the lagoon, and have gained thus the right to trade as citizens of Venice and take jobs in the administration of the Venice."
     ]
    ],
    "facets": {
@@ -8077,7 +8077,7 @@
    "desc": [
     [
      "t",
-     "The Sankar-Zouma is a prestigious office granted to the GetCountry('MAL') by the highest authority in the land. Its role, much like the Farima-Soura, revolves around exercising authority along all trade routes across the southern border."
+     "The Sankar-Zouma is a prestigious office granted to the Mali by the highest authority in the land. Its role, much like the Farima-Soura, revolves around exercising authority along all trade routes across the southern border."
     ]
    ],
    "facets": {
@@ -8815,7 +8815,7 @@
    "desc": [
     [
      "t",
-     "Expansions have been made to Versailles allowing for members of the GetCountry('FRA') to take up permanent residence at the palace alongside the GetCountry('FRA') family. While those not of the GetCountry('FRA') family enjoy the luxuries of the palace, it has come at the cost of greatly diminished political influence, in order to maintain the favor of the GetCountry('FRA'). This abandonment of their personal estates has also left less room for political intrigue and plotting, making them beholden to the rule of Versailles."
+     "Expansions have been made to Versailles allowing for members of the France to take up permanent residence at the palace alongside the France family. While those not of the France family enjoy the luxuries of the palace, it has come at the cost of greatly diminished political influence, in order to maintain the favor of the France. This abandonment of their personal estates has also left less room for political intrigue and plotting, making them beholden to the rule of Versailles."
     ]
    ],
    "facets": {
@@ -9039,7 +9039,7 @@
    "desc": [
     [
      "t",
-     "The anarchy and disobedience in the city of Rome and the other Italian estates greatly increased after the GetCountry('PAP') moved the court to Avignon. Now those territories are under the control of powerful Italian families such as the Colonna and Orsini, who are almost completely independent of the GetCountry('PAP')."
+     "The anarchy and disobedience in the city of Rome and the other Italian estates greatly increased after the Rome moved the court to Avignon. Now those territories are under the control of powerful Italian families such as the Colonna and Orsini, who are almost completely independent of the Rome."
     ]
    ],
    "facets": {
@@ -9560,7 +9560,7 @@
    "desc": [
     [
      "t",
-     "The GetCountry('FRA') family has extended an offer of residence for members of the prominent Nobility dynasties to live in the palace of Versailles."
+     "The France family has extended an offer of residence for members of the prominent Nobility dynasties to live in the palace of Versailles."
     ]
    ],
    "facets": {
@@ -11332,7 +11332,7 @@
    "desc": [
     [
      "t",
-     "Our agreement with the GetUniqueInternationalOrganization('catholic church') will stabilize our relations. However, we will have to cede some power to the Clergy in order to appease the Roman forces."
+     "Our agreement with the Catholic Church will stabilize our relations. However, we will have to cede some power to the Clergy in order to appease the Roman forces."
     ]
    ],
    "facets": {
@@ -11733,7 +11733,7 @@
    "desc": [
     [
      "t",
-     "The governing councils of the GetCountry('VEN') of Venice choose their members from among the Nobility. These elites come together in so-called ''Zontas'' and have privileges and duties to safeguard the constitution against the accumulation of power by a single ruler."
+     "The governing councils of the Venice of Venice choose their members from among the Nobility. These elites come together in so-called ''Zontas'' and have privileges and duties to safeguard the constitution against the accumulation of power by a single ruler."
     ]
    ],
    "facets": {

@@ -4,7 +4,13 @@ import EntityTable from '../components/EntityTable.astro';
 import FilterBar from '../components/FilterBar.astro';
 import data from '../data/countries.json';
 
-const entities = data.entities;
+// Surface how much bespoke content each tag has, so the browser is useful
+// for "who is interesting to play" and not just a list of names.
+const entities = data.entities.map((e) => {
+  const u = e.data.unique || {};
+  const n = Object.values(u).reduce((a: number, v: any) => a + v.length, 0);
+  return { ...e, data: { ...e.data, unique_count: n || null } };
+});
 // religion & culture have long tails — chip only the big ones, search finds all
 const facets = data.facets
   .map((f) => ({
@@ -22,6 +28,7 @@ const columns = [
   { key: 'religion', label: 'Religion', kind: 'facet' },
   { key: 'capital', label: 'Capital', kind: 'text' },
   { key: 'difficulty', label: 'Difficulty', kind: 'num' },
+  { key: 'unique_count', label: 'Unique', kind: 'num' },
 ] as const;
 ---
 <Base

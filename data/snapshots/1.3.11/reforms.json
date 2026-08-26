@@ -3,6 +3,11 @@
   "entities": [
     {
       "data": {
+        "gate": [
+          "?",
+          "modifier:can have monasteries"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -43,6 +48,23 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "ACH"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Achaea"
+        ],
         "major": false
       },
       "desc": [
@@ -55,7 +77,7 @@
         "age": "Any age",
         "government": null
       },
-      "icon": null,
+      "icon": "img/reform/ach-heirs-of-the-latin-empire.png",
       "id": "reform:ach_heirs_of_the_latin_empire",
       "mods": [
         {
@@ -107,6 +129,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -147,6 +171,35 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "num of ports GREATER THAN"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "PAP"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -187,6 +240,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -227,6 +282,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -267,6 +324,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -307,12 +369,19 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "SWE"
+        ],
+        "gate_labels": [
+          "Sweden"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "This set of rules was set up by swe_magnus_ladulas in 1280 at Alsnö Hus to regulate and formalize the benefits of the Nobility, while also protecting the Peasants from their exploits. This is why he was nicknamed 'Ladulås', or 'Barn-Lock' in English by the commoners."
+          "This set of rules was set up by Swe Magnus Ladulas in 1280 at Alsnö Hus to regulate and formalize the benefits of the Nobility, while also protecting the Peasants from their exploits. This is why he was nicknamed 'Ladulås', or 'Barn-Lock' in English by the commoners."
         ]
       ],
       "facets": {
@@ -353,6 +422,23 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cul",
+            "nahua_culture"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Nahua"
+        ],
         "major": true
       },
       "desc": [
@@ -405,6 +491,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "government type"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -439,6 +537,25 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "cul",
+            "turkish_culture"
+          ],
+          [
+            "cul",
+            "turkoman_culture"
+          ],
+          [
+            "?",
+            "is subject type"
+          ]
+        ],
+        "gate_labels": [
+          "Turkish",
+          "Turkoman"
+        ],
         "major": false
       },
       "desc": [
@@ -491,6 +608,23 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has law"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -549,6 +683,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "andean_group"
+        ],
+        "gate_labels": [
+          "Andean"
+        ],
         "major": true
       },
       "desc": [
@@ -595,6 +736,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -635,6 +778,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -669,6 +814,38 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "and",
+              [
+                "?",
+                "has variable"
+              ],
+              [
+                "tag",
+                "ARG"
+              ]
+            ],
+            [
+              "tag",
+              "ATH"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Argos",
+          "Athens"
+        ],
         "major": false
       },
       "desc": [
@@ -733,6 +910,33 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "HAB"
+            ],
+            [
+              "tag",
+              "STY"
+            ],
+            [
+              "tag",
+              "TIR"
+            ]
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Austria",
+          "Styria",
+          "Tyrol"
+        ],
         "major": false
       },
       "desc": [
@@ -779,6 +983,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -819,6 +1025,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -859,6 +1067,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -905,6 +1118,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "AYU"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "AYU"
+        ],
         "major": false
       },
       "desc": [
@@ -939,6 +1166,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -979,6 +1208,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1025,6 +1259,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "country type"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is subject type"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -1071,6 +1327,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
         "major": false
       },
       "desc": [
@@ -1117,6 +1380,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "num subjects GREATER THAN EQUAL"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1151,6 +1419,34 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has advance"
+          ],
+          [
+            "not",
+            [
+              "or",
+              [
+                "?",
+                "has variable"
+              ],
+              [
+                "?",
+                "has reform"
+              ]
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -1185,6 +1481,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -1231,6 +1549,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1271,12 +1594,26 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BOH"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Bohemia"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "The Commonwealth represents a reformed constitution of the GetCountry('BOH'), giving more privileges and freedom to the various nations living within our borders."
+          "The Commonwealth represents a reformed constitution of the Bohemia, giving more privileges and freedom to the various nations living within our borders."
         ]
       ],
       "facets": {
@@ -1317,12 +1654,19 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "BUL"
+        ],
+        "gate_labels": [
+          "Bulgaria"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "Our realm upholds the illustrious legacy of Simeon the Great and the emperors of the Bulgarian Tsardom who came before us. Acclaimed by both clergy and nobility, our ruler stands as the guardian of the GetCountry('BUL') faith and the cornerstone of South Slavic imperial power in the Balkans."
+          "Our realm upholds the illustrious legacy of Simeon the Great and the emperors of the Bulgarian Tsardom who came before us. Acclaimed by both clergy and nobility, our ruler stands as the guardian of the Bulgaria faith and the cornerstone of South Slavic imperial power in the Balkans."
         ]
       ],
       "facets": {
@@ -1357,6 +1701,33 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ],
+            [
+              "tag",
+              "BYZ"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS",
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
@@ -1403,6 +1774,25 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "rel",
+            "orthodox"
+          ],
+          [
+            "cul",
+            "greek_culture"
+          ]
+        ],
+        "gate_labels": [
+          "Orthodoxy",
+          "Greek"
+        ],
         "major": true
       },
       "desc": [
@@ -1424,6 +1814,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "num of non rural GREATER THAN"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1464,6 +1859,33 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "cgrp",
+            "iberian_group"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA",
+          "Iberian"
+        ],
         "major": false
       },
       "desc": [
@@ -1516,6 +1938,24 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "celtic_group"
+          ],
+          [
+            "?",
+            "any neighbor country has reform"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Celtic"
+        ],
         "major": true
       },
       "desc": [
@@ -1568,6 +2008,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1608,6 +2050,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1660,6 +2107,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -1700,6 +2169,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -1740,6 +2231,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "is colonial overlord"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1780,6 +2276,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1814,6 +2312,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "?",
+            "is colonial subject"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1860,6 +2370,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "GEN"
+        ],
+        "gate_labels": [
+          "Genoa"
+        ],
         "major": false
       },
       "desc": [
@@ -1900,6 +2417,26 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "country type"
+          ],
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "cap",
+            "continent",
+            "america"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism",
+          "America"
+        ],
         "major": true
       },
       "desc": [
@@ -1940,6 +2477,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -1986,6 +2525,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2032,6 +2576,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "ZAN"
+        ],
+        "gate_labels": [
+          "Kilwa"
+        ],
         "major": false
       },
       "desc": [
@@ -2066,6 +2617,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cul",
+            "cossack_culture"
+          ],
+          [
+            "?",
+            "country type"
+          ]
+        ],
+        "gate_labels": [
+          "Cossack"
+        ],
         "major": true
       },
       "desc": [
@@ -2106,6 +2671,20 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -2158,6 +2737,20 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -2210,6 +2803,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -2256,6 +2871,37 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "ARA"
+          ],
+          [
+            "and",
+            [
+              "tag",
+              "SPA"
+            ],
+            [
+              "or",
+              [
+                "cul",
+                "aragonese"
+              ],
+              [
+                "cul",
+                "catalan"
+              ]
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Aragon",
+          "SPA",
+          "Aragonese",
+          "Catalan"
+        ],
         "major": true
       },
       "desc": [
@@ -2296,6 +2942,29 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "CAS"
+          ],
+          [
+            "and",
+            [
+              "tag",
+              "SPA"
+            ],
+            [
+              "cul",
+              "castilian"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA",
+          "Castilian"
+        ],
         "major": true
       },
       "desc": [
@@ -2342,6 +3011,35 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "num of ports GREATER THAN"
+          ],
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "or",
+            [
+              "tag",
+              "KNI"
+            ],
+            [
+              "?",
+              "any neighbor country has reform"
+            ],
+            [
+              "?",
+              "overlord has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Knights Hospitaller"
+        ],
         "major": false
       },
       "desc": [
@@ -2394,6 +3092,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2428,6 +3128,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "japanese_group"
+        ],
+        "gate_labels": [
+          "Japanese"
+        ],
         "major": true
       },
       "desc": [
@@ -2474,6 +3181,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2520,6 +3232,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -2554,6 +3271,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "GEN"
+        ],
+        "gate_labels": [
+          "Genoa"
+        ],
         "major": true
       },
       "desc": [
@@ -2606,6 +3330,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2646,6 +3372,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2686,6 +3414,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2726,6 +3459,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2772,6 +3510,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "NED"
+        ],
+        "gate_labels": [
+          "NED"
+        ],
         "major": true
       },
       "desc": [
@@ -2836,6 +3581,18 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "?",
+            "court language"
+          ],
+          [
+            "?",
+            "court language"
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -2888,6 +3645,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2934,6 +3696,22 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "?",
+            "exists"
+          ],
+          [
+            "?",
+            "is leader of international organization"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -2955,6 +3733,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -3001,6 +3793,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "religion has religious influence"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3035,6 +3832,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3081,6 +3880,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has parliament"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3115,6 +3919,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3155,6 +3961,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3189,6 +4000,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "IRA"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "IRA"
+        ],
         "major": false
       },
       "desc": [
@@ -3229,6 +4054,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3263,6 +4090,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3303,6 +4132,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3349,6 +4183,27 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -3389,6 +4244,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cul",
+          "icelandic"
+        ],
+        "gate_labels": [
+          "Icelandic"
+        ],
         "major": false
       },
       "desc": [
@@ -3441,6 +4303,38 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3481,6 +4375,13 @@
     },
     {
       "data": {
+        "gate": [
+          "rgrp",
+          "muslim"
+        ],
+        "gate_labels": [
+          "Islam"
+        ],
         "major": true
       },
       "desc": [
@@ -3527,6 +4428,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3573,6 +4476,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3613,6 +4518,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3665,6 +4575,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -3711,6 +4635,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -3751,6 +4677,42 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cap",
+              "region",
+              "france_region"
+            ],
+            [
+              "cap",
+              "area",
+              "brabant_area"
+            ],
+            [
+              "cap",
+              "area",
+              "flanders_area"
+            ],
+            [
+              "cap",
+              "area",
+              "holland_area"
+            ]
+          ],
+          [
+            "?",
+            "is subject type"
+          ]
+        ],
+        "gate_labels": [
+          "France",
+          "Brabant",
+          "Flanders",
+          "Holland"
+        ],
         "major": false
       },
       "desc": [
@@ -3803,6 +4765,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -3855,6 +4842,53 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cap",
+            "region",
+            "france_region"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "has reform"
+            ],
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "FRA"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -3907,6 +4941,41 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -3971,6 +5040,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cul",
+          "frisian"
+        ],
+        "gate_labels": [
+          "Frisian"
+        ],
         "major": false
       },
       "desc": [
@@ -4029,6 +5105,27 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "VEN"
+            ],
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "parliament type NOT EQUAL"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -4063,6 +5160,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "FRA"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -4103,6 +5214,48 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "and",
+            [
+              "or",
+              [
+                "cgrp",
+                "celtic_group"
+              ],
+              [
+                "cgrp",
+                "scandinavian_group"
+              ]
+            ],
+            [
+              "or",
+              [
+                "cgrp",
+                "scottish_group"
+              ],
+              [
+                "cgrp",
+                "hibernian_group"
+              ]
+            ]
+          ],
+          [
+            "?",
+            "any neighbor country has reform"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Celtic",
+          "Scandinavian",
+          "Scottish",
+          "Hibernian"
+        ],
         "major": false
       },
       "desc": [
@@ -4173,6 +5326,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4219,6 +5374,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "tag",
+            "HAB"
+          ]
+        ],
+        "gate_labels": [
+          "Austria"
+        ],
         "major": false
       },
       "desc": [
@@ -4259,6 +5428,32 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "modifier:has a parliamentary system"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -4311,6 +5506,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "GEN"
+        ],
+        "gate_labels": [
+          "Genoa"
+        ],
         "major": false
       },
       "desc": [
@@ -4357,6 +5559,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "rel",
+            "sikhism"
+          ]
+        ],
+        "gate_labels": [
+          "Sikhism"
+        ],
         "major": false
       },
       "desc": [
@@ -4397,6 +5613,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "rgrp",
+            "dharmic"
+          ]
+        ],
+        "gate_labels": [
+          "Dharma"
+        ],
         "major": true
       },
       "desc": [
@@ -4443,6 +5673,21 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4477,6 +5722,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "jurchen_group"
+          ],
+          [
+            "?",
+            "has tribal government"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "societal value:sinicized vs unsinicized LESS THAN"
+          ]
+        ],
+        "gate_labels": [
+          "Jurchen"
+        ],
         "major": false
       },
       "desc": [
@@ -4517,6 +5787,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "HSA"
+          ],
+          [
+            "?",
+            "country type"
+          ]
+        ],
+        "gate_labels": [
+          "Hansa"
+        ],
         "major": false
       },
       "desc": [
@@ -4575,6 +5859,21 @@
     },
     {
       "data": {
+        "gate": [
+          "not",
+          [
+            "or",
+            [
+              "?",
+              "country type"
+            ],
+            [
+              "?",
+              "country type"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4609,6 +5908,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "haudenosaunee_group"
+        ],
+        "gate_labels": [
+          "Haudenosaunee"
+        ],
         "major": false
       },
       "desc": [
@@ -4655,6 +5961,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4689,6 +5997,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -4741,6 +6054,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4775,6 +6090,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -4809,6 +6126,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "HUN"
+        ],
+        "gate_labels": [
+          "Hungary"
+        ],
         "major": false
       },
       "desc": [
@@ -4849,6 +6173,21 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "indian_group"
+          ],
+          [
+            "rgrp",
+            "muslim"
+          ]
+        ],
+        "gate_labels": [
+          "Indian",
+          "Islam"
+        ],
         "major": false
       },
       "desc": [
@@ -4883,6 +6222,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA"
+        ],
         "major": false
       },
       "desc": [
@@ -4935,6 +6296,29 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cap",
+              "region",
+              "ireland_region"
+            ],
+            [
+              "cul",
+              "anglo_irish"
+            ]
+          ],
+          [
+            "?",
+            "country rank"
+          ]
+        ],
+        "gate_labels": [
+          "Ireland",
+          "Anglo-Irish"
+        ],
         "major": true
       },
       "desc": [
@@ -4981,6 +6365,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -5033,6 +6422,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -5085,6 +6479,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "WLS"
+        ],
+        "gate_labels": [
+          "Wales"
+        ],
         "major": false
       },
       "desc": [
@@ -5131,6 +6532,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "JAP"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ashikaga(JAP)"
+        ],
         "major": false
       },
       "desc": [
@@ -5165,6 +6580,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "japanese_group"
+        ],
+        "gate_labels": [
+          "Japanese"
+        ],
         "major": true
       },
       "desc": [
@@ -5211,6 +6633,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "japanese_group"
+        ],
+        "gate_labels": [
+          "Japanese"
+        ],
         "major": true
       },
       "desc": [
@@ -5257,6 +6686,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "jurchen_group"
+          ],
+          [
+            "?",
+            "has tribal government"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "societal value:sinicized vs unsinicized LESS THAN"
+          ]
+        ],
+        "gate_labels": [
+          "Jurchen"
+        ],
         "major": false
       },
       "desc": [
@@ -5297,6 +6751,23 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "german_group"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is subject type"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "German"
+        ],
         "major": true
       },
       "desc": [
@@ -5355,6 +6826,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "BRB"
+        ],
+        "gate_labels": [
+          "Brabant"
+        ],
         "major": false
       },
       "desc": [
@@ -5395,6 +6873,20 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "ARB"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Arborea"
+        ],
         "major": true
       },
       "desc": [
@@ -5435,6 +6927,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "?",
+            "has dlc"
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
@@ -5456,6 +6962,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "KBO"
+        ],
+        "gate_labels": [
+          "Kanem"
+        ],
         "major": false
       },
       "desc": [
@@ -5496,6 +7009,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "ZAN"
+        ],
+        "gate_labels": [
+          "Kilwa"
+        ],
         "major": false
       },
       "desc": [
@@ -5542,12 +7062,17 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
         [
           "t",
-          "We have established the Kingdom of God on Earth. The authority of the Church, led by the GetCountry('PAP'), shall be absolute in both the spiritual and temporal realms."
+          "We have established the Kingdom of God on Earth. The authority of the Church, led by the Rome, shall be absolute in both the spiritual and temporal realms."
         ]
       ],
       "facets": {
@@ -5576,6 +7101,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -5622,6 +7152,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -5643,12 +7178,29 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "The Kritai Katholikoi, colloquially referred to as the ''Universal Justices of the Romans'', have come to represent the pinnacle of Byzantine legal authority, born from the reforms of byz_andronikos_ii_palaiologos and initially comprising of twelve judges from both secular and ecclesiastical backgrounds. Later streamlined to a panel of four, this illustrious court holds unparalleled authority with no recourse for appeal."
+          "The Kritai Katholikoi, colloquially referred to as the ''Universal Justices of the Romans'', have come to represent the pinnacle of Byzantine legal authority, born from the reforms of Byz Andronikos II Palaiologos and initially comprising of twelve judges from both secular and ecclesiastical backgrounds. Later streamlined to a panel of four, this illustrious court holds unparalleled authority with no recourse for appeal."
         ]
       ],
       "facets": {
@@ -5677,12 +7229,26 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "Although the judiciary system created by byz_andronikos_ii_palaiologos saw initial success, there were still internal issues, which the judges exploited to pursue their interests. With the reforms of this Supreme Court, existing legal processes have been streamlined while ensuring no corruption between the judges."
+          "Although the judiciary system created by Byz Andronikos II Palaiologos saw initial success, there were still internal issues, which the judges exploited to pursue their interests. With the reforms of this Supreme Court, existing legal processes have been streamlined while ensuring no corruption between the judges."
         ]
       ],
       "facets": {
@@ -5698,6 +7264,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -5732,12 +7300,17 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
         [
           "t",
-          "A Landgraviate, named after a ''Landgraf'', acts as an immediate jurisdiction of the Holy Roman Empire in otherwise fractured counties. The Landgrave is a direct representative of the law of the GetInternationalOrganization('hre') in the lands of the Landgraviate, and the title is comparable to a Duke in power and responsibilities."
+          "A Landgraviate, named after a ''Landgraf'', acts as an immediate jurisdiction of the Holy Roman Empire in otherwise fractured counties. The Landgrave is a direct representative of the law of the Hre in the lands of the Landgraviate, and the title is comparable to a Duke in power and responsibilities."
         ]
       ],
       "facets": {
@@ -5772,6 +7345,41 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ACH"
+            ],
+            [
+              "tag",
+              "ATH"
+            ],
+            [
+              "tag",
+              "ARG"
+            ],
+            [
+              "tag",
+              "THE"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Achaea",
+          "Athens",
+          "Argos",
+          "Thessalonica"
+        ],
         "major": false
       },
       "desc": [
@@ -5854,6 +7462,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "LAT"
+        ],
+        "gate_labels": [
+          "Constantinople"
+        ],
         "major": true
       },
       "desc": [
@@ -5930,6 +7545,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -5964,6 +7581,21 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "situation:rise of the ottomans.var:strongest beylik variable this"
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "TUR"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6022,6 +7654,34 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "mongolian_culture"
+            ],
+            [
+              "and",
+              [
+                "?",
+                "ruler has dynasty"
+              ],
+              [
+                "?",
+                "ruler dynasty"
+              ]
+            ]
+          ],
+          [
+            "?",
+            "country type"
+          ]
+        ],
+        "gate_labels": [
+          "Mongolian"
+        ],
         "major": true
       },
       "desc": [
@@ -6062,6 +7722,25 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "CHI"
+          ],
+          [
+            "cul",
+            "mongolian_culture"
+          ],
+          [
+            "?",
+            "is leader of international organization"
+          ]
+        ],
+        "gate_labels": [
+          "Yuán(CHI)",
+          "Mongolian"
+        ],
         "major": true
       },
       "desc": [
@@ -6090,6 +7769,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -6148,6 +7841,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6188,6 +7886,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6228,6 +7931,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6274,6 +7982,18 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6320,6 +8040,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6378,6 +8100,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6406,6 +8133,22 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "country rank level"
+          ],
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -6446,6 +8189,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6492,6 +8240,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6532,6 +8282,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6578,6 +8333,25 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "ENG"
+          ],
+          [
+            "cul",
+            "english"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "English"
+        ],
         "major": false
       },
       "desc": [
@@ -6630,6 +8404,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6676,6 +8455,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "MAM"
+        ],
+        "gate_labels": [
+          "Egypt (MAM)"
+        ],
         "major": true
       },
       "desc": [
@@ -6722,6 +8508,40 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cap",
+            "sub_continent",
+            "south_east_asia"
+          ],
+          [
+            "or",
+            [
+              "rgrp",
+              "dharmic"
+            ],
+            [
+              "rel",
+              "theravada"
+            ],
+            [
+              "rel",
+              "mahayana"
+            ],
+            [
+              "rel",
+              "satsana_phi"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "South East Asia",
+          "Dharma",
+          "Theravāda",
+          "Eastern Buddhism",
+          "Satsana Phi"
+        ],
         "major": true
       },
       "desc": [
@@ -6762,6 +8582,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6802,6 +8624,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -6848,6 +8675,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cul",
+          "portuguese"
+        ],
+        "gate_labels": [
+          "Portuguese"
+        ],
         "major": false
       },
       "desc": [
@@ -6882,6 +8716,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6922,6 +8761,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -6956,6 +8797,60 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has global variable"
+          ],
+          [
+            "or",
+            [
+              "and",
+              [
+                "cap",
+                "region",
+                "france_region"
+              ],
+              [
+                "not",
+                [
+                  "?",
+                  "is subject type"
+                ]
+              ],
+              [
+                "?",
+                "overlord has reform"
+              ],
+              [
+                "?",
+                "government type"
+              ],
+              [
+                "not",
+                [
+                  "?",
+                  "has reform"
+                ]
+              ]
+            ],
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "in union with"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "France"
+        ],
         "major": false
       },
       "desc": [
@@ -7008,6 +8903,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7048,6 +8945,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -7106,6 +9005,13 @@
     },
     {
       "data": {
+        "gate": [
+          "lang",
+          "marathi_language"
+        ],
+        "gate_labels": [
+          "Marathi"
+        ],
         "major": false
       },
       "desc": [
@@ -7134,6 +9040,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7180,6 +9088,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "rel",
+            "catholic"
+          ],
+          [
+            "?",
+            "has policy"
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism"
+        ],
         "major": true
       },
       "desc": [
@@ -7268,6 +9190,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "government type"
+            ]
+          ],
+          [
+            "not",
+            [
+              "tag",
+              "PAP"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7308,6 +9255,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7360,6 +9309,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "MLO"
+        ],
+        "gate_labels": [
+          "Milan"
+        ],
         "major": false
       },
       "desc": [
@@ -7394,6 +9350,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "MLO"
+        ],
+        "gate_labels": [
+          "Milan"
+        ],
         "major": false
       },
       "desc": [
@@ -7428,6 +9391,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7468,6 +9433,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
@@ -7514,6 +9493,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "BYZ"
+          ],
+          [
+            "?",
+            "has dlc"
+          ]
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
@@ -7554,6 +9547,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "MUG"
+        ],
+        "gate_labels": [
+          "MUG"
+        ],
         "major": true
       },
       "desc": [
@@ -7594,6 +9594,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7634,6 +9636,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -7674,6 +9698,32 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "?",
+              "parliament type"
+            ],
+            [
+              "?",
+              "parliament type"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "has reform"
+            ],
+            [
+              "?",
+              "has estate privilege"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7720,6 +9770,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7760,6 +9812,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7806,6 +9860,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7846,6 +9902,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -7886,6 +9944,32 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "num of ports GREATER THAN EQUAL"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -7932,6 +10016,37 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "cul",
+              "kannadiga"
+            ],
+            [
+              "cul",
+              "telugu"
+            ]
+          ],
+          [
+            "or",
+            [
+              "rgrp",
+              "dharmic"
+            ],
+            [
+              "rgrp",
+              "buddhist"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Kannadiga",
+          "Telugu",
+          "Dharma",
+          "Buddhism"
+        ],
         "major": true
       },
       "desc": [
@@ -7978,6 +10093,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "or",
+            [
+              "tag",
+              "HOL"
+            ],
+            [
+              "tag",
+              "NED"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Holland",
+          "NED"
+        ],
         "major": false
       },
       "desc": [
@@ -8024,6 +10161,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8064,6 +10203,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -8110,6 +10251,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8144,6 +10287,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA"
+        ],
         "major": false
       },
       "desc": [
@@ -8190,6 +10355,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8230,6 +10397,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8270,6 +10442,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -8310,6 +10489,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8356,6 +10537,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": true
       },
       "desc": [
@@ -8396,12 +10591,26 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "Skilled eunuch servants can be granted powerful positions such as Black Chief Eunuch, ''Kızlar Ağası'', and White Chief Eunuch, ''Kapı Ağası''. In these roles, they are responsible for communications between the ruler and the GetCountry('TUR'), as well as administration of the harem and pages, supervision of ''waqf'' foundations, and the education of Ottoman princes, among many other things. Considered more trustworthy than their intact peers, they can be relied on to always work for the benefit of the state."
+          "Skilled eunuch servants can be granted powerful positions such as Black Chief Eunuch, ''Kızlar Ağası'', and White Chief Eunuch, ''Kapı Ağası''. In these roles, they are responsible for communications between the ruler and the Ottomans, as well as administration of the harem and pages, supervision of ''waqf'' foundations, and the education of Ottoman princes, among many other things. Considered more trustworthy than their intact peers, they can be relied on to always work for the benefit of the state."
         ]
       ],
       "facets": {
@@ -8442,6 +10651,24 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -8494,6 +10721,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": true
       },
       "desc": [
@@ -8540,6 +10781,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": true
       },
       "desc": [
@@ -8580,6 +10835,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -8626,12 +10903,19 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "PAP"
+        ],
+        "gate_labels": [
+          "Rome"
+        ],
         "major": true
       },
       "desc": [
         [
           "t",
-          "The Holy See is the jurisdiction of the Bishop of Rome, the ''Pontifex Maximus'', head of the Catholicism Church, known as The GetCountry('PAP')."
+          "The Holy See is the jurisdiction of the Bishop of Rome, the ''Pontifex Maximus'', head of the Catholicism Church, known as The Rome."
         ]
       ],
       "facets": {
@@ -8720,6 +11004,21 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "is frankokratia state"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8772,6 +11071,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "country rank level LESS THAN EQUAL"
+          ],
+          [
+            "?",
+            "is country religion pagan"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8824,6 +11135,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8864,6 +11177,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "country has estate"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -8958,6 +11276,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -8998,6 +11321,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9050,6 +11378,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9090,6 +11423,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -9142,6 +11480,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9182,6 +11522,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9222,6 +11564,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9262,6 +11606,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "POR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Portugal"
+        ],
         "major": false
       },
       "desc": [
@@ -9308,6 +11666,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9354,6 +11717,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "POR"
+            ],
+            [
+              "cul",
+              "portuguese"
+            ]
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is subject type"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Portugal",
+          "Portuguese"
+        ],
         "major": false
       },
       "desc": [
@@ -9394,6 +11782,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9415,6 +11808,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -9461,6 +11876,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9513,6 +11933,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "government type"
+          ],
+          [
+            "or",
+            [
+              "rel",
+              "catholic"
+            ],
+            [
+              "rel",
+              "lutheran"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Catholicism",
+          "Lutheranism"
+        ],
         "major": true
       },
       "desc": [
@@ -9559,6 +12001,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9593,6 +12037,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9627,6 +12073,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -9661,6 +12121,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9695,6 +12157,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9741,6 +12205,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "PRU"
+            ],
+            [
+              "tag",
+              "BRA"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "PRU",
+          "Brandenburg"
+        ],
         "major": false
       },
       "desc": [
@@ -9787,6 +12273,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "PRU"
+        ],
+        "gate_labels": [
+          "PRU"
+        ],
         "major": true
       },
       "desc": [
@@ -9827,6 +12320,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9861,6 +12356,21 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "pyrenean_group"
+          ],
+          [
+            "tag",
+            "ARA"
+          ]
+        ],
+        "gate_labels": [
+          "Pyrenean",
+          "Aragon"
+        ],
         "major": false
       },
       "desc": [
@@ -9901,6 +12411,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "MOS"
+            ],
+            [
+              "tag",
+              "RUS"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Muscovy",
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -9953,6 +12485,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -9993,6 +12527,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "rel",
+            "nahuatl"
+          ]
+        ],
+        "gate_labels": [
+          "Nahua"
+        ],
         "major": true
       },
       "desc": [
@@ -10045,6 +12593,21 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "andean_group"
+          ],
+          [
+            "lang",
+            "quechuan_language"
+          ]
+        ],
+        "gate_labels": [
+          "Andean",
+          "Quechuan"
+        ],
         "major": false
       },
       "desc": [
@@ -10091,6 +12654,24 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "is leader of international organization"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "tag",
+            "HAB"
+          ]
+        ],
+        "gate_labels": [
+          "Austria"
+        ],
         "major": false
       },
       "desc": [
@@ -10131,6 +12712,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10171,6 +12754,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10217,6 +12802,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10257,6 +12844,32 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "ENG"
+            ],
+            [
+              "tag",
+              "GBR"
+            ]
+          ],
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "modifier:has a parliamentary system"
+          ]
+        ],
+        "gate_labels": [
+          "England",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
@@ -10309,6 +12922,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "is revolutionary"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -10361,6 +12979,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "is revolutionary"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -10407,6 +13030,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "is revolutionary"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -10459,6 +13087,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10511,6 +13141,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10545,6 +13177,36 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "and",
+              [
+                "tag",
+                "SPA"
+              ],
+              [
+                "cul",
+                "castilian"
+              ]
+            ]
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA",
+          "Castilian"
+        ],
         "major": false
       },
       "desc": [
@@ -10585,6 +13247,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10631,6 +13295,28 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA"
+        ],
         "major": false
       },
       "desc": [
@@ -10683,12 +13369,24 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "?",
+            "has variable"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
         [
           "t",
-          "The undisputed authority across our lands are the Nobility as they channel their influence through the GetCountry('POL'). Their voices shape our politics and may yet determine the fate of our entire country, for better or worse..."
+          "The undisputed authority across our lands are the Nobility as they channel their influence through the Poland. Their voices shape our politics and may yet determine the fate of our entire country, for better or worse..."
         ]
       ],
       "facets": {
@@ -10723,6 +13421,27 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "ENG"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "custom tooltip text"
+            ],
+            [
+              "?",
+              "custom tooltip has variable"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "England"
+        ],
         "major": false
       },
       "desc": [
@@ -10769,6 +13488,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -10809,6 +13530,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "RUS"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -10849,6 +13584,27 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "or",
+            [
+              "lang",
+              "korean_language"
+            ],
+            [
+              "?",
+              "court language"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Korean"
+        ],
         "major": false
       },
       "desc": [
@@ -10889,12 +13645,26 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "SBL"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Balliol"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "The lords disinherited by the treasonous sco_robert_de_brus_1st_lord_of_annandale now flock to our banner on our promise of restoring their rightful holdings!"
+          "The lords disinherited by the treasonous Sco Robert De Brus 1St Lord Of Annandale now flock to our banner on our promise of restoring their rightful holdings!"
         ]
       ],
       "facets": {
@@ -10929,6 +13699,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "iberian_group"
+        ],
+        "gate_labels": [
+          "Iberian"
+        ],
         "major": true
       },
       "desc": [
@@ -10969,12 +13746,47 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "SCO"
+            ],
+            [
+              "tag",
+              "SBL"
+            ],
+            [
+              "and",
+              [
+                "cul",
+                "scottish"
+              ],
+              [
+                "tag",
+                "GBR"
+              ]
+            ]
+          ],
+          [
+            "?",
+            "government type"
+          ]
+        ],
+        "gate_labels": [
+          "Scotland",
+          "Balliol",
+          "Scots",
+          "GBR"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "Introduced by sco_malcolm_iii, the shire system divides Scotland into administrative counties, with each shire having its own structure."
+          "Introduced by Sco Malcolm III, the shire system divides Scotland into administrative counties, with each shire having its own structure."
         ]
       ],
       "facets": {
@@ -11027,6 +13839,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "TUR"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Ottomans"
+        ],
         "major": false
       },
       "desc": [
@@ -11073,6 +13899,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11131,6 +13962,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has variable"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11177,6 +14013,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11223,6 +14064,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "MLC"
+        ],
+        "gate_labels": [
+          "MLC"
+        ],
         "major": false
       },
       "desc": [
@@ -11263,6 +14111,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11297,6 +14147,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "japanese_group"
+        ],
+        "gate_labels": [
+          "Japanese"
+        ],
         "major": true
       },
       "desc": [
@@ -11343,6 +14200,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ],
+          [
+            "?",
+            "is leader of international organization"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11395,6 +14264,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11447,6 +14321,18 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "?",
+            "court language"
+          ],
+          [
+            "?",
+            "court language"
+          ]
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -11493,6 +14379,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11527,6 +14418,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11561,6 +14454,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has reform"
+        ],
+        "gate_labels": [],
         "major": true
       },
       "desc": [
@@ -11582,6 +14480,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11616,6 +14519,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11656,6 +14564,33 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "NAV"
+          ],
+          [
+            "cul",
+            "basque"
+          ],
+          [
+            "and",
+            [
+              "tag",
+              "SPA"
+            ],
+            [
+              "cul",
+              "basque"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Navarre",
+          "Basque",
+          "SPA"
+        ],
         "major": true
       },
       "desc": [
@@ -11696,6 +14631,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11736,6 +14673,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11782,6 +14724,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11816,6 +14770,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11850,6 +14816,18 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "?",
+            "overlord has reform"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -11884,6 +14862,33 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "or",
+            [
+              "tag",
+              "CAS"
+            ],
+            [
+              "tag",
+              "SPA"
+            ]
+          ],
+          [
+            "cgrp",
+            "iberian_group"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Castile",
+          "SPA",
+          "Iberian"
+        ],
         "major": false
       },
       "desc": [
@@ -11930,6 +14935,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "russian_group"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -11964,6 +14983,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "VEN"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -11998,6 +15031,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12050,6 +15085,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "RUS"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "RUS"
+        ],
         "major": false
       },
       "desc": [
@@ -12096,6 +15145,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12142,6 +15193,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12188,6 +15241,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12228,6 +15283,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12268,6 +15328,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -12308,6 +15375,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "SWE"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "Sweden"
+        ],
         "major": false
       },
       "desc": [
@@ -12354,6 +15435,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "SPA"
+        ],
+        "gate_labels": [
+          "SPA"
+        ],
         "major": false
       },
       "desc": [
@@ -12400,6 +15488,29 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "tag",
+            "MUG"
+          ],
+          [
+            "and",
+            [
+              "cgrp",
+              "indian_group"
+            ],
+            [
+              "rgrp",
+              "muslim"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "MUG",
+          "Indian",
+          "Islam"
+        ],
         "major": false
       },
       "desc": [
@@ -12440,6 +15551,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "lang",
+            "quechuan_language"
+          ],
+          [
+            "?",
+            "has reform"
+          ]
+        ],
+        "gate_labels": [
+          "Quechuan"
+        ],
         "major": true
       },
       "desc": [
@@ -12498,6 +15623,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "num of ports GREATER THAN"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12538,6 +15668,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12578,6 +15710,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12618,6 +15752,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12652,6 +15788,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12698,6 +15836,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "GRA"
+        ],
+        "gate_labels": [
+          "Granada"
+        ],
         "major": true
       },
       "desc": [
@@ -12738,6 +15883,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12778,6 +15925,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -12824,6 +15978,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12858,6 +16017,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12892,6 +16053,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -12956,12 +16119,19 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "BYZ"
+        ],
+        "gate_labels": [
+          "Byzantium"
+        ],
         "major": false
       },
       "desc": [
         [
           "t",
-          "A system of provincial headquarters and armies, spearheaded by a strategos with dual responsibilities to protect the locals and establish authority at the behest of the GetCountry('BYZ'). This system replaced the provincial administration of Diocletian and has served our people ever since. Yet time has worn it thin, it endures still, a relic of ages long past."
+          "A system of provincial headquarters and armies, spearheaded by a strategos with dual responsibilities to protect the locals and establish authority at the behest of the Byzantium. This system replaced the provincial administration of Diocletian and has served our people ever since. Yet time has worn it thin, it endures still, a relic of ages long past."
         ]
       ],
       "facets": {
@@ -13020,6 +16190,51 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "and",
+            [
+              "?",
+              "has societal value"
+            ],
+            [
+              "?",
+              "societal value:sinicized vs unsinicized LESS THAN"
+            ]
+          ],
+          [
+            "?",
+            "culture.language.language family"
+          ],
+          [
+            "?",
+            "court language.language family"
+          ],
+          [
+            "and",
+            [
+              "?",
+              "custom tooltip text"
+            ],
+            [
+              "?",
+              "custom tooltip has variable"
+            ]
+          ],
+          [
+            "and",
+            [
+              "?",
+              "exists"
+            ],
+            [
+              "?",
+              "is leader of international organization"
+            ]
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13066,6 +16281,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13118,6 +16338,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13164,6 +16389,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "num of non rural GREATER THAN"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13204,6 +16434,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13244,6 +16476,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13290,6 +16524,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -13324,6 +16565,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13370,6 +16616,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13410,6 +16661,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13444,6 +16697,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "is subject type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13502,6 +16760,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "tag",
+            "NED"
+          ],
+          [
+            "?",
+            "has variable"
+          ]
+        ],
+        "gate_labels": [
+          "NED"
+        ],
         "major": false
       },
       "desc": [
@@ -13542,6 +16814,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13588,6 +16862,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13622,6 +16898,13 @@
     },
     {
       "data": {
+        "gate": [
+          "cgrp",
+          "russian_group"
+        ],
+        "gate_labels": [
+          "East Slavic"
+        ],
         "major": false
       },
       "desc": [
@@ -13686,6 +16969,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "VEN"
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -13726,6 +17016,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "VEN"
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -13754,6 +17051,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "VEN"
+        ],
+        "gate_labels": [
+          "Venice"
+        ],
         "major": false
       },
       "desc": [
@@ -13788,6 +17092,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13828,6 +17137,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13862,6 +17173,26 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "?",
+            "has advance"
+          ],
+          [
+            "?",
+            "has advance"
+          ],
+          [
+            "?",
+            "has advance"
+          ],
+          [
+            "?",
+            "has advance"
+          ]
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -13902,6 +17233,13 @@
     },
     {
       "data": {
+        "gate": [
+          "tag",
+          "LIT"
+        ],
+        "gate_labels": [
+          "Lithuania"
+        ],
         "major": false
       },
       "desc": [
@@ -13948,6 +17286,85 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "not",
+            [
+              "tag",
+              "CHI"
+            ]
+          ],
+          [
+            "?",
+            "has reform"
+          ],
+          [
+            "or",
+            [
+              "?",
+              "is situation active"
+            ],
+            [
+              "?",
+              "has variable"
+            ]
+          ],
+          [
+            "?",
+            "exists"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "is leader of international organization"
+            ]
+          ],
+          [
+            "or",
+            [
+              "?",
+              "culture.language.language family"
+            ],
+            [
+              "lang",
+              "yi_language"
+            ],
+            [
+              "lang",
+              "hmong_language"
+            ],
+            [
+              "?",
+              "culture.language.language family"
+            ],
+            [
+              "lang",
+              "tibetan_language"
+            ],
+            [
+              "lang",
+              "jurchen_language"
+            ],
+            [
+              "lang",
+              "nanai_language"
+            ],
+            [
+              "lang",
+              "udege_language"
+            ]
+          ]
+        ],
+        "gate_labels": [
+          "Yi",
+          "Hmong",
+          "Tibetan",
+          "Jurchen",
+          "Nanai",
+          "Udege"
+        ],
         "major": false
       },
       "desc": [
@@ -14048,6 +17465,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -14094,6 +17516,21 @@
     },
     {
       "data": {
+        "gate": [
+          "or",
+          [
+            "cgrp",
+            "micronesian_group"
+          ],
+          [
+            "cgrp",
+            "polynesian_group"
+          ]
+        ],
+        "gate_labels": [
+          "Micronesian",
+          "Polynesian"
+        ],
         "major": false
       },
       "desc": [
@@ -14134,6 +17571,8 @@
     },
     {
       "data": {
+        "gate": null,
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -14174,6 +17613,31 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "jurchen_group"
+          ],
+          [
+            "?",
+            "has tribal government"
+          ],
+          [
+            "not",
+            [
+              "?",
+              "has reform"
+            ]
+          ],
+          [
+            "?",
+            "societal value:sinicized vs unsinicized GREATER THAN"
+          ]
+        ],
+        "gate_labels": [
+          "Jurchen"
+        ],
         "major": false
       },
       "desc": [
@@ -14220,6 +17684,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has advance"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -14254,6 +17723,11 @@
     },
     {
       "data": {
+        "gate": [
+          "?",
+          "has unlocked government reform trigger type"
+        ],
+        "gate_labels": [],
         "major": false
       },
       "desc": [
@@ -14288,6 +17762,20 @@
     },
     {
       "data": {
+        "gate": [
+          "and",
+          [
+            "cgrp",
+            "swiss_group"
+          ],
+          [
+            "?",
+            "has unlocked government reform trigger type"
+          ]
+        ],
+        "gate_labels": [
+          "Swiss"
+        ],
         "major": false
       },
       "desc": [

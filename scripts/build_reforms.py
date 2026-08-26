@@ -13,6 +13,7 @@ def main():
     entities = []
     for name, r in sorted(reforms.items()):
         slug = slugify(name)
+        gate, gate_labels = ref.gate_of(r, 'potential', 'allow')
         mods = mods_from_tree(getattr(r, 'modifier', None))
         mods += mods_from_tree(getattr(r, 'country_modifier', None))
         entities.append({
@@ -28,6 +29,7 @@ def main():
             },
             'mods': mods,
             'data': {
+                'gate': gate, 'gate_labels': gate_labels,
                 'major': bool(getattr(r, 'major', False)),
             },
         })

@@ -22,6 +22,14 @@ import Base from '../layouts/Base.astro';
         <input type="search" placeholder="Pick a country…" autocomplete="off" />
         <div class="hdr-search__results" hidden></div>
       </div>
+      <div class="pl-picker" data-pl-culture hidden>
+        <input type="search" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
+      <div class="pl-picker" data-pl-religion hidden>
+        <input type="search" autocomplete="off" />
+        <div class="hdr-search__results" hidden></div>
+      </div>
       <span class="chips" data-pl-context></span>
       <span class="pl-spacer"></span>
       <label class="pl-toggle" title="Advances gated to other countries, cultures or religions">
@@ -112,7 +120,14 @@ import Base from '../layouts/Base.astro';
       color: var(--gold-soft); letter-spacing: 0.03em; white-space: nowrap;
     }
     .pl-branch-head small { color: var(--text-faint); font-family: var(--font-ui); font-size: 11px; margin-left: 7px; }
+    .pl-branch-head.sub {
+      font-family: var(--font-ui); font-size: 10.5px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim);
+    }
     .pl-band-rule { position: absolute; height: 1px; background: var(--border-faint); }
+    /* a culture/religion the player has shifted to, not the 1337 start */
+    .chip.shifted { cursor: pointer; border-color: var(--gold-deep); color: var(--gold-soft); }
+    .chip.shifted:hover { border-color: var(--gold); }
 
     /* node card — compact row: icon + name, tier column packing */
     .pnode {
@@ -176,13 +191,20 @@ import Base from '../layouts/Base.astro';
     type Facts = { tag: string; cul: string; cgrp: string[]; lang: string;
                    rel: string; rgrp: string; cap: Record<string, string> };
     type Country = { t: string; n: string; col: string | null; cu: string; re: string; f: Facts };
+    type Cul = { k: string; n: string; g: string[]; l: string | null };
+    type Rel = { k: string; n: string; g: string | null };
     type Data = { version: string; vhash: string; order: string[];
                   ages: { n: string; i: string | null }[];
-                  nodes: Record<string, Node>; countries: Country[] };
+                  nodes: Record<string, Node>; countries: Country[];
+                  cultures: Cul[]; religions: Rel[] };
 
     let D: Data;
     const idx = new Map<string, number>();
     let country: Country | null = null;
+    // You can culture-shift and convert mid-game, so both are overridable
+    // once a country is picked; the gates re-evaluate against the override.
+    let culOverride: Cul | null = null;
+    let relOverride: Rel | null = null;
     const planned = new Set<string>();
     const researched = new Set<string>();
     let showOther = false;
@@ -225,12 +247,21 @@ import Base from '../layouts/Base.astro';
       if (h === 'rgrp') return f.rgrp === e[1];
       return null;
     }
+    /** The country's facts with any culture / religion override applied. */
+    function effectiveFacts(): Facts | null {
+      if (!country) return null;
+      const f: Facts = { ...country.f, cap: country.f.cap || {} };
+      if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l!; }
+      if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g!; }
+      return f;
+    }
     // 'common' | 'yours' | 'conditional' | 'other'
     function statusOf(id: string): string {
       const n = D.nodes[id];
       if (!n.g) return 'common';
-      if (!country) return 'conditional';
-      const v = evalGate(n.g, country.f);
+      const f = effectiveFacts();
+      if (!f) return 'conditional';
+      const v = evalGate(n.g, f);
       return v === true ? 'yours' : v === null ? 'conditional' : 'other';
     }
 
@@ -244,6 +275,8 @@ import Base from '../layouts/Base.astro';
       const p = new URLSearchParams();
       p.set('v', D.vhash);
       if (country) p.set('c', country.t);
+      if (culOverride) p.set('cu', culOverride.k);
+      if (relOverride) p.set('re', relOverride.k);
       if (ageIx) p.set('age', String(ageIx));
       if (showOther) p.set('all', '1');
       if (planned.size) p.set('p', enc(planned));
@@ -295,9 +328,16 @@ import Base from '../layouts/Base.astro';
         const p = D.nodes[id].r.find((r) => vis.has(r) && D.nodes[r].b === D.nodes[id].b);
         parentOf.set(id, p ?? null);
       }
+      // The age's focus picks (common/advances/4_choices_{adm,dip,mil}.txt —
+      // 10 per category per age) are a choice, not a tree: give them their
+      // own band instead of burying them among the one-offs.
+      const choices = ids.filter((id) => D.nodes[id].sp);
+      const choiceSet = new Set(choices);
+
       const kids = new Map<string, string[]>();
       const byBranch = new Map<string, string[]>();
       for (const id of ids) {
+        if (choiceSet.has(id)) continue;
         const p = parentOf.get(id)!;
         if (p) { if (!kids.has(p)) kids.set(p, []); kids.get(p)!.push(id); }
         const b = D.nodes[id].b;
@@ -316,7 +356,7 @@ import Base from '../layouts/Base.astro';
       // ordered by their parent's row so children sit beside their parent
       // and edges stay short.
       const pos = new Map<string, { x: number; y: number }>();
-      const heads: { label: string; count: number; x: number; y: number }[] = [];
+      const heads: { label: string; count: number; x: number; y: number; sub?: boolean }[] = [];
       const rules: number[] = [];
       let cursorY = 0, maxX = 0;
 
@@ -350,6 +390,28 @@ import Base from '../layouts/Base.astro';
         }
         heads.push({ label: D.nodes[bid]?.n ?? 'Branch', count: list.length, x: 16, y: cursorY + 4 });
         cursorY += TOP + tallest * ROWH + BRANCH_GAP;
+        rules.push(cursorY - BRANCH_GAP / 2);
+      }
+
+      // age focus picks: one labelled column per category
+      if (choices.length) {
+        heads.push({ label: 'Age Choices', count: choices.length, x: 16, y: cursorY + 4 });
+        const SPEC: [string, string][] = [['adm', 'Administrative'], ['dip', 'Diplomatic'], ['mil', 'Military']];
+        let tallest = 0;
+        SPEC.forEach(([key, label], col) => {
+          const list = choices.filter((id) => D.nodes[id].sp === key)
+            .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+          if (!list.length) return;
+          const x = 16 + col * COLW;
+          heads.push({ label, count: list.length, x, y: cursorY + TOP - 4, sub: true });
+          list.forEach((id, row) => {
+            const y = cursorY + TOP + 16 + row * ROWH;
+            pos.set(id, { x, y });
+            maxX = Math.max(maxX, x + NW);
+          });
+          tallest = Math.max(tallest, list.length);
+        });
+        cursorY += TOP + 16 + tallest * ROWH + BRANCH_GAP;
         rules.push(cursorY - BRANCH_GAP / 2);
       }
 
@@ -387,10 +449,17 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderContext() {
+      const culWrap = $('[data-pl-culture]'), relWrap = $('[data-pl-religion]');
+      culWrap.hidden = relWrap.hidden = !country;
       let html = '';
       if (country) {
-        html += `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${country.n}</span>` +
-                `<span class="chip">${country.cu}</span><span class="chip">${country.re}</span>`;
+        html += `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${country.n}</span>`;
+        if (culOverride) html += `<span class="chip shifted" data-reset="cul">${culOverride.n} ✕</span>`;
+        if (relOverride) html += `<span class="chip shifted" data-reset="rel">${relOverride.n} ✕</span>`;
+        (culWrap.querySelector('input') as HTMLInputElement).placeholder =
+          `Culture: ${culOverride ? culOverride.n : country.cu}`;
+        (relWrap.querySelector('input') as HTMLInputElement).placeholder =
+          `Religion: ${relOverride ? relOverride.n : country.re}`;
       } else {
         html += `<span class="chip">no country — showing everything</span>`;
       }
@@ -414,7 +483,8 @@ import Base from '../layouts/Base.astro';
 
       let html = '';
       for (const h of heads) {
-        html += `<div class="pl-branch-head" style="left:${h.x}px; top:${h.y}px">${h.label}<small>${h.count}</small></div>`;
+        html += `<div class="pl-branch-head${h.sub ? ' sub' : ''}" style="left:${h.x}px; top:${h.y}px">` +
+          `${h.label}<small>${h.count}</small></div>`;
       }
       for (const y of rules) {
         html += `<div class="pl-band-rule" style="left:8px; top:${y}px; width:${width - 32}px"></div>`;
@@ -495,33 +565,58 @@ import Base from '../layouts/Base.astro';
       tip.style.top = Math.min(e.clientY + 14, innerHeight - r.height - 12) + 'px';
     }
 
-    // ── country picker ─────────────────────────────────────────
-    function wireCountry() {
-      const wrap = $('[data-pl-country]');
+    // ── pickers (country / culture / religion) ─────────────────
+    function wirePicker(sel: string,
+                        items: (q: string) => { key: string; label: string; small?: string }[],
+                        onPick: (key: string) => void) {
+      const wrap = $(sel);
       const input = wrap.querySelector('input') as HTMLInputElement;
       const results = wrap.querySelector('.hdr-search__results') as HTMLElement;
       const refresh = () => {
         const q = input.value.trim().toLowerCase();
         if (!q) { results.hidden = true; return; }
-        const hits = D.countries
-          .filter((c) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
-          .slice(0, 12);
-        results.innerHTML = hits.map((c) =>
-          `<a href="#" data-tag="${c.t}"><span>${c.n}</span><small>${c.cu} · ${c.re}</small></a>`).join('');
+        const hits = items(q).slice(0, 12);
+        results.innerHTML = hits.map((h) =>
+          `<a href="#" data-key="${h.key}"><span>${h.label}</span><small>${h.small || ''}</small></a>`).join('');
         results.hidden = hits.length === 0;
       };
       input.addEventListener('input', refresh);
       input.addEventListener('focus', refresh);
       results.addEventListener('click', (e) => {
         e.preventDefault();
-        const a = (e.target as HTMLElement).closest('[data-tag]') as HTMLElement | null;
+        const a = (e.target as HTMLElement).closest('[data-key]') as HTMLElement | null;
         if (!a) return;
-        country = D.countries.find((c) => c.t === a.dataset.tag) || null;
+        onPick(a.dataset.key!);
         input.value = ''; results.hidden = true;
         render();
       });
       document.addEventListener('click', (e) => {
         if (!wrap.contains(e.target as Node)) results.hidden = true;
+      });
+    }
+
+    function wirePickers() {
+      wirePicker('[data-pl-country]',
+        (q) => D.countries.filter((c) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
+          .map((c) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
+        (tag) => {
+          country = D.countries.find((c) => c.t === tag) || null;
+          culOverride = relOverride = null;   // a new country resets the shifts
+        });
+      wirePicker('[data-pl-culture]',
+        (q) => D.cultures.filter((c) => c.n.toLowerCase().includes(q))
+          .map((c) => ({ key: c.k, label: c.n, small: 'culture' })),
+        (k) => { culOverride = D.cultures.find((c) => c.k === k) || null; });
+      wirePicker('[data-pl-religion]',
+        (q) => D.religions.filter((r) => r.n.toLowerCase().includes(q))
+          .map((r) => ({ key: r.k, label: r.n, small: 'religion' })),
+        (k) => { relOverride = D.religions.find((r) => r.k === k) || null; });
+
+      $('[data-pl-context]').addEventListener('click', (e) => {
+        const chip = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
+        if (!chip) return;
+        if (chip.dataset.reset === 'cul') culOverride = null; else relOverride = null;
+        render();
       });
     }
 
@@ -580,13 +675,15 @@ import Base from '../layouts/Base.astro';
         $('[data-pl-count]').textContent = '⚠ this link was made on another game version — the plan may have shifted.';
       }
       country = D.countries.find((c) => c.t === p.get('c')) || null;
+      culOverride = D.cultures.find((c) => c.k === p.get('cu')) || null;
+      relOverride = D.religions.find((r) => r.k === p.get('re')) || null;
       showOther = p.get('all') === '1';
       ($('[data-pl-other]') as HTMLInputElement).checked = showOther;
       ageIx = Math.max(0, Math.min(D.ages.length - 1, parseInt(p.get('age') || '0', 10) || 0));
       dec(p.get('p'), planned);
       dec(p.get('r'), researched);
 
-      wireCountry(); wirePanZoom();
+      wirePickers(); wirePanZoom();
 
       ($('[data-pl-other]') as HTMLInputElement).addEventListener('change', (e) => {
         showOther = (e.target as HTMLInputElement).checked; render();

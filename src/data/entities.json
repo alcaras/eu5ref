@@ -103712,18 +103712,21 @@
    "type": "privilege"
   },
   "privilege:lat_compromise_with_greek_populace": {
+   "icon": "img/privilege/lat-compromise-with-greek-populace.png",
    "name": "Compromise with the Greek people",
    "page": "privileges/lat-compromise-with-greek-populace",
    "slug": "lat-compromise-with-greek-populace",
    "type": "privilege"
   },
   "privilege:lat_latin_crusader_elite": {
+   "icon": "img/privilege/lat-latin-crusader-elite.png",
    "name": "Crusader Elite",
    "page": "privileges/lat-latin-crusader-elite",
    "slug": "lat-latin-crusader-elite",
    "type": "privilege"
   },
   "privilege:lat_protector_of_the_constantinople_patriarchate": {
+   "icon": "img/privilege/lat-protector-of-the-constantinople-patriarchate.png",
    "name": "Protector of the Patriarchate of Constantinople",
    "page": "privileges/lat-protector-of-the-constantinople-patriarchate",
    "slug": "lat-protector-of-the-constantinople-patriarchate",
@@ -104618,6 +104621,7 @@
    "type": "reform"
   },
   "reform:ach_heirs_of_the_latin_empire": {
+   "icon": "img/reform/ach-heirs-of-the-latin-empire.png",
    "name": "Titular Rulers of the Latin Empire",
    "page": "reforms/ach-heirs-of-the-latin-empire",
    "slug": "ach-heirs-of-the-latin-empire",
@@ -110840,6 +110844,7 @@
   },
   "subject:pronoia": {
    "color": "#8732a0",
+   "icon": "img/subject/pronoia.png",
    "name": "Prónoia",
    "page": null,
    "slug": "pronoia",

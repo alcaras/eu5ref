@@ -29,6 +29,9 @@ def main():
             'data': {
                 'groups': groups,
                 'language': ename(c.language) if not isinstance(c.language, str) else c.language,
+                # script names — advance gates test these, not display names
+                'group_keys': [g.name for g in (c.culture_groups or [])],
+                'language_key': getattr(c.language, 'name', None),
             },
         })
     write_dataset('cultures', {
