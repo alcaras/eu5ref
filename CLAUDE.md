@@ -164,6 +164,13 @@ This is the PKM link graph: EU5's own concept markup IS our cross-linking.
 
 ---
 
+## Icon art
+
+No game icons in the mirror yet (gfx/ was excluded) — color chips stand in.
+`ART-EXTRACTION.md` documents exactly which gfx subtrees to copy from a
+Steam install (the `NGameIcons` paths under `game/main_menu/gfx/interface/`)
+and the planned `make art` dds→png step that follows.
+
 ## Quirks already discovered (don't re-debug)
 
 - `du` reports 0B for game files — Dropbox online-only placeholders; reads
