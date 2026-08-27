@@ -238,6 +238,11 @@ export const TABS: Tab[] = [
     summary: 'Pick target advances → the full prerequisite closure and cost',
   },
   {
+    slug: 'battle-simulator', icon: '⚔️', label: 'Battle Simulator', section: 'Tools',
+    status: 'built',
+    summary: 'Build two armies, pick the terrain, Monte-Carlo the battle',
+  },
+  {
     slug: 'unlock-search', icon: '🔓', label: 'What Unlocks…', section: 'Tools',
     status: 'placeholder',
     summary: 'Reverse index: find the advance/law/reform that unlocks anything',

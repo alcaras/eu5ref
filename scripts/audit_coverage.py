@@ -23,7 +23,9 @@ BUILT = {
     'goods': ['goods.json'],
     'advances': ['advances.json'],
     'building_types': ['buildings.json'],
-    'unit_types': ['units.json'],
+    'unit_types': ['units.json', 'battle.json (public/)'],
+    'unit_categories': ['battle.json (public/)'],
+    'unit_formation_preference': ['battle.json (public/)'],
     'laws': ['laws.json'],
     'government_reforms': ['reforms.json'],
     'estates': ['estates.json'],
@@ -103,7 +105,6 @@ SKIPPED = {
     'trigger_localization': 'loc plumbing',
     'tutorial_lesson_chains': 'tutorial',
     'tutorial_lessons': 'tutorial',
-    'unit_formation_preference': 'AI tuning',
 }
 
 # Everything else must appear here: planned datasets per the tabs.ts catalog.
@@ -123,7 +124,7 @@ PLANNED = {
     'religious_factions', 'religious_figures',
     'religious_focuses', 'resolutions', 'rival_criteria',
     'road_types', 'scripted_country_names', 'scripted_diplomatic_objectives',
-    'scripted_geography', 'subject_military_stances', 'town_setups', 'unit_abilities', 'unit_categories',
+    'scripted_geography', 'subject_military_stances', 'town_setups', 'unit_abilities',
     }
 
 

@@ -99,15 +99,27 @@ def unlocked_by(age_years: dict[str, int]) -> dict[str, dict]:
         year = age_years.get(age)
         if not year:
             continue
+        # the advance's own potential gate travels with the grant — Jaysh
+        # Armies reads as available-to-anyone otherwise, when only Morocco's
+        # advance hands it out. Several advances can grant the same thing
+        # (one country's early, everyone's late), so each id keeps the full
+        # list and the frontend evaluates them per country.
+        gate = e['data'].get('gate')
+        who = ', '.join(e['data'].get('gate_labels') or []) or None
         for grp in (e['data'].get('unlocks') or []):
             for it in (grp.get('items') or []):
                 key = it.get('id')
                 if not key:
                     continue
-                prev = out.get(key)
-                if prev is None or year < prev['year']:
-                    out[key] = {'year': year, 'age': age, 'advance': e['name'],
-                                'id': e['id']}
+                rec = {'year': year, 'age': age, 'advance': e['name'],
+                       'id': e['id']}
+                if gate:
+                    rec['gate'] = gate
+                    if who:
+                        rec['who'] = who
+                out.setdefault(key, []).append(rec)
+    for grants in out.values():
+        grants.sort(key=lambda g: (g['year'], 'gate' in g))
     return out
 
 

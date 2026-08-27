@@ -196,11 +196,16 @@ import Base from '../layouts/Base.astro';
     const startRec = () => (country && STARTS[country.t]) || null;
 
     function facts(ageKey: string) {
-      if (!country) return null;
       const a = ages().find((x: any) => x.key === ageKey);
+      const year = a ? a.year : START_YEAR;
+      // No country picked: identity is UNKNOWN, not "everyone at once" —
+      // country-specific content must come out conditional, never confirmed.
+      if (!country) return { generic: true, cap: {}, cgrp: [], gov: govOf(),
+                             age: ageKey, year, io: [], parl: null,
+                             laws: new Set(), privs: new Set() };
       const rec = startRec() || {};
       return { ...country.f, cap: country.f.cap || {}, gov: govOf(),
-               age: ageKey, year: a ? a.year : START_YEAR,
+               age: ageKey, year,
                io: rec.io || [], parl: rec.parliament || null,
                laws: new Set(Object.values(rec.laws || {})),
                privs: new Set(rec.privileges || []) };
@@ -218,6 +223,9 @@ import Base from '../layouts/Base.astro';
       if (h === '?' || h === 'var' || h === 'policy') return null;
       if (h === 'true') return true;
       if (h === 'false') return false;
+      // with no country picked, who-you-are predicates are unknowable
+      if (f.generic && (h === 'tag' || h === 'cul' || h === 'cgrp' ||
+          h === 'lang' || h === 'rel' || h === 'rgrp' || h === 'cap')) return null;
       if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
       if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
       if (h === 'tag') return f.tag === e[1];
@@ -227,8 +235,9 @@ import Base from '../layouts/Base.astro';
       if (h === 'adv') return null;              // research it and you have it
       if (h === 'unl') {                         // granted by an advance? then time-gated
         const g = (D.unlockGrants || {})[e[1]];
-        if (g) return (f.year ?? START_YEAR) >= g.year ? null : false;
-        return null;                             // event/mission-granted
+        if (!g) return null;                     // event/mission-granted
+        const v = grantAvail(g, f);
+        return v === false ? false : null;       // even "yours" still needs the research
       }
       if (h === 'iotype') return false;          // an IO-scope law, never a country's
       if (h === 'iomem') return (f.io || []).includes(e[1]) ? true : null;
@@ -255,6 +264,19 @@ import Base from '../layouts/Base.astro';
       const out = new Set<string>();
       for (const m of D.movers) if (want.has(m.key)) out.add(uid(m));
       return out;
+    }
+
+    /** Three-valued OR over the advances that hand a thing out: is any of
+     *  them (a) reached by the clock and (b) possibly this country's? */
+    function grantAvail(grants: any[], f: any): boolean | null {
+      let some = false;
+      for (const g of grants) {
+        if ((f.year ?? START_YEAR) < g.year) continue;   // not in this age yet
+        const v = g.gate ? evalGate(g.gate, f) : true;
+        if (v === true) return true;
+        if (v === null) some = true;
+      }
+      return some ? null : false;
     }
 
     /** The axis itself can be locked: three axes carry an age, the special
@@ -313,7 +335,11 @@ import Base from '../layouts/Base.astro';
         const tab = new Map<string, boolean | null>();
         for (const m of D.movers) {
           let v: boolean | null = f ? evalGate(m.gate, f) : true;
-          if (v !== false && m.unlock && a.year < m.unlock.year) v = false;
+          if (v !== false && m.unlock) {
+            const gv = grantAvail(m.unlock, f);
+            if (gv === false) v = false;             // no advance grants it here
+            else if (gv === null && v === true) v = null;  // maybe another country's
+          }
           if (v === null && promoted.has(uid(m))) v = true;
           tab.set(uid(m), v);
         }
@@ -558,10 +584,28 @@ import Base from '../layouts/Base.astro';
         let achieved = from;
         let doneAt: number | null = year;
         let bestReach = from;                  // the furthest any age could go
+        let ranOut = false;                    // campaign ended mid-push
         const onStart = new Set(on);
         const info = new Map<string, any>();   // uid → forHold etc.
 
         if (!done) {
+          // "As far as it goes" means as far as the CAMPAIGN can take it —
+          // a later age's tools often push much further than today's, so the
+          // open-ended target is the best practical stall point across every
+          // age from here on (Best order then sequences the wait sensibly).
+          let openBest: number | null = null;
+          if (st.at === null) {
+            for (const a2 of ages()) {
+              if (a2.year < ageAt(year).year) continue;
+              const pf2 = portfolio(st.pair, dirn, a2.key, on, holds, st.dir === 'auto' || !st.keep);
+              const E2 = eqOf(pf2.net * s);
+              const r2 = reachOf(pf2.net * s, s as 1 | -1);
+              const shy2 = Math.abs(E2) > 100 ? r2 : r2 - s;
+              if (openBest === null || (shy2 - openBest) * s > 0) openBest = shy2;
+            }
+            // ignore sub-noise gains: not worth waiting an age for 2 points
+            if (openBest !== null && (openBest - from) * s <= 2) openBest = null;
+          }
           let guard = 0;
           let finished = false;
           while (!finished && year < END_YEAR && guard++ < 40) {
@@ -583,10 +627,12 @@ import Base from '../layouts/Base.astro';
             const E = eqOf(cur.net * s);
             const reach = reachOf(cur.net * s, s as 1 | -1);
             // an open-ended stage stops one point shy of the equilibrium —
-            // the last point is a decades-long 0.01/month crawl
-            const target = st.at === null
-              ? (Math.abs(E) > 100 ? reach : reach - s)
-              : st.at;
+            // the last point is a decades-long 0.01/month crawl. When a
+            // later age reaches further, THAT is the target.
+            const curShy = Math.abs(E) > 100 ? reach : reach - s;
+            const target = st.at !== null ? st.at
+              : openBest !== null && (openBest - curShy) * s > 0 ? openBest
+              : curShy;
             const mTo = monthsTo(v0, target, cur.net * s);
             const mBoundary = (boundary - year) * 12;
             if (Number.isFinite(mTo) && mTo <= mBoundary) {
@@ -615,12 +661,20 @@ import Base from '../layouts/Base.astro';
                   const pf2 = portfolio(st.pair, dirn, a2.key, on, holds, st.dir === 'auto' || !st.keep);
                   const r2 = reachOf(pf2.net * s, s as 1 | -1);
                   bestReach = s > 0 ? Math.max(bestReach, r2) : Math.min(bestReach, r2);
-                  if (st.at !== null ? (st.at - r2) * s <= 0 : pf2.net > cur.net + 1e-9) { hopeful = true; break; }
+                  if ((target - r2) * s <= 0 ||
+                      (st.at === null && pf2.net > cur.net + 1e-9)) { hopeful = true; break; }
                 }
               }
               if (!hopeful) {
-                // never reachable — stop here without burning the campaign
-                // clock; the player sees what push it would have needed
+                // never fully reachable. If the campaign is ending and the
+                // push still moves the needle, spend the remaining years on
+                // it rather than reporting zero progress.
+                if (boundary >= END_YEAR && cur.net > 0 && mBoundary > 0) {
+                  on = cur.on;
+                  drift(pos, on, mBoundary);
+                  year = boundary;
+                  ranOut = true;
+                }
                 achieved = pos[st.pair] ?? 0;
                 stalled = st.at !== null && !reached(achieved, st, from);
                 doneAt = stalled ? null : year;
@@ -705,7 +759,7 @@ import Base from '../layouts/Base.astro';
         fighting.sort((a, b) => a.push - b.push);
 
         out.push({ st, dir: dirn, from, achieved, done, stalled, capped, axisClosed,
-                   startedAt, doneAt, bestReach,
+                   startedAt, doneAt, bestReach, ranOut,
                    net: pf ? pf.net : 0,
                    take, fighting, already,
                    holdRows: pf ? pf.holdRows : [],
@@ -815,8 +869,11 @@ import Base from '../layouts/Base.astro';
             `${esc(poleName(e.pair, e.dir))} ${(e.perMonth ?? 0).toFixed(3)}`).join(', ')}` +
           `${side.length > 3 ? ` +${side.length - 3}` : ''}</span>`
         : '';
-      const gift = m.unlock
-        ? `<span class="pp-need">from ${esc(m.unlock.advance)} · ${esc(m.unlock.age)}</span>` : '';
+      const g0 = m.unlock && m.unlock[0];
+      const gift = g0
+        ? `<span class="pp-need">from ${esc(g0.advance)} · ${esc(g0.age)}` +
+          `${g0.who ? ` · ${esc(g0.who)}` : ''}` +
+          `${m.unlock.length > 1 ? ` +${m.unlock.length - 1} more` : ''}</span>` : '';
       const why = opts.why ? `<span class="pp-need">needs: ${esc(opts.why)}</span>` : '';
       const holdTag = h.forHold
         ? `<span class="pp-need">holding ${esc(poleName(h.forHold, signedPush(m, h.forHold) >= 0 ? 'right' : 'left'))}</span>` : '';
@@ -935,7 +992,10 @@ import Base from '../layouts/Base.astro';
           : s.stalled
             ? `<span class="pp-bad">unreachable — needs ${(Math.abs(s.st.at) / 100).toFixed(2)}/mo sustained; the best any age manages is ≈${Math.round(s.bestReach)}</span>`
             : `<span class="pp-when">${Math.round(s.startedAt)} → ${Math.round(s.doneAt)}` +
-              ` · ${(s.doneAt - s.startedAt).toFixed(0)} yrs${s.capped ? ` · stalls here (cap ${achievedTxt})` : ''}</span>`;
+              ` · ${(s.doneAt - s.startedAt).toFixed(0)} yrs` +
+              (ageAt(s.doneAt).key !== ageAt(s.startedAt).key ? ` · finishes in ${esc(ageAt(s.doneAt).name)}` : '') +
+              (s.ranOut ? ` · campaign ends mid-push` : s.capped ? ` · stalls here (cap ${achievedTxt})` : '') +
+              `</span>`;
 
         const drops = s.fighting.length
           ? `<div class="pp-sub">Swap off — these pull the other way</div>` +

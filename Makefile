@@ -28,6 +28,7 @@ data:
 	$(PY) scripts/build_country_start.py
 	$(PY) scripts/build_map.py
 	$(PY) scripts/build_planner.py
+	$(PY) scripts/build_battle.py
 	$(PY) scripts/build_entities.py
 	$(PY) scripts/build_backlinks.py
 
