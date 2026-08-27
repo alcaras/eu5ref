@@ -278,14 +278,17 @@ and the planned `make art` dds→png step that follows.
 
 ## Societal values — grounded facts (don't re-derive, don't "improve" past these)
 
-- **Drift is not linear.** The in-game "Societal Value" concept says progress
-  toward a pole "will stall at a maximum, determined by the total amount of
-  factors pushing it in that direction. The higher a Societal Value, the more
-  factors are needed to push it further." The slowdown curve is engine-side —
-  it is NOT in the files. `SOCIETAL_VALUE_INERTIA_SCALE = 100` and
-  `societal_value_min_scaling_monthly_move = 0.01` are the only hints. So
-  every projection we show is labelled an upper bound ("at best", "no sooner
-  than"), never a schedule. Do not restore a "years for a full swing" number.
+- **The drift model is known** (defines + community testing — the Steam
+  thread "What determines the max value" confirms it): a value approaches an
+  **equilibrium of `SOCIETAL_VALUE_INERTIA_SCALE (=100) × net monthly push`**
+  — 0.4/mo of push stalls at ±40; the pole needs a full 1.0/mo. Drift speed
+  is `(E − v)/100` per month (so ≈ the displayed monthly change at 0), with
+  `societal_value_min_scaling_monthly_move = 0.01` as the floor that crawls
+  the last point in. Corollaries the tools are built on: values **decay**
+  toward the new equilibrium when a push is swapped away (nothing about the
+  position banks), and holding v costs `v/100` per month, forever. Both value
+  tools implement exactly this curve (`eqOf`/`monthsTo`); instant effects
+  (events, agendas, debates) can pierce the cap but then decay back.
 - **Sign convention: right pole is positive.** `centralization_vs_decentralization
   = 85` for 1337 France means heavily *decentralized* (appanages), and its
   `serfdom_vs_free_subjects = -80` means serfdom. Both check out historically.
@@ -318,28 +321,71 @@ and the planned `make art` dds→png step that follows.
   accepts only `allow`/`locked`/`potential`/`can_start`/`trigger`, rejects
   `_AI_BLOCKS`, and flips the operator under an odd number of `NOT`/`NOR`.
   This took requirements from 125 (inflated) to 91 (real).
-- **Reforms bank, laws and privileges do not.** Per
-  `common/government_reforms/readme.txt`, `allow` is "whether the action can
-  start" and there is no `remove_if`, so a reform enacted while you qualified
-  survives the value drifting back — that is what makes the swap-away path
-  work. Law/privilege modifiers apply only while run.
-- Only **8 cabinet actions** move a value, and they are niche (Foster New
-  Culture, Unify Culture Group, Stroganov Influences, …). There is no generic
-  "promote value" cabinet action — don't claim one.
+- **Focus-block reforms do NOT bank.** 52 reforms carry a
+  `societal_values = { X_focus }` block; the threshold is the define
+  `SOCIAL_VALUE_REQUIREMENT_FOR_REFORM = 50` and the engine **removes the
+  reform when the value drops back below it** — loc keys
+  `CHANGE_SOCIETAL_VALUE_AFFECTS_REFORM(_EVENTUALLY)` ("will be lost as it
+  requires at least $VAL towards $NAME"), `REMOVE_GOV_REFORM_SOCIETAL_
+  VALUES_MIN/MAX`, and the 12/24-month forecast defines. Keeping such a
+  reform costs a standing 0.5/mo on its axis. Only a reform whose value
+  requirement sits in `allow` (a handful, `country_specific.txt`) plausibly
+  banks per the readme's "whether the action can start" — labelled "verify
+  in game", never asserted. Law/privilege modifiers apply only while run,
+  and reforms are permanent (no un-take) — the value-path optimizer treats
+  reforms as irrevocable and only laws/privileges/cabinet as swappable.
+- **There IS a generic "Encourage Societal Value" cabinet action** —
+  `cabinet_actions/change_societal_values.txt`, backed by one static
+  modifier per pole (`main_menu/common/static_modifiers/societal_values.txt`,
+  `monthly_towards_X = 1`, "scaled with cabinet efficiency"; ~0.3–0.6/mo in
+  practice). It is the main lever players pull, raising both speed and the
+  cap. build_values emits it as synthetic `encourage_<side>` movers
+  (`cabinet: true, encourage: true`); the frontends scale it by a
+  user-set efficiency input. The 8 explicit value-moving cabinet actions
+  (Foster New Culture, Stroganov Influences, …) also carry `cabinet: true`
+  — every cabinet action occupies a member, and the planner allows one.
 - Estate-privilege capacity is bounded by **estate satisfaction**
   (`GRANT_PRIVILEGE_SATISFACTION_IMPACT = 3`), not a slot count, and that
-  budget is not computable from the files. The path planner ranks candidates
-  by push and says so.
+  budget is not computable from the files. The path planner exposes it as a
+  user-set "new privs/stage" budget (and "new reforms/stage" for pacing
+  permanent reforms) rather than pretending to compute it.
 - The parser hands booleans back as Python `True`, not the literal `"yes"` —
   `has_tribal_government = yes` compiled to its own negation until that was
   handled. Check the type before comparing to `'yes'`.
 
+- **Axes are themselves gated**: `mercantilism_vs_free_trade` age 4,
+  `outward_vs_inward` age 3, `absolutism_vs_liberalism` age 5, and the
+  special axes (sinicized, mysticism, latinization) carry `allow` triggers.
+  Emitted as `pairs[pid].age/.gate`; the scheduler won't touch a closed axis.
+- **Law groups gate three ways**: `law_gov_group` (governments),
+  `law_religion_group` (a religion list), `law_country_group` (tags) — all
+  folded into option gates, or a Catholic monarchy gets offered iqta law.
+  Reforms similarly carry their own `government =`, `age =`, `major = yes`
+  (one major per country, ever) and `years =` (implementation time) —
+  folded/emitted per mover.
+- **Trigger compilation** covers `always`, `religion ?= { group ?= … }`,
+  `has_unlocked_<law|reform|privilege|policy>_trigger` (→ `['unl', id]`,
+  joined to advances via `unlockGrants`; the rest are event-granted and
+  stay conditional), IO membership (`['iomem', x]` vs 1337 membership from
+  `setup/start/15_international_organizations.txt`, now in
+  country-start.json as `io`), `has_law/reform/estate_privilege`,
+  `parliament_type`, `country_type`, `current_age_or_later`,
+  `has_variable` (→ `['var', name]`, labelled but unknowable), and
+  `trigger_if` lowered to an implication. Unknown-gated movers are never
+  auto-picked — they render collapsed with an "I have this" override.
+
 ### The two value tools
 
-`values-planner` is the static one: pick what you run, see net push per axis
-and what it unlocks. `value-path` is the sequencer: an ordered list of
-targets, scheduled against the campaign clock. Both fetch `public/values.json`
-+ `public/country-start.json`; neither is a dataset envelope.
+`values-planner` is the static one: pick what you run, see net push per axis,
+where each axis stalls, and what it unlocks. `value-path` is the sequencer:
+targets in a chosen order (per-stage 🔒 pin, `not before` year, `last`,
+`keep`/release), scheduled against the campaign clock with the stall curve;
+every `keep` stage becomes a standing hold (`net ≥ target/100`) that later
+stages must budget for — the portfolio step satisfies holds first, then
+spends law swaps, a privilege budget, a reform budget and the one cabinet
+slot on the active axis, counting collateral effects. Both fetch
+`public/values.json` + `public/country-start.json`; neither is a dataset
+envelope.
 
 - **Ages have real years** (`common/age/00_default.txt`): 1337 (age 1 uses
   `year = 1`, i.e. game start), 1342, 1437, 1537, 1637, 1737. Emitted into

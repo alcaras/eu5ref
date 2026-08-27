@@ -17,6 +17,20 @@ Compiled expression grammar (JSON arrays, evaluated in the browser):
     ["rel",  "orthodox"]   religion
     ["rgrp", "muslim"]     religion group
     ["cap",  "region", "east_coast_region"]   capital geography
+    ["true"] | ["false"]   constants (from `always = yes/no`)
+    ["age>=", "age_4_reformation"]  this age or any later one
+    ["iotype", "hre"]      the *root* is an international org of this type —
+                           always false for a country (these are IO-scope laws)
+    ["iomem", "hre"]       country is a member of an IO of this type
+    ["unl",  "law:x"]      has_unlocked_* — the unlock has been granted
+                           (usually by an advance; join via unlocked_by)
+    ["law", "x"] ["reform", "x"] ["priv", "x"] ["policy", "x"] ["parl", "x"]
+                           current-state predicates: running that thing now
+    ["ctype", "building"]  country_type — playable countries are none of the
+                           virtual types (pop/building/army/location)
+    ["mrep"]               is_merchant_republic
+    ["var", "x"]           has_variable — event-granted, named so the UI can
+                           say which content has to fire first
     ["?",    "label"]      dynamic — unknowable from static facts
 
 Evaluation is three-valued (Kleene): TRUE / FALSE / UNKNOWN. "?" yields
@@ -57,6 +71,28 @@ _SCALAR = {
     'has_advance': 'adv',
     'has_culture_group': 'cgrp',
     'culture.culture_group': 'cgrp',
+    'parliament_type': 'parl',
+    'has_reform': 'reform',
+    'has_law': 'law',
+    'has_estate_privilege': 'priv',
+    'has_policy': 'policy',
+    'country_type': 'ctype',
+    'international_organization_type': 'iotype',
+    # a scripted variable, set by events/situations — unknowable statically,
+    # but carrying its name beats a bare "?": the UI can say what event
+    # content has to grant it first
+    'has_variable': 'var',
+}
+
+# `has_unlocked_<thing>_trigger = { type = x }` — the thing has been granted
+# (by an advance, mission or event). Compiled to ["unl", "<kind>:x"], the same
+# ids the advance-unlock join uses.
+_UNLOCKED = {
+    'has_unlocked_law_trigger': 'law',
+    'has_unlocked_global_law_trigger': 'law',
+    'has_unlocked_government_reform_trigger': 'reform',
+    'has_unlocked_estate_privilege_trigger': 'privilege',
+    'has_unlocked_policy_trigger': 'policy',
 }
 
 # Capital geography. Verified against every geography predicate in
@@ -76,6 +112,17 @@ def _strip_scope(v):
     """`culture:sicilian` → `sicilian`; leaves bare tokens alone."""
     s = str(v).strip().strip('"')
     return s.split(':', 1)[1] if ':' in s else s
+
+
+def _block_get(tree, want: str):
+    """First value of `want` inside a block, or None."""
+    try:
+        for k, v in tree.iterate_with_duplicates():
+            if str(k) == want:
+                return v
+    except AttributeError:
+        pass
+    return None
 
 
 def _pretty(key: str) -> str:
@@ -139,6 +186,62 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
     if key == 'exists' and str(value).strip() in _CAPITAL_SCOPES:
         return None
 
+    # `always = yes` is no gate at all; `always = no` is disabled content
+    # (usually "handled through special events").
+    if key == 'always':
+        yes = value is True or str(value).strip().lower() in ('yes', 'true')
+        # a literal, not None: `OR = { always = yes … }` must stay true
+        return ['true'] if yes else ['false']
+
+    if key == 'is_merchant_republic':
+        yes = value is True or str(value).strip().lower() in ('yes', 'true')
+        return ['mrep'] if yes else ['not', ['mrep']]
+
+    # ── block-valued predicates that are not scopes ──
+    if hasattr(value, 'iterate_with_duplicates'):
+        # `trigger_if = { limit = { A } B }` means A → B, not A AND B.
+        # Compiling it as a conjunction would hide things wrongly, so lower
+        # it to the implication; `trigger_else` alone stays unknowable.
+        if key in ('trigger_if', 'trigger_else_if'):
+            limit, body_parts = None, []
+            for k2, v2 in value.iterate_with_duplicates():
+                if str(k2) == 'limit':
+                    limit = _compile_block(v2, cgroups, scope)
+                else:
+                    node = _compile_pair(str(k2), v2, cgroups, scope)
+                    if node is not None:
+                        body_parts.append(node)
+            if not body_parts:
+                return None
+            body = body_parts[0] if len(body_parts) == 1 else ['and', *body_parts]
+            return ['or', ['not', limit], body] if limit else body
+        if key == 'trigger_else':
+            return ['?', 'conditional trigger']
+        if key in _UNLOCKED:
+            t = _block_get(value, 'type')
+            if t is not None:
+                return ['unl', f'{_UNLOCKED[key]}:{_strip_scope(t)}']
+            UNHANDLED[key] += 1
+            return ['?', _pretty(key)]
+        if key == 'current_age_or_later':
+            t = _block_get(value, 'age')
+            if t is not None:
+                return ['age>=', _strip_scope(t)]
+            UNHANDLED[key] += 1
+            return ['?', _pretty(key)]
+        if key == 'any_international_organizations_member_of':
+            iot, extra = None, False
+            for k2, v2 in value.iterate_with_duplicates():
+                if str(k2) == 'international_organization_type':
+                    iot = _strip_scope(v2)
+                else:
+                    extra = True
+            if iot is None:
+                UNHANDLED[key] += 1
+                return ['?', _pretty(key)]
+            base = ['iomem', iot]
+            return ['and', base, ['?', f'{_pretty(iot)} condition']] if extra else base
+
     # ── scoped blocks: culture = { … }, original_capital = { … } ──
     if hasattr(value, 'iterate_with_duplicates'):
         if key in _TERRITORY_SCOPES:
@@ -149,6 +252,13 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
     # ── scalar predicates, resolved against the enclosing scope ──
     if scope in _CAPITAL_SCOPES and key in _GEO_TIERS:
         return ['cap', key, _strip_scope(value)]
+    # `religion ?= { group ?= religion_group:muslim }` and the culture twins
+    if scope == 'religion' and key == 'group':
+        return ['rgrp', _strip_scope(value)]
+    if scope == 'culture' and key == 'culture_group':
+        return ['cgrp', _strip_scope(value)]
+    if scope == 'culture' and key == 'language':
+        return ['lang', _strip_scope(value)]
     if key == 'merged_culture_group_contains_culture':
         # "shares a (merged) culture group with culture X" — lower to that
         # culture's own group when we can resolve it
@@ -186,7 +296,9 @@ def _geo_pair(key: str) -> str | None:
 # ── build-time helpers ────────────────────────────────────────
 
 def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov',
-                          'age', 'adv')) -> list[tuple[str, str]]:
+                          'age', 'age>=', 'adv', 'iomem', 'iotype', 'unl',
+                          'law', 'reform', 'priv', 'policy', 'parl',
+                          'var')) -> list[tuple[str, str]]:
     """Collect (kind, value) pairs mentioned positively in an expression —
     used to label a gated advance ("Byzantium", "Orthodox")."""
     out: list[tuple[str, str]] = []
@@ -243,6 +355,6 @@ def is_dynamic(expr) -> bool:
     """True when any branch depends on state we cannot know statically."""
     if not isinstance(expr, list) or not expr:
         return False
-    if expr[0] == '?':
+    if expr[0] in ('?', 'var', 'unl', 'policy'):
         return True
     return any(is_dynamic(sub) for sub in expr[1:] if isinstance(sub, list))

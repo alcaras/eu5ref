@@ -17,6 +17,7 @@ import lib.ref as ref
 GAME = ref.ROOT / 'game'
 TEMPLATES = GAME / 'main_menu' / 'setup' / 'templates'
 COUNTRIES = GAME / 'main_menu' / 'setup' / 'start' / '10_countries.txt'
+IOS = GAME / 'main_menu' / 'setup' / 'start' / '15_international_organizations.txt'
 
 _TOKEN = re.compile(r'"[^"]*"|[{}]|=|[^\s{}=]+')
 
@@ -95,8 +96,30 @@ def pairs_of(items: list) -> dict:
     return {k: v for it in items if isinstance(it, tuple) for k, v in [it] if isinstance(v, str)}
 
 
+def io_membership() -> dict[str, list[str]]:
+    """tag → international-organization types it belongs to at the bookmark
+    (`add_international_organization = { type = hre members = { … } }`).
+    Lets gates like "member of the HRE" resolve per country."""
+    out: dict[str, list[str]] = {}
+    if not IOS.exists():
+        return out
+    root = parse(IOS.read_text(encoding='utf-8-sig'))
+    mgr = get(root, 'international_organization_manager') or []
+    for io in get_all(mgr, 'add_international_organization'):
+        if not isinstance(io, list):
+            continue
+        typ, members = get(io, 'type'), get(io, 'members')
+        if not isinstance(typ, str) or not isinstance(members, list):
+            continue
+        for tag in bare(members):
+            if re.fullmatch(r'[A-Z0-9]{3}', tag) and typ not in out.setdefault(tag, []):
+                out[tag].append(typ)
+    return out
+
+
 def main() -> None:
     axes = set(json.loads((ref.ROOT / 'public' / 'values.json').read_text())['pairs'])
+    ios = io_membership()
 
     templates = {}
     for f in sorted(TEMPLATES.glob('*.txt')):
@@ -142,6 +165,7 @@ def main() -> None:
         rec = {'values': {}, 'privileges': [], 'laws': {}, 'type': None,
                'heir_selection': None, 'parliament': None, 'tech': None}
         apply(rec, it[1], set())
+        rec['io'] = ios.get(it[0]) or None
         if rec['values'] or rec['privileges'] or rec['laws']:
             out[it[0]] = {k: v for k, v in rec.items() if v not in (None, {}, [])}
 

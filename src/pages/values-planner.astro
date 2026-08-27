@@ -12,21 +12,21 @@ import Base from '../layouts/Base.astro';
     0.2, significant 0.33 per month.
   </p>
   <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    <b>Read the projections as ceilings, not schedules.</b> In the game's own
-    words a value "drifts slowly over time towards one of the two poles", but
-    "progress towards one pole will stall at a maximum, determined by the
-    total amount of factors pushing it in that direction. The higher a
-    Societal Value, the more factors are needed to push it further." The
-    slowdown curve lives in the engine, not the files — so what is shown here
-    is the straight-line case: the value cannot move <em>faster</em> than
-    this, and it will stall somewhere short of it.
+    <b>A value stalls at 100 × its net monthly push</b>
+    (<code>SOCIETAL_VALUE_INERTIA_SCALE</code>, confirmed by player testing):
+    0.3/month of push carries you to ±30 and no further, and drift slows on
+    the way there. Remove the push and the value drifts back toward whatever
+    the remaining setup supports — nothing about the position itself is
+    banked. The projections here use that curve.
   </p>
   <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    The swap-away dance works because a reform's value requirement sits in its
-    <code>allow</code> block — "whether the action can start" — and reforms have
-    no <code>remove_if</code>, so one enacted while you qualified is not undone
-    when the value drifts back. Reforms do take time to implement and their
-    modifiers scale with progress, so hold the position until it completes.
+    Mind what a reform demands: one whose requirement is a
+    <code>societal_values</code> focus block needs the value <b>held at 50
+    toward its pole — the game removes the reform when that stops being
+    true</b>. Only a reform whose requirement sits in its <code>allow</code>
+    block appears to survive the value drifting back (verify in game). Laws
+    and privileges push only while you run them. For sequencing several
+    targets against the campaign clock, use the Value Path tool.
   </p>
 
   <div class="vp" data-vp>
@@ -47,6 +47,10 @@ import Base from '../layouts/Base.astro';
       <button type="button" class="csv-btn" data-vp-reset title="Back to this country's 1337 setup">↺ 1337 setup</button>
       <label class="pl-toggle" title="Include things your country cannot take">
         <input type="checkbox" data-vp-all /> show unavailable
+      </label>
+      <label class="pl-toggle" title="Efficiency of a cabinet member on Encourage Societal Value — base push is 1.0/month × this">
+        cabinet eff. <input type="number" data-vp-eff value="0.4" min="0" max="1" step="0.05"
+          style="width:56px; background:var(--bg-elev); color:var(--text); border:1px solid var(--border); border-radius:3px; padding:2px 5px; font-family:var(--font-mono); font-size:12px;" />
       </label>
     </div>
     <div class="vp-controls">
@@ -74,10 +78,11 @@ import Base from '../layouts/Base.astro';
         <h2 class="vp-h" style="margin-top:18px;">Unlocks along the way
           <small data-vp-unlocked></small></h2>
         <p style="font-size:12px; color:var(--text-faint); margin:-4px 0 8px;">
-          Earliest possible, ignoring the slowdown near a pole. A reform's
-          requirement sits in its <code>allow</code> block — it gates starting
-          the reform, and reforms have no <code>remove_if</code>, so once
-          implemented it survives the value drifting back.
+          Timed with the stall curve: drift slows toward its equilibrium of
+          100 × net push, so anything past that stalls out. A focus-block
+          reform needs its 50 <em>held</em> — the game removes it when the
+          value drops back; only <code>allow</code>-gated requirements appear
+          to be start-only (verify in game).
         </p>
         <div class="vp-unlocks" data-vp-unlocks></div>
       </section>
@@ -159,6 +164,7 @@ import Base from '../layouts/Base.astro';
     let culOverride: any = null;
     let relOverride: any = null;
     let showUnavailable = false;
+    let cabEff = 0.4;                           // Encourage push = 1.0 × this
     const start: Record<string, number> = {};   // where each axis begins
     const esc = (t: string) => String(t).replace(/[&<>"]/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
@@ -181,24 +187,38 @@ import Base from '../layouts/Base.astro';
     /** Country facts with any culture/religion swap applied. */
     function facts() {
       if (!country) return null;
+      const rec = STARTS[country.t] || {};
       const f = { ...country.f, cap: country.f.cap || {},
-                  gov: (STARTS[country.t] || {}).type || null };
+                  gov: rec.type || null,
+                  io: rec.io || [], parl: rec.parliament || null,
+                  laws: new Set(Object.values(rec.laws || {})),
+                  privs: new Set(rec.privileges || []) };
       if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l; }
       if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g; }
       return f;
     }
-    /** TRUE / FALSE / null-unknown, matching the tech planner. */
+    /** TRUE / FALSE / null-unknown, matching the value-path evaluator. */
     function evalGate(e: any, f: any): boolean | null {
       if (!e) return true;
       const h = e[0];
       if (h === 'and') { let u = false; for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === false) return false; if (v === null) u = true; } return u ? null : true; }
       if (h === 'or') { let u = false; for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === true) return true; if (v === null) u = true; } return u ? null : false; }
       if (h === 'not') { const v = evalGate(e[1], f); return v === null ? null : !v; }
-      if (h === '?') return null;
+      if (h === '?' || h === 'var' || h === 'policy' || h === 'unl' ||
+          h === 'adv' || h === 'age' || h === 'age>=' || h === 'reform') return null;
+      if (h === 'true') return true;
+      if (h === 'false') return false;
       if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
       if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
       if (h === 'tag') return f.tag === e[1];
       if (h === 'gov') return f.gov ? f.gov === e[1] : null;
+      if (h === 'iotype') return false;
+      if (h === 'iomem') return (f.io || []).includes(e[1]) ? true : null;
+      if (h === 'mrep') return f.gov === 'republic' ? null : false;
+      if (h === 'ctype') return false;
+      if (h === 'law') return f.laws && f.laws.has(e[1]) ? true : null;
+      if (h === 'priv') return f.privs && f.privs.has(e[1]) ? true : null;
+      if (h === 'parl') return f.parl ? f.parl === e[1] : null;
       return f[h] === e[1];
     }
     /** Can this country take it? Unknown counts as yes — it depends on
@@ -209,6 +229,11 @@ import Base from '../layouts/Base.astro';
       return evalGate(m.gate, f) !== false;
     }
 
+    /** One effect's monthly weight: Encourage scales with cabinet
+     *  efficiency, estate-power-tiered effects count at half. */
+    const effVal = (m: any, e: any) =>
+      (e.perMonth ?? 0) * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1);
+
     /** Net monthly drift per axis. Right is positive, left negative — the
      *  same convention as the -100..+100 axis itself. */
     function totals() {
@@ -217,7 +242,7 @@ import Base from '../layouts/Base.astro';
         if (!picked.has(uid(m))) continue;
         for (const e of m.effects) {
           if (e.temp) continue;              // only while a debate runs
-          const v = (e.perMonth ?? 0) * (e.dir === 'right' ? 1 : -1);
+          const v = effVal(m, e) * (e.dir === 'right' ? 1 : -1);
           out[e.pair] = (out[e.pair] || 0) + v;
         }
       }
@@ -232,7 +257,7 @@ import Base from '../layouts/Base.astro';
         for (const e of m.effects) {
           if (e.temp) continue;
           const s = out[e.pair] || (out[e.pair] = { l: 0, r: 0, n: 0 });
-          if (e.dir === 'right') s.r += e.perMonth ?? 0; else s.l += e.perMonth ?? 0;
+          if (e.dir === 'right') s.r += effVal(m, e); else s.l += effVal(m, e);
           s.n++;
         }
       }
@@ -243,7 +268,7 @@ import Base from '../layouts/Base.astro';
       return m.effects.map((e: any) => {
         const p = D.pairs[e.pair];
         const side = e.dir === 'right' ? p.right.name : p.left.name;
-        return `<b>${e.perMonth ?? '?'}</b>→${esc(side)}`;
+        return `<b>${+effVal(m, e).toFixed(3)}</b>→${esc(side)}`;
       }).join(' ');
     }
 
@@ -282,25 +307,37 @@ import Base from '../layouts/Base.astro';
         'Nothing picked yet — choose from the list below.</div>';
     }
 
+    /** The drift model (same as the value path): a value approaches an
+     *  equilibrium of INERTIA × net push, at (E − v)/INERTIA per month, with
+     *  the engine's 0.01 floor carrying the last point. */
+    const INERTIA = () => D.inertia || 100;
+    const MIN_MOVE = 0.01;
+    const eqOf = (net: number) => net * INERTIA();
     /** Where an axis sits after n months, clamped to the -100..100 range. */
     function positionAt(pid: string, net: number, months: number) {
-      const s = start[pid] ?? 0;
-      return Math.max(-D.scale, Math.min(D.scale, s + net * months));
+      const v0 = start[pid] ?? 0;
+      const E = eqOf(net);
+      const v = E + (v0 - E) * Math.exp(-months / INERTIA());
+      return Math.max(-D.scale, Math.min(D.scale, v));
     }
-    /** Months until a requirement is met, or null if this drift never gets
-     *  there (already-met returns 0). */
+    /** Months until a requirement is met, or null if this drift stalls
+     *  short of it (already-met returns 0). */
     function monthsUntil(req: any, net: number) {
-      const s = start[req.pair] ?? 0;
-      const target = req.value;
-      const ok = (v: number) => req.op === '>' ? v > target : req.op === '>=' ? v >= target
-        : req.op === '<' ? v < target : req.op === '<=' ? v <= target : v === target;
-      if (ok(s)) return 0;
+      const v0 = start[req.pair] ?? 0;
+      const T = req.value;
+      const ok = (v: number) => req.op === '>' ? v > T : req.op === '>=' ? v >= T
+        : req.op === '<' ? v < T : req.op === '<=' ? v <= T : v === T;
+      if (ok(v0)) return 0;
       if (!net) return null;
-      const need = (req.op === '>' || req.op === '>=') ? target - s : target - s;
-      const m = need / net;
-      if (m <= 0) return null;                       // drifting the wrong way
-      const capped = positionAt(req.pair, net, m);
-      return ok(capped) || Math.abs(capped) >= D.scale ? m : null;
+      const E = eqOf(net);
+      const toward = T > v0 ? 1 : -1;
+      if ((E - v0) * toward <= 0 || (E - T) * toward < 0) return null;
+      if ((E - T) * toward >= 1) return INERTIA() * Math.log((E - v0) / (E - T));
+      const edge = E - toward;
+      const expo = (edge - v0) * toward > 0
+        ? INERTIA() * Math.log(Math.abs(E - v0)) : 0;
+      const crawlFrom = (edge - v0) * toward > 0 ? edge : v0;
+      return expo + Math.abs(T - crawlFrom) / MIN_MOVE;
     }
 
     function renderAxes() {
@@ -328,10 +365,11 @@ import Base from '../layouts/Base.astro';
         `</div>` +
         `<div class="vp-axis__num">` +
         `<span>start <input class="vp-axis__start" type="number" step="5" min="-100" max="100" ` +
-        `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → at most <b>${r.now.toFixed(1)}</b></span>` +
+        `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → <b>${r.now.toFixed(1)}</b> at ${horizonYears} yrs</span>` +
         (r.net ? `<span title="push: ${r.sd.l.toFixed(3)} left / ${r.sd.r.toFixed(3)} right from ${r.sd.n} factor(s)">` +
                  `${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month from ${r.sd.n} · ` +
-                 `stalls below this</span>` : '<span>no movement</span>') +
+                 `stalls at ${Math.max(-D.scale, Math.min(D.scale, Math.round(eqOf(r.net))))}</span>`
+               : '<span>no push — drifts toward 0</span>') +
         `</div></div>`).join('');
     }
 
@@ -359,9 +397,11 @@ import Base from '../layouts/Base.astro';
         `${reachable.length} within ${horizonYears} years · ${rows.length} gated in total`;
       $('[data-vp-unlocks]').innerHTML = [...reachable, ...rest.slice(0, 40)].map((x: any) => {
         const cls = x.months === null ? 'never' : x.months === 0 ? '' : 'later';
-        const when = x.months === null ? 'not on this path'
+        const hold = x.r.requires.some((q: any) => q.hold);
+        const when = (x.months === null ? 'this drift stalls short of it'
           : x.months === 0 ? 'already qualifies'
-          : `no sooner than ${(x.months / 12).toFixed(1)} yrs`;
+          : `no sooner than ${(x.months / 12).toFixed(1)} yrs`) +
+          (hold && x.months !== null ? ' · must stay held or the reform is lost' : '');
         const need = x.r.requires.map((q: any) => {
           const p = D.pairs[q.pair];
           return p ? `${esc(p.left.name)}/${esc(p.right.name)} ${q.op} ${q.value}` : q.pair;
@@ -472,6 +512,10 @@ import Base from '../layouts/Base.astro';
       });
       ($('[data-vp-all]') as HTMLInputElement).addEventListener('change', (e) => {
         showUnavailable = (e.target as HTMLInputElement).checked; renderList();
+      });
+      ($('[data-vp-eff]') as HTMLInputElement).addEventListener('change', (e) => {
+        const v = parseFloat((e.target as HTMLInputElement).value);
+        if (Number.isFinite(v)) { cabEff = Math.max(0, Math.min(1, v)); render(); }
       });
 
       const qs = new URLSearchParams(location.search);

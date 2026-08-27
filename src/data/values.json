@@ -3,6 +3,8 @@
  "entities": [
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "centralization_vs_decentralization",
     "left": {
      "key": "centralization",
@@ -43,6 +45,8 @@
     "movers": [
      "general_archive_of_simancas",
      "the_cipher_secretary",
+     "encourage_centralization",
+     "encourage_decentralization",
      "merge_culture_group",
      "autonomous_kadiluks",
      "autonomous_local_commanders",
@@ -243,6 +247,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "traditionalist_vs_innovative",
     "left": {
      "key": "traditionalist",
@@ -313,6 +319,8 @@
     "movers": [
      "al_azhar_madrasa",
      "woodhenge_of_cahokia",
+     "encourage_innovative",
+     "encourage_traditionalist",
      "kbo_sharia_courts",
      "form_new_culture",
      "commons_petition",
@@ -460,6 +468,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "spiritualist_vs_humanist",
     "left": {
      "key": "spiritualist",
@@ -542,6 +552,8 @@
      "moscow_orphanage",
      "constantinople_observatory",
      "stroganov_school_of_iconic_art",
+     "encourage_humanist",
+     "encourage_spiritualist",
      "clergy_estate",
      "dhimmi_estate",
      "austere_monastic_life",
@@ -706,6 +718,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "aristocracy_vs_plutocracy",
     "left": {
      "key": "aristocracy",
@@ -764,6 +778,8 @@
     "movers": [
      "institute_of_noble_maidens",
      "munich_residenz_founding",
+     "encourage_aristocracy",
+     "encourage_plutocracy",
      "stroganov_influences",
      "auxilium_et_consilium",
      "building_rights",
@@ -931,6 +947,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "serfdom_vs_free_subjects",
     "left": {
      "key": "serfdom",
@@ -987,6 +1005,8 @@
      }
     ],
     "movers": [
+     "encourage_free_subjects",
+     "encourage_serfdom",
      "peasants_estate",
      "peasants_autonomous_villages",
      "auxilium_et_consilium",
@@ -1151,6 +1171,8 @@
   },
   {
    "data": {
+    "age": "age_4_reformation",
+    "gate": null,
     "id": "mercantilism_vs_free_trade",
     "left": {
      "key": "mercantilism",
@@ -1207,6 +1229,8 @@
      }
     ],
     "movers": [
+     "encourage_free_trade",
+     "encourage_mercantilism",
      "general_privilege",
      "kulm_law",
      "magdeburg_rights",
@@ -1296,6 +1320,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "belligerent_vs_conciliatory",
     "left": {
      "key": "belligerent",
@@ -1376,6 +1402,8 @@
      }
     ],
     "movers": [
+     "encourage_belligerent",
+     "encourage_conciliatory",
      "office_of_new_converts",
      "expansionist_zealotry",
      "reduced_from_military_obligations",
@@ -1519,6 +1547,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "quality_vs_quantity",
     "left": {
      "key": "quality",
@@ -1557,6 +1587,8 @@
      }
     ],
     "movers": [
+     "encourage_quality",
+     "encourage_quantity",
      "lat_latin_crusader_elite",
      "ghazi_privilege",
      "jaysh_armies",
@@ -1641,6 +1673,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "offensive_vs_defensive",
     "left": {
      "key": "offensive",
@@ -1697,6 +1731,8 @@
      }
     ],
     "movers": [
+     "encourage_defensive",
+     "encourage_offensive",
      "cossacks_estate",
      "nobles_offensive_military_doctrine",
      "zupa_districts",
@@ -1799,6 +1835,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "land_vs_naval",
     "left": {
      "key": "land",
@@ -1843,6 +1881,8 @@
      }
     ],
     "movers": [
+     "encourage_land",
+     "encourage_naval",
      "building_roads_rights",
      "noble_fortification_licenses",
      "nobles_land_rights",
@@ -1934,6 +1974,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "capital_economy_vs_traditional_economy",
     "left": {
      "key": "capital_economy",
@@ -1985,6 +2027,8 @@
     ],
     "movers": [
      "free_economic_society",
+     "encourage_capital_economy",
+     "encourage_traditional_economy",
      "first_come_first_serve",
      "capitalism_prioritising_infrastructure_trade_and_culture",
      "capitalism_prioritising_infrastructure_trade",
@@ -2096,6 +2140,8 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": null,
     "id": "individualism_vs_communalism",
     "left": {
      "key": "individualism",
@@ -2137,6 +2183,8 @@
      "bavarian_academy_of_sciences",
      "academy_of_sciences",
      "institute_of_noble_maidens",
+     "encourage_communalism",
+     "encourage_individualism",
      "equality",
      "capitalism_prioritising_infrastructure_trade_and_culture",
      "capitalism_prioritising_infrastructure_trade",
@@ -2249,6 +2297,8 @@
   },
   {
    "data": {
+    "age": "age_3_discovery",
+    "gate": null,
     "id": "outward_vs_inward",
     "left": {
      "key": "outward",
@@ -2317,6 +2367,8 @@
      }
     ],
     "movers": [
+     "encourage_inward",
+     "encourage_outward",
      "bironovshchina",
      "by_blood",
      "by_tradition",
@@ -2427,6 +2479,48 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": [
+     "and",
+     [
+      "not",
+      [
+       "cgrp",
+       "chinese_group"
+      ]
+     ],
+     [
+      "or",
+      [
+       "?",
+       "is subject of"
+      ],
+      [
+       "or",
+       [
+        "cap",
+        "sub_continent",
+        "east_asia"
+       ],
+       [
+        "cap",
+        "sub_continent",
+        "south_east_asia"
+       ]
+      ],
+      [
+       "and",
+       [
+        "?",
+        "exists"
+       ],
+       [
+        "?",
+        "is member of international organization"
+       ]
+      ]
+     ]
+    ],
     "id": "sinicized_vs_unsinicized",
     "left": {
      "key": "sinicized",
@@ -2467,6 +2561,8 @@
     "movers": [
      "confucian_academy",
      "confucian_school",
+     "encourage_sinicized",
+     "encourage_unsinicized",
      "tribal_autonomy",
      "middle_kingdom",
      "queue_hair_status_quo",
@@ -2544,6 +2640,8 @@
   },
   {
    "data": {
+    "age": "age_5_absolutism",
+    "gate": null,
     "id": "absolutism_vs_liberalism",
     "left": {
      "key": "absolutism",
@@ -2579,6 +2677,8 @@
      "house_of_parliament",
      "royal_court",
      "tax_assessor",
+     "encourage_absolutism",
+     "encourage_liberalism",
      "absolute_presidential_power_policy",
      "absolute_rule_policy",
      "absolute_rulership",
@@ -2657,6 +2757,11 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": [
+     "?",
+     "modifier:allow mysticism vs jurisprudence"
+    ],
     "id": "mysticism_vs_jurisprudence",
     "left": {
      "key": "mysticism",
@@ -2683,6 +2788,8 @@
      }
     ],
     "movers": [
+     "encourage_jurisprudence",
+     "encourage_mysticism",
      "autonomous_kadiluks",
      "freedom_of_interpretation",
      "dhimmi_land_rights",
@@ -2723,6 +2830,18 @@
   },
   {
    "data": {
+    "age": null,
+    "gate": [
+     "and",
+     [
+      "?",
+      "has dlc"
+     ],
+     [
+      "tag",
+      "BYZ"
+     ]
+    ],
     "id": "latinization_vs_hellenization",
     "left": {
      "key": "latinization",
@@ -2761,7 +2880,9 @@
      }
     ],
     "movers": [
+     "encourage_hellenization",
      "encourage_latin_militarism",
+     "encourage_latinization",
      "spread_philhellenism",
      "theme_system",
      "mos_maiorum",

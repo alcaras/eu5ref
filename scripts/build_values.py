@@ -111,8 +111,13 @@ def unlocked_by(age_years: dict[str, int]) -> dict[str, dict]:
     return out
 
 
-def value_pairs() -> dict[str, dict]:
-    """The 17 axes. The id names both ends: left_vs_right."""
+def value_pairs(cgroups=None) -> dict[str, dict]:
+    """The 17 axes. The id names both ends: left_vs_right.
+
+    Axes are themselves gated: mercantilism/outward/absolutism carry an `age`,
+    and the special axes (sinicized, mysticism, latinization) an `allow`
+    trigger. Emitted so the planners never schedule an axis before it exists.
+    """
     pairs = {}
     try:
         tree = ref.parser.parser.parse_folder_as_one_file('in_game/common/societal_values')
@@ -123,12 +128,22 @@ def value_pairs() -> dict[str, dict]:
         if '_vs_' not in key:
             continue
         left, right = key.split('_vs_', 1)
+        age = gate = None
+        if hasattr(block, 'get'):
+            av = block.get('age')
+            if isinstance(av, str):
+                age = av
+            allow = block.get('allow')
+            if allow is not None and hasattr(allow, 'iterate_with_duplicates'):
+                gate = triggers.compile_trigger(allow, cgroups or {})
         pairs[key] = {
             'id': key,
             'left': {'key': left, 'name': ref.plain_text(ref.parser.localize(left, default='')) or ref.pretty(left)},
             'right': {'key': right, 'name': ref.plain_text(ref.parser.localize(right, default='')) or ref.pretty(right)},
             'left_mods': ref.mods_from_tree(block.get('left_modifier')) if hasattr(block, 'get') else [],
             'right_mods': ref.mods_from_tree(block.get('right_modifier')) if hasattr(block, 'get') else [],
+            'age': age,
+            'gate': gate,
         }
     return pairs
 
@@ -141,6 +156,24 @@ LAW_META = {
     'potential', 'allow', 'locked', 'trigger', 'type', 'requires_vote',
     'custom_tags', 'unique', 'has_levels', 'ai_will_do', 'icon',
 }
+
+
+def _bare_tokens(node) -> list[str]:
+    """A `{ sunni ibadi shia }` list, whatever shape the parser hands back."""
+    if node is None:
+        return []
+    if isinstance(node, str):
+        return node.split()
+    if isinstance(node, (list, tuple)):
+        return [str(x) for x in node]
+    if hasattr(node, 'iterate_with_duplicates'):
+        out = []
+        for k, v in node.iterate_with_duplicates():
+            out.append(str(k))
+            if isinstance(v, str) and v:
+                out.append(v)
+        return out
+    return []
 
 
 def entries(folder: str, tree):
@@ -262,17 +295,57 @@ def scan_requirements(body: str):
         yield axis, op, num, gate
 
 
-def requirements() -> list[dict]:
+# A reform's `societal_values = { X_focus }` block is a first-class engine
+# requirement: the value must sit at least SOCIAL_VALUE_REQUIREMENT_FOR_REFORM
+# (a define, 50) toward that pole — and the engine REMOVES the reform when it
+# no longer holds (loc: CHANGE_SOCIETAL_VALUE_AFFECTS_REFORM "... will be lost
+# as it requires at least $VAL$ towards $NAME$", REMOVE_GOV_REFORM_SOCIETAL_
+# VALUES_MIN/MAX). So unlike an `allow`-block comparison this is a position
+# you must HOLD, not a one-off gate.
+_FOCUS = re.compile(r'societal_values\s*=\s*\{([^}]*)\}')
+
+
+def focus_threshold() -> float:
+    path = (ref.ROOT / 'game' / 'loading_screen' / 'common' / 'defines'
+            / '00_defines.txt')
+    if path.exists():
+        m = re.search(r'^\s*SOCIAL_VALUE_REQUIREMENT_FOR_REFORM\s*=\s*([0-9.]+)',
+                      path.read_text(encoding='utf-8-sig', errors='replace'), re.M)
+        if m:
+            return float(m.group(1))
+    return 50.0
+
+
+def _focus_reqs(body: str, side_to_pair: dict, threshold: float) -> list[dict]:
+    out = []
+    for m in _FOCUS.finditer(body):
+        for tok in m.group(1).split():
+            if not tok.endswith('_focus'):
+                continue
+            hit = side_to_pair.get(tok[:-len('_focus')])
+            if not hit:
+                continue
+            pid, direction = hit
+            out.append({'pair': pid,
+                        'op': '>=' if direction == 'right' else '<=',
+                        'value': threshold if direction == 'right' else -threshold,
+                        'block': 'societal_values', 'hold': True})
+    return out
+
+
+def requirements(side_to_pair: dict, threshold: float) -> list[dict]:
     """Everything that demands a societal value position, with its axis,
-    comparison and threshold."""
+    comparison and threshold. Reform focus blocks are flagged `hold` — the
+    engine keeps checking them and removes the reform when unmet."""
     out = []
     for folder, (label, etype) in SOURCES.items():
         d = ref.ROOT / 'game' / 'in_game' / 'common' / folder
         if not d.is_dir():
             continue
+        focus_folder = folder == 'government_reforms'
         for f in sorted(d.glob('*.txt')):
             txt = _uncomment(f.read_text(encoding='utf-8-sig', errors='replace'))
-            if 'societal_value:' not in txt:
+            if 'societal_value:' not in txt and not (focus_folder and 'societal_values' in txt):
                 continue
             for m in re.finditer(r'^([a-z_0-9]+)\s*=\s*\{', txt, re.M):
                 i = m.end(); depth = 1; start = i
@@ -285,6 +358,12 @@ def requirements() -> list[dict]:
                 body = txt[start:i - 1]
                 key = m.group(1)
                 reqs, seen_req = [], set()
+                if focus_folder:
+                    for r in _focus_reqs(body, side_to_pair, threshold):
+                        sig = (r['pair'], r['op'], r['value'])
+                        if sig not in seen_req:
+                            seen_req.add(sig)
+                            reqs.append(r)
                 for axis, op, num, block in scan_requirements(body):
                     sig = (axis, op, num)
                     if sig in seen_req:
@@ -312,7 +391,7 @@ def main():
     unlocks = unlocked_by({a['name']: a['year'] for a in age_list})
     labels = ref.label_map()
     cgroups = ref.culture_group_keys()
-    pairs = value_pairs()
+    pairs = value_pairs(cgroups)
     side_to_pair = {}
     for pid, p in pairs.items():
         side_to_pair[p['left']['key']] = (pid, 'left')
@@ -357,25 +436,69 @@ def main():
             if gate:
                 seen_l, gate_labels = set(), []
                 for kind, v in triggers.literals(gate):
-                    lab = labels.get(v) or ref.pretty(v)
+                    # composite ids like "law:x" label by their bare key
+                    bare_v = v.split(':')[-1]
+                    lab = (labels.get(v) or labels.get(bare_v)
+                           or ref.plain_text(ref.parser.localize(bare_v, default=''))
+                           or ref.pretty(bare_v))
                     if lab not in seen_l:
                         seen_l.add(lab)
                         gate_labels.append([lab, kind, v])
-            # A law group declares the governments it belongs to outside any
-            # trigger (`law_gov_group = monarchy`), so fold it in or a
-            # monarchy gets offered tribal and republican policies.
+            # A law group declares who it belongs to outside any trigger:
+            # `law_gov_group = monarchy` (governments), `law_religion_group =
+            # { sunni ibadi … }` (religions) and `law_country_group = ENG`
+            # (tags). Fold them all in, or a Catholic monarchy gets offered
+            # iqta law and England's unique acts.
             if group:
                 grp = tree[group] if group in tree else None
-                govs = []
+                buckets: dict[str, list] = {'gov': [], 'rel': [], 'tag': []}
                 if grp is not None and hasattr(grp, 'iterate_with_duplicates'):
                     for gk, gv in grp.iterate_with_duplicates():
-                        if str(gk) == 'law_gov_group' and isinstance(gv, str):
-                            govs.append(['gov', gv])
-                if govs:
-                    clause = govs[0] if len(govs) == 1 else ['or'] + govs
+                        gk = str(gk)
+                        if gk == 'law_gov_group' and isinstance(gv, str):
+                            buckets['gov'].append(['gov', gv])
+                        elif gk == 'law_country_group' and isinstance(gv, str):
+                            buckets['tag'].append(['tag', gv])
+                        elif gk == 'law_religion_group':
+                            for rk in _bare_tokens(gv):
+                                buckets['rel'].append(['rel', rk])
+                for kind_clauses in buckets.values():
+                    if not kind_clauses:
+                        continue
+                    clause = (kind_clauses[0] if len(kind_clauses) == 1
+                              else ['or'] + kind_clauses)
                     gate = ['and', gate, clause] if gate else clause
                     gate_labels = (gate_labels or []) + [
-                        [ref.pretty(g[1]), 'gov', g[1]] for g in govs]
+                        [labels.get(c[1]) or ref.pretty(c[1]), c[0], c[1]]
+                        for c in kind_clauses]
+
+            # A reform's own metadata: `government = republic` and `age =
+            # age_2_renaissance` gate it exactly like a law group's gov line,
+            # `major = yes` means one-major-per-country, and years/months is
+            # how long implementation takes (modifiers scale up over it).
+            major = None
+            impl_months = None
+            if folder == 'government_reforms' and hasattr(block, 'get'):
+                gv = block.get('government')
+                if isinstance(gv, str):
+                    clause = ['gov', gv.split(':')[-1]]
+                    gate = ['and', gate, clause] if gate else clause
+                    gate_labels = (gate_labels or []) + [
+                        [ref.pretty(clause[1]), 'gov', clause[1]]]
+                av = block.get('age')
+                if isinstance(av, str):
+                    clause = ['age>=', av]
+                    gate = ['and', gate, clause] if gate else clause
+                mv = block.get('major')
+                if mv is True or (isinstance(mv, str) and mv.strip() == 'yes'):
+                    major = True
+                months = 0
+                for unit, mul in (('years', 12), ('months', 1)):
+                    uv = block.get(unit)
+                    if isinstance(uv, (int, float)):
+                        months += int(uv) * mul
+                if months:
+                    impl_months = months
 
             estate = None
             ev = block.get('estate') if hasattr(block, 'get') else None
@@ -410,6 +533,30 @@ def main():
                 'gateLabels': gate_labels or [],
                 'estate': estate,
                 'unlock': unlocks.get(eid(etype, group or str(key))) if etype else None,
+                # every cabinet action occupies a cabinet member while it runs
+                'cabinet': folder == 'cabinet_actions' or None,
+                'major': major,
+                'implMonths': impl_months,
+            })
+
+    # The generic "Encourage Societal Value" cabinet action
+    # (cabinet_actions/change_societal_values.txt): one static modifier per
+    # pole at monthly_towards_X = 1, "scaled with cabinet efficiency"
+    # (main_menu/common/static_modifiers/societal_values.txt). The frontend
+    # multiplies by a cabinet-efficiency input; base 1.0 is emitted here.
+    for pid, p in pairs.items():
+        for dirn in ('left', 'right'):
+            side = p[dirn]['key']
+            movers.append({
+                'key': f'encourage_{side}',
+                'name': f"Encourage {p[dirn]['name']}",
+                'group': None, 'groupName': None,
+                'source': 'Cabinet action', 'folder': 'cabinet_actions',
+                'id': None, 'slug': f'encourage-{slugify(side)}',
+                'effects': [{'pair': pid, 'dir': dirn, 'perMonth': 1.0,
+                             'raw': 'cabinet efficiency'}],
+                'gate': None, 'gateLabels': [], 'estate': None, 'unlock': None,
+                'cabinet': True, 'encourage': True,
             })
 
     # the same key can appear in more than one file of a folder
@@ -419,6 +566,9 @@ def main():
         if sig in seen:
             continue
         seen.add(sig)
+        for k in ('major', 'implMonths', 'cabinet'):
+            if m.get(k) is None:
+                m.pop(k, None)
         deduped.append(m)
     movers = deduped
     movers.sort(key=lambda m: (m['source'], m['name']))
@@ -441,7 +591,33 @@ def main():
         'facets': [],
     })
 
-    reqs = requirements()
+    threshold = focus_threshold()
+    reqs = requirements(side_to_pair, threshold)
+
+    # Attach hold requirements to the reform movers themselves, so the
+    # planner can price "keeping this reform" while it plans the swaps.
+    hold_by_key = {r['key']: [q for q in r['requires'] if q.get('hold')]
+                   for r in reqs if r['folder'] == 'government_reforms'}
+    for m in movers:
+        if m['folder'] == 'government_reforms' and hold_by_key.get(m['key']):
+            m['holds'] = hold_by_key[m['key']]
+
+    # Unlock grants for gate literals: ["unl", "law:x"] resolves through the
+    # same advance join movers use. Ids granted by no advance stay absent —
+    # event- or mission-granted, honestly unknown.
+    unl_ids = set()
+
+    def _collect_unl(e):
+        if not isinstance(e, list) or not e:
+            return
+        if e[0] == 'unl':
+            unl_ids.add(e[1])
+        for s in e[1:]:
+            if isinstance(s, list):
+                _collect_unl(s)
+    for m in movers:
+        _collect_unl(m.get('gate'))
+    unlock_grants = {i: unlocks[i] for i in sorted(unl_ids) if i in unlocks}
 
     # icons come from the datasets that already exported them
     icons: dict[str, str] = {}
@@ -486,10 +662,14 @@ def main():
     out = ref.ROOT / 'public' / 'values.json'
     out.write_text(json.dumps({
         'scale': 100,           # SOCIETAL_VALUE_MAX
+        'inertia': 100,         # SOCIETAL_VALUE_INERTIA_SCALE — a value
+                                # stalls at inertia × net monthly push
+        'focusThreshold': threshold,   # SOCIAL_VALUE_REQUIREMENT_FOR_REFORM
         'magnitudes': mags,
         'pairs': pairs,
         'movers': movers,
         'requirements': reqs,
+        'unlockGrants': unlock_grants,
         'ages': age_list,
         'countries': countries,
         'cultures': cultures,
@@ -497,8 +677,14 @@ def main():
     }, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     kb = out.stat().st_size // 1024
     eff = sum(len(m['effects']) for m in movers)
+    holds = sum(1 for m in movers if m.get('holds'))
+    focus = sum(1 for r in reqs if any(q.get('hold') for q in r['requires']))
+    unknown = sum(1 for m in movers if m.get('gate') and triggers.is_dynamic(m['gate']))
     print(f'  public/values.json: {len(pairs)} axes, {len(movers)} movers, '
-          f'{eff} effects, {len(reqs)} things gated on a value, {kb}KB')
+          f'{eff} effects, {len(reqs)} things gated on a value '
+          f'({focus} hold-required reforms, {holds} of them movers), '
+          f'{len(unlock_grants)} gate unlock joins, '
+          f'{unknown} movers with an unknowable gate, {kb}KB')
     if unresolved_sides:
         print(f'  ⚠ {len(unresolved_sides)} monthly_towards_* side(s) matched no axis: '
               f'{sorted(unresolved_sides)[:6]}')
