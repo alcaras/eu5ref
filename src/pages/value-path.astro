@@ -2,30 +2,29 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Value Path" active="value-path" pageMark="🧗" eyebrow="Tools"
-  description="Sequence societal-value targets: what to swap on at each stage, what it costs to hold what you already won, and when each age opens the tools for it.">
+  description="Your societal-value targets as an age-by-age checklist: what to enact, grant and research in each age, with every axis drifting at once.">
 
   <p style="max-width: 820px; color: var(--text-soft);">
     A societal value drifts toward an equilibrium set by what pushes it:
     <b>it stalls at 100 × your net monthly push</b>
     (<code>SOCIETAL_VALUE_INERTIA_SCALE</code>, confirmed by player testing) —
-    0.4/month of push carries you to ±40 and no further, and the pole itself
-    needs a full 1.0/month, held the whole way. Swap the push away and the
-    value drifts back toward whatever the new setup supports. List the
-    positions you want, in the order you want them, and this schedules the
-    swaps against the campaign clock from your country's real 1337 setup —
-    pricing what it costs to <em>hold</em> each finished position while you
-    push the next one.
+    0.4/month carries you to ±40 and no further, and the pole needs a full
+    1.0/month, held the whole way. Every axis drifts <em>at the same time</em>
+    under whatever you run, so this plans one running setup per age: list the
+    positions you want (the order is their priority when tools conflict) and
+    read the result the way you play it — age by age, "do these things now",
+    then the next age opens and the list grows.
   </p>
   <p style="max-width: 820px; color: var(--text-dim); font-size: 13px;">
     <b>What banks and what doesn't.</b> A reform whose requirement is a
     <code>societal_values</code> focus block needs the value at
-    <b>50 toward its pole and it is removed when that stops being true</b> —
-    the game's own strings say a value change means the reform "will be lost
-    as it requires at least 50 towards" its side. Keeping such a reform costs
-    0.5/month on that axis forever. Only reforms whose value requirement sits
-    in their <code>allow</code> block appear to survive drifting back
-    (no <code>remove_if</code> — verify in game before you rely on it). Laws
-    and privileges push only while you run them.
+    <b>50 toward its pole and is removed when that stops being true</b> —
+    keeping it costs 0.5/month on that axis forever. Only reforms whose value
+    requirement sits in <code>allow</code> appear to survive drifting back
+    (verify in game). Laws and privileges push only while you run them — and
+    since granting <em>and</em> revoking privileges both burn estate
+    satisfaction, this plan grants once and avoids swapping them back and
+    forth; a revoke it cannot avoid is flagged as the cost it is.
   </p>
 
   <div class="vp-controls">
@@ -39,11 +38,11 @@ import Base from '../layouts/Base.astro';
     <label class="pl-toggle" title="How efficient the cabinet member you put on Encourage Societal Value is — base push is 1.0/month × this. Skill, crown power and council reforms drive it; 0.3–0.6 is typical.">
       cabinet eff. <input type="number" data-pp-eff value="0.4" min="0" max="1" step="0.05" style="width:56px;" />
     </label>
-    <label class="pl-toggle" title="How many NEW estate privileges one stage may grant. The real bound is estate satisfaction (−3 per grant), which the files cannot price.">
-      new privs/stage <input type="number" data-pp-pb value="4" min="0" max="10" step="1" style="width:48px;" />
+    <label class="pl-toggle" title="How many NEW estate privileges to grant per age. The real bound is estate satisfaction (−3 per grant), which the files cannot price.">
+      new privs/age <input type="number" data-pp-pb value="4" min="0" max="12" step="1" style="width:48px;" />
     </label>
-    <label class="pl-toggle" title="How many NEW government reforms one stage may take. Reforms are permanent and implement over years — pace them honestly.">
-      new reforms/stage <input type="number" data-pp-rb value="2" min="0" max="8" step="1" style="width:48px;" />
+    <label class="pl-toggle" title="How many NEW government reforms to take per age. Reforms are permanent and implement over years — pace them honestly.">
+      new reforms/age <input type="number" data-pp-rb value="3" min="0" max="10" step="1" style="width:48px;" />
     </label>
     <span class="chips" data-pp-context></span>
     <span class="pl-spacer"></span>
@@ -64,7 +63,7 @@ import Base from '../layouts/Base.astro';
       until <input type="number" data-pp-at value="" placeholder="max" step="5" min="-100" max="100"
         style="width:64px;" /> <span style="color:var(--text-faint);">blank = as far as the push can carry it · 50 is what focus reforms need</span>
     </label>
-    <button type="button" class="csv-btn" data-pp-push>+ Add stage</button>
+    <button type="button" class="csv-btn" data-pp-push>+ Add target</button>
   </div>
 
   <div data-pp-path></div>
@@ -89,17 +88,16 @@ import Base from '../layouts/Base.astro';
     let country: any = null;
     let govOverride: string | null = null;
     let cabEff = 0.4;               // Encourage push = 1.0 × this
-    let privBudget = 4;             // new privileges per stage
-    let reformBudget = 2;           // new (permanent!) reforms per stage
+    let privBudget = 4;             // new privileges per AGE
+    let reformBudget = 3;           // new (permanent!) reforms per AGE
     /** Unverified movers the player confirmed in game ("I have this"). */
     let promoted = new Set<string>();
-    /** Each stage: which axis, which way, how far, and whether the finished
-     *  position is held afterwards (keep) or released to drift. */
+    /** Each target: which axis, which way, how far. Order = priority when
+     *  tools conflict (the cabinet slot, a law group, collateral effects). */
     let path: { pair: string; dir: 'left' | 'right' | 'auto'; at: number | null;
                 after: number | null; last: boolean; keep: boolean;
                 lock: boolean }[] = [];
 
-    /* The path this tool was built around, as a starting point. */
     const EXAMPLE: any[] = [
       ['individualism_vs_communalism', 'right', null],
       ['aristocracy_vs_plutocracy', 'auto', 0],
@@ -118,25 +116,22 @@ import Base from '../layouts/Base.astro';
     const sign = (d: string) => (d === 'right' ? 1 : -1);
     const uid = (m: any) => `${m.folder}:${m.group ? m.group + '/' : ''}${m.key}`;
     const poleName = (pid: string, dir: string) => D.pairs[pid][dir].name;
+    const rnd = (v: number) => Math.round(v) || 0;
 
     /* ---- the drift model --------------------------------------------------
      * Net push p (signed, right positive, per month) sets an equilibrium
      * E = INERTIA × p; the value moves toward E at (E − v)/INERTIA per month
-     * — i.e. exponentially, at full speed from 0 and stalling as it nears E.
-     * The engine stops moving below 0.01/month, so the last reachable point
-     * is ~1 shy of E. Provenance: SOCIETAL_VALUE_INERTIA_SCALE = 100,
+     * — full speed from 0, stalling as it nears E, with the engine's
+     * 0.01/month floor carrying the last point. Provenance:
+     * SOCIETAL_VALUE_INERTIA_SCALE = 100,
      * societal_value_min_scaling_monthly_move = 0.01, and the community-
      * confirmed "max = 100 × monthly change" rule.
      */
     const INERTIA = () => D.inertia || 100;
-    const eqOf = (p: number) => p * INERTIA();               // NOT clamped
-    const capOf = (p: number) =>                             // display cap
-      Math.max(-100, Math.min(100, Math.round(eqOf(p))));
-    /** Months for v0 → T under net p; Infinity when it stalls short.
-     *  Exponential toward the equilibrium, with the engine's 0.01/month
-     *  floor carrying the last point — so the cap itself is reachable,
-     *  slowly. */
     const MIN_MOVE = 0.01;
+    const eqOf = (p: number) => p * INERTIA();               // NOT clamped
+    const capOf = (p: number) =>
+      Math.max(-100, Math.min(100, Math.round(eqOf(p))));
     function monthsTo(v0: number, T: number, p: number): number {
       if (Math.abs(T - v0) < 1e-9) return 0;
       const E = eqOf(p);
@@ -152,26 +147,26 @@ import Base from '../layouts/Base.astro';
       const crawlFrom = (edge - v0) * toward > 0 ? edge : v0;
       return expo + Math.abs(T - crawlFrom) / MIN_MOVE;
     }
-    /** Value after m months under net p. */
     const after = (v0: number, p: number, m: number) => {
       const E = eqOf(p);
       const v = E + (v0 - E) * Math.exp(-m / INERTIA());
       return Math.max(-100, Math.min(100, v));
     };
     /** The furthest point this push can actually reach: the equilibrium. */
-    const reachOf = (p: number, _dir: 1 | -1) =>
+    const reachOf = (p: number) =>
       Math.max(-100, Math.min(100, eqOf(p)));
+    /** One point shy of the reach — past that is a decades-long crawl. */
+    const shyOf = (p: number, s: number) => {
+      const E = eqOf(p);                // signed equilibrium
+      const r = Math.max(-100, Math.min(100, E));
+      return Math.abs(E) > 100 ? r : r - s;
+    };
 
-    /* ---- stage goals ----------------------------------------------------- */
+    /* ---- targets ---------------------------------------------------------- */
 
     function dirOf(st: any, from: number): 'left' | 'right' {
       if (st.dir !== 'auto') return st.dir;
       return from < (st.at ?? 0) ? 'right' : 'left';
-    }
-    function reached(pos: number, st: any, from: number) {
-      if (st.dir === 'auto') return Math.abs(pos - (st.at ?? 0)) <= HOLD_BAND;
-      if (st.at === null) return false;            // open-ended: always push
-      return st.dir === 'right' ? pos >= st.at : pos <= st.at;
     }
 
     /* ---- ages ------------------------------------------------------------ */
@@ -233,7 +228,7 @@ import Base from '../layouts/Base.astro';
       if (h === 'age') return f.age ? f.age === e[1] : null;
       if (h === 'age>=') { const i = ageIdx(f.age), j = ageIdx(e[1]); return i < 0 || j < 0 ? null : i >= j; }
       if (h === 'adv') return null;              // research it and you have it
-      if (h === 'unl') {                         // granted by an advance? then time-gated
+      if (h === 'unl') {
         const g = (D.unlockGrants || {})[e[1]];
         if (!g) return null;                     // event/mission-granted
         const v = grantAvail(g, f);
@@ -248,22 +243,6 @@ import Base from '../layouts/Base.astro';
       if (h === 'reform') return null;
       if (h === 'parl') return f.parl ? f.parl === e[1] : null;
       return f[h] === e[1];
-    }
-
-    function startValues(): Record<string, number> {
-      const rec = startRec();
-      const out: Record<string, number> = {};
-      for (const pid of Object.keys(D.pairs)) out[pid] = (rec?.values || {})[pid] ?? 0;
-      return out;
-    }
-    /** Movers the country already runs at the bookmark. */
-    function running(): Set<string> {
-      const rec = startRec();
-      if (!rec) return new Set<string>();
-      const want = new Set([...(rec.privileges || []), ...Object.values(rec.laws || {})]);
-      const out = new Set<string>();
-      for (const m of D.movers) if (want.has(m.key)) out.add(uid(m));
-      return out;
     }
 
     /** Three-valued OR over the advances that hand a thing out: is any of
@@ -292,6 +271,22 @@ import Base from '../layouts/Base.astro';
       return true;
     }
 
+    function startValues(): Record<string, number> {
+      const rec = startRec();
+      const out: Record<string, number> = {};
+      for (const pid of Object.keys(D.pairs)) out[pid] = (rec?.values || {})[pid] ?? 0;
+      return out;
+    }
+    /** Movers the country already runs at the bookmark. */
+    function running(): Set<string> {
+      const rec = startRec();
+      if (!rec) return new Set<string>();
+      const want = new Set([...(rec.privileges || []), ...Object.values(rec.laws || {})]);
+      const out = new Set<string>();
+      for (const m of D.movers) if (want.has(m.key)) out.add(uid(m));
+      return out;
+    }
+
     /* ---- push ------------------------------------------------------------ */
 
     /** Signed sustained push toward RIGHT on one axis. Temp effects (debates,
@@ -315,13 +310,11 @@ import Base from '../layouts/Base.astro';
       }
       return v;
     }
-    const collateral = (m: any, pid: string) =>
-      m.effects.filter((e: any) => e.pair !== pid && !e.temp);
 
     const byUid = new Map<string, any>();
 
     /* Availability per age is cached once per country/gov/efficiency change;
-       the order search reads only these tables. */
+       everything downstream reads only these tables. */
     let AVAIL: Record<string, Map<string, boolean | null>> = {};
     let HCACHE = new Map<string, any>();
     function buildTable() {
@@ -334,7 +327,7 @@ import Base from '../layouts/Base.astro';
         const f = facts(a.key);
         const tab = new Map<string, boolean | null>();
         for (const m of D.movers) {
-          let v: boolean | null = f ? evalGate(m.gate, f) : true;
+          let v: boolean | null = evalGate(m.gate, f);
           if (v !== false && m.unlock) {
             const gv = grantAvail(m.unlock, f);
             if (gv === false) v = false;             // no advance grants it here
@@ -380,18 +373,35 @@ import Base from '../layouts/Base.astro';
       return res;
     }
 
-    /* ---- portfolio selection ---------------------------------------------
-     * One stage's configuration: which movers run while this stage pushes.
-     * Holds come first — every kept position needs its net kept beyond
-     * min/100 or it decays — then the remaining law slots, privilege budget
-     * and the cabinet member go to the active axis. Collateral effects are
-     * counted, not just displayed.
-     */
-    type Hold = { pair: string; lo: number; hi: number; label: string };
+    /** Does any later age bring a confirmed tool for this axis that today's
+     *  age does not have? While it does, an open-ended target keeps waiting;
+     *  once the toolbox is final, sitting at the current cap IS done. */
+    function toolsImprove(pid: string, dir: string, ageKey: string): boolean {
+      const ck = `TI|${pid}|${dir}|${ageKey}`;
+      const hit = HCACHE.get(ck);
+      if (hit !== undefined) return hit;
+      let yes = false;
+      const from = ageIdx(ageKey);
+      for (const a2 of ages()) {
+        if (ageIdx(a2.key) <= from) continue;
+        if (helpersFor(pid, dir, a2.key).sure
+            .some((c: any) => availOf(c.m, ageKey) !== true)) { yes = true; break; }
+      }
+      HCACHE.set(ck, yes);
+      return yes;
+    }
 
-    /** What can actually be switched OFF again. A reform is permanent (that
-     *  is its appeal and its trap), an estate's leaning or a subject's type
-     *  is not a dial either — only laws, privileges and the cabinet swap. */
+    /* ---- one running configuration for every target at once ---------------
+     * Everything drifts simultaneously, so each decision point picks ONE
+     * setup serving the whole wish-list: holds first (kept positions decay
+     * without their push), then every active target by priority. Conflicts —
+     * the single cabinet slot, one-policy-per-law-group, collateral pushes,
+     * privilege and reform pacing — resolve by the list's order. Privileges
+     * are one-way doors: granting and revoking both burn estate
+     * satisfaction, so a grant stays unless it actively fights the plan,
+     * and a revoked privilege is never re-granted.
+     */
+    type Hold = { pair: string; lo: number; hi: number; label: string; prio: number };
     const REVOCABLE = new Set(['laws', 'estate_privileges', 'cabinet_actions']);
     const revocable = (m: any) => REVOCABLE.has(m.folder);
 
@@ -401,25 +411,35 @@ import Base from '../layouts/Base.astro';
       return v;
     }
 
-    function portfolio(pid: string, dir: string, ageKey: string,
-                       prevOn: Set<string>, holds: Hold[],
-                       avoidPermanent = false) {
-      const s = sign(dir);
+    function configure(active: any[], holds: Hold[], ageKey: string,
+                       prevOn: Set<string>, budgets: any, revoked: Set<string>) {
       const on = new Set(prevOn);
-      const drops: any[] = [];
       const adds: any[] = [];
-      let newPrivs = 0, newReforms = 0, cabUsed = 0;
-      let majorOn = false;
+      const drops: any[] = [];
+      let cabUsed = 0, majorOn = false;
       for (const u of on) {
         const m = byUid.get(u);
         if (m?.cabinet) cabUsed++;
         if (m?.major) majorOn = true;
       }
 
-      // "Breaking" a hold means making its violation WORSE — a hold that is
-      // already out of bounds must not block the changes that improve it.
-      const viol = (h: Hold, n: number) =>
-        Math.max(0, h.lo - n, n - h.hi);
+      const weight = new Map<any, number>();
+      active.forEach((t: any) => weight.set(t, 1 / (1 + t.prio)));
+      /** How much a mover serves the plan: its push toward every active
+       *  target, priority-weighted. Permanent movers only count for targets
+       *  that will be KEPT — a hold-at or released axis must stay undoable. */
+      const score = (m: any) => {
+        let sc = 0;
+        for (const t of active) {
+          const p = pushOf(m, t.st.pair, t.dirn);
+          if (!p) continue;
+          if (!revocable(m) && (t.st.dir === 'auto' || !t.st.keep)) continue;
+          sc += p * weight.get(t)!;
+        }
+        return sc;
+      };
+
+      const viol = (h: Hold, n: number) => Math.max(0, h.lo - n, n - h.hi);
       const wouldBreak = (deltaBy: Map<string, number>) => {
         for (const h of holds) {
           const d = deltaBy.get(h.pair) ?? 0;
@@ -434,122 +454,145 @@ import Base from '../layouts/Base.astro';
         for (const e of m.effects) {
           if (e.temp) continue;
           const v = (e.perMonth ?? 0) * (e.dir === 'right' ? 1 : -1)
-            * (m.encourage ? cabEff : 1) * (removing ? -1 : 1);
+            * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1) * (removing ? -1 : 1);
           d.set(e.pair, (d.get(e.pair) ?? 0) + v);
         }
         return d;
       };
 
-      // 1. drop what fights the active axis — unless a hold needs it, or it
-      //    cannot be revoked at all (a reform is forever). The cabinet member
-      //    is always up for reassignment: an Encourage on some other axis is
-      //    freed too, so the slot can serve this stage or a hold.
+      // 1. reassess what is running. Laws swap cheaply; a privilege is only
+      //    revoked when it meaningfully fights the plan (and that revoke is
+      //    surfaced as a cost); the cabinet member is always reassignable.
       for (const u of [...on]) {
         const m = byUid.get(u);
         if (!m || !revocable(m)) continue;
-        const fights = pushOf(m, pid, dir) < 0;
-        const idleCab = m.cabinet && pushOf(m, pid, dir) <= 0;
-        if (!fights && !idleCab) continue;
+        const sc = score(m);
+        if (m.cabinet) {                    // freed for reassignment below
+          if (wouldBreak(deltaOf(m, true))) continue;
+          on.delete(u); cabUsed--;
+          continue;
+        }
+        const isPriv = m.source === 'Estate privilege';
+        if (sc >= (isPriv ? -0.045 : -1e-9)) continue;
         if (wouldBreak(deltaOf(m, true))) continue;
         on.delete(u);
-        if (m.cabinet) cabUsed--;
-        if (fights) drops.push({ m, push: pushOf(m, pid, dir) });
+        drops.push({ m, sc, cost: isPriv });
+        if (isPriv) revoked.add(u);
       }
 
-      const tryAdd = (m: any, forHold: string | null): boolean => {
+      const tryAdd = (m: any, forHold: string | null, allowCabinet = true): boolean => {
         const u = uid(m);
         if (on.has(u)) return false;
-        // a hold-at or released stage must be undoable — permanent pushes
-        // (reforms) would pin the axis past the point it should rest at
-        if (avoidPermanent && !forHold && !revocable(m)) return false;
-        if (m.source === 'Estate privilege' && newPrivs >= privBudget) return false;
-        if (m.source === 'Reform' && newReforms >= reformBudget) return false;
+        if (m.source === 'Estate privilege' &&
+            (revoked.has(u) || budgets.priv <= 0)) return false;
+        if (m.source === 'Reform' && budgets.reform <= 0) return false;
         if (m.major && majorOn) return false;      // one major reform, ever
-        if (m.cabinet && cabUsed >= 1) return false;
-        // one policy per law group: swapping evicts the sibling
+        if (m.cabinet && (!allowCabinet || cabUsed >= 1)) return false;
         let evicted: any = null;
         if (m.group) {
           for (const u2 of on) {
             const o = byUid.get(u2);
             if (o && o.group === m.group) { evicted = o; break; }
           }
+          // a law swap has to be worth the churn
+          if (evicted && score(m) < score(evicted) + 0.02) return false;
         }
         const d = deltaOf(m);
         if (evicted) {
           for (const [k, v] of deltaOf(evicted, true)) d.set(k, (d.get(k) ?? 0) + v);
         }
-        // never at the active axis's expense, never breaking a hold
-        if (!forHold && (d.get(pid) ?? 0) * s <= 0) return false;
+        if (!forHold && score(m) <= 1e-9) return false;
         if (forHold && (d.get(forHold) ?? 0) === 0) return false;
         if (wouldBreak(d)) return false;
         if (evicted) {
           on.delete(uid(evicted));
-          drops.push({ m: evicted, push: pushOf(evicted, pid, dir), swap: true });
+          drops.push({ m: evicted, swap: true });
         }
         on.add(u);
-        if (m.source === 'Estate privilege') newPrivs++;
-        if (m.source === 'Reform') newReforms++;
+        if (m.source === 'Estate privilege') budgets.priv--;
+        if (m.source === 'Reform') budgets.reform--;
         if (m.major) majorOn = true;
         if (m.cabinet) cabUsed++;
-        adds.push({ m, push: pushOf(m, pid, dir), forHold });
+        adds.push({ m, forHold });
         return true;
       };
 
-      // 2. repair holds (kept positions whose support was swapped away)
+      // 2. fund the holds — kept positions decay without their push
       for (const h of holds) {
         let guard = 0;
         while (guard++ < 12) {
           const n = netBy(on, h.pair);
           if (n >= h.lo - 1e-9 && n <= h.hi + 1e-9) break;
           const needDir = n < h.lo ? 'right' : 'left';
-          // over the hi bound: first try dropping same-direction support
           if (n > h.hi) {
-            let droppedOne = false;
+            let dropped = false;
             for (const u of [...on]) {
               const m = byUid.get(u);
               if (!m || !revocable(m) || signedPush(m, h.pair) <= 0) continue;
+              if (m.source === 'Estate privilege' && score(m) > 0.045) continue;
               const d = deltaOf(m, true);
-              if ((d.get(pid) ?? 0) * s < 0) continue;   // don't hurt the active axis
               if (wouldBreak(d)) continue;
               on.delete(u);
               if (m.cabinet) cabUsed--;
-              drops.push({ m, push: pushOf(m, pid, dir), forHold: h.pair });
-              droppedOne = true;
+              drops.push({ m, forHold: h.pair, cost: m.source === 'Estate privilege' });
+              if (m.source === 'Estate privilege') revoked.add(u);
+              dropped = true;
               break;
             }
-            if (droppedOne) continue;
+            if (dropped) continue;
           }
           const { sure } = helpersFor(h.pair, needDir, ageKey);
           let added = false;
-          for (const cand of sure) {
-            if (tryAdd(cand.m, h.pair)) { added = true; break; }
-          }
-          if (!added) break;                       // deficit reported below
+          // the cabinet member is contested by priority, not first-come —
+          // holds repair with laws/privileges here, the slot is dealt below
+          for (const cand of sure) if (tryAdd(cand.m, h.pair, false)) { added = true; break; }
+          if (!added) break;                       // deficit shows in the bill
         }
       }
 
-      // 3. spend the rest on the active axis
-      const { sure, maybe, manual } = helpersFor(pid, dir, ageKey);
-      for (const cand of sure) tryAdd(cand.m, null);
+      // 3. everything else, best score first, across ALL active targets
+      const seen = new Set<string>();
+      const pool: { m: any; sc: number }[] = [];
+      for (const t of active) {
+        for (const cand of helpersFor(t.st.pair, t.dirn, ageKey).sure) {
+          const u = uid(cand.m);
+          if (seen.has(u) || cand.m.cabinet) continue;
+          seen.add(u);
+          pool.push({ m: cand.m, sc: score(cand.m) });
+        }
+      }
+      pool.sort((a, b) => b.sc - a.sc);
+      for (const x of pool) tryAdd(x.m, null);
 
-      const net = netBy(on, pid) * s;
+      // 4. the ONE cabinet slot goes to the highest-priority demand — an
+      //    underfunded hold or an active target, in the list's order
+      if (cabUsed < 1) {
+        const demands: { prio: number; pair: string; dir: string; hold: boolean }[] = [];
+        for (const h of holds) {
+          const n = netBy(on, h.pair);
+          if (n < h.lo - 1e-9) demands.push({ prio: h.prio ?? 0, pair: h.pair, dir: 'right', hold: true });
+          else if (n > h.hi + 1e-9) demands.push({ prio: h.prio ?? 0, pair: h.pair, dir: 'left', hold: true });
+        }
+        for (const t of active) demands.push({ prio: t.prio, pair: t.st.pair, dir: t.dirn, hold: false });
+        demands.sort((a, b) => a.prio - b.prio);
+        for (const d of demands) {
+          const cands = helpersFor(d.pair, d.dir, ageKey).sure.filter((c: any) => c.m.cabinet);
+          let took = false;
+          for (const c of cands) if (tryAdd(c.m, d.hold ? d.pair : null)) { took = true; break; }
+          if (took) break;
+        }
+      }
+
       const holdRows = holds.map((h) => {
         const n = netBy(on, h.pair);
-        const ok = n >= h.lo - 1e-9 && n <= h.hi + 1e-9;
-        return { ...h, net: n, ok };
+        return { ...h, net: n, ok: n >= h.lo - 1e-9 && n <= h.hi + 1e-9 };
       });
-      const keeps = [...on].map((u) => byUid.get(u)).filter(Boolean)
-        .filter((m) => pushOf(m, pid, dir) > 0 && !adds.some((a) => a.m === m))
-        .map((m) => ({ m, push: pushOf(m, pid, dir) }))
-        .sort((a, b) => b.push - a.push);
-      return { on, net, adds, drops, keeps, holdRows,
-               maybe: maybe.filter((c) => !on.has(uid(c.m))).slice(0, 12),
-               manual: manual.filter((c) => !on.has(uid(c.m))).slice(0, 12) };
+      return { on, adds, drops, holdRows,
+               net: (pid: string) => netBy(on, pid) };
     }
 
-    /* ---- the schedule ---------------------------------------------------- */
+    /* ---- the schedule: everything at once, age by age --------------------- */
 
-    /** Advance every axis by `months` under the running configuration. */
     function drift(pos: Record<string, number>, on: Set<string>, months: number) {
       if (months <= 0) return;
       for (const pid of Object.keys(D.pairs)) {
@@ -557,235 +600,257 @@ import Base from '../layouts/Base.astro';
       }
     }
 
+    const reqOk = (q: any, x: number) => q.op === '>' ? x > q.value : q.op === '>=' ? x >= q.value
+      : q.op === '<' ? x < q.value : q.op === '<=' ? x <= q.value : x === q.value;
+    function crossedUnlocks(pid: string, from: number, to: number) {
+      const seen = new Set<string>();
+      return D.requirements.filter((r: any) =>
+        !seen.has(`${r.source}:${r.key}`) && seen.add(`${r.source}:${r.key}`) &&
+        r.requires.some((q: any) => q.pair === pid && reqOk(q, to) && !reqOk(q, from)));
+    }
+
     function plan(order = path) {
       const pos = startValues();
       let on = running();
       const holds: Hold[] = [];
-      const out: any[] = [];
+      const events: any[] = [];
+      const revoked = new Set<string>();
+      const ts = order.map((st, i) => ({
+        st, prio: i, state: 'pending', from: null as number | null,
+        achieved: null as number | null, doneAt: null as number | null,
+        startY: null as number | null, stalled: false, axisClosed: false,
+        ranOut: false, dirn: 'right' as string, goal: null as number | null,
+        openBest: null as number | null, bestReach: null as number | null,
+        hopeless: false,
+      }));
       let year = START_YEAR;
+      let curAgeKey = '';
+      const budgets = { priv: privBudget, reform: reformBudget };
 
-      for (const st of order) {
-        const from = pos[st.pair] ?? 0;
-        const dirn = dirOf(st, from);
-        const s = sign(dirn);
-        const done = reached(from, st, from);
-        // a new stage on an axis owns it — the previous stage's hold on the
-        // same axis is superseded (that is what makes a reversal possible)
-        const prevHold = holds.findIndex((x) => x.pair === st.pair);
-        if (prevHold >= 0) holds.splice(prevHold, 1);
-        if (st.after && year < st.after) {
-          const wait = (st.after - year) * 12;
-          drift(pos, on, wait);
-          year = st.after;
+      const holdFrom = (t: any, v: number) => {
+        // An open-ended target that ran past 50 is only HELD at 50 — that is
+        // the line focus reforms live or die on; every point above it costs
+        // v/100 per month forever and gates nothing. An explicit target
+        // holds exactly what was asked for.
+        const thr = D.focusThreshold || 50;
+        const anchor = t.st.at !== null ? v
+          : Math.abs(v) > thr ? thr * Math.sign(v) : v;
+        const h: Hold = t.st.dir === 'auto'
+          ? { pair: t.st.pair, lo: ((t.st.at ?? 0) - HOLD_BAND) / INERTIA(),
+              hi: ((t.st.at ?? 0) + HOLD_BAND) / INERTIA(), prio: t.prio,
+              label: `hold ${poleName(t.st.pair, (t.st.at ?? 0) >= 0 ? 'right' : 'left')} at ${rnd(t.st.at ?? 0)}` }
+          : t.dirn === 'right'
+            ? { pair: t.st.pair, lo: anchor / INERTIA(), hi: Infinity, prio: t.prio,
+                label: `hold ${poleName(t.st.pair, 'right')} ≥ ${rnd(anchor)}${anchor !== v ? ` (reached ${rnd(v)}; above ${rnd(anchor)} gates nothing)` : ''}` }
+            : { pair: t.st.pair, lo: -Infinity, hi: anchor / INERTIA(), prio: t.prio,
+                label: `hold ${poleName(t.st.pair, 'left')} ≥ ${rnd(-anchor)}${anchor !== v ? ` (reached ${rnd(-v)}; beyond ${rnd(-anchor)} gates nothing)` : ''}` };
+        const i = holds.findIndex((x) => x.pair === t.st.pair);
+        if (i >= 0) holds.splice(i, 1);
+        holds.push(h);
+      };
+      const complete = (t: any, v: number) => {
+        t.state = 'done';
+        t.achieved = v;
+        t.doneAt = year;
+        pos[t.st.pair] = v;
+        if (t.st.keep) holdFrom(t, v);
+        events.push({ type: 'done', year, age: ageAt(year).key, t,
+                      unlocks: crossedUnlocks(t.st.pair, t.from ?? 0, v) });
+      };
+
+      let guard = 0;
+      while (year < END_YEAR - 1e-9 && guard++ < 400) {
+        const a = ageAt(year);
+        const f = facts(a.key);
+        if (a.key !== curAgeKey) {
+          curAgeKey = a.key;
+          budgets.priv = privBudget;
+          budgets.reform = reformBudget;
         }
-        const startedAt = year;
-        let stalled = false, capped = false, axisClosed = false;
-        let pf: any = null;
-        let achieved = from;
-        let doneAt: number | null = year;
-        let bestReach = from;                  // the furthest any age could go
-        let ranOut = false;                    // campaign ended mid-push
-        const onStart = new Set(on);
-        const info = new Map<string, any>();   // uid → forHold etc.
 
-        if (!done) {
-          // "As far as it goes" means as far as the CAMPAIGN can take it —
-          // a later age's tools often push much further than today's, so the
-          // open-ended target is the best practical stall point across every
-          // age from here on (Best order then sequences the wait sensibly).
-          let openBest: number | null = null;
-          if (st.at === null) {
+        // activate what can start now: priority order, one target per axis
+        // at a time (a reversal waits for its predecessor), `last` waits for
+        // everything else, `after` waits for its year
+        const nonLastOpen = ts.some((t) => !t.st.last && t.state !== 'done' && t.state !== 'stalled');
+        // a "last" target waits for the rest — but starts no later than the
+        // final age, or an open-ended climb would strand it entirely
+        const finalAge = ages()[ages().length - 1].key;
+        for (const t of ts) {
+          if (t.state !== 'pending') continue;
+          if (t.st.last && nonLastOpen && a.key !== finalAge) continue;
+          if (t.st.after && year < t.st.after - 1e-9) continue;
+          const j = ts.indexOf(t);
+          if (ts.some((u, k) => k < j && u.st.pair === t.st.pair &&
+                                u.state !== 'done' && u.state !== 'stalled')) continue;
+          const open = pairOpen(t.st.pair, f);
+          if (open === false) {
+            // age-gated axes just wait; a country-gated axis may never open
+            if (D.pairs[t.st.pair].gate && !D.pairs[t.st.pair].age &&
+                evalGate(D.pairs[t.st.pair].gate, f) === false) {
+              t.state = 'stalled'; t.axisClosed = true;
+              events.push({ type: 'stall', year, age: a.key, t, reason: 'axis' });
+            }
+            continue;
+          }
+          t.state = 'active';
+          t.from = pos[t.st.pair] ?? 0;
+          t.startY = year;
+          t.dirn = dirOf(t.st, t.from);
+          const i = holds.findIndex((x) => x.pair === t.st.pair);
+          if (i >= 0) holds.splice(i, 1);   // this target owns the axis now
+          // how far can ANY age ultimately carry this axis (for open-ended)?
+          if (t.st.at === null) {
+            let best: number | null = null;
             for (const a2 of ages()) {
-              if (a2.year < ageAt(year).year) continue;
-              const pf2 = portfolio(st.pair, dirn, a2.key, on, holds, st.dir === 'auto' || !st.keep);
-              const E2 = eqOf(pf2.net * s);
-              const r2 = reachOf(pf2.net * s, s as 1 | -1);
-              const shy2 = Math.abs(E2) > 100 ? r2 : r2 - s;
-              if (openBest === null || (shy2 - openBest) * s > 0) openBest = shy2;
+              if (a2.year < a.year) continue;
+              const cfg2 = configure([t], holds, a2.key, on, { priv: privBudget, reform: reformBudget }, new Set(revoked));
+              const shy2 = shyOf(cfg2.net(t.st.pair), sign(t.dirn));
+              if (best === null || (shy2 - best) * sign(t.dirn) > 0) best = shy2;
             }
-            // ignore sub-noise gains: not worth waiting an age for 2 points
-            if (openBest !== null && (openBest - from) * s <= 2) openBest = null;
-          }
-          let guard = 0;
-          let finished = false;
-          while (!finished && year < END_YEAR && guard++ < 40) {
-            const a = ageAt(year);
-            const f = facts(a.key);
-            const open = f ? pairOpen(st.pair, f) : true;
-            const boundary = Math.min(nextAgeYear(year), END_YEAR);
-            if (open === false) {
-              // the axis does not exist yet (age or country gate)
-              if (boundary >= END_YEAR && D.pairs[st.pair].gate) { axisClosed = true; break; }
-              drift(pos, on, (boundary - year) * 12);
-              year = boundary;
-              continue;
-            }
-            const cur = portfolio(st.pair, dirn, a.key, on, holds, st.dir === 'auto' || !st.keep);
-            for (const x of cur.adds) info.set(uid(x.m), x);
-            pf = cur;
-            const v0 = pos[st.pair] ?? 0;
-            const E = eqOf(cur.net * s);
-            const reach = reachOf(cur.net * s, s as 1 | -1);
-            // an open-ended stage stops one point shy of the equilibrium —
-            // the last point is a decades-long 0.01/month crawl. When a
-            // later age reaches further, THAT is the target.
-            const curShy = Math.abs(E) > 100 ? reach : reach - s;
-            const target = st.at !== null ? st.at
-              : openBest !== null && (openBest - curShy) * s > 0 ? openBest
-              : curShy;
-            const mTo = monthsTo(v0, target, cur.net * s);
-            const mBoundary = (boundary - year) * 12;
-            if (Number.isFinite(mTo) && mTo <= mBoundary) {
-              on = cur.on;
-              drift(pos, on, mTo);
-              pos[st.pair] = target;                    // pin against fp error
-              year += mTo / 12;
-              achieved = target;
-              doneAt = year;
-              finished = true;
-              if (st.at === null) capped = true;        // stopped where it stalls
-            } else if (Number.isFinite(mTo) && boundary < END_YEAR) {
-              // slow but moving — push to the age boundary, then continue
-              // with the next age's tools (holds maintained throughout)
-              on = cur.on;
-              drift(pos, on, mBoundary);
-              year = boundary;
-            } else {
-              // this age cannot reach the target: does any later age's
-              // toolset change that, or is the target beyond every reach?
-              bestReach = s > 0 ? Math.max(bestReach, reach) : Math.min(bestReach, reach);
-              let hopeful = false;
-              if (boundary < END_YEAR) {
-                for (const a2 of ages()) {
-                  if (a2.year <= a.year) continue;
-                  const pf2 = portfolio(st.pair, dirn, a2.key, on, holds, st.dir === 'auto' || !st.keep);
-                  const r2 = reachOf(pf2.net * s, s as 1 | -1);
-                  bestReach = s > 0 ? Math.max(bestReach, r2) : Math.min(bestReach, r2);
-                  if ((target - r2) * s <= 0 ||
-                      (st.at === null && pf2.net > cur.net + 1e-9)) { hopeful = true; break; }
-                }
-              }
-              if (!hopeful) {
-                // never fully reachable. If the campaign is ending and the
-                // push still moves the needle, spend the remaining years on
-                // it rather than reporting zero progress.
-                if (boundary >= END_YEAR && cur.net > 0 && mBoundary > 0) {
-                  on = cur.on;
-                  drift(pos, on, mBoundary);
-                  year = boundary;
-                  ranOut = true;
-                }
-                achieved = pos[st.pair] ?? 0;
-                stalled = st.at !== null && !reached(achieved, st, from);
-                doneAt = stalled ? null : year;
-                break;
-              }
-              on = cur.on;                    // wait for the age, holds running
-              drift(pos, on, mBoundary);
-              year = boundary;
-            }
-          }
-          if (!finished && !stalled && !axisClosed) {
-            achieved = pos[st.pair] ?? 0;
-            if (st.at !== null && !reached(achieved, st, from)) stalled = true;
-            doneAt = stalled ? null : year;
-          }
-        } else {
-          const a = ageAt(year);
-          pf = portfolio(st.pair, dirn, a.key, on, holds, st.dir === 'auto' || !st.keep);
-          for (const x of pf.adds) info.set(uid(x.m), x);
-          on = pf.on;
-          achieved = from;
-        }
-
-        // keep: from here on, this position is held (and priced)
-        if (st.keep && !stalled && !axisClosed) {
-          const v = st.dir === 'auto' ? (st.at ?? 0) : achieved;
-          const h: Hold = st.dir === 'auto'
-            ? { pair: st.pair, lo: (v - HOLD_BAND) / INERTIA(), hi: (v + HOLD_BAND) / INERTIA(),
-                label: `hold ${poleName(st.pair, v >= 0 ? 'right' : 'left')} at ${Math.round(v)}` }
-            : dirn === 'right'
-              ? { pair: st.pair, lo: v / INERTIA(), hi: Infinity,
-                  label: `hold ${poleName(st.pair, 'right')} ≥ ${Math.round(v)}` }
-              : { pair: st.pair, lo: -Infinity, hi: v / INERTIA(),
-                  label: `hold ${poleName(st.pair, 'left')} ≥ ${Math.round(-v)}` };
-          // a later stage on the same axis replaces the old hold
-          const i = holds.findIndex((x) => x.pair === st.pair);
-          if (i >= 0) holds.splice(i, 1);
-          holds.push(h);
-        }
-        if (!st.keep) {
-          const i = holds.findIndex((x) => x.pair === st.pair);
-          if (i >= 0) holds.splice(i, 1);
-        }
-
-        const aStart = ageAt(startedAt);
-        const fStart = facts(aStart.key);
-        const nudges = D.movers
-          .filter((m: any) => availOf(m, aStart.key) !== false && nudgeOf(m, st.pair, dirn) > 0)
-          .map((m: any) => ({ m, push: nudgeOf(m, st.pair, dirn) }))
-          .sort((a: any, b: any) => b.push - a.push).slice(0, 3);
-
-        // what this position opens (crossed thresholds)
-        const seenU = new Set<string>();
-        const ok = (q: any, x: number) => q.op === '>' ? x > q.value : q.op === '>=' ? x >= q.value
-          : q.op === '<' ? x < q.value : q.op === '<=' ? x <= q.value : x === q.value;
-        const unlocks = D.requirements.filter((r: any) =>
-          !seenU.has(`${r.source}:${r.key}`) && seenU.add(`${r.source}:${r.key}`) &&
-          r.requires.some((q: any) => q.pair === st.pair && ok(q, achieved) && !ok(q, from)));
-
-        // What actually changed hands this stage: everything switched on or
-        // off between the stage's start and its end, however many ages it
-        // spanned — not just the last age's increment.
-        const take: any[] = [], fighting: any[] = [], already: any[] = [];
-        for (const u of on) {
-          const m = byUid.get(u);
-          if (!m) continue;
-          if (!onStart.has(u)) {
-            const meta = info.get(u);
-            take.push({ m, push: pushOf(m, st.pair, dirn), forHold: meta?.forHold ?? null });
-          } else if (pushOf(m, st.pair, dirn) > 0) {
-            already.push({ m, push: pushOf(m, st.pair, dirn) });
+            t.openBest = best;
           }
         }
-        for (const u of onStart) {
-          if (!on.has(u)) {
-            const m = byUid.get(u);
-            if (m) fighting.push({ m, push: pushOf(m, st.pair, dirn) });
+        const active = ts.filter((t) => t.state === 'active');
+        if (!active.length && !ts.some((t) => t.state === 'pending')) break;
+
+        // one configuration for everything, holds funded first
+        const cfg = configure(active, holds, a.key, on, budgets, revoked);
+        const changedOn = [...cfg.on].filter((u) => !on.has(u));
+        const changedOff = [...on].filter((u) => !cfg.on.has(u));
+        on = cfg.on;
+        if (changedOn.length || changedOff.length || !events.some((e) => e.type === 'config')) {
+          const entry = {
+            type: 'config', year, age: a.key,
+            adds: cfg.adds.filter((x) => changedOn.includes(uid(x.m))),
+            drops: cfg.drops.filter((x) => changedOff.includes(uid(x.m)) || x.swap),
+            holdRows: cfg.holdRows,
+            pushing: active.map((t) => ({
+              t, net: cfg.net(t.st.pair) * sign(t.dirn),
+              cap: capOf(cfg.net(t.st.pair)),
+            })),
+          };
+          // several re-plans in the same instant read as ONE to-do list
+          const prev = events[events.length - 1];
+          const prev2 = events[events.length - 2];
+          const mergeInto = prev && prev.type === 'config' && Math.abs(prev.year - year) < 0.09 ? prev
+            : prev2 && prev2.type === 'config' && Math.abs(prev2.year - year) < 0.09 && prev?.type === 'done' ? prev2
+            : null;
+          if (mergeInto) {
+            const addU = new Set(mergeInto.adds.map((x: any) => uid(x.m)));
+            for (const x of entry.adds) if (!addU.has(uid(x.m))) mergeInto.adds.push(x);
+            const dropU = new Set(mergeInto.drops.map((x: any) => uid(x.m)));
+            for (const x of entry.drops) if (!dropU.has(uid(x.m))) mergeInto.drops.push(x);
+            // something switched on then off again in the same instant is noise
+            mergeInto.adds = mergeInto.adds.filter((x: any) => !entry.drops.some((d: any) => uid(d.m) === uid(x.m)));
+            mergeInto.holdRows = entry.holdRows;
+            mergeInto.pushing = entry.pushing;
+          } else {
+            events.push(entry);
           }
         }
-        take.sort((a, b) => b.push - a.push);
-        already.sort((a, b) => b.push - a.push);
-        fighting.sort((a, b) => a.push - b.push);
 
-        out.push({ st, dir: dirn, from, achieved, done, stalled, capped, axisClosed,
-                   startedAt, doneAt, bestReach, ranOut,
-                   net: pf ? pf.net : 0,
-                   take, fighting, already,
-                   holdRows: pf ? pf.holdRows : [],
-                   maybe: pf ? pf.maybe : [], manual: pf ? pf.manual : [],
-                   nudges, unlocks, f: fStart });
+        // completions at the current instant
+        let completedNow = false;
+        for (const t of active) {
+          const v = pos[t.st.pair] ?? 0;
+          const s = sign(t.dirn);
+          const netS = cfg.net(t.st.pair);
+          const curShy = shyOf(netS, s);
+          t.goal = t.st.at !== null ? t.st.at
+            : t.openBest !== null && (t.openBest - curShy) * s > 2 ? t.openBest
+            : curShy;
+          // an open-ended target is also done when it sits at what THIS
+          // configuration can sustain and no later age adds tools for its
+          // axis — waiting further would change nothing
+          const settled = t.st.at === null && t.st.dir !== 'auto' &&
+            (curShy - v) * s <= 0.5 && !toolsImprove(t.st.pair, t.dirn, a.key);
+          if (t.st.dir === 'auto' ? Math.abs(v - (t.st.at ?? 0)) <= 0.5
+                                  : (t.goal - v) * s <= 0.5 || settled) {
+            complete(t, t.st.dir === 'auto' ? (t.st.at ?? 0)
+                        : t.st.at !== null ? t.st.at : v);
+            completedNow = true;
+          }
+        }
+        if (completedNow) continue;              // re-plan with the freed tools
+
+        // explicit targets no age can ever fund stall now, without
+        // consuming the clock — the player sees what it would have needed
+        for (const t of active) {
+          if (t.st.at === null || t.hopeless) continue;
+          const s = sign(t.dirn);
+          if (Number.isFinite(monthsTo(pos[t.st.pair] ?? 0, t.goal!, cfg.net(t.st.pair)))) continue;
+          let best = reachOf(cfg.net(t.st.pair));
+          let hopeful = false;
+          for (const a2 of ages()) {
+            if (a2.year <= a.year) continue;
+            const cfg2 = configure([t], holds, a2.key, on, { priv: privBudget, reform: reformBudget }, new Set(revoked));
+            const r2 = reachOf(cfg2.net(t.st.pair));
+            best = (r2 - best) * s > 0 ? r2 : best;
+            if ((t.goal! - r2) * s <= 0) { hopeful = true; break; }
+          }
+          t.bestReach = best;
+          if (!hopeful) {
+            t.hopeless = true;
+            t.state = 'stalled';
+            t.stalled = true;
+            t.achieved = pos[t.st.pair] ?? 0;
+            events.push({ type: 'stall', year, age: a.key, t, reason: 'push' });
+          }
+        }
+        if (ts.some((t) => t.state === 'stalled' && !t.axisClosed &&
+                           t.doneAt === null && t.stalled && !t.reported)) {
+          for (const t of ts) if (t.state === 'stalled') (t as any).reported = true;
+          continue;                              // re-plan without them
+        }
+
+        // advance to the next thing that changes the plan
+        let next = Math.min(nextAgeYear(year), END_YEAR);
+        for (const t of active) {
+          const mTo = monthsTo(pos[t.st.pair] ?? 0, t.goal!, cfg.net(t.st.pair));
+          if (Number.isFinite(mTo) && mTo > 0) next = Math.min(next, year + mTo / 12);
+        }
+        for (const t of ts) {
+          if (t.state === 'pending' && t.st.after && t.st.after > year) next = Math.min(next, t.st.after);
+        }
+        if (next <= year + 1e-6) next = Math.min(nextAgeYear(year), END_YEAR);
+        drift(pos, on, (next - year) * 12);
+        year = next;
       }
-      return { steps: out, endYear: year };
+
+      // the campaign ends: whatever is still moving reports where it got to
+      for (const t of ts) {
+        if (t.state === 'active') {
+          t.achieved = pos[t.st.pair] ?? 0;
+          if (t.st.at !== null && (t.st.at - t.achieved) * sign(t.dirn) > 0.5) {
+            t.stalled = true; t.state = 'stalled';
+          } else {
+            t.state = 'done'; t.doneAt = year; t.ranOut = true;
+          }
+        } else if (t.state === 'pending') {
+          t.stalled = true; t.state = 'stalled';
+          t.achieved = pos[t.st.pair] ?? 0;
+        }
+      }
+      return { ts, events, endYear: year, revokes: revoked.size, pos };
     }
 
-    /** What an order costs: broken holds and stalls dominate, then the last
-     *  finish, then how early the rest land. */
+    /** What an order costs: stalls dominate, then broken holds and costly
+     *  revokes, then the last finish, then how early the rest land. */
     function score(order: any[]) {
-      const { steps } = plan(order);
+      const { ts, events, revokes } = plan(order);
       let last = START_YEAR, sum = 0, stalls = 0, broken = 0;
-      for (const s of steps) {
-        if (s.stalled || s.axisClosed) { stalls++; sum += END_YEAR; continue; }
-        broken += s.holdRows.filter((h: any) => !h.ok).length;
-        last = Math.max(last, s.doneAt ?? START_YEAR);
-        sum += s.doneAt ?? START_YEAR;
+      for (const t of ts) {
+        if (t.stalled || t.axisClosed) { stalls++; sum += END_YEAR; continue; }
+        last = Math.max(last, t.doneAt ?? END_YEAR);
+        sum += t.doneAt ?? END_YEAR;
       }
-      return stalls * 1e7 + broken * 1e5 + last * 1e3 + sum;
+      for (const e of events) if (e.type === 'config') broken = Math.max(broken, e.holdRows.filter((h: any) => !h.ok).length);
+      return stalls * 1e7 + broken * 1e5 + revokes * 3e3 + last * 1e3 + sum;
     }
 
-    /** Order the path for the earliest finish. Locked stages keep their exact
-     *  slot; stages pinned `last` stay at the back; two stages on the same
-     *  axis keep their given order (a reversal is deliberate). */
+    /** Reorder the priorities for the earliest overall finish. Locked
+     *  targets keep their exact slot; `last` stays last; two targets on the
+     *  same axis keep their given order (a reversal is deliberate). */
     function bestOrder() {
       const n = path.length;
       if (n < 2) return;
@@ -817,7 +882,6 @@ import Base from '../layouts/Base.astro';
         for (let i = 0; i < remaining.length; i++) {
           const cand = order.slice();
           cand[slot] = remaining[i];
-          // fill the rest in current order for a comparable score
           let k = 0;
           for (let j2 = 0; j2 < n; j2++) {
             if (cand[j2]) continue;
@@ -861,39 +925,35 @@ import Base from '../layouts/Base.astro';
       .filter((g: any) => ['var', 'unl', 'iomem', 'adv', 'law', 'priv', 'reform', 'policy', 'parl'].includes(g[1]))
       .map((g: any) => g[0]).slice(0, 3).join(', ');
 
-    function moverLine(h: any, pid: string, cls: string, opts: any = {}) {
+    function moverLine(h: any, pid: string | null, cls: string, opts: any = {}) {
       const m = h.m;
-      const side = collateral(m, pid);
-      const extra = side.length
-        ? `<span class="pp-side">also ${side.slice(0, 3).map((e: any) =>
-            `${esc(poleName(e.pair, e.dir))} ${(e.perMonth ?? 0).toFixed(3)}`).join(', ')}` +
-          `${side.length > 3 ? ` +${side.length - 3}` : ''}</span>`
-        : '';
-      const g0 = m.unlock && m.unlock[0];
-      const gift = g0
-        ? `<span class="pp-need">from ${esc(g0.advance)} · ${esc(g0.age)}` +
-          `${g0.who ? ` · ${esc(g0.who)}` : ''}` +
-          `${m.unlock.length > 1 ? ` +${m.unlock.length - 1} more` : ''}</span>` : '';
-      const why = opts.why ? `<span class="pp-need">needs: ${esc(opts.why)}</span>` : '';
-      const holdTag = h.forHold
-        ? `<span class="pp-need">holding ${esc(poleName(h.forHold, signedPush(m, h.forHold) >= 0 ? 'right' : 'left'))}</span>` : '';
       const cab = m.cabinet ? `<span class="pp-cab">cabinet</span>` : '';
       const perm = m.folder === 'government_reforms'
         ? `<span class="pp-cab" title="A reform cannot be un-taken — its pushes are with you for good">permanent${m.implMonths ? ` · ${Math.round(m.implMonths / 12)}y to implement` : ''}</span>` : '';
       const scaled = m.effects.some((e: any) => e.scaled)
         ? `<span class="pp-cab" title="Scales with estate power — counted at half here">estate power</span>` : '';
+      const g0 = m.unlock && m.unlock[0];
+      const gift = g0
+        ? `<span class="pp-need">research: ${esc(g0.advance)} · ${esc(g0.age)}` +
+          `${g0.who ? ` · ${esc(g0.who)}` : ''}` +
+          `${m.unlock.length > 1 ? ` +${m.unlock.length - 1} more` : ''}</span>` : '';
+      const why = opts.why ? `<span class="pp-need">needs: ${esc(opts.why)}</span>` : '';
+      const costTag = h.cost
+        ? `<span class="pp-costly" title="Revoking a privilege burns estate satisfaction — this plan only does it because the privilege fights the targets">REVOKE — costly</span>` : '';
       const promo = opts.promote
         ? `<label class="pp-have"><input type="checkbox" data-promote="${esc(uid(m))}"${promoted.has(uid(m)) ? ' checked' : ''}/> I have this</label>` : '';
       const where = m.groupName ? esc(m.groupName) : esc(m.source);
-      const val = h.push * (m.encourage ? 1 : 1);
+      // signed effect summary across the axes it moves
+      const eff = m.effects.filter((e: any) => !e.temp).slice(0, 3).map((e: any) =>
+        `${esc(poleName(e.pair, e.dir))} +${((e.perMonth ?? 0) * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1)).toFixed(2)}`).join(' · ');
       return `<div class="pp-mover ${cls}">${iconHtml(m)}` +
         `<span class="pp-mover__n">${esc(m.name)}</span>` +
-        `<span class="pp-mover__s">${where}</span>${cab}${perm}${scaled}${gift}${why}${holdTag}${extra}${promo}` +
-        `<span class="pp-mover__p">${val > 0 ? '+' : ''}${val.toFixed(3)}/mo</span></div>`;
+        `<span class="pp-mover__s">${where}</span>${cab}${perm}${scaled}${costTag}${gift}${why}${promo}` +
+        `<span class="pp-mover__p">${eff}</span></div>`;
     }
 
     const SOURCE_ORDER = ['Cabinet action', 'Reform', 'Estate privilege', 'Law'];
-    function groupBySource(list: any[], pid: string, cls: string) {
+    function groupBySource(list: any[], cls: string) {
       const buckets = new Map<string, any[]>();
       for (const h of list) {
         if (!buckets.has(h.m.source)) buckets.set(h.m.source, []);
@@ -904,11 +964,20 @@ import Base from '../layouts/Base.astro';
         return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
       });
       return keys.map((k) =>
-        `<div class="pp-kind">${esc(k)}${k === 'Law' ? ' — one policy per group'
-          : k === 'Estate privilege' ? ' — costs estate satisfaction'
-          : k === 'Cabinet action' ? ' — occupies a cabinet member' : ''}</div>` +
-        buckets.get(k)!.map((h) => moverLine(h, pid, cls)).join('')).join('');
+        `<div class="pp-kind">${esc(k)}${k === 'Law' ? ' — enact (one policy per group)'
+          : k === 'Estate privilege' ? ' — grant (costs estate satisfaction; granted once, kept)'
+          : k === 'Cabinet action' ? ' — assign your cabinet member'
+          : k === 'Reform' ? ' — take (permanent)' : ''}</div>` +
+        buckets.get(k)!.map((h) => moverLine(h, null, cls)).join('')).join('');
     }
+
+    const goalText = (t: any) => {
+      const p = D.pairs[t.st.pair];
+      return t.st.dir === 'auto'
+        ? `${esc(p.left.name)} / ${esc(p.right.name)} at ${t.st.at ?? 0}`
+        : t.st.at === null ? `${esc(poleName(t.st.pair, t.st.dir))} — as far as it goes`
+        : `${esc(poleName(t.st.pair, t.st.dir))} ${t.st.at > 0 ? '+' : ''}${t.st.at}`;
+    };
 
     function renderPath() {
       const host = $('[data-pp-path]');
@@ -917,7 +986,7 @@ import Base from '../layouts/Base.astro';
         `<option value="${esc(pid)}"${pid === sel ? ' selected' : ''}>` +
         `${esc(p.left.name)} ←→ ${esc(p.right.name)}</option>`).join('');
       host.innerHTML =
-        `<h2 class="vp-h">Your path <small>${path.length} stages — edit, pin 🔒, or let “Best order” arrange the unpinned</small></h2>` +
+        `<h2 class="vp-h">Your targets <small>${path.length} — order = priority when tools conflict; pin 🔒, or let “Best order” arrange the unpinned</small></h2>` +
         `<ol class="pp-path">` + path.map((st, i) => {
           const p = D.pairs[st.pair];
           return `<li class="pp-row">
@@ -932,22 +1001,22 @@ import Base from '../layouts/Base.astro';
               <input type="number" step="5" min="-100" max="100" placeholder="max"
                 data-edit="at:${i}" value="${st.at === null ? '' : st.at}" />
             </label>
-            <label class="pp-until" title="Keep this position afterwards — later stages must budget the push to hold it">
+            <label class="pp-until" title="Keep this position afterwards — the plan reserves the push to hold it">
               <input type="checkbox" data-edit="keep:${i}"${st.keep ? ' checked' : ''} /> keep
             </label>
             <label class="pp-until" title="Hold off until this year, whatever else is done">
               not before <input type="number" step="10" min="1337" max="1837" placeholder="—"
                 class="pp-year" data-edit="after:${i}" value="${st.after ?? ''}" />
             </label>
-            <label class="pp-until" title="Keep this stage last, however the rest is ordered">
+            <label class="pp-until" title="Start this only after every other target is done — the reversal leg">
               <input type="checkbox" data-edit="last:${i}"${st.last ? ' checked' : ''} /> last
             </label>
-            <label class="pp-until" title="Pin this stage to exactly this slot — Best order will not move it">
+            <label class="pp-until" title="Pin this target to exactly this priority — Best order will not move it">
               <input type="checkbox" data-edit="lock:${i}"${st.lock ? ' checked' : ''} /> 🔒
             </label>
             <span class="pp-mv">
-              <button type="button" data-mv="${i}:-1" title="Earlier">↑</button>
-              <button type="button" data-mv="${i}:1" title="Later">↓</button>
+              <button type="button" data-mv="${i}:-1" title="Higher priority">↑</button>
+              <button type="button" data-mv="${i}:1" title="Lower priority">↓</button>
               <button type="button" data-rm="${i}" title="Remove">✕</button>
             </span>
           </li>`;
@@ -960,12 +1029,12 @@ import Base from '../layouts/Base.astro';
       renderPath();
       if (!path.length) {
         $('[data-pp-out]').innerHTML =
-          '<div class="pl-empty" style="margin-top:18px;">No stages yet — add one above, ' +
+          '<div class="pl-empty" style="margin-top:18px;">No targets yet — add one above, ' +
           'or load the example path.</div>';
         syncUrl();
         return;
       }
-      const { steps } = plan();
+      const { ts, events, revokes } = plan();
       const rec = startRec();
       const govLabel = (GOVS.find((g) => g[0] === govOf()) || ['', 'country'])[1].toLowerCase();
       const head = country
@@ -973,113 +1042,138 @@ import Base from '../layouts/Base.astro';
           (rec ? ` — ${Object.keys(rec.values || {}).length} axes placed, ` +
                  `${(rec.privileges || []).length} privileges and ` +
                  `${Object.keys(rec.laws || {}).length} laws already running` : '') +
-          `, as a ${esc(govLabel)}.</p>`
+          `, as a ${esc(govLabel)}.` +
+          (revokes ? ` This plan revokes ${revokes} privilege${revokes > 1 ? 's' : ''} — each one costs estate satisfaction.` : ' No privilege is ever revoked.') + `</p>`
         : '<p class="pp-note">Pick a country to start from its real 1337 position, ' +
-          'granted privileges and laws. Without one every axis starts at 0.</p>';
+          'granted privileges and laws. Without one every axis starts at 0 and only ' +
+          'generic (non-country-specific) tools are planned.</p>';
 
-      $('[data-pp-out]').innerHTML = head + steps.map((s: any, i: number) => {
-        const p = D.pairs[s.st.pair];
-        const goalTxt = s.st.dir === 'auto'
-          ? `${esc(p.left.name)} / ${esc(p.right.name)} at ${s.st.at ?? 0}`
-          : s.st.at === null ? `${esc(poleName(s.st.pair, s.dir))} — as far as it goes`
-          : `${esc(poleName(s.st.pair, s.dir))} ${s.st.at > 0 ? '+' : ''}${s.st.at}`;
-        const a = ageAt(s.startedAt);
-        const achievedTxt = Math.round(s.achieved) || 0;
-        const status = s.axisClosed
-          ? '<span class="pp-bad">this axis never opens for this country</span>'
-          : s.done
-          ? '<span class="pp-ok">already there when this stage comes up</span>'
-          : s.stalled
-            ? `<span class="pp-bad">unreachable — needs ${(Math.abs(s.st.at) / 100).toFixed(2)}/mo sustained; the best any age manages is ≈${Math.round(s.bestReach)}</span>`
-            : `<span class="pp-when">${Math.round(s.startedAt)} → ${Math.round(s.doneAt)}` +
-              ` · ${(s.doneAt - s.startedAt).toFixed(0)} yrs` +
-              (ageAt(s.doneAt).key !== ageAt(s.startedAt).key ? ` · finishes in ${esc(ageAt(s.doneAt).name)}` : '') +
-              (s.ranOut ? ` · campaign ends mid-push` : s.capped ? ` · stalls here (cap ${achievedTxt})` : '') +
-              `</span>`;
+      // ---- summary: every target, where it lands, when --------------------
+      const summary = `<div class="pp-summary">` + ts.map((t: any, i: number) => {
+        const status = t.axisClosed
+          ? `<span class="pp-bad">axis never opens for this country</span>`
+          : t.stalled
+            ? `<span class="pp-bad">stalls at ${rnd(t.achieved ?? 0)}${t.st.at !== null ? ` — ${t.st.at} needs ${(Math.abs(t.st.at) / 100).toFixed(2)}/mo held${t.bestReach !== null ? `; best any age manages ≈${rnd(t.bestReach)}` : ''}` : ''}</span>`
+            : t.ranOut
+              ? ((t.achieved ?? 0) - (t.from ?? 0)) * sign(t.dirn) < -0.5
+                ? `<span class="pp-bad">slips to ${rnd(t.achieved ?? 0)} — the start position needs ${(Math.abs(t.from ?? 0) / 100).toFixed(2)}/mo just to hold, more than the plan can spare</span>`
+                : `<span class="pp-when">reaches ${rnd(t.achieved ?? 0)} — campaign ends mid-push</span>`
+              : `<span class="pp-ok">✓ ${rnd(t.achieved ?? 0)} by ${Math.round(t.doneAt ?? END_YEAR)}</span>`;
+        return `<div class="pp-sumrow"><span class="pp-num">${i + 1}</span>` +
+          `<b>${goalText(t)}</b>` +
+          `<span class="pp-from">${rnd(t.from ?? (startValues()[t.st.pair] ?? 0))} →</span> ${status}` +
+          (t.st.keep ? `<span class="pp-hold">kept</span>` : `<span class="pp-rel">released</span>`) +
+          `</div>`;
+      }).join('') + `</div>`;
 
-        const drops = s.fighting.length
-          ? `<div class="pp-sub">Swap off — these pull the other way</div>` +
-            groupBySource(s.fighting, s.st.pair, 'drop') : '';
-        const swaps = s.take.length
-          ? `<div class="pp-sub">Switch on</div>` +
-            groupBySource(s.take.filter((h: any) => !h.forHold), s.st.pair, 'add') : '';
-        const holdAdds = s.take.filter((h: any) => h.forHold);
-        const holdBlock = (s.holdRows.length || holdAdds.length)
-          ? `<div class="pp-sub">Held positions — the standing bill</div>` +
-            s.holdRows.map((h: any) =>
-              `<div class="pp-mover ${h.ok ? 'keep' : 'drop'}">` +
-              `<span class="pp-mover__n">${esc(h.label)}</span>` +
-              `<span class="pp-mover__s">needs ${h.lo === -Infinity ? '≤ ' + h.hi.toFixed(2) : '≥ ' + (h.hi === Infinity ? h.lo.toFixed(2) : `${h.lo.toFixed(2)}…${h.hi.toFixed(2)}`)}/mo</span>` +
-              (h.ok ? '' : h.net < h.lo
-                ? `<span class="pp-bad" style="font-size:11px;">UNDERFUNDED — this position will erode</span>`
-                : `<span class="pp-bad" style="font-size:11px;">OVERSHOOTING — permanent pushes will drift it past the hold point</span>`) +
-              `<span class="pp-mover__p">${h.net > 0 ? '+' : ''}${h.net.toFixed(3)}/mo</span></div>`).join('') +
-            (holdAdds.length ? holdAdds.map((h: any) => moverLine(h, s.st.pair, 'keep')).join('') : '')
-          : '';
-        const keeps = s.already.length
-          ? `<div class="pp-sub">Already helping</div>` +
-            groupBySource(s.already.slice(0, 6), s.st.pair, 'keep') : '';
-        const pushes = s.nudges.length
-          ? `<div class="pp-sub">One-off nudges (debates, agendas — can pierce the cap)</div>` +
-            s.nudges.map((h: any) => moverLine(h, s.st.pair, 'temp')).join('') : '';
-        const maybes = s.maybe.length
-          ? `<details class="pp-maybe"><summary>${s.maybe.length} more we cannot verify from the files — check in game</summary>` +
-            s.maybe.map((h: any) => moverLine(h, s.st.pair, 'temp',
-              { why: gateWhy(h.m) || 'a scripted trigger', promote: true })).join('') +
-            `</details>` : '';
-        const manuals = s.manual.length
-          ? `<details class="pp-maybe"><summary>${s.manual.length} other levers this way — buildings, aspects, estates, subjects (game-state dependent, not auto-planned)</summary>` +
-            s.manual.map((h: any) => moverLine(h, s.st.pair, 'temp')).join('') +
-            `</details>` : '';
-        const gains = s.unlocks.length
-          ? `<div class="pp-sub">This position opens</div>` +
-            s.unlocks.map((u: any) => {
-              const hold = u.requires.some((q: any) => q.hold);
-              return `<div class="pp-mover ${hold ? 'hold' : 'bank'}">` +
-              (u.icon ? `<img class="eicon" src="${baseUrl}${u.icon}" alt="" width="16" height="16"
-                 loading="lazy" style="vertical-align:-3px;border-radius:2px;" />` : '') +
-              `<span class="pp-mover__n">${esc(u.name)}</span>` +
-              `<span class="pp-mover__s">${esc(u.source)}</span>` +
-              `<span class="pp-mover__p">${hold
-                 ? `lost if the value drops below ${Math.round(Math.abs(u.requires.find((q: any) => q.hold).value))} — keep this stage held`
-                 : u.source === 'Reform' ? 'allow-gated — probably banks (verify in game)'
-                 : 'only while you hold this'}</span></div>`; }).join('')
-          : '<div class="pp-sub quiet">Nothing in the files gates on this position.</div>';
+      // ---- the age-by-age checklist ---------------------------------------
+      const buckets = new Map<string, any[]>();
+      for (const e of events) {
+        if (!buckets.has(e.age)) buckets.set(e.age, []);
+        buckets.get(e.age)!.push(e);
+      }
+      const sections = ages().filter((a: any) => buckets.has(a.key)).map((a: any) => {
+        const items = buckets.get(a.key)!;
+        const firstInAge = a.year <= START_YEAR;
+        const body = items.map((e: any) => {
+          if (e.type === 'config') {
+            const adds = e.adds.filter((x: any) => !x.forHold);
+            const holdAdds = e.adds.filter((x: any) => x.forHold);
+            const research = [...new Set(e.adds
+              .map((x: any) => x.m.unlock && x.m.unlock[0] ? x.m.unlock[0].advance : null)
+              .filter(Boolean))];
+            if (!e.adds.length && !e.drops.length) return '';
+            return `<div class="pp-cfg">
+              <div class="pp-cfg__h">${Math.round(e.year)} — ${e.year <= START_YEAR + 1e-6 ? 'set up' : 'adjust'}${research.length ? ` <span class="pp-need">research first: ${esc(research.join(' · '))}</span>` : ''}</div>` +
+              (e.drops.length ? `<div class="pp-sub">Switch off</div>` +
+                e.drops.map((x: any) => moverLine(x, null, x.cost ? 'drop' : 'swapoff')).join('') : '') +
+              (adds.length ? `<div class="pp-sub">Switch on</div>` + groupBySource(adds, 'add') : '') +
+              (holdAdds.length ? `<div class="pp-sub">Switched on to fund a held position</div>` +
+                holdAdds.map((x: any) => moverLine(x, null, 'keep')).join('') : '') +
+              (e.pushing.length ? `<div class="pp-net">now pushing: ` + e.pushing.map((p: any) =>
+                `${esc(poleName(p.t.st.pair, p.t.dirn))} <b>${p.net > 0 ? '+' : ''}${p.net.toFixed(2)}</b>/mo (stalls at ${Math.abs(p.cap)})`).join(' · ') + `</div>` : '') +
+              (e.holdRows.length ? `<div class="pp-sub">Standing bill — held positions</div>` +
+                e.holdRows.map((h: any) =>
+                  `<div class="pp-mover ${h.ok ? 'keep' : 'drop'}">` +
+                  `<span class="pp-mover__n">${esc(h.label)}</span>` +
+                  `<span class="pp-mover__s">needs ${h.lo === -Infinity ? '≤ ' + h.hi.toFixed(2) : h.hi === Infinity ? '≥ ' + h.lo.toFixed(2) : `${h.lo.toFixed(2)}…${h.hi.toFixed(2)}`}/mo</span>` +
+                  (h.ok ? '' : h.net < h.lo
+                    ? `<span class="pp-bad" style="font-size:11px;">UNDERFUNDED — will erode</span>`
+                    : `<span class="pp-bad" style="font-size:11px;">OVERSHOOTING — permanent pushes drift it past the hold point</span>`) +
+                  `<span class="pp-mover__p">${h.net > 0 ? '+' : ''}${h.net.toFixed(2)}/mo</span></div>`).join('') : '') +
+            `</div>`;
+          }
+          if (e.type === 'done') {
+            const gains = e.unlocks.length
+              ? e.unlocks.map((u: any) => {
+                  const hold = u.requires.some((q: any) => q.hold);
+                  return `<div class="pp-mover ${hold ? 'hold' : 'bank'}">` +
+                    (u.icon ? `<img class="eicon" src="${baseUrl}${u.icon}" alt="" width="16" height="16" loading="lazy" style="vertical-align:-3px;border-radius:2px;" />` : '') +
+                    `<span class="pp-mover__n">${esc(u.name)}</span>` +
+                    `<span class="pp-mover__s">${esc(u.source)}</span>` +
+                    `<span class="pp-mover__p">${hold
+                      ? `needs the value HELD at ${Math.round(Math.abs(u.requires.find((q: any) => q.hold).value))} — lost if it drops`
+                      : u.source === 'Reform' ? 'allow-gated — probably banks (verify in game)'
+                      : 'only while you hold this'}</span></div>`; }).join('')
+              : '';
+            return `<div class="pp-mile">
+              <span class="pp-mile__y">${Math.round(e.year)}</span>
+              <span class="pp-ok">✓ ${goalText(e.t)} reached (${rnd(e.t.achieved)})</span>
+              ${e.t.st.keep ? '<span class="pp-hold">held from here on</span>' : '<span class="pp-rel">released — will drift back</span>'}
+            </div>${gains}`;
+          }
+          if (e.type === 'stall') {
+            return `<div class="pp-mile">
+              <span class="pp-mile__y">${Math.round(e.year)}</span>
+              <span class="pp-bad">${e.reason === 'axis'
+                ? `${goalText(e.t)} — this axis never opens for this country`
+                : `${goalText(e.t)} — no age can fund ${e.t.st.at}: it needs ${(Math.abs(e.t.st.at ?? 0) / 100).toFixed(2)}/mo held${e.t.bestReach !== null ? `; the best any age manages is ≈${rnd(e.t.bestReach)}` : ''}`}</span>
+            </div>`;
+          }
+          return '';
+        }).join('');
 
-        return `<section class="pp-step">
-          <header>
-            <span class="pp-num">${i + 1}</span>
-            <b>${goalTxt}</b>
-            <span class="pp-axis">${esc(p.left.key)} ←→ ${esc(p.right.key)}</span>
-            <span class="pp-from">${Math.round(s.from) || 0} → ${s.axisClosed ? '—' : achievedTxt}</span>
-            <span class="pp-age">${esc(a.name)}</span>` +
-            (s.st.after ? `<span class="pp-hold">held to ${s.st.after}</span>` : '') +
-            (s.st.keep ? `<span class="pp-hold">kept after</span>` : `<span class="pp-rel">released after</span>`) + `
-            ${status}
-          </header>
-          <div class="pp-body">
-            <div class="pp-col">${drops}${swaps}${keeps}${holdBlock}${pushes}${maybes}${manuals}
-              <div class="pp-net">net push toward ${esc(poleName(s.st.pair, s.dir))}:
-                <b>${s.net > 0 ? '+' : ''}${s.net.toFixed(3)}</b>/mo
-                → stalls at <b>${capOf(s.net)}</b></div>
-            </div>
-            <div class="pp-col">${gains}</div>
-          </div>
+        // what this age cannot verify / cannot plan — one collapsed list each
+        const activeAxes = new Map<string, string>();
+        for (const e of items) {
+          if (e.type !== 'config') continue;
+          for (const p of e.pushing) activeAxes.set(p.t.st.pair, p.t.dirn);
+        }
+        const maybeAll: any[] = [], manualAll: any[] = [];
+        const seenM = new Set<string>();
+        for (const [pid, dirn] of activeAxes) {
+          const { maybe, manual } = helpersFor(pid, dirn, a.key);
+          for (const c of maybe) if (!seenM.has(uid(c.m))) { seenM.add(uid(c.m)); maybeAll.push(c); }
+          for (const c of manual) if (!seenM.has(uid(c.m))) { seenM.add(uid(c.m)); manualAll.push(c); }
+        }
+        const maybes = maybeAll.length
+          ? `<details class="pp-maybe"><summary>${maybeAll.length} more this age we cannot verify from the files — check in game</summary>` +
+            maybeAll.slice(0, 16).map((h: any) => moverLine(h, null, 'temp',
+              { why: gateWhy(h.m) || 'a scripted trigger', promote: true })).join('') + `</details>` : '';
+        const manuals = manualAll.length
+          ? `<details class="pp-maybe"><summary>${manualAll.length} other levers this age — buildings, aspects, estates, subjects (game-state dependent, not auto-planned)</summary>` +
+            manualAll.slice(0, 16).map((h: any) => moverLine(h, null, 'temp')).join('') + `</details>` : '';
+
+        return `<section class="pp-agesec">
+          <h2 class="pp-ageh">${esc(a.name)} <small>${a.year}${firstInAge ? ' — game start' : ''}</small></h2>
+          ${body}${maybes}${manuals}
         </section>`;
-      }).join('') + `<p class="pp-note">
-        The clock uses the game's stall rule: a value approaches
-        <em>100 × net monthly push</em> and slows on the way (drift speed is
-        the distance to that equilibrium ÷ 100 per month; the engine stops
-        below 0.01). So years here are the model's best case — events,
-        parliament agendas and debates can jump a value past its cap, and
-        anything above its supported equilibrium drifts back down.
-        "Kept" stages are billed forward: every later stage reserves enough
-        push to hold them, and says so when it cannot. A stage whose tools
-        only exist in a later age waits for that age — mostly that means a
-        later <em>advance</em>, since most movers are simply handed to you by
-        one. Estate-privilege capacity is bounded by estate satisfaction,
-        which the files do not price — the per-stage budget above is yours to
-        set honestly.
+      }).join('');
+
+      $('[data-pp-out]').innerHTML = head + summary + sections + `<p class="pp-note">
+        Every axis drifts at once toward <em>100 × its net monthly push</em>
+        (slowing on the way; the engine stops below 0.01/mo), so this is one
+        running setup per age, not a queue of one-axis pushes. Your target
+        order is the tie-breaker where tools conflict — the one cabinet
+        member, one policy per law group, movers whose side-effects pull a
+        higher-priority axis the wrong way. Privileges are granted at most
+        ${privBudget}/age and never churned: a grant stays until it actively
+        fights the plan, and a revoke is shown as the cost it is. "Kept"
+        targets are billed forward — their hold shows in every age's standing
+        bill. One-off nudges (parliament debates, agendas, events) can pierce
+        a cap temporarily, and estate satisfaction — the real bound on
+        privileges — is not in the files: the budgets above are yours to set
+        honestly.
       </p>`;
       syncUrl();
     }
@@ -1104,7 +1198,7 @@ import Base from '../layouts/Base.astro';
       if (govOverride) qs.set('g', govOverride);
       if (cabEff !== 0.4) qs.set('e', String(cabEff));
       if (privBudget !== 4) qs.set('b', String(privBudget));
-      if (reformBudget !== 2) qs.set('r', String(reformBudget));
+      if (reformBudget !== 3) qs.set('r', String(reformBudget));
       if (promoted.size) qs.set('h', [...promoted].join('~'));
       if (path.length) {
         qs.set('p', path.map((s) => {
@@ -1304,38 +1398,48 @@ import Base from '../layouts/Base.astro';
       border: 1px solid var(--border); border-radius: 3px; padding: 2px 6px;
       font-family: var(--font-mono); font-size: 12px;
     }
-
-    .pp-step { border: 1px solid var(--border); border-radius: var(--radius);
-      background: var(--bg-elev); margin-top: 12px; overflow: hidden; }
-    .pp-step > header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
-      padding: 8px 12px; background: var(--bg-elev-2); border-bottom: 1px solid var(--border); }
-    .pp-num { font-family: var(--font-mono); font-size: 11px; color: var(--bg);
-      background: var(--gold); border-radius: 3px; padding: 1px 6px; }
-    .pp-step header b { color: var(--gold-soft); font-size: 14px; }
-    .pp-axis { font-size: 11px; color: var(--text-faint); font-family: var(--font-mono); }
-    .pp-from { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
-    .pp-age { font-size: 11px; color: var(--text-dim); border: 1px solid var(--border-strong);
-      border-radius: 3px; padding: 0 5px; }
-    .pp-hold { font-size: 11px; color: var(--gold-soft); border: 1px solid var(--gold-deep);
-      border-radius: 3px; padding: 0 5px; }
-    .pp-rel { font-size: 11px; color: var(--text-faint); border: 1px solid var(--border);
-      border-radius: 3px; padding: 0 5px; }
     .pp-row input.pp-year { width: 58px; }
     .pp-row input[type=checkbox] { accent-color: var(--gold); }
-    .pp-when { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-dim); }
-    .pp-ok { font-size: 11.5px; color: var(--good); }
-    .pp-bad { font-size: 11.5px; color: var(--bad); }
     .pp-mv { margin-left: auto; display: flex; gap: 4px; }
     .pp-mv button { background: var(--bg-elev); color: var(--text-dim); border: 1px solid var(--border);
       border-radius: 3px; font-size: 11px; padding: 1px 7px; cursor: pointer; }
     .pp-mv button:hover { color: var(--gold); border-color: var(--gold-deep); }
 
-    .pp-body { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 18px; padding: 10px 12px; }
-    @media (max-width: 900px) { .pp-body { grid-template-columns: 1fr; } }
+    .pp-num { font-family: var(--font-mono); font-size: 11px; color: var(--bg);
+      background: var(--gold); border-radius: 3px; padding: 1px 6px; }
+    .pp-hold { font-size: 11px; color: var(--gold-soft); border: 1px solid var(--gold-deep);
+      border-radius: 3px; padding: 0 5px; }
+    .pp-rel { font-size: 11px; color: var(--text-faint); border: 1px solid var(--border);
+      border-radius: 3px; padding: 0 5px; }
+    .pp-when { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-dim); }
+    .pp-ok { font-size: 11.5px; color: var(--good); }
+    .pp-bad { font-size: 11.5px; color: var(--bad); }
+    .pp-from { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
+
+    .pp-summary { display: flex; flex-direction: column; gap: 3px; margin: 12px 0 6px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-elev); padding: 8px 10px; }
+    .pp-sumrow { display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; font-size: 13px; }
+    .pp-sumrow b { color: var(--gold-soft); }
+
+    .pp-agesec { margin-top: 18px; }
+    .pp-ageh { font-size: 17px; color: var(--gold); border-bottom: 1px solid var(--gold-deep);
+      padding-bottom: 4px; margin-bottom: 8px; }
+    .pp-ageh small { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-faint);
+      margin-left: 8px; }
+
+    .pp-cfg { border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-elev); padding: 8px 12px 10px; margin-bottom: 8px; }
+    .pp-cfg__h { font-size: 13px; color: var(--text-soft); margin-bottom: 4px; }
+    .pp-cfg__h .pp-need { margin-left: 8px; }
+    .pp-mile { display: flex; align-items: baseline; gap: 9px; padding: 4px 12px;
+      font-size: 13px; }
+    .pp-mile__y { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-faint); }
+    .pp-mile + .pp-mover { margin-left: 24px; }
+
     .pp-sub { font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
       color: var(--text-faint); margin: 10px 0 4px; }
     .pp-sub:first-child { margin-top: 0; }
-    .pp-sub.quiet { text-transform: none; letter-spacing: 0; font-size: 12px; }
     .pp-kind { font-size: 11.5px; color: var(--gold-soft); margin: 7px 0 3px; }
     .pp-mover { display: flex; align-items: baseline; gap: 8px; font-size: 12.5px;
       color: var(--text-soft); padding: 3px 8px; border-radius: 3px;
@@ -1343,16 +1447,18 @@ import Base from '../layouts/Base.astro';
       flex-wrap: wrap; }
     .pp-mover.add { border-left-color: var(--good); }
     .pp-mover.drop { border-left-color: var(--bad); }
+    .pp-mover.swapoff { border-left-color: var(--border-strong); }
     .pp-mover.keep { border-left-color: var(--gold-deep); }
     .pp-mover.bank { border-left-color: var(--good); }
     .pp-mover.hold { border-left-color: var(--gold-deep); }
     .pp-mover.temp { border-left-color: var(--border-strong); opacity: .85; }
     .pp-mover__n { flex: none; }
     .pp-mover__s { font-size: 11px; color: var(--text-faint); }
-    .pp-side { font-size: 11px; color: var(--text-faint); font-style: italic; }
     .pp-need { font-size: 10.5px; color: var(--gold-soft); }
     .pp-cab { font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
       color: var(--text-dim); border: 1px solid var(--border-strong); border-radius: 3px; padding: 0 4px; }
+    .pp-costly { font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
+      color: var(--bad); border: 1px solid var(--bad); border-radius: 3px; padding: 0 4px; }
     .pp-have { font-size: 10.5px; color: var(--text-dim); white-space: nowrap; }
     .pp-have input { accent-color: var(--gold); vertical-align: -2px; }
     .pp-mover__p { margin-left: auto; font-family: var(--font-mono); font-size: 11px;
@@ -1360,7 +1466,7 @@ import Base from '../layouts/Base.astro';
     .pp-net { margin-top: 8px; font-size: 12px; color: var(--text-dim); }
     .pp-net b { font-family: var(--font-mono); color: var(--gold); }
 
-    details.pp-maybe { margin-top: 10px; }
+    details.pp-maybe { margin: 6px 0 0 2px; }
     details.pp-maybe > summary { font-size: 11.5px; color: var(--text-faint); cursor: pointer;
       list-style: none; }
     details.pp-maybe > summary::before { content: '▸ '; }
