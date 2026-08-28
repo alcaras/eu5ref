@@ -626,6 +626,19 @@ import Base from '../layouts/Base.astro';
       let year = START_YEAR;
       let curAgeKey = '';
       const budgets = { priv: privBudget, reform: reformBudget };
+      // which policy each law group currently runs, so a law change renders
+      // as "group: old → new" instead of a disjoint off/on pair — seeded
+      // from the country's real 1337 selections (even ones with no value
+      // effects of their own)
+      const prettyKey = (k: string) =>
+        k.replace(/_law$|_policy$/, '').replace(/_/g, ' ')
+         .replace(/\b\w/g, (c) => c.toUpperCase());
+      const lawNow: Record<string, string> = {};
+      for (const [grp, opt] of Object.entries((startRec() || {}).laws || {})) {
+        const m = D.movers.find((x: any) => x.group === grp && x.key === opt);
+        lawNow[grp] = m ? m.name : prettyKey(String(opt));
+      }
+      let cabNow: string | null = null;
 
       const holdFrom = (t: any, v: number) => {
         // An open-ended target that ran past 50 is only HELD at 50 — that is
@@ -729,6 +742,17 @@ import Base from '../layouts/Base.astro';
               cap: capOf(cfg.net(t.st.pair)),
             })),
           };
+          // annotate law changes and cabinet reassignments with what they
+          // replace, and keep the running state current
+          for (const x of entry.adds) {
+            if (x.m.group) {
+              x.from = lawNow[x.m.group] ?? null;
+              lawNow[x.m.group] = x.m.name;
+            }
+            if (x.m.cabinet) x.from = cabNow;
+          }
+          const cabM = [...on].map((u) => byUid.get(u)).find((m) => m?.cabinet);
+          cabNow = cabM ? cabM.name : null;
           // several re-plans in the same instant read as ONE to-do list
           const prev = events[events.length - 1];
           const prev2 = events[events.length - 2];
@@ -943,12 +967,19 @@ import Base from '../layouts/Base.astro';
       const promo = opts.promote
         ? `<label class="pp-have"><input type="checkbox" data-promote="${esc(uid(m))}"${promoted.has(uid(m)) ? ' checked' : ''}/> I have this</label>` : '';
       const where = m.groupName ? esc(m.groupName) : esc(m.source);
+      // a law change / cabinet reassignment names what it replaces
+      const fromTag = h.from
+        ? `<span class="pp-swapfrom">${esc(h.from)}</span><span class="pp-swaparrow">→</span>`
+        : h.from === null && m.group
+          ? `<span class="pp-swapfrom">no policy set</span><span class="pp-swaparrow">→</span>` : '';
+      const holdTag = h.forHold
+        ? `<span class="pp-need">funds the hold on ${esc(poleName(h.forHold, signedPush(m, h.forHold) >= 0 ? 'right' : 'left'))}</span>` : '';
       // signed effect summary across the axes it moves
       const eff = m.effects.filter((e: any) => !e.temp).slice(0, 3).map((e: any) =>
         `${esc(poleName(e.pair, e.dir))} +${((e.perMonth ?? 0) * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1)).toFixed(2)}`).join(' · ');
-      return `<div class="pp-mover ${cls}">${iconHtml(m)}` +
+      return `<div class="pp-mover ${cls}">${iconHtml(m)}${fromTag}` +
         `<span class="pp-mover__n">${esc(m.name)}</span>` +
-        `<span class="pp-mover__s">${where}</span>${cab}${perm}${scaled}${costTag}${gift}${why}${promo}` +
+        `<span class="pp-mover__s">${where}</span>${cab}${perm}${scaled}${costTag}${gift}${why}${holdTag}${promo}` +
         `<span class="pp-mover__p">${eff}</span></div>`;
     }
 
@@ -1077,19 +1108,29 @@ import Base from '../layouts/Base.astro';
         const firstInAge = a.year <= START_YEAR;
         const body = items.map((e: any) => {
           if (e.type === 'config') {
-            const adds = e.adds.filter((x: any) => !x.forHold);
-            const holdAdds = e.adds.filter((x: any) => x.forHold);
+            // a law add and its group's drop are ONE action in game — a swap
+            // — so render them as "group: old policy → new policy"; same for
+            // reassigning the cabinet member
+            const lawAdds = e.adds.filter((x: any) => x.m.group);
+            const cabAdds = e.adds.filter((x: any) => x.m.cabinet);
+            const restAdds = e.adds.filter((x: any) => !x.m.group && !x.m.cabinet);
+            const pairedGroups = new Set(lawAdds.map((x: any) => x.m.group));
+            const shownDrops = e.drops.filter((x: any) =>
+              !(x.m.group && pairedGroups.has(x.m.group)) &&
+              !(x.m.cabinet && cabAdds.length));
             const research = [...new Set(e.adds
               .map((x: any) => x.m.unlock && x.m.unlock[0] ? x.m.unlock[0].advance : null)
               .filter(Boolean))];
             if (!e.adds.length && !e.drops.length) return '';
             return `<div class="pp-cfg">
               <div class="pp-cfg__h">${Math.round(e.year)} — ${e.year <= START_YEAR + 1e-6 ? 'set up' : 'adjust'}${research.length ? ` <span class="pp-need">research first: ${esc(research.join(' · '))}</span>` : ''}</div>` +
-              (e.drops.length ? `<div class="pp-sub">Switch off</div>` +
-                e.drops.map((x: any) => moverLine(x, null, x.cost ? 'drop' : 'swapoff')).join('') : '') +
-              (adds.length ? `<div class="pp-sub">Switch on</div>` + groupBySource(adds, 'add') : '') +
-              (holdAdds.length ? `<div class="pp-sub">Switched on to fund a held position</div>` +
-                holdAdds.map((x: any) => moverLine(x, null, 'keep')).join('') : '') +
+              (shownDrops.length ? `<div class="pp-sub">Switch off / revoke</div>` +
+                shownDrops.map((x: any) => moverLine(x, null, x.cost ? 'drop' : 'swapoff')).join('') : '') +
+              (cabAdds.length ? `<div class="pp-kind">Cabinet — ${cabAdds.some((x: any) => x.from) ? 'reassign' : 'assign'} your minister</div>` +
+                cabAdds.map((x: any) => moverLine(x, null, 'add')).join('') : '') +
+              (lawAdds.length ? `<div class="pp-kind">Change laws — each line is one swap: old policy → new</div>` +
+                lawAdds.map((x: any) => moverLine(x, null, 'add')).join('') : '') +
+              (restAdds.length ? groupBySource(restAdds, 'add') : '') +
               (e.pushing.length ? `<div class="pp-net">now pushing: ` + e.pushing.map((p: any) =>
                 `${esc(poleName(p.t.st.pair, p.t.dirn))} <b>${p.net > 0 ? '+' : ''}${p.net.toFixed(2)}</b>/mo (stalls at ${Math.abs(p.cap)})`).join(' · ') + `</div>` : '') +
               (e.holdRows.length ? `<div class="pp-sub">Standing bill — held positions</div>` +
@@ -1455,6 +1496,8 @@ import Base from '../layouts/Base.astro';
     .pp-mover__n { flex: none; }
     .pp-mover__s { font-size: 11px; color: var(--text-faint); }
     .pp-need { font-size: 10.5px; color: var(--gold-soft); }
+    .pp-swapfrom { color: var(--text-faint); font-size: 12px; }
+    .pp-swaparrow { color: var(--gold-soft); font-size: 12px; margin: 0 -1px; }
     .pp-cab { font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
       color: var(--text-dim); border: 1px solid var(--border-strong); border-radius: 3px; padding: 0 4px; }
     .pp-costly { font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
