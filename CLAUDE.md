@@ -152,26 +152,29 @@ Press + Pike and Shot and nothing else.
 
 **But 383 advances declare no `requires`, no `depth` and no `in_tree_of`** —
 every focus advance among them — and the tech screen still draws each one
-inside one of the age's four trees. Every key used across all 3,178 advances
-was enumerated: only `requires` (2,769), `depth` (29), `in_tree_of` (33),
-`allow_children` (40, a leaf constraint) and `content_priority` (224,
-ordering within a national chain). **Nothing in the files wires them, and
-where they land is UNSOLVED.** `data.drawn_in` is emitted only for a
-declared placement; parentless advances get `null` and render as "not
-declared".
+inside one of the age's trees. **That is layout packing, not membership, and
+it is settled:** in the Age of Revolutions the four nodes drawn under Global
+Ambitions (Heavy Frigate, Buffer States, Campaign Logistics Planning,
+Additional Loyalist Recruitment) all declare `requires = []`, while that
+advance's three real children (Mossos d'Esquadra, National Church,
+Unification in Faith) are drawn elsewhere entirely. Two of the four are
+`for = dip` focus advances and two are ordinary orphans, so `for` plays no
+part. Same everywhere: Bookkeeping renders under Medical Schools and
+Formalized Officer Corps + Humanism under Two-decker — both nodes with ZERO
+declared children, i.e. free slots. The engine fills empty slots in the tidy
+tree with the age's orphans; the apparent parent and apparent tree are
+artifacts of that pass and are not stable (the visible set depends on the
+country and on which focus was taken).
 
-Two failed attempts, so don't repeat them: treating "no prereq" as "its own
-root" gives ~38 phantom roots per age (the screen shows four); attaching
-every parentless advance to the age's single ungated root looks defensible
-(each age has exactly one; `in_tree_of` is used 32 times out of 33 to point
-*into* an institution tree; one parentless Discovery adm focus advance was
-seen in the Surgery cluster) but predicts that no focus advance in the
-Reformation, Absolutism or Revolutions sits in an institution tree — while
-the Renaissance and Discovery ones demonstrably do, by declared prerequisite
-(Banking 7, Renaissance 4, Professional Armies 4, New World 4). The devs
-wiring those and then stopping for four straight ages is not credible, so
-there is a placement rule still to be found. Until it is, do not guess: an
-unplaced advance is reported unplaced.
+So there is no tree to report for an orphan, and `data.drawn_in` is emitted
+only for a placement the files declare (`requires`, `depth`, `in_tree_of` —
+the last of which is exactly how the devs place an orphan they DO want in a
+tree, used 33 times, e.g. Two-decker → Scientific Revolution). Two earlier
+guesses were wrong and cost several rounds: "no prereq = its own root" (gives
+~38 phantom roots against the screen's four) and "orphans join the age's
+single ungated free tree" (predicts no focus advance in an institution tree
+after the Renaissance, disproved by Bookkeeping under Scientific Revolution
+and Merchant Fleets under Enlightenment). Don't retry either.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):

@@ -128,16 +128,12 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       age. You pick again at every age change — five picks over a campaign.
     </p>
     <p class="fx-trees">
-      Each age from the Renaissance on declares four trees — its three
-      <a href={`${base}institutions`}>institutions</a> and one ungated tree the
-      files call the "always-available free tree" (Scholarly Treatises, Surgery,
-      Pharmacology, Sanitation, Vaccination). 116 of the 150 focus advances
-      declare no prerequisite and no tree, and the files never say where they
-      go — but each age has exactly one ungated root, `in_tree_of` (the
-      override) is only ever used to move something <em>into</em> an
-      institution tree, and the tech screen shows only those four clusters.
-      They are placed on the free tree on that reasoning and marked
-      <span class="fx-adv__inferred">inferred</span>.
+      In game these appear inside one of the age's four trees, but that is the
+      tech screen packing them into free layout slots, not a tree they belong
+      to: the nodes drawn under an advance are frequently not its declared
+      children, and ordinary prerequisite-less advances get packed the same way.
+      Only the 34 focus advances with a real prerequisite have a tree, and it is
+      shown below.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
