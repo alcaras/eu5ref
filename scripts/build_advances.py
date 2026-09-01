@@ -83,27 +83,6 @@ def main():
     # ── pass 2: branch + tier within each age ──────────────────
     # Parent = the first prerequisite in the same age (the files build each
     # age as a forest of chains; cross-age prereqs start a new local root).
-    # Each age from the Renaissance on declares exactly four `depth = 0`
-    # roots: its three institutions, and one ungated tree the files call the
-    # "always-available free tree" (Surgery, Pharmacology, Sanitation…).
-    # The tech screen shows those four and no more, so the 383 advances that
-    # declare no `requires`, no `depth` and no `in_tree_of` — the focus
-    # advances, the building unlocks — are drawn on the age's free tree.
-    # That attachment is the engine's; the files do not express it, and it
-    # is applied only where an age has exactly one ungated root to attach to
-    # (Traditions has seven, so its parentless advances stay unplaced).
-    free_root: dict[str, str] = {}
-    by_age: dict[str, list[str]] = {}
-    for name, r in recs.items():
-        if r['explicit_root']:
-            by_age.setdefault(r['age'], []).append(name)
-    for age, roots in by_age.items():
-        ungated = [n for n in roots
-                   if not any(str(x).startswith('has embraced institution')
-                              for x in (recs[n]['allow_state'] or []))]
-        if len(ungated) == 1:
-            free_root[age] = ungated[0]
-
     parent: dict[str, str | None] = {}
     # `in_tree_of = x` puts an advance in x's tree without making it x's
     # child — it is drawn there but needs no prerequisite. 33 advances use
@@ -119,13 +98,11 @@ def main():
         parent[name] = p
         t = getattr(r['obj'], 'in_tree_of', None)
         tn = getattr(t, 'name', None) if t is not None else None
-        if p is not None or r['explicit_root']:
-            tree_of[name] = None
-        elif tn in recs:
-            tree_of[name] = tn
-        else:
-            host = free_root.get(r['age'])
-            tree_of[name] = host if host and host != name else None
+        # Only what the files declare. An advance with no `requires` and no
+        # `in_tree_of` is left unplaced: the tech screen does draw it inside
+        # one of the age's four trees, but nothing in the data says which,
+        # and guessing put it in the wrong place. See CLAUDE.md.
+        tree_of[name] = tn if (p is None and not r['explicit_root'] and tn in recs) else None
 
     def root_of(n, seen=()):
         host = tree_of.get(n)

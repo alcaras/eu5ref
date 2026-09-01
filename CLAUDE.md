@@ -143,24 +143,28 @@ Press / Surgery) and nearly every other advance has exactly one prereq.
 `build_advances.py` resolves each advance to its `branch_id` + `tier`, which
 is what lets the planner draw the game's layout.
 
-**Every age from the Renaissance on has exactly four roots: its three
-institutions and one ungated "always-available free tree"** — the files' own
-comment on `surgery_advance` / `pharmacology_advance` / `sanitation_advance` /
-`vaccination_advance` / `renaissance_development`. Confirmed in game: the
-Discovery tab shows Surgery + New World + Printing Press + Pike and Shot and
-nothing else. But **383 advances declare no `requires`, no `depth` and no
-`in_tree_of`** — every focus advance, the building unlocks — and the engine
-draws them on that free tree anyway (screenshot evidence: Efficient
-Construction Plans, a Discovery adm focus advance, hangs off the Surgery tree
-with a real edge, tooltipped "Special Advance … We decided on 'Administrative
-Abilities' for this Age"). The attachment is engine-side and expressed
-nowhere in the files, so `build_advances.py` reproduces it: a parentless
-advance joins its age's single ungated root. Traditions has seven ungated
-roots and so no unambiguous host — its parentless advances stay unplaced, on
-purpose. Also honour `in_tree_of = x`, which draws an advance in x's tree
-without making it x's child (33 advances). Don't "simplify" any of this back
-to "no prereq means it is its own root" — that produced ~38 phantom roots per
-age and is visibly wrong in game.
+**Every age from the Renaissance on declares exactly four `depth = 0` roots:
+its three institutions and one ungated "always-available free tree"** — the
+files' own comment on `surgery_advance` / `pharmacology_advance` /
+`sanitation_advance` / `vaccination_advance` / `renaissance_development`.
+Confirmed in game: the Discovery tab shows Surgery + New World + Printing
+Press + Pike and Shot and nothing else.
+
+**But 383 advances declare no `requires`, no `depth` and no `in_tree_of`** —
+every focus advance, the building unlocks — and the tech screen still draws
+them inside one of those four trees (observed: Efficient Construction Plans,
+a Discovery adm focus advance, sits in the Surgery cluster). Every key used
+across all 3,178 advances was enumerated: only `requires` (2,769), `depth`
+(29), `in_tree_of` (33), `allow_children` (40, a leaf constraint) and
+`content_priority` (224, ordering within a national chain). **Nothing wires
+them. Which tree each one lands in is not derivable from the data, so we do
+NOT assign one** — a previous attempt attached every parentless advance to
+its age's ungated root and put them in visibly wrong places. They are
+reported as having no declared tree, and `in_tree_of = x` (33 advances,
+drawn in x's tree without being x's child) is honoured because that one IS
+declared. If this is ever settled — by reading the placement off the tech
+screen, or out of the binary — encode it in a separate flagged field, never
+in `branch_id`, so extracted fact stays distinguishable from inference.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):

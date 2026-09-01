@@ -124,6 +124,15 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       exactly <b>10</b> advances per age, so 20 of the 30 below stay out of reach every
       age. You pick again at every age change — five picks over a campaign.
     </p>
+    <p class="fx-trees">
+      Each age from the Renaissance on declares four trees — its three
+      <a href={`${base}institutions`}>institutions</a> and one ungated tree the
+      files call the "always-available free tree" (Scholarly Treatises, Surgery,
+      Pharmacology, Sanitation, Vaccination). Most focus advances declare no
+      prerequisite and no tree at all; the tech screen still draws them inside
+      one of the four, but nothing in the data says which, so this page reports
+      the gate it can prove and leaves the placement blank.
+    </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
       {ages.map((a: any) => (
@@ -230,6 +239,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-intro b { color: var(--text); font-weight: 600; }
   .fx-intro code { color: var(--text-dim); }
 
+  .fx-trees { color: var(--text-dim) !important; font-size: 13px !important; margin-top: 10px; }
   .fx-jump { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
   .fx-jump__label {
     font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
