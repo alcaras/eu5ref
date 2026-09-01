@@ -1,0 +1,252 @@
+---
+// Age focuses — the adm/dip/mil choice made at the start of every age after
+// Traditions, side by side. The 150 advances below carry `for = adm|dip|mil`
+// in the advance files: they only appear for the focus you picked.
+import Base from '../layouts/Base.astro';
+import Mods from '../components/Mods.astro';
+import Term from '../components/Term.astro';
+import SectionTable from '../components/SectionTable.astro';
+import advancesData from '../data/advances.json';
+import agesData from '../data/ages.json';
+
+const base = import.meta.env.BASE_URL;
+
+const FOCUSES = [
+  { key: 'adm', label: 'Administrative Focus', short: 'Administrative', tag: 'ADM' },
+  { key: 'dip', label: 'Diplomatic Focus', short: 'Diplomatic', tag: 'DIP' },
+  { key: 'mil', label: 'Military Focus', short: 'Military', tag: 'MIL' },
+] as const;
+
+const focusAdvances = advancesData.entities.filter((e: any) => e.data.specialization);
+
+// Ages in game order; year 1 on the first age means "game start" (1337).
+const ages = agesData.entities
+  .map((a: any) => ({
+    ...a,
+    year: a.data.year === 1 ? 1337 : a.data.year,
+    n: focusAdvances.filter((e: any) => e.facets.age === a.name).length,
+  }))
+  .sort((a: any, b: any) => a.year - b.year)
+  .filter((a: any) => a.n > 0);
+
+const plain = (tokens: any[] | null) =>
+  (tokens || []).map((t: any) => (t[0] === 't' ? t[1] : t[2] || '')).join('');
+
+const columnFor = (ageName: string, focus: string) =>
+  focusAdvances
+    .filter((e: any) => e.facets.age === ageName && e.data.specialization === focus)
+    .sort((a: any, b: any) =>
+      (a.data.tier - b.data.tier) || a.name.localeCompare(b.name));
+
+const withPrereq = focusAdvances.filter((e: any) => e.data.requires.length > 0).length;
+const unlockers = focusAdvances.filter((e: any) => e.data.unlocks.length > 0);
+
+// Bottom section: the same 150 as a sortable / filterable / exportable table.
+const FOCUS_NAME: Record<string, string> = {
+  adm: 'Administrative', dip: 'Diplomatic', mil: 'Military',
+};
+const tableEntities = focusAdvances.map((e: any) => ({
+  ...e,
+  facets: { age: e.facets.age, focus: FOCUS_NAME[e.data.specialization] },
+  data: {
+    ...e.data,
+    unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
+  },
+}));
+const countBy = (key: string, value: string) =>
+  tableEntities.filter((e: any) => e.facets[key] === value).length;
+const tableData = {
+  dataset: 'age-focuses',
+  entities: tableEntities,
+  facets: [
+    { key: 'age', label: 'Age',
+      options: ages.map((a: any) => ({ value: a.name, label: a.name, count: countBy('age', a.name) })) },
+    { key: 'focus', label: 'Focus',
+      options: FOCUSES.map((f) => ({ value: FOCUS_NAME[f.key], label: f.short, count: countBy('focus', FOCUS_NAME[f.key]) })) },
+  ],
+};
+const AGE_ORDER = ages.map((a: any) => a.name);
+---
+<Base
+  title="Age Focuses"
+  active="focuses"
+  pageMark="🔀"
+  eyebrow="Ages & Advances"
+  pageStats={[
+    { label: 'focus advances', value: focusAdvances.length },
+    { label: 'ages with a choice', value: ages.length },
+    { label: 'per focus per age', value: 10 },
+  ]}
+  description="Administrative, diplomatic, and military age focuses in Europa Universalis V, compared side by side — every advance each one opens, age by age."
+>
+  <div class="fx-intro">
+    <p>
+      Every age change fires an age event that asks you to pick one of three focuses —
+      <b>Administrative</b>, <b>Diplomatic</b>, or <b>Military</b>. The pick sets your
+      age preference, and that decides which extra advances appear in that age's tree:
+      an advance marked <code>for = adm</code> "will only appear for a specified
+      specialization your country can take at the start of an age". Each focus opens
+      exactly <b>10</b> advances per age, so 20 of the 30 below stay out of reach every
+      age. You pick again at every age change — five picks over a campaign.
+    </p>
+    <p class="fx-note">
+      <a href={`${base}ages`}>Traditions</a> (1337), the age you start in, has no
+      focus advances at all, so the choice first matters in the Renaissance.
+      {withPrereq} of the {focusAdvances.length} focus advances sit inside an
+      existing branch and need a prerequisite advance first (every Renaissance one,
+      plus the Discovery colonial chain); the rest are roots you can take straight
+      away. {unlockers.length} unlock something beyond a modifier.
+    </p>
+    <nav class="fx-jump">
+      <span class="fx-jump__label">Jump to</span>
+      {ages.map((a: any) => (
+        <a href={`#${a.slug}`}>{a.name} <span class="fx-jump__yr">{a.year}</span></a>
+      ))}
+    </nav>
+  </div>
+
+  {ages.map((age: any) => (
+    <section class="fx-age" id={age.slug}>
+      <h2 class="fx-age__head">
+        {age.icon && <img class="eicon" src={`${base}${age.icon}`} alt="" width="28" height="28" loading="lazy" />}
+        <a href={`${base}ages`}>{age.name}</a>
+        <span class="fx-age__yr">{age.year}</span>
+        <span class="fx-age__long">{age.data.long_name}</span>
+      </h2>
+      <div class="fx-grid">
+        {FOCUSES.map((f) => {
+          const items = columnFor(age.name, f.key);
+          return (
+            <div class={`fx-col fx-col--${f.key}`}>
+              <div class="fx-col__head">
+                <span class="fx-col__tag">{f.tag}</span>
+                <span class="fx-col__label">{f.label}</span>
+                <span class="fx-col__n">{items.length}</span>
+              </div>
+              <ul class="fx-list">
+                {items.map((e: any) => (
+                  <li class="fx-adv">
+                    <a class="fx-adv__name" href={`${base}advances/${e.slug}`} title={plain(e.desc)}>
+                      {e.icon && <img class="eicon eicon--inline" src={`${base}${e.icon}`} alt="" width="16" height="16" loading="lazy" />}
+                      {e.name}
+                    </a>
+                    <Mods mods={e.mods} />
+                    {e.data.unlocks.map((u: any) => (
+                      <div class="fx-adv__unlock">
+                        <span class="fx-adv__k">{u.label}</span>
+                        {u.items.map((it: any, i: number) => (
+                          <Fragment>{i > 0 && ', '}{it.id ? <Term id={it.id} label={it.label} showIcon={false} /> : it.label}</Fragment>
+                        ))}
+                      </div>
+                    ))}
+                    {e.data.requires.length > 0 && (
+                      <div class="fx-adv__req">
+                        <span class="fx-adv__k">after</span>
+                        {e.data.requires.map((r: any, i: number) => (
+                          <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+
+  <SectionTable title="Every focus advance" data={tableData} pagePrefix="advances" columns={[
+    { key: 'name', label: 'Advance', kind: 'name' },
+    { key: 'age', label: 'Age', kind: 'facet' },
+    { key: 'focus', label: 'Focus', kind: 'facet' },
+    { key: 'mods', label: 'Effects', kind: 'mods' },
+    { key: 'unlock_names', label: 'Unlocks', kind: 'chips' },
+    { key: 'requires', label: 'Requires', kind: 'refs' },
+  ] as any} placeholder="Filter focus advances…"
+    defaultSort={{ key: 'age' }} sortOrder={{ age: AGE_ORDER }} />
+
+  <p class="fx-src">
+    Source: <code>in_game/common/advances/4_choices_adm|dip|mil.txt</code>
+    (the <code>for =</code> key), <code>in_game/events/ages.txt</code>
+    (<code>set_age_preference</code>), and <code>in_game/common/age</code> for the age years.
+  </p>
+</Base>
+
+<style>
+  /* focus accent hues — column chrome only, not modifier polarity */
+  .fx-col--adm { --fx: oklch(0.78 0.12 145); }
+  .fx-col--dip { --fx: oklch(0.76 0.09 230); }
+  .fx-col--mil { --fx: oklch(0.74 0.14 32); }
+
+  .fx-intro { margin-top: 18px; max-width: 78ch; }
+  .fx-intro p { color: var(--text-soft); font-size: 14px; line-height: 1.6; }
+  .fx-intro p + p { margin-top: 8px; }
+  .fx-intro b { color: var(--text); font-weight: 600; }
+  .fx-intro code { color: var(--text-dim); }
+  .fx-note { color: var(--text-dim) !important; font-size: 13px !important; }
+
+  .fx-jump { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+  .fx-jump__label {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-faint); margin-right: 4px;
+  }
+  .fx-jump a {
+    border: 1px solid var(--border); background: var(--bg-elev);
+    border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--text-dim);
+  }
+  .fx-jump a:hover { border-color: var(--border-strong); color: var(--text); text-decoration: none; }
+  .fx-jump__yr { font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
+
+  .fx-age { margin-top: 34px; scroll-margin-top: 16px; }
+  .fx-age__head {
+    display: flex; align-items: baseline; gap: 9px; font-size: 22px;
+    border-bottom: 1px solid var(--border); padding-bottom: 7px;
+  }
+  .fx-age__head .eicon { align-self: center; }
+  .fx-age__head a { color: var(--text); }
+  .fx-age__head a:hover { color: var(--gold); text-decoration: none; }
+  .fx-age__yr { font-family: var(--font-mono); font-size: 14px; color: var(--gold-soft); }
+  .fx-age__long { font-size: 12.5px; color: var(--text-faint); margin-left: auto; font-family: var(--font-ui); }
+
+  .fx-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+  @media (max-width: 900px) { .fx-grid { grid-template-columns: 1fr; } }
+
+  .fx-col {
+    border: 1px solid var(--border); border-top: 2px solid var(--fx);
+    border-radius: var(--radius); background: var(--bg-elev); overflow: hidden;
+  }
+  .fx-col__head {
+    display: flex; align-items: baseline; gap: 7px;
+    padding: 9px 12px; border-bottom: 1px solid var(--border);
+    background: color-mix(in oklab, var(--fx) 8%, var(--bg-elev));
+  }
+  .fx-col__tag {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    color: var(--fx); border: 1px solid color-mix(in oklab, var(--fx) 45%, transparent);
+    border-radius: var(--radius-sm); padding: 1px 5px;
+  }
+  .fx-col__label { font-weight: 600; font-size: 13.5px; color: var(--text); }
+  .fx-col__n {
+    margin-left: auto; font-family: var(--font-mono); font-size: 11px; color: var(--text-faint);
+  }
+
+  .fx-list { list-style: none; margin: 0; padding: 0; }
+  .fx-adv { padding: 9px 12px; border-bottom: 1px solid var(--border-faint); }
+  .fx-adv:last-child { border-bottom: 0; }
+  .fx-adv:hover { background: var(--bg-elev-2); }
+  .fx-adv__name { display: block; font-weight: 600; font-size: 13.5px; color: var(--text); }
+  .fx-adv__name:hover { color: var(--gold); text-decoration: none; }
+  .fx-adv :global(ul.mods) { margin-top: 3px; }
+  .fx-adv :global(ul.mods li) { white-space: normal; font-size: 12.5px; }
+  .fx-adv__unlock, .fx-adv__req { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
+  .fx-adv__unlock { color: var(--gold-soft); }
+  .fx-adv__k {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-faint); margin-right: 5px;
+  }
+
+  .fx-src { margin-top: 26px; font-size: 12px; color: var(--text-faint); }
+  .fx-src code { color: var(--text-dim); }
+</style>

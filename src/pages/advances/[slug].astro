@@ -10,6 +10,13 @@ export function getStaticPaths() {
 }
 const { entity } = Astro.props;
 const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+const base = import.meta.env.BASE_URL;
+// `for = adm|dip|mil` in the files: this advance only appears if you took that
+// age focus at the start of the age.
+const FOCUS_NAME: Record<string, string> = {
+  adm: 'Administrative Focus', dip: 'Diplomatic Focus', mil: 'Military Focus',
+};
+const focus = FOCUS_NAME[(entity.data as any).specialization as string];
 ---
 <Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>
   <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">
@@ -31,10 +38,16 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
       </div>
     )}
     <Fragment slot="aside">
-      {(entity.data.gate_labels?.length > 0 || entity.data.requires_state?.length > 0) && (
+      {(focus || entity.data.gate_labels?.length > 0 || entity.data.requires_state?.length > 0) && (
         <div class="panel">
           <h3>Availability</h3>
           <div class="kv">
+            {focus && (
+              <Fragment>
+                <span class="k">Age focus</span>
+                <span class="v"><a href={`${base}focuses`}>{focus}</a></span>
+              </Fragment>
+            )}
             {entity.data.gate_labels?.length > 0 && (
               <Fragment><span class="k">Only for</span><span class="v">{entity.data.gate_labels.join(', ')}</span></Fragment>
             )}

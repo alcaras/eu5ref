@@ -37,7 +37,7 @@ MOD_ATTRS = ('modifier', 'country_modifier', 'location_modifier',
 
 # dataset → spec. facets/data values are attr names resolved via val().
 SPECS = {
-    'ages': dict(accessor='age', etype='age', facets={}, data=['start_date']),
+    'ages': dict(accessor='age', etype='age', facets={}, data=['year', 'long_name', 'efficiency', 'hegemons_allowed']),
     'institutions': dict(accessor='institution', etype='institution',
                          facets={'age': 'age'}, data=[]),
     'subjects': dict(accessor='subject_types', etype='subject', facets={},

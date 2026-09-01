@@ -3,7 +3,12 @@
  "entities": [
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 1.0,
+    "hegemons_allowed": false,
+    "long_name": "Age of Traditions",
+    "year": 1
+   },
    "desc": [
     [
      "t",
@@ -33,7 +38,12 @@
   },
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 0.8,
+    "hegemons_allowed": false,
+    "long_name": "Age of Renaissance",
+    "year": 1342
+   },
    "desc": [
     [
      "t",
@@ -87,7 +97,12 @@
   },
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 0.6,
+    "hegemons_allowed": true,
+    "long_name": "Age of Discovery",
+    "year": 1437
+   },
    "desc": [
     [
      "t",
@@ -141,7 +156,12 @@
   },
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 0.4,
+    "hegemons_allowed": true,
+    "long_name": "Age of Reformation",
+    "year": 1537
+   },
    "desc": [
     [
      "t",
@@ -207,7 +227,12 @@
   },
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 0.2,
+    "hegemons_allowed": true,
+    "long_name": "Age of Absolutism",
+    "year": 1637
+   },
    "desc": [
     [
      "t",
@@ -309,7 +334,12 @@
   },
   {
    "color": null,
-   "data": {},
+   "data": {
+    "efficiency": 0.1,
+    "hegemons_allowed": true,
+    "long_name": "Age of Revolutions",
+    "year": 1737
+   },
    "desc": [
     [
      "t",

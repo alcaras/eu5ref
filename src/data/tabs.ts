@@ -52,6 +52,11 @@ export const TABS: Tab[] = [
     summary: 'The seven ages — objectives, mechanics unlocked, age transitions',
   },
   {
+    slug: 'focuses', icon: '🔀', label: 'Age Focuses', section: 'Ages & Advances',
+    status: 'built',
+    summary: 'The adm / dip / mil focus picked at each age start, side by side',
+  },
+  {
     slug: 'institutions', icon: '💡', label: 'Institutions', section: 'Ages & Advances',
     status: 'built',
     summary: 'Spawn conditions and spread mechanics for each institution',
