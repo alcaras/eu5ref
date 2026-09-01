@@ -6,7 +6,9 @@
 // script wires every scope on the page independently.
 //
 // Semantics: within a facet, active chips OR together; across facets and
-// with the search text, filters AND together.
+// with the search text, filters AND together. A row's facet value may itself
+// be a pipe-joined list (an entity with several requirement kinds, say) — it
+// matches when any of its values is an active chip.
 export interface FacetDef {
   key: string;
   label: string;
@@ -60,7 +62,11 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
           for (const [facet, values] of active) {
             if (values.size === 0) continue;
             const rv = row.dataset['f' + facet.charAt(0).toUpperCase() + facet.slice(1)] || '';
-            if (!values.has(rv)) { show = false; break; }
+            // multi-valued facets are pipe-joined; any overlap counts
+            const hit = rv.includes('|')
+              ? rv.split('|').some((one) => values.has(one))
+              : values.has(rv);
+            if (!hit) { show = false; break; }
           }
         }
         row.hidden = !show;

@@ -1,11 +1,27 @@
 ---
 import Base from '../layouts/Base.astro';
-import EntityTable from '../components/EntityTable.astro';
-import FilterBar from '../components/FilterBar.astro';
+import SectionTable from '../components/SectionTable.astro';
 import data from '../data/buildings.json';
 
-const entities = data.entities;
-const facets = data.facets;
+// `is_special = yes` in the files: a building a country only gets from its
+// own culture, religion, tag or an event. Splitting them keeps the standard
+// list — the one you actually pick from when building — readable.
+const split = (unique: boolean) => ({
+  ...data,
+  entities: data.entities.filter((e: any) => e.data.special === unique),
+  facets: data.facets.map((f: any) => ({
+    ...f,
+    options: f.options
+      .map((o: any) => ({
+        ...o,
+        count: data.entities.filter(
+          (e: any) => e.data.special === unique && e.facets[f.key] === o.value).length,
+      }))
+      .filter((o: any) => o.count > 0),
+  })),
+});
+const standard = split(false);
+const unique = split(true);
 const columns = [
   { key: 'name', label: 'Building', kind: 'name' },
   { key: 'category', label: 'Category', kind: 'facet' },
@@ -20,11 +36,25 @@ const columns = [
   active="buildings"
   pageMark="🏗️"
   eyebrow="Economy"
-  pageStats={[{ label: 'buildings', value: entities.length }]}
+  pageStats={[
+    { label: 'buildings', value: data.entities.length },
+    { label: 'standard', value: standard.entities.length },
+    { label: 'unique', value: unique.entities.length },
+  ]}
   description="Every building in Europa Universalis V — category, settlement types, and modifiers."
 >
-  <div data-filter-scope>
-    <FilterBar facets={facets} placeholder="Filter buildings…" />
-    <EntityTable entities={entities} columns={columns as any} pagePrefix="buildings" />
-  </div>
+  <SectionTable title="Standard Buildings" data={standard} columns={columns as any}
+    pagePrefix="buildings" placeholder="Filter standard buildings…" />
+  <p class="sec-note">
+    Unique buildings carry <code>is_special = yes</code> — a country gets them from
+    its own culture, religion or tag, or from an event, not from the ordinary build
+    menu. Their availability gate is on each building's page.
+  </p>
+  <SectionTable title="Unique Buildings" data={unique} columns={columns as any}
+    pagePrefix="buildings" placeholder="Filter unique buildings…" />
 </Base>
+
+<style>
+  .sec-note { font-size: 12.5px; color: var(--text-faint); max-width: 74ch; margin-top: 6px; }
+  .sec-note code { color: var(--text-dim); }
+</style>

@@ -16,7 +16,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/access-to-royal-and-ecclesiastical-courts.png",
    "id": "privilege:access_to_royal_and_ecclesiastical_courts",
@@ -65,7 +68,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/allow-hunting.png",
    "id": "privilege:allow_hunting",
@@ -126,7 +132,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/allow-trade-center-sponsorship.png",
    "id": "privilege:allow_trade_center_sponsorship",
@@ -165,8 +174,8 @@
      "Kanem"
     ],
     "requires": [
-     "text: gained access to this privilege tt",
-     "has variable: amenokal salt traders variable"
+     "is or was Kanem",
+     "event flag: Amenokal Salt Traders Variable"
     ],
     "unlocked_by": null
    },
@@ -177,7 +186,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/amenokal-salt-traders.png",
    "id": "privilege:amenokal_salt_traders",
@@ -231,7 +244,10 @@
     "gate_labels": [
      "Catholicism"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Catholicism",
+     "not — is Rome"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -241,7 +257,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Country",
+     "Religion"
+    ]
    },
    "icon": "img/privilege/apostolic-tax-privilege.png",
    "id": "privilege:apostolic_tax_privilege",
@@ -267,11 +287,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "theocracy"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "requires": [
+     "government is Theocracy"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -281,7 +305,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/appoint-ecclesiastical-offices.png",
    "id": "privilege:appoint_ecclesiastical_offices",
@@ -319,11 +346,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "ara_sindicat_ara_remenca_flag"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Ara Sindicat Ara Remenca Flag"
+    ],
+    "requires": [
+     "event flag: Ara Sindicat Ara Remenca Flag"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -333,7 +364,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/ara-sindicat-ara-remenca.png",
    "id": "privilege:ara_sindicat_ara_remenca",
@@ -378,9 +412,9 @@
      "Florence"
     ],
     "requires": [
-     "text: produce any fine cloth or silk tt",
-     "GREATER THAN: 0",
-     "GREATER THAN: 0"
+     "is or was Florence",
+     "Fine Cloth > 0",
+     "Silk > 0"
     ],
     "unlocked_by": null
    },
@@ -391,7 +425,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Other"
+    ]
    },
    "icon": "img/privilege/arte-della-lana.png",
    "id": "privilege:arte_della_lana",
@@ -429,13 +467,16 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "austere_monastic_life"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Austere Monastic Life"
+    ],
     "requires": [
-     "religion: Catholicism",
-     "GREATER THAN: 1"
+     "event flag: Austere Monastic Life",
+     "not — religion is Catholicism",
+     "Monastery > 1"
     ],
     "unlocked_by": null
    },
@@ -446,7 +487,12 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script",
+     "Other"
+    ]
    },
    "icon": "img/privilege/austere-monastic-life.png",
    "id": "privilege:austere_monastic_life",
@@ -486,8 +532,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "grant_austrian_monastery_reform_melk"
      ],
      [
       "rel",
@@ -495,9 +541,13 @@
      ]
     ],
     "gate_labels": [
+     "Grant Austrian Monastery Reform Melk",
      "Catholicism"
     ],
-    "requires": [],
+    "requires": [
+     "event flag: Grant Austrian Monastery Reform Melk",
+     "religion is Catholicism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -507,7 +557,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/austrian-monastery-reform-melk.png",
    "id": "privilege:austrian_monastery_reform_melk",
@@ -547,26 +601,32 @@
      [
       "or",
       [
-       "?",
-       "current age"
+       "age",
+       "age_4_reformation"
       ],
       [
-       "?",
-       "current age"
+       "age",
+       "age_5_absolutism"
       ],
       [
-       "?",
-       "current age"
+       "age",
+       "age_6_revolutions"
       ]
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Age 4 Reformation",
+     "Age 5 Absolutism",
+     "Age 6 Revolutions"
     ],
     "requires": [
-     "has advance: ottoman tax farming",
-     "text: has enabled kadiluks privilege",
-     "has variable: autonomous kadiluks flag"
+     "is or was Ottomans",
+     "age is Reformation",
+     "age is Absolutism",
+     "age is Revolutions",
+     "has researched Muqāta'ah",
+     "event flag: Autonomous Kadiluks Flag"
     ],
     "unlocked_by": null
    },
@@ -577,7 +637,13 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Country",
+     "Age",
+     "Advance",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/autonomous-kadiluks.png",
    "id": "privilege:autonomous_kadiluks",
@@ -621,14 +687,18 @@
       "KNI"
      ],
      [
-      "?",
-      "government type"
+      "gov",
+      "theocracy"
      ]
     ],
     "gate_labels": [
-     "Knights Hospitaller"
+     "Knights Hospitaller",
+     "Theocracy"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Knights Hospitaller",
+     "government is Theocracy"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -638,7 +708,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Government"
+    ]
    },
    "icon": "img/privilege/autonomous-local-commanders.png",
    "id": "privilege:autonomous_local_commanders",
@@ -684,20 +758,23 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "sco_statutes_of_iona"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "preserved_clan_autonomy"
      ]
     ],
     "gate_labels": [
-     "Scottish"
+     "Scottish",
+     "Preserved Clan Autonomy"
     ],
     "requires": [
-     "has estate privilege: sco statutes of iona"
+     "culture group is Scottish",
+     "not — has privilege Statutes of Iona",
+     "event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
    },
@@ -708,7 +785,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/autonomous-scottish-clans.png",
    "id": "privilege:autonomous_scottish_clans",
@@ -754,20 +836,23 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "sco_statutes_of_iona"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "preserved_clan_autonomy"
      ]
     ],
     "gate_labels": [
-     "Scottish"
+     "Scottish",
+     "Preserved Clan Autonomy"
     ],
     "requires": [
-     "has estate privilege: sco statutes of iona"
+     "culture group is Scottish",
+     "not — has privilege Statutes of Iona",
+     "event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
    },
@@ -778,7 +863,12 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Culture",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/autonomous-tribes-scotland-gaelic-heritage.png",
    "id": "privilege:autonomous_tribes_scotland_gaelic_heritage",
@@ -810,13 +900,16 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "monarchy"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Monarchy"
+    ],
     "requires": [
-     "has advance: noble knights",
-     "has estate privilege: monetary fiefs"
+     "government is Monarchy",
+     "has researched Noble Knights",
+     "not — has privilege Monetary Fiefs"
     ],
     "unlocked_by": null
    },
@@ -827,7 +920,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government",
+     "Advance",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/auxilium-et-consilium.png",
    "id": "privilege:auxilium_et_consilium",
@@ -902,7 +1000,10 @@
     "gate_labels": [
      "Venice"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Venice",
+     "overlord: is or was Venice"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -912,7 +1013,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/avogadoria-de-comun.png",
    "id": "privilege:avogadoria_de_comun",
@@ -950,7 +1054,9 @@
     "gate_labels": [
      "Ottomans"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Ottomans"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -960,7 +1066,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/ayans-privilege.png",
    "id": "privilege:ayans_privilege",
@@ -1012,7 +1121,10 @@
      "SPA",
      "Castile"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Spain",
+     "is or was Castile"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1022,7 +1134,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/ayuntamientos.png",
    "id": "privilege:ayuntamientos",
@@ -1065,7 +1180,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/banal-lordship.png",
    "id": "privilege:banal_lordship",
@@ -1121,7 +1239,9 @@
     "gate_labels": [
      "Serbia"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Serbia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1131,7 +1251,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/bashtinas-and-pronijas-grants.png",
    "id": "privilege:bashtinas_and_pronijas_grants",
@@ -1169,11 +1292,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "bavarian_inheritance_split"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Bavarian Inheritance Split"
+    ],
+    "requires": [
+     "event flag: Bavarian Inheritance Split"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1183,7 +1310,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/bavarian-share-of-land.png",
    "id": "privilege:bavarian_share_of_land",
@@ -1215,11 +1345,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "bra_kreditwerk"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Bra Kreditwerk"
+    ],
+    "requires": [
+     "event flag: Kreditwerk"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1229,7 +1363,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/bra-kreditwerk.png",
    "id": "privilege:bra_kreditwerk",
@@ -1261,11 +1398,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "bra_kreditwerk_reformed"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Bra Kreditwerk Reformed"
+    ],
+    "requires": [
+     "event flag: Reformed Kreditwerk"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1275,7 +1416,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/bra-kreditwerk-reformed.png",
    "id": "privilege:bra_kreditwerk_reformed",
@@ -1312,7 +1456,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/building-rights.png",
    "id": "privilege:building_rights",
@@ -1370,7 +1517,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/building-roads-rights.png",
    "id": "privilege:building_roads_rights",
@@ -1425,7 +1575,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/burghers-land-rights.png",
    "id": "privilege:burghers_land_rights",
@@ -1468,7 +1621,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.66"
+     "religious unity < 0.66"
     ],
     "unlocked_by": null
    },
@@ -1479,7 +1632,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/burghers-protected-faith.png",
    "id": "privilege:burghers_protected_faith",
@@ -1526,7 +1682,9 @@
      "Balliol"
     ],
     "requires": [
-     "GREATER THAN EQUAL: 1"
+     "is or was Scotland",
+     "is or was Balliol",
+     "Num Of Non Rural ≥ 1"
     ],
     "unlocked_by": null
    },
@@ -1537,7 +1695,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Other"
+    ]
    },
    "icon": "img/privilege/burghers-royal-burgh-commissioners.png",
    "id": "privilege:burghers_royal_burgh_commissioners",
@@ -1583,8 +1745,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "government type"
+      "gov",
+      "theocracy"
      ],
      [
       "rel",
@@ -1592,9 +1754,13 @@
      ]
     ],
     "gate_labels": [
+     "Theocracy",
      "Catholicism"
     ],
-    "requires": [],
+    "requires": [
+     "government is Theocracy",
+     "religion is Catholicism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1604,7 +1770,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Government",
+     "Religion"
+    ]
    },
    "icon": "img/privilege/cardinal-lead-guilds.png",
    "id": "privilege:cardinal_lead_guilds",
@@ -1654,7 +1824,9 @@
     "gate_labels": [
      "Castile"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Castile"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1664,7 +1836,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/cas-caballeros-villanos.png",
    "id": "privilege:cas_caballeros_villanos",
@@ -1708,14 +1883,18 @@
       "CAS"
      ],
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:cas_fuero_viejo"
      ]
     ],
     "gate_labels": [
-     "Castile"
+     "Castile",
+     "Privilege:Cas Fuero Viejo"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Castile",
+     "the privilege has been unlocked (Fuero Viejo de Castilla)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1725,7 +1904,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/cas-fuero-viejo.png",
    "id": "privilege:cas_fuero_viejo",
@@ -1763,11 +1946,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:cas_mita_system"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Cas Mita System"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Mit'a System)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1777,7 +1964,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/cas-mita-system.png",
    "id": "privilege:cas_mita_system",
@@ -1828,15 +2018,20 @@
       ]
      ],
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:cas_regimiento"
      ]
     ],
     "gate_labels": [
      "Castile",
-     "SPA"
+     "SPA",
+     "Privilege:Cas Regimiento"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Castile",
+     "is or was Spain",
+     "the privilege has been unlocked (Regimiento)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1846,7 +2041,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/cas-regimiento.png",
    "id": "privilege:cas_regimiento",
@@ -1890,14 +2089,18 @@
       "nahuatl"
      ],
      [
-      "?",
-      "has advance"
+      "adv",
+      "taxation_advance"
      ]
     ],
     "gate_labels": [
-     "Nahua"
+     "Nahua",
+     "Taxation Advance"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Nahua",
+     "has researched Taxation"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1907,7 +2110,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Religion",
+     "Advance"
+    ]
    },
    "icon": "img/privilege/ceremonial-tax-exemptions.png",
    "id": "privilege:ceremonial_tax_exemptions",
@@ -1951,7 +2158,9 @@
     "gate_labels": [
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -1961,7 +2170,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/chancellor-nobles.png",
    "id": "privilege:chancellor_nobles",
@@ -1999,14 +2211,18 @@
       "RUS"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "rus_pugachev_uprising"
      ]
     ],
     "gate_labels": [
-     "RUS"
+     "RUS",
+     "Rus Pugachev Uprising"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Russia",
+     "event flag: Rus Pugachev Uprising"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2016,7 +2232,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/charter-of-the-nobility.png",
    "id": "privilege:charter_of_the_nobility",
@@ -2059,7 +2279,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/clergy-enforced-unity.png",
    "id": "privilege:clergy_enforced_unity",
@@ -2102,7 +2325,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/clergy-in-administration.png",
    "id": "privilege:clergy_in_administration",
@@ -2142,8 +2368,8 @@
     "gate": [
      "not",
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "christian"
      ]
     ],
     "gate_labels": [],
@@ -2157,7 +2383,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/clergy-land-rights.png",
    "id": "privilege:clergy_land_rights",
@@ -2194,7 +2423,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "GREATER THAN: 0"
+     "University > 0"
     ],
     "unlocked_by": null
    },
@@ -2205,7 +2434,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Other"
+    ]
    },
    "icon": "img/privilege/clergy-lecture-oaths.png",
    "id": "privilege:clergy_lecture_oaths",
@@ -2255,11 +2487,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has advance"
+     "adv",
+     "written_alphabet"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Written Alphabet"
+    ],
+    "requires": [
+     "has researched Written Alphabet"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2269,7 +2505,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Advance"
+    ]
    },
    "icon": "img/privilege/clergy-literacy-rights.png",
    "id": "privilege:clergy_literacy_rights",
@@ -2321,8 +2560,8 @@
      [
       "or",
       [
-       "?",
-       "has reform"
+       "reform",
+       "military_order_reform"
       ],
       [
        "not",
@@ -2339,10 +2578,15 @@
     ],
     "gate_labels": [
      "Catholicism",
+     "Military Order",
      "Iberian"
     ],
     "requires": [
-     "has advance: castle advance"
+     "religion is Catholicism",
+     "has reform Military Order",
+     "not — religion group is Root.Religion.Group",
+     "culture group is Iberian",
+     "has researched Castle"
     ],
     "unlocked_by": null
    },
@@ -2353,7 +2597,13 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Culture",
+     "Advance",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/clergy-military-orders.png",
    "id": "privilege:clergy_military_orders",
@@ -2382,7 +2632,10 @@
     "gate_labels": [
      "Catholicism"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Catholicism",
+     "not — is Rome"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2392,7 +2645,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Country",
+     "Religion"
+    ]
    },
    "icon": "img/privilege/clergy-papal-emissary.png",
    "id": "privilege:clergy_papal_emissary",
@@ -2430,11 +2687,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "religion group"
+     "rgrp",
+     "christian"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Christianity"
+    ],
+    "requires": [
+     "religion group is Christianity"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2444,7 +2705,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/clergy-powerful-dioceses.png",
    "id": "privilege:clergy_powerful_dioceses",
@@ -2487,7 +2751,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.66"
+     "religious unity < 0.66"
     ],
     "unlocked_by": null
    },
@@ -2498,7 +2762,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/clergy-protected-faith.png",
    "id": "privilege:clergy_protected_faith",
@@ -2541,7 +2808,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/clergy-religious-state.png",
    "id": "privilege:clergy_religious_state",
@@ -2596,7 +2866,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/clergy-strengthen-faith.png",
    "id": "privilege:clergy_strengthen_faith",
@@ -2657,7 +2930,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/clerical-advisory-council.png",
    "id": "privilege:clerical_advisory_council",
@@ -2701,14 +2977,18 @@
       "hibernian_group"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "celtic_traditions_reform"
      ]
     ],
     "gate_labels": [
-     "Hibernian"
+     "Hibernian",
+     "Celtic Traditions"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Hibernian",
+     "has reform Celtic Traditions"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2718,7 +2998,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/coign-and-livery-privilege.png",
    "id": "privilege:coign_and_livery_privilege",
@@ -2767,7 +3051,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/commercial-advisory-council.png",
    "id": "privilege:commercial_advisory_council",
@@ -2805,12 +3092,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "commons_petition"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Commons Petition"
+    ],
     "requires": [
-     "religion: Catholicism"
+     "event flag: Commons Petition",
+     "not — religion is Catholicism"
     ],
     "unlocked_by": null
    },
@@ -2821,7 +3111,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/commons-petition.png",
    "id": "privilege:commons_petition",
@@ -2888,7 +3182,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/communal-lands.png",
    "id": "privilege:communal_lands",
@@ -2932,11 +3229,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has estate privilege"
+     "priv",
+     "consolidated_corruption_of_the_burghers"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Consolidated Corruption Of The Burghers"
+    ],
+    "requires": [
+     "has privilege Consolidated Corruption of the Wealthy"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2946,7 +3247,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/consolidated-corruption-of-the-burghers.png",
    "id": "privilege:consolidated_corruption_of_the_burghers",
@@ -2959,11 +3263,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has estate privilege"
+     "priv",
+     "consolidated_corruption_of_the_clergy"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Consolidated Corruption Of The Clergy"
+    ],
+    "requires": [
+     "has privilege Consolidated Corruption of the Faith"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -2973,7 +3281,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/consolidated-corruption-of-the-clergy.png",
    "id": "privilege:consolidated_corruption_of_the_clergy",
@@ -2986,11 +3297,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has estate privilege"
+     "priv",
+     "consolidated_corruption_of_the_nobles"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Consolidated Corruption Of The Nobles"
+    ],
+    "requires": [
+     "has privilege Consolidated Corruption of the Elites"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3000,7 +3315,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/consolidated-corruption-of-the-nobles.png",
    "id": "privilege:consolidated_corruption_of_the_nobles",
@@ -3013,11 +3331,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has estate privilege"
+     "priv",
+     "consolidated_corruption_of_the_peasants"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Consolidated Corruption Of The Peasants"
+    ],
+    "requires": [
+     "has privilege Consolidated Corruption of the Common People"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3027,7 +3349,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/consolidated-corruption-of-the-peasants.png",
    "id": "privilege:consolidated_corruption_of_the_peasants",
@@ -3040,11 +3365,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "theocracy"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "requires": [
+     "government is Theocracy"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3054,7 +3383,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/control-of-the-borderlands.png",
    "id": "privilege:control_of_the_borderlands",
@@ -3097,7 +3429,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/control-over-monetary-policy.png",
    "id": "privilege:control_over_monetary_policy",
@@ -3141,25 +3476,26 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "and",
+     "or",
      [
-      "tag",
-      "ZAN"
+      "not",
+      [
+       "tag",
+       "ZAN"
+      ]
      ],
      [
       "not",
       [
-       "?",
-       "trigger if has reform"
+       "reform",
+       "control_of_the_mahdali_coinage_reform"
       ]
      ]
     ],
-    "gate_labels": [
-     "Kilwa"
-    ],
+    "gate_labels": [],
     "requires": [
-     "has or had tag: Kilwa",
-     "has reform: Control of the Mahdali Coinage"
+     "is or was Kilwa",
+     "not — has reform Control of the Mahdali Coinage"
     ],
     "unlocked_by": null
    },
@@ -3170,7 +3506,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/control-over-the-coinage.png",
    "id": "privilege:control_over_the_coinage",
@@ -3231,7 +3571,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossack-identity.png",
    "id": "privilege:cossack_identity",
@@ -3286,7 +3629,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-allowed-free-roaming.png",
    "id": "privilege:cossacks_allowed_free_roaming",
@@ -3329,7 +3675,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-colonization.png",
    "id": "privilege:cossacks_colonization",
@@ -3372,7 +3721,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-explorers.png",
    "id": "privilege:cossacks_explorers",
@@ -3415,7 +3767,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-government-positions.png",
    "id": "privilege:cossacks_government_positions",
@@ -3464,7 +3819,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-land-rights.png",
    "id": "privilege:cossacks_land_rights",
@@ -3507,7 +3865,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-military-service.png",
    "id": "privilege:cossacks_military_service",
@@ -3544,7 +3905,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.66"
+     "religious unity < 0.66"
     ],
     "unlocked_by": null
    },
@@ -3555,7 +3916,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/cossacks-protected-faith.png",
    "id": "privilege:cossacks_protected_faith",
@@ -3598,7 +3962,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-rada-autonomy.png",
    "id": "privilege:cossacks_rada_autonomy",
@@ -3641,7 +4008,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-register.png",
    "id": "privilege:cossacks_register",
@@ -3684,7 +4054,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-respected-traditions.png",
    "id": "privilege:cossacks_respected_traditions",
@@ -3727,7 +4100,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/cossacks-sanctioned-atamans.png",
    "id": "privilege:cossacks_sanctioned_atamans",
@@ -3765,14 +4141,18 @@
       "hibernian_group"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "celtic_traditions_reform"
      ]
     ],
     "gate_labels": [
-     "Hibernian"
+     "Hibernian",
+     "Celtic Traditions"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Hibernian",
+     "has reform Celtic Traditions"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3782,7 +4162,11 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Culture",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/creaghts-privilege.png",
    "id": "privilege:creaghts_privilege",
@@ -3832,11 +4216,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3846,7 +4234,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/dedicated-merchant-courts.png",
    "id": "privilege:dedicated_merchant_courts",
@@ -3886,16 +4277,20 @@
     "gate": [
      "and",
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "muslim"
      ],
      [
       "?",
       "dominant religion group"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Islam"
+    ],
+    "requires": [
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3905,7 +4300,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/dharmic-dhimmi-communities.png",
    "id": "privilege:dharmic_dhimmi_communities",
@@ -3933,8 +4331,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "muslim"
      ],
      [
       "or",
@@ -3948,8 +4346,12 @@
       ]
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Islam"
+    ],
+    "requires": [
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -3959,7 +4361,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/dhimmi-abrahamic-communities.png",
    "id": "privilege:dhimmi_abrahamic_communities",
@@ -4008,7 +4413,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-administrative-posts.png",
    "id": "privilege:dhimmi_administrative_posts",
@@ -4032,7 +4440,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-in-administration.png",
    "id": "privilege:dhimmi_in_administration",
@@ -4081,7 +4492,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-land-rights.png",
    "id": "privilege:dhimmi_land_rights",
@@ -4124,7 +4538,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-legal-autonomy.png",
    "id": "privilege:dhimmi_legal_autonomy",
@@ -4173,7 +4590,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-lighter-taxes.png",
    "id": "privilege:dhimmi_lighter_taxes",
@@ -4216,7 +4636,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-mazalim-court.png",
    "id": "privilege:dhimmi_mazalim_court",
@@ -4265,7 +4688,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-military-service.png",
    "id": "privilege:dhimmi_military_service",
@@ -4308,7 +4734,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-pact-of-umar.png",
    "id": "privilege:dhimmi_pact_of_umar",
@@ -4357,7 +4786,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-promote-dhimmi-hierarchy.png",
    "id": "privilege:dhimmi_promote_dhimmi_hierarchy",
@@ -4412,7 +4844,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-promote-tolerance.png",
    "id": "privilege:dhimmi_promote_tolerance",
@@ -4461,7 +4896,10 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/dhimmi-traditions.png",
    "id": "privilege:dhimmi_traditions",
@@ -4499,11 +4937,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "district_paving_taxes_variable"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "District Paving Taxes Variable"
+    ],
+    "requires": [
+     "event flag: District Paving Taxes Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -4513,7 +4955,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/district-paving-privilege.png",
    "id": "privilege:district_paving_privilege",
@@ -4565,8 +5010,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "can_have_double_sabbath_flag"
      ],
      [
       "rel",
@@ -4574,9 +5019,13 @@
      ]
     ],
     "gate_labels": [
+     "Can Have Double Sabbath Flag",
      "Miaphysitism"
     ],
-    "requires": [],
+    "requires": [
+     "event flag: Can Have Double Sabbath Flag",
+     "religion is Miaphysitism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -4586,7 +5035,11 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/double-sabbath.png",
    "id": "privilege:double_sabbath",
@@ -4622,20 +5075,23 @@
      [
       "not",
       [
-       "?",
-       "government type"
+       "gov",
+       "tribe"
       ]
      ],
      [
       "not",
       [
-       "?",
-       "government type"
+       "gov",
+       "steppe_horde"
       ]
      ]
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "not — government is Tribe",
+     "not — government is Steppe Horde"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -4645,7 +5101,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/elaborate-court-ceremonies.png",
    "id": "privilege:elaborate_court_ceremonies",
@@ -4706,7 +5165,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/embellish-great-works-of-faith.png",
    "id": "privilege:embellish_great_works_of_faith",
@@ -4749,7 +5211,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/expansionist-zealotry.png",
    "id": "privilege:expansionist_zealotry",
@@ -4791,7 +5256,9 @@
      "has embraced institution"
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "has embraced Feudalism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -4801,7 +5268,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Institution"
+    ]
    },
    "icon": "img/privilege/feudal-mercenary-contracts.png",
    "id": "privilege:feudal_mercenary_contracts",
@@ -4845,7 +5315,9 @@
     "gate_labels": [
      "Florence"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Florence"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -4864,7 +5336,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/florence-guilds.png",
    "id": "privilege:florence_guilds",
@@ -4925,7 +5400,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/formal-guilds.png",
    "id": "privilege:formal_guilds",
@@ -4976,7 +5454,8 @@
      "Aragon"
     ],
     "requires": [
-     "type: formalized oath"
+     "is or was Aragon",
+     "the privilege has been unlocked (Formalized Oath of Loyalty)"
     ],
     "unlocked_by": null
    },
@@ -4987,7 +5466,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/formalized-oath.png",
    "id": "privilege:formalized_oath",
@@ -5038,7 +5521,10 @@
     "gate_labels": [
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France",
+     "Is Alive"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5048,7 +5534,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Other"
+    ]
    },
    "icon": "img/privilege/fra-leadership-of-marcel.png",
    "id": "privilege:fra_leadership_of_marcel",
@@ -5094,8 +5584,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "compromise_marcel_ordinance"
      ],
      [
       "tag",
@@ -5103,9 +5593,13 @@
      ]
     ],
     "gate_labels": [
+     "Compromise Marcel Ordinance",
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "event flag: Compromise Marcel Ordinance",
+     "is or was France"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5115,7 +5609,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/fra-marcel-compromise-ordinance.png",
    "id": "privilege:fra_marcel_compromise_ordinance",
@@ -5161,8 +5659,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "allowed_marcel_ordinance"
      ],
      [
       "tag",
@@ -5170,9 +5668,13 @@
      ]
     ],
     "gate_labels": [
+     "Allowed Marcel Ordinance",
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "event flag: Allowed Marcel Ordinance",
+     "is or was France"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5182,7 +5684,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/fra-marcel-great-ordinance.png",
    "id": "privilege:fra_marcel_great_ordinance",
@@ -5226,13 +5732,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:fra_papacy_pragmatic_sanctions"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Privilege:Fra Papacy Pragmatic Sanctions"
+    ],
     "requires": [
-     "target: ROOT",
-     "LESS THAN: 50"
+     "the privilege has been unlocked (Pragmatic Sanction of Bourges)",
+     "Value < 50"
     ],
     "unlocked_by": null
    },
@@ -5243,7 +5751,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Privilege",
+     "Other"
+    ]
    },
    "icon": "img/privilege/fra-papacy-pragmatic-sanctions.png",
    "id": "privilege:fra_papacy_pragmatic_sanctions",
@@ -5287,11 +5799,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "religion group"
+     "rgrp",
+     "muslim"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Islam"
+    ],
+    "requires": [
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5301,7 +5817,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/freedom-of-interpretation.png",
    "id": "privilege:freedom_of_interpretation",
@@ -5345,14 +5864,18 @@
       "PAP"
      ],
      [
-      "?",
-      "has estate privilege"
+      "priv",
+      "french_cardinals"
      ]
     ],
     "gate_labels": [
-     "Rome"
+     "Rome",
+     "French Cardinals"
     ],
-    "requires": [],
+    "requires": [
+     "is Rome",
+     "has privilege French Cardinals"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5362,7 +5885,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/french-cardinals.png",
    "id": "privilege:french_cardinals",
@@ -5406,12 +5933,17 @@
       "produced in country:pepper GREATER THAN"
      ],
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "muslim"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Islam"
+    ],
+    "requires": [
+     "Pepper > 0",
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5421,7 +5953,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Religion",
+     "Other"
+    ]
    },
    "icon": "img/privilege/fund-karimi.png",
    "id": "privilege:fund_karimi",
@@ -5459,7 +5995,9 @@
     "gate_labels": [
      "Aragon"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Aragon"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5469,7 +6007,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/general-privilege.png",
    "id": "privilege:general_privilege",
@@ -5509,8 +6050,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "muslim"
      ],
      [
       "cgrp",
@@ -5518,9 +6059,13 @@
      ]
     ],
     "gate_labels": [
+     "Islam",
      "Turkic"
     ],
-    "requires": [],
+    "requires": [
+     "religion group is Islam",
+     "culture group is Turkic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5530,7 +6075,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Religion",
+     "Culture"
+    ]
    },
    "icon": "img/privilege/ghazi-privilege.png",
    "id": "privilege:ghazi_privilege",
@@ -5586,7 +6135,9 @@
     "gate_labels": [
      "Hungary"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Hungary"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5596,7 +6147,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/golden-bull-of-1222.png",
    "id": "privilege:golden_bull_of_1222",
@@ -5649,8 +6203,8 @@
      [
       "or",
       [
-       "?",
-       "has variable"
+       "var",
+       "rise_of_szlachta_szlachta_outcome_variable"
       ],
       [
        "?",
@@ -5660,9 +6214,15 @@
     ],
     "gate_labels": [
      "Poland",
-     "PLC"
+     "PLC",
+     "Rise Of Szlachta Szlachta Outcome Variable"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Poland",
+     "is or was Poland-Lithuania",
+     "event flag: Rise Of Szlachta Szlachta Outcome Variable",
+     "disaster type: Rise of the Szlachta"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5672,7 +6232,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script",
+     "Other"
+    ]
    },
    "icon": "img/privilege/golden-liberty.png",
    "id": "privilege:golden_liberty",
@@ -5728,7 +6293,9 @@
     "gate_labels": [
      "Serbia"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Serbia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5738,7 +6305,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/gradozadanje-and-gradobljudenlje-rights.png",
    "id": "privilege:gradozadanje_and_gradobljudenlje_rights",
@@ -5782,7 +6352,9 @@
     "gate_labels": [
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -5792,7 +6364,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/great-offices-of-the-crown-of-france.png",
    "id": "privilege:great_offices_of_the_crown_of_france",
@@ -5841,7 +6416,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/guild-investments.png",
    "id": "privilege:guild_investments",
@@ -5879,13 +6457,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "hab_tractatus_incorporalibus_granted"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Hab Tractatus Incorporalibus Granted"
+    ],
     "requires": [
-     "text: gained access to this privilege tt",
-     "has variable: hab tractatus incorporalibus granted"
+     "event flag: Hab Tractatus Incorporalibus Granted",
+     "Has gained access to this privilege"
     ],
     "unlocked_by": null
    },
@@ -5896,7 +6476,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/hab-tractatus-incorporalibus.png",
    "id": "privilege:hab_tractatus_incorporalibus",
@@ -5936,8 +6519,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:habshi_advisors_privilege"
      ],
      [
       "cap",
@@ -5946,12 +6529,15 @@
      ]
     ],
     "gate_labels": [
+     "Privilege:Habshi Advisors Privilege",
      "South Asia"
     ],
     "requires": [
-     "has slavery: True",
-     "has estate privilege: dhimmi in administration",
-     "has estate privilege: noble leaders only"
+     "the privilege has been unlocked (Ḥabshī Advisors)",
+     "capital: in South Asia",
+     "has slavery",
+     "has privilege Ḏimmī Bureaucrats",
+     "not — has privilege Only Nobility as Leaders"
     ],
     "unlocked_by": null
    },
@@ -5962,7 +6548,12 @@
     ]
    ],
    "facets": {
-    "estate": "Dhimmi"
+    "estate": "Dhimmi",
+    "requires": [
+     "Geography",
+     "Privilege",
+     "Estate"
+    ]
    },
    "icon": "img/privilege/habshi-advisors-privilege.png",
    "id": "privilege:habshi_advisors_privilege",
@@ -6012,7 +6603,9 @@
     "gate_labels": [
      "Haudenosaunee"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Haudenosaunee"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6022,7 +6615,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/haudenosaunee-labor-division.png",
    "id": "privilege:haudenosaunee_labor_division",
@@ -6068,16 +6664,22 @@
     "gate": [
      "and",
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:heritable_iqta"
      ],
      [
-      "?",
-      "has law"
+      "law",
+      "iqta_law"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Heritable Iqta",
+     "Iqta Law"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Heritable Iqta Law)",
+     "has law Iqṭā'"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6087,7 +6689,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Law",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/heritable-iqta.png",
    "id": "privilege:heritable_iqta",
@@ -6125,14 +6731,18 @@
       "inti"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "enable_hurin_qusqu_privilege_variable"
      ]
     ],
     "gate_labels": [
-     "Inti"
+     "Inti",
+     "Enable Hurin Qusqu Privilege Variable"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Inti",
+     "event flag: Enable Hurin Qusqu Privilege Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6142,7 +6752,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/hurin-qusqu-privilege.png",
    "id": "privilege:hurin_qusqu_privilege",
@@ -6186,7 +6800,9 @@
     "gate_labels": [
      "Bohemia"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Bohemia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6196,7 +6812,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/inaugural-diplomas.png",
    "id": "privilege:inaugural_diplomas",
@@ -6234,11 +6853,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6248,7 +6871,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/increased-civic-engagement.png",
    "id": "privilege:increased_civic_engagement",
@@ -6286,11 +6912,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6300,7 +6930,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/inherited-offices.png",
    "id": "privilege:inherited_offices",
@@ -6380,7 +7013,13 @@
      "Moravia"
     ],
     "requires": [
-     "has policy: closed borders law"
+     "religion is Catholicism",
+     "capital: in region Baltic",
+     "capital: in region Carpathia",
+     "capital: in area Baltic",
+     "capital: in area Bohemia",
+     "capital: in area Moravia",
+     "+1 more"
     ],
     "unlocked_by": null
    },
@@ -6391,7 +7030,12 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Religion",
+     "Geography",
+     "Law"
+    ]
    },
    "icon": "img/privilege/invite-german-settlers.png",
    "id": "privilege:invite_german_settlers",
@@ -6431,16 +7075,22 @@
     "gate": [
      "and",
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:ira_clerical_aristocracy"
      ],
      [
-      "?",
-      "religion group"
+      "rgrp",
+      "muslim"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Ira Clerical Aristocracy",
+     "Islam"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Clerical Aristocracy)",
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6450,7 +7100,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/ira-clerical-aristocracy.png",
    "id": "privilege:ira_clerical_aristocracy",
@@ -6500,11 +7154,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:ira_iranian_art_patronage"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Ira Iranian Art Patronage"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Iranian Art Patronage)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6514,7 +7172,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/ira-iranian-art-patronage.png",
    "id": "privilege:ira_iranian_art_patronage",
@@ -6558,7 +7219,9 @@
     "gate_labels": [
      "Bohemian"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Bohemian"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6568,7 +7231,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/ius-teutonicum.png",
    "id": "privilege:ius_teutonicum",
@@ -6623,12 +7289,12 @@
      [
       "or",
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "dharmic"
       ],
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "muslim"
       ]
      ],
      [
@@ -6649,10 +7315,17 @@
      ]
     ],
     "gate_labels": [
+     "Dharma",
+     "Islam",
      "South Asia",
      "Jainism"
     ],
-    "requires": [],
+    "requires": [
+     "not — religion is Jainism",
+     "capital: in South Asia",
+     "religion is Jainism",
+     "Value > 0"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6662,7 +7335,12 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Religion",
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/jain-banking-rights.png",
    "id": "privilege:jain_banking_rights",
@@ -6699,12 +7377,12 @@
      [
       "or",
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "dharmic"
       ],
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "muslim"
       ]
      ],
      [
@@ -6725,10 +7403,17 @@
      ]
     ],
     "gate_labels": [
+     "Dharma",
+     "Islam",
      "South Asia",
      "Jainism"
     ],
-    "requires": [],
+    "requires": [
+     "not — religion is Jainism",
+     "capital: in South Asia",
+     "religion is Jainism",
+     "Value > 0"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6738,7 +7423,12 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Religion",
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/jain-scholars.png",
    "id": "privilege:jain_scholars",
@@ -6762,7 +7452,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/jaysh-armies.png",
    "id": "privilege:jaysh_armies",
@@ -6802,16 +7495,21 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "joint_assembly_decrees_variable"
      ],
      [
       "?",
       "root"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Joint Assembly Decrees Variable"
+    ],
+    "requires": [
+     "event flag: Joint Assembly Decrees Variable",
+     "root: Hre.Leader Country"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6821,7 +7519,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script",
+     "Other"
+    ]
    },
    "icon": "img/privilege/joint-assembly-decrees.png",
    "id": "privilege:joint_assembly_decrees",
@@ -6872,7 +7574,8 @@
      "Aragon"
     ],
     "requires": [
-     "type: justicia de aragon"
+     "is or was Aragon",
+     "the privilege has been unlocked (Justicia de Aragón)"
     ],
     "unlocked_by": null
    },
@@ -6883,7 +7586,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/justicia-de-aragon.png",
    "id": "privilege:justicia_de_aragon",
@@ -6921,11 +7628,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:kannada_literature_aid"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Kannada Literature Aid"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Kannada Literature Aid)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6935,7 +7646,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/kannada-literature-aid.png",
    "id": "privilege:kannada_literature_aid",
@@ -6985,7 +7699,9 @@
     "gate_labels": [
      "Kanem"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Kanem"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -6995,7 +7711,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/kbo-cima.png",
    "id": "privilege:kbo_cima",
@@ -7033,7 +7752,9 @@
     "gate_labels": [
      "Kanem"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Kanem"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7043,7 +7764,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/kbo-kaigama.png",
    "id": "privilege:kbo_kaigama",
@@ -7088,10 +7812,11 @@
      "Kanem"
     ],
     "requires": [
-     "owns: gambaru",
-     "owns: yo",
-     "owns: bodou sailay",
-     "owns: nguigmi"
+     "is or was Kanem",
+     "owns Gambaru",
+     "owns Yo",
+     "owns Bodou Sailay",
+     "owns N'Guigmi"
     ],
     "unlocked_by": null
    },
@@ -7102,7 +7827,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Geography"
+    ]
    },
    "icon": "img/privilege/kbo-lake-chad-trade-privilege.png",
    "id": "privilege:kbo_lake_chad_trade_privilege",
@@ -7152,15 +7881,19 @@
        "custom tooltip text"
       ],
       [
-       "?",
-       "custom tooltip has variable"
+       "var",
+       "serfom_improved_goods_variable"
       ]
      ]
     ],
     "gate_labels": [
-     "Kanem"
+     "Kanem",
+     "Serfom Improved Goods Variable"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Kanem",
+     "event flag: Serfom Improved Goods Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7170,7 +7903,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/kbo-serfdom-economy.png",
    "id": "privilege:kbo_serfdom_economy",
@@ -7226,7 +7963,9 @@
     "gate_labels": [
      "Kanem"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Kanem"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7236,7 +7975,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/kbo-yerima.png",
    "id": "privilege:kbo_yerima",
@@ -7268,7 +8010,9 @@
     "gate_labels": [
      "East Slavic"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is East Slavic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7278,7 +8022,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/kormlenije.png",
    "id": "privilege:kormlenije",
@@ -7339,7 +8086,11 @@
      "German",
      "Baltic"
     ],
-    "requires": [],
+    "requires": [
+     "culture is Prussian",
+     "culture group is German",
+     "capital: in region Baltic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7349,7 +8100,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Culture",
+     "Geography"
+    ]
    },
    "icon": "img/privilege/kulm-law.png",
    "id": "privilege:kulm_law",
@@ -7373,7 +8128,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/land-of-commerce.png",
    "id": "privilege:land_of_commerce",
@@ -7423,7 +8181,9 @@
     "gate_labels": [
      "Sweden"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Sweden"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7433,7 +8193,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/land-owning-farmers.png",
    "id": "privilege:land_owning_farmers",
@@ -7479,8 +8242,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:lat_compromise_with_greek_populace"
      ],
      [
       "not",
@@ -7490,11 +8253,14 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Privilege:Lat Compromise With Greek Populace"
+    ],
     "requires": [
-     "culture: Greek",
-     "is frankokratia state: True",
-     "religion: Catholicism"
+     "the privilege has been unlocked (Compromise with the Greek people)",
+     "not — culture is Greek",
+     "is a Frankokratia state",
+     "religion is Catholicism"
     ],
     "unlocked_by": null
    },
@@ -7505,7 +8271,13 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country",
+     "Religion",
+     "Culture",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/lat-compromise-with-greek-populace.png",
    "id": "privilege:lat_compromise_with_greek_populace",
@@ -7576,9 +8348,9 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.33",
-     "is frankokratia state: True",
-     "culture: Greek"
+     "is a Frankokratia state",
+     "not — culture is Greek",
+     "Culture Percentage In Country(Root.Culture) < 0.33"
     ],
     "unlocked_by": null
    },
@@ -7589,7 +8361,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Culture",
+     "Other"
+    ]
    },
    "icon": "img/privilege/lat-latin-crusader-elite.png",
    "id": "privilege:lat_latin_crusader_elite",
@@ -7659,17 +8436,19 @@
       "location:constantinople is location holy site for"
      ],
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:lat_protector_of_the_constantinople_patriarchate"
      ]
     ],
     "gate_labels": [
-     "Catholicism"
+     "Catholicism",
+     "Privilege:Lat Protector Of The Constantinople Patriarchate"
     ],
     "requires": [
-     "religion: Catholicism",
-     "owns: constantinople",
-     "is location holy site for: Catholicism"
+     "religion is Catholicism",
+     "owns Constantinople",
+     "is location holy site for: Catholicism",
+     "the privilege has been unlocked (Protector of the Patriarchate of Constantinople)"
     ],
     "unlocked_by": null
    },
@@ -7680,7 +8459,13 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Geography",
+     "Privilege",
+     "Other"
+    ]
    },
    "icon": "img/privilege/lat-protector-of-the-constantinople-patriarchate.png",
    "id": "privilege:lat_protector_of_the_constantinople_patriarchate",
@@ -7743,15 +8528,20 @@
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "unlock_liberum_veto_variable"
      ]
     ],
     "gate_labels": [
      "Poland",
-     "PLC"
+     "PLC",
+     "Unlock Liberum Veto Variable"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Poland",
+     "is or was Poland-Lithuania",
+     "event flag: Unlock Liberum Veto Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7761,7 +8551,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/liberum-veto.png",
    "id": "privilege:liberum_veto",
@@ -7818,7 +8612,10 @@
     "gate_labels": [
      "Venice"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Venice",
+     "overlord: is or was Venice"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7828,7 +8625,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/libro-d-argento.png",
    "id": "privilege:libro_d_argento",
@@ -7891,7 +8691,10 @@
     "gate_labels": [
      "Venice"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Venice",
+     "overlord: is or was Venice"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7901,7 +8704,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/libro-d-oro.png",
    "id": "privilege:libro_d_oro",
@@ -7939,11 +8745,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:lit_equal_status_of_orthodox_nobility"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Lit Equal Status Of Orthodox Nobility"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Protection of Orthodoxy Nobility)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -7953,7 +8763,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/lit-equal-status-of-orthodox-nobility.png",
    "id": "privilege:lit_equal_status_of_orthodox_nobility",
@@ -7991,11 +8804,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:lit_integrated_ruthenian_laws"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Lit Integrated Ruthenian Laws"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Integrated Ruthenian Laws)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8005,7 +8822,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/lit-integrated-ruthenian-laws.png",
    "id": "privilege:lit_integrated_ruthenian_laws",
@@ -8043,12 +8863,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "theocracy"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Theocracy"
+    ],
     "requires": [
-     "GREATER THAN: 0"
+     "government is Theocracy",
+     "Num Artists > 0"
     ],
     "unlocked_by": null
    },
@@ -8059,7 +8882,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Government",
+     "Other"
+    ]
    },
    "icon": "img/privilege/liturgical-mural-art.png",
    "id": "privilege:liturgical_mural_art",
@@ -8111,7 +8938,10 @@
     "gate_labels": [
      "Maghreb"
     ],
-    "requires": [],
+    "requires": [
+     "capital: in region Maghreb",
+     "Tribes Estate) > 0"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8121,7 +8951,11 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/local-tribal-strongholds.png",
    "id": "privilege:local_tribal_strongholds",
@@ -8212,7 +9046,15 @@
      "Carniola",
      "Silesia"
     ],
-    "requires": [],
+    "requires": [
+     "capital: in area Baltic",
+     "capital: in region Northern Germany",
+     "capital: in region Southern Germany",
+     "capital: in area Alsace",
+     "capital: in area Franche-Comté",
+     "capital: in area Lorraine",
+     "+4 more"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8222,7 +9064,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography",
+     "Organization"
+    ]
    },
    "icon": "img/privilege/magdeburg-rights.png",
    "id": "privilege:magdeburg_rights",
@@ -8266,11 +9112,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8280,7 +9130,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/maintain-clerical-proceedings.png",
    "id": "privilege:maintain_clerical_proceedings",
@@ -8318,11 +9171,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:mam_muhtasibs"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Mam Muhtasibs"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Muḥtasib Inspectors)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8332,7 +9189,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/mam-muhtasibs.png",
    "id": "privilege:mam_muhtasibs",
@@ -8376,14 +9236,18 @@
       "MAM"
      ],
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:mam_refined_furusiyya"
      ]
     ],
     "gate_labels": [
-     "Egypt (MAM)"
+     "Egypt (MAM)",
+     "Privilege:Mam Refined Furusiyya"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Egypt (MAM)",
+     "the privilege has been unlocked (Refined Furūsiyya)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8393,7 +9257,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/mam-refined-furusiyya.png",
    "id": "privilege:mam_refined_furusiyya",
@@ -8431,12 +9299,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Republic"
+    ],
     "requires": [
-     "has estate privilege: maintain clerical proceedings"
+     "government is Republic",
+     "has privilege Maintain Clerical Proceedings"
     ],
     "unlocked_by": null
    },
@@ -8447,7 +9318,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Government",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/mandatory-clerical-donations.png",
    "id": "privilege:mandatory_clerical_donations",
@@ -8497,14 +9372,18 @@
       "RUS"
      ],
      [
-      "?",
-      "ruler has variable"
+      "var",
+      "rus_manifesto_of_freedom"
      ]
     ],
     "gate_labels": [
-     "RUS"
+     "RUS",
+     "Rus Manifesto Of Freedom"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Russia",
+     "ruler: event flag: Rus Manifesto Of Freedom"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8514,7 +9393,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/manifesto-of-freedom.png",
    "id": "privilege:manifesto_of_freedom",
@@ -8552,11 +9435,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "monarchy"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "requires": [
+     "government is Monarchy"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8566,7 +9453,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/manorial-courts.png",
    "id": "privilege:manorial_courts",
@@ -8621,7 +9511,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/market-fairs.png",
    "id": "privilege:market_fairs",
@@ -8665,11 +9558,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "masaniellos_fight_flag"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Masaniellos Fight Flag"
+    ],
+    "requires": [
+     "event flag: Masaniellos Fight Flag"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8679,7 +9576,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/masaniellos-fight.png",
    "id": "privilege:masaniellos_fight",
@@ -8723,11 +9623,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:mch_tribal_favor"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Mch Tribal Favor"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Tribal Favor)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8737,7 +9641,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/mch-tribal-favor.png",
    "id": "privilege:mch_tribal_favor",
@@ -8757,9 +9664,9 @@
      "Milan"
     ],
     "requires": [
-     "text: produce any fine cloth or silk tt",
-     "GREATER THAN: 0",
-     "GREATER THAN: 0"
+     "is or was Milan",
+     "Fine Cloth > 0",
+     "Silk > 0"
     ],
     "unlocked_by": null
    },
@@ -8770,7 +9677,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country",
+     "Other"
+    ]
    },
    "icon": "img/privilege/milanese-cloth-guilds-privileges.png",
    "id": "privilege:milanese_cloth_guilds_privileges",
@@ -8820,7 +9731,9 @@
     "gate_labels": [
      "Andean"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Andean"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8830,7 +9743,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/mita-system.png",
    "id": "privilege:mita_system",
@@ -8876,13 +9792,13 @@
     "gate": [
      "not",
      [
-      "?",
-      "has estate privilege"
+      "priv",
+      "auxilium_et_consilium"
      ]
     ],
     "gate_labels": [],
     "requires": [
-     "has estate privilege: auxilium et consilium"
+     "not — has privilege Auxilium et Consilium"
     ],
     "unlocked_by": null
    },
@@ -8893,7 +9809,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/monetary-fiefs.png",
    "id": "privilege:monetary_fiefs",
@@ -8947,15 +9866,20 @@
       "PLC"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "rise_of_szlachta_szlachta_outcome_variable"
      ]
     ],
     "gate_labels": [
      "Poland",
-     "PLC"
+     "PLC",
+     "Rise Of Szlachta Szlachta Outcome Variable"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Poland",
+     "is or was Poland-Lithuania",
+     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -8965,7 +9889,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/nieszawa-privileges.png",
    "id": "privilege:nieszawa_privileges",
@@ -9015,11 +9943,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "unlock_nihil_novi"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Unlock Nihil Novi"
+    ],
+    "requires": [
+     "event flag: Unlock Nihil Novi"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9029,7 +9961,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/nihil-novi.png",
    "id": "privilege:nihil_novi",
@@ -9079,11 +10014,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "religion group"
+     "rgrp",
+     "christian"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Christianity"
+    ],
+    "requires": [
+     "religion group is Christianity"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9093,7 +10032,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/no-labor-sunday.png",
    "id": "privilege:no_labor_sunday",
@@ -9136,7 +10078,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/nobility-council.png",
    "id": "privilege:nobility_council",
@@ -9200,7 +10145,10 @@
      "France",
      "Goryeo"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France",
+     "is or was Goryeo"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9210,7 +10158,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/noble-armies.png",
    "id": "privilege:noble_armies",
@@ -9254,12 +10205,14 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has advance"
+     "adv",
+     "castle_advance"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Castle Advance"
+    ],
     "requires": [
-     "has advance: castle advance"
+     "has researched Castle"
     ],
     "unlocked_by": null
    },
@@ -9270,7 +10223,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Advance"
+    ]
    },
    "icon": "img/privilege/noble-fortification-licenses.png",
    "id": "privilege:noble_fortification_licenses",
@@ -9337,7 +10293,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/noble-leaders-only.png",
    "id": "privilege:noble_leaders_only",
@@ -9437,16 +10396,22 @@
     "gate": [
      "or",
      [
-      "?",
-      "government type"
+      "gov",
+      "monarchy"
      ],
      [
-      "?",
-      "government type"
+      "gov",
+      "tribe"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Monarchy",
+     "Tribe"
+    ],
+    "requires": [
+     "government is Monarchy",
+     "government is Tribe"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9456,7 +10421,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/noble-marriage-rights.png",
    "id": "privilege:noble_marriage_rights",
@@ -9488,11 +10456,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9502,7 +10474,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/noble-patronage.png",
    "id": "privilege:noble_patronage",
@@ -9557,7 +10532,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/noble-patronage-of-the-arts.png",
    "id": "privilege:noble_patronage_of_the_arts",
@@ -9606,7 +10584,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/noble-serfdom-rights.png",
    "id": "privilege:noble_serfdom_rights",
@@ -9660,7 +10641,9 @@
      "has ports"
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "Has Ports"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9670,7 +10653,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Other"
+    ]
    },
    "icon": "img/privilege/noble-sponsored-navy.png",
    "id": "privilege:noble_sponsored_navy",
@@ -9719,7 +10705,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/nobles-land-rights.png",
    "id": "privilege:nobles_land_rights",
@@ -9792,7 +10781,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/nobles-offensive-military-doctrine.png",
    "id": "privilege:nobles_offensive_military_doctrine",
@@ -9835,7 +10827,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.66"
+     "religious unity < 0.66"
     ],
     "unlocked_by": null
    },
@@ -9846,7 +10838,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/nobles-protected-faith.png",
    "id": "privilege:nobles_protected_faith",
@@ -9884,7 +10879,9 @@
     "gate_labels": [
      "Velikiy Novgorod"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Velikiy Novgorod"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9894,7 +10891,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/novgorod-ivans-hundred.png",
    "id": "privilege:novgorod_ivans_hundred",
@@ -9929,7 +10929,11 @@
      "Baltic",
      "Ruthenia"
     ],
-    "requires": [],
+    "requires": [
+     "capital: in region Carpathia",
+     "capital: in region Baltic",
+     "capital: in region Ruthenia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -9939,7 +10943,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography"
+    ]
    },
    "icon": "img/privilege/novi-fori.png",
    "id": "privilege:novi_fori",
@@ -9984,7 +10991,8 @@
      "Mali"
     ],
     "requires": [
-     "type: office of the farima soura privilege"
+     "is or was Mali",
+     "the privilege has been unlocked (Office of the Farima-Soura)"
     ],
     "unlocked_by": null
    },
@@ -9995,7 +11003,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/office-of-the-farima-soura-privilege.png",
    "id": "privilege:office_of_the_farima_soura_privilege",
@@ -10058,7 +11070,8 @@
      "Mali"
     ],
     "requires": [
-     "type: office of the sankar zouma privilege"
+     "is or was Mali",
+     "the privilege has been unlocked (Office of the Sankar-Zouma)"
     ],
     "unlocked_by": null
    },
@@ -10069,7 +11082,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/office-of-the-sankar-zouma-privilege.png",
    "id": "privilege:office_of_the_sankar_zouma_privilege",
@@ -10113,15 +11130,18 @@
       "ENG"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "eng_ordinance_of_laborers_flag"
      ]
     ],
     "gate_labels": [
-     "England"
+     "England",
+     "Eng Ordinance Of Laborers Flag"
     ],
     "requires": [
-     "has estate privilege: peasants free peasantry"
+     "is or was England",
+     "event flag: Eng Ordinance Of Laborers Flag",
+     "not — has privilege Free Mobility for the Common People"
     ],
     "unlocked_by": null
    },
@@ -10132,7 +11152,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/ordinance-of-laborers.png",
    "id": "privilege:ordinance_of_laborers",
@@ -10180,15 +11205,20 @@
       "PLC"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "rise_of_szlachta_szlachta_outcome_variable"
      ]
     ],
     "gate_labels": [
      "Poland",
-     "PLC"
+     "PLC",
+     "Rise Of Szlachta Szlachta Outcome Variable"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Poland",
+     "is or was Poland-Lithuania",
+     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -10198,7 +11228,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/pacta-conventa.png",
    "id": "privilege:pacta_conventa",
@@ -10259,7 +11293,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/partial-yield.png",
    "id": "privilege:partial_yield",
@@ -10314,7 +11351,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/peasant-owns-their-food.png",
    "id": "privilege:peasant_owns_their_food",
@@ -10360,13 +11400,13 @@
     "gate": [
      "not",
      [
-      "?",
-      "has estate privilege"
+      "priv",
+      "tur_banned_weaponry_for_peasants"
      ]
     ],
     "gate_labels": [],
     "requires": [
-     "has estate privilege: tur banned weaponry for peasants"
+     "not — has privilege Banned Weapons for Commoners"
     ],
     "unlocked_by": null
    },
@@ -10377,7 +11417,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/peasants-allowed-weapons-privilege.png",
    "id": "privilege:peasants_allowed_weapons_privilege",
@@ -10444,7 +11487,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/peasants-autonomous-villages.png",
    "id": "privilege:peasants_autonomous_villages",
@@ -10505,7 +11551,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/peasants-fewer-levies.png",
    "id": "privilege:peasants_fewer_levies",
@@ -10545,32 +11594,35 @@
     "gate": [
      "and",
      [
-      "and",
+      "or",
       [
-       "?",
-       "limit has estate privilege"
+       "not",
+       [
+        "priv",
+        "statutes_of_piotrkow"
+       ]
       ],
       [
        "not",
        [
-        "?",
-        "trigger if has estate privilege"
+        "priv",
+        "statutes_of_piotrkow"
        ]
       ]
      ],
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "ordinance_of_laborers"
       ]
      ]
     ],
     "gate_labels": [],
     "requires": [
-     "has estate privilege: statutes of piotrkow",
-     "has estate privilege: statutes of piotrkow",
-     "has estate privilege: ordinance of laborers"
+     "has privilege Statutes of Piotrkow",
+     "not — has privilege Statutes of Piotrkow",
+     "not — has privilege Ordinance of Laborers"
     ],
     "unlocked_by": null
    },
@@ -10581,7 +11633,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/peasants-free-peasantry.png",
    "id": "privilege:peasants_free_peasantry",
@@ -10654,7 +11709,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/peasants-in-administration.png",
    "id": "privilege:peasants_in_administration",
@@ -10704,7 +11762,9 @@
     "gate_labels": [
      "England"
     ],
-    "requires": [],
+    "requires": [
+     "is or was England"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -10714,7 +11774,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/peasants-no-poll-tax-privilege.png",
    "id": "privilege:peasants_no_poll_tax_privilege",
@@ -10763,7 +11826,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "LESS THAN: 0.66"
+     "religious unity < 0.66"
     ],
     "unlocked_by": null
    },
@@ -10774,7 +11837,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/peasants-protected-faith.png",
    "id": "privilege:peasants_protected_faith",
@@ -10823,9 +11889,10 @@
     ],
     "gate_labels": [],
     "requires": [
-     "parliament type: estate parliament",
-     "parliament type: autocratic parliament",
-     "parliament type: constitutional parliament"
+     "Has A Parliamentary System",
+     "parliament is Estate Parliament",
+     "parliament is Autocratic Parliament",
+     "parliament is Constitutional Parliament"
     ],
     "unlocked_by": null
    },
@@ -10836,7 +11903,11 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Government",
+     "Other"
+    ]
    },
    "icon": "img/privilege/peasants-represented-in-parliament.png",
    "id": "privilege:peasants_represented_in_parliament",
@@ -10891,7 +11962,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/peasants-yeomanry.png",
    "id": "privilege:peasants_yeomanry",
@@ -10943,19 +12017,24 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "residence_in_versailles"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "enable_permanent_residence_in_versailles"
      ]
     ],
     "gate_labels": [
-     "France"
+     "France",
+     "Enable Permanent Residence In Versailles"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France",
+     "not — has privilege Residence in Versailles",
+     "event flag: Enable Permanent Residence In Versailles"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -10965,7 +12044,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/permanent-residence-in-versailles.png",
    "id": "privilege:permanent_residence_in_versailles",
@@ -11011,17 +12095,17 @@
      [
       "and",
       [
-       "?",
-       "any international organizations member of international organization type"
+       "iomem",
+       "sect"
       ],
       [
        "?",
-       "any international organizations member of international organization has policy"
+       "sect condition"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "has_neo_confucianism"
      ],
      [
       "?",
@@ -11029,10 +12113,17 @@
      ]
     ],
     "gate_labels": [
-     "Confucian-Influenced"
+     "Confucian-Influenced",
+     "Sect",
+     "Has Neo Confucianism"
     ],
     "requires": [
-     "has imperial examinations: True"
+     "culture group is Confucian-Influenced",
+     "organization is Sect",
+     "the organization runs Confucianism",
+     "event flag: Has Neo Confucianism",
+     "is a member of Middle Kingdom",
+     "has imperial examinations"
     ],
     "unlocked_by": null
    },
@@ -11043,7 +12134,12 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Culture",
+     "Organization",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/petty-bureaucracy.png",
    "id": "privilege:petty_bureaucracy",
@@ -11087,11 +12183,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:plc_cossack_treaty_of_hadiach"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Plc Cossack Treaty Of Hadiach"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Treaty of Hadiach)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11101,7 +12201,10 @@
     ]
    ],
    "facets": {
-    "estate": "Cossacks"
+    "estate": "Cossacks",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/plc-cossack-treaty-of-hadiach.png",
    "id": "privilege:plc_cossack_treaty_of_hadiach",
@@ -11157,11 +12260,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:plc_empower_orthodox_nobility"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Plc Empower Orthodox Nobility"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Empower Orthodoxy Nobility)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11171,7 +12278,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/plc-empower-orthodox-nobility.png",
    "id": "privilege:plc_empower_orthodox_nobility",
@@ -11198,7 +12308,10 @@
      "Poland",
      "PLC"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Poland",
+     "is or was Poland-Lithuania"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11208,7 +12321,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/polish-merchant-seal.png",
    "id": "privilege:polish_merchant_seal",
@@ -11252,7 +12368,9 @@
     "gate_labels": [
      "Rome"
     ],
-    "requires": [],
+    "requires": [
+     "is Rome"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11262,7 +12380,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/powerful-italian-families.png",
    "id": "privilege:powerful_italian_families",
@@ -11305,7 +12426,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/primacy-of-nobility.png",
    "id": "privilege:primacy_of_nobility",
@@ -11354,7 +12478,10 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "ports > 0",
+     "Can Hire Privateers"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11364,7 +12491,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/privateer-contracts.png",
    "id": "privilege:privateer_contracts",
@@ -11402,11 +12533,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "unlock_privilege_of_koszyce"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Unlock Privilege Of Koszyce"
+    ],
+    "requires": [
+     "event flag: Unlock Privilege Of Koszyce"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11416,7 +12551,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/privilege-of-koszyce.png",
    "id": "privilege:privilege_of_koszyce",
@@ -11465,7 +12603,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/promote-cultural-unity.png",
    "id": "privilege:promote_cultural_unity",
@@ -11497,21 +12638,28 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:promotion_of_muslim_scholars"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Promotion Of Muslim Scholars"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Promotion of Islam Scholars)"
+    ],
     "unlocked_by": null
    },
    "desc": [
     [
      "t",
-     "To further elevate [game concept ROOT] as the center of Islam learning, we must ensure more scholars enter our administration, despite the allegiances they might have."
+     "To further elevate [our Country] as the center of Islam learning, we must ensure more scholars enter our administration, despite the allegiances they might have."
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/promotion-of-muslim-scholars.png",
    "id": "privilege:promotion_of_muslim_scholars",
@@ -11572,12 +12720,12 @@
      [
       "or",
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "dharmic"
       ],
       [
-       "?",
-       "religion group"
+       "rgrp",
+       "muslim"
       ]
      ],
      [
@@ -11591,10 +12739,18 @@
      ]
     ],
     "gate_labels": [
+     "Dharma",
+     "Islam",
      "South Asia",
      "Rajasthani"
     ],
-    "requires": [],
+    "requires": [
+     "not — language: Rajasthani",
+     "religion group is Dharma",
+     "religion group is Islam",
+     "capital: in South Asia",
+     "language: Rajasthani"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11604,7 +12760,13 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Religion",
+     "Culture",
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/rajput-society.png",
    "id": "privilege:rajput_society",
@@ -11617,11 +12779,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11631,7 +12797,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/recognized-communes.png",
    "id": "privilege:recognized_communes",
@@ -11677,12 +12846,14 @@
     "gate": [
      "not",
      [
-      "?",
-      "has reform"
+      "reform",
+      "military_order_reform"
      ]
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "not — has reform Military Order"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11692,7 +12863,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Reform"
+    ]
    },
    "icon": "img/privilege/reduced-from-military-obligations.png",
    "id": "privilege:reduced_from_military_obligations",
@@ -11736,11 +12910,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "granted_privileges_to_secure_throne"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Granted Privileges To Secure Throne"
+    ],
+    "requires": [
+     "event flag: Granted Privileges To Secure Throne"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11750,7 +12928,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/reduced-responsibilities-for-the-nobles.png",
    "id": "privilege:reduced_responsibilities_for_the_nobles",
@@ -11788,11 +12969,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "granted_privileges_to_secure_throne"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Granted Privileges To Secure Throne"
+    ],
+    "requires": [
+     "event flag: Granted Privileges To Secure Throne"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11802,7 +12987,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/reduced-taxation-for-the-nobles.png",
    "id": "privilege:reduced_taxation_for_the_nobles",
@@ -11851,7 +13039,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/religious-diplomats.png",
    "id": "privilege:religious_diplomats",
@@ -11891,19 +13082,24 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "permanent_residence_in_versailles"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "enable_residence_in_versailles"
      ]
     ],
     "gate_labels": [
-     "France"
+     "France",
+     "Enable Residence In Versailles"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France",
+     "not — has privilege Permanent Residence in Versailles",
+     "event flag: Enable Residence In Versailles"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11913,7 +13109,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/residence-in-versailles.png",
    "id": "privilege:residence_in_versailles",
@@ -11964,7 +13165,10 @@
     "gate_labels": [
      "German"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is German",
+     "succession law: Partition Inheritance"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -11974,7 +13178,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture",
+     "Other"
+    ]
    },
    "icon": "img/privilege/right-to-inherit.png",
    "id": "privilege:right_to_inherit",
@@ -12012,11 +13220,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:royal_factories_privilege"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Royal Factories Privilege"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Royal Factories)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12026,7 +13238,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/royal-factories-privilege.png",
    "id": "privilege:royal_factories_privilege",
@@ -12064,13 +13279,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "mos_salt_tax_exemption_flag"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Mos Salt Tax Exemption Flag"
+    ],
     "requires": [
-     "text: gained access to this privilege tt",
-     "has variable: mos salt tax exemption flag"
+     "event flag: Mos Salt Tax Exemption Flag",
+     "Has gained access to this privilege"
     ],
     "unlocked_by": null
    },
@@ -12081,7 +13298,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/salt-tax-exemption.png",
    "id": "privilege:salt_tax_exemption",
@@ -12127,17 +13347,17 @@
      [
       "and",
       [
-       "?",
-       "any international organizations member of international organization type"
+       "iomem",
+       "sect"
       ],
       [
        "?",
-       "any international organizations member of international organization has policy"
+       "sect condition"
       ]
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "has_neo_confucianism"
      ],
      [
       "?",
@@ -12145,10 +13365,17 @@
      ]
     ],
     "gate_labels": [
-     "Confucian-Influenced"
+     "Confucian-Influenced",
+     "Sect",
+     "Has Neo Confucianism"
     ],
     "requires": [
-     "has imperial examinations: True"
+     "culture group is Confucian-Influenced",
+     "organization is Sect",
+     "the organization runs Confucianism",
+     "event flag: Has Neo Confucianism",
+     "is a member of Middle Kingdom",
+     "has imperial examinations"
     ],
     "unlocked_by": null
    },
@@ -12159,7 +13386,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture",
+     "Organization",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/scholar-officials.png",
    "id": "privilege:scholar_officials",
@@ -12203,11 +13435,15 @@
    "data": {
     "can_revoke": true,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:sco_statutes_of_iona"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Sco Statutes Of Iona"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Statutes of Iona)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12217,7 +13453,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/sco-statutes-of-iona.png",
    "id": "privilege:sco_statutes_of_iona",
@@ -12263,15 +13502,15 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "sco_statutes_of_iona"
       ]
      ],
      [
       "not",
       [
-       "?",
-       "has variable"
+       "var",
+       "preserved_clan_autonomy"
       ]
      ]
     ],
@@ -12279,7 +13518,9 @@
      "Scottish"
     ],
     "requires": [
-     "has estate privilege: sco statutes of iona"
+     "culture group is Scottish",
+     "not — has privilege Statutes of Iona",
+     "not — event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
    },
@@ -12290,7 +13531,12 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/scottish-clans.png",
    "id": "privilege:scottish_clans",
@@ -12334,11 +13580,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has tribal government"
+     "gov",
+     "tribe"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "requires": [
+     "has a tribal government"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12348,7 +13598,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/share-of-the-spoils.png",
    "id": "privilege:share_of_the_spoils",
@@ -12392,8 +13645,8 @@
     ],
     "gate_labels": [],
     "requires": [
-     "GREATER THAN: 0",
-     "modifier:can build ships in this location: True"
+     "ports > 0",
+     "Can Build Ships In This Location"
     ],
     "unlocked_by": null
    },
@@ -12404,7 +13657,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography",
+     "Other"
+    ]
    },
    "icon": "img/privilege/shipwright-contracts.png",
    "id": "privilege:shipwright_contracts",
@@ -12448,11 +13705,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "unlock_shooting_societies_variable"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Unlock Shooting Societies Variable"
+    ],
+    "requires": [
+     "event flag: Unlock Shooting Societies Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12462,7 +13723,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/shooting-societies.png",
    "id": "privilege:shooting_societies",
@@ -12501,7 +13765,8 @@
      "Florence"
     ],
     "requires": [
-     "has reform: Signoria"
+     "is or was Florence",
+     "has reform Signoria"
     ],
     "unlocked_by": null
    },
@@ -12512,7 +13777,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/signoria-council.png",
    "id": "privilege:signoria_council",
@@ -12554,7 +13823,9 @@
      "num of ports GREATER THAN"
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "ports > 0"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12564,7 +13835,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography"
+    ]
    },
    "icon": "img/privilege/sponsor-maritime-contracts.png",
    "id": "privilege:sponsor_maritime_contracts",
@@ -12598,16 +13872,22 @@
     "gate": [
      "and",
      [
-      "?",
-      "government type"
+      "gov",
+      "theocracy"
      ],
      [
-      "?",
-      "has advance"
+      "adv",
+      "printing_of_religious_texts"
      ]
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Theocracy",
+     "Printing Of Religious Texts"
+    ],
+    "requires": [
+     "government is Theocracy",
+     "has researched Religious Text Printing"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12617,7 +13897,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Government",
+     "Advance"
+    ]
    },
    "icon": "img/privilege/sponsor-printing-of-religious-texts.png",
    "id": "privilege:sponsor_printing_of_religious_texts",
@@ -12655,12 +13939,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Republic"
+    ],
     "requires": [
-     "has estate privilege: maintain clerical proceedings"
+     "government is Republic",
+     "has privilege Maintain Clerical Proceedings"
     ],
     "unlocked_by": null
    },
@@ -12671,7 +13958,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Government",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/state-official-oaths.png",
    "id": "privilege:state_official_oaths",
@@ -12697,11 +13988,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:statutes_of_piotrkow"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Statutes Of Piotrkow"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Statutes of Piotrkow)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12711,7 +14006,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/statutes-of-piotrkow.png",
    "id": "privilege:statutes_of_piotrkow",
@@ -12756,7 +14054,9 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [],
+    "requires": [
+     "not — religion is Catholicism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12766,7 +14066,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/tax-exemption.png",
    "id": "privilege:tax_exemption",
@@ -12810,7 +14113,9 @@
     "gate_labels": [
      "East Slavic"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is East Slavic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12820,7 +14125,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/the-ryad-privilege.png",
    "id": "privilege:the_ryad_privilege",
@@ -12858,11 +14166,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "government type"
+     "gov",
+     "republic"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Republic"
+    ],
+    "requires": [
+     "government is Republic"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -12872,7 +14184,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/toll-and-tariff-exemptions.png",
    "id": "privilege:toll_and_tariff_exemptions",
@@ -12927,7 +14242,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/trade-monopolies.png",
    "id": "privilege:trade_monopolies",
@@ -12982,7 +14300,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/treasury-rights.png",
    "id": "privilege:treasury_rights",
@@ -13026,11 +14347,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has tribal government"
+     "gov",
+     "tribe"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "requires": [
+     "has a tribal government"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13040,7 +14365,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government"
+    ]
    },
    "icon": "img/privilege/tribal-autonomy.png",
    "id": "privilege:tribal_autonomy",
@@ -13084,12 +14412,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has tribal government"
+     "gov",
+     "tribe"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Tribe"
+    ],
     "requires": [
-     "has advance: ranching"
+     "has a tribal government",
+     "has researched Ranching"
     ],
     "unlocked_by": null
    },
@@ -13100,7 +14431,11 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Government",
+     "Advance"
+    ]
    },
    "icon": "img/privilege/tribal-host.png",
    "id": "privilege:tribal_host",
@@ -13143,7 +14478,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-allow-gatherings.png",
    "id": "privilege:tribes_allow_gatherings",
@@ -13181,7 +14519,9 @@
     "gate_labels": [
      "Scottish"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Scottish"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13191,7 +14531,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/tribes-creach.png",
    "id": "privilege:tribes_creach",
@@ -13229,7 +14572,9 @@
     "gate_labels": [
      "Scottish"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Scottish"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13239,7 +14584,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/tribes-fosterage.png",
    "id": "privilege:tribes_fosterage",
@@ -13282,7 +14630,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-in-administration.png",
    "id": "privilege:tribes_in_administration",
@@ -13331,7 +14682,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-land-rights.png",
    "id": "privilege:tribes_land_rights",
@@ -13369,7 +14723,9 @@
     "gate_labels": [
      "Scottish"
     ],
-    "requires": [],
+    "requires": [
+     "culture group is Scottish"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13379,7 +14735,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Culture"
+    ]
    },
    "icon": "img/privilege/tribes-manrent.png",
    "id": "privilege:tribes_manrent",
@@ -13422,7 +14781,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-pasture-access.png",
    "id": "privilege:tribes_pasture_access",
@@ -13459,7 +14821,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-protected-faith.png",
    "id": "privilege:tribes_protected_faith",
@@ -13502,7 +14867,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-respect-tribal-traditions.png",
    "id": "privilege:tribes_respect_tribal_traditions",
@@ -13542,15 +14910,15 @@
      [
       "not",
       [
-       "?",
-       "has estate privilege"
+       "priv",
+       "sco_statutes_of_iona"
       ]
      ],
      [
       "not",
       [
-       "?",
-       "has variable"
+       "var",
+       "preserved_clan_autonomy"
       ]
      ]
     ],
@@ -13558,7 +14926,9 @@
      "Scottish"
     ],
     "requires": [
-     "has estate privilege: sco statutes of iona"
+     "culture group is Scottish",
+     "not — has privilege Statutes of Iona",
+     "not — event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
    },
@@ -13569,7 +14939,12 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "Culture",
+     "Privilege",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/tribes-scotland-gaelic-heritage.png",
    "id": "privilege:tribes_scotland_gaelic_heritage",
@@ -13618,7 +14993,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-tribal-levies.png",
    "id": "privilege:tribes_tribal_levies",
@@ -13661,7 +15039,10 @@
     ]
    ],
    "facets": {
-    "estate": "Tribes"
+    "estate": "Tribes",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/tribes-tribal-registry.png",
    "id": "privilege:tribes_tribal_registry",
@@ -13693,15 +15074,18 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has reform"
+     "reform",
+     "anatolian_beylik"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Anatolian Beylik"
+    ],
     "requires": [
-     "owns: konya",
-     "owns: sivas",
-     "owns: erzurum",
-     "owns: tabriz"
+     "has reform Anatolian Beylik",
+     "owns Konya",
+     "owns Sivas",
+     "owns Erzurum",
+     "owns Tabrīz"
     ],
     "unlocked_by": null
    },
@@ -13712,7 +15096,11 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Geography",
+     "Reform"
+    ]
    },
    "icon": "img/privilege/trunk-road-to-erzurum-privilege.png",
    "id": "privilege:trunk_road_to_erzurum_privilege",
@@ -13750,12 +15138,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:tur_banned_weaponry_for_peasants"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Privilege:Tur Banned Weaponry For Peasants"
+    ],
     "requires": [
-     "has estate privilege: peasants allowed weapons privilege"
+     "the privilege has been unlocked (Banned Weapons for Commoners)",
+     "not — has privilege Common Militias"
     ],
     "unlocked_by": null
    },
@@ -13766,7 +15157,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/tur-banned-weaponry-for-peasants.png",
    "id": "privilege:tur_banned_weaponry_for_peasants",
@@ -13816,7 +15210,9 @@
     "gate_labels": [
      "Velikiy Novgorod"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Velikiy Novgorod"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13826,7 +15222,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/tysiatskii-privilege.png",
    "id": "privilege:tysiatskii_privilege",
@@ -13839,11 +15238,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:ukr_kholop_protection"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Ukr Kholop Protection"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Kholop Protection Rights)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13853,7 +15256,10 @@
     ]
    ],
    "facets": {
-    "estate": "Commoners"
+    "estate": "Commoners",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/ukr-kholop-protection.png",
    "id": "privilege:ukr_kholop_protection",
@@ -13897,11 +15303,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has variable"
+     "var",
+     "union_privilege_flag"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Union Privilege Flag"
+    ],
+    "requires": [
+     "event flag: Union Privilege Flag"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13911,7 +15321,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/union-privilege.png",
    "id": "privilege:union_privilege",
@@ -13955,14 +15368,18 @@
       "hussite"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "enable_unity_brethren_privilege_variable"
      ]
     ],
     "gate_labels": [
-     "Hussitism"
+     "Hussitism",
+     "Enable Unity Brethren Privilege Variable"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Hussitism",
+     "event flag: Enable Unity Brethren Privilege Variable"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -13972,7 +15389,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/unity-brethren-privilege.png",
    "id": "privilege:unity_brethren_privilege",
@@ -14021,7 +15442,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "No requirement"
+    ]
    },
    "icon": "img/privilege/urban-development-grants.png",
    "id": "privilege:urban_development_grants",
@@ -14061,8 +15485,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has variable"
+      "var",
+      "vienna_concordat_accepted"
      ],
      [
       "rel",
@@ -14070,9 +15494,13 @@
      ]
     ],
     "gate_labels": [
+     "Vienna Concordat Accepted",
      "Catholicism"
     ],
-    "requires": [],
+    "requires": [
+     "event flag: Vienna Concordat Accepted",
+     "religion is Catholicism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14082,7 +15510,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Event or script"
+    ]
    },
    "icon": "img/privilege/vienna-concordat-privilege.png",
    "id": "privilege:vienna_concordat_privilege",
@@ -14114,11 +15546,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:vij_allowance_of_religious_practices"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Vij Allowance Of Religious Practices"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Allow Religious Practices)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14128,7 +15564,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/vij-allowance-of-religious-practices.png",
    "id": "privilege:vij_allowance_of_religious_practices",
@@ -14168,8 +15607,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has unlocked estate privilege trigger type"
+      "unl",
+      "privilege:vij_patronization_of_local_gods"
      ],
      [
       "rel",
@@ -14177,9 +15616,13 @@
      ]
     ],
     "gate_labels": [
+     "Privilege:Vij Patronization Of Local Gods",
      "Hinduism"
     ],
-    "requires": [],
+    "requires": [
+     "the privilege has been unlocked (Patronization Rights of Minor Deities)",
+     "religion is Hinduism"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14189,7 +15632,11 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion",
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/vij-patronization-of-local-gods.png",
    "id": "privilege:vij_patronization_of_local_gods",
@@ -14221,11 +15668,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has unlocked estate privilege trigger type"
+     "unl",
+     "privilege:vij_tamil_trading_rights"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Privilege:Vij Tamil Trading Rights"
+    ],
+    "requires": [
+     "the privilege has been unlocked (Tamil Trading Rights)"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14235,7 +15686,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Privilege"
+    ]
    },
    "icon": "img/privilege/vij-tamil-trading-rights.png",
    "id": "privilege:vij_tamil_trading_rights",
@@ -14267,7 +15721,9 @@
     "gate_labels": [
      "France"
     ],
-    "requires": [],
+    "requires": [
+     "is or was France"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14277,7 +15733,10 @@
     ]
    ],
    "facets": {
-    "estate": "Burghers"
+    "estate": "Burghers",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/villes-franches.png",
    "id": "privilege:villes_franches",
@@ -14327,7 +15786,9 @@
     "gate_labels": [
      "Milan"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Milan"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14337,7 +15798,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/visconti-city-states.png",
    "id": "privilege:visconti_city_states",
@@ -14381,7 +15845,9 @@
     "gate_labels": [
      "Serbia"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Serbia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14391,7 +15857,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/vlastele-krayishnik.png",
    "id": "privilege:vlastele_krayishnik",
@@ -14423,11 +15892,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "religion group"
+     "rgrp",
+     "muslim"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Islam"
+    ],
+    "requires": [
+     "religion group is Islam"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14437,7 +15910,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/waqf-payments.png",
    "id": "privilege:waqf_payments",
@@ -14481,7 +15957,9 @@
     "gate_labels": [
      "Nahua"
     ],
-    "requires": [],
+    "requires": [
+     "religion is Nahua"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14491,7 +15969,10 @@
     ]
    ],
    "facets": {
-    "estate": "Clergy"
+    "estate": "Clergy",
+    "requires": [
+     "Religion"
+    ]
    },
    "icon": "img/privilege/warrior-tribunal.png",
    "id": "privilege:warrior_tribunal",
@@ -14529,11 +16010,15 @@
    "data": {
     "can_revoke": false,
     "gate": [
-     "?",
-     "has advance"
+     "adv",
+     "mug_zamindar_system"
     ],
-    "gate_labels": [],
-    "requires": [],
+    "gate_labels": [
+     "Mug Zamindar System"
+    ],
+    "requires": [
+     "has researched Zamindar System"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14543,7 +16028,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Advance"
+    ]
    },
    "icon": "img/privilege/zamindar-tax-privilege.png",
    "id": "privilege:zamindar_tax_privilege",
@@ -14569,7 +16057,10 @@
     "gate_labels": [
      "Venice"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Venice",
+     "overlord: is or was Venice"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14579,7 +16070,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/zontas.png",
    "id": "privilege:zontas",
@@ -14629,7 +16123,9 @@
     "gate_labels": [
      "Serbia"
     ],
-    "requires": [],
+    "requires": [
+     "is or was Serbia"
+    ],
     "unlocked_by": null
    },
    "desc": [
@@ -14639,7 +16135,10 @@
     ]
    ],
    "facets": {
-    "estate": "Nobility"
+    "estate": "Nobility",
+    "requires": [
+     "Country"
+    ]
    },
    "icon": "img/privilege/zupa-districts.png",
    "id": "privilege:zupa_districts",
@@ -14707,6 +16206,92 @@
      "count": 16,
      "label": "Tribes",
      "value": "Tribes"
+    }
+   ]
+  },
+  {
+   "key": "requires",
+   "label": "Requires",
+   "options": [
+    {
+     "count": 9,
+     "label": "Advance",
+     "value": "Advance"
+    },
+    {
+     "count": 1,
+     "label": "Age",
+     "value": "Age"
+    },
+    {
+     "count": 63,
+     "label": "Country",
+     "value": "Country"
+    },
+    {
+     "count": 23,
+     "label": "Culture",
+     "value": "Culture"
+    },
+    {
+     "count": 1,
+     "label": "Estate",
+     "value": "Estate"
+    },
+    {
+     "count": 42,
+     "label": "Event or script",
+     "value": "Event or script"
+    },
+    {
+     "count": 15,
+     "label": "Geography",
+     "value": "Geography"
+    },
+    {
+     "count": 23,
+     "label": "Government",
+     "value": "Government"
+    },
+    {
+     "count": 1,
+     "label": "Institution",
+     "value": "Institution"
+    },
+    {
+     "count": 2,
+     "label": "Law",
+     "value": "Law"
+    },
+    {
+     "count": 70,
+     "label": "No requirement",
+     "value": "No requirement"
+    },
+    {
+     "count": 3,
+     "label": "Organization",
+     "value": "Organization"
+    },
+    {
+     "count": 22,
+     "label": "Other",
+     "value": "Other"
+    },
+    {
+     "count": 49,
+     "label": "Privilege",
+     "value": "Privilege"
+    },
+    {
+     "count": 7,
+     "label": "Reform",
+     "value": "Reform"
+    },
+    {
+     "count": 36,
+     "label": "Religion",
+     "value": "Religion"
     }
    ]
   }

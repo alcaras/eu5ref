@@ -17,7 +17,9 @@ const privCols = [
   { key: 'name', label: 'Privilege', kind: 'name' },
   { key: 'estate', label: 'Estate', kind: 'facet' },
   { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'requires', label: 'Requires', kind: 'lines' },
 ] as const;
+const unconditional = privileges.filter((p: any) => !p.data.requires?.length).length;
 ---
 <Base
   title="Estates & Privileges"
@@ -27,6 +29,7 @@ const privCols = [
   pageStats={[
     { label: 'estates', value: estates.length },
     { label: 'privileges', value: privileges.length },
+    { label: 'with no requirement', value: unconditional },
   ]}
   description="The estates of Europa Universalis V and every estate privilege."
 >
@@ -36,8 +39,19 @@ const privCols = [
   </div>
 
   <h2 style="margin-top: 34px;">Privileges</h2>
+  <p class="sec-note">
+    A privilege's own <code>potential</code> and <code>allow</code> decide who can
+    ever grant it — a country tag, a religion, a culture, an advance, another
+    privilege. Filter by the kind of requirement, or by “No requirement” for the
+    ones anyone can grant.
+  </p>
   <div data-filter-scope>
     <FilterBar facets={privData.facets} placeholder="Filter privileges…" />
     <EntityTable entities={privileges} columns={privCols as any} pagePrefix="privileges" csvName="eu5ref-estate-privileges" />
   </div>
 </Base>
+
+<style>
+  .sec-note { font-size: 12.5px; color: var(--text-faint); max-width: 74ch; margin-top: 6px; }
+  .sec-note code { color: var(--text-dim); }
+</style>

@@ -13,14 +13,19 @@ const columns = [
   { key: 'government', label: 'Government', kind: 'facet' },
   { key: 'age', label: 'Age', kind: 'facet' },
   { key: 'mods', label: 'Modifiers', kind: 'mods' },
+  { key: 'requires', label: 'Requires', kind: 'lines' },
 ] as const;
+const unconditional = entities.filter((e: any) => !e.data.requires?.length).length;
 ---
 <Base
   title="Government Reforms"
   active="government"
   pageMark="🏛️"
   eyebrow="Government & Laws"
-  pageStats={[{ label: 'reforms', value: entities.length }]}
+  pageStats={[
+    { label: 'reforms', value: entities.length },
+    { label: 'with no requirement', value: unconditional },
+  ]}
   description="Every government reform in Europa Universalis V — government type, age, and modifiers."
 >
   <SectionTable title="Government Types" data={govTypes} columns={[
@@ -30,8 +35,18 @@ const columns = [
   ]} placeholder="Filter types…" />
 
   <h2 style="margin-top: 34px;">Reforms</h2>
+  <p class="sec-note">
+    Government type and age are only part of a reform's gate — <code>potential</code>,
+    <code>allow</code> and <code>locked</code> add country tags, cultures, other
+    reforms, an advance that unlocks it. Those are listed here and filterable.
+  </p>
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter reforms…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="reforms" />
   </div>
 </Base>
+
+<style>
+  .sec-note { font-size: 12.5px; color: var(--text-faint); max-width: 74ch; margin-top: 6px; }
+  .sec-note code { color: var(--text-dim); }
+</style>

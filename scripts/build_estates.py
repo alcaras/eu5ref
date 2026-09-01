@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
-import triggers
+import requirements
 from ref import (eid, ename, export_icon, hex_color, mods_from_tree, rich,
                  slugify, write_dataset, facet_meta)
 
@@ -45,7 +45,11 @@ def main():
         # single field for it. Compile the country-ish gate, and summarise
         # the rest of `allow` / `unlocked_by` so the page can show both.
         gate, gate_labels = ref.gate_of(p, 'potential', 'allow')
-        requires = triggers.summarize(getattr(p, 'allow', None), ref.label_map(), limit=4)
+        # Everything gating the privilege, in one readable list: `potential`
+        # (who ever sees it) and `allow` (who may grant it) both matter to a
+        # player, and neither is expressed anywhere else on the entity.
+        req = requirements.describe(getattr(p, 'potential', None),
+                                    getattr(p, 'allow', None), limit=6)
         unlocked_by = getattr(p, 'unlocked_by', None)
         if unlocked_by is not None and not isinstance(unlocked_by, (str, int, float)):
             unlocked_by = getattr(unlocked_by, 'display_name', None)
@@ -58,13 +62,14 @@ def main():
             'desc': rich(p.description),
             'facets': {
                 'estate': ename(estate_obj) or (p.estate if isinstance(p.estate, str) else 'Any'),
+                'requires': req['tags'],
             },
             'mods': mods,
             'data': {
                 'can_revoke': bool(getattr(p, 'can_revoke', True)),
                 'gate': gate,
                 'gate_labels': gate_labels,
-                'requires': requires,
+                'requires': req['lines'],
                 'unlocked_by': unlocked_by if isinstance(unlocked_by, str) else None,
             },
         })
@@ -72,7 +77,7 @@ def main():
         'dataset': 'estate-privileges',
         'source': 'in_game/common/estate_privileges',
         'entities': pents,
-        'facets': facet_meta(pents, [('estate', 'Estate')]),
+        'facets': facet_meta(pents, [('estate', 'Estate'), ('requires', 'Requires')]),
     })
 
 

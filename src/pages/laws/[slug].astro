@@ -16,10 +16,71 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
   <EntityDetail entity={entity} backlinks={backlinks}>
     {entity.data.policies.map((p: any) => (
       <div class="panel">
-        <h3>{p.name}</h3>
-        {p.desc && <p style="margin-top:0;"><Rich tokens={p.desc} /></p>}
-        <Mods mods={p.mods} />
+        <h3>
+          {p.name}
+          {p.years > 0 && <span class="pol-years">{p.years} {p.years === 1 ? 'year' : 'years'} to enact</span>}
+        </h3>
+        {p.desc && <p class="pol-desc"><Rich tokens={p.desc} /></p>}
+        {/* One block per scope: a location modifier is not a country bonus,
+            and its condition ("in region Italy") is part of the effect. */}
+        {p.groups.map((g: any) => (
+          <div class="pol-group">
+            <div class="pol-scope">
+              {g.scope}{g.when && <span class="pol-when"> · {g.when}</span>}
+            </div>
+            <Mods mods={g.mods} />
+          </div>
+        ))}
+        {p.groups.length === 0 && <p class="pol-none">No modifiers.</p>}
+        {p.requires.length > 0 && (
+          <div class="pol-req">
+            <span class="pol-req__k">Requires</span>
+            <ul>{p.requires.map((r: string) => <li>{r}</li>)}</ul>
+          </div>
+        )}
       </div>
     ))}
+    <Fragment slot="aside">
+      {(entity.data.requires.length > 0 || entity.facets.government !== 'Any'
+        || entity.facets.religion || entity.data.requires_vote) && (
+        <div class="panel">
+          <h3>Availability</h3>
+          <div class="kv">
+            {entity.facets.government !== 'Any' && (
+              <Fragment><span class="k">Government</span><span class="v">{entity.facets.government}</span></Fragment>
+            )}
+            {entity.facets.religion && (
+              <Fragment><span class="k">Religion</span><span class="v">{entity.facets.religion}</span></Fragment>
+            )}
+            {entity.data.requires_vote && (
+              <Fragment><span class="k">Enacted by</span><span class="v">a vote</span></Fragment>
+            )}
+            {entity.data.requires.map((r: string) => (
+              <Fragment><span class="k">Requires</span><span class="v">{r}</span></Fragment>
+            ))}
+          </div>
+        </div>
+      )}
+    </Fragment>
   </EntityDetail>
 </Base>
+
+<style>
+  .pol-years {
+    float: right; font-family: var(--font-mono); font-size: 11px;
+    color: var(--text-faint); text-transform: none; letter-spacing: 0;
+  }
+  .pol-desc { margin-top: 0; }
+  .pol-group + .pol-group { margin-top: 8px; }
+  .pol-scope {
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-faint); margin-bottom: 2px;
+  }
+  .pol-when { text-transform: none; letter-spacing: 0; color: var(--gold-soft); }
+  .pol-none { color: var(--text-faint); font-size: 13px; margin: 0; }
+  .pol-req { margin-top: 9px; font-size: 12.5px; color: var(--text-dim); }
+  .pol-req__k {
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint);
+  }
+  .pol-req ul { list-style: none; margin: 2px 0 0; padding: 0; }
+</style>

@@ -80,8 +80,25 @@ def production_methods(b) -> list[dict]:
     return out
 
 
+def special_keys() -> set[str]:
+    """`is_special = yes` marks a building as unique — one a country only gets
+    from its own culture, religion, tag or an event, rather than something any
+    country can put up. The toolkit's Building class does not model the field,
+    so it is read off the raw tree (224 of 465 buildings carry it)."""
+    out = set()
+    tree = ref.parser.parser.parse_folder_as_one_file('in_game/common/building_types')
+    for key, block in tree:
+        if not hasattr(block, 'iterate_with_duplicates'):
+            continue
+        for k, v in block.iterate_with_duplicates():
+            if str(k) == 'is_special' and str(v) in ('yes', 'True'):
+                out.add(str(key))
+    return out
+
+
 def main():
     buildings = ref.parser.buildings
+    specials = special_keys()
     entities = []
     for name, b in sorted(buildings.items()):
         slug = slugify(name)
@@ -98,13 +115,14 @@ def main():
                 'category': (b.category.display_name if hasattr(b.category, 'display_name')
                              else b.category) or 'Uncategorized',
                 'pop_type': ename(getattr(b, 'pop_type', None)) if not isinstance(getattr(b, 'pop_type', None), str) else b.pop_type,
+                'kind': 'Unique' if name in specials else 'Standard',
             },
             'mods': mods_from_tree(getattr(b, 'modifier', None)),
             'data': {
                 'gate': gate, 'gate_labels': gate_labels,
                 'settlements': settlements,
                 'max_levels': (lambda ml: ml if isinstance(ml, (int, float)) else None)(getattr(b, 'max_levels', None)),
-                'special': bool(getattr(b, 'is_special', False)),
+                'special': name in specials,
                 'production_methods': production_methods(b),
             },
         })

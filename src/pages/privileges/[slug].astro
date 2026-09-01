@@ -11,5 +11,30 @@ const { entity } = Astro.props;
 const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
 ---
 <Base title={entity.name} active="estates" eyebrow={`Estate Privilege · ${entity.facets.estate}`} iconSrc={entity.icon}>
-  <EntityDetail entity={entity} backlinks={backlinks} />
+  <EntityDetail entity={entity} backlinks={backlinks}>
+    <Fragment slot="aside">
+      {entity.data.requires?.length > 0 && (
+        <div class="panel">
+          <h3>Requires</h3>
+          <ul class="reqlist">
+            {entity.data.requires.map((r: string) => <li>{r}</li>)}
+          </ul>
+        </div>
+      )}
+      {(entity.data.gate_labels?.length > 0 || entity.data.unlocked_by) && (
+        <div class="panel">
+          <h3>Availability</h3>
+          <div class="kv">
+            {entity.data.gate_labels?.length > 0 && (
+              <Fragment><span class="k">Only for</span><span class="v">{entity.data.gate_labels.join(', ')}</span></Fragment>
+            )}
+            {entity.data.unlocked_by && (
+              <Fragment><span class="k">Unlocked by</span><span class="v">{entity.data.unlocked_by}</span></Fragment>
+            )}
+            <Fragment><span class="k">Revocable</span><span class="v">{entity.data.can_revoke ? 'yes' : 'no'}</span></Fragment>
+          </div>
+        </div>
+      )}
+    </Fragment>
+  </EntityDetail>
 </Base>

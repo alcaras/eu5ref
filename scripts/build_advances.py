@@ -83,6 +83,10 @@ def main():
     # Parent = the first prerequisite in the same age (the files build each
     # age as a forest of chains; cross-age prereqs start a new local root).
     parent: dict[str, str | None] = {}
+    # `in_tree_of = x` puts an advance in x's tree without making it x's
+    # child — it is drawn there but needs no prerequisite. 33 advances use
+    # it; without this they look like roots of their own.
+    tree_of: dict[str, str | None] = {}
     for name, r in recs.items():
         p = None
         for req in r['requires']:
@@ -91,8 +95,14 @@ def main():
                 p = rn
                 break
         parent[name] = p
+        t = getattr(r['obj'], 'in_tree_of', None)
+        tn = getattr(t, 'name', None) if t is not None else None
+        tree_of[name] = tn if (p is None and tn in recs) else None
 
     def root_of(n, seen=()):
+        host = tree_of.get(n)
+        if host and host not in seen:
+            return root_of(host, seen + (n,))
         p = parent.get(n)
         if p is None or p in seen:
             return n

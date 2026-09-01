@@ -16,7 +16,10 @@ const pretty = (v: string) => {
   const s = String(v);
   return s === s.toLowerCase() ? s.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : s;
 };
-const facetChips = Object.values(entity.facets || {}).filter(Boolean);
+// A facet may be multi-valued (requirement kinds), so flatten before chipping.
+const facetChips = Object.values(entity.facets || {})
+  .flatMap((v: any) => (Array.isArray(v) ? v : [v]))
+  .filter(Boolean);
 ---
 <div class="detail-grid">
   <div>

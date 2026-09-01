@@ -428,8 +428,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -3920,18 +3920,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -6853,7 +6859,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Aquileia"
     ],
@@ -6891,7 +6897,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/glorious-arms.png",
@@ -7136,8 +7142,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7210,8 +7216,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7484,8 +7490,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7558,8 +7564,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7638,8 +7644,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7712,8 +7718,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7786,8 +7792,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -7957,8 +7963,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -8031,8 +8037,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -8105,8 +8111,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -8179,8 +8185,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -8253,8 +8259,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -8744,7 +8750,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Argos"
     ],
@@ -8782,7 +8788,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/artillery-institution-advance.png",
@@ -14685,11 +14691,19 @@
     "branch_id": "advance:written_alphabet",
     "countries": [],
     "gate": [
-     "?",
-     "has reform"
+     "reform",
+     "banking_country"
     ],
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate_labels": [
+     "Banking Family"
+    ],
+    "gate_lits": [
+     [
+      "Banking Family",
+      "reform",
+      "banking_country"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:medieval_administration",
@@ -15042,7 +15056,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -15067,7 +15081,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/smooth-administration.png",
@@ -15086,7 +15100,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -15116,7 +15130,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": null,
@@ -21125,7 +21139,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:brewery_mill_advance",
+    "branch_id": "advance:industrialization_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -21155,7 +21169,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Brewery Mill",
+    "branch": "Industrialization",
     "scope": "national"
    },
    "icon": null,
@@ -21881,7 +21895,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Bulgaria"
     ],
@@ -21926,7 +21940,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/artillery-institution-advance.png",
@@ -27134,7 +27148,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Cephalonia"
     ],
@@ -27172,7 +27186,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -29845,8 +29859,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -32328,12 +32342,12 @@
      [
       "and",
       [
-       "?",
-       "any international organizations member of international organization type"
+       "iomem",
+       "sect"
       ],
       [
        "?",
-       "any international organizations member of international organization has policy"
+       "sect condition"
       ]
      ],
      [
@@ -32343,8 +32357,8 @@
        "custom tooltip text"
       ],
       [
-       "?",
-       "custom tooltip has variable"
+       "var",
+       "has_neo_confucianism"
       ]
      ],
      [
@@ -32354,7 +32368,9 @@
     ],
     "gate_labels": [
      "Confucian-Influenced",
-     "Sānjiào"
+     "Sānjiào",
+     "Sect",
+     "Has Neo Confucianism"
     ],
     "gate_lits": [
      [
@@ -32366,6 +32382,16 @@
       "Sānjiào",
       "rel",
       "sanjiao"
+     ],
+     [
+      "Sect",
+      "iomem",
+      "sect"
+     ],
+     [
+      "Has Neo Confucianism",
+      "var",
+      "has_neo_confucianism"
      ]
     ],
     "requires": [
@@ -32488,12 +32514,12 @@
      [
       "and",
       [
-       "?",
-       "any international organizations member of international organization type"
+       "iomem",
+       "sect"
       ],
       [
        "?",
-       "any international organizations member of international organization has policy"
+       "sect condition"
       ]
      ],
      [
@@ -32503,8 +32529,8 @@
        "custom tooltip text"
       ],
       [
-       "?",
-       "custom tooltip has variable"
+       "var",
+       "has_neo_confucianism"
       ]
      ],
      [
@@ -32514,7 +32540,9 @@
     ],
     "gate_labels": [
      "Confucian-Influenced",
-     "Sānjiào"
+     "Sānjiào",
+     "Sect",
+     "Has Neo Confucianism"
     ],
     "gate_lits": [
      [
@@ -32526,6 +32554,16 @@
       "Sānjiào",
       "rel",
       "sanjiao"
+     ],
+     [
+      "Sect",
+      "iomem",
+      "sect"
+     ],
+     [
+      "Has Neo Confucianism",
+      "var",
+      "has_neo_confucianism"
      ]
     ],
     "requires": [
@@ -32932,7 +32970,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:conscription_advance",
+    "branch_id": "advance:levee_en_masse_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -32962,7 +33000,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Conscripts",
+    "branch": "Levée en Masse",
     "scope": "national"
    },
    "icon": null,
@@ -33120,8 +33158,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -33198,7 +33236,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -33233,7 +33271,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": null,
@@ -38119,18 +38157,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -38566,7 +38610,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Candia"
     ],
@@ -38604,7 +38648,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/artillery-institution-advance.png",
@@ -38937,8 +38981,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -44887,7 +44931,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:distiller_mill_advance",
+    "branch_id": "advance:industrialization_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44917,7 +44961,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Distiller Mill",
+    "branch": "Industrialization",
     "scope": "national"
    },
    "icon": null,
@@ -47245,7 +47289,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_carrack_advance",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -47291,7 +47335,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Carrack",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -48849,7 +48893,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": [
      "or",
@@ -48898,7 +48942,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/defensive-mentality.png",
@@ -54025,7 +54069,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:textile_mill_advance",
+    "branch_id": "advance:industrialization_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -54060,7 +54104,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Textile Mill",
+    "branch": "Industrialization",
     "scope": "general"
    },
    "icon": null,
@@ -56404,7 +56448,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -56429,7 +56473,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "general"
    },
    "icon": "img/advance/defensive-mentality.png",
@@ -56720,8 +56764,8 @@
       ]
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "shield_of_the_faith_reform"
      ]
     ],
     "gate_labels": [
@@ -56729,7 +56773,8 @@
      "French",
      "Magyar",
      "British",
-     "Iberian"
+     "Iberian",
+     "Shield of the Faith"
     ],
     "gate_lits": [
      [
@@ -56756,6 +56801,11 @@
       "Iberian",
       "cgrp",
       "iberian_group"
+     ],
+     [
+      "Shield of the Faith",
+      "reform",
+      "shield_of_the_faith_reform"
      ]
     ],
     "requires": [
@@ -56800,7 +56850,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": [
      "or",
@@ -56849,7 +56899,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/hun-castle-warriors.png",
@@ -63494,7 +63544,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -63519,7 +63569,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/government-size.png",
@@ -67660,7 +67710,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [
      "Sweden",
      "Finland"
@@ -67722,7 +67772,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -68520,18 +68570,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -69722,7 +69778,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -69747,7 +69803,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/cultural-ties-culture.png",
@@ -74325,7 +74381,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_galleon_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -74371,7 +74427,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Galleon",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -74611,7 +74667,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Īlkhānān"
     ],
@@ -74649,7 +74705,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/ira-spread-of-persian-influence.png",
@@ -81226,7 +81282,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:italian_galleass",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -81267,7 +81323,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Italian Galleass",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -89364,7 +89420,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [
      "Poland",
      "Commonwealth"
@@ -89426,7 +89482,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -89670,7 +89726,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -89705,7 +89761,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": null,
@@ -91787,7 +91843,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -91812,7 +91868,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/local-nobility.png",
@@ -95589,7 +95645,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": [
      "or",
@@ -95638,7 +95694,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/defensive-mentality.png",
@@ -99414,8 +99470,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -100094,7 +100150,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -100129,7 +100185,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": null,
@@ -102289,7 +102345,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:militiamen_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -102319,7 +102375,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Militiamen",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -103993,7 +104049,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Morea"
     ],
@@ -104031,7 +104087,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/hun-castle-warriors.png",
@@ -110245,7 +110301,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -110270,7 +110326,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -111227,8 +111283,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -116238,11 +116294,19 @@
     "branch_id": "advance:agriculture_advance",
     "countries": [],
     "gate": [
-     "?",
-     "has reform"
+     "reform",
+     "military_order_reform"
     ],
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate_labels": [
+     "Military Order"
+    ],
+    "gate_lits": [
+     [
+      "Military Order",
+      "reform",
+      "military_order_reform"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:castle_advance",
@@ -119460,7 +119524,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Rhine"
     ],
@@ -119498,7 +119562,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/late-feudal-relations.png",
@@ -122968,18 +123032,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -123359,7 +123429,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Piedmont"
     ],
@@ -123397,7 +123467,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/pie-citadel-system.png",
@@ -126693,7 +126763,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:porcelain_manufactor_advance",
+    "branch_id": "advance:manufactories_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -126723,7 +126793,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Porcelain Manufactory",
+    "branch": "Manufactories",
     "scope": "national"
    },
    "icon": null,
@@ -134014,7 +134084,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -134062,7 +134132,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -140228,7 +140298,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -140253,7 +140323,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/efficient-mining.png",
@@ -141417,7 +141487,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [
      "Saluzzo"
     ],
@@ -141455,7 +141525,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/alpine-defensiveness.png",
@@ -145439,7 +145509,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:militiamen_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [
      "Scotland"
     ],
@@ -145500,7 +145570,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Militiamen",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -146639,18 +146709,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -147806,12 +147882,12 @@
      [
       "or",
       [
-       "?",
-       "country type"
+       "ctype",
+       "location"
       ],
       [
-       "?",
-       "country type"
+       "ctype",
+       "army"
       ]
      ],
      [
@@ -151320,7 +151396,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Sokoto"
     ],
@@ -151368,7 +151444,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/independence-from-mali.png",
@@ -155769,18 +155845,24 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "gate_labels": [
-     "Ottomans"
+     "Ottomans",
+     "Anatolian Beylik"
     ],
     "gate_lits": [
      [
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ]
     ],
     "requires": [
@@ -163034,7 +163116,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:textile_mill_advance",
+    "branch_id": "advance:industrialization_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -163064,7 +163146,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Textile Mill",
+    "branch": "Industrialization",
     "scope": "national"
    },
    "icon": null,
@@ -165844,15 +165926,8 @@
       ]
      ],
      [
-      "or",
-      [
-       "?",
-       "any international organizations member of international organization has policy"
-      ],
-      [
-       "?",
-       "any international organizations member of international organization has policy"
-      ]
+      "?",
+      "any international organizations member of"
      ]
     ],
     "gate_labels": [
@@ -168835,7 +168910,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_through_owned_disc_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -168855,7 +168930,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Trails",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/colonies.png",
@@ -171643,7 +171718,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": [
      "or",
@@ -171692,7 +171767,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/tuscan-physiocratic-reforms.png",
@@ -172299,8 +172374,8 @@
       "TUR"
      ],
      [
-      "?",
-      "has reform"
+      "reform",
+      "anatolian_beylik"
      ],
      [
       "cul",
@@ -172321,6 +172396,7 @@
     ],
     "gate_labels": [
      "Ottomans",
+     "Anatolian Beylik",
      "Turkish",
      "Turkoman",
      "Turkic"
@@ -172330,6 +172406,11 @@
       "Ottomans",
       "tag",
       "TUR"
+     ],
+     [
+      "Anatolian Beylik",
+      "reform",
+      "anatolian_beylik"
      ],
      [
       "Turkish",
@@ -173222,7 +173303,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_archipelago_frigate",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": [
      "or",
@@ -173300,7 +173381,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Archipelago Frigate",
+    "branch": "Enlightenment",
     "scope": "national"
    },
    "icon": null,
@@ -173409,7 +173490,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_atakebune",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -173450,7 +173531,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Atakebune",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -173462,7 +173543,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_baggage_train",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -173492,7 +173573,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Baggage Train",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": null,
@@ -173504,7 +173585,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_baochuan",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -173545,7 +173626,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Bǎochuán",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -173604,7 +173685,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_heavy_frigate_advance",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -173639,7 +173720,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Heavy Frigate",
+    "branch": "Enlightenment",
     "scope": "general"
    },
    "icon": null,
@@ -173651,7 +173732,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_brig_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -173681,7 +173762,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Brig",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -174018,7 +174099,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_cakradonya",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "or",
@@ -174072,7 +174153,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Cakradonya",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -174131,7 +174212,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_carrack_advance",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -174161,7 +174242,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Carrack",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -174781,7 +174862,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_eastindiaman_advance",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -174811,7 +174892,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "East-Indiaman",
+    "branch": "Enlightenment",
     "scope": "national"
    },
    "icon": null,
@@ -174917,7 +174998,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_flintlock_levy",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -174947,7 +175028,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Flintlock Levy",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": null,
@@ -174959,7 +175040,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_flute_advance",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -174989,7 +175070,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Flute",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -175113,7 +175194,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_frigate_advance",
+    "branch_id": "advance:scientific_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -175143,7 +175224,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Frigate",
+    "branch": "Scientific Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -175202,7 +175283,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_galiot",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "or",
@@ -175324,7 +175405,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Galiot",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -175336,7 +175417,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_galleass_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "not",
@@ -175372,7 +175453,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Galleass",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -175384,7 +175465,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_galleon_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -175414,7 +175495,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Galleon",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -175426,7 +175507,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -175461,7 +175542,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "general"
    },
    "icon": null,
@@ -175711,7 +175792,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_heavy_frigate_advance",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -175741,7 +175822,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Heavy Frigate",
+    "branch": "Enlightenment",
     "scope": "national"
    },
    "icon": null,
@@ -175988,7 +176069,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -176023,7 +176104,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "general"
    },
    "icon": null,
@@ -177123,7 +177204,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_matchlock_levy",
+    "branch_id": "advance:pike_and_shot_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177153,7 +177234,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Matchlock Levy",
+    "branch": "Pike and Shot",
     "scope": "national"
    },
    "icon": null,
@@ -177224,7 +177305,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_merchantman_advance",
+    "branch_id": "advance:scientific_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177254,7 +177335,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Merchantman",
+    "branch": "Scientific Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -177407,7 +177488,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_pinnace_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177437,7 +177518,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Pinnace",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -177613,7 +177694,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_camp_advance",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177648,7 +177729,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental Camp",
+    "branch": "Military Revolution",
     "scope": "general"
    },
    "icon": null,
@@ -177660,7 +177741,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_sekibune",
+    "branch_id": "advance:new_world_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -177701,7 +177782,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Sekibune",
+    "branch": "New World",
     "scope": "national"
    },
    "icon": null,
@@ -177760,7 +177841,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_threedecker_advance",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177795,7 +177876,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Three-decker",
+    "branch": "Enlightenment",
     "scope": "general"
    },
    "icon": null,
@@ -177901,7 +177982,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_threedecker_advance",
+    "branch_id": "advance:enlightenment_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -177931,7 +178012,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Three-decker",
+    "branch": "Enlightenment",
     "scope": "national"
    },
    "icon": null,
@@ -177992,7 +178073,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_twodecker_advance",
+    "branch_id": "advance:scientific_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -178022,7 +178103,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Two-decker",
+    "branch": "Scientific Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -178334,7 +178415,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_wagon_train",
+    "branch_id": "advance:military_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -178364,7 +178445,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Wagon Train",
+    "branch": "Military Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -178376,7 +178457,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_galleon_advance",
+    "branch_id": "advance:global_trade_advance",
     "countries": [],
     "gate": [
      "cap",
@@ -178423,7 +178504,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Galleon",
+    "branch": "Global Trade",
     "scope": "national"
    },
    "icon": null,
@@ -178482,7 +178563,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:unlock_xebec_advance",
+    "branch_id": "advance:scientific_revolution_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -178512,7 +178593,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Xebec",
+    "branch": "Scientific Revolution",
     "scope": "national"
    },
    "icon": null,
@@ -180451,7 +180532,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bastion_advance",
+    "branch_id": "advance:artillery_institution_advance",
     "countries": [],
     "gate": [
      "and",
@@ -180469,8 +180550,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -180510,7 +180591,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bastion",
+    "branch": "Siege Artillery",
     "scope": "national"
    },
    "icon": "img/advance/city-building-advance.png",
@@ -180679,8 +180760,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -180763,8 +180844,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -180920,8 +181001,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -181004,8 +181085,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
@@ -181163,8 +181244,8 @@
      [
       "not",
       [
-       "?",
-       "has reform"
+       "reform",
+       "partitio_reform"
       ]
      ]
     ],
