@@ -193,6 +193,8 @@ h1, h2, h3 {
 }
 .hdr-search__results a:hover { background: var(--bg-elev-2); text-decoration: none; }
 .hdr-search__results small { color: var(--text-faint); }
+.hdr-search__results a[data-kind="page"] span { color: var(--gold-soft); }
+.hdr-search__results a[data-kind="page"] small { color: var(--gold-deep); }
 
 /* Entity picker — the header search widget reused inline on the planner
    pages. It must establish its own positioning context, or the absolutely

@@ -5,6 +5,7 @@ Runs AFTER the dataset build scripts: it reads src/data/*.json (any file
 with an `entities` list), so new datasets join the registry automatically.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -67,13 +68,28 @@ def main():
     print(f'  {out.relative_to(ROOT)}: {len(registry)} entities, {len(aliases)} aliases')
 
     # Compact search index for the header search (lazy-fetched client-side).
+    # The site's own section pages go in first: searching "urban rights"
+    # should offer the Urban Rights page before the game concept of the same
+    # name, and pages were not searchable at all before. Read from tabs.ts,
+    # which is the single source of truth for which pages exist.
+    tabs = (ROOT / 'src' / 'data' / 'tabs.ts').read_text(encoding='utf-8')
+    pages = []
+    for block in re.findall(r'\{([^{}]*?)\}', tabs, re.S):
+        slug = re.search(r"slug:\s*'([^']+)'", block)
+        label = re.search(r"label:\s*'([^']+)'", block)
+        status = re.search(r"status:\s*'([^']+)'", block)
+        if slug and label and status and status.group(1) == 'built':
+            pages.append([label.group(1), slug.group(1), 'page'])
+    pages.sort(key=lambda r: r[0].lower())
+
     search = [[e['name'], e['page'], e['type']]
               for e in registry.values() if e['page']]
     search.sort(key=lambda r: r[0].lower())
+    search = pages + search
     sout = ROOT / 'public' / 'search.json'
     sout.parent.mkdir(parents=True, exist_ok=True)
     sout.write_text(json.dumps(search, ensure_ascii=False) + '\n', encoding='utf-8')
-    print(f'  public/search.json: {len(search)} searchable entities')
+    print(f'  public/search.json: {len(search)} searchable ({len(pages)} pages)')
     return 0
 
 

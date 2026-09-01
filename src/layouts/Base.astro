@@ -153,7 +153,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
           }
           const hits = starts.concat(contains).slice(0, 12);
           results.innerHTML = hits.map((r) =>
-            `<a href="${baseUrl}${r[1]}"><span>${r[0]}</span><small>${r[2]}</small></a>`).join('');
+            `<a href="${baseUrl}${r[1]}" data-kind="${r[2]}"><span>${r[0]}</span><small>${r[2]}</small></a>`).join('');
           results.hidden = hits.length === 0;
         }
         input.addEventListener('focus', () => { load().then(render); });
