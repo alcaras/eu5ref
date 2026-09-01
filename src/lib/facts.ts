@@ -58,20 +58,21 @@ const ageNum = (key: string | undefined) => {
 /** Three-valued gate evaluation. `formables` is tag → gate (null = anyone
  *  with the land can form it) — a formable's tag is reachable, so a gate on
  *  it is conditional rather than false. */
-export function evalGate(e: Gate, f: Facts, formables: Record<string, any> = {}): boolean | null {
+export function evalGate(e: Gate, f: Facts, formables: Record<string, any> = {},
+                         forming: string[] = []): boolean | null {
   if (!e) return true;
   const h = e[0];
   if (h === 'and') {
     let unk = false;
-    for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === false) return false; if (v === null) unk = true; }
+    for (const s of e.slice(1)) { const v = evalGate(s, f, formables, forming); if (v === false) return false; if (v === null) unk = true; }
     return unk ? null : true;
   }
   if (h === 'or') {
     let unk = false;
-    for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === true) return true; if (v === null) unk = true; }
+    for (const s of e.slice(1)) { const v = evalGate(s, f, formables, forming); if (v === true) return true; if (v === null) unk = true; }
     return unk ? null : false;
   }
-  if (h === 'not') { const v = evalGate(e[1], f, formables); return v === null ? null : !v; }
+  if (h === 'not') { const v = evalGate(e[1], f, formables, forming); return v === null ? null : !v; }
   if (h === 'true') return true;
   if (h === 'false') return false;
   if (h === 'tag') {
@@ -81,7 +82,10 @@ export function evalGate(e: Gate, f: Facts, formables: Record<string, any> = {})
     if (!f.tag) return null;
     if (f.tag === e[1]) return true;
     if (!(e[1] in formables)) return false;
-    const v = evalGate(formables[e[1]], f, formables);
+    // A formation gate that names its own tag (or one up the chain) is
+    // asking "are you already it" of the country about to form — no.
+    if (forming.includes(e[1])) return false;
+    const v = evalGate(formables[e[1]], f, formables, [...forming, e[1]]);
     return v === false ? false : null;
   }
   if (h === 'cap') { const c = f.cap; if (!c || c[e[1]] == null) return null; return c[e[1]] === e[2]; }
