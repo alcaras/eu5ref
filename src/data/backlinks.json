@@ -7448,7 +7448,7 @@
   {
    "id": "town-right:granary_town",
    "name": "Granary Town",
-   "page": null
+   "page": "urban-rights/granary-town"
   },
   {
    "id": "concept:local_food",
@@ -8992,7 +8992,7 @@
   {
    "id": "town-right:studium_privileges",
    "name": "Studium Privileges",
-   "page": null
+   "page": "urban-rights/studium-privileges"
   },
   {
    "id": "societal-value:traditionalist_vs_innovative",
@@ -9575,7 +9575,7 @@
   {
    "id": "town-right:studium_privileges",
    "name": "Studium Privileges",
-   "page": null
+   "page": "urban-rights/studium-privileges"
   }
  ],
  "concept:liturgical_language": [
@@ -9683,7 +9683,7 @@
   {
    "id": "town-right:royal_artisan_rights",
    "name": "Artisan Rights",
-   "page": null
+   "page": "urban-rights/royal-artisan-rights"
   },
   {
    "id": "concept:attrition",
@@ -9703,7 +9703,7 @@
   {
    "id": "town-right:scandinavian_bergslag_privileges",
    "name": "Bergslagsprivilegier",
-   "page": null
+   "page": "urban-rights/scandinavian-bergslag-privileges"
   },
   {
    "id": "concept:blockade_capacity",
@@ -9733,7 +9733,7 @@
   {
    "id": "town-right:agrarian_community_town_right",
    "name": "Charter of Religious Freedom",
-   "page": null
+   "page": "urban-rights/agrarian-community-town-right"
   },
   {
    "id": "concept:civil_construction",
@@ -9778,7 +9778,7 @@
   {
    "id": "town-right:enlightened_leadership_reform_town_right",
    "name": "Commoner Council Rights",
-   "page": null
+   "page": "urban-rights/enlightened-leadership-reform-town-right"
   },
   {
    "id": "concept:conquer",
@@ -9948,7 +9948,7 @@
   {
    "id": "town-right:scandinavian_fishing_privileges",
    "name": "Fiskeriprivilegier",
-   "page": null
+   "page": "urban-rights/scandinavian-fishing-privileges"
   },
   {
    "id": "concept:fow",
@@ -10008,12 +10008,12 @@
   {
    "id": "town-right:fortress_town",
    "name": "Fortress Town",
-   "page": null
+   "page": "urban-rights/fortress-town"
   },
   {
    "id": "town-right:free_town_charter",
    "name": "Free Town Charter",
-   "page": null
+   "page": "urban-rights/free-town-charter"
   },
   {
    "id": "concept:frontage",
@@ -10053,7 +10053,7 @@
   {
    "id": "town-right:granary_town",
    "name": "Granary Town",
-   "page": null
+   "page": "urban-rights/granary-town"
   },
   {
    "id": "concept:great_power",
@@ -10113,7 +10113,7 @@
   {
    "id": "town-right:imperial_breadbasket_rights",
    "name": "Imperial Breadbasket",
-   "page": null
+   "page": "urban-rights/imperial-breadbasket-rights"
   },
   {
    "id": "concept:inland",
@@ -10148,7 +10148,7 @@
   {
    "id": "town-right:royal_jewelry_rights",
    "name": "Jewelry Rights",
-   "page": null
+   "page": "urban-rights/royal-jewelry-rights"
   },
   {
    "id": "concept:land_ownership_rule",
@@ -10208,7 +10208,7 @@
   {
    "id": "town-right:market_charter",
    "name": "Market Charter",
-   "page": null
+   "page": "urban-rights/market-charter"
   },
   {
    "id": "concept:protectionism",
@@ -10218,7 +10218,7 @@
   {
    "id": "town-right:royal_masonry_rights",
    "name": "Masonry Rights",
-   "page": null
+   "page": "urban-rights/royal-masonry-rights"
   },
   {
    "id": "concept:max_control",
@@ -10238,7 +10238,7 @@
   {
    "id": "town-right:mining_charter",
    "name": "Mining Charter",
-   "page": null
+   "page": "urban-rights/mining-charter"
   },
   {
    "id": "concept:minor_revolt",
@@ -10268,7 +10268,7 @@
   {
    "id": "town-right:municipia_privilegia",
    "name": "Municipia Privileges",
-   "page": null
+   "page": "urban-rights/municipia-privilegia"
   },
   {
    "id": "concept:natural_harbor_suitability",
@@ -10283,7 +10283,7 @@
   {
    "id": "town-right:royal_naval_rights",
    "name": "Naval Supplies Rights",
-   "page": null
+   "page": "urban-rights/royal-naval-rights"
   },
   {
    "id": "concept:navy_based",
@@ -10383,7 +10383,7 @@
   {
    "id": "town-right:royal_book_rights",
    "name": "Printing Rights",
-   "page": null
+   "page": "urban-rights/royal-book-rights"
   },
   {
    "id": "concept:profit",
@@ -10468,7 +10468,7 @@
   {
    "id": "town-right:scholai_literacy_rights",
    "name": "Scholai Privileges",
-   "page": null
+   "page": "urban-rights/scholai-literacy-rights"
   },
   {
    "id": "concept:seazone",
@@ -10523,12 +10523,12 @@
   {
    "id": "town-right:royal_brewing_rights",
    "name": "Spirituous Rights",
-   "page": null
+   "page": "urban-rights/royal-brewing-rights"
   },
   {
    "id": "town-right:staple_port",
    "name": "Staple Port",
-   "page": null
+   "page": "urban-rights/staple-port"
   },
   {
    "id": "concept:strait",
@@ -10538,7 +10538,7 @@
   {
    "id": "town-right:studium_privileges",
    "name": "Studium Privileges",
-   "page": null
+   "page": "urban-rights/studium-privileges"
   },
   {
    "id": "concept:subsistence_agriculture",
@@ -10638,7 +10638,7 @@
   {
    "id": "town-right:royal_textile_rights",
    "name": "Textile Rights",
-   "page": null
+   "page": "urban-rights/royal-textile-rights"
   },
   {
    "id": "event:rise_of_the_ottomans.209",
@@ -10653,7 +10653,7 @@
   {
    "id": "town-right:scandinavian_thing_rights",
    "name": "Tingsrätt",
-   "page": null
+   "page": "urban-rights/scandinavian-thing-rights"
   },
   {
    "id": "advance:scandinavian_tar_privileges_advance",
@@ -10663,12 +10663,12 @@
   {
    "id": "town-right:scandinavian_tar_privileges",
    "name": "Tjärprivilegier",
-   "page": null
+   "page": "urban-rights/scandinavian-tar-privileges"
   },
   {
    "id": "town-right:royal_tooling_rights",
    "name": "Tooling Rights",
-   "page": null
+   "page": "urban-rights/royal-tooling-rights"
   },
   {
    "id": "concept:topography",
@@ -10733,7 +10733,7 @@
   {
    "id": "town-right:royal_weaponry_rights",
    "name": "Weaponry Rights",
-   "page": null
+   "page": "urban-rights/royal-weaponry-rights"
   },
   {
    "id": "concept:weather_system",
@@ -10867,7 +10867,7 @@
   {
    "id": "town-right:fortress_town",
    "name": "Fortress Town",
-   "page": null
+   "page": "urban-rights/fortress-town"
   },
   {
    "id": "law:military_contribution",
@@ -17786,7 +17786,7 @@
   {
    "id": "town-right:staple_port",
    "name": "Staple Port",
-   "page": null
+   "page": "urban-rights/staple-port"
   },
   {
    "id": "concept:merchant_capacity",

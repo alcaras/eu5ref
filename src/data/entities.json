@@ -168406,7 +168406,7 @@
    "color": "#662929",
    "icon": "img/town-right/agrarian-community-town-right.png",
    "name": "Charter of Religious Freedom",
-   "page": null,
+   "page": "urban-rights/agrarian-community-town-right",
    "slug": "agrarian-community-town-right",
    "type": "town-right"
   },
@@ -168414,7 +168414,7 @@
    "color": "#a18b28",
    "icon": "img/town-right/bohemian-royal-cities-town-rights.png",
    "name": "Royal City Rights",
-   "page": null,
+   "page": "urban-rights/bohemian-royal-cities-town-rights",
    "slug": "bohemian-royal-cities-town-rights",
    "type": "town-right"
   },
@@ -168422,7 +168422,7 @@
    "color": "#ab5454",
    "icon": "img/town-right/borgo-franco-town-rights.png",
    "name": "Borgo Franco Rights",
-   "page": null,
+   "page": "urban-rights/borgo-franco-town-rights",
    "slug": "borgo-franco-town-rights",
    "type": "town-right"
   },
@@ -168430,7 +168430,7 @@
    "color": "#c70c0c",
    "icon": "img/town-right/borough-customals.png",
    "name": "Borough Custumals",
-   "page": null,
+   "page": "urban-rights/borough-customals",
    "slug": "borough-customals",
    "type": "town-right"
   },
@@ -168438,7 +168438,7 @@
    "color": "#b81a1a",
    "icon": "img/town-right/constantinopolitan-silk-monopoly-rights.png",
    "name": "Silk Monopoly of Constantinople",
-   "page": null,
+   "page": "urban-rights/constantinopolitan-silk-monopoly-rights",
    "slug": "constantinopolitan-silk-monopoly-rights",
    "type": "town-right"
   },
@@ -168446,7 +168446,7 @@
    "color": "#48c2d4",
    "icon": "img/town-right/enlightened-leadership-reform-town-right.png",
    "name": "Commoner Council Rights",
-   "page": null,
+   "page": "urban-rights/enlightened-leadership-reform-town-right",
    "slug": "enlightened-leadership-reform-town-right",
    "type": "town-right"
   },
@@ -168454,7 +168454,7 @@
    "color": "#fa5405",
    "icon": "img/town-right/flemish-cloth-industries-right.png",
    "name": "Flemish Cloth Industry",
-   "page": null,
+   "page": "urban-rights/flemish-cloth-industries-right",
    "slug": "flemish-cloth-industries-right",
    "type": "town-right"
   },
@@ -168462,7 +168462,7 @@
    "color": "#286e8c",
    "icon": "img/town-right/foros-extensos-town-rights.png",
    "name": "Foros Extensos",
-   "page": null,
+   "page": "urban-rights/foros-extensos-town-rights",
    "slug": "foros-extensos-town-rights",
    "type": "town-right"
   },
@@ -168470,7 +168470,7 @@
    "color": "#8c4d4d",
    "icon": "img/town-right/fortress-town.png",
    "name": "Fortress Town",
-   "page": null,
+   "page": "urban-rights/fortress-town",
    "slug": "fortress-town",
    "type": "town-right"
   },
@@ -168478,7 +168478,7 @@
    "color": "#e65c5c",
    "icon": "img/town-right/free-town-charter.png",
    "name": "Free Town Charter",
-   "page": null,
+   "page": "urban-rights/free-town-charter",
    "slug": "free-town-charter",
    "type": "town-right"
   },
@@ -168486,7 +168486,7 @@
    "color": "#a64448",
    "icon": "img/town-right/fuero-de-aragon-town-rights.png",
    "name": "Fueros de Aragón",
-   "page": null,
+   "page": "urban-rights/fuero-de-aragon-town-rights",
    "slug": "fuero-de-aragon-town-rights",
    "type": "town-right"
   },
@@ -168494,7 +168494,7 @@
    "color": "#940000",
    "icon": "img/town-right/fuero-general-town-rights.png",
    "name": "Fuero General",
-   "page": null,
+   "page": "urban-rights/fuero-general-town-rights",
    "slug": "fuero-general-town-rights",
    "type": "town-right"
   },
@@ -168502,7 +168502,7 @@
    "color": "#630e57",
    "icon": "img/town-right/fuero-juzgo-town-rights.png",
    "name": "Fuero Juzgo",
-   "page": null,
+   "page": "urban-rights/fuero-juzgo-town-rights",
    "slug": "fuero-juzgo-town-rights",
    "type": "town-right"
   },
@@ -168510,7 +168510,7 @@
    "color": "#eb0e0e",
    "icon": "img/town-right/fuero-real-town-rights.png",
    "name": "Fuero Real",
-   "page": null,
+   "page": "urban-rights/fuero-real-town-rights",
    "slug": "fuero-real-town-rights",
    "type": "town-right"
   },
@@ -168518,14 +168518,14 @@
    "color": "#db4342",
    "icon": "img/town-right/furs-de-valencia-town-rights.png",
    "name": "Furs de Valencia",
-   "page": null,
+   "page": "urban-rights/furs-de-valencia-town-rights",
    "slug": "furs-de-valencia-town-rights",
    "type": "town-right"
   },
   "town-right:granary_town": {
    "color": "#d41413",
    "name": "Granary Town",
-   "page": null,
+   "page": "urban-rights/granary-town",
    "slug": "granary-town",
    "type": "town-right"
   },
@@ -168533,7 +168533,7 @@
    "color": "#382617",
    "icon": "img/town-right/imperial-breadbasket-rights.png",
    "name": "Imperial Breadbasket",
-   "page": null,
+   "page": "urban-rights/imperial-breadbasket-rights",
    "slug": "imperial-breadbasket-rights",
    "type": "town-right"
   },
@@ -168541,7 +168541,7 @@
    "color": "#4d100f",
    "icon": "img/town-right/kulm-town-rights.png",
    "name": "Kulm Rights",
-   "page": null,
+   "page": "urban-rights/kulm-town-rights",
    "slug": "kulm-town-rights",
    "type": "town-right"
   },
@@ -168549,7 +168549,7 @@
    "color": "#333333",
    "icon": "img/town-right/lower-bergregal.png",
    "name": "Lower Bergregal",
-   "page": null,
+   "page": "urban-rights/lower-bergregal",
    "slug": "lower-bergregal",
    "type": "town-right"
   },
@@ -168557,7 +168557,7 @@
    "color": "#9cb3bd",
    "icon": "img/town-right/lubeck-town-rights.png",
    "name": "Lübeck Rights",
-   "page": null,
+   "page": "urban-rights/lubeck-town-rights",
    "slug": "lubeck-town-rights",
    "type": "town-right"
   },
@@ -168565,7 +168565,7 @@
    "color": "#bd7363",
    "icon": "img/town-right/magdeburg-rights-town-rights.png",
    "name": "Magdeburg Rights",
-   "page": null,
+   "page": "urban-rights/magdeburg-rights-town-rights",
    "slug": "magdeburg-rights-town-rights",
    "type": "town-right"
   },
@@ -168573,7 +168573,7 @@
    "color": "#e64745",
    "icon": "img/town-right/manorial-customals.png",
    "name": "Manorial Custumals",
-   "page": null,
+   "page": "urban-rights/manorial-customals",
    "slug": "manorial-customals",
    "type": "town-right"
   },
@@ -168581,7 +168581,7 @@
    "color": "#cc7170",
    "icon": "img/town-right/market-charter.png",
    "name": "Market Charter",
-   "page": null,
+   "page": "urban-rights/market-charter",
    "slug": "market-charter",
    "type": "town-right"
   },
@@ -168589,7 +168589,7 @@
    "color": "#735150",
    "icon": "img/town-right/mining-charter.png",
    "name": "Mining Charter",
-   "page": null,
+   "page": "urban-rights/mining-charter",
    "slug": "mining-charter",
    "type": "town-right"
   },
@@ -168597,7 +168597,7 @@
    "color": "#f7e6f7",
    "icon": "img/town-right/municipia-privilegia.png",
    "name": "Municipia Privileges",
-   "page": null,
+   "page": "urban-rights/municipia-privilegia",
    "slug": "municipia-privilegia",
    "type": "town-right"
   },
@@ -168605,7 +168605,7 @@
    "color": "#75a5bc",
    "icon": "img/town-right/norwegian-city-rights.png",
    "name": "Kjøpstad Rights",
-   "page": null,
+   "page": "urban-rights/norwegian-city-rights",
    "slug": "norwegian-city-rights",
    "type": "town-right"
   },
@@ -168613,7 +168613,7 @@
    "color": "#c55c6a",
    "icon": "img/town-right/novi-fori-town-rights.png",
    "name": "Novi Fori Rights",
-   "page": null,
+   "page": "urban-rights/novi-fori-town-rights",
    "slug": "novi-fori-town-rights",
    "type": "town-right"
   },
@@ -168621,14 +168621,14 @@
    "color": "#f3700f",
    "icon": "img/town-right/nuremberg-rights-town-rights.png",
    "name": "Nuremberg Rights",
-   "page": null,
+   "page": "urban-rights/nuremberg-rights-town-rights",
    "slug": "nuremberg-rights-town-rights",
    "type": "town-right"
   },
   "town-right:royal_artisan_rights": {
    "color": "#a0c0c0",
    "name": "Artisan Rights",
-   "page": null,
+   "page": "urban-rights/royal-artisan-rights",
    "slug": "royal-artisan-rights",
    "type": "town-right"
   },
@@ -168636,21 +168636,21 @@
    "color": "#e6dbb5",
    "icon": "img/town-right/royal-book-rights.png",
    "name": "Printing Rights",
-   "page": null,
+   "page": "urban-rights/royal-book-rights",
    "slug": "royal-book-rights",
    "type": "town-right"
   },
   "town-right:royal_brewing_rights": {
    "color": "#330b0a",
    "name": "Spirituous Rights",
-   "page": null,
+   "page": "urban-rights/royal-brewing-rights",
    "slug": "royal-brewing-rights",
    "type": "town-right"
   },
   "town-right:royal_free_cities_town_rights": {
    "color": "#98555c",
    "name": "Royal Free City Rights",
-   "page": null,
+   "page": "urban-rights/royal-free-cities-town-rights",
    "slug": "royal-free-cities-town-rights",
    "type": "town-right"
   },
@@ -168658,28 +168658,28 @@
    "color": "#ff0d0d",
    "icon": "img/town-right/royal-jewelry-rights.png",
    "name": "Jewelry Rights",
-   "page": null,
+   "page": "urban-rights/royal-jewelry-rights",
    "slug": "royal-jewelry-rights",
    "type": "town-right"
   },
   "town-right:royal_masonry_rights": {
    "color": "#401313",
    "name": "Masonry Rights",
-   "page": null,
+   "page": "urban-rights/royal-masonry-rights",
    "slug": "royal-masonry-rights",
    "type": "town-right"
   },
   "town-right:royal_naval_rights": {
    "color": "#1c2b66",
    "name": "Naval Supplies Rights",
-   "page": null,
+   "page": "urban-rights/royal-naval-rights",
    "slug": "royal-naval-rights",
    "type": "town-right"
   },
   "town-right:royal_textile_rights": {
    "color": "#b7a99b",
    "name": "Textile Rights",
-   "page": null,
+   "page": "urban-rights/royal-textile-rights",
    "slug": "royal-textile-rights",
    "type": "town-right"
   },
@@ -168687,7 +168687,7 @@
    "color": "#140e0e",
    "icon": "img/town-right/royal-tooling-rights.png",
    "name": "Tooling Rights",
-   "page": null,
+   "page": "urban-rights/royal-tooling-rights",
    "slug": "royal-tooling-rights",
    "type": "town-right"
   },
@@ -168695,7 +168695,7 @@
    "color": "#caccce",
    "icon": "img/town-right/royal-weaponry-rights.png",
    "name": "Weaponry Rights",
-   "page": null,
+   "page": "urban-rights/royal-weaponry-rights",
    "slug": "royal-weaponry-rights",
    "type": "town-right"
   },
@@ -168703,7 +168703,7 @@
    "color": "#d95757",
    "icon": "img/town-right/scandinavian-bergslag-privileges.png",
    "name": "Bergslagsprivilegier",
-   "page": null,
+   "page": "urban-rights/scandinavian-bergslag-privileges",
    "slug": "scandinavian-bergslag-privileges",
    "type": "town-right"
   },
@@ -168711,7 +168711,7 @@
    "color": "#ffffff",
    "icon": "img/town-right/scandinavian-fishing-privileges.png",
    "name": "Fiskeriprivilegier",
-   "page": null,
+   "page": "urban-rights/scandinavian-fishing-privileges",
    "slug": "scandinavian-fishing-privileges",
    "type": "town-right"
   },
@@ -168719,7 +168719,7 @@
    "color": "#737817",
    "icon": "img/town-right/scandinavian-tar-privileges.png",
    "name": "Tjärprivilegier",
-   "page": null,
+   "page": "urban-rights/scandinavian-tar-privileges",
    "slug": "scandinavian-tar-privileges",
    "type": "town-right"
   },
@@ -168727,7 +168727,7 @@
    "color": "#ffbf00",
    "icon": "img/town-right/scandinavian-thing-rights.png",
    "name": "Tingsrätt",
-   "page": null,
+   "page": "urban-rights/scandinavian-thing-rights",
    "slug": "scandinavian-thing-rights",
    "type": "town-right"
   },
@@ -168735,7 +168735,7 @@
    "color": "#bf1a19",
    "icon": "img/town-right/scholai-literacy-rights.png",
    "name": "Scholai Privileges",
-   "page": null,
+   "page": "urban-rights/scholai-literacy-rights",
    "slug": "scholai-literacy-rights",
    "type": "town-right"
   },
@@ -168743,14 +168743,14 @@
    "color": "#e62d2c",
    "icon": "img/town-right/stapelrecht-town-rights.png",
    "name": "Free Imperial City Staple Rights",
-   "page": null,
+   "page": "urban-rights/stapelrecht-town-rights",
    "slug": "stapelrecht-town-rights",
    "type": "town-right"
   },
   "town-right:staple_port": {
    "color": "#871413",
    "name": "Staple Port",
-   "page": null,
+   "page": "urban-rights/staple-port",
    "slug": "staple-port",
    "type": "town-right"
   },
@@ -168758,7 +168758,7 @@
    "color": "#e06565",
    "icon": "img/town-right/studium-privileges.png",
    "name": "Studium Privileges",
-   "page": null,
+   "page": "urban-rights/studium-privileges",
    "slug": "studium-privileges",
    "type": "town-right"
   },
@@ -168766,7 +168766,7 @@
    "color": "#a60200",
    "icon": "img/town-right/swedish-city-rights.png",
    "name": "Stadsrättigheter Rights",
-   "page": null,
+   "page": "urban-rights/swedish-city-rights",
    "slug": "swedish-city-rights",
    "type": "town-right"
   },
@@ -168774,7 +168774,7 @@
    "color": "#c0c0c0",
    "icon": "img/town-right/upper-bergregal.png",
    "name": "Upper Bergregal",
-   "page": null,
+   "page": "urban-rights/upper-bergregal",
    "slug": "upper-bergregal",
    "type": "town-right"
   },
@@ -168782,7 +168782,7 @@
    "color": "#be3c02",
    "icon": "img/town-right/usatges-de-barcelona-town-rights.png",
    "name": "Usatges de Barcelona",
-   "page": null,
+   "page": "urban-rights/usatges-de-barcelona-town-rights",
    "slug": "usatges-de-barcelona-town-rights",
    "type": "town-right"
   },
@@ -168790,7 +168790,7 @@
    "color": "#ad2423",
    "icon": "img/town-right/ville-franche-town-rights.png",
    "name": "Ville Franche Rights",
-   "page": null,
+   "page": "urban-rights/ville-franche-town-rights",
    "slug": "ville-franche-town-rights",
    "type": "town-right"
   },

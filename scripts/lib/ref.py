@@ -168,6 +168,10 @@ def _bracket_to_token(inner: str):
     if canonical:
         label = concepts[key].display_name if key in concepts else concepts[canonical].display_name
         return ['r', eid('concept', canonical), label]
+    # A bare icon reference (`[advance_icon]`) is decoration, not a word —
+    # concepts whose own name ends in _icon were already resolved above.
+    if key.endswith('_icon'):
+        return ['t', '']
     # Scope lookups like `GetCountry('BYZ').GetName` or
     # `GetCharacter('byz_andronikos_iii').GetNicknameWithNoTooltip` — render
     # the thing being named, not the call.

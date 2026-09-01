@@ -1,0 +1,88 @@
+---
+// Urban Rights — the game's own name for common/town_rights. A country
+// grants one to a town or city; it lands on that location, and sometimes on
+// the whole country too, which is why the two are shown apart.
+import Base from '../layouts/Base.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import Rich from '../components/Rich.astro';
+import data from '../data/town-rights.json';
+import ranks from '../data/location-ranks.json';
+import concepts from '../data/concepts.json';
+
+const base = import.meta.env.BASE_URL;
+const entities = data.entities;
+
+// Slots per settlement rank come from the ranks' own `rank_modifier`
+// (`local_possible_town_rights`), never a hand-typed number.
+const slots = ranks.entities
+  .map((r: any) => ({
+    name: r.name,
+    n: r.mods.find((m: any) => m.key === 'local_possible_town_rights')?.value,
+  }))
+  .filter((r: any) => r.n)
+  .sort((a: any, b: any) => parseFloat(a.n) - parseFloat(b.n));
+
+const concept = concepts.entities.find((c: any) => c.slug === 'town-rights'
+  || c.name === 'Urban Rights');
+
+const researched = entities.filter((e: any) => e.data.unlocked_by.length > 0).length;
+const specializing = entities.filter((e: any) => e.data.boosts.length > 0).length;
+
+const columns = [
+  { key: 'name', label: 'Urban Right', kind: 'name' },
+  { key: 'location_mods', label: 'Effects on the location', kind: 'mods' },
+  { key: 'country_mods', label: 'Effects on the country', kind: 'mods' },
+  { key: 'boosts', label: 'Boosts', kind: 'refs' },
+  { key: 'requires', label: 'Requires', kind: 'lines' },
+  { key: 'unlocked_by', label: 'Unlocked by', kind: 'chips' },
+] as const;
+---
+<Base
+  title="Urban Rights"
+  active="urban-rights"
+  pageMark="🏙️"
+  eyebrow="Economy"
+  pageStats={[
+    { label: 'urban rights', value: entities.length },
+    { label: 'unlocked by an advance', value: researched },
+    { label: 'specialize a good', value: specializing },
+  ]}
+  description="Every urban right (town right) in Europa Universalis V — what it does to the location, what it does to the country, and who may grant it."
+>
+  <div class="ur-intro">
+    {concept?.desc ? <p><Rich tokens={concept.desc} /></p> : (
+      <p>
+        A country grants an urban right to one of its towns or cities. Most of the
+        effect lands on that location; some also carry a country-wide modifier.
+      </p>
+    )}
+    <p class="ur-slots">
+      <span class="ur-slots__k">Slots</span>
+      {slots.map((s: any, i: number) => (
+        <span class="chip">{s.name} {parseFloat(s.n)}</span>
+      ))}
+      <span class="ur-slots__note">
+        from each rank's <code>local_possible_town_rights</code>; some
+        <a href={`${base}government`}>government reforms</a> raise them.
+      </span>
+    </p>
+  </div>
+
+  <div data-filter-scope>
+    <FilterBar facets={data.facets} placeholder="Filter urban rights…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="urban-rights"
+      csvName="eu5ref-urban-rights" />
+  </div>
+</Base>
+
+<style>
+  .ur-intro { margin-top: 18px; max-width: 80ch; }
+  .ur-intro p { color: var(--text-soft); font-size: 14px; line-height: 1.6; }
+  .ur-slots { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .ur-slots__k {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);
+  }
+  .ur-slots__note { font-size: 12.5px; color: var(--text-faint); }
+  .ur-slots__note code { color: var(--text-dim); }
+</style>

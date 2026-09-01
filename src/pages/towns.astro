@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import SectionTable from '../components/SectionTable.astro';
 import ranks from '../data/location-ranks.json';
 import rights from '../data/town-rights.json';
+
+const base = import.meta.env.BASE_URL;
 ---
 <Base title="Towns & Settlements" active="towns" pageMark="🏘️" eyebrow="Economy"
   pageStats={[
@@ -15,9 +17,12 @@ import rights from '../data/town-rights.json';
     { key: 'mods', label: 'Modifiers', kind: 'mods' },
     { key: 'desc', label: 'Description', kind: 'rich' },
   ]} placeholder="Filter ranks…" />
-  <SectionTable title="Town Rights" data={rights} columns={[
-    { key: 'name', label: 'Right', kind: 'name' },
-    { key: 'mods', label: 'Modifiers', kind: 'mods' },
-    { key: 'desc', label: 'Description', kind: 'rich' },
-  ]} placeholder="Filter town rights…" />
+  <p class="towns-note">
+    Urban rights — what a country may grant to a town or city — have their own
+    page: <a href={`${base}urban-rights`}>Urban Rights</a>.
+  </p>
 </Base>
+
+<style>
+  .towns-note { margin-top: 26px; font-size: 13px; color: var(--text-dim); }
+</style>

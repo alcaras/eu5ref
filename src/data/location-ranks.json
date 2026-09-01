@@ -25,6 +25,126 @@
      "label": "Fort Limit",
      "polarity": "good",
      "value": "+1.00"
+    },
+    {
+     "key": "local_burghers_desired_pop",
+     "label": "Possible Burghers",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "local_laborers_desired_pop",
+     "label": "Possible Laborers",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "local_soldiers_desired_pop",
+     "label": "Possible Soldiers",
+     "polarity": "good",
+     "value": "+0.25"
+    },
+    {
+     "key": "local_nobles_desired_pop",
+     "label": "Possible Nobles",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "local_clergy_desired_pop",
+     "label": "Possible Clerics",
+     "polarity": "good",
+     "value": "+0.1"
+    },
+    {
+     "key": "local_trade_center_power",
+     "label": "Market Attraction",
+     "polarity": "good",
+     "value": "+2.50%"
+    },
+    {
+     "key": "local_max_control",
+     "label": "Max Control",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "local_population_capacity",
+     "label": "Local Population Capacity",
+     "polarity": "good",
+     "value": "+100"
+    },
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "local_food_capacity",
+     "label": "Local Food Capacity",
+     "polarity": "good",
+     "value": "+500.00"
+    },
+    {
+     "key": "local_construction_speed",
+     "label": "Construction Speed",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "local_possible_town_rights",
+     "label": "Possible Urban Rights",
+     "polarity": "good",
+     "value": "+2"
+    },
+    {
+     "key": "local_integration_speed_modifier",
+     "label": "Speed of Integration",
+     "polarity": "bad",
+     "value": "−50.00%"
+    },
+    {
+     "key": "local_pop_promotion_speed_modifier",
+     "label": "Local Pop Promotion Speed %",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "free_building_levels",
+     "label": "Supported Building Levels",
+     "polarity": "good",
+     "value": "+100"
+    },
+    {
+     "key": "local_peasant_enfranchisment",
+     "label": "Peasant Enfranchisement",
+     "polarity": "good",
+     "value": "+25.00%"
+    },
+    {
+     "key": "max_constructions_at_same_time",
+     "label": "Constructions Capacity",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "movement_cost",
+     "label": "Movement Cost",
+     "polarity": "bad",
+     "value": "+20.00%"
+    },
+    {
+     "key": "local_frontage_allowed",
+     "label": "Possible Frontage",
+     "polarity": "bad",
+     "value": "−2.00"
+    },
+    {
+     "key": "local_mills_build_buildings_efficiency",
+     "label": "Local Mills Construction Efficiency",
+     "polarity": "good",
+     "value": "+20.00%"
     }
    ],
    "name": "City",
@@ -55,6 +175,138 @@
      "label": "Fort Limit",
      "polarity": "good",
      "value": "+2.00"
+    },
+    {
+     "key": "local_burghers_desired_pop",
+     "label": "Possible Burghers",
+     "polarity": "good",
+     "value": "+4"
+    },
+    {
+     "key": "local_laborers_desired_pop",
+     "label": "Possible Laborers",
+     "polarity": "good",
+     "value": "+4"
+    },
+    {
+     "key": "local_soldiers_desired_pop",
+     "label": "Possible Soldiers",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "local_nobles_desired_pop",
+     "label": "Possible Nobles",
+     "polarity": "good",
+     "value": "+0.2"
+    },
+    {
+     "key": "local_clergy_desired_pop",
+     "label": "Possible Clerics",
+     "polarity": "good",
+     "value": "+0.4"
+    },
+    {
+     "key": "local_max_control",
+     "label": "Max Control",
+     "polarity": "good",
+     "value": "+20.00%"
+    },
+    {
+     "key": "local_population_capacity",
+     "label": "Local Population Capacity",
+     "polarity": "good",
+     "value": "+400"
+    },
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "local_food_capacity",
+     "label": "Local Food Capacity",
+     "polarity": "good",
+     "value": "+1000.00"
+    },
+    {
+     "key": "local_construction_speed",
+     "label": "Construction Speed",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "local_trade_center_power",
+     "label": "Market Attraction",
+     "polarity": "good",
+     "value": "+5.00%"
+    },
+    {
+     "key": "local_possible_town_rights",
+     "label": "Possible Urban Rights",
+     "polarity": "good",
+     "value": "+3"
+    },
+    {
+     "key": "local_integration_speed_modifier",
+     "label": "Speed of Integration",
+     "polarity": "bad",
+     "value": "−100.00%"
+    },
+    {
+     "key": "local_monthly_food_modifier",
+     "label": "Local Food Production %",
+     "polarity": "bad",
+     "value": "−67.00%"
+    },
+    {
+     "key": "local_pop_promotion_speed_modifier",
+     "label": "Local Pop Promotion Speed %",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "free_building_levels",
+     "label": "Supported Building Levels",
+     "polarity": "good",
+     "value": "+200"
+    },
+    {
+     "key": "max_constructions_at_same_time",
+     "label": "Constructions Capacity",
+     "polarity": "good",
+     "value": "+2"
+    },
+    {
+     "key": "local_max_rgo_size_modifier",
+     "label": "Maximum RGO Size",
+     "polarity": "bad",
+     "value": "−50.00%"
+    },
+    {
+     "key": "local_peasant_enfranchisment",
+     "label": "Peasant Enfranchisement",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "movement_cost",
+     "label": "Movement Cost",
+     "polarity": "bad",
+     "value": "+40.00%"
+    },
+    {
+     "key": "local_frontage_allowed",
+     "label": "Possible Frontage",
+     "polarity": "bad",
+     "value": "−3.00"
+    },
+    {
+     "key": "local_mills_build_buildings_efficiency",
+     "label": "Local Mills Construction Efficiency",
+     "polarity": "good",
+     "value": "+33.00%"
     }
    ],
    "name": "Megalopolis",
@@ -79,6 +331,30 @@
      "label": "Monthly Doom",
      "polarity": "bad",
      "value": "+0.005"
+    },
+    {
+     "key": "local_max_rgo_size_modifier",
+     "label": "Maximum RGO Size",
+     "polarity": "good",
+     "value": "+100.00%"
+    },
+    {
+     "key": "local_monthly_food_modifier",
+     "label": "Local Food Production %",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "local_population_growth",
+     "label": "Population Growth",
+     "polarity": "good",
+     "value": "+0.10%"
+    },
+    {
+     "key": "local_peasant_enfranchisment",
+     "label": "Peasant Enfranchisement",
+     "polarity": "bad",
+     "value": "−20.00%"
     }
    ],
    "name": "Rural Settlement",
@@ -103,6 +379,96 @@
      "label": "Monthly Doom",
      "polarity": "bad",
      "value": "+0.01"
+    },
+    {
+     "key": "local_burghers_desired_pop",
+     "label": "Possible Burghers",
+     "polarity": "good",
+     "value": "+0.2"
+    },
+    {
+     "key": "local_laborers_desired_pop",
+     "label": "Possible Laborers",
+     "polarity": "good",
+     "value": "+0.2"
+    },
+    {
+     "key": "local_soldiers_desired_pop",
+     "label": "Possible Soldiers",
+     "polarity": "good",
+     "value": "+0.1"
+    },
+    {
+     "key": "local_nobles_desired_pop",
+     "label": "Possible Nobles",
+     "polarity": "good",
+     "value": "+0.025"
+    },
+    {
+     "key": "local_clergy_desired_pop",
+     "label": "Possible Clerics",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "local_max_control",
+     "label": "Max Control",
+     "polarity": "good",
+     "value": "+5.00%"
+    },
+    {
+     "key": "local_population_capacity",
+     "label": "Local Population Capacity",
+     "polarity": "good",
+     "value": "+20"
+    },
+    {
+     "key": "local_population_capacity_modifier",
+     "label": "Local Population Capacity %",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "local_food_capacity",
+     "label": "Local Food Capacity",
+     "polarity": "good",
+     "value": "+250.00"
+    },
+    {
+     "key": "local_integration_speed_modifier",
+     "label": "Speed of Integration",
+     "polarity": "bad",
+     "value": "−25.00%"
+    },
+    {
+     "key": "local_possible_town_rights",
+     "label": "Possible Urban Rights",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "free_building_levels",
+     "label": "Supported Building Levels",
+     "polarity": "good",
+     "value": "+25"
+    },
+    {
+     "key": "local_peasant_enfranchisment",
+     "label": "Peasant Enfranchisement",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "movement_cost",
+     "label": "Movement Cost",
+     "polarity": "bad",
+     "value": "+10.00%"
+    },
+    {
+     "key": "local_frontage_allowed",
+     "label": "Possible Frontage",
+     "polarity": "bad",
+     "value": "−1.00"
     }
    ],
    "name": "Town",

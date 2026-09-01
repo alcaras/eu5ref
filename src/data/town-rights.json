@@ -3,7 +3,70 @@
  "entities": [
   {
    "color": "#662929",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_monthly_food_modifier",
+        "label": "Local Food Production %",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_pop_conversion_speed_modifier",
+        "label": "Local Pop Conversion Speed %",
+        "polarity": "bad",
+        "value": "−100.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_monthly_food_modifier",
+      "label": "Local Food Production %",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_pop_conversion_speed_modifier",
+      "label": "Local Pop Conversion Speed %",
+      "polarity": "bad",
+      "value": "−100.00%"
+     }
+    ],
+    "requires": [
+     "has reform Agrarian Community",
+     "raw material: Wheat",
+     "raw material: Maize",
+     "raw material: Rice",
+     "raw material: Sturdy Grains",
+     "raw material: Legumes",
+     "raw material: Potatoes",
+     "raw material: Livestock",
+     "raw material: Olives",
+     "raw material: Fruit",
+     "+1 more"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -19,7 +82,15 @@
      "] has received special rights, recognizing the religious freedom of every individual person in exchange for providing large parts of its territory for the production of food and raw materials."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Reform",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/agrarian-community-town-right.png",
    "id": "town-right:agrarian_community_town_right",
    "mods": [
@@ -48,23 +119,83 @@
   },
   {
    "color": "#a18b28",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "nobles_estate_target_satisfaction",
+      "label": "Noble Estate Satisfaction Equilibrium",
+      "polarity": "neutral",
+      "value": "−2.50%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "good",
+        "value": "−50.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "nobles_estate_target_satisfaction",
+        "label": "Noble Estate Satisfaction Equilibrium",
+        "polarity": "neutral",
+        "value": "−2.50%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "good",
+      "value": "−50.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     }
+    ],
+    "requires": [
+     "culture group is Bohemian"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Granting cities the privilege of being declared direct property of our ruler will weaken the Nobility, and could help our state extract more value from them directly."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/bohemian-royal-cities-town-rights.png",
    "id": "town-right:bohemian_royal_cities_town_rights",
    "mods": [
-    {
-     "key": "nobles_estate_target_satisfaction",
-     "label": "Noble Estate Satisfaction Equilibrium",
-     "polarity": "neutral",
-     "value": "−2.50%"
-    },
     {
      "key": "local_nobles_estate_power",
      "label": "Local Nobles Power",
@@ -76,6 +207,12 @@
      "label": "Peasant Enfranchisement",
      "polarity": "good",
      "value": "+10.00%"
+    },
+    {
+     "key": "nobles_estate_target_satisfaction",
+     "label": "Noble Estate Satisfaction Equilibrium",
+     "polarity": "neutral",
+     "value": "−2.50%"
     }
    ],
    "name": "Royal City Rights",
@@ -84,14 +221,74 @@
   },
   {
    "color": "#ab5454",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_trades_per_burgher",
+        "label": "Burghers Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_trades_per_burgher",
+      "label": "Burghers Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "culture group is Italian"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The spread of communes throughout Italy is a reality, forming the backbone of the region. These are often considered ''Borgo Franco'' (free towns) and enjoy many special privileges compared to the countryside."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/borgo-franco-town-rights.png",
    "id": "town-right:borgo_franco_town_rights",
    "mods": [
@@ -120,14 +317,76 @@
   },
   {
    "color": "#c70c0c",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_pop_promotion_speed_modifier",
+        "label": "Local Pop Promotion Speed %",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_max_literacy",
+        "label": "Local Max Literacy",
+        "polarity": "good",
+        "value": "+5.00"
+       },
+       {
+        "key": "local_rgo_build_time",
+        "label": "Expanding Raw Materials Time",
+        "polarity": "bad",
+        "value": "+100.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_pop_promotion_speed_modifier",
+      "label": "Local Pop Promotion Speed %",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_max_literacy",
+      "label": "Local Max Literacy",
+      "polarity": "good",
+      "value": "+5.00"
+     },
+     {
+      "key": "local_rgo_build_time",
+      "label": "Expanding Raw Materials Time",
+      "polarity": "bad",
+      "value": "+100.00%"
+     }
+    ],
+    "requires": [
+     "culture group is British",
+     "not — has urban right Manorial Custumals"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The locations bestowed with these rights will be able to administrate their own growth and serve as free havens from noble oppression."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/borough-customals.png",
    "id": "town-right:borough_customals",
    "mods": [
@@ -156,14 +415,107 @@
   },
   {
    "color": "#b81a1a",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:silk",
+      "label": "Silk"
+     },
+     {
+      "id": "good:cloth",
+      "label": "Cloth"
+     },
+     {
+      "id": "good:fine_cloth",
+      "label": "Fine Cloth"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_silk_output_modifier",
+        "label": "Local Silk Output",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_cloth_output_modifier",
+        "label": "Local Cloth Output",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_fine_cloth_output_modifier",
+        "label": "Local Fine Cloth Output",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_silk_output_modifier",
+      "label": "Local Silk Output",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_cloth_output_modifier",
+      "label": "Local Cloth Output",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_fine_cloth_output_modifier",
+      "label": "Local Fine Cloth Output",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "requires": [
+     "is or was Byzantium",
+     "is or was Rome",
+     "this: Constantinople",
+     "Is Full Expanded Rgo"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Within Constantinople, the production of Silk is held to a high standard, a long tradition that spans generations. Workshops flourish under imperial oversight, though all production dances to the tune of monopoly."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Silk",
+     "Cloth",
+     "Fine Cloth"
+    ],
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/constantinopolitan-silk-monopoly-rights.png",
    "id": "town-right:constantinopolitan_silk_monopoly_rights",
    "mods": [
@@ -198,7 +550,84 @@
   },
   {
    "color": "#48c2d4",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_peasants_max_literacy",
+        "label": "Local Max Literacy for Peasants",
+        "polarity": "good",
+        "value": "+10.00"
+       },
+       {
+        "key": "local_laborers_max_literacy",
+        "label": "Local Max Literacy for Laborers",
+        "polarity": "good",
+        "value": "+10.00"
+       },
+       {
+        "key": "local_soldiers_max_literacy",
+        "label": "Local Max Literacy for Soldiers",
+        "polarity": "good",
+        "value": "+10.00"
+       },
+       {
+        "key": "local_monthly_prosperity",
+        "label": "Local Monthly Prosperity",
+        "polarity": "good",
+        "value": "+0.10%"
+       },
+       {
+        "key": "local_peasants_estate_power",
+        "label": "Local Peasants Power",
+        "polarity": "bad",
+        "value": "+100.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_peasants_max_literacy",
+      "label": "Local Max Literacy for Peasants",
+      "polarity": "good",
+      "value": "+10.00"
+     },
+     {
+      "key": "local_laborers_max_literacy",
+      "label": "Local Max Literacy for Laborers",
+      "polarity": "good",
+      "value": "+10.00"
+     },
+     {
+      "key": "local_soldiers_max_literacy",
+      "label": "Local Max Literacy for Soldiers",
+      "polarity": "good",
+      "value": "+10.00"
+     },
+     {
+      "key": "local_monthly_prosperity",
+      "label": "Local Monthly Prosperity",
+      "polarity": "good",
+      "value": "+0.10%"
+     },
+     {
+      "key": "local_peasants_estate_power",
+      "label": "Local Peasants Power",
+      "polarity": "bad",
+      "value": "+100.00%"
+     }
+    ],
+    "requires": [
+     "has reform Enlightened Leadership"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -214,7 +643,14 @@
      "] has been granted the right to open their local council to commoners. This grants the peasantry a voice in local affairs and allows them to request greater rights for themselves."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Reform"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/enlightened-leadership-reform-town-right.png",
    "id": "town-right:enlightened_leadership_reform_town_right",
    "mods": [
@@ -255,14 +691,112 @@
   },
   {
    "color": "#fa5405",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:cloth",
+      "label": "Cloth"
+     },
+     {
+      "id": "good:fine_cloth",
+      "label": "Fine Cloth"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_cloth_guild_building_levels",
+        "label": "Cloth Guild Building Levels",
+        "polarity": "good",
+        "value": "+5"
+       },
+       {
+        "key": "local_fine_cloth_guild_building_levels",
+        "label": "Fine Cloth Guild Building Levels",
+        "polarity": "good",
+        "value": "+5"
+       },
+       {
+        "key": "local_trades_per_burgher",
+        "label": "Burghers Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_merchant_capacity_modifier",
+        "label": "Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_cloth_guild_building_levels",
+      "label": "Cloth Guild Building Levels",
+      "polarity": "good",
+      "value": "+5"
+     },
+     {
+      "key": "local_fine_cloth_guild_building_levels",
+      "label": "Fine Cloth Guild Building Levels",
+      "polarity": "good",
+      "value": "+5"
+     },
+     {
+      "key": "local_trades_per_burgher",
+      "label": "Burghers Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_merchant_capacity_modifier",
+      "label": "Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Textile Rights"
+    ],
+    "unlocked_by": [
+     "Flemish Cloth Industry"
+    ]
+   },
    "desc": [
     [
      "t",
      "The Late Middle Ages saw the birth of a powerful textile industry in the Low Countries. Manufactured from imported English and Castilian wool, fabric of the highest quality were exported to all of Europe."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Cloth",
+     "Fine Cloth"
+    ],
+    "kept": "Lost at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/flemish-cloth-industries-right.png",
    "id": "town-right:flemish_cloth_industries_right",
    "mods": [
@@ -303,14 +837,95 @@
   },
   {
    "color": "#286e8c",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_manpower_modifier",
+        "label": "Monthly Manpower",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_levy_size_modifier",
+        "label": "Levy Size",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_soldiers_desired_pop",
+        "label": "Possible Soldiers",
+        "polarity": "good",
+        "value": "+0.05"
+       },
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "bad",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_manpower_modifier",
+      "label": "Monthly Manpower",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_levy_size_modifier",
+      "label": "Levy Size",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_soldiers_desired_pop",
+      "label": "Possible Soldiers",
+      "polarity": "good",
+      "value": "+0.05"
+     },
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "bad",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "is or was Portugal",
+     "culture is Portuguese",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fuero General",
+     "not — has urban right Fueros de Aragón",
+     "not — has urban right Usatges de Barcelona",
+     "not — has urban right Furs de Valencia"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Since its inception, Portugal has been a borderland, populated by renowned men such as Geraldo sem Pavor. Its rulers encourage this bravery and indomitability by granting wide concessions usually known as Foros Extensos."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/foros-extensos-town-rights.png",
    "id": "town-right:foros_extensos_town_rights",
    "mods": [
@@ -345,7 +960,94 @@
   },
   {
    "color": "#8c4d4d",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_garrison_size",
+        "label": "Garrison Size",
+        "polarity": "good",
+        "value": "+0.3"
+       },
+       {
+        "key": "local_defensive",
+        "label": "Fort Defense",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_manpower_modifier",
+        "label": "Monthly Manpower",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "bad",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_burghers_estate_power",
+        "label": "Local Burghers Power",
+        "polarity": "good",
+        "value": "−25.00%"
+       },
+       {
+        "key": "local_soldiers_desired_pop",
+        "label": "Possible Soldiers",
+        "polarity": "good",
+        "value": "+0.2"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_garrison_size",
+      "label": "Garrison Size",
+      "polarity": "good",
+      "value": "+0.3"
+     },
+     {
+      "key": "local_defensive",
+      "label": "Fort Defense",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_manpower_modifier",
+      "label": "Monthly Manpower",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "bad",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_burghers_estate_power",
+      "label": "Local Burghers Power",
+      "polarity": "good",
+      "value": "−25.00%"
+     },
+     {
+      "key": "local_soldiers_desired_pop",
+      "label": "Possible Soldiers",
+      "polarity": "good",
+      "value": "+0.2"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -370,7 +1072,14 @@
      "]. The permanent military presence crowds out civilian commerce."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/fortress-town.png",
    "id": "town-right:fortress_town",
    "mods": [
@@ -417,7 +1126,85 @@
   },
   {
    "color": "#e65c5c",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.25"
+       },
+       {
+        "key": "local_merchant_capacity_modifier",
+        "label": "Trade Capacity",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_monthly_prosperity",
+        "label": "Local Monthly Prosperity",
+        "polarity": "good",
+        "value": "+0.10%"
+       },
+       {
+        "key": "local_burghers_estate_power",
+        "label": "Local Burghers Power",
+        "polarity": "bad",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_crown_estate_power",
+        "label": "Local Crown Power",
+        "polarity": "bad",
+        "value": "−50.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.25"
+     },
+     {
+      "key": "local_merchant_capacity_modifier",
+      "label": "Trade Capacity",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_monthly_prosperity",
+      "label": "Local Monthly Prosperity",
+      "polarity": "good",
+      "value": "+0.10%"
+     },
+     {
+      "key": "local_burghers_estate_power",
+      "label": "Local Burghers Power",
+      "polarity": "bad",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_crown_estate_power",
+      "label": "Local Crown Power",
+      "polarity": "bad",
+      "value": "−50.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Market Charter",
+     "not — has urban right Staple Port"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -433,7 +1220,14 @@
      "] has been granted rights of self-governance, reducing direct Crown authority in exchange for greater freedom to attract settlers and conduct trade."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/free-town-charter.png",
    "id": "town-right:free_town_charter",
    "mods": [
@@ -474,14 +1268,87 @@
   },
   {
    "color": "#a64448",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_nobles_estate_unrest",
+        "label": "Nobility Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "bad",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_nobles_estate_unrest",
+      "label": "Nobility Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "bad",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "is or was Aragon",
+     "culture is Aragonese",
+     "in area Aragon",
+     "dominant culture: Aragonese",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fuero General",
+     "not — has urban right Usatges de Barcelona",
+     "not — has urban right Furs de Valencia"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Fueros de Aragón compiled the various municipal rights that spread throughout Aragon during its expansion. Therefore, they are rigorously defended by both the Nobility and the Commoners."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/fuero-de-aragon-town-rights.png",
    "id": "town-right:fuero_de_aragon_town_rights",
    "mods": [
@@ -510,14 +1377,96 @@
   },
   {
    "color": "#940000",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_nobles_estate_unrest",
+        "label": "Nobility Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_burghers_estate_unrest",
+        "label": "Burghers Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_build_buildings_efficiency",
+        "label": "Buildings Construction Efficiency",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_peasants_estate_unrest",
+        "label": "Commoners Unrest",
+        "polarity": "bad",
+        "value": "+20.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_nobles_estate_unrest",
+      "label": "Nobility Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_burghers_estate_unrest",
+      "label": "Burghers Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_build_buildings_efficiency",
+      "label": "Buildings Construction Efficiency",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_peasants_estate_unrest",
+      "label": "Commoners Unrest",
+      "polarity": "bad",
+      "value": "+20.00%"
+     }
+    ],
+    "requires": [
+     "is or was Navarre",
+     "culture is Basque",
+     "culture group is Iberian",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fueros de Aragón",
+     "not — has urban right Usatges de Barcelona",
+     "not — has urban right Furs de Valencia"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Fuero General of Navarre is the compilation of customs and laws that govern the different estates of the territory, in agreement with its ruler."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/fuero-general-town-rights.png",
    "id": "town-right:fuero_general_town_rights",
    "mods": [
@@ -552,14 +1501,87 @@
   },
   {
    "color": "#630e57",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+5.00%"
+       },
+       {
+        "key": "local_build_buildings_efficiency",
+        "label": "Buildings Construction Efficiency",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+5.00%"
+     },
+     {
+      "key": "local_build_buildings_efficiency",
+      "label": "Buildings Construction Efficiency",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "requires": [
+     "is or was León",
+     "is or was Castile",
+     "in area León",
+     "in area Extremadura",
+     "in area Toledo",
+     "in area Murcia",
+     "dominant culture: Asturleonese",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fuero General",
+     "+3 more"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Fuero Juzgo is based on the ancient Visigothic code, the ''Liber Iudiciorum''. As such, it regulates many aspects of daily life, making it especially appropriate for newly colonized lands."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/fuero-juzgo-town-rights.png",
    "id": "town-right:fuero_juzgo_town_rights",
    "mods": [
@@ -588,14 +1610,69 @@
   },
   {
    "color": "#eb0e0e",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_crown_estate_power",
+        "label": "Local Crown Power",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_unrest",
+        "label": "Unrest",
+        "polarity": "bad",
+        "value": "+10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_crown_estate_power",
+      "label": "Local Crown Power",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_unrest",
+      "label": "Unrest",
+      "polarity": "bad",
+      "value": "+10.00%"
+     }
+    ],
+    "requires": [
+     "is or was Castile",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero General",
+     "not — has urban right Fueros de Aragón",
+     "not — has urban right Usatges de Barcelona",
+     "not — has urban right Furs de Valencia"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Fuero Real is a code devised by King Alfonso X of Castile to extend royal power throughout the municipalities of Castile."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/fuero-real-town-rights.png",
    "id": "town-right:fuero_real_town_rights",
    "mods": [
@@ -618,14 +1695,97 @@
   },
   {
    "color": "#db4342",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_unrest",
+        "label": "Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_pop_assimilation_speed_modifier",
+        "label": "Pop Assimilation Speed",
+        "polarity": "bad",
+        "value": "−50.00%"
+       },
+       {
+        "key": "local_pop_conversion_speed_modifier",
+        "label": "Local Pop Conversion Speed %",
+        "polarity": "bad",
+        "value": "−50.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_unrest",
+      "label": "Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_pop_assimilation_speed_modifier",
+      "label": "Pop Assimilation Speed",
+      "polarity": "bad",
+      "value": "−50.00%"
+     },
+     {
+      "key": "local_pop_conversion_speed_modifier",
+      "label": "Local Pop Conversion Speed %",
+      "polarity": "bad",
+      "value": "−50.00%"
+     }
+    ],
+    "requires": [
+     "is or was Aragon",
+     "culture is Catalan",
+     "in area Valencia",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fuero General",
+     "not — has urban right Fueros de Aragón",
+     "not — has urban right Usatges de Barcelona"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Furs de Valencia were granted to the kingdom of the same name by King James I of Aragon after its conquest. Their main difference from the old customs of Aragon and Catalonia lay in their focus on regulating coexistence with the Muslim population, which is the majority in some areas."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Geography",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/furs-de-valencia-town-rights.png",
    "id": "town-right:furs_de_valencia_town_rights",
    "mods": [
@@ -660,7 +1820,60 @@
   },
   {
    "color": "#d41413",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_food_decay_modifier",
+        "label": "Food Decay",
+        "polarity": "good",
+        "value": "−25.00%"
+       },
+       {
+        "key": "local_food_capacity_modifier",
+        "label": "Local Food Capacity",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_migration_speed",
+        "label": "Pop Migration Speed",
+        "polarity": "bad",
+        "value": "−0.50"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_food_decay_modifier",
+      "label": "Food Decay",
+      "polarity": "good",
+      "value": "−25.00%"
+     },
+     {
+      "key": "local_food_capacity_modifier",
+      "label": "Local Food Capacity",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_migration_speed",
+      "label": "Pop Migration Speed",
+      "polarity": "bad",
+      "value": "−0.50"
+     }
+    ],
+    "requires": [
+     "not — has urban right Imperial Breadbasket"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -685,7 +1898,14 @@
      "]."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": null,
    "id": "town-right:granary_town",
    "mods": [
@@ -714,7 +1934,78 @@
   },
   {
    "color": "#382617",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_food_capacity",
+        "label": "Local Food Capacity",
+        "polarity": "good",
+        "value": "+1000.00"
+       },
+       {
+        "key": "local_monthly_prosperity",
+        "label": "Local Monthly Prosperity",
+        "polarity": "good",
+        "value": "+0.20%"
+       },
+       {
+        "key": "local_population_growth",
+        "label": "Population Growth",
+        "polarity": "good",
+        "value": "+0.20%"
+       },
+       {
+        "key": "local_pop_food_consumption",
+        "label": "Local Pop Food Consumption",
+        "polarity": "bad",
+        "value": "+20.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_food_capacity",
+      "label": "Local Food Capacity",
+      "polarity": "good",
+      "value": "+1000.00"
+     },
+     {
+      "key": "local_monthly_prosperity",
+      "label": "Local Monthly Prosperity",
+      "polarity": "good",
+      "value": "+0.20%"
+     },
+     {
+      "key": "local_population_growth",
+      "label": "Population Growth",
+      "polarity": "good",
+      "value": "+0.20%"
+     },
+     {
+      "key": "local_pop_food_consumption",
+      "label": "Local Pop Food Consumption",
+      "polarity": "bad",
+      "value": "+20.00%"
+     }
+    ],
+    "requires": [
+     "is or was Byzantium",
+     "is or was Rome",
+     "not — has urban right Granary Town",
+     "location is a City",
+     "location is a Megalopolis",
+     "building type: Granary",
+     "Building Level ≥ 5"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -730,7 +2021,17 @@
      "] has been entrusted with provisioning the wider realm, its granaries expanded to account for our ambitious plans. Grain flows inward and outward under imperial supervision, sustaining the citizens and army alike with abundance."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/imperial-breadbasket-rights.png",
    "id": "town-right:imperial_breadbasket_rights",
    "mods": [
@@ -765,14 +2066,89 @@
   },
   {
    "color": "#4d100f",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.33"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_pop_assimilation_speed_modifier",
+        "label": "Pop Assimilation Speed",
+        "polarity": "bad",
+        "value": "−25.00%"
+       },
+       {
+        "key": "local_crown_estate_power",
+        "label": "Local Crown Power",
+        "polarity": "bad",
+        "value": "−25.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.33"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_pop_assimilation_speed_modifier",
+      "label": "Pop Assimilation Speed",
+      "polarity": "bad",
+      "value": "−25.00%"
+     },
+     {
+      "key": "local_crown_estate_power",
+      "label": "Local Crown Power",
+      "polarity": "bad",
+      "value": "−25.00%"
+     }
+    ],
+    "requires": [
+     "Allow Kulm Town Rights",
+     "not — has urban right Magdeburg Rights",
+     "not — has urban right Nuremberg Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "A modified version of the Magdeburg Law, the Kulm Law grants all cities in Prussia that have secured the mercantile interests of the city merchant guilds the privilege of significant autonomy from their overlords."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/kulm-town-rights.png",
    "id": "town-right:kulm_town_rights",
    "mods": [
@@ -807,23 +2183,118 @@
   },
   {
    "color": "#333333",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "expand_rgo_mining_cost_modifier",
+      "label": "Expand Mining Cost",
+      "polarity": "bad",
+      "value": "+5.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+100.00%"
+       },
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.10"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−20.00%"
+       },
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "bad",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "expand_rgo_mining_cost_modifier",
+        "label": "Expand Mining Cost",
+        "polarity": "bad",
+        "value": "+5.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+100.00%"
+     },
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.10"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−20.00%"
+     },
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "bad",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "runs policy Bergordnung",
+     "raw material: Iron",
+     "raw material: Copper",
+     "raw material: Lead",
+     "raw material: Tin",
+     "raw material: Alum",
+     "raw material: Marble",
+     "raw material: Mercury",
+     "raw material: Coal",
+     "raw material: Stone",
+     "+1 more"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Ceding the right to conduct mining operations to the government of the town will increase the funds available to prospect for more minerals, and increase the appeal to potential new settlers. Unfortunately, this comes at the cost of sharper restrictions on the local commoners and their ability to benefit from the mines themselves."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Law",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/lower-bergregal.png",
    "id": "town-right:lower_bergregal",
    "mods": [
-    {
-     "key": "expand_rgo_mining_cost_modifier",
-     "label": "Expand Mining Cost",
-     "polarity": "bad",
-     "value": "+5.00%"
-    },
     {
      "key": "local_max_rgo_size_modifier",
      "label": "Maximum RGO Size",
@@ -847,6 +2318,12 @@
      "label": "Local Nobles Power",
      "polarity": "bad",
      "value": "+50.00%"
+    },
+    {
+     "key": "expand_rgo_mining_cost_modifier",
+     "label": "Expand Mining Cost",
+     "polarity": "bad",
+     "value": "+5.00%"
     }
    ],
    "name": "Lower Bergregal",
@@ -855,23 +2332,102 @@
   },
   {
    "color": "#9cb3bd",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "burghers_estate_agenda_impact",
+      "label": "Agenda Impact for Burghers",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_maritime_presence",
+        "label": "Local Maritime Presence",
+        "polarity": "good",
+        "value": "+0.10"
+       },
+       {
+        "key": "harbor_suitability",
+        "label": "Harbor Capacity",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_marketplace_building_levels",
+        "label": "Marketplace Building Levels",
+        "polarity": "good",
+        "value": "+10"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "burghers_estate_agenda_impact",
+        "label": "Agenda Impact for Burghers",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_maritime_presence",
+      "label": "Local Maritime Presence",
+      "polarity": "good",
+      "value": "+0.10"
+     },
+     {
+      "key": "harbor_suitability",
+      "label": "Harbor Capacity",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_marketplace_building_levels",
+      "label": "Marketplace Building Levels",
+      "polarity": "good",
+      "value": "+10"
+     }
+    ],
+    "requires": [
+     "culture group is German",
+     "is a port",
+     "not — has urban right Staple Port",
+     "not — has urban right Magdeburg Rights",
+     "not — has urban right Nuremberg Rights",
+     "not — has urban right Kulm Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Regulating the laws and privileges within our urban settlements according to those of Lübeck itself will grant our merchants more power. While the benefits for our traders will assist their abilities to conduct trade, the guild members within the city will be unhappy about this preferential treatment and obstruct us in their own ways."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture",
+     "Geography",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/lubeck-town-rights.png",
    "id": "town-right:lubeck_town_rights",
    "mods": [
-    {
-     "key": "burghers_estate_agenda_impact",
-     "label": "Agenda Impact for Burghers",
-     "polarity": "bad",
-     "value": "−10.00%"
-    },
     {
      "key": "local_maritime_presence",
      "label": "Local Maritime Presence",
@@ -889,6 +2445,12 @@
      "label": "Marketplace Building Levels",
      "polarity": "good",
      "value": "+10"
+    },
+    {
+     "key": "burghers_estate_agenda_impact",
+     "label": "Agenda Impact for Burghers",
+     "polarity": "bad",
+     "value": "−10.00%"
     }
    ],
    "name": "Lübeck Rights",
@@ -897,23 +2459,100 @@
   },
   {
    "color": "#bd7363",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "legislative_efficiency",
+      "label": "Legislative Efficiency",
+      "polarity": "bad",
+      "value": "−5.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_merchant_capacity_modifier",
+        "label": "Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_pop_assimilation_speed_modifier",
+        "label": "Pop Assimilation Speed",
+        "polarity": "bad",
+        "value": "−50.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "legislative_efficiency",
+        "label": "Legislative Efficiency",
+        "polarity": "bad",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_merchant_capacity_modifier",
+      "label": "Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_pop_assimilation_speed_modifier",
+      "label": "Pop Assimilation Speed",
+      "polarity": "bad",
+      "value": "−50.00%"
+     }
+    ],
+    "requires": [
+     "capital: in region Northern Germany",
+     "Allow Magdeburg Rights Town Rights",
+     "not — has urban right Nuremberg Rights",
+     "not — has urban right Kulm Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "A set of privileges that were originally drafted using Flemish law, this legal framework was spread through central Europe via an influx of German immigrants. Aimed at cultivating the liberties of the individual citizen, these rights serve to guarantee and regulate the autonomy of the local administration."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/magdeburg-rights-town-rights.png",
    "id": "town-right:magdeburg_rights_town_rights",
    "mods": [
-    {
-     "key": "legislative_efficiency",
-     "label": "Legislative Efficiency",
-     "polarity": "bad",
-     "value": "−5.00%"
-    },
     {
      "key": "local_migration_attraction",
      "label": "Migration Attraction",
@@ -931,6 +2570,12 @@
      "label": "Pop Assimilation Speed",
      "polarity": "bad",
      "value": "−50.00%"
+    },
+    {
+     "key": "legislative_efficiency",
+     "label": "Legislative Efficiency",
+     "polarity": "bad",
+     "value": "−5.00%"
     }
    ],
    "name": "Magdeburg Rights",
@@ -939,14 +2584,76 @@
   },
   {
    "color": "#e64745",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_monthly_food_modifier",
+        "label": "Local Food Production %",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_food_decay",
+        "label": "Food Decay",
+        "polarity": "good",
+        "value": "−0.10%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_monthly_food_modifier",
+      "label": "Local Food Production %",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_food_decay",
+      "label": "Food Decay",
+      "polarity": "good",
+      "value": "−0.10%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "requires": [
+     "culture group is British",
+     "not — has urban right Borough Custumals"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Granting the manorial landholders more executive power over this location will increase the exploitation of the land and keep the unruly peasantry in check."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/manorial-customals.png",
    "id": "town-right:manorial_customals",
    "mods": [
@@ -975,7 +2682,61 @@
   },
   {
    "color": "#cc7170",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_marketplace_building_levels",
+        "label": "Marketplace Building Levels",
+        "polarity": "good",
+        "value": "+3"
+       },
+       {
+        "key": "local_trades_per_burgher",
+        "label": "Burghers Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_market_access",
+        "label": "Market Access",
+        "polarity": "good",
+        "value": "+10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_marketplace_building_levels",
+      "label": "Marketplace Building Levels",
+      "polarity": "good",
+      "value": "+3"
+     },
+     {
+      "key": "local_trades_per_burgher",
+      "label": "Burghers Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_market_access",
+      "label": "Market Access",
+      "polarity": "good",
+      "value": "+10.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Staple Port",
+     "not — has urban right Free Town Charter"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -991,7 +2752,14 @@
      "] has been granted the right to hold regular markets, drawing merchants and traders and expanding the capacity of its local Marketplace."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/market-charter.png",
    "id": "town-right:market_charter",
    "mods": [
@@ -1020,7 +2788,65 @@
   },
   {
    "color": "#735150",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+35.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+35.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "Is Mining Rgo",
+     "is a port",
+     "raw material: Salt",
+     "not — has urban right Bergslagsprivilegier",
+     "not — has urban right Upper Bergregal",
+     "not — has urban right Lower Bergregal"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -1036,7 +2862,16 @@
      "] has been granted formal rights to conduct and expand mining operations, increasing the scale of extraction. The Commoners are subject to stricter obligations as a result."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/mining-charter.png",
    "id": "town-right:mining_charter",
    "mods": [
@@ -1065,7 +2900,77 @@
   },
   {
    "color": "#f7e6f7",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_roman_culture_movement_growth_modifier",
+        "label": "Local Latin Revival Movement Growth Modifier",
+        "polarity": "good",
+        "value": "+15.00%"
+       },
+       {
+        "key": "local_cultural_influence",
+        "label": "Local Cultural Influence",
+        "polarity": "good",
+        "value": "+2.00"
+       },
+       {
+        "key": "local_pop_join_rebel_threshold",
+        "label": "Pop Join Rebels Threshold",
+        "polarity": "bad",
+        "value": "+20.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_roman_culture_movement_growth_modifier",
+      "label": "Local Latin Revival Movement Growth Modifier",
+      "polarity": "good",
+      "value": "+15.00%"
+     },
+     {
+      "key": "local_cultural_influence",
+      "label": "Local Cultural Influence",
+      "polarity": "good",
+      "value": "+2.00"
+     },
+     {
+      "key": "local_pop_join_rebel_threshold",
+      "label": "Pop Join Rebels Threshold",
+      "polarity": "bad",
+      "value": "+20.00%"
+     }
+    ],
+    "requires": [
+     "has dlc: D008 Fate Of The Phoenix",
+     "is or was Byzantium",
+     "is or was Rome",
+     "Latinization Vs Hellenization < -50",
+     "court language is Latin",
+     "dominant language: Latin"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -1081,7 +2986,16 @@
      "] has been elevated to the status of municipium, its citizens granted rights under our law. Local elites wield greater influence, binding the land closer to the traditions of Latinitas."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/municipia-privilegia.png",
    "id": "town-right:municipia_privilegia",
    "mods": [
@@ -1116,23 +3030,95 @@
   },
   {
    "color": "#75a5bc",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "merchant_maintenance_efficiency",
+      "label": "Merchant Maintenance Efficiency",
+      "polarity": "bad",
+      "value": "−2.50%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_trades_per_burgher",
+        "label": "Burghers Trade Capacity",
+        "polarity": "good",
+        "value": "+100.00%"
+       },
+       {
+        "key": "local_trade_protection_factor",
+        "label": "Local Market Protection",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_market_access",
+        "label": "Market Access",
+        "polarity": "good",
+        "value": "+20.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "merchant_maintenance_efficiency",
+        "label": "Merchant Maintenance Efficiency",
+        "polarity": "bad",
+        "value": "−2.50%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_trades_per_burgher",
+      "label": "Burghers Trade Capacity",
+      "polarity": "good",
+      "value": "+100.00%"
+     },
+     {
+      "key": "local_trade_protection_factor",
+      "label": "Local Market Protection",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_market_access",
+      "label": "Market Access",
+      "polarity": "good",
+      "value": "+20.00%"
+     }
+    ],
+    "requires": [
+     "is Norway"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Granting privileges to the merchants of this location and giving them preferential treatment will bolster our own trading routes, while disfavoring foreign merchants."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/norwegian-city-rights.png",
    "id": "town-right:norwegian_city_rights",
    "mods": [
-    {
-     "key": "merchant_maintenance_efficiency",
-     "label": "Merchant Maintenance Efficiency",
-     "polarity": "bad",
-     "value": "−2.50%"
-    },
     {
      "key": "local_trades_per_burgher",
      "label": "Burghers Trade Capacity",
@@ -1150,6 +3136,12 @@
      "label": "Market Access",
      "polarity": "good",
      "value": "+20.00%"
+    },
+    {
+     "key": "merchant_maintenance_efficiency",
+     "label": "Merchant Maintenance Efficiency",
+     "polarity": "bad",
+     "value": "−2.50%"
     }
    ],
    "name": "Kjøpstad Rights",
@@ -1158,14 +3150,90 @@
   },
   {
    "color": "#c55c6a",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_pop_assimilation_speed_modifier",
+        "label": "Pop Assimilation Speed",
+        "polarity": "bad",
+        "value": "−20.00%"
+       },
+       {
+        "key": "local_pop_conversion_speed_modifier",
+        "label": "Local Pop Conversion Speed %",
+        "polarity": "bad",
+        "value": "−20.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_pop_assimilation_speed_modifier",
+      "label": "Pop Assimilation Speed",
+      "polarity": "bad",
+      "value": "−20.00%"
+     },
+     {
+      "key": "local_pop_conversion_speed_modifier",
+      "label": "Local Pop Conversion Speed %",
+      "polarity": "bad",
+      "value": "−20.00%"
+     }
+    ],
+    "requires": [
+     "Allow Novi Fori Town Rights",
+     "not — has urban right Magdeburg Rights",
+     "not — has urban right Nuremberg Rights",
+     "not — has urban right Kulm Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Derived from the original set of privileges given to the city of Magdeburg, this legal framework has grown to encompass Western concepts of urban planning, as well as a set of criminal and civil laws, when it spread beyond the core German lands."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/novi-fori-town-rights.png",
    "id": "town-right:novi_fori_town_rights",
    "mods": [
@@ -1200,23 +3268,100 @@
   },
   {
    "color": "#f3700f",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "legislative_efficiency",
+      "label": "Legislative Efficiency",
+      "polarity": "bad",
+      "value": "−5.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "+2.50%"
+       },
+       {
+        "key": "local_pop_assimilation_speed_modifier",
+        "label": "Pop Assimilation Speed",
+        "polarity": "bad",
+        "value": "−50.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "legislative_efficiency",
+        "label": "Legislative Efficiency",
+        "polarity": "bad",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "+2.50%"
+     },
+     {
+      "key": "local_pop_assimilation_speed_modifier",
+      "label": "Pop Assimilation Speed",
+      "polarity": "bad",
+      "value": "−50.00%"
+     }
+    ],
+    "requires": [
+     "capital: in region Southern Germany",
+     "Allow Nuremberg Rights Town Rights",
+     "not — has urban right Magdeburg Rights",
+     "not — has urban right Kulm Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "A set of privileges that were originally drafted using Flemish law, this legal framework was spread through central Europe via an influx of German immigrants. Aimed at cultivating the liberties of the individual citizen, these rights serve to guarantee and regulate the autonomy of the local administration."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Geography",
+     "Urban right",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/nuremberg-rights-town-rights.png",
    "id": "town-right:nuremberg_rights_town_rights",
    "mods": [
-    {
-     "key": "legislative_efficiency",
-     "label": "Legislative Efficiency",
-     "polarity": "bad",
-     "value": "−5.00%"
-    },
     {
      "key": "local_migration_attraction",
      "label": "Migration Attraction",
@@ -1234,6 +3379,12 @@
      "label": "Pop Assimilation Speed",
      "polarity": "bad",
      "value": "−50.00%"
+    },
+    {
+     "key": "legislative_efficiency",
+     "label": "Legislative Efficiency",
+     "polarity": "bad",
+     "value": "−5.00%"
     }
    ],
    "name": "Nuremberg Rights",
@@ -1242,7 +3393,85 @@
   },
   {
    "color": "#a0c0c0",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:furniture",
+      "label": "Furniture"
+     },
+     {
+      "id": "good:pottery",
+      "label": "Pottery"
+     },
+     {
+      "id": "good:leather",
+      "label": "Leather"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_furniture_output_modifier",
+        "label": "Furniture Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_pottery_output_modifier",
+        "label": "Pottery Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_leather_output_modifier",
+        "label": "Local Leather Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_furniture_output_modifier",
+      "label": "Furniture Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_pottery_output_modifier",
+      "label": "Pottery Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_leather_output_modifier",
+      "label": "Local Leather Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1258,7 +3487,18 @@
      "] has been granted legal privileges over the production and distribution of Leather, Pottery, and Furniture, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Furniture",
+     "Pottery",
+     "Leather"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": null,
    "id": "town-right:royal_artisan_rights",
    "mods": [
@@ -1293,7 +3533,85 @@
   },
   {
    "color": "#e6dbb5",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:paper",
+      "label": "Paper"
+     },
+     {
+      "id": "good:books",
+      "label": "Books"
+     },
+     {
+      "id": "good:dyes",
+      "label": "Dyes"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_paper_output_modifier",
+        "label": "Local Paper Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_books_output_modifier",
+        "label": "Local Books Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_dyes_output_modifier",
+        "label": "Local Dyes Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_paper_output_modifier",
+      "label": "Local Paper Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_books_output_modifier",
+      "label": "Local Books Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_dyes_output_modifier",
+      "label": "Local Dyes Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1309,7 +3627,18 @@
      "] has been granted legal privileges over the production and distribution of Paper, Books, and Dyes, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Paper",
+     "Books",
+     "Dyes"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/royal-book-rights.png",
    "id": "town-right:royal_book_rights",
    "mods": [
@@ -1344,7 +3673,85 @@
   },
   {
    "color": "#330b0a",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:liquor",
+      "label": "Liquor"
+     },
+     {
+      "id": "good:beer",
+      "label": "Beer"
+     },
+     {
+      "id": "good:wine",
+      "label": "Wine"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_liquor_output_modifier",
+        "label": "Local Liquor Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_beer_output_modifier",
+        "label": "Local Beer Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_wine_output_modifier",
+        "label": "Local Wine Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_liquor_output_modifier",
+      "label": "Local Liquor Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_beer_output_modifier",
+      "label": "Local Beer Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_wine_output_modifier",
+      "label": "Local Wine Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1360,7 +3767,18 @@
      "] has been granted legal privileges over the production and distribution of Liquor, Beer, and Wine, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Liquor",
+     "Beer",
+     "Wine"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": null,
    "id": "town-right:royal_brewing_rights",
    "mods": [
@@ -1395,23 +3813,83 @@
   },
   {
    "color": "#98555c",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "nobles_estate_agenda_impact",
+      "label": "Agenda Impact for Nobility",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_nobles_estate_power",
+        "label": "Local Nobles Power",
+        "polarity": "good",
+        "value": "−50.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "nobles_estate_agenda_impact",
+        "label": "Agenda Impact for Nobility",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_nobles_estate_power",
+      "label": "Local Nobles Power",
+      "polarity": "good",
+      "value": "−50.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     }
+    ],
+    "requires": [
+     "is Hungary"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "By declaring our urban centers as Royal and Free Cities we can prevent our Nobility from accumulating power within their bounds."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country"
+    ],
+    "source": "Available from the start"
+   },
    "icon": null,
    "id": "town-right:royal_free_cities_town_rights",
    "mods": [
-    {
-     "key": "nobles_estate_agenda_impact",
-     "label": "Agenda Impact for Nobility",
-     "polarity": "bad",
-     "value": "−10.00%"
-    },
     {
      "key": "local_nobles_estate_power",
      "label": "Local Nobles Power",
@@ -1423,6 +3901,12 @@
      "label": "Peasant Enfranchisement",
      "polarity": "good",
      "value": "+10.00%"
+    },
+    {
+     "key": "nobles_estate_agenda_impact",
+     "label": "Agenda Impact for Nobility",
+     "polarity": "bad",
+     "value": "−10.00%"
     }
    ],
    "name": "Royal Free City Rights",
@@ -1431,7 +3915,65 @@
   },
   {
    "color": "#ff0d0d",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:jewelry",
+      "label": "Jewelry"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_jewelry_output_modifier",
+        "label": "Local Jewelry Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_jewelry_guild_building_levels",
+        "label": "Jewelry Guild Building Levels",
+        "polarity": "good",
+        "value": "+10"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_jewelry_output_modifier",
+      "label": "Local Jewelry Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_jewelry_guild_building_levels",
+      "label": "Jewelry Guild Building Levels",
+      "polarity": "good",
+      "value": "+10"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1447,7 +3989,16 @@
      "] has been granted legal privileges over the production and distribution of Jewelry, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Jewelry"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/royal-jewelry-rights.png",
    "id": "town-right:royal_jewelry_rights",
    "mods": [
@@ -1476,7 +4027,69 @@
   },
   {
    "color": "#401313",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:masonry",
+      "label": "Masonry"
+     },
+     {
+      "id": "good:glass",
+      "label": "Glass"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_masonry_output_modifier",
+        "label": "Masonry Output",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_glass_output_modifier",
+        "label": "Local Glass Output",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_masonry_output_modifier",
+      "label": "Masonry Output",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_glass_output_modifier",
+      "label": "Local Glass Output",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1492,7 +4105,17 @@
      "] has been granted legal privileges over the production and distribution of Masonry and Glass, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Masonry",
+     "Glass"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": null,
    "id": "town-right:royal_masonry_rights",
    "mods": [
@@ -1521,7 +4144,71 @@
   },
   {
    "color": "#1c2b66",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:naval_supplies",
+      "label": "Naval Supplies"
+     },
+     {
+      "id": "good:tar",
+      "label": "Tar"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_naval_supplies_output_modifier",
+        "label": "Local Naval Supplies Output",
+        "polarity": "good",
+        "value": "+30.00%"
+       },
+       {
+        "key": "local_tar_output_modifier",
+        "label": "Local Tar Output",
+        "polarity": "good",
+        "value": "+30.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_naval_supplies_output_modifier",
+      "label": "Local Naval Supplies Output",
+      "polarity": "good",
+      "value": "+30.00%"
+     },
+     {
+      "key": "local_tar_output_modifier",
+      "label": "Local Tar Output",
+      "polarity": "good",
+      "value": "+30.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "not — event flag: Recently Forced To Revoke Town Rights Variable"
+    ],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1537,7 +4224,17 @@
      "] has been granted legal privileges over the production and distribution of Naval Supplies and Tar, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Naval Supplies",
+     "Tar"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "Event or script"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": null,
    "id": "town-right:royal_naval_rights",
    "mods": [
@@ -1566,7 +4263,87 @@
   },
   {
    "color": "#b7a99b",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:cloth",
+      "label": "Cloth"
+     },
+     {
+      "id": "good:fine_cloth",
+      "label": "Fine Cloth"
+     },
+     {
+      "id": "good:dyes",
+      "label": "Dyes"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_cloth_output_modifier",
+        "label": "Local Cloth Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_fine_cloth_output_modifier",
+        "label": "Local Fine Cloth Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_dyes_output_modifier",
+        "label": "Local Dyes Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_cloth_output_modifier",
+      "label": "Local Cloth Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_fine_cloth_output_modifier",
+      "label": "Local Fine Cloth Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_dyes_output_modifier",
+      "label": "Local Dyes Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Flemish Cloth Industry"
+    ],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1582,7 +4359,18 @@
      "] has been granted legal privileges over the production and distribution of Cloth and Fine Cloth, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Cloth",
+     "Fine Cloth",
+     "Dyes"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": null,
    "id": "town-right:royal_textile_rights",
    "mods": [
@@ -1617,7 +4405,53 @@
   },
   {
    "color": "#140e0e",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:tools",
+      "label": "Tools"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_tools_output_modifier",
+        "label": "Local Tools Output",
+        "polarity": "good",
+        "value": "+30.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_tools_output_modifier",
+      "label": "Local Tools Output",
+      "polarity": "good",
+      "value": "+30.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1633,7 +4467,16 @@
      "] has been granted legal privileges over the production and distribution of Tools, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Tools"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/royal-tooling-rights.png",
    "id": "town-right:royal_tooling_rights",
    "mods": [
@@ -1656,7 +4499,85 @@
   },
   {
    "color": "#caccce",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:weaponry",
+      "label": "Weaponry"
+     },
+     {
+      "id": "good:firearms",
+      "label": "Firearms"
+     },
+     {
+      "id": "good:cannons",
+      "label": "Cannon"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_weaponry_output_modifier",
+        "label": "Local Weaponry Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_firearms_output_modifier",
+        "label": "Local Firearms Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_cannons_output_modifier",
+        "label": "Local Cannon Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_weaponry_output_modifier",
+      "label": "Local Weaponry Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_firearms_output_modifier",
+      "label": "Local Firearms Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_cannons_output_modifier",
+      "label": "Local Cannon Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Borough Privileges"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1672,7 +4593,18 @@
      "] has been granted legal privileges over the production and distribution of Weaponry, Firearms, and Cannon, conferring a significant competitive advantage."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Weaponry",
+     "Firearms",
+     "Cannon"
+    ],
+    "kept": "Kept at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/royal-weaponry-rights.png",
    "id": "town-right:royal_weaponry_rights",
    "mods": [
@@ -1707,7 +4639,101 @@
   },
   {
    "color": "#d95757",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:tools",
+      "label": "Tools"
+     }
+    ],
+    "country_mods": [
+     {
+      "key": "expand_rgo_mining_cost_modifier",
+      "label": "Expand Mining Cost",
+      "polarity": "bad",
+      "value": "+5.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_tools_output_modifier",
+        "label": "Local Tools Output",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+5.00%"
+       },
+       {
+        "key": "local_rgo_build_time",
+        "label": "Expanding Raw Materials Time",
+        "polarity": "bad",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "expand_rgo_mining_cost_modifier",
+        "label": "Expand Mining Cost",
+        "polarity": "bad",
+        "value": "+5.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_tools_output_modifier",
+      "label": "Local Tools Output",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+5.00%"
+     },
+     {
+      "key": "local_rgo_build_time",
+      "label": "Expanding Raw Materials Time",
+      "polarity": "bad",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Tooling Rights",
+     "raw material: Iron",
+     "raw material: Copper",
+     "raw material: Silver",
+     "raw material: Lead"
+    ],
+    "unlocked_by": [
+     "Bergslagsprivilegier"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1723,16 +4749,20 @@
      "] as a mining community (bergslag), granting it collective rights over local ore extraction, its own court, and freedom from military conscription. The Commoners of the mines hold a stronger legal standing than in ordinary towns."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Tools"
+    ],
+    "kept": "Lost at conquest",
+    "requires": [
+     "Urban right",
+     "Other"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/scandinavian-bergslag-privileges.png",
    "id": "town-right:scandinavian_bergslag_privileges",
    "mods": [
-    {
-     "key": "expand_rgo_mining_cost_modifier",
-     "label": "Expand Mining Cost",
-     "polarity": "bad",
-     "value": "+5.00%"
-    },
     {
      "key": "local_max_rgo_size_modifier",
      "label": "Maximum RGO Size",
@@ -1756,6 +4786,12 @@
      "label": "Expanding Raw Materials Time",
      "polarity": "bad",
      "value": "+50.00%"
+    },
+    {
+     "key": "expand_rgo_mining_cost_modifier",
+     "label": "Expand Mining Cost",
+     "polarity": "bad",
+     "value": "+5.00%"
     }
    ],
    "name": "Bergslagsprivilegier",
@@ -1764,7 +4800,80 @@
   },
   {
    "color": "#ffffff",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "expand_rgo_gathering_cost_modifier",
+      "label": "Expand Gathering Cost",
+      "polarity": "bad",
+      "value": "+5.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_sailors_modifier",
+        "label": "Monthly Sailors",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_maritime_presence",
+        "label": "Local Maritime Presence",
+        "polarity": "good",
+        "value": "+0.10"
+       },
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "expand_rgo_gathering_cost_modifier",
+        "label": "Expand Gathering Cost",
+        "polarity": "bad",
+        "value": "+5.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_sailors_modifier",
+      "label": "Monthly Sailors",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_maritime_presence",
+      "label": "Local Maritime Presence",
+      "polarity": "good",
+      "value": "+0.10"
+     },
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "is a port"
+    ],
+    "unlocked_by": [
+     "Fiskeriprivilegier"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1780,16 +4889,17 @@
      "] has been granted exclusive rights over nearby fishing grounds and the trade in dried and salted fish. Norwegian coastal towns organized around these privileges supplied Fish across Northern Europe."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Geography"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/scandinavian-fishing-privileges.png",
    "id": "town-right:scandinavian_fishing_privileges",
    "mods": [
-    {
-     "key": "expand_rgo_gathering_cost_modifier",
-     "label": "Expand Gathering Cost",
-     "polarity": "bad",
-     "value": "+5.00%"
-    },
     {
      "key": "local_sailors_modifier",
      "label": "Monthly Sailors",
@@ -1807,6 +4917,12 @@
      "label": "Maximum RGO Size",
      "polarity": "good",
      "value": "+50.00%"
+    },
+    {
+     "key": "expand_rgo_gathering_cost_modifier",
+     "label": "Expand Gathering Cost",
+     "polarity": "bad",
+     "value": "+5.00%"
     }
    ],
    "name": "Fiskeriprivilegier",
@@ -1815,7 +4931,83 @@
   },
   {
    "color": "#737817",
-   "data": {},
+   "data": {
+    "boosts": [
+     {
+      "id": "good:tar",
+      "label": "Tar"
+     },
+     {
+      "id": "good:naval_supplies",
+      "label": "Naval Supplies"
+     }
+    ],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_tar_output_modifier",
+        "label": "Local Tar Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_naval_supplies_output_modifier",
+        "label": "Local Naval Supplies Output",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+5.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_tar_output_modifier",
+      "label": "Local Tar Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_naval_supplies_output_modifier",
+      "label": "Local Naval Supplies Output",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+5.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "not — has urban right Naval Supplies Rights"
+    ],
+    "unlocked_by": [
+     "Tjärprivilegier"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1831,7 +5023,17 @@
      "] has been granted rights to harvest and export Tar and Naval Supplies from Crown forests. These forest industries are the backbone of Baltic shipbuilding supply chains."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": [
+     "Tar",
+     "Naval Supplies"
+    ],
+    "kept": "Lost at conquest",
+    "requires": [
+     "Urban right"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/scandinavian-tar-privileges.png",
    "id": "town-right:scandinavian_tar_privileges",
    "mods": [
@@ -1866,7 +5068,60 @@
   },
   {
    "color": "#ffbf00",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_crown_estate_power",
+        "label": "Local Crown Power",
+        "polarity": "bad",
+        "value": "−20.00%"
+       },
+       {
+        "key": "local_max_control",
+        "label": "Max Control",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.30"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_crown_estate_power",
+      "label": "Local Crown Power",
+      "polarity": "bad",
+      "value": "−20.00%"
+     },
+     {
+      "key": "local_max_control",
+      "label": "Max Control",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.30"
+     }
+    ],
+    "requires": [],
+    "unlocked_by": [
+     "Tingsrätt"
+    ]
+   },
    "desc": [
     [
      "t",
@@ -1882,7 +5137,14 @@
      "] has been granted formal assembly rights (tingsrätt), giving its inhabitants a recognized legal forum for governance and justice. Royal authority is curtailed in exchange for a more orderly and loyal population."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "No requirement"
+    ],
+    "source": "Unlocked by an advance"
+   },
    "icon": "img/town-right/scandinavian-thing-rights.png",
    "id": "town-right:scandinavian_thing_rights",
    "mods": [
@@ -1911,7 +5173,88 @@
   },
   {
    "color": "#bf1a19",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_monthly_literacy",
+        "label": "Local Monthly Literacy",
+        "polarity": "good",
+        "value": "+0.05"
+       },
+       {
+        "key": "promote_institution_chance",
+        "label": "Institution Promotion",
+        "polarity": "good",
+        "value": "+1.00"
+       },
+       {
+        "key": "local_institution_growth_modifier",
+        "label": "Institution Growth",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_pop_promotion_speed_modifier",
+        "label": "Local Pop Promotion Speed %",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_monthly_literacy",
+      "label": "Local Monthly Literacy",
+      "polarity": "good",
+      "value": "+0.05"
+     },
+     {
+      "key": "promote_institution_chance",
+      "label": "Institution Promotion",
+      "polarity": "good",
+      "value": "+1.00"
+     },
+     {
+      "key": "local_institution_growth_modifier",
+      "label": "Institution Growth",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_pop_promotion_speed_modifier",
+      "label": "Local Pop Promotion Speed %",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "culture group is Roman",
+     "culture group: Roman",
+     "Value > 0.25",
+     "has building University",
+     "Development ≥ 20"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -1927,7 +5270,16 @@
      "] is recognized as a center of learning, where letters are fostered under official patronage. Knowledge spreads swiftly, though such pursuits rarely enrich the treasury. Idle minds are the devil's playthings."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture",
+     "Geography",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/scholai-literacy-rights.png",
    "id": "town-right:scholai_literacy_rights",
    "mods": [
@@ -1968,23 +5320,85 @@
   },
   {
    "color": "#e62d2c",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "merchant_maintenance_efficiency",
+      "label": "Merchant Maintenance Efficiency",
+      "polarity": "bad",
+      "value": "−2.50%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_marketplace_building_levels",
+        "label": "Marketplace Building Levels",
+        "polarity": "good",
+        "value": "+10"
+       },
+       {
+        "key": "local_monthly_development",
+        "label": "Local Monthly Development",
+        "polarity": "good",
+        "value": "+0.0020"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "merchant_maintenance_efficiency",
+        "label": "Merchant Maintenance Efficiency",
+        "polarity": "bad",
+        "value": "−2.50%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_marketplace_building_levels",
+      "label": "Marketplace Building Levels",
+      "polarity": "good",
+      "value": "+10"
+     },
+     {
+      "key": "local_monthly_development",
+      "label": "Local Monthly Development",
+      "polarity": "good",
+      "value": "+0.0020"
+     }
+    ],
+    "requires": [
+     "country: Root",
+     "is a port"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The title of a Free Imperial City granted to us by the Emperor grants us the freedom to enact certain privileges within our cities, benefiting the local merchants and forcing more foreign merchants to trade through our lands."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Geography",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/stapelrecht-town-rights.png",
    "id": "town-right:stapelrecht_town_rights",
    "mods": [
-    {
-     "key": "merchant_maintenance_efficiency",
-     "label": "Merchant Maintenance Efficiency",
-     "polarity": "bad",
-     "value": "−2.50%"
-    },
     {
      "key": "local_marketplace_building_levels",
      "label": "Marketplace Building Levels",
@@ -1996,6 +5410,12 @@
      "label": "Local Monthly Development",
      "polarity": "good",
      "value": "+0.0020"
+    },
+    {
+     "key": "merchant_maintenance_efficiency",
+     "label": "Merchant Maintenance Efficiency",
+     "polarity": "bad",
+     "value": "−2.50%"
     }
    ],
    "name": "Free Imperial City Staple Rights",
@@ -2004,7 +5424,72 @@
   },
   {
    "color": "#871413",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_marketplace_building_levels",
+        "label": "Marketplace Building Levels",
+        "polarity": "good",
+        "value": "+5"
+       },
+       {
+        "key": "harbor_suitability",
+        "label": "Harbor Capacity",
+        "polarity": "good",
+        "value": "+0.20"
+       },
+       {
+        "key": "local_maritime_presence",
+        "label": "Local Maritime Presence",
+        "polarity": "good",
+        "value": "+0.10"
+       },
+       {
+        "key": "local_burghers_estate_power",
+        "label": "Local Burghers Power",
+        "polarity": "bad",
+        "value": "+50.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_marketplace_building_levels",
+      "label": "Marketplace Building Levels",
+      "polarity": "good",
+      "value": "+5"
+     },
+     {
+      "key": "harbor_suitability",
+      "label": "Harbor Capacity",
+      "polarity": "good",
+      "value": "+0.20"
+     },
+     {
+      "key": "local_maritime_presence",
+      "label": "Local Maritime Presence",
+      "polarity": "good",
+      "value": "+0.10"
+     },
+     {
+      "key": "local_burghers_estate_power",
+      "label": "Local Burghers Power",
+      "polarity": "bad",
+      "value": "+50.00%"
+     }
+    ],
+    "requires": [
+     "is a port"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -2029,7 +5514,14 @@
      "]."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Geography"
+    ],
+    "source": "Available from the start"
+   },
    "icon": null,
    "id": "town-right:staple_port",
    "mods": [
@@ -2064,7 +5556,73 @@
   },
   {
    "color": "#e06565",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_monthly_literacy",
+        "label": "Local Monthly Literacy",
+        "polarity": "good",
+        "value": "+0.05"
+       },
+       {
+        "key": "local_pop_promotion_speed_modifier",
+        "label": "Local Pop Promotion Speed %",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_institution_growth_modifier",
+        "label": "Institution Growth",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": true,
+    "location_mods": [
+     {
+      "key": "local_monthly_literacy",
+      "label": "Local Monthly Literacy",
+      "polarity": "good",
+      "value": "+0.05"
+     },
+     {
+      "key": "local_pop_promotion_speed_modifier",
+      "label": "Local Pop Promotion Speed %",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_institution_growth_modifier",
+      "label": "Institution Growth",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "location is a City",
+     "location is a Megalopolis"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
@@ -2098,7 +5656,14 @@
      "] spread, though they rarely enrich the treasury directly."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Kept at conquest",
+    "requires": [
+     "Geography"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/studium-privileges.png",
    "id": "town-right:studium_privileges",
    "mods": [
@@ -2133,14 +5698,74 @@
   },
   {
    "color": "#a60200",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_trades_per_burgher",
+        "label": "Burghers Trade Capacity",
+        "polarity": "good",
+        "value": "+100.00%"
+       },
+       {
+        "key": "local_merchant_capacity_modifier",
+        "label": "Trade Capacity",
+        "polarity": "good",
+        "value": "+25.00%"
+       },
+       {
+        "key": "local_rgo_build_time",
+        "label": "Expanding Raw Materials Time",
+        "polarity": "bad",
+        "value": "+100.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_trades_per_burgher",
+      "label": "Burghers Trade Capacity",
+      "polarity": "good",
+      "value": "+100.00%"
+     },
+     {
+      "key": "local_merchant_capacity_modifier",
+      "label": "Trade Capacity",
+      "polarity": "good",
+      "value": "+25.00%"
+     },
+     {
+      "key": "local_rgo_build_time",
+      "label": "Expanding Raw Materials Time",
+      "polarity": "bad",
+      "value": "+100.00%"
+     }
+    ],
+    "requires": [
+     "is Sweden"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The merchants of this location will receive extended privileges to conduct their trade free of foreign competition."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/swedish-city-rights.png",
    "id": "town-right:swedish_city_rights",
    "mods": [
@@ -2169,23 +5794,114 @@
   },
   {
    "color": "#c0c0c0",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [
+     {
+      "key": "expand_rgo_mining_cost_modifier",
+      "label": "Expand Mining Cost",
+      "polarity": "bad",
+      "value": "+10.00%"
+     }
+    ],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_max_rgo_size_modifier",
+        "label": "Maximum RGO Size",
+        "polarity": "good",
+        "value": "+100.00%"
+       },
+       {
+        "key": "local_migration_attraction",
+        "label": "Migration Attraction",
+        "polarity": "good",
+        "value": "+0.10"
+       },
+       {
+        "key": "local_rgo_build_time",
+        "label": "Expanding Raw Materials Time",
+        "polarity": "bad",
+        "value": "+50.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−20.00%"
+       }
+      ],
+      "scope": "Location"
+     },
+     {
+      "mods": [
+       {
+        "key": "expand_rgo_mining_cost_modifier",
+        "label": "Expand Mining Cost",
+        "polarity": "bad",
+        "value": "+10.00%"
+       }
+      ],
+      "scope": "Country"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_max_rgo_size_modifier",
+      "label": "Maximum RGO Size",
+      "polarity": "good",
+      "value": "+100.00%"
+     },
+     {
+      "key": "local_migration_attraction",
+      "label": "Migration Attraction",
+      "polarity": "good",
+      "value": "+0.10"
+     },
+     {
+      "key": "local_rgo_build_time",
+      "label": "Expanding Raw Materials Time",
+      "polarity": "bad",
+      "value": "+50.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−20.00%"
+     }
+    ],
+    "requires": [
+     "runs policy Bergordnung",
+     "raw material: Silver",
+     "raw material: Gold",
+     "raw material: Gems",
+     "is a port",
+     "raw material: Salt"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Ceding the right to conduct mining operations to the government of the town will increase the funds available to prospect for more minerals, and increase the appeal to potential new settlers. Unfortunately, this comes at the cost of sharper restrictions on the local commoners and their ability to benefit from the mines themselves."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Geography",
+     "Law",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/upper-bergregal.png",
    "id": "town-right:upper_bergregal",
    "mods": [
-    {
-     "key": "expand_rgo_mining_cost_modifier",
-     "label": "Expand Mining Cost",
-     "polarity": "bad",
-     "value": "+10.00%"
-    },
     {
      "key": "local_max_rgo_size_modifier",
      "label": "Maximum RGO Size",
@@ -2209,6 +5925,12 @@
      "label": "Peasant Enfranchisement",
      "polarity": "bad",
      "value": "−20.00%"
+    },
+    {
+     "key": "expand_rgo_mining_cost_modifier",
+     "label": "Expand Mining Cost",
+     "polarity": "bad",
+     "value": "+10.00%"
     }
    ],
    "name": "Upper Bergregal",
@@ -2217,14 +5939,86 @@
   },
   {
    "color": "#be3c02",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_nobles_estate_unrest",
+        "label": "Nobility Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_burghers_estate_unrest",
+        "label": "Burghers Unrest",
+        "polarity": "good",
+        "value": "−10.00%"
+       },
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "bad",
+        "value": "−10.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_nobles_estate_unrest",
+      "label": "Nobility Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_burghers_estate_unrest",
+      "label": "Burghers Unrest",
+      "polarity": "good",
+      "value": "−10.00%"
+     },
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "bad",
+      "value": "−10.00%"
+     }
+    ],
+    "requires": [
+     "is or was Aragon",
+     "culture is Catalan",
+     "in area Catalonia",
+     "in area Balearics",
+     "not — has urban right Foros Extensos",
+     "not — has urban right Fuero Juzgo",
+     "not — has urban right Fuero Real",
+     "not — has urban right Fuero General",
+     "not — has urban right Fueros de Aragón",
+     "not — has urban right Furs de Valencia"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "The Usatges de Barcelona are the customs and traditions that govern the Catalan territories, promulgated and granted originally by the Counts of Barcelona."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Country",
+     "Culture",
+     "Geography",
+     "Urban right"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/usatges-de-barcelona-town-rights.png",
    "id": "town-right:usatges_de_barcelona_town_rights",
    "mods": [
@@ -2253,14 +6047,76 @@
   },
   {
    "color": "#ad2423",
-   "data": {},
+   "data": {
+    "boosts": [],
+    "country_mods": [],
+    "groups": [
+     {
+      "mods": [
+       {
+        "key": "local_peasant_enfranchisment",
+        "label": "Peasant Enfranchisement",
+        "polarity": "good",
+        "value": "+10.00%"
+       },
+       {
+        "key": "local_population_capacity_modifier",
+        "label": "Local Population Capacity %",
+        "polarity": "good",
+        "value": "+20.00%"
+       },
+       {
+        "key": "local_production_efficiency",
+        "label": "Production Efficiency",
+        "polarity": "neutral",
+        "value": "−5.00%"
+       }
+      ],
+      "scope": "Location"
+     }
+    ],
+    "kept_at_conquest": false,
+    "location_mods": [
+     {
+      "key": "local_peasant_enfranchisment",
+      "label": "Peasant Enfranchisement",
+      "polarity": "good",
+      "value": "+10.00%"
+     },
+     {
+      "key": "local_population_capacity_modifier",
+      "label": "Local Population Capacity %",
+      "polarity": "good",
+      "value": "+20.00%"
+     },
+     {
+      "key": "local_production_efficiency",
+      "label": "Production Efficiency",
+      "polarity": "neutral",
+      "value": "−5.00%"
+     }
+    ],
+    "requires": [
+     "culture group is French",
+     "Allow Ville Franche Town Rights"
+    ],
+    "unlocked_by": []
+   },
    "desc": [
     [
      "t",
      "Several of our market towns have experienced considerable growth in recent decades. As a result, they have become symbols of the expansion of the Crown's power throughout the kingdom, in opposition to the feudal lords who dominate the countryside."
     ]
    ],
-   "facets": {},
+   "facets": {
+    "good": null,
+    "kept": "Lost at conquest",
+    "requires": [
+     "Culture",
+     "Other"
+    ],
+    "source": "Available from the start"
+   },
    "icon": "img/town-right/ville-franche-town-rights.png",
    "id": "town-right:ville_franche_town_rights",
    "mods": [
@@ -2288,6 +6144,201 @@
    "type": "town-right"
   }
  ],
- "facets": [],
- "source": "town_rights"
+ "facets": [
+  {
+   "key": "source",
+   "label": "Source",
+   "options": [
+    {
+     "count": 36,
+     "label": "Available from the start",
+     "value": "Available from the start"
+    },
+    {
+     "count": 14,
+     "label": "Unlocked by an advance",
+     "value": "Unlocked by an advance"
+    }
+   ]
+  },
+  {
+   "key": "kept",
+   "label": "At conquest",
+   "options": [
+    {
+     "count": 18,
+     "label": "Kept at conquest",
+     "value": "Kept at conquest"
+    },
+    {
+     "count": 32,
+     "label": "Lost at conquest",
+     "value": "Lost at conquest"
+    }
+   ]
+  },
+  {
+   "key": "good",
+   "label": "Boosts",
+   "options": [
+    {
+     "count": 1,
+     "label": "Beer",
+     "value": "Beer"
+    },
+    {
+     "count": 1,
+     "label": "Books",
+     "value": "Books"
+    },
+    {
+     "count": 1,
+     "label": "Cannon",
+     "value": "Cannon"
+    },
+    {
+     "count": 3,
+     "label": "Cloth",
+     "value": "Cloth"
+    },
+    {
+     "count": 2,
+     "label": "Dyes",
+     "value": "Dyes"
+    },
+    {
+     "count": 3,
+     "label": "Fine Cloth",
+     "value": "Fine Cloth"
+    },
+    {
+     "count": 1,
+     "label": "Firearms",
+     "value": "Firearms"
+    },
+    {
+     "count": 1,
+     "label": "Furniture",
+     "value": "Furniture"
+    },
+    {
+     "count": 1,
+     "label": "Glass",
+     "value": "Glass"
+    },
+    {
+     "count": 1,
+     "label": "Jewelry",
+     "value": "Jewelry"
+    },
+    {
+     "count": 1,
+     "label": "Leather",
+     "value": "Leather"
+    },
+    {
+     "count": 1,
+     "label": "Liquor",
+     "value": "Liquor"
+    },
+    {
+     "count": 1,
+     "label": "Masonry",
+     "value": "Masonry"
+    },
+    {
+     "count": 2,
+     "label": "Naval Supplies",
+     "value": "Naval Supplies"
+    },
+    {
+     "count": 1,
+     "label": "Paper",
+     "value": "Paper"
+    },
+    {
+     "count": 1,
+     "label": "Pottery",
+     "value": "Pottery"
+    },
+    {
+     "count": 1,
+     "label": "Silk",
+     "value": "Silk"
+    },
+    {
+     "count": 2,
+     "label": "Tar",
+     "value": "Tar"
+    },
+    {
+     "count": 2,
+     "label": "Tools",
+     "value": "Tools"
+    },
+    {
+     "count": 1,
+     "label": "Weaponry",
+     "value": "Weaponry"
+    },
+    {
+     "count": 1,
+     "label": "Wine",
+     "value": "Wine"
+    }
+   ]
+  },
+  {
+   "key": "requires",
+   "label": "Requires",
+   "options": [
+    {
+     "count": 13,
+     "label": "Country",
+     "value": "Country"
+    },
+    {
+     "count": 13,
+     "label": "Culture",
+     "value": "Culture"
+    },
+    {
+     "count": 1,
+     "label": "Event or script",
+     "value": "Event or script"
+    },
+    {
+     "count": 15,
+     "label": "Geography",
+     "value": "Geography"
+    },
+    {
+     "count": 2,
+     "label": "Law",
+     "value": "Law"
+    },
+    {
+     "count": 9,
+     "label": "No requirement",
+     "value": "No requirement"
+    },
+    {
+     "count": 17,
+     "label": "Other",
+     "value": "Other"
+    },
+    {
+     "count": 2,
+     "label": "Reform",
+     "value": "Reform"
+    },
+    {
+     "count": 23,
+     "label": "Urban right",
+     "value": "Urban right"
+    }
+   ]
+  }
+ ],
+ "source": "in_game/common/town_rights"
 }

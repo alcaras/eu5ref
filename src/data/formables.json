@@ -181,8 +181,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -204,8 +203,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -271,8 +269,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -408,13 +405,14 @@
       ]
      ],
      [
-      "?",
-      "current age or later age"
+      "age>=",
+      "age_6_revolutions"
      ]
     ],
     "gate_labels": [
      "Walloon",
-     "Low Franconian"
+     "Low Franconian",
+     "Age 6 Revolutions"
     ],
     "regions": [],
     "tag": "BEL"
@@ -960,8 +958,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -1016,8 +1013,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -1590,8 +1586,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -2264,8 +2259,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -2369,15 +2363,16 @@
        "NAP"
       ],
       [
-       "?",
-       "has reform"
+       "reform",
+       "military_order_reform"
       ]
      ]
     ],
     "gate_labels": [
      "Catholicism",
      "Cyprus",
-     "Naples"
+     "Naples",
+     "Military Order"
     ],
     "regions": [],
     "tag": "KOJ"
@@ -2514,8 +2509,8 @@
       "catholic"
      ],
      [
-      "?",
-      "has variable"
+      "var",
+      "lat_reduced_requirements_to_form"
      ],
      [
       "?",
@@ -2524,13 +2519,14 @@
      [
       "not",
       [
-       "?",
-       "current age or later age"
+       "age>=",
+       "age_4_reformation"
       ]
      ]
     ],
     "gate_labels": [
-     "Catholicism"
+     "Catholicism",
+     "Lat Reduced Requirements To Form"
     ],
     "regions": [],
     "tag": "LAT"
@@ -2570,8 +2566,8 @@
      [
       "not",
       [
-       "?",
-       "has variable"
+       "var",
+       "lat_reduced_requirements_to_form"
       ]
      ],
      [
@@ -2585,8 +2581,8 @@
      [
       "not",
       [
-       "?",
-       "current age or later age"
+       "age>=",
+       "age_5_absolutism"
       ]
      ]
     ],
@@ -3013,15 +3009,16 @@
        ]
       ],
       [
-       "?",
-       "government type"
+       "gov",
+       "steppe_horde"
       ]
      ]
     ],
     "gate_labels": [
      "Timurid",
      "Mongol",
-     "Turkic"
+     "Turkic",
+     "Steppe Horde"
     ],
     "regions": [
      "Mongolia",
@@ -3186,8 +3183,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -3382,8 +3378,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -3830,8 +3825,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -4803,7 +4797,7 @@
    "desc": [
     [
      "t",
-     "The presence of Islam in the region of Western Africa is ever-precarious. With so many different peoples represented in our population, we run the risk of religious conflict erupting at any moment, both inside and coming from outside our borders. Under the guidance of our Root, we must establish an orthodox Islamic state to ensure the survival of Sunnism people in this region."
+     "The presence of Islam in the region of Western Africa is ever-precarious. With so many different peoples represented in our population, we run the risk of religious conflict erupting at any moment, both inside and coming from outside our borders. Under the guidance of our our Country('clergy_estate'), we must establish an orthodox Islamic state to ensure the survival of Sunnism people in this region."
     ]
    ],
    "facets": {
@@ -5013,8 +5007,8 @@
      [
       "or",
       [
-       "?",
-       "has variable"
+       "var",
+       "halved_cost_to_form_thesslonica"
       ],
       [
        "tag",
@@ -5024,12 +5018,13 @@
      [
       "not",
       [
-       "?",
-       "current age or later age"
+       "age>=",
+       "age_3_discovery"
       ]
      ]
     ],
     "gate_labels": [
+     "Halved Cost To Form Thesslonica",
      "Achaea"
     ],
     "regions": [],
@@ -5078,8 +5073,8 @@
      [
       "not",
       [
-       "?",
-       "has variable"
+       "var",
+       "halved_cost_to_form_thesslonica"
       ]
      ],
      [
@@ -5092,8 +5087,8 @@
      [
       "not",
       [
-       "?",
-       "current age or later age"
+       "age>=",
+       "age_3_discovery"
       ]
      ]
     ],
@@ -5236,8 +5231,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -5569,8 +5563,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],
@@ -5597,8 +5590,7 @@
     "areas": [],
     "capital_required": true,
     "gate": [
-     "?",
-     "always"
+     "false"
     ],
     "gate_labels": [],
     "regions": [],

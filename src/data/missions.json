@@ -12,7 +12,7 @@
      "Increase Cabinet Efficiency",
      "Meritocratic Approach",
      "Royal Authority",
-     "High Era of Root"
+     "High Era of our Country"
     ],
     "tasks": [
      {
@@ -64,7 +64,7 @@
      {
       "final": true,
       "key": "high_era_of_countryname",
-      "name": "High Era of Root",
+      "name": "High Era of our Country",
       "requires": [
        "Royal Authority"
       ]
@@ -94,7 +94,7 @@
     "requires_state": [],
     "task_names": [
      "A Great Capital",
-     "All Roads Lead to Root",
+     "All Roads Lead to our Country",
      "Assembly Halls",
      "Capital Prosperity",
      "Control Around the Capital",
@@ -115,7 +115,7 @@
      {
       "final": false,
       "key": "mission_build_roads",
-      "name": "All Roads Lead to Root",
+      "name": "All Roads Lead to our Country",
       "requires": [
        "Mission Capital Province Control"
       ]
@@ -311,11 +311,11 @@
      "Expand Construction Materials",
      "Expand into new Markets",
      "Expanded Trade Capacities",
-     "Export Root",
+     "Export Our Country",
      "Flow of Construction Goods",
      "Gain Production Goods",
-     "Grant Privileges to the Root",
-     "Grow the Root",
+     "Grant Privileges to the our Country('burghers_estate')",
+     "Grow the our Country('burghers_estate')",
      "Import Construction Materials",
      "Influential Merchants",
      "Luxuries for the People",
@@ -386,7 +386,7 @@
      {
       "final": false,
       "key": "mission_export_produced_goods",
-      "name": "Export Root",
+      "name": "Export Our Country",
       "requires": [
        "Mission Construct Goods Industry"
       ]
@@ -411,13 +411,13 @@
      {
       "final": false,
       "key": "mission_grant_burghers_privileges",
-      "name": "Grant Privileges to the Root",
+      "name": "Grant Privileges to the our Country('burghers_estate')",
       "requires": []
      },
      {
       "final": false,
       "key": "mission_attracting_new_burghers",
-      "name": "Grow the Root",
+      "name": "Grow the our Country('burghers_estate')",
       "requires": [
        "Mission Grant Burghers Privileges",
        "Mission Setup Trade"
@@ -792,13 +792,13 @@
      "Coastal Expansion",
      "Establish Wharfs",
      "Establish a Market Center",
-     "Powerful Root",
+     "Powerful our Country('burghers_estate')",
      "Protect our Coasts",
-     "Root Entrepôts",
-     "Root Relations",
-     "The Marketplace of Root",
+     "The Marketplace of our Country",
      "The Winds of Trade",
      "Trade Capacity",
+     "our Country Entrepôts",
+     "our Country('burghers_estate') Relations",
      "A Solid Approach",
      "Maritime Presence"
     ],
@@ -836,7 +836,7 @@
      {
       "final": false,
       "key": "mission_burgher_privileges",
-      "name": "Powerful Root",
+      "name": "Powerful our Country('burghers_estate')",
       "requires": [
        "Mission Burgher Relations"
       ]
@@ -851,22 +851,8 @@
      },
      {
       "final": false,
-      "key": "mission_build_entrepot",
-      "name": "Root Entrepôts",
-      "requires": [
-       "Mission Marketplace Of Capital"
-      ]
-     },
-     {
-      "final": false,
-      "key": "mission_burgher_relations",
-      "name": "Root Relations",
-      "requires": []
-     },
-     {
-      "final": false,
       "key": "mission_marketplace_of_capital",
-      "name": "The Marketplace of Root",
+      "name": "The Marketplace of our Country",
       "requires": []
      },
      {
@@ -884,6 +870,20 @@
       "requires": [
        "Mission Merchant Fleet"
       ]
+     },
+     {
+      "final": false,
+      "key": "mission_build_entrepot",
+      "name": "our Country Entrepôts",
+      "requires": [
+       "Mission Marketplace Of Capital"
+      ]
+     },
+     {
+      "final": false,
+      "key": "mission_burgher_relations",
+      "name": "our Country('burghers_estate') Relations",
+      "requires": []
      },
      {
       "final": true,
@@ -933,7 +933,7 @@
      "Expand Resource Production",
      "Expand the Workforce",
      "Peasant Contentment",
-     "Road to Root",
+     "Road to our Country",
      "Support Fishing Villages",
      "Support Rural Cloth",
      "Village Marketplaces",
@@ -989,7 +989,7 @@
      {
       "final": false,
       "key": "mission_connect_location_to_capital",
-      "name": "Road to Root",
+      "name": "Road to our Country",
       "requires": [
        "Mission Peasants Estate Satisfaction"
       ]
@@ -1059,7 +1059,7 @@
     "task_names": [
      "Commence Annexation",
      "Connect the Capitals",
-     "Improve Relations with Root",
+     "Improve Relations with Our Country",
      "Joint Military Development",
      "Monetary Assistance",
      "A Base of Power",
@@ -1085,7 +1085,7 @@
      {
       "final": false,
       "key": "mission_improve_relations_with_vassal",
-      "name": "Improve Relations with Root",
+      "name": "Improve Relations with Our Country",
       "requires": []
      },
      {

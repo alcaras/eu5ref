@@ -60,7 +60,9 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
     <header class="site-header">
       <div class="wrap">
         <span class="site-title"><a href={base}>EU5 Reference</a></span>
-        <nav class="site-nav">
+        <button type="button" class="nav-toggle" data-nav-toggle
+                aria-label="Menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+        <nav class="site-nav" id="site-nav">
           {navSections.map((s) =>
             s.items.length === 1 ? (
               <a href={`${base}${s.items[0].slug}`} class={active === s.items[0].slug ? 'active' : undefined}>
@@ -68,7 +70,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
               </a>
             ) : (
               <div class={`navsec ${activeSection === s.section ? 'navsec--active' : ''}`}>
-                <span class="navsec__label">{s.section} ▾</span>
+                <button type="button" class="navsec__label" aria-expanded="false">{s.section} ▾</button>
                 <div class="navdrop">
                   {s.items.map((t) => (
                     <a href={`${base}${t.slug}`} class={active === t.slug ? 'active' : undefined}>
@@ -88,6 +90,39 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
     </header>
 
     <script>
+      // Nav on touch/narrow screens: the dropdowns are hover-only in CSS,
+      // which leaves a phone with every section expanded and no way to
+      // collapse them. The hamburger opens the nav; tapping a section
+      // heading opens just that section.
+      {
+        const toggle = document.querySelector('[data-nav-toggle]');
+        const nav = document.getElementById('site-nav');
+        toggle?.addEventListener('click', () => {
+          const open = nav!.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        for (const label of document.querySelectorAll<HTMLElement>('.navsec__label')) {
+          label.addEventListener('click', () => {
+            const sec = label.parentElement!;
+            const open = !sec.classList.contains('open');
+            for (const other of document.querySelectorAll('.navsec.open')) {
+              other.classList.remove('open');
+              other.querySelector('.navsec__label')?.setAttribute('aria-expanded', 'false');
+            }
+            sec.classList.toggle('open', open);
+            label.setAttribute('aria-expanded', String(open));
+          });
+        }
+        document.addEventListener('click', (e) => {
+          if (!(e.target as HTMLElement).closest('.navsec')) {
+            for (const other of document.querySelectorAll('.navsec.open')) {
+              other.classList.remove('open');
+              other.querySelector('.navsec__label')?.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      }
+
       // Global entity search: lazy-fetch the index on first focus, filter,
       // navigate on click/Enter. "/" focuses from anywhere.
       const wrap = document.querySelector('[data-hdr-search]');

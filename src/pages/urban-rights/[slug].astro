@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import Mods from '../../components/Mods.astro';
+import Term from '../../components/Term.astro';
+import data from '../../data/town-rights.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+---
+<Base title={entity.name} active="urban-rights" eyebrow="Urban Right" iconSrc={entity.icon}>
+  <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">
+    {entity.data.groups.map((g: any) => (
+      <div class="panel">
+        <h3>{g.scope === 'Location' ? 'On the location' : 'On the country'}</h3>
+        <Mods mods={g.mods} />
+      </div>
+    ))}
+    <Fragment slot="aside">
+      {entity.data.requires.length > 0 && (
+        <div class="panel">
+          <h3>Requires</h3>
+          <ul class="reqlist">{entity.data.requires.map((r: string) => <li>{r}</li>)}</ul>
+        </div>
+      )}
+      <div class="panel">
+        <h3>Granting</h3>
+        <div class="kv">
+          {entity.data.unlocked_by.length > 0 && (
+            <Fragment><span class="k">Unlocked by</span><span class="v">{entity.data.unlocked_by.join(', ')}</span></Fragment>
+          )}
+          <Fragment>
+            <span class="k">At conquest</span>
+            <span class="v">{entity.data.kept_at_conquest ? 'kept' : 'lost'}</span>
+          </Fragment>
+          {entity.data.boosts.length > 0 && (
+            <Fragment>
+              <span class="k">Boosts</span>
+              <span class="v">{entity.data.boosts.map((b: any, i: number) => (
+                <Fragment>{i > 0 && ', '}<Term id={b.id} label={b.label} showIcon={false} /></Fragment>
+              ))}</span>
+            </Fragment>
+          )}
+        </div>
+      </div>
+    </Fragment>
+  </EntityDetail>
+</Base>

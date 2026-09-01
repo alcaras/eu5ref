@@ -11,7 +11,7 @@
     "major": true,
     "requires": [
      "Can Have Monasteries",
-     "capital: has building: Monastery"
+     "capital: has building Monastery"
     ]
    },
    "desc": [
@@ -24,6 +24,7 @@
     "age": "Traditions",
     "government": "Theocracy",
     "requires": [
+     "Geography",
      "Other"
     ]
    },
@@ -3534,7 +3535,7 @@
      "is or was Knights Hospitaller",
      "has reform Crusade in the Sea",
      "overlord: has reform Crusade in the Sea",
-     "capital: Is Port",
+     "capital: is a port",
      "+1 more"
     ]
    },
@@ -3550,8 +3551,7 @@
     "requires": [
      "Country",
      "Geography",
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/reform/crusade-sea-reform.png",
@@ -6116,6 +6116,7 @@
     "government": null,
     "requires": [
      "Culture",
+     "Geography",
      "Reform",
      "Other"
     ]
@@ -20264,7 +20265,7 @@
     "requires": [
      "culture group is Micronesian",
      "culture group is Polynesian",
-     "capital: Is Port"
+     "capital: is a port"
     ]
    },
    "desc": [
@@ -20278,7 +20279,7 @@
     "government": null,
     "requires": [
      "Culture",
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/reform/wayfinders-reform.png",
@@ -20704,7 +20705,7 @@
      "value": "Event or script"
     },
     {
-     "count": 8,
+     "count": 11,
      "label": "Geography",
      "value": "Geography"
     },
@@ -20734,7 +20735,7 @@
      "value": "Organization"
     },
     {
-     "count": 65,
+     "count": 63,
      "label": "Other",
      "value": "Other"
     },

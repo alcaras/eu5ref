@@ -32,8 +32,14 @@ def val(obj, attr):
     return None
 
 
+# Every modifier block a simple dataset might declare. The toolkit models
+# each as its own attribute, so one missing name here is a silent drop: the
+# location ranks carry everything in `rank_modifier` and showed only their
+# two country modifiers until it was added.
 MOD_ATTRS = ('modifier', 'country_modifier', 'location_modifier',
-             'character_modifier', 'international_organization_modifier')
+             'character_modifier', 'international_organization_modifier',
+             'rank_modifier', 'unit_modifier', 'owned_location_modifier',
+             'leader_modifier', 'raw_modifier')
 
 # dataset → spec. facets/data values are attr names resolved via val().
 SPECS = {
@@ -58,8 +64,7 @@ SPECS = {
     'vegetation': dict(accessor='vegetation', etype='vegetation', facets={},
                        data=['combat_width', 'defender_dice_modifier',
                              'movement_cost']),
-    'town-rights': dict(accessor='town_rights', etype='town-right',
-                        facets={}, data=[]),
+    # town-rights has its own builder (scoped modifiers + requirements)
     'location-ranks': dict(accessor='location_ranks', etype='location-rank',
                            facets={}, data=[]),
     'parliament-types': dict(accessor='parliament_types', etype='parliament-type',

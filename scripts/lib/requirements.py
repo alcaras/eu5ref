@@ -20,11 +20,12 @@ import ref
 COUNTRY, GOV, RELIGION, CULTURE, GEO = 'Country', 'Government', 'Religion', 'Culture', 'Geography'
 AGE, INSTITUTION, ADVANCE = 'Age', 'Institution', 'Advance'
 LAW, REFORM, PRIVILEGE, ESTATE = 'Law', 'Reform', 'Privilege', 'Estate'
+URBAN = 'Urban right'
 ORG, SCRIPTED, ECONOMY, OTHER = 'Organization', 'Event or script', 'Economy', 'Other'
 NONE = 'No requirement'
 
 ORDER = [COUNTRY, GOV, RELIGION, CULTURE, GEO, AGE, INSTITUTION, ADVANCE,
-         LAW, REFORM, PRIVILEGE, ESTATE, ORG, ECONOMY, SCRIPTED, OTHER, NONE]
+         LAW, REFORM, PRIVILEGE, URBAN, ESTATE, ORG, ECONOMY, SCRIPTED, OTHER, NONE]
 
 # predicate → (category, phrasing). {} is filled with the resolved value.
 PREDICATES = {
@@ -62,6 +63,9 @@ PREDICATES = {
     'owns':                         (GEO, 'owns {}'),
     'num_of_ports':                 (GEO, 'ports {}'),
     'is_coastal':                   (GEO, 'is coastal'),
+    'is_port':                      (GEO, 'is a port'),
+    'location_rank':                (GEO, 'location is a {}'),
+    'has_building':                 (GEO, 'has building {}'),
 
     'current_age':                  (AGE, 'age is {}'),
     'current_age_or_later':         (AGE, 'age is {} or later'),
@@ -74,6 +78,7 @@ PREDICATES = {
     'has_policy':                   (LAW, 'runs policy {}'),
     'has_reform':                   (REFORM, 'has reform {}'),
     'has_estate_privilege':         (PRIVILEGE, 'has privilege {}'),
+    'has_town_rights':              (URBAN, 'has urban right {}'),
 
     'estate_power':                 (ESTATE, 'estate power {}'),
     'estate_satisfaction':          (ESTATE, 'estate satisfaction {}'),
@@ -113,6 +118,7 @@ _UNLOCK = {
     'has_unlocked_policy_trigger': (LAW, 'policy'),
     'has_unlocked_government_reform_trigger': (REFORM, 'reform'),
     'has_unlocked_estate_privilege_trigger': (PRIVILEGE, 'privilege'),
+    'has_unlocked_town_rights_trigger': (URBAN, 'urban right'),
 }
 
 # Scope changes — recurse, prefixing what we say with whose scope it is.

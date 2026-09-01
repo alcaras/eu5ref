@@ -119,9 +119,9 @@ h1, h2, h3 {
 .navsec { position: relative; }
 .navsec__label {
   color: var(--text-soft); padding: 4px 9px; border-radius: var(--radius-sm);
-  font-size: 13px; cursor: default; display: inline-block; white-space: nowrap;
+  font-size: 13px; cursor: pointer; display: inline-block; white-space: nowrap;
+  background: none; border: 0; font-family: inherit;
 }
-.navsec:hover .navsec__label { background: var(--bg-elev-2); color: var(--text); }
 .navsec--active .navsec__label { color: var(--gold); background: var(--gold-glow); }
 .navdrop {
   display: none; position: absolute; left: 0; top: 100%; z-index: 60;
@@ -129,8 +129,48 @@ h1, h2, h3 {
   background: var(--bg-elev); border: 1px solid var(--border);
   border-radius: var(--radius); box-shadow: var(--shadow-sm);
 }
-.navsec:hover .navdrop { display: flex; flex-direction: column; }
+.navsec.open .navdrop { display: flex; flex-direction: column; }
 .navdrop a { display: block; padding: 5px 9px; white-space: nowrap; }
+
+/* Hover opens a section only where hovering is a real gesture. On a phone
+   :hover sticks, which left every section expanded down the page. */
+@media (hover: hover) and (pointer: fine) {
+  .navsec:hover .navsec__label { background: var(--bg-elev-2); color: var(--text); }
+  .navsec:hover .navdrop { display: flex; flex-direction: column; }
+}
+
+/* ── narrow screens: collapse the nav behind a button ── */
+.nav-toggle {
+  display: none; margin-left: auto;
+  background: var(--bg-elev); color: var(--text-soft);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 16px; line-height: 1; padding: 6px 10px; cursor: pointer;
+}
+.nav-toggle[aria-expanded="true"] { color: var(--gold); border-color: var(--gold-deep); }
+
+@media (max-width: 820px) {
+  .site-header .wrap { flex-wrap: wrap; align-items: center; gap: 10px; }
+  .nav-toggle { display: block; }
+  .site-nav {
+    display: none; order: 3; width: 100%;
+    flex-direction: column; align-items: stretch; gap: 2px;
+    padding-bottom: 4px;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav > a, .navsec__label { padding: 8px 10px; font-size: 14px; }
+  .navsec { position: static; }
+  .navsec__label { display: block; width: 100%; text-align: left; }
+  .navdrop {
+    position: static; min-width: 0; box-shadow: none;
+    background: transparent; border: 0; border-left: 2px solid var(--border);
+    margin: 0 0 4px 10px; padding: 0 0 0 8px;
+  }
+  .navdrop a { padding: 7px 8px; font-size: 14px; }
+  .hdr-search { order: 2; margin-left: 0; flex: 1 1 160px; }
+  .hdr-search input { width: 100%; }
+  .hdr-search input:focus { width: 100%; }
+  .hdr-search__results { left: 0; right: 0; }
+}
 
 /* header search */
 .hdr-search { margin-left: auto; position: relative; }

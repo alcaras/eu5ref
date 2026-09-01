@@ -31,6 +31,7 @@ TYPE_PAGES = {
     'event': 'events',
     'area': 'areas',
     'mission': 'missions',
+    'town-right': 'urban-rights',
 }
 
 SKIP_FILES = {'entities.json', 'backlinks.json'}

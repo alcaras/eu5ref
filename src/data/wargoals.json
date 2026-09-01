@@ -394,7 +394,7 @@
     ],
     [
      "t",
-     "] of [game concept PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
+     "] of [game_concept_PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
     ],
     [
      "r",
@@ -458,7 +458,7 @@
     ],
     [
      "t",
-     "] of [game concept PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
+     "] of [game_concept_PROVINCE].<br />The independentists will gain ticking [Warscore] if they prevent their former ["
     ],
     [
      "r",

@@ -13,7 +13,20 @@
    "facets": {},
    "icon": "img/io/autocephalous-patriarchate.png",
    "id": "io:autocephalous_patriarchate",
-   "mods": [],
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_legitimacy",
+     "label": "Monthly Legitimacy",
+     "polarity": "good",
+     "value": "+0.05"
+    }
+   ],
    "name": "Autocephalous Patriarchate",
    "slug": "autocephalous-patriarchate",
    "type": "io"
@@ -63,7 +76,20 @@
    "facets": {},
    "icon": "img/io/catholic-league.png",
    "id": "io:catholic_league",
-   "mods": [],
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+3.00"
+    }
+   ],
    "name": "Catholic League",
    "slug": "catholic-league",
    "type": "io"
@@ -139,6 +165,12 @@
      "label": "Monthly Prestige",
      "polarity": "good",
      "value": "+0.02"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
     }
    ],
    "name": "Colonial Federation",
@@ -308,6 +340,12 @@
      "label": "Imperial Sanction",
      "polarity": "good",
      "value": "yes"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
     }
    ],
    "name": "Ghibellines",
@@ -344,6 +382,12 @@
      "label": "Excluded from Imperial Protection",
      "polarity": "good",
      "value": "yes"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
     }
    ],
    "name": "Guelphs",
@@ -374,6 +418,12 @@
      "label": "Cannot Become an Empire",
      "polarity": "good",
      "value": "yes"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
     }
    ],
    "name": "High Kingship",
@@ -430,6 +480,96 @@
      "label": "Max Archbishop-Elector",
      "polarity": "neutral",
      "value": "+3"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.20"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "max_diplomats",
+     "label": "Maximum Diplomats",
+     "polarity": "good",
+     "value": "+2.00"
+    },
+    {
+     "key": "diplomatic_range",
+     "label": "Diplomatic Range",
+     "polarity": "good",
+     "value": "+500.00"
+    },
+    {
+     "key": "fort_limit",
+     "label": "Fort Limit",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "num_possible_artists",
+     "label": "Possible Number of Artists",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "cultures_capacity",
+     "label": "Cultures Capacity",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "government_size",
+     "label": "Cabinet Seats",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "allowed_alliance",
+     "label": "Can Sign Alliance",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_guarantee",
+     "label": "Can Guarantee",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_support_rebels",
+     "label": "Can Support Rebels",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_intervene_in_war",
+     "label": "Can Intervene in War",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_enforce_peace",
+     "label": "Can Enforce Peace",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_threaten_war",
+     "label": "Can Threaten War",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "monthly_diplomats",
+     "label": "Monthly Diplomats",
+     "polarity": "good",
+     "value": "+0.50"
     }
    ],
    "name": "Holy Roman Empire",
@@ -454,6 +594,12 @@
      "label": "Cannot Become an Empire",
      "polarity": "good",
      "value": "yes"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.10"
     }
    ],
    "name": "Īlkhānān",
@@ -570,6 +716,12 @@
      "label": "Cannot Become an Empire",
      "polarity": "good",
      "value": "yes"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.10"
     }
    ],
    "name": "Japanese Shogunate",
@@ -618,6 +770,18 @@
      "label": "Monthly Tribal Cohesion",
      "polarity": "good",
      "value": "+0.03"
+    },
+    {
+     "key": "global_manpower_modifier",
+     "label": "Manpower",
+     "polarity": "good",
+     "value": "+10.00%"
+    },
+    {
+     "key": "slave_raid_efficiency",
+     "label": "Slave Raid Efficiency",
+     "polarity": "good",
+     "value": "+30.00%"
     }
    ],
    "name": "Jurchen Confederation",
@@ -636,7 +800,14 @@
    "facets": {},
    "icon": "img/io/lordship-of-ireland.png",
    "id": "io:lordship_of_ireland",
-   "mods": [],
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.02"
+    }
+   ],
    "name": "Lordship of Ireland",
    "slug": "lordship-of-ireland",
    "type": "io"
@@ -685,6 +856,36 @@
      "label": "Monthly Progress to Sinicized",
      "polarity": "neutral",
      "value": "+0.10"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.10"
+    },
+    {
+     "key": "cultures_capacity",
+     "label": "Cultures Capacity",
+     "polarity": "good",
+     "value": "+50.00"
+    },
+    {
+     "key": "diplomatic_capacity_modifier",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "allow_tributary_subject",
+     "label": "Allow Tributary Subjects",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "government_size",
+     "label": "Cabinet Seats",
+     "polarity": "good",
+     "value": "+1"
     }
    ],
    "name": "Middle Kingdom",
@@ -712,7 +913,20 @@
    "facets": {},
    "icon": "img/io/protestant-union.png",
    "id": "io:protestant_union",
-   "mods": [],
+   "mods": [
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+3.00"
+    }
+   ],
    "name": "Protestant Union",
    "slug": "protestant-union",
    "type": "io"
@@ -729,7 +943,14 @@
    "facets": {},
    "icon": "img/io/red-turban-rebels.png",
    "id": "io:red_turban_rebels",
-   "mods": [],
+   "mods": [
+    {
+     "key": "government_size",
+     "label": "Cabinet Seats",
+     "polarity": "good",
+     "value": "+1"
+    }
+   ],
    "name": "Red Turban Rebels",
    "slug": "red-turban-rebels",
    "type": "io"
@@ -820,6 +1041,18 @@
      "label": "Forbidden Unjustified Wars Against Other Members",
      "polarity": "neutral",
      "value": "yes"
+    },
+    {
+     "key": "monthly_tribal_cohesion",
+     "label": "Monthly Tribal Cohesion",
+     "polarity": "good",
+     "value": "+0.10"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.10"
     }
    ],
    "name": "Tatar Yoke",
@@ -850,6 +1083,18 @@
      "label": "Monthly Tribal Cohesion",
      "polarity": "good",
      "value": "+0.02"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "monthly_tribal_cohesion",
+     "label": "Monthly Tribal Cohesion",
+     "polarity": "good",
+     "value": "+0.05"
     }
    ],
    "name": "Tribal Confederation",

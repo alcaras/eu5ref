@@ -31,7 +31,20 @@
    "facets": {},
    "icon": "img/country-rank/rank-county.png",
    "id": "country-rank:rank_county",
-   "mods": [],
+   "mods": [
+    {
+     "key": "num_possible_rivals",
+     "label": "Possible Rivals",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "allowed_alliance",
+     "label": "Can Sign Alliance",
+     "polarity": "good",
+     "value": "yes"
+    }
+   ],
    "name": "County",
    "slug": "rank-county",
    "type": "country-rank"
@@ -66,7 +79,56 @@
    "facets": {},
    "icon": "img/country-rank/rank-duchy.png",
    "id": "country-rank:rank_duchy",
-   "mods": [],
+   "mods": [
+    {
+     "key": "diplomatic_range",
+     "label": "Diplomatic Range",
+     "polarity": "good",
+     "value": "+200.00"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.05"
+    },
+    {
+     "key": "num_possible_rivals",
+     "label": "Possible Rivals",
+     "polarity": "good",
+     "value": "+2"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "cultures_capacity",
+     "label": "Cultures Capacity",
+     "polarity": "good",
+     "value": "+0.50"
+    },
+    {
+     "key": "allowed_alliance",
+     "label": "Can Sign Alliance",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_guarantee",
+     "label": "Can Guarantee",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "mercenary_range_modifier",
+     "label": "Mercenary Range Modifier",
+     "polarity": "good",
+     "value": "+25.00%"
+    }
+   ],
    "name": "Duchy",
    "slug": "rank-duchy",
    "type": "country-rank"
@@ -92,7 +154,98 @@
    "facets": {},
    "icon": "img/country-rank/rank-empire.png",
    "id": "country-rank:rank_empire",
-   "mods": [],
+   "mods": [
+    {
+     "key": "max_diplomats",
+     "label": "Maximum Diplomats",
+     "polarity": "good",
+     "value": "+2.00"
+    },
+    {
+     "key": "diplomatic_range",
+     "label": "Diplomatic Range",
+     "polarity": "good",
+     "value": "+1000.00"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.20"
+    },
+    {
+     "key": "num_possible_rivals",
+     "label": "Possible Rivals",
+     "polarity": "good",
+     "value": "+4"
+    },
+    {
+     "key": "num_possible_artists",
+     "label": "Possible Number of Artists",
+     "polarity": "good",
+     "value": "+2"
+    },
+    {
+     "key": "fort_limit",
+     "label": "Fort Limit",
+     "polarity": "good",
+     "value": "+2.00"
+    },
+    {
+     "key": "cultures_capacity",
+     "label": "Cultures Capacity",
+     "polarity": "good",
+     "value": "+2.00"
+    },
+    {
+     "key": "government_size",
+     "label": "Cabinet Seats",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+3.00"
+    },
+    {
+     "key": "allowed_alliance",
+     "label": "Can Sign Alliance",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_guarantee",
+     "label": "Can Guarantee",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_support_rebels",
+     "label": "Can Support Rebels",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "mercenary_range_modifier",
+     "label": "Mercenary Range Modifier",
+     "polarity": "good",
+     "value": "+100.00%"
+    },
+    {
+     "key": "num_local_governors",
+     "label": "Number of Local Governors",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "ai_amount_of_parallel_charters",
+     "label": "AI Maximum Parallel Colonial Charters",
+     "polarity": "good",
+     "value": "+4"
+    }
+   ],
    "name": "Empire",
    "slug": "rank-empire",
    "type": "country-rank"
@@ -127,7 +280,92 @@
    "facets": {},
    "icon": "img/country-rank/rank-kingdom.png",
    "id": "country-rank:rank_kingdom",
-   "mods": [],
+   "mods": [
+    {
+     "key": "max_diplomats",
+     "label": "Maximum Diplomats",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "diplomatic_range",
+     "label": "Diplomatic Range",
+     "polarity": "good",
+     "value": "+500.00"
+    },
+    {
+     "key": "num_possible_rivals",
+     "label": "Possible Rivals",
+     "polarity": "good",
+     "value": "+3"
+    },
+    {
+     "key": "monthly_prestige",
+     "label": "Monthly Prestige",
+     "polarity": "good",
+     "value": "+0.10"
+    },
+    {
+     "key": "fort_limit",
+     "label": "Fort Limit",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "num_possible_artists",
+     "label": "Possible Number of Artists",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "cultures_capacity",
+     "label": "Cultures Capacity",
+     "polarity": "good",
+     "value": "+1.00"
+    },
+    {
+     "key": "diplomatic_capacity",
+     "label": "Diplomatic Capacity",
+     "polarity": "good",
+     "value": "+2.00"
+    },
+    {
+     "key": "allowed_alliance",
+     "label": "Can Sign Alliance",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_guarantee",
+     "label": "Can Guarantee",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "allowed_support_rebels",
+     "label": "Can Support Rebels",
+     "polarity": "good",
+     "value": "yes"
+    },
+    {
+     "key": "num_local_governors",
+     "label": "Number of Local Governors",
+     "polarity": "good",
+     "value": "+1"
+    },
+    {
+     "key": "mercenary_range_modifier",
+     "label": "Mercenary Range Modifier",
+     "polarity": "good",
+     "value": "+50.00%"
+    },
+    {
+     "key": "ai_amount_of_parallel_charters",
+     "label": "AI Maximum Parallel Colonial Charters",
+     "polarity": "good",
+     "value": "+2"
+    }
+   ],
    "name": "Kingdom",
    "slug": "rank-kingdom",
    "type": "country-rank"

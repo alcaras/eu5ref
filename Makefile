@@ -15,6 +15,7 @@ data:
 	$(PY) scripts/build_laws.py
 	$(PY) scripts/build_reforms.py
 	$(PY) scripts/build_estates.py
+	$(PY) scripts/build_town_rights.py
 	$(PY) scripts/build_religions.py
 	$(PY) scripts/build_cultures.py
 	$(PY) scripts/build_pops.py

@@ -114,6 +114,12 @@ export const TABS: Tab[] = [
     status: 'built',
     summary: 'Location ranks, town rights, and settlement growth',
   },
+  {
+    slug: 'urban-rights', icon: '🏙️', label: 'Urban Rights', section: 'Economy',
+    status: 'built',
+    summary: 'Every urban right — location effect, country effect, and who may grant it',
+  },
+
 
   // ── Society ───────────────────────────────────────────────────────
   {
