@@ -152,19 +152,24 @@ Press + Pike and Shot and nothing else.
 
 **But 383 advances declare no `requires`, no `depth` and no `in_tree_of`** —
 every focus advance, the building unlocks — and the tech screen still draws
-them inside one of those four trees (observed: Efficient Construction Plans,
-a Discovery adm focus advance, sits in the Surgery cluster). Every key used
-across all 3,178 advances was enumerated: only `requires` (2,769), `depth`
-(29), `in_tree_of` (33), `allow_children` (40, a leaf constraint) and
-`content_priority` (224, ordering within a national chain). **Nothing wires
-them. Which tree each one lands in is not derivable from the data, so we do
-NOT assign one** — a previous attempt attached every parentless advance to
-its age's ungated root and put them in visibly wrong places. They are
-reported as having no declared tree, and `in_tree_of = x` (33 advances,
-drawn in x's tree without being x's child) is honoured because that one IS
-declared. If this is ever settled — by reading the placement off the tech
-screen, or out of the binary — encode it in a separate flagged field, never
-in `branch_id`, so extracted fact stays distinguishable from inference.
+them inside one of those four trees. Every key used across all 3,178 advances
+was enumerated: only `requires` (2,769), `depth` (29), `in_tree_of` (33),
+`allow_children` (40, a leaf constraint) and `content_priority` (224, ordering
+within a national chain). Nothing wires them, so the placement is reasoned
+from four converging facts: each age has exactly ONE ungated root; the screen
+shows only the four clusters, so a parentless advance is inside one; the
+`in_tree_of` override is used 32 times out of 33 to point *into* an
+institution tree, the direction you would only need if the non-institution
+tree were the default; and Efficient Construction Plans, a parentless
+Discovery adm focus advance, was observed in the Surgery cluster.
+
+**That conclusion lives in `data.drawn_in` = {id, name, inferred}, never in
+`branch_id`.** `branch_id`/`tier` stay strictly file-declared (requires,
+depth, in_tree_of) so the planner's prerequisite maths is untouched;
+`drawn_in` is what the pages render, with an "inferred" badge when the files
+did not declare it. Don't merge the two, and don't drop the badge — an
+earlier pass wrote the guess straight into `branch_id` and it was wrong in
+ways nobody could see.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):

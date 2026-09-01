@@ -83,6 +83,34 @@ def main():
     # ── pass 2: branch + tier within each age ──────────────────
     # Parent = the first prerequisite in the same age (the files build each
     # age as a forest of chains; cross-age prereqs start a new local root).
+    # Where the tech screen draws an advance that declares no parent. The
+    # files never say, but four facts converge on the age's ungated root:
+    #  - each age from the Renaissance on declares exactly four `depth = 0`
+    #    roots — three institutions and one the files comment as the
+    #    "always-available free tree" (Surgery, Pharmacology, Sanitation,
+    #    Vaccination, renaissance_development);
+    #  - the tech screen shows exactly those four clusters and no more, so a
+    #    parentless advance is inside one of them;
+    #  - `in_tree_of` is the override for this, and 32 of its 33 uses point
+    #    INTO an institution tree — the direction you would only need if the
+    #    non-institution tree were the default;
+    #  - observed in game: Efficient Construction Plans, a parentless
+    #    Discovery adm focus advance, sits in the Surgery cluster.
+    # This is a conclusion, not an extracted field, so it is emitted
+    # separately as `data.drawn_in` with `inferred: true` and rendered as
+    # such. `branch_id` stays strictly file-declared.
+    free_root: dict[str, str] = {}
+    by_age: dict[str, list[str]] = {}
+    for name, r in recs.items():
+        if r['explicit_root']:
+            by_age.setdefault(r['age'], []).append(name)
+    for age, roots in by_age.items():
+        ungated = [n for n in roots
+                   if not any(str(x).startswith('has embraced institution')
+                              for x in (recs[n]['allow_state'] or []))]
+        if len(ungated) == 1:
+            free_root[age] = ungated[0]
+
     parent: dict[str, str | None] = {}
     # `in_tree_of = x` puts an advance in x's tree without making it x's
     # child — it is drawn there but needs no prerequisite. 33 advances use
@@ -127,6 +155,16 @@ def main():
         slug = slugify(name)
         national = bool(a.countries) or a.in_tree_of is not None or r['gate'] is not None
         root = root_of(name)
+        # Declared placement where there is one, else the reasoned one.
+        if root != name:
+            drawn_in = {'id': eid('advance', root), 'name': ename(recs[root]['obj']),
+                        'inferred': False}
+        elif r['explicit_root']:
+            drawn_in = None
+        else:
+            host = free_root.get(r['age'])
+            drawn_in = ({'id': eid('advance', host), 'name': ename(recs[host]['obj']),
+                         'inferred': True} if host else None)
         gate = r['gate']
         # Keep each literal's KIND and raw value alongside its label: the
         # planner needs to tell "another country's tag" (unreachable) from a
@@ -161,6 +199,7 @@ def main():
                 'countries': [c.display_name for c in (a.countries or [])],
                 'tree': ename(a.in_tree_of),
                 'specialization': getattr(a, 'age_specialization', None),
+                'drawn_in': drawn_in,
                 'gate': gate,
                 'gate_labels': gate_labels,
                 'gate_lits': gate_lits,

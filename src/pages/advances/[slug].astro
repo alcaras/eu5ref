@@ -21,18 +21,17 @@ const focus = FOCUS_NAME[(entity.data as any).specialization as string];
 // Which tree the advance sits on, and whether that tree's root is an
 // institution you must embrace or one of the ages' "always-available free
 // trees" (the files' own words: Surgery, Pharmacology, Sanitation…).
-// An advance with no `requires`, no `depth` and no `in_tree_of` is placed
-// on no tree by the files — that is reported as such, not guessed at. Its
-// gate is knowable either way: with no parent it can inherit no
-// institution, and it declares no `allow` of its own.
+// Where the files declare no tree, `drawn_in` carries the reasoned one (the
+// age's single ungated "free tree") flagged inferred — see build_advances.py.
 const byId: Record<string, any> = Object.fromEntries(data.entities.map((e: any) => [e.id, e]));
-const root = byId[(entity.data as any).branch_id];
-const rootIsSelf = !root || root.id === entity.id;
-const rootInstitution = !rootIsSelf && (root.data.requires_state || [])
+const drawnIn = (entity.data as any).drawn_in;
+const root = drawnIn ? byId[drawnIn.id] : null;
+const rootInstitution = !!root && (root.data.requires_state || [])
   .some((r: string) => r.startsWith('has embraced institution: '));
-const treeLabel = rootIsSelf
-  ? 'not declared · no institution'
-  : `${root.facets.branch} · ${rootInstitution ? 'institution' : 'free tree'}`;
+const treeLabel = !drawnIn
+  ? 'not declared'
+  : `${drawnIn.name} · ${rootInstitution ? 'institution' : 'free tree'}`
+    + (drawnIn.inferred ? ' (inferred)' : '');
 ---
 <Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>
   <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">

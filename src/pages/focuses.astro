@@ -41,13 +41,15 @@ const branchOf = (id: string) => byId[id]?.facets?.branch || null;
 // plus 1-2 free roots that look like institutions but need no embrace. An
 // advance that is its own root stands alone: no prerequisite, no embrace.
 const INSTITUTIONS = new Set(institutionsData.entities.map((i: any) => i.name));
+// `data.drawn_in` is the tree the advance is drawn in: declared by the files
+// where they declare one, otherwise the age's ungated "free tree", flagged
+// inferred. See the note above the grid.
 const rootOf = (e: any) => {
-  const root = byId[e.data.branch_id];
-  const self = !root || root.id === e.id;
-  const name = self ? null : root.facets.branch;
-  return { name, institution: !!name && INSTITUTIONS.has(name) };
+  const d = e.data.drawn_in;
+  if (!d) return { name: null, institution: false, inferred: false };
+  return { name: d.name, institution: INSTITUTIONS.has(d.name), inferred: d.inferred };
 };
-const TREE_STANDALONE = 'Standalone';
+const TREE_STANDALONE = 'Not declared';
 const treeName = (e: any) => rootOf(e).name || TREE_STANDALONE;
 
 const plain = (tokens: any[] | null) =>
@@ -75,8 +77,9 @@ const tableEntities = focusAdvances.map((e: any) => ({
   data: {
     ...e.data,
     tree_label: rootOf(e).name
-      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ' (free tree)'}`
-      : 'Not declared (no institution)',
+      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)'
+          : rootOf(e).inferred ? ' (free tree, inferred)' : ' (free tree)'}`
+      : 'Not declared',
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -128,10 +131,13 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       Each age from the Renaissance on declares four trees — its three
       <a href={`${base}institutions`}>institutions</a> and one ungated tree the
       files call the "always-available free tree" (Scholarly Treatises, Surgery,
-      Pharmacology, Sanitation, Vaccination). Most focus advances declare no
-      prerequisite and no tree at all; the tech screen still draws them inside
-      one of the four, but nothing in the data says which, so this page reports
-      the gate it can prove and leaves the placement blank.
+      Pharmacology, Sanitation, Vaccination). 116 of the 150 focus advances
+      declare no prerequisite and no tree, and the files never say where they
+      go — but each age has exactly one ungated root, `in_tree_of` (the
+      override) is only ever used to move something <em>into</em> an
+      institution tree, and the tech screen shows only those four clusters.
+      They are placed on the free tree on that reasoning and marked
+      <span class="fx-adv__inferred">inferred</span>.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
@@ -178,7 +184,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                     <div class="fx-adv__tree">
                       <span class="fx-adv__k">tree</span>
                       {rootOf(e).name === null ? (
-                        <span class="fx-adv__branch">not declared · no institution</span>
+                        <span class="fx-adv__branch">not declared</span>
                       ) : rootOf(e).institution ? (
                         <Fragment>
                           <a href={`${base}institutions`}>{rootOf(e).name}</a>
@@ -188,6 +194,12 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                         <Fragment>
                           {rootOf(e).name}
                           <span class="fx-adv__branch"> · free tree</span>
+                          {rootOf(e).inferred && (
+                            <span class="fx-adv__inferred"
+                                  title="The advance declares no prerequisite and no tree. Each age has exactly one ungated root — the files' own 'always-available free tree' — and the tech screen shows only the four trees, so this is where it lands.">
+                              {' '}inferred
+                            </span>
+                          )}
                         </Fragment>
                       )}
                     </div>
@@ -297,6 +309,11 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-adv__unlock { color: var(--gold-soft); }
   .fx-adv__branch { color: var(--text-faint); }
   .fx-adv__inst-tag { color: var(--gold-soft); }
+  .fx-adv__inferred {
+    font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-faint); border: 1px solid var(--border);
+    border-radius: 3px; padding: 0 4px; cursor: help;
+  }
   .fx-adv__k {
     font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--text-faint); margin-right: 5px;
