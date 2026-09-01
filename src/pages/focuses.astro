@@ -76,7 +76,7 @@ const tableEntities = focusAdvances.map((e: any) => ({
     ...e.data,
     tree_label: rootOf(e).name
       ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ' (free tree)'}`
-      : 'Standalone (free)',
+      : 'Not declared (no institution)',
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -90,7 +90,7 @@ const tableData = {
       options: ages.map((a: any) => ({ value: a.name, label: a.name, count: countBy('age', a.name) })) },
     { key: 'focus', label: 'Focus',
       options: FOCUSES.map((f) => ({ value: FOCUS_NAME[f.key], label: f.short, count: countBy('focus', FOCUS_NAME[f.key]) })) },
-    { key: 'gate', label: 'Gate',
+    { key: 'gate', label: 'Institution',
       options: ['Free', 'Needs an institution']
         .map((v) => ({ value: v, label: v, count: countBy('gate', v) }))
         .filter((o) => o.count > 0) },
@@ -169,7 +169,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                     <div class="fx-adv__tree">
                       <span class="fx-adv__k">tree</span>
                       {rootOf(e).name === null ? (
-                        <span class="fx-adv__branch">standalone · free</span>
+                        <span class="fx-adv__branch">not declared · no institution</span>
                       ) : rootOf(e).institution ? (
                         <Fragment>
                           <a href={`${base}institutions`}>{rootOf(e).name}</a>
