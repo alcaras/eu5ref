@@ -52,8 +52,8 @@ import Base from '../layouts/Base.astro';
       </label>
       <label class="pl-toggle" title="How much each card shows: icon only (name on hover), icon + name, or name + effects">
         cards <select data-pl-density>
-          <option value="i">icons</option>
-          <option value="c" selected>compact</option>
+          <option value="i" selected>icons</option>
+          <option value="c">compact</option>
           <option value="x">expanded</option>
         </select>
       </label>
@@ -401,7 +401,7 @@ import Base from '../layouts/Base.astro';
     let showMode = '';
     const showOther = () => showMode === 'all';
     // card density: 'i' icons only (name on hover) · 'c' icon + name · 'x' name + effects
-    let density: 'i' | 'c' | 'x' = 'c';
+    let density: 'i' | 'c' | 'x' = 'i';
     // modifier filter: the keys picked ("gives…"), OR-ed; and whether to
     // show the hits as a cross-age list instead of this age's trees
     const modSel: string[] = [];
@@ -484,7 +484,7 @@ import Base from '../layouts/Base.astro';
       if (ageIx) p.set('age', String(ageIx));
       if (showMode) p.set('show', showMode);
       if (density === 'x') p.set('x', '1');
-      else if (density === 'i') p.set('x', 'i');
+      else if (density === 'c') p.set('x', 'c');
       if (modSel.length) p.set('mod', modSel.join('~'));
       if (listView && modSel.length) p.set('mv', 'list');
       const fo = D.ages.map((_, i) => focusAt(i));
@@ -1201,7 +1201,7 @@ import Base from '../layouts/Base.astro';
       showMode = p.get('all') === '1' ? 'all' : (p.get('show') || '');
       if (!['', 'sure', 'all'].includes(showMode)) showMode = '';
       ($('[data-pl-show]') as HTMLSelectElement).value = showMode;
-      density = p.get('x') === '1' ? 'x' : p.get('x') === 'i' ? 'i' : 'c';
+      density = p.get('x') === '1' ? 'x' : p.get('x') === 'c' ? 'c' : 'i';
       ($('[data-pl-density]') as HTMLSelectElement).value = density;
       for (const k of (p.get('mod') || '').split('~')) if (k && D.modkeys[k] && !modSel.includes(k)) modSel.push(k);
       listView = p.get('mv') === 'list';
