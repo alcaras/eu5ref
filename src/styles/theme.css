@@ -209,6 +209,9 @@ h1, h2, h3 {
 .hdr-save.on .hdr-save__btn { border-color: var(--accent-2); color: var(--accent-2); }
 .hdr-save.off .hdr-save__btn { text-decoration: line-through; }
 .hdr-save__icon { opacity: .8; }
+/* `display: grid` on a class outranks the UA's [hidden] rule — without
+   this the save panel opened and never closed. */
+[hidden] { display: none !important; }
 .hdr-save__panel {
   position: absolute; right: 0; top: calc(100% + 6px); z-index: 70;
   width: 340px; padding: 12px; display: grid; gap: 10px;
