@@ -151,25 +151,27 @@ Confirmed in game: the Discovery tab shows Surgery + New World + Printing
 Press + Pike and Shot and nothing else.
 
 **But 383 advances declare no `requires`, no `depth` and no `in_tree_of`** —
-every focus advance, the building unlocks — and the tech screen still draws
-them inside one of those four trees. Every key used across all 3,178 advances
+every focus advance among them — and the tech screen still draws each one
+inside one of the age's four trees. Every key used across all 3,178 advances
 was enumerated: only `requires` (2,769), `depth` (29), `in_tree_of` (33),
-`allow_children` (40, a leaf constraint) and `content_priority` (224, ordering
-within a national chain). Nothing wires them, so the placement is reasoned
-from four converging facts: each age has exactly ONE ungated root; the screen
-shows only the four clusters, so a parentless advance is inside one; the
-`in_tree_of` override is used 32 times out of 33 to point *into* an
-institution tree, the direction you would only need if the non-institution
-tree were the default; and Efficient Construction Plans, a parentless
-Discovery adm focus advance, was observed in the Surgery cluster.
+`allow_children` (40, a leaf constraint) and `content_priority` (224,
+ordering within a national chain). **Nothing in the files wires them, and
+where they land is UNSOLVED.** `data.drawn_in` is emitted only for a
+declared placement; parentless advances get `null` and render as "not
+declared".
 
-**That conclusion lives in `data.drawn_in` = {id, name, inferred}, never in
-`branch_id`.** `branch_id`/`tier` stay strictly file-declared (requires,
-depth, in_tree_of) so the planner's prerequisite maths is untouched;
-`drawn_in` is what the pages render, with an "inferred" badge when the files
-did not declare it. Don't merge the two, and don't drop the badge — an
-earlier pass wrote the guess straight into `branch_id` and it was wrong in
-ways nobody could see.
+Two failed attempts, so don't repeat them: treating "no prereq" as "its own
+root" gives ~38 phantom roots per age (the screen shows four); attaching
+every parentless advance to the age's single ungated root looks defensible
+(each age has exactly one; `in_tree_of` is used 32 times out of 33 to point
+*into* an institution tree; one parentless Discovery adm focus advance was
+seen in the Surgery cluster) but predicts that no focus advance in the
+Reformation, Absolutism or Revolutions sits in an institution tree — while
+the Renaissance and Discovery ones demonstrably do, by declared prerequisite
+(Banking 7, Renaissance 4, Professional Armies 4, New World 4). The devs
+wiring those and then stopping for four straight ages is not credible, so
+there is a placement rule still to be found. Until it is, do not guess: an
+unplaced advance is reported unplaced.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):

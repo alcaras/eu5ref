@@ -392,11 +392,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -887,11 +883,7 @@
    "data": {
     "branch_id": "advance:a_magnanimous_empire",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -1009,11 +1001,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -1066,11 +1054,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -1213,11 +1197,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -1543,11 +1523,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -1744,11 +1720,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -1890,11 +1862,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -2147,11 +2115,7 @@
    "data": {
     "branch_id": "advance:absolutism_control_decline_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -2971,11 +2935,7 @@
    "data": {
     "branch_id": "advance:adaptability",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3018,11 +2978,7 @@
      "Tawantinsuyu",
      "Qusqu"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -3086,11 +3042,7 @@
    "data": {
     "branch_id": "advance:additional_colonists",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3130,11 +3082,7 @@
    "data": {
     "branch_id": "advance:additional_diplomats",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3174,11 +3122,7 @@
    "data": {
     "branch_id": "advance:additional_loyalist_recruitment",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3218,11 +3162,7 @@
    "data": {
     "branch_id": "advance:additional_merchants",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3262,11 +3202,7 @@
    "data": {
     "branch_id": "advance:administrative_leadership",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3485,11 +3421,7 @@
    "data": {
     "branch_id": "advance:advanced_bureaucracy",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -3906,11 +3838,7 @@
    "data": {
     "branch_id": "advance:agent_training",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -6150,11 +6078,7 @@
    "data": {
     "branch_id": "advance:alpha_and_omega",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -6382,11 +6306,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -6439,11 +6359,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -10060,11 +9976,7 @@
      "Armenia",
      "Moloka'i"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -10704,11 +10616,7 @@
    "data": {
     "branch_id": "advance:army_country_casus_belli_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -10748,11 +10656,7 @@
    "data": {
     "branch_id": "advance:army_country_diplo_range_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -10792,11 +10696,7 @@
    "data": {
     "branch_id": "advance:army_country_integration_speed_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -10836,11 +10736,7 @@
    "data": {
     "branch_id": "advance:army_country_looting_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -12273,11 +12169,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -12974,11 +12866,7 @@
    "data": {
     "branch_id": "advance:audit_checks",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -13877,11 +13765,7 @@
     "countries": [
      "Ottomans"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TUR"
@@ -14518,11 +14402,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -17957,11 +17837,7 @@
    "data": {
     "branch_id": "advance:bayonet_leaders",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -18273,11 +18149,7 @@
    "data": {
     "branch_id": "advance:benevolence",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -18374,11 +18246,7 @@
     "countries": [
      "Brandenburg"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRA"
@@ -20908,11 +20776,7 @@
     "countries": [
      "Bohemia"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BOH"
@@ -20971,11 +20835,7 @@
     "countries": [
      "Bohemia"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BOH"
@@ -21146,11 +21006,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -21214,11 +21070,7 @@
    "data": {
     "branch_id": "advance:bookkeeping",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -22407,11 +22259,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -22852,11 +22700,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -23350,11 +23194,7 @@
    "data": {
     "branch_id": "advance:buffer_states",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -25766,11 +25606,7 @@
    "data": {
     "branch_id": "advance:cabinet",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -25934,11 +25770,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -26003,11 +25835,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -26064,11 +25892,7 @@
    "data": {
     "branch_id": "advance:camp_followers",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -28423,11 +28247,7 @@
     "countries": [
      "Celtica"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CEL"
@@ -28480,11 +28300,7 @@
     "countries": [
      "Celtica"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CEL"
@@ -28590,11 +28406,7 @@
     "countries": [
      "Celtica"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CEL"
@@ -28647,11 +28459,7 @@
     "countries": [
      "Celtica"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CEL"
@@ -28704,11 +28512,7 @@
     "countries": [
      "Celtica"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CEL"
@@ -28882,11 +28686,7 @@
     "countries": [
      "Rome"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PAP"
@@ -28999,11 +28799,7 @@
    "data": {
     "branch_id": "advance:centralized_government",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -31324,11 +31120,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -32435,11 +32227,7 @@
    "data": {
     "branch_id": "advance:civil_servants",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -33577,11 +33365,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -33700,11 +33484,7 @@
    "data": {
     "branch_id": "advance:colonial_ambition",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -33747,11 +33527,7 @@
    "data": {
     "branch_id": "advance:colonial_assembly",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -33898,11 +33674,7 @@
    "data": {
     "branch_id": "advance:colonial_militia",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -34590,11 +34362,7 @@
    "data": {
     "branch_id": "advance:competetive_merchants",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -36305,11 +36073,7 @@
    "data": {
     "branch_id": "advance:continental_trade",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -36538,11 +36302,7 @@
    "data": {
     "branch_id": "advance:conviction_of_sin",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -36582,11 +36342,7 @@
    "data": {
     "branch_id": "advance:copper_bottoms",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -38888,11 +38644,7 @@
    "data": {
     "branch_id": "advance:counter_espionage_building_country_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -39431,11 +39183,7 @@
     "countries": [
      "Crimea"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CRI"
@@ -39494,11 +39242,7 @@
     "countries": [
      "Crimea"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CRI"
@@ -39604,11 +39348,7 @@
     "countries": [
      "Crimea"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CRI"
@@ -39661,11 +39401,7 @@
     "countries": [
      "Crimea"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CRI"
@@ -41557,11 +41293,7 @@
    "data": {
     "branch_id": "advance:crown_rights_laws_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -42002,11 +41734,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -42952,11 +42680,7 @@
     "countries": [
      "Carthage"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "CTH"
@@ -43237,11 +42961,7 @@
    "data": {
     "branch_id": "advance:cultural_ties",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -43333,11 +43053,7 @@
    "data": {
     "branch_id": "advance:cultures_capacity_mil_choice",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -47239,11 +46955,7 @@
    "data": {
     "branch_id": "advance:defensive_army",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -47283,11 +46995,7 @@
    "data": {
     "branch_id": "advance:defensive_mentality",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -47790,11 +47498,7 @@
    "data": {
     "branch_id": "advance:devoutness",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -47902,11 +47606,7 @@
    "data": {
     "branch_id": "advance:dip_choice_subject_opinions",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -47995,11 +47695,7 @@
    "data": {
     "branch_id": "advance:diplomatic_corps",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -48039,11 +47735,7 @@
    "data": {
     "branch_id": "advance:diplomatic_influence",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -48377,11 +48069,7 @@
    "data": {
     "branch_id": "advance:discipline_drills",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -48423,11 +48111,7 @@
     "countries": [
      "Brandenburg"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRA"
@@ -48929,11 +48613,7 @@
    "data": {
     "branch_id": "advance:divine_passion",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -48973,11 +48653,7 @@
    "data": {
     "branch_id": "advance:divine_supremacy",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -50090,11 +49766,7 @@
      "Tawantinsuyu",
      "Qusqu"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -50352,11 +50024,7 @@
    "data": {
     "branch_id": "advance:dry_dock_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -50961,11 +50629,7 @@
    "data": {
     "branch_id": "advance:dynamic_court",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -51622,11 +51286,7 @@
    "data": {
     "branch_id": "advance:economic_ideas",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -51720,11 +51380,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -51775,11 +51431,7 @@
    "data": {
     "branch_id": "advance:ecumenism",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -51821,11 +51473,7 @@
     "countries": [
      "Brandenburg"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRA"
@@ -52131,11 +51779,7 @@
    "data": {
     "branch_id": "advance:efficient_construction_plans",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -52224,11 +51868,7 @@
    "data": {
     "branch_id": "advance:efficient_mining",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -52280,11 +51920,7 @@
    "data": {
     "branch_id": "advance:efficient_spies",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -52326,11 +51962,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -52384,11 +52016,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -52452,11 +52080,7 @@
    "data": {
     "branch_id": "advance:emancipation",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -53263,11 +52887,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -53531,11 +53151,7 @@
    "data": {
     "branch_id": "advance:engineer_corps",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -53578,11 +53194,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -54578,11 +54190,7 @@
    "data": {
     "branch_id": "advance:escort_ships",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -54684,11 +54292,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -54741,11 +54345,7 @@
     "countries": [
      "Brittany"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRI"
@@ -54804,11 +54404,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "and",
      [
@@ -55236,11 +54832,7 @@
    "data": {
     "branch_id": "advance:expanded_infrastructure_network",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -55395,11 +54987,7 @@
    "data": {
     "branch_id": "advance:expanded_supply_trains",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -55503,11 +55091,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -55558,11 +55142,7 @@
    "data": {
     "branch_id": "advance:expansionism",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -56154,11 +55734,7 @@
    "data": {
     "branch_id": "advance:exploration",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -56306,11 +55882,7 @@
    "data": {
     "branch_id": "advance:export_building_country_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -56662,11 +56234,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -56968,11 +56536,7 @@
    "data": {
     "branch_id": "advance:fast_negotiations",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -57012,11 +56576,7 @@
    "data": {
     "branch_id": "advance:faster_colonists",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -59414,11 +58974,7 @@
    "data": {
     "branch_id": "advance:flesh_is_weak",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -59531,11 +59087,7 @@
    "data": {
     "branch_id": "advance:flexible_negotiation",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -60385,11 +59937,7 @@
    "data": {
     "branch_id": "advance:foreign_cultural_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -60432,11 +59980,7 @@
    "data": {
     "branch_id": "advance:foreign_embassies",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -60791,11 +60335,7 @@
    "data": {
     "branch_id": "advance:formal_administration",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -60835,11 +60375,7 @@
    "data": {
     "branch_id": "advance:formal_diplomacy",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -60879,11 +60415,7 @@
    "data": {
     "branch_id": "advance:formalized_officer_corps",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -61266,11 +60798,7 @@
    "data": {
     "branch_id": "advance:fort_logistics",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -61777,11 +61305,7 @@
    "data": {
     "branch_id": "advance:founding_fathers",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -61956,11 +61480,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62013,11 +61533,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62070,11 +61586,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62133,11 +61645,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62190,11 +61698,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62247,11 +61751,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -62310,11 +61810,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -63029,11 +62525,7 @@
    "data": {
     "branch_id": "advance:free_colonies",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -63073,11 +62565,7 @@
    "data": {
     "branch_id": "advance:free_merchants",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -63117,11 +62605,7 @@
    "data": {
     "branch_id": "advance:free_subjects",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -63161,11 +62645,7 @@
    "data": {
     "branch_id": "advance:free_thinkers",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -63208,11 +62688,7 @@
    "data": {
     "branch_id": "advance:free_trade",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -63254,11 +62730,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -63373,11 +62845,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -63607,11 +63075,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -64174,11 +63638,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "and",
      [
@@ -64309,11 +63769,7 @@
    "data": {
     "branch_id": "advance:garrison_conscription",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -64833,11 +64289,7 @@
     "countries": [
      "Prussia"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PRU"
@@ -66794,11 +66246,7 @@
     "countries": [
      "Germany"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "GER"
@@ -68107,11 +67555,7 @@
    "data": {
     "branch_id": "advance:global_empire",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -68304,11 +67748,7 @@
    "data": {
     "branch_id": "advance:global_supply_limit_modifier_advance_6",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -68490,11 +67930,7 @@
     "countries": [
      "Rome"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PAP"
@@ -68547,11 +67983,7 @@
     "countries": [
      "Mali"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MAL"
@@ -68610,11 +68042,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -70130,11 +69558,7 @@
    "data": {
     "branch_id": "advance:grand_army",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -70174,11 +69598,7 @@
    "data": {
     "branch_id": "advance:grand_banquets",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -70535,11 +69955,7 @@
    "data": {
     "branch_id": "advance:grand_navy",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -70579,11 +69995,7 @@
    "data": {
     "branch_id": "advance:grand_shipyard_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -75747,11 +75159,7 @@
     "countries": [
      "Brandenburg"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRA"
@@ -75810,11 +75218,7 @@
     "countries": [
      "Brandenburg"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRA"
@@ -76557,11 +75961,7 @@
    "data": {
     "branch_id": "advance:horde_ardor",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -76993,11 +76393,7 @@
    "data": {
     "branch_id": "advance:house_of_parliament_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -78796,11 +78192,7 @@
    "data": {
     "branch_id": "advance:humanism",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -78840,11 +78232,7 @@
    "data": {
     "branch_id": "advance:humanist_tolerance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -80186,11 +79574,7 @@
      "Muscovy",
      "Russia"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -81780,11 +81164,7 @@
    "data": {
     "branch_id": "advance:improved_foraging",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -81824,11 +81204,7 @@
    "data": {
     "branch_id": "advance:improved_logistics",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -81868,11 +81244,7 @@
    "data": {
     "branch_id": "advance:improved_manuever",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -81912,11 +81284,7 @@
    "data": {
     "branch_id": "advance:improved_rams",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -81956,11 +81324,7 @@
    "data": {
     "branch_id": "advance:improved_shipyards",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -82638,11 +82002,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -82943,11 +82303,7 @@
    "data": {
     "branch_id": "advance:indirect_rule",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -83608,11 +82964,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -83798,11 +83150,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -84449,11 +83797,7 @@
    "data": {
     "branch_id": "advance:international_nobility",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -86222,11 +85566,7 @@
     "countries": [
      "Ireland"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "IRE"
@@ -86279,11 +85619,7 @@
     "countries": [
      "Ireland"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "IRE"
@@ -86336,11 +85672,7 @@
     "countries": [
      "Ireland"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "IRE"
@@ -89378,11 +88710,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -89778,11 +89106,7 @@
     "countries": [
      "Prussia"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PRU"
@@ -90782,11 +90106,7 @@
     "countries": [
      "Kanem"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KBO"
@@ -91107,11 +90427,7 @@
     "countries": [
      "Ottomans"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TUR"
@@ -95820,11 +95136,7 @@
    "data": {
     "branch_id": "advance:land_morale_movement_cost_rev_choice_mil",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -95981,11 +95293,7 @@
    "data": {
     "branch_id": "advance:land_of_opportunity",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -96214,11 +95522,7 @@
    "data": {
     "branch_id": "advance:land_of_the_rus",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "russian_group"
@@ -97112,11 +96416,7 @@
     "countries": [
      "Ottomans"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TUR"
@@ -97535,11 +96835,7 @@
     "countries": [
      "Brittany"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BRI"
@@ -97903,11 +97199,7 @@
    "data": {
     "branch_id": "advance:legislative_efficiency_idea",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -98098,11 +97390,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "and",
      [
@@ -98166,11 +97454,7 @@
    "data": {
     "branch_id": "advance:liberty_heroes",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -99400,11 +98684,7 @@
      "Tawantinsuyu",
      "Qusqu"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -99519,11 +98799,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -99675,11 +98951,7 @@
    "data": {
     "branch_id": "advance:local_traditions",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -104556,11 +103828,7 @@
     "countries": [
      "Mali"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MAL"
@@ -104653,11 +103921,7 @@
    "data": {
     "branch_id": "advance:manufacturing_center",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -105825,11 +105089,7 @@
     "countries": [
      "Mali"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MAL"
@@ -105954,11 +105214,7 @@
    "data": {
     "branch_id": "advance:martyrs",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -105998,11 +105254,7 @@
    "data": {
     "branch_id": "advance:mass_army",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -106042,11 +105294,7 @@
    "data": {
     "branch_id": "advance:massed_battery",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -107352,11 +106600,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -107423,11 +106667,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -107819,11 +107059,7 @@
    "data": {
     "branch_id": "advance:merchant_adventures",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -107863,11 +107099,7 @@
    "data": {
     "branch_id": "advance:merchant_marine",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -108167,11 +107399,7 @@
    "data": {
     "branch_id": "advance:merchant_power_from_maritime_rev_dip_choice",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -110499,11 +109727,7 @@
    "data": {
     "branch_id": "advance:military_drill",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -110778,11 +110002,7 @@
    "data": {
     "branch_id": "advance:military_traditions",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -110881,11 +110101,7 @@
     "countries": [
      "Ottomans"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TUR"
@@ -111409,11 +110625,7 @@
    "data": {
     "branch_id": "advance:minting_income_factor_building",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -111453,11 +110665,7 @@
    "data": {
     "branch_id": "advance:minting_trade_range_disc_building",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -111537,11 +110745,7 @@
    "data": {
     "branch_id": "advance:missionary_schools",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -112247,11 +111451,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -114049,11 +113249,7 @@
    "data": {
     "branch_id": "advance:morale_recovery_rev_dip_choice",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -114206,11 +113402,7 @@
     "countries": [
      "Muscovy"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MOS"
@@ -115744,11 +114936,7 @@
      "Sweden",
      "Finland"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -116613,11 +115801,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -116670,11 +115854,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -117158,11 +116338,7 @@
    "data": {
     "branch_id": "advance:national_assemblies_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117205,11 +116381,7 @@
    "data": {
     "branch_id": "advance:national_bank",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117315,11 +116487,7 @@
    "data": {
     "branch_id": "advance:national_conscripts",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117481,11 +116649,7 @@
    "data": {
     "branch_id": "advance:national_trade",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117525,11 +116689,7 @@
    "data": {
     "branch_id": "advance:national_trade_policy",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117569,11 +116729,7 @@
    "data": {
     "branch_id": "advance:nationalistic_enthusiasm",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -117667,11 +116823,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -119025,11 +118177,7 @@
    "data": {
     "branch_id": "advance:naval_base_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -119072,11 +118220,7 @@
    "data": {
     "branch_id": "advance:naval_battery_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -119119,11 +118263,7 @@
    "data": {
     "branch_id": "advance:naval_cadets",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -119215,11 +118355,7 @@
    "data": {
     "branch_id": "advance:naval_drill",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -119259,11 +118395,7 @@
    "data": {
     "branch_id": "advance:naval_fighting_instruction",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -119854,11 +118986,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -121791,11 +120919,7 @@
    "data": {
     "branch_id": "advance:new_frontiers",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "?",
      "is subject type"
@@ -121846,11 +120970,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -122377,11 +121497,7 @@
    "data": {
     "branch_id": "advance:noble_officers",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -122437,11 +121553,7 @@
    "data": {
     "branch_id": "advance:noble_resilience",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -123360,11 +122472,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -123485,11 +122593,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -124412,11 +123516,7 @@
    "data": {
     "branch_id": "advance:oak_forests_for_ships",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -124888,11 +123988,7 @@
    "data": {
     "branch_id": "advance:offensive_army",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -125369,11 +124465,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -125831,11 +124923,7 @@
    "data": {
     "branch_id": "advance:optimism",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -126000,11 +125088,7 @@
    "data": {
     "branch_id": "advance:organised_construction",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -126044,11 +125128,7 @@
    "data": {
     "branch_id": "advance:organised_mercenary_payment",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -126820,11 +125900,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -127120,11 +126196,7 @@
    "data": {
     "branch_id": "advance:ostrog_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "russian_group"
@@ -127434,11 +126506,7 @@
     "countries": [
      "Ottomans"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TUR"
@@ -128117,11 +127185,7 @@
    "data": {
     "branch_id": "advance:overseas_merchants",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -132996,11 +132060,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -134567,11 +133627,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -135829,11 +134885,7 @@
     "countries": [
      "Muscovy"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MOS"
@@ -137411,11 +136463,7 @@
    "data": {
     "branch_id": "advance:port_cost_distance_from_capital_choice_mil",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -137586,11 +136634,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -137709,11 +136753,7 @@
    "data": {
     "branch_id": "advance:postal_service",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -138440,11 +137480,7 @@
    "data": {
     "branch_id": "advance:preaching_missions",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -138566,11 +137602,7 @@
      "Muscovy",
      "Russia"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -138841,11 +137873,7 @@
    "data": {
     "branch_id": "advance:press_gangs",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -138887,11 +137915,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -139561,11 +138585,7 @@
    "data": {
     "branch_id": "advance:private_to_marshal",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -139656,11 +138676,7 @@
     "countries": [
      "Sweden"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SWE"
@@ -141336,11 +140352,7 @@
    "data": {
     "branch_id": "advance:quality_education",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -141487,11 +140499,7 @@
      "Tawantinsuyu",
      "Qusqu"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -143819,11 +142827,7 @@
     "countries": [
      "Mali"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MAL"
@@ -143876,11 +142880,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -144894,11 +143894,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -145326,11 +144322,7 @@
    "data": {
     "branch_id": "advance:regimental_system",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -145571,11 +144563,7 @@
    "data": {
     "branch_id": "advance:regulation_bureau",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -146053,11 +145041,7 @@
    "data": {
     "branch_id": "advance:religious_tradition",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -146097,11 +145081,7 @@
    "data": {
     "branch_id": "advance:religious_unification",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -146669,11 +145649,7 @@
    "data": {
     "branch_id": "advance:repair_at_sea",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -147428,11 +146404,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -147747,11 +146719,7 @@
    "data": {
     "branch_id": "advance:rgo_build_time_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -147889,11 +146857,7 @@
    "data": {
     "branch_id": "advance:rgo_logistics_mil_choice",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -151747,11 +150711,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -152251,11 +151211,7 @@
    "data": {
     "branch_id": "advance:russian_legitimization",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "russian_group"
@@ -152966,11 +151922,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -153805,11 +152757,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -155933,11 +154881,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -156004,11 +154948,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -156151,11 +155091,7 @@
      "Meissen",
      "Saxony"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -158246,11 +157182,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -158353,11 +157285,7 @@
    "data": {
     "branch_id": "advance:sea_hawks",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -158732,11 +157660,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -160861,11 +159785,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -160922,11 +159842,7 @@
    "data": {
     "branch_id": "advance:sheltered_ports",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -161164,11 +160080,7 @@
    "data": {
     "branch_id": "advance:ships_penny",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -161208,11 +160120,7 @@
    "data": {
     "branch_id": "advance:shipyard_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -162984,11 +161892,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -163801,11 +162705,7 @@
     "countries": [
      "Oman"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "OMA"
@@ -166280,11 +165180,7 @@
     "countries": [
      "Samtskhe"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SME"
@@ -166769,11 +165665,7 @@
    "data": {
     "branch_id": "advance:smithian_economics",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -167510,11 +166402,7 @@
     "countries": [
      "Ethiopia"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "ETH"
@@ -169103,11 +167991,7 @@
    "data": {
     "branch_id": "advance:square_rigged_caravel",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "iberian_group"
@@ -169224,11 +168108,7 @@
    "data": {
     "branch_id": "advance:standardisation_of_calibre",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -169368,11 +168248,7 @@
     "countries": [
      "Prussia"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PRU"
@@ -169643,11 +168519,7 @@
    "data": {
     "branch_id": "advance:state_propaganda",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -169996,11 +168868,7 @@
    "data": {
     "branch_id": "advance:steppe_horde_tribal_cultural_identity_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -170043,11 +168911,7 @@
    "data": {
     "branch_id": "advance:steppe_horde_tribal_modernization_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -170090,11 +168954,7 @@
    "data": {
     "branch_id": "advance:steppe_horde_tribal_religious_values_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -170690,11 +169550,7 @@
     "countries": [
      "Muscovy"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MOS"
@@ -171502,11 +170358,7 @@
    "data": {
     "branch_id": "advance:sudano_sahelian_architecture_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "west_african_group"
@@ -172245,11 +171097,7 @@
    "data": {
     "branch_id": "advance:superior_firepower",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -172289,11 +171137,7 @@
    "data": {
     "branch_id": "advance:superior_seamanship",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -172688,11 +171532,7 @@
    "data": {
     "branch_id": "advance:supply_trains",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -173651,11 +172491,7 @@
     "countries": [
      "Sweden"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SWE"
@@ -173851,11 +172687,7 @@
     "countries": [
      "Sweden"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SWE"
@@ -174977,11 +173809,7 @@
    "data": {
     "branch_id": "advance:table_of_ranks",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "russian_group"
@@ -176062,11 +174890,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176187,11 +175011,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176250,11 +175070,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176307,11 +175123,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176364,11 +175176,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176421,11 +175229,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176478,11 +175282,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176603,11 +175403,7 @@
     "countries": [
      "Teutons"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TEU"
@@ -176666,11 +175462,7 @@
     "countries": [
      "Prussia"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "PRU"
@@ -177511,11 +176303,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -177761,11 +176549,7 @@
    "data": {
     "branch_id": "advance:the_mestnichestvo_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "cgrp",
      "russian_group"
@@ -177819,11 +176603,7 @@
    "data": {
     "branch_id": "advance:the_old_and_infirm",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -177925,11 +176705,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -178115,11 +176891,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -178172,11 +176944,7 @@
     "countries": [
      "Knights Hospitaller"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "KNI"
@@ -178881,11 +177649,7 @@
    "data": {
     "branch_id": "advance:the_young_can_serve",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -181152,11 +179916,7 @@
     "countries": [
      "Tenōchtitlan"
     ],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TNC"
@@ -182627,11 +181387,7 @@
    "data": {
     "branch_id": "advance:trade_center_building_country_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -182801,11 +181557,7 @@
    "data": {
     "branch_id": "advance:trade_manipulation",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -183241,11 +181993,7 @@
    "data": {
     "branch_id": "advance:tradition_of_payment",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -183406,11 +182154,7 @@
     "countries": [
      "Songhai"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "SON"
@@ -184319,11 +183063,7 @@
     "countries": [
      "Trebizond"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "TRE"
@@ -184570,11 +183310,7 @@
    "data": {
     "branch_id": "advance:tribal_cultural_identity_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -184617,11 +183353,7 @@
    "data": {
     "branch_id": "advance:tribal_migration_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -184664,11 +183396,7 @@
    "data": {
     "branch_id": "advance:tribal_modernization_law_advance",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -194006,11 +192734,7 @@
     "countries": [
      "Bohemia"
     ],
-    "drawn_in": {
-     "id": "advance:renaissance_development",
-     "inferred": true,
-     "name": "Scholarly Treatises"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "BOH"
@@ -195209,11 +193933,7 @@
     "countries": [
      "France"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "FRA"
@@ -196454,11 +195174,7 @@
    "data": {
     "branch_id": "advance:vetting",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -196547,11 +195263,7 @@
    "data": {
     "branch_id": "advance:vice_roys",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -199098,11 +197810,7 @@
    "data": {
     "branch_id": "advance:wampum",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:surgery_advance",
-     "inferred": true,
-     "name": "Surgery"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -199984,11 +198692,7 @@
    "data": {
     "branch_id": "advance:watchers_of_the_silk_road",
     "countries": [],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": null,
     "gate_labels": [],
     "gate_lits": [],
@@ -200031,11 +198735,7 @@
      "England",
      "Great Britain"
     ],
-    "drawn_in": {
-     "id": "advance:vaccination_advance",
-     "inferred": true,
-     "name": "Vaccination"
-    },
+    "drawn_in": null,
     "gate": [
      "or",
      [
@@ -200508,11 +199208,7 @@
     "countries": [
      "Mali"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MAL"
@@ -201089,11 +199785,7 @@
     "countries": [
      "Poland"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "POL"
@@ -201221,11 +199913,7 @@
     "countries": [
      "Norway"
     ],
-    "drawn_in": {
-     "id": "advance:sanitation_advance",
-     "inferred": true,
-     "name": "Sanitation"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "NOR"
@@ -202353,11 +201041,7 @@
     "countries": [
      "Muscovy"
     ],
-    "drawn_in": {
-     "id": "advance:pharmacology_advance",
-     "inferred": true,
-     "name": "Pharmacology"
-    },
+    "drawn_in": null,
     "gate": [
      "tag",
      "MOS"

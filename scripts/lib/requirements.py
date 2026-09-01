@@ -27,6 +27,18 @@ NONE = 'No requirement'
 ORDER = [COUNTRY, GOV, RELIGION, CULTURE, GEO, AGE, INSTITUTION, ADVANCE,
          LAW, REFORM, PRIVILEGE, URBAN, ESTATE, ORG, ECONOMY, SCRIPTED, OTHER, NONE]
 
+# Does a condition say WHO you must be (nobody can change their tag, culture,
+# religion or capital region on a whim), or only WHAT you must have done?
+# Only a POSITIVE identity condition narrows the field: "not a Steppe Horde"
+# still leaves the reform open to almost everyone, so it does not count.
+IDENTITY = {COUNTRY, GOV, RELIGION, CULTURE, GEO}
+# …except the geography predicates that are about what you hold, not who you
+# are — a port can be conquered, a capital's region cannot.
+ACQUIRABLE_PREDICATES = {'owns', 'num_of_ports', 'is_coastal', 'is_port',
+                         'has_building', 'location_rank', 'is_produced_in_market'}
+ANY_COUNTRY = 'Any country'
+SOME_COUNTRIES = 'Specific countries'
+
 # predicate → (category, phrasing). {} is filled with the resolved value.
 PREDICATES = {
     'has_or_had_tag':               (COUNTRY, 'is or was {}'),
@@ -172,26 +184,38 @@ def _cmp(block) -> str:
 
 
 class _Walk:
+    """A negated condition is an EXCLUSION, not a requirement. `NOT = {
+    has_town_rights = fuero_juzgo }` means this right and Fuero Juzgo cannot
+    both be held — reading that as "requires an urban right" made the facet
+    useless and the sentence wrong. The two are kept apart, and only the
+    positive side decides the tags and whether the thing is identity-locked.
+    """
+
     def __init__(self, limit: int):
         self.lines: list[str] = []
+        self.excludes: list[str] = []
         self.tags: set[str] = set()
+        self.identity = False
         self.limit = limit
         self.dropped = 0
 
-    def add(self, tag: str, line: str | None, negate: bool, scope: str | None):
-        self.tags.add(tag)
+    def add(self, tag: str, line: str | None, negate: bool, scope: str | None,
+            key: str | None = None):
+        if not negate:
+            self.tags.add(tag)
+            if tag in IDENTITY and key not in ACQUIRABLE_PREDICATES:
+                self.identity = True
         if line is None:
             return
         if scope:
             line = f'{scope}: {line}'
-        if negate:
-            line = f'not — {line}'
-        if line in self.lines:
+        bucket = self.excludes if negate else self.lines
+        if line in bucket:
             return
-        if len(self.lines) >= self.limit:
+        if len(bucket) >= self.limit:
             self.dropped += 1
             return
-        self.lines.append(line)
+        bucket.append(line)
 
     def walk(self, tree, depth=0, negate=False, scope=None):
         if depth > 6 or not hasattr(tree, 'iterate_with_duplicates'):
@@ -217,7 +241,7 @@ class _Walk:
                         if str(k2) == 'type':
                             what_name = _label(v2)
                 self.add(tag, f'the {what} has been unlocked'
-                              + (f' ({what_name})' if what_name else ''), negate, scope)
+                              + (f' ({what_name})' if what_name else ''), negate, scope, key)
                 continue
             if key in _PARAMS and not nested:
                 continue
@@ -231,7 +255,7 @@ class _Walk:
                         inner_group = _label(v2)
                 if inner_group and spec:
                     self.add(spec[0], f'{key.replace("_", " ")} group is {inner_group}',
-                             negate, scope)
+                             negate, scope, key)
                     continue
                 comparison = _cmp(v)
                 if comparison:
@@ -239,9 +263,9 @@ class _Walk:
                     # its phrasing; unknown → the predicate's own name, never
                     # the bare operator.
                     if spec:
-                        self.add(spec[0], spec[1].format(comparison), negate, scope)
+                        self.add(spec[0], spec[1].format(comparison), negate, scope, key)
                     else:
-                        self.add(OTHER, f'{_pretty_key(key)} {comparison}', negate, scope)
+                        self.add(OTHER, f'{_pretty_key(key)} {comparison}', negate, scope, key)
                     continue
                 if key in _SCOPES:
                     self.walk(v, depth + 1, negate, _SCOPES[key] or scope)
@@ -256,12 +280,13 @@ class _Walk:
                 continue
             if spec:
                 tag, phrase = spec
-                self.add(tag, phrase.format(_label(v)) if '{}' in phrase else phrase, negate, scope)
+                self.add(tag, phrase.format(_label(v)) if '{}' in phrase else phrase,
+                         negate, scope, key)
             elif val in ('yes', 'no', 'True', 'False'):
                 # the parser hands booleans back as Python True, not "yes"
-                self.add(OTHER, _pretty_key(key), negate ^ (val in ('no', 'False')), scope)
+                self.add(OTHER, _pretty_key(key), negate ^ (val in ('no', 'False')), scope, key)
             else:
-                self.add(OTHER, f'{_pretty_key(key).lower()}: {_label(v)}', negate, scope)
+                self.add(OTHER, f'{_pretty_key(key).lower()}: {_label(v)}', negate, scope, key)
 
     def custom_tooltip(self, block, depth, negate, scope):
         """The game's own sentence for a condition it chose to phrase itself."""
@@ -278,10 +303,10 @@ class _Walk:
                 text = _loc(v)
             else:
                 rest.append((k, v))
-        before = len(self.lines)
+        before = len(self.lines) + len(self.excludes)
         for k, v in rest:
             self.walk(_Pair(k, v), depth + 1, negate, scope)
-        if text and len(self.lines) == before:
+        if text and len(self.lines) + len(self.excludes) == before:
             self.add(SCRIPTED, text, negate, scope)
 
 
@@ -295,7 +320,14 @@ class _Pair:
 
 
 def describe(*trees, limit: int = 6) -> dict:
-    """Trigger blocks → {'lines': [...], 'tags': [...]} for display + faceting."""
+    """Trigger blocks → what a player needs to know.
+
+    lines        positive conditions, in the game's terms
+    excludes     conditions that must NOT hold (mutually exclusive things)
+    tags         categories of the positive conditions, for faceting
+    availability 'Any country' | 'Specific countries' — the one question
+                 worth a chip: can I take this, or is it someone else's?
+    """
     w = _Walk(limit)
     for t in trees:
         w.walk(t)
@@ -303,4 +335,9 @@ def describe(*trees, limit: int = 6) -> dict:
     lines = list(w.lines)
     if w.dropped:
         lines.append(f'+{w.dropped} more')
-    return {'lines': lines, 'tags': tags or [NONE]}
+    return {
+        'lines': lines,
+        'excludes': list(w.excludes),
+        'tags': tags or [NONE],
+        'availability': SOME_COUNTRIES if w.identity else ANY_COUNTRY,
+    }
