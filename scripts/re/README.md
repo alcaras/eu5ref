@@ -59,3 +59,24 @@ Advance fields seen: +0x258 parent (`requires`), +0x260 `in_tree_of`,
 +0x1c4 / +0x268 / +0x548 visibility discriminators, +0x544 depth.
 Tree node fields: +0x10 depth, +0x18 advance, +0x20/+0x2c child array,
 +0x38 subtree width.
+
+## Verifying against saves
+
+A melted EU5 save carries `researched_advances={ key=yes … }` per country —
+~2,400 countries in a mid-game multiplayer save. Since the computed edges are
+real prerequisites, every country that has an advance must also have its
+ancestors, which makes the saves a **verifier**: a claimed parent P for A is
+refuted the moment one country has A without P.
+
+- `savesets.py <save.eu5> <out.json>` — extract the per-country sets.
+- `chain.py` — which focus advances are ancestors of which.
+- `prereq.py <advance…>` — the implied ancestor set of an advance.
+- `control2.py [--gen]` — measures how well "deepest implied ancestor"
+  recovers a KNOWN declared parent. It gets 193/279 on general-scope
+  advances, so the saves are **not** good enough to *derive* parents:
+  countries research in correlated orders, and a player who takes the
+  administrative focus twice makes both ages' focus advances look like
+  ancestors of each other.
+
+Caveat: the saves in `~/Dropbox/cc/eu5stats/save` are game version 1.0.10
+while `game/` is 1.3.11, so the trees need not match.
