@@ -141,6 +141,7 @@ def main():
             'data': {
                 'tier': pl['depth'] - 1,
                 'tree_index': pl['tree_index'],
+                'tree_slot': pl['slot'],          # left-to-right among its siblings
                 'branch_id': eid('advance', root),
                 'requires': ref_list(r['requires'], 'advance'),
                 'countries': [c.display_name for c in (a.countries or [])],

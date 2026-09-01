@@ -5,13 +5,16 @@ import Base from '../layouts/Base.astro';
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
   <p class="pl-intro">
-    The advances screen: <b>age tabs</b>, then one pane per branch, laid out
+    The advances screen: <b>age tabs</b>, then one pane per tree, laid out
     top-down like the game — each prerequisite tier is a row, and what it
-    leads to sits underneath. Same trees, tiers and edges as in game, in the
-    same left-to-right order, so nothing needs mentally rotating. A dashed
-    edge marks an advance whose files declare no prerequisite: the game
-    slots it into a tree when it loads, and that placement is reproduced
-    here. Click a pane header to collapse it.
+    leads to sits underneath. Same trees, tiers, edges and left-to-right
+    order as in game, so nothing needs mentally rotating. A dashed edge
+    marks an advance whose files declare no prerequisite: the game slots it
+    into a tree when it loads, and that placement is reproduced here from
+    the game files and checked against the tech screen. The <b>age focus</b>
+    buttons are the pick you make at each age change — the trees show the
+    focus you chose, with its advances marked ◈ where the game draws them.
+    Click a pane header to collapse it.
     Pick a country and everything that can never apply to it disappears —
     usually about two thirds of the 3,178 advances.
     <b>Hover</b> to light up an advance's whole prerequisite chain,
@@ -143,11 +146,8 @@ import Base from '../layouts/Base.astro';
       font-family: var(--font-ui);
     }
     .pl-choices__bar button.on { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
-    .pl-choices__list {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 4px; margin-top: 8px;
-    }
-    .pl-choices__list .pnode { position: static; width: auto; }
+    .pl-choices__hint { font-size: 11.5px; color: var(--text-faint); margin-left: 4px; }
+    .pnode .sp { color: var(--gold-soft); font-size: 10px; flex: none; margin-left: auto; }
 
     .pl-branch-head {
       position: absolute; font-family: var(--font-display); font-size: 14px;
@@ -234,7 +234,7 @@ import Base from '../layouts/Base.astro';
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
 
     type Node = {
-      n: string; s: string; a: number; b: string; bo?: number; d: number; r: string[];
+      n: string; s: string; a: number; b: string; bo?: number; o?: number; d: number; r: string[];
       p?: string;   // drawn under this node in game without it being a prerequisite
       k: number; i?: string; g?: any; gl?: string[]; m?: string[]; u?: string[]; sp?: string;
     };
@@ -266,7 +266,10 @@ import Base from '../layouts/Base.astro';
     let expanded = false;
     let ageIx = 0;
     let zoom = 1;
-    let focusCat = 'adm';                       // which age-focus category is shown
+    // the focus picked at each age change (adm / dip / mil), like in game
+    const FOCUS: [string, string][] = [['adm', 'Administrative'], ['dip', 'Diplomatic'], ['mil', 'Military']];
+    const focusOf = new Map<number, string>();
+    const focusAt = (a: number) => focusOf.get(a) || 'adm';
     const collapsedPanes = new Set<string>();   // per-branch collapse state
 
     // Geometry. The game draws each branch as a top-down tidy tree, which
@@ -358,6 +361,8 @@ import Base from '../layouts/Base.astro';
       if (ageIx) p.set('age', String(ageIx));
       if (showOther) p.set('all', '1');
       if (expanded) p.set('x', '1');
+      const fo = D.ages.map((_, i) => focusAt(i));
+      if (fo.some((f) => f !== 'adm')) p.set('f', fo.join('.'));
       if (planned.size) p.set('p', enc(planned));
       if (researched.size) p.set('r', enc(researched));
       history.replaceState(null, '', p.toString() ? '?' + p.toString() : location.pathname);
@@ -452,6 +457,9 @@ import Base from '../layouts/Base.astro';
         if (n.a !== ageIx) continue;
         const st = statusOf(id);
         if (st === 'other' && !showOther) continue;
+        // an age shows one focus's advances — the one you picked — but a
+        // plan that already holds one of another focus keeps it visible
+        if (n.sp && n.sp !== focusAt(n.a) && !planned.has(id) && !researched.has(id)) continue;
         out.push(id);
       }
       return out;
@@ -480,7 +488,7 @@ import Base from '../layouts/Base.astro';
           const pa = parentOf.get(a), pb = parentOf.get(b);
           const sa = pa && local.has(pa) && slotOf.has(pa) ? slotOf.get(pa)! : -1;
           const sb = pb && local.has(pb) && slotOf.has(pb) ? slotOf.get(pb)! : -1;
-          return sa - sb || D.nodes[a].n.localeCompare(D.nodes[b].n);
+          return sa - sb || (D.nodes[a].o ?? 0) - (D.nodes[b].o ?? 0) || D.nodes[a].n.localeCompare(D.nodes[b].n);
         });
         row.forEach((id, slot) => {
           slotOf.set(id, slot);
@@ -569,15 +577,16 @@ import Base from '../layouts/Base.astro';
         st === 'other' ? 'foreign' : ''].filter(Boolean).join(' ');
       const qn = planned.has(id) ? `<span class="qn">${order.indexOf(id) + 1}</span>` : '';
       const badge = !qn && st !== 'common' && n.gl?.length ? '<span class="badge">◆</span>' : '';
+      const sp = n.sp ? `<span class="sp" title="${FOCUS.find(([k]) => k === n.sp)?.[1]} focus">◈</span>` : '';
       const style = pos ? ` style="left:${pos.x}px; top:${pos.y}px"` : '';
       const icon = n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : '';
       if (!expanded) {
         return `<div class="${cls}"${style} data-id="${id}">${icon}` +
-          `<span class="nm">${n.n}</span>${qn}${badge}</div>`;
+          `<span class="nm">${n.n}</span>${sp}${qn}${badge}</div>`;
       }
       const fx = [...(n.m || []).slice(0, 3), ...(n.u || []).slice(0, 2)];
       return `<div class="${cls} wide"${style} data-id="${id}">` +
-        `<div class="hd">${icon}<span class="nm">${n.n}</span>${qn}${badge}</div>` +
+        `<div class="hd">${icon}<span class="nm">${n.n}</span>${sp}${qn}${badge}</div>` +
         (fx.length ? `<div class="fx">${fx.map((x: string) => `<span>${x}</span>`).join('')}</div>`
                    : `<div class="fx"><span class="none">no direct effects</span></div>`) +
         `</div>`;
@@ -624,26 +633,26 @@ import Base from '../layouts/Base.astro';
         return;
       }
 
-      // Each age offers one focus pick per category, so they belong above
-      // the trees as a choice — not buried in a band at the bottom.
-      const choiceIds = ids.filter((id) => D.nodes[id].sp);
-      if (choiceIds.length) {
-        const SPEC: [string, string][] = [['adm', 'Administrative'], ['dip', 'Diplomatic'], ['mil', 'Military']];
-        const avail = SPEC.filter(([k]) => choiceIds.some((id) => D.nodes[id].sp === k));
-        if (!avail.some(([k]) => k === focusCat)) focusCat = avail[0]?.[0] || 'adm';
-        const list = choiceIds.filter((id) => D.nodes[id].sp === focusCat)
-          .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
+      // Each age change offers one focus pick — administrative, diplomatic
+      // or military — and only that focus's advances appear in the trees.
+      // The bar is that pick; the advances themselves sit where the game
+      // draws them.
+      const hasFocus = Object.entries(D.nodes).some(([, n]) => n.a === ageIx && n.sp);
+      if (hasFocus) {
+        const cur = focusAt(ageIx);
+        const countOf = (k: string) => Object.entries(D.nodes).filter(([id, n]) =>
+          n.a === ageIx && n.sp === k && (showOther || statusOf(id) !== 'other')).length;
         choices.innerHTML =
           `<div class="pl-choices__bar"><span class="pl-choices__label">Age focus</span>` +
-          avail.map(([k, lab]) =>
-            `<button data-focus="${k}" class="${k === focusCat ? 'on' : ''}">${lab}` +
-            `<small> ${choiceIds.filter((id) => D.nodes[id].sp === k).length}</small></button>`).join('') +
-          `</div><div class="pl-choices__list">${list.map((id) => nodeHtml(id)).join('')}</div>`;
+          FOCUS.map(([k, lab]) =>
+            `<button data-focus="${k}" class="${k === cur ? 'on' : ''}">${lab}` +
+            `<small> ${countOf(k)}</small></button>`).join('') +
+          `<span class="pl-choices__hint">◈ marks this focus's advances in the trees</span></div>`;
       } else {
         choices.innerHTML = '';
       }
 
-      const rest = ids.filter((id) => !D.nodes[id].sp);
+      const rest = ids;
       const { trees, loners, parentOf } = branchesOf(rest);
       childIndex = new Map();
       for (const id of rest) {
@@ -817,6 +826,7 @@ import Base from '../layouts/Base.astro';
       expanded = p.get('x') === '1';
       ($('[data-pl-expand]') as HTMLInputElement).checked = expanded;
       ageIx = Math.max(0, Math.min(D.ages.length - 1, parseInt(p.get('age') || '0', 10) || 0));
+      (p.get('f') || '').split('.').forEach((f, i) => { if (FOCUS.some(([k]) => k === f)) focusOf.set(i, f); });
       dec(p.get('p'), planned);
       dec(p.get('r'), researched);
 
@@ -870,18 +880,8 @@ import Base from '../layouts/Base.astro';
       const choicesEl = $('[data-pl-choices]');
       choicesEl.addEventListener('click', (e) => {
         const f = (e.target as HTMLElement).closest('[data-focus]') as HTMLElement | null;
-        if (f) { focusCat = f.dataset.focus!; render(); return; }
-        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
-        if (!el) return;
-        const id = el.dataset.id!;
-        if ((e as MouseEvent).altKey) { location.href = `${baseUrl}advances/${D.nodes[id].s}`; return; }
-        mutate(() => { if (planned.has(id)) removeWithDependents(id); else addWithPrereqs(id); });
+        if (f) { focusOf.set(ageIx, f.dataset.focus!); render(); }
       });
-      choicesEl.addEventListener('mousemove', (e) => {
-        const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
-        if (el) showTip(e as MouseEvent, el.dataset.id!); else tip.hidden = true;
-      });
-      choicesEl.addEventListener('mouseleave', () => { tip.hidden = true; });
 
       let lit: string | null = null;
       board.addEventListener('mousemove', (e) => {

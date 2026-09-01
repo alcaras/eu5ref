@@ -196,7 +196,10 @@ from the game files and checked against the tech screen", never
 "decompiled", and no disassembly is quoted on the site. The planner's
 `p` key carries the computed parent and `reqOf()` treats it as an effective
 prerequisite (planning pulls it in, removal cascades, chains highlight),
-drawn dashed. Two earlier guesses were wrong and cost several rounds — "no
+drawn dashed; `o` is the sibling slot, so rows keep the game's left-to-right
+order. Focus advances are drawn inside their trees (marked ◈); the age-focus
+bar is the per-age pick (URL `f=adm.dip.…`) and filters which focus shows,
+keeping anything already planned visible. Two earlier guesses were wrong and cost several rounds — "no
 prereq = its own root" and "orphans join the age's ungated free tree". Don't
 retry either; and if a placement looks wrong, the fix is in layout.py's
 ordering/predicates, not in a per-advance override.

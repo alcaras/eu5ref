@@ -12,8 +12,10 @@ advances badged — so the payload carries structure, not just a flat list.
   countries      [{t tag, n name, col, cu culture, re religion, f facts}]
 
 KEYS per node: n name · s slug · a age index · b branch id · bo tree order
-within the age · d tier · r requires · p the node it is drawn under when
-that is NOT a prerequisite (the game's layout slot for an orphan advance) ·
+within the age · o slot among its siblings (left to right, as drawn) · d
+tier · r requires · p the node it is drawn under when the files declare no
+prerequisite (the game's layout slot for an orphan advance — an effective
+prerequisite in game) ·
 g compiled gate · gl gate labels · i icon · k unlock category
 (0 none / 1 build+mil / 2 diplo) · m modifier lines · u unlock lines
 """
@@ -71,6 +73,7 @@ def main():
             'a': age_ix[e['facets']['age']],
             'b': d['branch_id'],
             'bo': d.get('tree_index', 0),
+            'o': d.get('tree_slot', 0),
             'd': d['tier'],
             'r': [r['id'] for r in d['requires'] if r['id'] in ids],
             'k': unlock_category(d.get('unlocks')),

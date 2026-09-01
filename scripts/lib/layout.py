@@ -284,15 +284,15 @@ def run(root, sort='fold', gate='potential'):
             continue
         age_root = lay.build_age(age_list)
         def walk(n, tree, ti, parent):
-            for ch in n.children:
+            for slot, ch in enumerate(n.children):
                 t = tree or ch.adv['key']
                 declared = bool(ch.adv['requires'])
                 placed[ch.adv['key']] = dict(age=age, tree=t, tree_index=ti, parent=parent,
-                                             depth=ch.depth, declared=declared,
+                                             depth=ch.depth, slot=slot, declared=declared,
                                              tree_declared=declared or bool(ch.adv['in_tree_of']))
                 walk(ch, t, ti, ch.adv['key'])
         for ti, tree in enumerate(age_root.children):
-            placed[tree.adv['key']] = dict(age=age, tree=tree.adv['key'], tree_index=ti,
+            placed[tree.adv['key']] = dict(age=age, tree=tree.adv['key'], tree_index=ti, slot=ti,
                                            parent=None, depth=1, declared=True, tree_declared=True)
             walk(tree, tree.adv['key'], ti, tree.adv['key'])
     return placed
