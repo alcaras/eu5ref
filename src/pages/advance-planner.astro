@@ -593,40 +593,88 @@ import Base from '../layouts/Base.astro';
       return out;
     }
 
-    /** Lay ONE branch out the way the game does: each prerequisite tier is
-     *  a ROW, and the advances in it spread left to right, ordered by their
-     *  parent's position so children sit under the parent they came from.
-     *  Same orientation as the in-game screen, so nothing needs mentally
-     *  rotating — the cost is width, which the pane scrolls. */
+    /** Lay ONE branch out the way the game does: a top-down tree, each
+     *  prerequisite tier a ROW, every parent centred over its children so
+     *  a lineage reads as a column. Unlike the in-game screen the subtrees
+     *  are packed by CONTOUR — a subtree slides left until, at some tier,
+     *  it is one slot from the subtree before it — so the tree is only as
+     *  wide as its fullest tier needs, not as wide as its bounding boxes
+     *  would make it. Children keep the game's left-to-right slot order. */
     function layoutBranch(list: string[], parentOf: Map<string, string | null>) {
       const local = new Set(list);
       const minTier = Math.min(...list.map((id) => D.nodes[id].d));
-      const byTier = new Map<number, string[]>();
+      const tierOf = (id: string) => D.nodes[id].d - minTier;
+      const order = (a: string, b: string) =>
+        (D.nodes[a].o ?? 0) - (D.nodes[b].o ?? 0) || D.nodes[a].n.localeCompare(D.nodes[b].n);
+      const kids = new Map<string, string[]>();
+      const roots: string[] = [];
       for (const id of list) {
-        const t = D.nodes[id].d - minTier;
-        if (!byTier.has(t)) byTier.set(t, []);
-        byTier.get(t)!.push(id);
+        const p = parentOf.get(id);
+        if (p && local.has(p)) { if (!kids.has(p)) kids.set(p, []); kids.get(p)!.push(id); }
+        else roots.push(id);
       }
-      const slotOf = new Map<string, number>();     // position within a tier
+      roots.sort((a, b) => tierOf(a) - tierOf(b) || order(a, b));
+      for (const l of kids.values()) l.sort(order);
+
+      // a contour is, per tier, the leftmost and rightmost slot a subtree
+      // occupies, relative to its root
+      type Contour = Map<number, [number, number]>;
+      const rel = new Map<string, number>();     // x relative to the parent
+      /** Slide `sub` right until it clears `acc` by one slot on every shared tier. */
+      const fit = (acc: Contour | null, sub: Contour): number => {
+        if (!acc) return 0;
+        let shift = -Infinity;
+        for (const [t, [lo]] of sub) { const a = acc.get(t); if (a) shift = Math.max(shift, a[1] + 1 - lo); }
+        if (shift === -Infinity) { let hi = -Infinity; for (const [, [, h]] of acc) hi = Math.max(hi, h); shift = hi + 1; }
+        return shift;
+      };
+      const merge = (acc: Contour, sub: Contour, dx: number) => {
+        for (const [t, [lo, hi]] of sub) {
+          const a = acc.get(t);
+          acc.set(t, a ? [Math.min(a[0], lo + dx), Math.max(a[1], hi + dx)] : [lo + dx, hi + dx]);
+        }
+      };
+      function place(id: string): Contour {
+        const t = tierOf(id);
+        const ch = kids.get(id) || [];
+        const me: Contour = new Map([[t, [0, 0]]]);
+        if (!ch.length) return me;
+        let acc: Contour | null = null;
+        const at: number[] = [];
+        for (const c of ch) {
+          const sub = place(c);
+          const dx = fit(acc, sub);
+          at.push(dx);
+          if (!acc) acc = new Map(); merge(acc, sub, dx);
+        }
+        const mid = (at[0] + at[at.length - 1]) / 2;     // parent over the middle of its children
+        ch.forEach((c, i) => rel.set(c, at[i] - mid));
+        merge(me, acc!, -mid);
+        return me;
+      }
+      // the roots (usually one; more when a hidden node splits the tree) sit side by side
+      let acc: Contour | null = null;
+      const rootX = new Map<string, number>();
+      for (const r of roots) {
+        const sub = place(r);
+        const dx = fit(acc, sub);
+        rootX.set(r, dx);
+        if (!acc) acc = new Map(); merge(acc, sub, dx);
+      }
+      // resolve to absolute slots, then normalise so the leftmost is slot 0
+      const slot = new Map<string, number>();
+      const walk = (id: string, x: number) => { slot.set(id, x); for (const c of kids.get(id) || []) walk(c, x + rel.get(c)!); };
+      for (const r of roots) walk(r, rootX.get(r)!);
+      const min = Math.min(...slot.values());
       const pos = new Map<string, { x: number; y: number }>();
-      let widest = 0, maxTier = 0;
-      for (const t of [...byTier.keys()].sort((a, b) => a - b)) {
-        const row = byTier.get(t)!;
-        row.sort((a, b) => {
-          const pa = parentOf.get(a), pb = parentOf.get(b);
-          const sa = pa && local.has(pa) && slotOf.has(pa) ? slotOf.get(pa)! : -1;
-          const sb = pb && local.has(pb) && slotOf.has(pb) ? slotOf.get(pb)! : -1;
-          return sa - sb || (D.nodes[a].o ?? 0) - (D.nodes[b].o ?? 0) || D.nodes[a].n.localeCompare(D.nodes[b].n);
-        });
-        row.forEach((id, slot) => {
-          slotOf.set(id, slot);
-          pos.set(id, { x: 12 + slot * COLW, y: 12 + t * ROWH });
-        });
-        widest = Math.max(widest, row.length);
-        maxTier = Math.max(maxTier, t);
+      let maxSlot = 0, maxTier = 0;
+      for (const [id, x] of slot) {
+        pos.set(id, { x: 12 + (x - min) * COLW, y: 12 + tierOf(id) * ROWH });
+        maxSlot = Math.max(maxSlot, x - min);
+        maxTier = Math.max(maxTier, tierOf(id));
       }
       return { pos,
-               width: 24 + Math.max(widest, 1) * COLW,
+               width: 24 + (maxSlot + 1) * COLW,
                height: 24 + (maxTier + 1) * ROWH };
     }
 

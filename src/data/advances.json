@@ -976,9 +976,20 @@
      "id": "advance:mint_advance",
      "name": "Minting Office"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -997,7 +1008,7 @@
    "facets": {
     "age": "Absolutism",
     "branch": "Manufactories",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/a-magnanimous-empire.png",
    "id": "advance:a_magnanimous_empire",
@@ -2202,9 +2213,20 @@
      "id": "advance:war_no_cb_cost_modifier_renaissance_advance",
      "name": "Recurrent Warfare"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:war_no_cb_cost_modifier_renaissance_advance",
@@ -2228,7 +2250,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/abolished-serfdom.png",
    "id": "advance:abolished_serfdom",
@@ -6829,9 +6851,20 @@
      "id": "advance:dry_dock_advance",
      "name": "Dry Dock"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -6850,7 +6883,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/alpha-and-omega.png",
    "id": "advance:alpha_and_omega",
@@ -11226,9 +11259,20 @@
      "id": "advance:recruitment_improvements_renaissance",
      "name": "Organized Recruitment"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:recruitment_improvements_renaissance",
@@ -11265,7 +11309,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Professional Armies",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": null,
    "id": "advance:aristocracy",
@@ -12197,7 +12241,10 @@
      "id": "advance:art_school_advance",
      "name": "Art Schools"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "army"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -12218,7 +12265,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/army-country-casus-belli-advance.png",
    "id": "advance:army_country_casus_belli_advance",
@@ -12248,7 +12295,10 @@
      "id": "advance:naval_morale_advance_2",
      "name": "Navigation Techniques"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "army"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -12269,7 +12319,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/army-country-diplo-range-advance.png",
    "id": "advance:army_country_diplo_range_advance",
@@ -12299,7 +12349,10 @@
      "id": "advance:national_assemblies_advance",
      "name": "National Assemblies"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "army"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -12320,7 +12373,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/army-country-integration-speed-advance.png",
    "id": "advance:army_country_integration_speed_advance",
@@ -12350,7 +12403,10 @@
      "id": "advance:dry_dock_advance",
      "name": "Dry Dock"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "army"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -12371,7 +12427,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/army-country-looting-advance.png",
    "id": "advance:army_country_looting_advance",
@@ -12401,7 +12457,10 @@
      "id": "advance:scholasticism",
      "name": "Classic Scholasticism"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "army"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -12422,7 +12481,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Improved Religious Organization",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/army-country-movement-speed-advance.png",
    "id": "advance:army_country_movement_speed_advance",
@@ -20914,9 +20973,20 @@
      "id": "advance:horse_lords",
      "name": "Horse-Lords of the Steppes"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:horse_lords",
@@ -20940,7 +21010,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/beyond-the-sun.png",
    "id": "advance:beyond_the_sun",
@@ -21037,9 +21107,20 @@
      "id": "advance:ledgers_double_checking",
      "name": "Meticulous Accounting"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -21058,7 +21139,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Meritocracy",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/bill-of-rights.png",
    "id": "advance:bill_of_rights",
@@ -24104,9 +24185,20 @@
      "id": "advance:cultural_traditions_law_advance",
      "name": "Cultural Traditions"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:cultural_traditions_law_advance",
@@ -24130,7 +24222,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/borjigin-blood.png",
    "id": "advance:borjigin_blood",
@@ -27777,9 +27869,20 @@
      "id": "advance:talented_traders",
      "name": "Talented Traders"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -27798,7 +27901,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Meritocracy",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/by-the-grace-of-god.png",
    "id": "advance:by_the_grace_of_god",
@@ -29853,9 +29956,20 @@
      "id": "advance:beyond_the_sun",
      "name": "Beyond the Sun"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:beyond_the_sun",
@@ -29889,7 +30003,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": null,
    "id": "advance:caravanserai_advance",
@@ -41291,9 +41405,20 @@
      "id": "advance:naval_battery_advance",
      "name": "Naval Battery"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -41312,7 +41437,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Confessionalism",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/conviction-of-sin.png",
    "id": "advance:conviction_of_sin",
@@ -44047,7 +44172,10 @@
      "id": "advance:unlock_baggage_train",
      "name": "Baggage Train"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -44068,7 +44196,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Siege Artillery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/counter-espionage-building-country-advance.png",
    "id": "advance:counter_espionage_building_country_advance",
@@ -48502,17 +48630,30 @@
      "name": "Furniture Manufactory"
     },
     "gate": [
-     "tag",
-     "CTH"
+     "and",
+     [
+      "tag",
+      "CTH"
+     ],
+     [
+      "gov",
+      "republic"
+     ]
     ],
     "gate_labels": [
-     "CTH"
+     "CTH",
+     "Republic"
     ],
     "gate_lits": [
      [
       "CTH",
       "tag",
       "CTH"
+     ],
+     [
+      "Republic",
+      "gov",
+      "republic"
      ]
     ],
     "requires": [],
@@ -55162,9 +55303,20 @@
      "id": "advance:railroad_advance",
      "name": "Railroad"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -55183,7 +55335,7 @@
    "facets": {
     "age": "Revolutions",
     "branch": "Industrialization",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/divine-passion.png",
    "id": "advance:divine_passion",
@@ -59092,9 +59244,20 @@
      "id": "advance:railroad_advance",
      "name": "Railroad"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -59113,7 +59276,7 @@
    "facets": {
     "age": "Revolutions",
     "branch": "Industrialization",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/emancipation.png",
    "id": "advance:emancipation",
@@ -63414,7 +63577,10 @@
      "id": "advance:study_institutions_advance",
      "name": "Shared Knowledge"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -63435,7 +63601,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Printing Press",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/export-building-country-advance.png",
    "id": "advance:export_building_country_advance",
@@ -65704,9 +65870,20 @@
      "id": "advance:medieval_administration",
      "name": "Medieval Administration"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:medieval_administration",
@@ -65740,7 +65917,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/feudal-de-jure-law-advance.png",
    "id": "advance:feudal_de_jure_law_advance",
@@ -66974,9 +67151,20 @@
      "id": "advance:paper_guild_cloth_maintenance_advance",
      "name": "Rag Paper"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -66995,7 +67183,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Banking",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/flesh-is-weak.png",
    "id": "advance:flesh_is_weak",
@@ -72311,9 +72499,20 @@
      "id": "advance:merchant_power_from_maritime_reformation_advance",
      "name": "Merchant Companies"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:merchant_power_from_maritime_reformation_advance",
@@ -72337,7 +72536,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Global Trade",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/free-cities.png",
    "id": "advance:free_cities",
@@ -72418,9 +72617,20 @@
      "id": "advance:naval_morale_advance_2",
      "name": "Navigation Techniques"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -72439,7 +72649,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/free-merchants.png",
    "id": "advance:free_merchants",
@@ -72469,9 +72679,20 @@
      "id": "advance:grand_shipyard_advance",
      "name": "Grand Shipyard"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -72490,7 +72711,7 @@
    "facets": {
     "age": "Absolutism",
     "branch": "Manufactories",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/free-subjects.png",
    "id": "advance:free_subjects",
@@ -72972,9 +73193,20 @@
      "id": "advance:global_clergy_max_literacy_advance",
      "name": "Clerical Literature"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:global_clergy_max_literacy_advance",
@@ -72998,7 +73230,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/friends-in-high-places.png",
    "id": "advance:friends_in_high_places",
@@ -87511,9 +87743,20 @@
      "id": "advance:power_projection_advance_6",
      "name": "Global Ambitions"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -87532,7 +87775,7 @@
    "facets": {
     "age": "Revolutions",
     "branch": "Enlightenment",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/horde-ardor.png",
    "id": "advance:horde_ardor",
@@ -87562,9 +87805,20 @@
      "id": "advance:rgo_logistics_discovery",
      "name": "Local Storehouses"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:rgo_logistics_discovery",
@@ -87588,7 +87842,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "New World",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/horde-loot-discovery-advance.png",
    "id": "advance:horde_loot_discovery_advance",
@@ -87618,9 +87872,20 @@
      "id": "advance:formalized_relations",
      "name": "Formalized Relations"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:formalized_relations",
@@ -87644,7 +87909,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Printing Press",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/horde-loyalty.png",
    "id": "advance:horde_loyalty",
@@ -87743,9 +88008,20 @@
      "id": "advance:horse_riding_advance",
      "name": "Horse-Riding"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:horse_riding_advance",
@@ -87783,7 +88059,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": null,
    "id": "advance:horse_lords",
@@ -96197,9 +96473,20 @@
      "id": "advance:nation_state_advance",
      "name": "Nation State"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -96228,7 +96515,7 @@
    "facets": {
     "age": "Revolutions",
     "branch": "Enlightenment",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/international-nobility.png",
    "id": "advance:international_nobility",
@@ -97201,17 +97488,25 @@
     "gate": [
      "and",
      [
-      "tag",
-      "IRA"
+      "and",
+      [
+       "tag",
+       "IRA"
+      ],
+      [
+       "rel",
+       "shia"
+      ]
      ],
      [
-      "rel",
-      "shia"
+      "gov",
+      "monarchy"
      ]
     ],
     "gate_labels": [
      "IRA",
-     "Shiism"
+     "Shiism",
+     "Monarchy"
     ],
     "gate_lits": [
      [
@@ -97223,6 +97518,11 @@
       "Shiism",
       "rel",
       "shia"
+     ],
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
      ]
     ],
     "requires": [
@@ -108085,9 +108385,20 @@
      "id": "advance:horse_lords",
      "name": "Horse-Lords of the Steppes"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:horse_lords",
@@ -108121,7 +108432,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": null,
    "id": "advance:kurultai_advance",
@@ -111279,9 +111590,20 @@
      "id": "advance:gov_reform_reformation_a",
      "name": "The Prince"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:gov_reform_reformation_a",
@@ -111315,7 +111637,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Pharmacology",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/legitimization-of-power-law-advance.png",
    "id": "advance:legitimization_of_power_law_advance",
@@ -113123,9 +113445,20 @@
      "id": "advance:late_feudal_relations",
      "name": "Late Feudal Relations"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:late_feudal_relations",
@@ -113149,7 +113482,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/local-nobility.png",
    "id": "advance:local_nobility",
@@ -113289,9 +113622,20 @@
      "id": "advance:leader_recruit_cost_advance",
      "name": "Officer Schools"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:leader_recruit_cost_advance",
@@ -113315,7 +113659,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Global Trade",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/logistics-of-khan.png",
    "id": "advance:logistics_of_khan",
@@ -118417,9 +118761,20 @@
      "id": "advance:global_nobles_max_literacy_advance",
      "name": "Nobiliary Literature"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:global_nobles_max_literacy_advance",
@@ -118443,7 +118798,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/mandate-of-the-khan.png",
    "id": "advance:mandate_of_the_khan",
@@ -120105,9 +120460,20 @@
      "id": "advance:tannery_manufactory_advance",
      "name": "Tanning Manufactory"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -120126,7 +120492,7 @@
    "facets": {
     "age": "Absolutism",
     "branch": "Manufactories",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/martyrs.png",
    "id": "advance:martyrs",
@@ -125459,9 +125825,20 @@
      "id": "advance:dry_dock_advance",
      "name": "Dry Dock"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -125490,7 +125867,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/military-traditions.png",
    "id": "advance:military_traditions",
@@ -126160,7 +126537,10 @@
      "id": "advance:theater_advance",
      "name": "Theater"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -126181,7 +126561,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/minting-income-factor-building.png",
    "id": "advance:minting_income_factor_building",
@@ -126211,7 +126591,10 @@
      "id": "advance:dry_dock_advance",
      "name": "Dry Dock"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -126232,7 +126615,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/minting-trade-range-disc-building.png",
    "id": "advance:minting_trade_range_disc_building",
@@ -126262,7 +126645,10 @@
      "id": "advance:scholasticism",
      "name": "Classic Scholasticism"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -126283,7 +126669,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Improved Religious Organization",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/minting-trade-range-trad-building.png",
    "id": "advance:minting_trade_range_trad_building",
@@ -128340,9 +128726,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -128376,7 +128773,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/monarchy-reform-traditions-advance.png",
    "id": "advance:monarchy_reform_traditions_advance",
@@ -128399,9 +128796,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -128435,7 +128843,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/monarchy-royal-court-advance.png",
    "id": "advance:monarchy_royal_court_advance",
@@ -138715,9 +139123,20 @@
      "id": "advance:feudalism_advance",
      "name": "Feudalism"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:feudalism_advance",
@@ -138751,7 +139170,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": null,
    "id": "advance:noble_knights",
@@ -138774,9 +139193,20 @@
      "id": "advance:naval_battery_advance",
      "name": "Naval Battery"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -138805,7 +139235,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Confessionalism",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/noble-officers.png",
    "id": "advance:noble_officers",
@@ -138841,9 +139271,20 @@
      "id": "advance:grand_shipyard_advance",
      "name": "Grand Shipyard"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -138872,7 +139313,7 @@
    "facets": {
     "age": "Absolutism",
     "branch": "Manufactories",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/noble-resilience.png",
    "id": "advance:noble_resilience",
@@ -148347,9 +148788,20 @@
      "id": "advance:feudal_de_jure_law_advance",
      "name": "Feudal 'De Jure' Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:feudal_de_jure_law_advance",
@@ -148383,7 +148835,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/partition-inheritance-advance.png",
    "id": "advance:partition_inheritance_advance",
@@ -153222,9 +153674,20 @@
      "id": "advance:food_advance_renaissance",
      "name": "Intensive Agriculture"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:food_advance_renaissance",
@@ -153248,7 +153711,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/plutocracy.png",
    "id": "advance:plutocracy",
@@ -154107,9 +154570,20 @@
      "id": "advance:logistics_of_khan",
      "name": "Logistics of the Khān"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:logistics_of_khan",
@@ -154133,7 +154607,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Global Trade",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/populating-the-steppes.png",
    "id": "advance:populating_the_steppes",
@@ -157773,9 +158247,20 @@
      "id": "advance:crown_power_advance_reformation",
      "name": "'Cuius Regio, Eius Religio'"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:crown_power_advance_reformation",
@@ -157809,7 +158294,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Pharmacology",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/laws.png",
    "id": "advance:principle_of_administration_law_advance",
@@ -158006,9 +158491,20 @@
      "id": "advance:printing_press_advance",
      "name": "Printing Press"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:printing_press_advance",
@@ -158032,7 +158528,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Printing Press",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/printing-press-advance.png",
    "id": "advance:printing_of_religious_texts",
@@ -167019,9 +167515,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -167059,7 +167566,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/republic-reform-traditions-advance.png",
    "id": "advance:republic_reform_traditions_advance",
@@ -167141,9 +167648,20 @@
      "id": "advance:renaissance_court",
      "name": "Renaissance Court"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:renaissance_court",
@@ -167177,7 +167695,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/republican-election-law-advance.png",
    "id": "advance:republican_election_law_advance",
@@ -167200,9 +167718,20 @@
      "id": "advance:renaissance_court",
      "name": "Renaissance Court"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:renaissance_court",
@@ -167236,7 +167765,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/republican-electorate-law-advance.png",
    "id": "advance:republican_electorate_law_advance",
@@ -167259,9 +167788,20 @@
      "id": "advance:medieval_administration",
      "name": "Medieval Administration"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:medieval_administration",
@@ -167295,7 +167835,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/republican-foundation-law-advance.png",
    "id": "advance:republican_foundation_law_advance",
@@ -167318,9 +167858,20 @@
      "id": "advance:print_culture",
      "name": "Print Culture"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:print_culture",
@@ -167354,7 +167905,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Printing Press",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/republican-power-law-advance.png",
    "id": "advance:republican_power_law_advance",
@@ -168126,7 +168677,10 @@
      "id": "advance:diplomatic_range_age_1",
      "name": "Foreign Envoys"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "location"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -168147,7 +168701,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Banking",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/rgo-build-time-advance.png",
    "id": "advance:rgo_build_time_advance",
@@ -174594,9 +175148,20 @@
      "id": "advance:feudal_de_jure_law_advance",
      "name": "Feudal 'De Jure' Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:feudal_de_jure_law_advance",
@@ -174630,7 +175195,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/salic-law-advance.png",
    "id": "advance:salic_law_advance",
@@ -180584,9 +181149,20 @@
      "id": "advance:salic_law_advance",
      "name": "Salic Law"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:salic_law_advance",
@@ -180620,7 +181196,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/semi-salic-law-advance.png",
    "id": "advance:semi_salic_law_advance",
@@ -181767,9 +182343,20 @@
      "id": "advance:noble_knights",
      "name": "Noble Knights"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "monarchy"
+    ],
+    "gate_labels": [
+     "Monarchy"
+    ],
+    "gate_lits": [
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:noble_knights",
@@ -181793,7 +182380,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/serfdom.png",
    "id": "advance:serfdom",
@@ -181829,9 +182416,20 @@
      "id": "advance:government_sanctioned_celebrations",
      "name": "Government-Sanctioned Celebrations"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -181850,7 +182448,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Meritocracy",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/servants-of-god.png",
    "id": "advance:servants_of_god",
@@ -186946,9 +187544,20 @@
      "id": "advance:gunpowder_advance",
      "name": "Gunpowder"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:gunpowder_advance",
@@ -186972,7 +187581,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Professional Armies",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/slavery-before-death.png",
    "id": "advance:slavery_before_death",
@@ -189727,17 +190336,30 @@
      "name": "The Constitution"
     },
     "gate": [
-     "tag",
-     "PRU"
+     "and",
+     [
+      "tag",
+      "PRU"
+     ],
+     [
+      "gov",
+      "monarchy"
+     ]
     ],
     "gate_labels": [
-     "PRU"
+     "PRU",
+     "Monarchy"
     ],
     "gate_lits": [
      [
       "PRU",
       "tag",
       "PRU"
+     ],
+     [
+      "Monarchy",
+      "gov",
+      "monarchy"
      ]
     ],
     "requires": [
@@ -192197,9 +192819,20 @@
      "id": "advance:medieval_administration",
      "name": "Medieval Administration"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:medieval_administration",
@@ -192223,7 +192856,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/state-of-clerics.png",
    "id": "advance:state_of_clerics",
@@ -192654,9 +193287,20 @@
      "id": "advance:study_institutions_advance",
      "name": "Shared Knowledge"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -192685,7 +193329,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Printing Press",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/steppe-horde-tribal-cultural-identity-law-advance.png",
    "id": "advance:steppe_horde_tribal_cultural_identity_law_advance",
@@ -192708,9 +193352,20 @@
      "id": "advance:naval_battery_advance",
      "name": "Naval Battery"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -192739,7 +193394,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Confessionalism",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/steppe-horde-tribal-modernization-law-advance.png",
    "id": "advance:steppe_horde_tribal_modernization_law_advance",
@@ -192762,9 +193417,20 @@
      "id": "advance:theater_advance",
      "name": "Theater"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -192793,7 +193459,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/steppe-horde-tribal-religious-values-law-advance.png",
    "id": "advance:steppe_horde_tribal_religious_values_law_advance",
@@ -192889,9 +193555,20 @@
      "id": "advance:beyond_the_sun",
      "name": "Beyond the Sun"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:beyond_the_sun",
@@ -192915,7 +193592,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/steppe-slave-raiding.png",
    "id": "advance:steppe_slave_raiding",
@@ -203418,9 +204095,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -203454,7 +204142,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/theocracy-divine-cause-law-advance.png",
    "id": "advance:theocracy_divine_cause_law_advance",
@@ -203477,9 +204165,20 @@
      "id": "advance:crown_power_advance_reformation",
      "name": "'Cuius Regio, Eius Religio'"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "theocracy"
+    ],
+    "gate_labels": [
+     "Theocracy"
+    ],
+    "gate_lits": [
+     [
+      "Theocracy",
+      "gov",
+      "theocracy"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:crown_power_advance_reformation",
@@ -203513,7 +204212,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Pharmacology",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/theocracy-nature-of-our-faith-law-advance.png",
    "id": "advance:theocracy_nature_of_our_faith_law_advance",
@@ -203616,9 +204315,20 @@
      "id": "advance:land_morale_recovery_renaissance_advance",
      "name": "Organized Army March"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:land_morale_recovery_renaissance_advance",
@@ -203642,7 +204352,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Scholarly Treatises",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/there-shall-be-no-grass.png",
    "id": "advance:there_shall_be_no_grass",
@@ -207424,7 +208134,10 @@
      "id": "advance:art_school_advance",
      "name": "Art Schools"
     },
-    "gate": null,
+    "gate": [
+     "ctype",
+     "building"
+    ],
     "gate_labels": [],
     "gate_lits": [],
     "requires": [],
@@ -207445,7 +208158,7 @@
    "facets": {
     "age": "Renaissance",
     "branch": "Renaissance",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/trade-center-building-country-advance.png",
    "id": "advance:trade_center_building_country_advance",
@@ -208115,9 +208828,20 @@
      "id": "advance:dry_dock_advance",
      "name": "Dry Dock"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "republic"
+    ],
+    "gate_labels": [
+     "Republic"
+    ],
+    "gate_lits": [
+     [
+      "Republic",
+      "gov",
+      "republic"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -208136,7 +208860,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Surgery",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/tradition-of-payment.png",
    "id": "advance:tradition_of_payment",
@@ -208243,9 +208967,20 @@
      "id": "advance:supply_lines",
      "name": "Supply Lines"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:supply_lines",
@@ -208269,7 +209004,7 @@
    "facets": {
     "age": "Discovery",
     "branch": "Pike and Shot",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/trampling-horde.png",
    "id": "advance:trampling_horde",
@@ -209597,9 +210332,20 @@
      "id": "advance:modern_road_advance",
      "name": "Modern Road"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "tribe"
+    ],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "gate_lits": [
+     [
+      "Tribe",
+      "gov",
+      "tribe"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -209628,7 +210374,7 @@
    "facets": {
     "age": "Absolutism",
     "branch": "Scientific Revolution",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/laws.png",
    "id": "advance:tribal_cultural_identity_law_advance",
@@ -209651,9 +210397,20 @@
      "id": "advance:pan_amalgamation_advance",
      "name": "Pan Amalgamation"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "tribe"
+    ],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "gate_lits": [
+     [
+      "Tribe",
+      "gov",
+      "tribe"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -209682,7 +210439,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Confessionalism",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/tribal-migration-law-advance.png",
    "id": "advance:tribal_migration_law_advance",
@@ -209705,9 +210462,20 @@
      "id": "advance:unlock_eastindiaman_advance",
      "name": "East-Indiaman"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "tribe"
+    ],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "gate_lits": [
+     [
+      "Tribe",
+      "gov",
+      "tribe"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -209736,7 +210504,7 @@
    "facets": {
     "age": "Revolutions",
     "branch": "Enlightenment",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/laws.png",
    "id": "advance:tribal_modernization_law_advance",
@@ -209759,9 +210527,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "tribe"
+    ],
+    "gate_labels": [
+     "Tribe"
+    ],
+    "gate_lits": [
+     [
+      "Tribe",
+      "gov",
+      "tribe"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -209795,7 +210574,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/laws.png",
    "id": "advance:tribal_religious_values_law_advance",
@@ -210582,9 +211361,20 @@
      "id": "advance:codified_laws",
      "name": "Codified Laws"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:codified_laws",
@@ -210608,7 +211398,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Written Alphabet",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/turco-mongol-tradition.png",
    "id": "advance:turco_mongol_tradition",
@@ -221641,17 +222431,30 @@
      "name": "Legalism"
     },
     "gate": [
-     "cgrp",
-     "russian_group"
+     "and",
+     [
+      "cgrp",
+      "russian_group"
+     ],
+     [
+      "gov",
+      "republic"
+     ]
     ],
     "gate_labels": [
-     "East Slavic"
+     "East Slavic",
+     "Republic"
     ],
     "gate_lits": [
      [
       "East Slavic",
       "cgrp",
       "russian_group"
+     ],
+     [
+      "Republic",
+      "gov",
+      "republic"
      ]
     ],
     "requires": [
@@ -226856,9 +227659,20 @@
      "id": "advance:naval_battery_advance",
      "name": "Naval Battery"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [],
     "requires_state": [],
     "specialization": null,
@@ -226877,7 +227691,7 @@
    "facets": {
     "age": "Reformation",
     "branch": "Confessionalism",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/watchers-of-the-silk-road.png",
    "id": "advance:watchers_of_the_silk_road",
@@ -228412,9 +229226,20 @@
      "id": "advance:horse_riding_advance",
      "name": "Horse-Riding"
     },
-    "gate": null,
-    "gate_labels": [],
-    "gate_lits": [],
+    "gate": [
+     "gov",
+     "steppe_horde"
+    ],
+    "gate_labels": [
+     "Steppe Horde"
+    ],
+    "gate_lits": [
+     [
+      "Steppe Horde",
+      "gov",
+      "steppe_horde"
+     ]
+    ],
     "requires": [
      {
       "id": "advance:horse_riding_advance",
@@ -228438,7 +229263,7 @@
    "facets": {
     "age": "Traditions",
     "branch": "Agriculture",
-    "scope": "general"
+    "scope": "national"
    },
    "icon": "img/advance/yams-of-the-great-khan.png",
    "id": "advance:yams_of_the_great_khan",
@@ -231159,12 +231984,12 @@
    "label": "Scope",
    "options": [
     {
-     "count": 754,
+     "count": 675,
      "label": "General",
      "value": "general"
     },
     {
-     "count": 2424,
+     "count": 2503,
      "label": "National",
      "value": "national"
     }

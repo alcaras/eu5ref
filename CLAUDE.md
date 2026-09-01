@@ -215,16 +215,33 @@ on a 340px rank pitch with bspline edges and a 0.1–1.5 pan/zoom canvas,
 nodes tinted by unlock type (green none / blue buildings-units-laws / red
 diplomatic).
 
-**We deliberately do NOT copy that geometry — don't "fix" it back.** A tidy
-tree centres each parent over its subtree, which with 170-leaf branches
-opens enormous gaps; the in-game screen sprawls for exactly this reason and
-is hard to read there too. The planner keeps the game's *semantics* —
-same branches, same tiers, same edges, same node tinting — but **transposes
-the axes: tier becomes a column, packed vertically with no gaps**. Depth is
-only 8–10, so a whole age fits the viewport width with every name legible
-(≈1,400px vs ≈4,800px for the tidy version). Within a column, nodes are
-ordered by their parent's row so children sit beside their parent. Hovering
-lights an advance's full prerequisite chain and dims the rest.
+**We keep the game's tree shape but not its spacing — don't "fix" it
+back to either extreme.** The planner draws each branch as the game does:
+tiers as rows, every parent centred over its children, so a lineage reads
+as a column and children sit under the node they came from. What we drop
+is the game's geometry — its 340px rank pitch and bounding-box placement
+open enormous gaps with 170-leaf branches, which is why the in-game screen
+sprawls. `layoutBranch()` packs subtrees by **contour** (a subtree slides
+left until, at some tier, it is one slot from its neighbour), so a branch
+is only as wide as its fullest tier needs. Cards come in three densities
+(`x=` URL param: icons — the default — compact, expanded); icon cards are
+58px with a two-line sliver of the name and the rest on hover, so a whole
+age fits the viewport. Hovering lights an advance's full prerequisite
+chain and dims the rest (the class lands on `.pl-panes`). An earlier
+packed-rows layout (children ordered by, but not under, their parent) was
+replaced at the user's request — the columns are the point.
+
+**Gates beyond `potential`:** 71 advances declare `government = X` and a
+few `country_type = army|building|…` as plain fields; `build_advances.py`
+folds both into the compiled gate (`['gov', x]`, `['ctype', x]`). A
+playable country's type is `real` (build_planner / save-import both set
+it), so the virtual-type advances never show for a player. Yams of the
+Great Khān showing up for Poland was this gap.
+
+**Modifier filter (`gives…`):** `mod=key~key` (OR-ed) lights hits in the
+trees and counts them per age tab; `mv=list` swaps in a cross-age table
+with a per-age Σ where units agree. Data is the node `m` triples and
+`modkeys` from build_planner — no Python work for new keys.
 
 ### Country facts, overrides and the imported save (`src/lib/facts.ts`)
 

@@ -220,6 +220,7 @@ def main():
     clist = []
     for c in countries:
         f = dict(c['data'].get('facts') or {})
+        f['ctype'] = 'real'          # a playable country; gates test the virtual types
         st = starts.get(c['data']['tag']) or {}
         if st.get('type'):
             f['gov'] = st['type']

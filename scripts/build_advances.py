@@ -72,6 +72,22 @@ def main():
     recs = {}
     for name, a in advances.items():
         gate = triggers.compile_trigger(getattr(a, 'potential', None), cgroups)
+        # `government = steppe_horde` / `country_type = army` are gates too,
+        # declared as plain fields beside `potential` — 71 advances carry
+        # one (Yams of the Great Khān is a horde advance, not everyone's).
+        # A playable country's type is `real`; the virtual types (army,
+        # building, location, pop, navy) never apply to a player.
+        parts = [gate] if gate else []
+        gov = getattr(a, 'government', None)
+        if gov is not None and getattr(gov, 'name', None):
+            parts.append(['gov', gov.name])
+        ctype = getattr(a, 'country_type', None)
+        if isinstance(ctype, str) and ctype:
+            parts.append(['ctype', ctype])
+        if len(parts) > 1:
+            gate = ['and'] + parts
+        elif parts:
+            gate = parts[0]
         recs[name] = {
             'obj': a,
             'age': ename(a.age) or 'No age',

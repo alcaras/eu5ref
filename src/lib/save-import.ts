@@ -455,7 +455,7 @@ export function resolve(raw: RawScan, file: string, kinds: KindDef[], geo: Geo |
     if (cap) f.cap = cap;
     if (c.gov) f.gov = c.gov;
     if (c.parl) f.parl = c.parl;
-    f.ctype = 'Real';
+    f.ctype = 'real';   // the save says Real; gates test the virtual types (army, building…)
     f.subj = raw.subjects.get(id)?.type || 'none';
     if (raw.age) f.age = raw.age;
     const set = (k: keyof Facts, xs: string[], complete = false) => {
