@@ -70,12 +70,13 @@ const tableEntities = focusAdvances.map((e: any) => ({
     age: e.facets.age,
     focus: FOCUS_NAME[e.data.specialization],
     tree: treeName(e),
+    gate: rootOf(e).institution ? 'Needs an institution' : 'Free',
   },
   data: {
     ...e.data,
     tree_label: rootOf(e).name
-      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ''}`
-      : '—',
+      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ' (free tree)'}`
+      : 'Standalone (free)',
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -89,6 +90,10 @@ const tableData = {
       options: ages.map((a: any) => ({ value: a.name, label: a.name, count: countBy('age', a.name) })) },
     { key: 'focus', label: 'Focus',
       options: FOCUSES.map((f) => ({ value: FOCUS_NAME[f.key], label: f.short, count: countBy('focus', FOCUS_NAME[f.key]) })) },
+    { key: 'gate', label: 'Gate',
+      options: ['Free', 'Needs an institution']
+        .map((v) => ({ value: v, label: v, count: countBy('gate', v) }))
+        .filter((o) => o.count > 0) },
     { key: 'tree', label: 'Tree',
       options: [...new Set(tableEntities.map((e: any) => e.facets.tree))]
         .sort((a: any, b: any) => (a === TREE_STANDALONE ? 1 : b === TREE_STANDALONE ? -1 : a.localeCompare(b)))
@@ -164,16 +169,16 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                     <div class="fx-adv__tree">
                       <span class="fx-adv__k">tree</span>
                       {rootOf(e).name === null ? (
-                        <span class="fx-adv__branch">standalone — no prerequisite, no institution</span>
+                        <span class="fx-adv__branch">standalone · free</span>
                       ) : rootOf(e).institution ? (
                         <Fragment>
                           <a href={`${base}institutions`}>{rootOf(e).name}</a>
-                          <span class="fx-adv__branch"> — must be embraced</span>
+                          <span class="fx-adv__inst-tag"> · institution</span>
                         </Fragment>
                       ) : (
                         <Fragment>
                           {rootOf(e).name}
-                          <span class="fx-adv__branch"> — no institution</span>
+                          <span class="fx-adv__branch"> · free tree</span>
                         </Fragment>
                       )}
                     </div>
@@ -281,6 +286,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-adv__unlock, .fx-adv__req, .fx-adv__tree { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
   .fx-adv__unlock { color: var(--gold-soft); }
   .fx-adv__branch { color: var(--text-faint); }
+  .fx-adv__inst-tag { color: var(--gold-soft); }
   .fx-adv__k {
     font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--text-faint); margin-right: 5px;
