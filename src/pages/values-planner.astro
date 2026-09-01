@@ -151,6 +151,7 @@ import Base from '../layouts/Base.astro';
   </style>
 
   <script>
+    import { activeSeat, saveFacts, seatAsStart, seatLabel, loadSnapshot, setPref, onSaveChange } from '../lib/save-store';
     const root = document.querySelector('[data-vp]')!;
     const $ = (s: string) => root.querySelector(s) as HTMLElement;
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
@@ -188,7 +189,8 @@ import Base from '../layouts/Base.astro';
     function facts() {
       if (!country) return null;
       const rec = STARTS[country.t] || {};
-      const f = { ...country.f, cap: country.f.cap || {},
+      const cf = saveFacts(country.t) || country.f;   // the save's view of the country when in use
+      const f = { ...cf, cap: cf.cap || {},
                   gov: rec.type || null,
                   io: rec.io || [], parl: rec.parliament || null,
                   laws: new Set(Object.values(rec.laws || {})),
@@ -430,8 +432,12 @@ import Base from '../layouts/Base.astro';
     function renderContext() {
       const cw = $('[data-vp-culture]'), rw = $('[data-vp-religion]');
       cw.hidden = rw.hidden = !country;
-      if (!country) { $('[data-vp-context]').innerHTML = ''; return; }
-      let html = `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${esc(country.n)}</span>`;
+      const seat = activeSeat();
+      const saveChip = seat
+        ? `<span class="chip save" title="${esc(seat.snap.file)} — laws, privileges and values start from your save">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
+        : loadSnapshot() ? `<span class="chip save dim">save off <button type="button" data-save-toggle="on">use it</button></span>` : '';
+      if (!country) { $('[data-vp-context]').innerHTML = saveChip; return; }
+      let html = saveChip + `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${esc(country.n)}</span>`;
       if (culOverride) html += `<span class="chip shifted" data-reset="cul">${esc(culOverride.n)} ✕</span>`;
       if (relOverride) html += `<span class="chip shifted" data-reset="rel">${esc(relOverride.n)} ✕</span>`;
       (cw.querySelector('input') as HTMLInputElement).placeholder =
@@ -476,6 +482,16 @@ import Base from '../layouts/Base.astro';
     ]).then(([data, starts]) => {
       D = data;
       STARTS = starts;
+      const seededByLink = !!new URLSearchParams(location.search).get('c');
+      // An imported save is the default: its seat replaces the 1337 record
+      // for that country (laws, privileges, reforms, values, government).
+      const seat = activeSeat();
+      if (seat) STARTS[seat.tag] = seatAsStart(seat.seat, seat.facts);
+      onSaveChange(() => {
+        const q = new URLSearchParams(location.search);
+        if (seat && q.get('c') === seat.tag && !seededByLink) q.delete('c');
+        location.href = q.toString() ? `?${q}` : location.pathname;
+      });
       const sources = [...new Set(D.movers.map((m: any) => m.source))].sort();
       $('[data-vp-sources]').innerHTML = sources.map((s: any) =>
         `<span class="chip" data-src="${esc(s)}">${esc(s)}</span>`).join('');
@@ -505,6 +521,8 @@ import Base from '../layouts/Base.astro';
           .map((r: any) => ({ key: r.k, label: r.n, small: 'religion' })),
         (k) => { relOverride = D.religions.find((r: any) => r.k === k) || null; });
       $('[data-vp-context]').addEventListener('click', (e) => {
+        const tog = (e.target as HTMLElement).closest('[data-save-toggle]') as HTMLElement | null;
+        if (tog) { setPref({ enabled: tog.dataset.saveToggle === 'on' }); return; }
         const c = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
         if (!c) return;
         if (c.dataset.reset === 'cul') culOverride = null; else relOverride = null;
@@ -521,7 +539,7 @@ import Base from '../layouts/Base.astro';
       const qs = new URLSearchParams(location.search);
       const q = qs.get('p');
       if (q) for (const id of q.split(',')) picked.add(id);
-      country = D.countries.find((c: any) => c.t === qs.get('c')) || null;
+      country = D.countries.find((c: any) => c.t === (qs.get('c') || seat?.tag)) || null;
       if (country && !q) adoptStart(country.t);
       culOverride = D.cultures.find((c: any) => c.k === qs.get('cu')) || null;
       relOverride = D.religions.find((r: any) => r.k === qs.get('re')) || null;

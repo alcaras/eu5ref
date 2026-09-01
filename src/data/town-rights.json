@@ -772,7 +772,8 @@
      "not",
      [
       "?",
-      "scope:target has town rights"
+      "scope:target.has_town_rights:royal_textile_rights",
+      "scope:target has town rights: royal textile rights"
      ]
     ],
     "gate_labels": [],
@@ -1232,11 +1233,13 @@
       "or",
       [
        "?",
-       "scope:target has town rights"
+       "scope:target.has_town_rights:market_charter",
+       "scope:target has town rights: market charter"
       ],
       [
        "?",
-       "scope:target has town rights"
+       "scope:target.has_town_rights:staple_port",
+       "scope:target has town rights: staple port"
       ]
      ]
     ],
@@ -2027,7 +2030,8 @@
      "not",
      [
       "?",
-      "scope:target has town rights"
+      "scope:target.has_town_rights:imperial_breadbasket_rights",
+      "scope:target has town rights: imperial breadbasket rights"
      ]
     ],
     "gate_labels": [],
@@ -2299,9 +2303,12 @@
     ],
     "gate": [
      "?",
+     "modifier:allow_kulm_town_rights",
      "modifier:allow kulm town rights"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow kulm town rights"
+    ],
     "groups": [
      {
       "mods": [
@@ -2731,11 +2738,13 @@
      ],
      [
       "?",
+      "modifier:allow_magdeburg_rights_town_rights",
       "modifier:allow magdeburg rights town rights"
      ]
     ],
     "gate_labels": [
-     "Northern Germany"
+     "Northern Germany",
+     "modifier:allow magdeburg rights town rights"
     ],
     "groups": [
      {
@@ -2970,11 +2979,13 @@
       "or",
       [
        "?",
-       "scope:target has town rights"
+       "scope:target.has_town_rights:staple_port",
+       "scope:target has town rights: staple port"
       ],
       [
        "?",
-       "scope:target has town rights"
+       "scope:target.has_town_rights:free_town_charter",
+       "scope:target has town rights: free town charter"
       ]
      ]
     ],
@@ -3091,27 +3102,23 @@
     "gate": [
      "and",
      [
-      "and",
+      "or",
       [
        "?",
-       "custom tooltip text"
+       "scope:target.is_mining_rgo",
+       "scope:target is mining rgo"
       ],
       [
-       "or",
+       "and",
        [
         "?",
-        "custom tooltip is mining rgo"
+        "scope:target.is_port",
+        "scope:target is port"
        ],
        [
-        "and",
-        [
-         "?",
-         "custom tooltip is port"
-        ],
-        [
-         "?",
-         "custom tooltip raw material"
-        ]
+        "?",
+        "scope:target.raw_material:salt",
+        "scope:target raw material: salt"
        ]
       ]
      ],
@@ -3121,20 +3128,27 @@
        "or",
        [
         "?",
-        "scope:target has town rights"
+        "scope:target.has_town_rights:scandinavian_bergslag_privileges",
+        "scope:target has town rights: scandinavian bergslag privileges"
        ],
        [
         "?",
-        "scope:target has town rights"
+        "scope:target.has_town_rights:upper_bergregal",
+        "scope:target has town rights: upper bergregal"
        ],
        [
         "?",
-        "scope:target has town rights"
+        "scope:target.has_town_rights:lower_bergregal",
+        "scope:target has town rights: lower bergregal"
        ]
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "scope:target is mining rgo",
+     "scope:target is port",
+     "scope:target raw material: salt"
+    ],
     "groups": [
      {
       "mods": [
@@ -3248,8 +3262,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "or",
@@ -3264,6 +3278,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Byzantium",
      "ROM"
     ],
@@ -3534,9 +3549,12 @@
     ],
     "gate": [
      "?",
+     "modifier:allow_novi_fori_town_rights",
      "modifier:allow novi fori town rights"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow novi fori town rights"
+    ],
     "groups": [
      {
       "mods": [
@@ -3672,11 +3690,13 @@
      ],
      [
       "?",
+      "modifier:allow_nuremberg_rights_town_rights",
       "modifier:allow nuremberg rights town rights"
      ]
     ],
     "gate_labels": [
-     "Southern Germany"
+     "Southern Germany",
+     "modifier:allow nuremberg rights town rights"
     ],
     "groups": [
      {
@@ -4587,17 +4607,10 @@
      "event flag: Recently Forced To Revoke Town Rights Variable"
     ],
     "gate": [
-     "and",
+     "not",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "not",
-      [
-       "var",
-       "recently_forced_to_revoke_town_rights_variable"
-      ]
+      "var",
+      "recently_forced_to_revoke_town_rights_variable"
      ]
     ],
     "gate_labels": [],
@@ -4730,7 +4743,8 @@
      "not",
      [
       "?",
-      "scope:target has town rights"
+      "scope:target.has_town_rights:flemish_cloth_industries_right",
+      "scope:target has town rights: flemish cloth industries right"
      ]
     ],
     "gate_labels": [],
@@ -5125,30 +5139,40 @@
       "not",
       [
        "?",
-       "scope:target has town rights"
+       "scope:target.has_town_rights:royal_tooling_rights",
+       "scope:target has town rights: royal tooling rights"
       ]
      ],
      [
       "or",
       [
        "?",
-       "scope:target raw material"
+       "scope:target.raw_material:iron",
+       "scope:target raw material: iron"
       ],
       [
        "?",
-       "scope:target raw material"
+       "scope:target.raw_material:copper",
+       "scope:target raw material: copper"
       ],
       [
        "?",
-       "scope:target raw material"
+       "scope:target.raw_material:silver",
+       "scope:target raw material: silver"
       ],
       [
        "?",
-       "scope:target raw material"
+       "scope:target.raw_material:lead",
+       "scope:target raw material: lead"
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "scope:target raw material: iron",
+     "scope:target raw material: copper",
+     "scope:target raw material: silver",
+     "scope:target raw material: lead"
+    ],
     "groups": [
      {
       "mods": [
@@ -5307,9 +5331,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "scope:target.is_port",
      "scope:target is port"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "scope:target is port"
+    ],
     "groups": [
      {
       "mods": [
@@ -5451,7 +5478,8 @@
      "not",
      [
       "?",
-      "scope:target has town rights"
+      "scope:target.has_town_rights:royal_naval_rights",
+      "scope:target has town rights: royal naval rights"
      ]
     ],
     "gate_labels": [],
@@ -5702,16 +5730,20 @@
       "and",
       [
        "?",
-       "culture group percentage in country culture group"
+       "culture_group_percentage_in_country.culture_group:greek_group",
+       "culture group percentage in country culture group: greek group"
       ],
       [
        "?",
-       "value GREATER THAN"
+       "value.greater_than:0.25",
+       "value > 0.25"
       ]
      ]
     ],
     "gate_labels": [
-     "Roman"
+     "Roman",
+     "culture group percentage in country culture group: greek group",
+     "value > 0.25"
     ],
     "groups": [
      {
@@ -5873,14 +5905,19 @@
      "and",
      [
       "?",
-      "country has special status type"
+      "country_has_special_status.type:free_city",
+      "country has special status type: free city"
      ],
      [
       "?",
-      "country has special status country"
+      "country_has_special_status.country:root",
+      "country has special status country: root"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "country has special status type: free city",
+     "country has special status country: root"
+    ],
     "groups": [
      {
       "mods": [
@@ -5982,9 +6019,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "scope:target.is_port",
      "scope:target is port"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "scope:target is port"
+    ],
     "groups": [
      {
       "mods": [
@@ -6120,24 +6160,22 @@
     "country_mods": [],
     "excludes": [],
     "gate": [
-     "and",
+     "or",
      [
       "?",
-      "custom tooltip text"
+      "scope:target.location_rank:city",
+      "scope:target location rank: city"
      ],
      [
-      "or",
-      [
-       "?",
-       "custom tooltip location rank"
-      ],
-      [
-       "?",
-       "custom tooltip location rank"
-      ]
+      "?",
+      "scope:target.location_rank:megalopolis",
+      "scope:target location rank: megalopolis"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "scope:target location rank: city",
+     "scope:target location rank: megalopolis"
+    ],
     "groups": [
      {
       "mods": [
@@ -6674,11 +6712,13 @@
      ],
      [
       "?",
+      "modifier:allow_ville_franche_town_rights",
       "modifier:allow ville franche town rights"
      ]
     ],
     "gate_labels": [
-     "French"
+     "French",
+     "modifier:allow ville franche town rights"
     ],
     "groups": [
      {

@@ -459,8 +459,15 @@
     "gate": [
      "not",
      [
-      "gov",
-      "tribe"
+      "or",
+      [
+       "gov",
+       "tribe"
+      ],
+      [
+       "gov",
+       "steppe_horde"
+      ]
      ]
     ],
     "gate_labels": [],
@@ -2039,11 +2046,13 @@
      ],
      [
       "?",
-      "estate power(estate type:tribes estate) GREATER THAN"
+      "estate_power_estate_type:tribes_estate_.greater_than:0",
+      "estate power(estate type:tribes estate) > 0"
      ]
     ],
     "gate_labels": [
-     "Maghreb"
+     "Maghreb",
+     "estate power(estate type:tribes estate) > 0"
     ],
     "policies": [
      {
@@ -2663,9 +2672,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "modifier:has_ashta_pradham_council_policies",
      "modifier:has ashta pradham council policies"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:has ashta pradham council policies"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -10560,9 +10572,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "is_colonial_subject",
      "is colonial subject"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is colonial subject"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -11620,11 +11635,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:dahsala_system"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Dahsala System"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -14756,9 +14772,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "total effective building levels:university GREATER THAN"
+     "total_effective_building_levels:university.greater_than:0",
+     "total effective building levels:university > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:university > 0"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -15453,9 +15472,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "estate power(estate type:peasants estate) GREATER THAN"
+     "estate_power_estate_type:peasants_estate_.greater_than:0",
+     "estate power(estate type:peasants estate) > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "estate power(estate type:peasants estate) > 0"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -16597,12 +16619,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -17581,8 +17604,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:eng_order_of_the_garter_law"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "gov",
@@ -17590,7 +17614,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Eng Order Of The Garter Law",
+     "has unlocked law trigger",
      "Monarchy"
     ],
     "policies": [
@@ -19750,8 +19774,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:fra_jansenism_legality"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "rel",
@@ -19759,7 +19784,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Fra Jansenism Legality",
+     "has unlocked law trigger",
      "Catholicism"
     ],
     "policies": [
@@ -20703,12 +20728,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -20931,12 +20957,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -21485,9 +21512,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "modifier:allow_guilds_of_florence_law",
      "modifier:allow guilds of florence law"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow guilds of florence law"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -21734,11 +21764,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_amar_das",
+      "exists: guru amar das"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru amar das"
     ],
     "policies": [
      {
@@ -21943,11 +21975,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_angad",
+      "exists: guru angad"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru angad"
     ],
     "policies": [
      {
@@ -22152,11 +22186,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_arjan",
+      "exists: guru arjan"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru arjan"
     ],
     "policies": [
      {
@@ -22361,11 +22397,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_gobind_singh",
+      "exists: guru gobind singh"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru gobind singh"
     ],
     "policies": [
      {
@@ -22570,11 +22608,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_granth_sahib",
+      "exists: guru granth sahib"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru granth sahib"
     ],
     "policies": [
      {
@@ -22779,11 +22819,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_har_krishan",
+      "exists: guru har krishan"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru har krishan"
     ],
     "policies": [
      {
@@ -22988,11 +23030,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_har_rai",
+      "exists: guru har rai"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru har rai"
     ],
     "policies": [
      {
@@ -23197,11 +23241,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_hargobind",
+      "exists: guru hargobind"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru hargobind"
     ],
     "policies": [
      {
@@ -23430,11 +23476,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_nanak",
+      "exists: guru nanak"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru nanak"
     ],
     "policies": [
      {
@@ -23627,11 +23675,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_ram_das",
+      "exists: guru ram das"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru ram das"
     ],
     "policies": [
      {
@@ -23836,11 +23886,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_tegh_bahadur",
+      "exists: guru tegh bahadur"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru tegh bahadur"
     ],
     "policies": [
      {
@@ -24038,11 +24090,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:hab_military_frontier"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Hab Military Frontier"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -25572,11 +25625,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:hun_frontier_fortresses"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Hun Frontier Fortresses"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -25874,12 +25928,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -26081,12 +26136,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -26316,35 +26372,32 @@
       ],
       [
        "?",
+       "any_international_organizations_member_of:sect",
        "sect condition"
       ]
      ],
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "has_neo_confucianism"
-      ]
+      "var",
+      "has_neo_confucianism"
      ],
      [
       "and",
       [
        "?",
-       "exists"
+       "exists:middle_kingdom",
+       "exists: middle kingdom"
       ],
       [
        "?",
-       "is member of international organization"
+       "is_member_of_international_organization:middle_kingdom",
+       "is member of international organization: middle kingdom"
       ],
       [
        "not",
        [
         "?",
-        "is leader of international organization"
+        "is_leader_of_international_organization:middle_kingdom",
+        "is leader of international organization: middle kingdom"
        ]
       ]
      ]
@@ -26352,7 +26405,10 @@
     "gate_labels": [
      "Confucian-Influenced",
      "Sect",
-     "Has Neo Confucianism"
+     "sect condition",
+     "Has Neo Confucianism",
+     "exists: middle kingdom",
+     "is member of international organization: middle kingdom"
     ],
     "policies": [
      {
@@ -26705,12 +26761,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -26825,12 +26882,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -28985,8 +29043,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:ira_alcohol_ban"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "rgrp",
@@ -28994,7 +29053,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Ira Alcohol Ban",
+     "has unlocked law trigger",
      "Islam"
     ],
     "policies": [
@@ -29445,11 +29504,13 @@
      ],
      [
       "?",
-      "international organization has unlocked law trigger type"
+      "international_organization_has_unlocked_law_trigger",
+      "international organization has unlocked law trigger"
      ]
     ],
     "gate_labels": [
-     "Japanese Shogunate"
+     "Japanese Shogunate",
+     "international organization has unlocked law trigger"
     ],
     "policies": [
      {
@@ -30204,11 +30265,13 @@
      ],
      [
       "?",
-      "exists"
+      "exists:guru_gobind_singh",
+      "exists: guru gobind singh"
      ]
     ],
     "gate_labels": [
-     "Sikhism"
+     "Sikhism",
+     "exists: guru gobind singh"
     ],
     "policies": [
      {
@@ -30403,11 +30466,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:kor_currency"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Kor Currency"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -30639,12 +30703,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -31196,7 +31261,8 @@
      "and",
      [
       "?",
-      "has embraced institution"
+      "has_embraced_institution:legalism",
+      "has embraced institution: legalism"
      ],
      [
       "or",
@@ -31204,17 +31270,20 @@
        "not",
        [
         "?",
-        "court language"
+        "court_language:culture.language",
+        "court language: culture.language"
        ]
       ],
       [
-       "unl",
-       "policy:multi_lingual_court"
+       "?",
+       "has_unlocked_policy_trigger",
+       "has unlocked policy trigger"
       ]
      ]
     ],
     "gate_labels": [
-     "Policy:Multi Lingual Court"
+     "has embraced institution: legalism",
+     "has unlocked policy trigger"
     ],
     "policies": [
      {
@@ -31456,8 +31525,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:lat_orthodox_status_with_the_empire"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "and",
@@ -31472,7 +31542,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Lat Orthodox Status With The Empire",
+     "has unlocked law trigger",
      "Constantinople",
      "Catholicism"
     ],
@@ -31831,8 +31901,15 @@
      [
       "not",
       [
-       "gov",
-       "tribe"
+       "or",
+       [
+        "gov",
+        "tribe"
+       ],
+       [
+        "gov",
+        "steppe_horde"
+       ]
       ]
      ],
      [
@@ -38477,7 +38554,8 @@
      "or",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "mrep"
@@ -38488,6 +38566,7 @@
      ]
     ],
     "gate_labels": [
+     "num of ports > 0",
      "Maritime Law"
     ],
     "policies": [
@@ -39510,11 +39589,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:mch_queue_hair"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Mch Queue Hair"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -40788,12 +40868,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -43718,7 +43799,8 @@
      "or",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "law",
@@ -43726,6 +43808,7 @@
      ]
     ],
     "gate_labels": [
+     "num of ports > 0",
      "Piracy Law"
     ],
     "policies": [
@@ -45864,12 +45947,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -46193,7 +46277,8 @@
      "or",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "law",
@@ -46201,6 +46286,7 @@
      ]
     ],
     "gate_labels": [
+     "num of ports > 0",
      "Piracy Law"
     ],
     "policies": [
@@ -46483,23 +46569,28 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:por_estudo_geral_law"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "or",
       [
        "?",
-       "owns"
+       "owns:coimbra",
+       "owns: coimbra"
       ],
       [
        "?",
-       "owns"
+       "owns:lisbon",
+       "owns: lisbon"
       ]
      ]
     ],
     "gate_labels": [
-     "Law:Por Estudo Geral Law"
+     "has unlocked law trigger",
+     "owns: coimbra",
+     "owns: lisbon"
     ],
     "policies": [
      {
@@ -46629,12 +46720,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -47121,11 +47213,13 @@
      "or",
      [
       "?",
-      "produced in country:goods gold GREATER THAN"
+      "produced_in_country:goods_gold.greater_than:0",
+      "produced in country:goods gold > 0"
      ],
      [
       "?",
-      "produced in country:silver GREATER THAN"
+      "produced_in_country:silver.greater_than:0",
+      "produced in country:silver > 0"
      ],
      [
       "law",
@@ -47133,6 +47227,8 @@
      ]
     ],
     "gate_labels": [
+     "produced in country:goods gold > 0",
+     "produced in country:silver > 0",
      "Precious Metal Distribution Law"
     ],
     "policies": [
@@ -52370,15 +52466,19 @@
      ],
      [
       "?",
-      "international organization has law"
+      "international_organization_has_law:sc_representative",
+      "international organization has law: sc representative"
      ],
      [
       "?",
-      "international organization has policy"
+      "international_organization_has_policy:sc_timed",
+      "international organization has policy: sc timed"
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "international organization has law: sc representative",
+     "international organization has policy: sc timed"
     ],
     "policies": [
      {
@@ -52484,11 +52584,13 @@
      ],
      [
       "?",
-      "international organization has law"
+      "international_organization_has_law:sc_representative",
+      "international organization has law: sc representative"
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "international organization has law: sc representative"
     ],
     "policies": [
      {
@@ -52916,11 +53018,13 @@
      ],
      [
       "?",
-      "international organization has law"
+      "international_organization_has_law:sc_representative",
+      "international organization has law: sc representative"
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "international organization has law: sc representative"
     ],
     "policies": [
      {
@@ -53144,15 +53248,19 @@
      ],
      [
       "?",
-      "exists"
+      "exists:hre",
+      "exists: hre"
      ],
      [
       "?",
-      "international organization has unlocked law trigger type"
+      "international_organization_has_unlocked_law_trigger",
+      "international organization has unlocked law trigger"
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "exists: hre",
+     "international organization has unlocked law trigger"
     ],
     "policies": [
      {
@@ -53239,15 +53347,34 @@
      ],
      [
       "?",
-      "international organization has unlocked law trigger type"
+      "international_organization_has_unlocked_law_trigger",
+      "international organization has unlocked law trigger"
      ],
      [
-      "?",
-      "reformation is enabled"
+      "or",
+      [
+       "?",
+       "has_had_situation",
+       "has had situation"
+      ],
+      [
+       "?",
+       "religion:lutheran.is_religion_enabled",
+       "religion:lutheran is religion enabled"
+      ],
+      [
+       "?",
+       "religion:calvinist.is_religion_enabled",
+       "religion:calvinist is religion enabled"
+      ]
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "international organization has unlocked law trigger",
+     "has had situation",
+     "religion:lutheran is religion enabled",
+     "religion:calvinist is religion enabled"
     ],
     "policies": [
      {
@@ -53414,11 +53541,13 @@
      ],
      [
       "?",
-      "international organization has law"
+      "international_organization_has_law:sc_representative",
+      "international organization has law: sc representative"
      ]
     ],
     "gate_labels": [
-     "Swiss Confederation"
+     "Swiss Confederation",
+     "international organization has law: sc representative"
     ],
     "policies": [
      {
@@ -53736,8 +53865,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:sco_authority_over_the_clergy"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "rel",
@@ -53745,7 +53875,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Sco Authority Over The Clergy",
+     "has unlocked law trigger",
      "Catholicism"
     ],
     "policies": [
@@ -54374,11 +54504,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:sco_colonial_affairs_law"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Sco Colonial Affairs Law"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -54634,32 +54765,44 @@
       "or",
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:nichiren_policy",
+       "international organization has policy: nichiren policy"
       ],
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:nyigma_policy",
+       "international organization has policy: nyigma policy"
       ],
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:kadam_policy",
+       "international organization has policy: kadam policy"
       ],
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:kagyu_policy",
+       "international organization has policy: kagyu policy"
       ],
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:sakya_policy",
+       "international organization has policy: sakya policy"
       ],
       [
        "?",
-       "international organization has policy"
+       "international_organization_has_policy:jonang_policy",
+       "international organization has policy: jonang policy"
       ]
      ]
     ],
     "gate_labels": [
-     "Sect"
+     "Sect",
+     "international organization has policy: nichiren policy",
+     "international organization has policy: nyigma policy",
+     "international organization has policy: kadam policy",
+     "international organization has policy: kagyu policy",
+     "international organization has policy: sakya policy",
+     "international organization has policy: jonang policy"
     ],
     "policies": [
      {
@@ -55277,12 +55420,13 @@
       "hre"
      ],
      [
-      "?",
-      "hre has enabled all imperial laws"
+      "var",
+      "hre_enabled_all_imperial_laws"
      ]
     ],
     "gate_labels": [
-     "Hre"
+     "Hre",
+     "Hre Enabled All Imperial Laws"
     ],
     "policies": [
      {
@@ -56374,13 +56518,14 @@
       "three_departments_system"
      ],
      [
-      "unl",
-      "law:six_ministries_overseer_law"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ]
     ],
     "gate_labels": [
      "Three Departments",
-     "Law:Six Ministries Overseer Law"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -56645,11 +56790,13 @@
        "and",
        [
         "?",
-        "pop type population in country pop type"
+        "pop_type_population_in_country.pop_type:slaves",
+        "pop type population in country pop type: slaves"
        ],
        [
         "?",
-        "value GREATER THAN"
+        "value.greater_than:0",
+        "value > 0"
        ]
       ],
       [
@@ -56659,6 +56806,8 @@
      ]
     ],
     "gate_labels": [
+     "pop type population in country pop type: slaves",
+     "value > 0",
      "Slave Conversion"
     ],
     "policies": [
@@ -57047,8 +57196,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:society_of_jesus"
+      "?",
+      "has_unlocked_global_law_trigger",
+      "has unlocked global law trigger"
      ],
      [
       "rel",
@@ -57056,7 +57206,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Society Of Jesus",
+     "has unlocked global law trigger",
      "Catholicism"
     ],
     "policies": [
@@ -57241,7 +57391,8 @@
      "and",
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:middle_kingdom",
+      "is leader of international organization: middle kingdom"
      ],
      [
       "not",
@@ -57251,7 +57402,9 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is leader of international organization: middle kingdom"
+    ],
     "policies": [
      {
       "availability": "Any country",
@@ -58046,11 +58199,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "law:teu_amber_monopoly_law"
+     "?",
+     "has_unlocked_law_trigger",
+     "has unlocked law trigger"
     ],
     "gate_labels": [
-     "Law:Teu Amber Monopoly Law"
+     "has unlocked law trigger"
     ],
     "policies": [
      {
@@ -59209,11 +59363,19 @@
    "data": {
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -59458,11 +59620,19 @@
    "data": {
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -59720,8 +59890,15 @@
     "gate": [
      "and",
      [
-      "gov",
-      "tribe"
+      "or",
+      [
+       "gov",
+       "tribe"
+      ],
+      [
+       "gov",
+       "steppe_horde"
+      ]
      ],
      [
       "ctype",
@@ -59729,7 +59906,8 @@
      ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -59918,11 +60096,19 @@
      "runs policy Tribal Identity"
     ],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -60125,11 +60311,19 @@
    "data": {
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -60421,11 +60615,19 @@
    "data": {
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "policies": [
      {
@@ -60589,11 +60791,13 @@
      ],
      [
       "?",
-      "total members GREATER THAN"
+      "total_members.greater_than:1",
+      "total members > 1"
      ]
     ],
     "gate_labels": [
-     "Jurchen Confederation"
+     "Jurchen Confederation",
+     "total members > 1"
     ],
     "policies": [
      {
@@ -61885,11 +62089,13 @@
      ],
      [
       "?",
-      "international organization has policy"
+      "international_organization_has_policy:vajrayana_policy",
+      "international organization has policy: vajrayana policy"
      ]
     ],
     "gate_labels": [
-     "Sect"
+     "Sect",
+     "international organization has policy: vajrayana policy"
     ],
     "policies": [
      {
@@ -62061,8 +62267,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "law:venetian_papal_relation_law"
+      "?",
+      "has_unlocked_law_trigger",
+      "has unlocked law trigger"
      ],
      [
       "rel",
@@ -62070,7 +62277,7 @@
      ]
     ],
     "gate_labels": [
-     "Law:Venetian Papal Relation Law",
+     "has unlocked law trigger",
      "Catholicism"
     ],
     "policies": [

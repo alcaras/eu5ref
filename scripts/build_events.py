@@ -131,8 +131,8 @@ def main():
         gate_labels = []
         if gate:
             seen = set()
-            for _, v in triggers.literals(gate):
-                lab = labels.get(v) or ref.pretty(v)
+            for kind, v in triggers.literals(gate):
+                lab = triggers.label_of(kind, v, labels)
                 if lab not in seen:
                     seen.add(lab)
                     gate_labels.append(lab)

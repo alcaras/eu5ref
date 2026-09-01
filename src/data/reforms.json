@@ -6,9 +6,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "modifier:can_have_monasteries",
      "modifier:can have monasteries"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:can have monasteries"
+    ],
     "major": true,
     "requires": [
      "Can Have Monasteries",
@@ -209,7 +212,8 @@
      "and",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "not",
@@ -233,7 +237,9 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of ports > 0"
+    ],
     "major": true,
     "requires": [
      "ports > 0"
@@ -648,13 +654,14 @@
       "turkoman_culture"
      ],
      [
-      "?",
-      "is subject type"
+      "subj",
+      "uc_bey"
      ]
     ],
     "gate_labels": [
      "Turkish",
-     "Turkoman"
+     "Turkoman",
+     "Uç Bey"
     ],
     "major": false,
     "requires": [
@@ -1095,15 +1102,16 @@
       ]
      ],
      [
-      "unl",
-      "reform:austrian_archduchy_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Austria",
      "Styria",
      "Tyrol",
-     "Reform:Austrian Archduchy Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -1262,11 +1270,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:autonomous_swiss_cantons_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Autonomous Swiss Cantons Reform"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -1329,13 +1338,14 @@
       "AYU"
      ],
      [
-      "unl",
-      "reform:ayu_chatusadom"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "AYU",
-     "Reform:Ayu Chatusadom"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -1430,11 +1440,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:bank_of_england_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Bank Of England Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -1511,8 +1522,8 @@
      [
       "not",
       [
-       "?",
-       "is subject type"
+       "subj",
+       "trade_company"
       ]
      ]
     ],
@@ -1642,9 +1653,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "num subjects GREATER THAN EQUAL"
+     "num_subjects.greater_than_equal:1",
+     "num subjects ≥ 1"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num subjects ≥ 1"
+    ],
     "major": false,
     "requires": [
      "Num Subjects ≥ 1"
@@ -1844,11 +1858,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:bng_industralized_provinces"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Bng Industralized Provinces"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -2119,8 +2134,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:byzantine_court_in_italy"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "rel",
@@ -2132,7 +2148,7 @@
      ]
     ],
     "gate_labels": [
-     "Reform:Byzantine Court In Italy",
+     "has unlocked government reform trigger",
      "Orthodoxy",
      "Greek"
     ],
@@ -2171,9 +2187,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "num of non rural GREATER THAN"
+     "num_of_non_rural.greater_than:0",
+     "num of non rural > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of non rural > 0"
+    ],
     "major": false,
     "requires": [
      "Num Of Non Rural > 0"
@@ -2240,15 +2259,16 @@
       "iberian_group"
      ],
      [
-      "unl",
-      "reform:casa_de_contratacion"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
      "Iberian",
-     "Reform:Casa De Contratacion"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -2450,11 +2470,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:chi_peasant_empire_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Chi Peasant Empire Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -2666,9 +2687,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "is_colonial_overlord",
      "is colonial overlord"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is colonial overlord"
+    ],
     "major": false,
     "requires": [
      "Is Colonial Overlord"
@@ -2767,11 +2791,13 @@
      ],
      [
       "?",
+      "is_colonial_subject",
       "is colonial subject"
      ]
     ],
     "gate_labels": [
-     "Colonial Subject"
+     "Colonial Subject",
+     "is colonial subject"
     ],
     "major": false,
     "requires": [
@@ -3015,11 +3041,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:constitutional_state"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Constitutional State"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -3610,7 +3637,8 @@
      "and",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "reform",
@@ -3633,6 +3661,7 @@
      ]
     ],
     "gate_labels": [
+     "num of ports > 0",
      "Military Order",
      "Knights Hospitaller",
      "Crusade in the Sea"
@@ -3816,11 +3845,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:dan_college_of_missions"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Dan College Of Missions"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -3877,11 +3907,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:dan_the_kings_law"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Dan The Kings Law"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -4089,11 +4120,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:divided_persian_aristocracy"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Divided Persian Aristocracy"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -4147,11 +4179,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:diwan_i_bandagan"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Diwan I Bandagan"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -4294,14 +4327,19 @@
      "or",
      [
       "?",
-      "court language"
+      "court_language:north_italian_language",
+      "court language: north italian language"
      ],
      [
       "?",
-      "court language"
+      "court_language:south_italian_language",
+      "court language: south italian language"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "court language: north italian language",
+     "court language: south italian language"
+    ],
     "major": true,
     "requires": [
      "court language is Gallo-Italic",
@@ -4435,20 +4473,25 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:empower_the_eunuchs"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "?",
-      "exists"
+      "exists:middle_kingdom",
+      "exists: middle kingdom"
      ],
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:middle_kingdom",
+      "is leader of international organization: middle kingdom"
      ]
     ],
     "gate_labels": [
-     "Reform:Empower The Eunuchs"
+     "has unlocked government reform trigger",
+     "exists: middle kingdom",
+     "is leader of international organization: middle kingdom"
     ],
     "major": false,
     "requires": [
@@ -4556,9 +4599,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "religion.has_religious_influence",
      "religion has religious influence"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religion has religious influence"
+    ],
     "major": false,
     "requires": [
      "Has Religious Influence"
@@ -4658,9 +4704,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "has_parliament",
      "has parliament"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has parliament"
+    ],
     "major": false,
     "requires": [
      "has a parliament"
@@ -4752,11 +4801,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:eth_wandering_court"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Eth Wandering Court"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -4958,11 +5008,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:expanded_posadnichestvo_office"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Expanded Posadnichestvo Office"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -5410,11 +5461,12 @@
      "country modifier: Bohemian Aggression Modifier"
     ],
     "gate": [
-     "unl",
-     "reform:four_articles"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Four Articles"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -5621,15 +5673,16 @@
       ]
      ],
      [
-      "?",
-      "is subject type"
+      "subj",
+      "appanage"
      ]
     ],
     "gate_labels": [
      "France",
      "Brabant",
      "Flanders",
-     "Holland"
+     "Holland",
+     "Appanage"
     ],
     "major": false,
     "requires": [
@@ -6123,12 +6176,14 @@
      ],
      [
       "?",
-      "parliament type NOT EQUAL"
+      "parliament_type.not_equal:no_parliament",
+      "parliament type ≠ no_parliament"
      ]
     ],
     "gate_labels": [
      "Venice",
-     "Full College"
+     "Full College",
+     "parliament type ≠ no_parliament"
     ],
     "major": false,
     "requires": [
@@ -6183,13 +6238,14 @@
       "FRA"
      ],
      [
-      "unl",
-      "reform:gabelle"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "France",
-     "Reform:Gabelle"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -6511,13 +6567,15 @@
      ],
      [
       "?",
+      "modifier:has_a_parliamentary_system",
       "modifier:has a parliamentary system"
      ]
     ],
     "gate_labels": [
      "England",
      "GBR",
-     "Grand Remonstrance"
+     "Grand Remonstrance",
+     "modifier:has a parliamentary system"
     ],
     "major": false,
     "requires": [
@@ -6648,8 +6706,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:guru_granth_sahib_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "rel",
@@ -6657,7 +6716,7 @@
      ]
     ],
     "gate_labels": [
-     "Reform:Guru Granth Sahib Reform",
+     "has unlocked government reform trigger",
      "Sikhism"
     ],
     "major": false,
@@ -6786,8 +6845,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:hab_geheimer_rat"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "not",
@@ -6798,7 +6858,7 @@
      ]
     ],
     "gate_labels": [
-     "Reform:Hab Geheimer Rat"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -6851,8 +6911,15 @@
       "jurchen_group"
      ],
      [
-      "gov",
-      "tribe"
+      "or",
+      [
+       "gov",
+       "tribe"
+      ],
+      [
+       "gov",
+       "steppe_horde"
+      ]
      ],
      [
       "not",
@@ -6863,12 +6930,15 @@
      ],
      [
       "?",
-      "societal value:sinicized vs unsinicized LESS THAN"
+      "societal_value:sinicized_vs_unsinicized.less_than:40",
+      "societal value:sinicized vs unsinicized < 40"
      ]
     ],
     "gate_labels": [
      "Jurchen",
-     "Tribe"
+     "Tribe",
+     "Steppe Horde",
+     "societal value:sinicized vs unsinicized < 40"
     ],
     "major": false,
     "requires": [
@@ -7170,11 +7240,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:holy_imperial_monarchy_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Holy Imperial Monarchy Reform"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -7448,14 +7519,15 @@
       ]
      ],
      [
-      "unl",
-      "reform:intendancy_system"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
-     "Reform:Intendancy System"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -7536,12 +7608,14 @@
      ],
      [
       "?",
-      "country rank"
+      "country_rank:rank_county",
+      "country rank: rank county"
      ]
     ],
     "gate_labels": [
      "Ireland",
-     "Anglo-Irish"
+     "Anglo-Irish",
+     "country rank: rank county"
     ],
     "major": true,
     "requires": [
@@ -7604,11 +7678,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:iro_council_of_the_fifty"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Iro Council Of The Fifty"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -7671,11 +7746,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:iro_reforged_law_of_peace"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Iro Reforged Law Of Peace"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -8009,8 +8085,15 @@
       "jurchen_group"
      ],
      [
-      "gov",
-      "tribe"
+      "or",
+      [
+       "gov",
+       "tribe"
+      ],
+      [
+       "gov",
+       "steppe_horde"
+      ]
      ],
      [
       "not",
@@ -8021,12 +8104,15 @@
      ],
      [
       "?",
-      "societal value:sinicized vs unsinicized LESS THAN"
+      "societal_value:sinicized_vs_unsinicized.less_than:20",
+      "societal value:sinicized vs unsinicized < 20"
      ]
     ],
     "gate_labels": [
      "Jurchen",
-     "Tribe"
+     "Tribe",
+     "Steppe Horde",
+     "societal value:sinicized vs unsinicized < 20"
     ],
     "major": false,
     "requires": [
@@ -8093,8 +8179,8 @@
      [
       "not",
       [
-       "?",
-       "is subject type"
+       "subj",
+       "fiefdom"
       ]
      ]
     ],
@@ -8303,12 +8389,13 @@
       "BYZ"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ]
     ],
     "gate_labels": [
-     "Byzantium"
+     "Byzantium",
+     "Fate Of The Phoenix"
     ],
     "major": false,
     "requires": [
@@ -8458,11 +8545,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:kingdom_of_god_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Kingdom Of God Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -8509,11 +8597,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:kor_daedongbeob"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Kor Daedongbeob"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -8570,11 +8659,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:kor_sadae_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Kor Sadae Reform"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -8679,13 +8769,14 @@
       "BYZ"
      ],
      [
-      "unl",
-      "reform:kritai_katholikoi_reformed"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Byzantium",
-     "Reform:Kritai Katholikoi Reformed"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -9101,7 +9192,8 @@
      "and",
      [
       "?",
-      "situation:rise of the ottomans.var:strongest beylik variable this"
+      "situation:rise_of_the_ottomans.var:strongest_beylik_variable.this:root",
+      "situation:rise of the ottomans.var:strongest beylik variable this: root"
      ],
      [
       "not",
@@ -9111,7 +9203,9 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "situation:rise of the ottomans.var:strongest beylik variable this: root"
+    ],
     "major": false,
     "requires": [
      "this: Root",
@@ -9192,11 +9286,13 @@
        "and",
        [
         "?",
+        "ruler.has_dynasty",
         "ruler has dynasty"
        ],
        [
         "?",
-        "ruler dynasty"
+        "ruler.dynasty:borjigin_dynasty",
+        "ruler dynasty: borjigin dynasty"
        ]
       ]
      ],
@@ -9206,7 +9302,9 @@
      ]
     ],
     "gate_labels": [
-     "Mongolian"
+     "Mongolian",
+     "ruler has dynasty",
+     "ruler dynasty: borjigin dynasty"
     ],
     "major": true,
     "requires": [
@@ -9274,12 +9372,14 @@
      ],
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:middle_kingdom",
+      "is leader of international organization: middle kingdom"
      ]
     ],
     "gate_labels": [
      "Yuán(CHI)",
-     "Mongolian"
+     "Mongolian",
+     "is leader of international organization: middle kingdom"
     ],
     "major": true,
     "requires": [
@@ -9406,11 +9506,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:legacy_of_the_ottomans"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Legacy Of The Ottomans"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -9463,11 +9564,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:legacy_of_the_turks"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Legacy Of The Turks"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -9719,11 +9821,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:lifan_yuan"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Lifan Yuan"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -9765,20 +9868,23 @@
      "and",
      [
       "?",
-      "country rank level"
+      "country_rank_level:2",
+      "country rank level: 2"
      ],
      [
       "gov",
       "monarchy"
      ],
      [
-      "unl",
-      "reform:lit_grand_duchy_of_lithuania_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
+     "country rank level: 2",
      "Monarchy",
-     "Reform:Lit Grand Duchy Of Lithuania Reform"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -9833,11 +9939,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:livonian_confederation"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Livonian Confederation"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -9944,11 +10051,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:luc_libertas"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Luc Libertas"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -10091,11 +10199,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:malian_tribute_system"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Malian Tribute System"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -10570,7 +10679,8 @@
      "and",
      [
       "?",
-      "has global variable"
+      "has_global_variable:league_of_public_weal_enabled",
+      "has global variable: league of public weal enabled"
      ],
      [
       "or",
@@ -10584,8 +10694,8 @@
        [
         "not",
         [
-         "?",
-         "is subject type"
+         "subj",
+         "vassal"
         ]
        ],
        [
@@ -10613,11 +10723,13 @@
       "not",
       [
        "?",
-       "in union with"
+       "in_union_with:fra",
+       "in union with: FRA"
       ]
      ]
     ],
     "gate_labels": [
+     "has global variable: league of public weal enabled",
      "France",
      "French Feudal Nobility",
      "Monarchy",
@@ -11314,13 +11426,14 @@
       "BYZ"
      ],
      [
-      "unl",
-      "reform:modern_imperial_army"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Byzantium",
-     "Reform:Modern Imperial Army"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -11385,12 +11498,13 @@
       "BYZ"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ]
     ],
     "gate_labels": [
-     "Byzantium"
+     "Byzantium",
+     "Fate Of The Phoenix"
     ],
     "major": false,
     "requires": [
@@ -11926,13 +12040,15 @@
      ],
      [
       "?",
-      "num of ports GREATER THAN EQUAL"
+      "num_of_ports.greater_than_equal:10",
+      "num of ports ≥ 10"
      ]
     ],
     "gate_labels": [
      "England",
      "GBR",
-     "Navy Board"
+     "Navy Board",
+     "num of ports ≥ 10"
     ],
     "major": false,
     "requires": [
@@ -12320,14 +12436,15 @@
       ]
      ],
      [
-      "unl",
-      "reform:nueva_planta"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
-     "Reform:Nueva Planta"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -12435,11 +12552,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:omani_overseas_ambitions_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Omani Overseas Ambitions Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -13158,8 +13276,110 @@
     "gate": [
      "and",
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "not",
@@ -13169,7 +13389,29 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "French",
+     "Iberian",
+     "Italian",
+     "Catholicism",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica"
+    ],
     "major": false,
     "requires": [
      "is a Frankokratia state",
@@ -13236,14 +13478,111 @@
      "and",
      [
       "?",
-      "country rank level LESS THAN EQUAL"
+      "country_rank_level.less_than_equal:2",
+      "country rank level ≤ 2"
      ],
      [
-      "?",
-      "is country religion pagan"
+      "or",
+      [
+       "rgrp",
+       "folk_african_group"
+      ],
+      [
+       "rgrp",
+       "folk_argentinian_group"
+      ],
+      [
+       "rgrp",
+       "folk_aridoamerica_group"
+      ],
+      [
+       "rgrp",
+       "folk_asian_group"
+      ],
+      [
+       "rgrp",
+       "folk_australian_group"
+      ],
+      [
+       "rgrp",
+       "folk_brazilian_group"
+      ],
+      [
+       "rgrp",
+       "folk_caribbean_group"
+      ],
+      [
+       "rgrp",
+       "folk_central_american_group"
+      ],
+      [
+       "rgrp",
+       "tonal_group"
+      ],
+      [
+       "rgrp",
+       "folk_european_group"
+      ],
+      [
+       "rgrp",
+       "folk_melanesian_group"
+      ],
+      [
+       "rgrp",
+       "folk_micronesian_group"
+      ],
+      [
+       "rgrp",
+       "folk_north_american_group"
+      ],
+      [
+       "rgrp",
+       "folk_papuan_group"
+      ],
+      [
+       "rgrp",
+       "folk_permic_group"
+      ],
+      [
+       "rgrp",
+       "folk_peruvian_group"
+      ],
+      [
+       "rgrp",
+       "folk_polynesian_group"
+      ],
+      [
+       "rgrp",
+       "folk_se_asian_group"
+      ],
+      [
+       "rgrp",
+       "folk_south_american_group"
+      ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "country rank level ≤ 2",
+     "African Folk Religions",
+     "Argentinian Folk Religions",
+     "Aridoamerican Folk Religions",
+     "Asian Folk Religions",
+     "Australian Folk Religions",
+     "Brazilian Folk Religions",
+     "Caribbean Folk Religions",
+     "Central American Folk Religions",
+     "Tonal Religions",
+     "European Folk Religions",
+     "Melanesian Folk Religions",
+     "Micronesian Folk Religions",
+     "North American Folk Religions",
+     "Papuan Folk Religions",
+     "Permic Folk Religions",
+     "Andean Folk Religions",
+     "Polynesian Folk Religions",
+     "South East Asian Folk Religions",
+     "South American Folk Religions"
+    ],
     "major": false,
     "requires": [
      "Country Rank Level ≤ 2",
@@ -13355,10 +13694,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "?",
-     "country has estate"
+     "estate",
+     "peasants_estate"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Commoners"
+    ],
     "major": true,
     "requires": [
      "country has estate: Commoners",
@@ -13525,11 +13866,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:petition_of_rights"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Petition Of Rights"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -13594,11 +13936,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:peuplierung_system"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Peuplierung System"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -13649,11 +13992,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:pirate_brethren_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Pirate Brethren Reform"
+     "has unlocked government reform trigger"
     ],
     "major": true,
     "requires": [
@@ -13933,11 +14277,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:por_ordinances"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Por Ordinances"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -14011,8 +14356,8 @@
      [
       "not",
       [
-       "?",
-       "is subject type"
+       "subj",
+       "colonial_nation"
       ]
      ]
     ],
@@ -14073,11 +14418,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:powerful_vizierships_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Powerful Vizierships Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -14433,13 +14779,14 @@
       "VEN"
      ],
      [
-      "unl",
-      "reform:promissione_ducale_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Venice",
-     "Reform:Promissione Ducale Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -15116,11 +15463,13 @@
      "and",
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:hre",
+      "is leader of international organization: hre"
      ],
      [
-      "unl",
-      "reform:reichshofrat_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "tag",
@@ -15128,7 +15477,8 @@
      ]
     ],
     "gate_labels": [
-     "Reform:Reichshofrat Reform",
+     "is leader of international organization: hre",
+     "has unlocked government reform trigger",
      "Austria"
     ],
     "major": false,
@@ -15352,13 +15702,15 @@
      ],
      [
       "?",
+      "modifier:has_a_parliamentary_system",
       "modifier:has a parliamentary system"
      ]
     ],
     "gate_labels": [
      "England",
      "GBR",
-     "Representative Government"
+     "Representative Government",
+     "modifier:has a parliamentary system"
     ],
     "major": false,
     "requires": [
@@ -15429,9 +15781,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "is_revolutionary",
      "is revolutionary"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is revolutionary"
+    ],
     "major": true,
     "requires": [
      "Is Revolutionary",
@@ -15496,9 +15851,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "is_revolutionary",
      "is revolutionary"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is revolutionary"
+    ],
     "major": true,
     "requires": [
      "Is Revolutionary",
@@ -15557,9 +15915,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "is_revolutionary",
      "is revolutionary"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is revolutionary"
+    ],
     "major": true,
     "requires": [
      "Is Revolutionary",
@@ -15745,15 +16106,16 @@
       ]
      ],
      [
-      "unl",
-      "reform:royal_council_of_castile"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
      "Castilian",
-     "Reform:Royal Council Of Castile"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -15876,14 +16238,15 @@
       ]
      ],
      [
-      "unl",
-      "reform:royal_factories_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
-     "Reform:Royal Factories Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -16023,15 +16386,8 @@
       "ENG"
      ],
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "commission_established"
-      ]
+      "var",
+      "commission_established"
      ]
     ],
     "gate_labels": [
@@ -16214,8 +16570,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:samsa_system"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "or",
@@ -16225,13 +16582,15 @@
       ],
       [
        "?",
-       "court language"
+       "court_language:korean_language",
+       "court language: korean language"
       ]
      ]
     ],
     "gate_labels": [
-     "Reform:Samsa System",
-     "Korean"
+     "has unlocked government reform trigger",
+     "Korean",
+     "court language: korean language"
     ],
     "major": false,
     "requires": [
@@ -16722,11 +17081,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:shahana_i_mandi"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Shahana I Mandi"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -16951,16 +17311,19 @@
     "gate": [
      "and",
      [
-      "unl",
-      "reform:shogunate_kanrei_council"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ],
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:japanese_shogunate",
+      "is leader of international organization: japanese shogunate"
      ]
     ],
     "gate_labels": [
-     "Reform:Shogunate Kanrei Council"
+     "has unlocked government reform trigger",
+     "is leader of international organization: japanese shogunate"
     ],
     "major": false,
     "requires": [
@@ -17028,11 +17391,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:signoria_of_venice"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Signoria Of Venice"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17098,14 +17462,19 @@
      "or",
      [
       "?",
-      "court language"
+      "court_language:north_italian_language",
+      "court language: north italian language"
      ],
      [
       "?",
-      "court language"
+      "court_language:south_italian_language",
+      "court language: south italian language"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "court language: north italian language",
+     "court language: south italian language"
+    ],
     "major": true,
     "requires": [
      "court language is Gallo-Italic",
@@ -17162,11 +17531,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:single_whip_law"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Single Whip Law"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17299,11 +17669,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:son_trans_saharan_trade"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Son Trans Saharan Trade"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17348,11 +17719,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:songhai_professional_army_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Songhai Professional Army Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17533,11 +17905,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:sovet_gospod"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Sovet Gospod"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17791,15 +18164,16 @@
       "iberian_group"
      ],
      [
-      "unl",
-      "reform:spanish_tolerance"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
      "Iberian",
-     "Reform:Spanish Tolerance"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -17929,13 +18303,14 @@
       "VEN"
      ],
      [
-      "unl",
-      "reform:standardized_relazioni_reform"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Venice",
-     "Reform:Standardized Relazioni Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -18269,11 +18644,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:subah_organization_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Subah Organization Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -18680,9 +19056,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "num of ports GREATER THAN"
+     "num_of_ports.greater_than:100",
+     "num of ports > 100"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of ports > 100"
+    ],
     "major": false,
     "requires": [
      "ports > 100"
@@ -19092,11 +19471,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:the_protectorate"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:The Protectorate"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -19343,47 +19723,51 @@
      [
       "and",
       [
-       "?",
-       "has societal value"
+       "axis",
+       "sinicized_vs_unsinicized"
       ],
       [
        "?",
-       "societal value:sinicized vs unsinicized LESS THAN"
+       "societal_value:sinicized_vs_unsinicized.less_than:_60",
+       "societal value:sinicized vs unsinicized < -60"
       ]
      ],
      [
       "?",
-      "culture.language.language family"
+      "culture.language.language_family:chinese_language_family",
+      "culture.language.language family: chinese language family"
      ],
      [
       "?",
-      "court language.language family"
+      "court_language.language_family:chinese_language_family",
+      "court language.language family: chinese language family"
+     ],
+     [
+      "var",
+      "unlocked_mandarin_language_reforms"
      ],
      [
       "and",
       [
        "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "unlocked_mandarin_language_reforms"
-      ]
-     ],
-     [
-      "and",
-      [
-       "?",
-       "exists"
+       "exists:middle_kingdom",
+       "exists: middle kingdom"
       ],
       [
        "?",
-       "is leader of international organization"
+       "is_leader_of_international_organization:middle_kingdom",
+       "is leader of international organization: middle kingdom"
       ]
      ]
     ],
     "gate_labels": [
-     "Unlocked Mandarin Language Reforms"
+     "Sinicized vs Unsinicized",
+     "societal value:sinicized vs unsinicized < -60",
+     "culture.language.language family: chinese language family",
+     "court language.language family: chinese language family",
+     "Unlocked Mandarin Language Reforms",
+     "exists: middle kingdom",
+     "is leader of international organization: middle kingdom"
     ],
     "major": false,
     "requires": [
@@ -19450,11 +19834,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:timurid_diwan_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Timurid Diwan Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -19517,11 +19902,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:timurid_empire"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Timurid Empire"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -19581,9 +19967,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "num of non rural GREATER THAN"
+     "num_of_non_rural.greater_than:0",
+     "num of non rural > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of non rural > 0"
+    ],
     "major": false,
     "requires": [
      "Num Of Non Rural > 0"
@@ -19790,11 +20179,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:tughlaq_slave_army_reform"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Tughlaq Slave Army Reform"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -19851,11 +20241,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:turkish_pashas"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Turkish Pashas"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -19948,10 +20339,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "?",
-     "is subject type"
+     "subj",
+     "uc_bey"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "Uç Bey"
+    ],
     "major": false,
     "requires": [
      "is a Uç Bey",
@@ -20409,11 +20802,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:vij_astadiggajas"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Vij Astadiggajas"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -20667,7 +21061,8 @@
       "or",
       [
        "?",
-       "is situation active"
+       "is_situation_active:red_turban_rebellions",
+       "is situation active: red turban rebellions"
       ],
       [
        "var",
@@ -20676,20 +21071,23 @@
      ],
      [
       "?",
-      "exists"
+      "exists:middle_kingdom",
+      "exists: middle kingdom"
      ],
      [
       "not",
       [
        "?",
-       "is leader of international organization"
+       "is_leader_of_international_organization:middle_kingdom",
+       "is leader of international organization: middle kingdom"
       ]
      ],
      [
       "or",
       [
        "?",
-       "culture.language.language family"
+       "culture.language.language_family:chinese_language_family",
+       "culture.language.language family: chinese language family"
       ],
       [
        "lang",
@@ -20701,7 +21099,8 @@
       ],
       [
        "?",
-       "culture.language.language family"
+       "culture.language.language_family:tai_language_family",
+       "culture.language.language family: tai language family"
       ],
       [
        "lang",
@@ -20723,9 +21122,13 @@
     ],
     "gate_labels": [
      "Warring State",
+     "is situation active: red turban rebellions",
      "Unlocked Warring State",
+     "exists: middle kingdom",
+     "culture.language.language family: chinese language family",
      "Yi",
      "Hmong",
+     "culture.language.language family: tai language family",
      "Tibetan",
      "Jurchen",
      "Nanai",
@@ -20849,11 +21252,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:warsaw_confederation"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Warsaw Confederation"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -21032,8 +21436,15 @@
       "jurchen_group"
      ],
      [
-      "gov",
-      "tribe"
+      "or",
+      [
+       "gov",
+       "tribe"
+      ],
+      [
+       "gov",
+       "steppe_horde"
+      ]
      ],
      [
       "not",
@@ -21044,12 +21455,15 @@
      ],
      [
       "?",
-      "societal value:sinicized vs unsinicized GREATER THAN"
+      "societal_value:sinicized_vs_unsinicized.greater_than:35",
+      "societal value:sinicized vs unsinicized > 35"
      ]
     ],
     "gate_labels": [
      "Jurchen",
-     "Tribe"
+     "Tribe",
+     "Steppe Horde",
+     "societal value:sinicized vs unsinicized > 35"
     ],
     "major": false,
     "requires": [
@@ -21163,11 +21577,12 @@
    "data": {
     "excludes": [],
     "gate": [
-     "unl",
-     "reform:zmw_council_of_senior_wives"
+     "?",
+     "has_unlocked_government_reform_trigger",
+     "has unlocked government reform trigger"
     ],
     "gate_labels": [
-     "Reform:Zmw Council Of Senior Wives"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [
@@ -21220,13 +21635,14 @@
       "swiss_group"
      ],
      [
-      "unl",
-      "reform:zur_guild_constitution"
+      "?",
+      "has_unlocked_government_reform_trigger",
+      "has unlocked government reform trigger"
      ]
     ],
     "gate_labels": [
      "Swiss",
-     "Reform:Zur Guild Constitution"
+     "has unlocked government reform trigger"
     ],
     "major": false,
     "requires": [

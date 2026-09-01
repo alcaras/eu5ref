@@ -2304,9 +2304,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "government type NOT EQUAL"
+     "government_type.not_equal:steppe_horde",
+     "government type ≠ steppe_horde"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "government type ≠ steppe_horde"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -3024,12 +3027,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "cgrp",
@@ -3037,6 +3040,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "Roman"
     ],
     "hull_size": null,
@@ -3097,12 +3102,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "cgrp",
@@ -3110,6 +3115,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "Roman"
     ],
     "hull_size": null,
@@ -3170,12 +3177,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "cgrp",
@@ -3183,6 +3190,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "Roman"
     ],
     "hull_size": null,
@@ -3243,12 +3252,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "cgrp",
@@ -3256,6 +3265,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "Roman"
     ],
     "hull_size": null,
@@ -3316,12 +3327,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "cgrp",
@@ -3329,6 +3340,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "Roman"
     ],
     "hull_size": null,
@@ -3442,14 +3455,19 @@
      "and",
      [
       "?",
-      "and exists"
+      "and.exists:government_type",
+      "and exists: government type"
      ],
      [
       "?",
-      "government type NOT EQUAL"
+      "government_type.not_equal:steppe_horde",
+      "government type ≠ steppe_horde"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "and exists: government type",
+     "government type ≠ steppe_horde"
+    ],
     "hull_size": null,
     "initiative": 1.0,
     "levy": false,
@@ -4292,6 +4310,7 @@
      "or",
      [
       "?",
+      "modifier:allow_military_order_units",
       "modifier:allow military order units"
      ],
      [
@@ -4300,6 +4319,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:allow military order units",
      "Iberian"
     ],
     "hull_size": null,
@@ -4795,9 +4815,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
+     "modifier:global_may_build_nahuatl_units",
      "modifier:global may build nahuatl units"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:global may build nahuatl units"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -5007,9 +5030,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
+     "modifier:global_may_build_paik_units",
      "modifier:global may build paik units"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:global may build paik units"
+    ],
     "hull_size": null,
     "initiative": 7.0,
     "levy": false,
@@ -5061,9 +5087,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "has unlocked unit trigger type"
+     "has_unlocked_unit_trigger",
+     "has unlocked unit trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked unit trigger"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -5554,9 +5583,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "government type NOT EQUAL"
+     "government_type.not_equal:steppe_horde",
+     "government type ≠ steppe_horde"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "government type ≠ steppe_horde"
+    ],
     "hull_size": null,
     "initiative": 1.0,
     "levy": false,
@@ -6046,8 +6078,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "var",
@@ -6059,6 +6091,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Unlocked Greek Fire",
      "Age 3 Discovery"
     ],
@@ -6114,8 +6147,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "var",
@@ -6123,6 +6156,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Unlocked Greek Fire"
     ],
     "hull_size": null,
@@ -6840,14 +6874,19 @@
      "or",
      [
       "?",
-      "has presence in"
+      "has_presence_in:ireland_region",
+      "has presence in: ireland region"
      ],
      [
       "?",
-      "has presence in"
+      "has_presence_in:great_britain_region",
+      "has presence in: great britain region"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has presence in: ireland region",
+     "has presence in: great britain region"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -7479,9 +7518,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
+     "modifier:global_may_build_nahuatl_units",
      "modifier:global may build nahuatl units"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:global may build nahuatl units"
+    ],
     "hull_size": null,
     "initiative": 1.0,
     "levy": false,
@@ -8033,6 +8075,7 @@
      "or",
      [
       "?",
+      "modifier:allow_military_order_units",
       "modifier:allow military order units"
      ],
      [
@@ -8041,6 +8084,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:allow military order units",
      "Iberian"
     ],
     "hull_size": null,
@@ -8413,6 +8457,7 @@
      "and",
      [
       "?",
+      "modifier:global_may_build_paik_units",
       "modifier:global may build paik units"
      ],
      [
@@ -8421,6 +8466,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:global may build paik units",
      "Age 5 Absolutism"
     ],
     "hull_size": null,
@@ -8535,12 +8581,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8548,6 +8594,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -8602,12 +8650,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8615,6 +8663,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -8669,12 +8719,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8682,6 +8732,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -8736,12 +8788,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8749,6 +8801,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -8803,12 +8857,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8816,6 +8870,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -8870,12 +8926,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "has societal value"
+      "axis",
+      "latinization_vs_hellenization"
      ],
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",
@@ -8883,6 +8939,8 @@
      ]
     ],
     "gate_labels": [
+     "Latinitas vs Rōmanismós",
+     "Fate Of The Phoenix",
      "ROM"
     ],
     "hull_size": null,
@@ -9228,15 +9286,63 @@
      [
       "not",
       [
-       "?",
-       "is capital mesoamerica"
+       "or",
+       [
+        "cap",
+        "region",
+        "mesoamerica_region"
+       ],
+       [
+        "cap",
+        "area",
+        "xalisco_area"
+       ],
+       [
+        "cap",
+        "area",
+        "zacatecas_area"
+       ],
+       [
+        "cap",
+        "region",
+        "central_america_region"
+       ]
       ]
      ],
      [
       "not",
       [
-       "?",
-       "is capital in south america or carribean"
+       "or",
+       [
+        "cap",
+        "region",
+        "colombia_region"
+       ],
+       [
+        "cap",
+        "region",
+        "andes_region"
+       ],
+       [
+        "cap",
+        "region",
+        "brazil_region"
+       ],
+       [
+        "cap",
+        "region",
+        "chaco_region"
+       ],
+       [
+        "cap",
+        "region",
+        "la_plata_region"
+       ],
+       [
+        "cap",
+        "region",
+        "caribbean_region"
+       ]
       ]
      ],
      [
@@ -10214,9 +10320,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "has unlocked unit trigger type"
+     "has_unlocked_unit_trigger",
+     "has unlocked unit trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked unit trigger"
+    ],
     "hull_size": null,
     "initiative": 2.0,
     "levy": false,
@@ -10278,9 +10387,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "has unlocked unit trigger type"
+     "has_unlocked_unit_trigger",
+     "has unlocked unit trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked unit trigger"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -10394,6 +10506,7 @@
      "or",
      [
       "?",
+      "modifier:allow_military_order_units",
       "modifier:allow military order units"
      ],
      [
@@ -10402,6 +10515,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:allow military order units",
      "Iberian"
     ],
     "hull_size": null,
@@ -10464,6 +10578,7 @@
      "or",
      [
       "?",
+      "modifier:allow_military_order_units",
       "modifier:allow military order units"
      ],
      [
@@ -10472,6 +10587,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:allow military order units",
      "Iberian"
     ],
     "hull_size": null,
@@ -10644,6 +10760,7 @@
      "and",
      [
       "?",
+      "modifier:global_may_build_paik_units",
       "modifier:global may build paik units"
      ],
      [
@@ -10652,6 +10769,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:global may build paik units",
      "Age 3 Discovery"
     ],
     "hull_size": null,
@@ -10976,9 +11094,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "has unlocked unit trigger type"
+     "has_unlocked_unit_trigger",
+     "has unlocked unit trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked unit trigger"
+    ],
     "hull_size": null,
     "initiative": 1.1,
     "levy": false,
@@ -11355,9 +11476,12 @@
     "frontage": 1.0,
     "gate": [
      "?",
-     "has unlocked unit trigger type"
+     "has_unlocked_unit_trigger",
+     "has unlocked unit trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked unit trigger"
+    ],
     "hull_size": null,
     "initiative": 5.0,
     "levy": false,
@@ -11963,14 +12087,19 @@
      "and",
      [
       "?",
-      "has primary or accepted culture"
+      "has_primary_or_accepted_culture:highland",
+      "has primary or accepted culture: highland"
      ],
      [
       "?",
-      "has primary or accepted culture"
+      "has_primary_or_accepted_culture:norse_gael",
+      "has primary or accepted culture: norse gael"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has primary or accepted culture: highland",
+     "has primary or accepted culture: norse gael"
+    ],
     "hull_size": null,
     "initiative": 4.0,
     "levy": true,
@@ -13501,15 +13630,63 @@
      [
       "not",
       [
-       "?",
-       "is capital mesoamerica"
+       "or",
+       [
+        "cap",
+        "region",
+        "mesoamerica_region"
+       ],
+       [
+        "cap",
+        "area",
+        "xalisco_area"
+       ],
+       [
+        "cap",
+        "area",
+        "zacatecas_area"
+       ],
+       [
+        "cap",
+        "region",
+        "central_america_region"
+       ]
       ]
      ],
      [
       "not",
       [
-       "?",
-       "is capital in south america or carribean"
+       "or",
+       [
+        "cap",
+        "region",
+        "colombia_region"
+       ],
+       [
+        "cap",
+        "region",
+        "andes_region"
+       ],
+       [
+        "cap",
+        "region",
+        "brazil_region"
+       ],
+       [
+        "cap",
+        "region",
+        "chaco_region"
+       ],
+       [
+        "cap",
+        "region",
+        "la_plata_region"
+       ],
+       [
+        "cap",
+        "region",
+        "caribbean_region"
+       ]
       ]
      ],
      [
@@ -16217,8 +16394,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "var",
@@ -16230,6 +16407,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Unlocked Greek Fire",
      "Age 3 Discovery"
     ],
@@ -16283,8 +16461,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "var",
@@ -16292,6 +16470,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Unlocked Greek Fire"
     ],
     "hull_size": 7.0,

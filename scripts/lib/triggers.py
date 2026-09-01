@@ -31,7 +31,18 @@ Compiled expression grammar (JSON arrays, evaluated in the browser):
     ["mrep"]               is_merchant_republic
     ["var", "x"]           has_variable — event-granted, named so the UI can
                            say which content has to fire first
-    ["?",    "label"]      dynamic — unknowable from static facts
+    ["mcg", "serbian"]     the player's merged (unified) culture contains this
+                           culture — acquirable, never true at 1337
+    ["subj", "vassal"]     subject status: a subject type, or "none"
+    ["estate", "x"] ["dlc", "x"] ["axis", "x"]
+                           has this estate / DLC / societal-value axis
+    ["?", "id", "label"]   dynamic — unknowable from static facts; the id is
+                           stable across builds so a user can assert it
+
+Scripted triggers (`is_castilian_spain = yes`) are inlined from
+common/scripted_triggers and compiled like anything else, so a gate that is
+really `tag = SPA AND culture = castilian` comes out as exactly that.
+Parameterised ones (`$x$`) and cycles fall through to "?".
 
 Evaluation is three-valued (Kleene): TRUE / FALSE / UNKNOWN. "?" yields
 UNKNOWN, so an advance gated on something you could still acquire (embrace
@@ -39,12 +50,101 @@ an institution, gain an estate, become a colonial nation) is reported as
 *conditional* rather than silently hidden. Only a definite FALSE is filtered
 out — and even then the UI can show it with the reason.
 
+KINDS is the vocabulary the frontends build their controls from: every
+predicate kind a player can assert, with its label and whether a country has
+exactly ONE value (culture, capital…) or a SET of acquirable things (reforms,
+unified cultures…). Adding a kind here is all it takes for the planner to
+grow a control and a URL parameter for it.
+
 UNHANDLED tracks every predicate key that fell through to "?" so the build
 can report coverage instead of quietly guessing.
 """
 import collections
+import re
 
 UNHANDLED: collections.Counter = collections.Counter()
+
+# Every "?" id seen this build → its human label, for the catalog.
+QLABELS: dict[str, str] = {}
+
+# (key, label, mode). mode 'one': a country has exactly one value and the
+# 1337 setup fixes it (overriding it means "I changed it"); mode 'set':
+# acquirable things, unknown until asserted (✓ have / ✗ never).
+KINDS: list[tuple[str, str, str]] = [
+    ('cul', 'Culture', 'one'),
+    ('rel', 'Religion', 'one'),
+    ('cap', 'Capital', 'one'),
+    ('gov', 'Government', 'one'),
+    ('subj', 'Subject status', 'one'),
+    ('mcg', 'Unified cultures', 'set'),
+    ('reform', 'Reforms', 'set'),
+    ('estate', 'Estates', 'set'),
+    ('iomem', 'Organizations', 'set'),
+    ('axis', 'Value axes', 'set'),
+    ('dlc', 'DLC', 'set'),
+    ('law', 'Laws', 'set'),
+    ('priv', 'Privileges', 'set'),
+    ('?', 'Other conditions', 'set'),
+]
+
+# Scripted triggers, name → body Tree, loaded lazily from the parser (this
+# module is imported by every builder; not all of them run the parser).
+_SCRIPTED: dict | None = None
+_SCRIPTED_SKIP: set[str] = set()      # parameterised bodies — not inlinable
+
+
+def _scripted() -> dict:
+    global _SCRIPTED
+    if _SCRIPTED is None:
+        _SCRIPTED = {}
+        try:
+            import ref
+            for name, st in ref.parser.scripted_triggers.items():
+                body = getattr(st, 'trigger', None)
+                if body is None or not hasattr(body, 'iterate_with_duplicates'):
+                    continue
+                if '$' in repr(_flat(body)):
+                    _SCRIPTED_SKIP.add(name)
+                    continue
+                _SCRIPTED[name] = body
+        except Exception as exc:      # no game data in this process
+            print(f'  scripted triggers unavailable: {exc}')
+    return _SCRIPTED
+
+
+def _flat(tree):
+    """Tree → nested lists, for a cheap textual scan."""
+    try:
+        return [(str(k), _flat(v)) for k, v in tree.iterate_with_duplicates()]
+    except AttributeError:
+        return str(tree)
+
+
+_RTAGS: dict[str, list[str]] | None = None
+
+
+def _religion_tags() -> dict[str, list[str]]:
+    """custom tag → religions carrying it (`has_tag = protestant` in a
+    religion scope tests `custom_tags`)."""
+    global _RTAGS
+    if _RTAGS is None:
+        _RTAGS = collections.defaultdict(list)
+        try:
+            import ref
+            for name, r in ref.parser.religions.items():
+                for t in (getattr(r, 'custom_tags', None) or []):
+                    _RTAGS[str(getattr(t, 'name', t))].append(name)
+        except Exception as exc:
+            print(f'  religion tags unavailable: {exc}')
+    return _RTAGS
+
+
+def _unknown(id_: str, label: str | None = None) -> list:
+    """The honest fallback, with a stable id the UI can key an assertion on."""
+    id_ = re.sub(r'[^a-z0-9_:.]+', '_', id_.lower()).strip('_')
+    label = label or _pretty(id_.replace(':', ': '))
+    QLABELS[id_] = label
+    return ['?', id_, label]
 
 # Boolean combinators as they appear in Paradox script.
 _COMBINATORS = {'OR', 'AND', 'NOT', 'NOR', 'NAND', 'all', 'any'}
@@ -125,8 +225,21 @@ def _block_get(tree, want: str):
     return None
 
 
+_ROMAN = {'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'}
+
+
 def _pretty(key: str) -> str:
     return key.replace('_', ' ').strip()
+
+
+def _titled(key: str) -> str:
+    """A script token as a display fallback: title-cased, regnal numerals
+    restored ("andronikos_ii" → "Andronikos II"); already-humanized strings
+    (uppercase or spaces) are left alone."""
+    s = str(key)
+    if not s.islower():
+        return s
+    return ' '.join(w.upper() if w in _ROMAN else w.title() for w in s.replace('_', ' ').split())
 
 
 def compile_trigger(tree, culture_groups: dict[str, str] | None = None):
@@ -142,6 +255,10 @@ def compile_trigger(tree, culture_groups: dict[str, str] | None = None):
     return expr
 
 
+# scripted triggers being inlined right now (cycle guard)
+_INLINING: list[str] = []
+
+
 def _compile_block(tree, cgroups, scope: str | None = None) -> list | None:
     """A block is an implicit AND over its (possibly duplicate) keys.
 
@@ -152,7 +269,10 @@ def _compile_block(tree, cgroups, scope: str | None = None) -> list | None:
     try:
         pairs = list(tree.iterate_with_duplicates())
     except AttributeError:
-        return ['?', 'unparsed']
+        # `potential = { }` comes back as an empty list: no gate at all
+        if isinstance(tree, (list, tuple)) and not tree:
+            return None
+        return _unknown('unparsed')
     for key, value in pairs:
         node = _compile_pair(str(key), value, cgroups, scope)
         if node is not None:
@@ -163,6 +283,13 @@ def _compile_block(tree, cgroups, scope: str | None = None) -> list | None:
 
 
 def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | None:
+    # A key repeated in one block (`OR = {…} OR = {…}`) comes back as a list
+    # of trees — one pair per body, ANDed like any repeated key.
+    if isinstance(value, list) and value and all(hasattr(v, 'iterate_with_duplicates') for v in value):
+        parts = [n for n in (_compile_pair(key, v, cgroups, scope) for v in value) if n is not None]
+        if not parts:
+            return None
+        return parts[0] if len(parts) == 1 else ['and', *parts]
     # ── boolean combinators (keep the enclosing scope) ─────────
     if key in ('OR', 'any'):
         inner = _compile_block(value, cgroups, scope)
@@ -196,6 +323,60 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
     if key == 'is_merchant_republic':
         yes = value is True or str(value).strip().lower() in ('yes', 'true')
         return ['mrep'] if yes else ['not', ['mrep']]
+    if key == 'is_subject':
+        yes = value is True or str(value).strip().lower() in ('yes', 'true')
+        return ['not', ['subj', 'none']] if yes else ['subj', 'none']
+    if key == 'is_subject_type':
+        return ['subj', _strip_scope(value)]
+    if key == 'country_has_estate':
+        return ['estate', _strip_scope(value)]
+    if key == 'has_dlc':
+        return ['dlc', _strip_scope(value)]
+    if key == 'has_societal_value' and not hasattr(value, 'iterate_with_duplicates'):
+        return ['axis', _strip_scope(value)]
+
+    # ── scripted triggers: inline the body and compile it in place ──
+    # `is_castilian_spain = yes` is really `tag = SPA AND culture =
+    # castilian`; expanding it is what turns a "?" into an answer.
+    if not hasattr(value, 'iterate_with_duplicates') and key in _scripted():
+        if key in _INLINING or len(_INLINING) > 8:
+            UNHANDLED[key] += 1
+            return _unknown(key)
+        yes = value is True or str(value).strip().lower() in ('yes', 'true')
+        _INLINING.append(key)
+        try:
+            inner = _compile_block(_scripted()[key], cgroups, scope)
+        finally:
+            _INLINING.pop()
+        if inner is None:
+            return None
+        return inner if yes else ['not', inner]
+    # parameterised scripted triggers (`$age$` bodies) are not inlined —
+    # except the one whose meaning is plain and handled below
+    if key in _SCRIPTED_SKIP and key != 'current_age_or_later':
+        UNHANDLED[key] += 1
+        return _unknown(key)
+    # `custom_description = { text = … <triggers> }` / `custom_tooltip`: a
+    # tooltip wrapper around ordinary triggers.
+    if key in ('custom_description', 'custom_tooltip') and hasattr(value, 'iterate_with_duplicates'):
+        parts = []
+        for k2, v2 in value.iterate_with_duplicates():
+            if str(k2) in ('text', 'subject', 'object'):
+                continue
+            node = _compile_pair(str(k2), v2, cgroups, scope)
+            if node is not None:
+                parts.append(node)
+        if not parts:
+            return None
+        return parts[0] if len(parts) == 1 else ['and', *parts]
+    # `religion ?= { has_tag = protestant }` tests the religion's custom
+    # tags; expand to the religions that carry it.
+    if scope == 'religion' and key == 'has_tag':
+        rels = _religion_tags().get(_strip_scope(value), [])
+        if not rels:
+            UNHANDLED['religion.has_tag'] += 1
+            return _unknown(f'religion_tag:{_strip_scope(value)}')
+        return ['or', *[['rel', r] for r in rels]] if len(rels) > 1 else ['rel', rels[0]]
 
     # ── block-valued predicates that are not scopes ──
     if hasattr(value, 'iterate_with_duplicates'):
@@ -216,19 +397,19 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
             body = body_parts[0] if len(body_parts) == 1 else ['and', *body_parts]
             return ['or', ['not', limit], body] if limit else body
         if key == 'trigger_else':
-            return ['?', 'conditional trigger']
+            return _unknown('trigger_else', 'conditional trigger')
         if key in _UNLOCKED:
             t = _block_get(value, 'type')
             if t is not None:
                 return ['unl', f'{_UNLOCKED[key]}:{_strip_scope(t)}']
             UNHANDLED[key] += 1
-            return ['?', _pretty(key)]
+            return _unknown(key)
         if key == 'current_age_or_later':
             t = _block_get(value, 'age')
             if t is not None:
                 return ['age>=', _strip_scope(t)]
             UNHANDLED[key] += 1
-            return ['?', _pretty(key)]
+            return _unknown(key)
         if key == 'any_international_organizations_member_of':
             iot, extra = None, False
             for k2, v2 in value.iterate_with_duplicates():
@@ -238,15 +419,15 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
                     extra = True
             if iot is None:
                 UNHANDLED[key] += 1
-                return ['?', _pretty(key)]
+                return _unknown(key)
             base = ['iomem', iot]
-            return ['and', base, ['?', f'{_pretty(iot)} condition']] if extra else base
+            return ['and', base, _unknown(f'{key}:{iot}', f'{_pretty(iot)} condition')] if extra else base
 
     # ── scoped blocks: culture = { … }, original_capital = { … } ──
     if hasattr(value, 'iterate_with_duplicates'):
         if key in _TERRITORY_SCOPES:
             UNHANDLED[key] += 1
-            return ['?', _pretty(key)]
+            return _unknown(key)
         return _compile_block(value, cgroups, scope=key)
 
     # ── scalar predicates, resolved against the enclosing scope ──
@@ -266,8 +447,7 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
         # this is acquirable, not static: lowering it to the culture's group
         # made every Slavic-group country "own" the Serbian, Croatian and
         # Bulgarian advances — the tech screen for Poland shows none of them.
-        cul = _strip_scope(value)
-        return ['?', f'merged culture group containing {_pretty(cul)}']
+        return ['mcg', _strip_scope(value)]
     # `has_tribal_government = yes|no` — the only government shape asked as a
     # boolean rather than `government_type = government_type:x`.
     if key == 'has_tribal_government':
@@ -284,7 +464,18 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
 
     label = f'{scope}.{key}' if scope else key
     UNHANDLED[label] += 1
-    return ['?', _pretty(f'{scope} {key}' if scope else key)]
+    val = '' if hasattr(value, 'iterate_with_duplicates') else _strip_scope(value)
+    # a comparison (`num_locations > 30` parses as key num_locations.GREATER_THAN)
+    # keeps its threshold, so "> 30" and "> 100" are distinct conditions
+    ops = {'LESS_THAN': '<', 'LESS_THAN_EQUAL': '≤', 'GREATER_THAN': '>',
+           'GREATER_THAN_EQUAL': '≥', 'NOT_EQUAL': '≠', 'EQUAL': '=', 'EXACT': '='}
+    if key in ops and scope and val:
+        return _unknown(f'{label}:{val}', f'{_pretty(scope)} {ops[key]} {val}')
+    if val.lower() in ('yes', 'no', 'true', 'false'):
+        val = ''
+    id_ = f'{label}:{val}' if val else label
+    text = _pretty(f'{scope} {key}' if scope else key)
+    return _unknown(id_, f'{text}: {_pretty(val)}' if val else text)
 
 
 def _geo_pair(key: str) -> str | None:
@@ -298,12 +489,16 @@ def _geo_pair(key: str) -> str | None:
 
 # ── build-time helpers ────────────────────────────────────────
 
-def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov',
-                          'age', 'age>=', 'adv', 'iomem', 'iotype', 'unl',
-                          'law', 'reform', 'priv', 'policy', 'parl',
-                          'var')) -> list[tuple[str, str]]:
+LITERAL_KINDS = ('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'gov',
+                 'age', 'age>=', 'adv', 'iomem', 'iotype', 'unl',
+                 'law', 'reform', 'priv', 'policy', 'parl', 'var',
+                 'mcg', 'subj', 'estate', 'dlc', 'axis', '?')
+
+
+def literals(expr, kinds=LITERAL_KINDS, negated_too=False) -> list[tuple[str, str]]:
     """Collect (kind, value) pairs mentioned positively in an expression —
-    used to label a gated advance ("Byzantium", "Orthodox")."""
+    used to label a gated advance ("Byzantium", "Orthodox"). A "?" literal's
+    value is its stable id (label via `label_of`)."""
     out: list[tuple[str, str]] = []
 
     def walk(e, negated=False):
@@ -315,12 +510,25 @@ def literals(expr, kinds=('tag', 'cul', 'cgrp', 'lang', 'rel', 'rgrp', 'cap', 'g
                 walk(sub, negated)
         elif head == 'not':
             walk(e[1], not negated)
-        elif head in kinds and not negated:
-            # ["cap", tier, value] keeps its value in the last slot
-            out.append((head, e[-1]))
+        elif head in kinds and (negated_too or not negated):
+            # ["cap", tier, value] keeps its value in the last slot; a "?"
+            # is ["?", id, label]
+            out.append((head, e[1] if head == '?' else e[-1]))
 
     walk(expr)
     return out
+
+
+def label_of(kind: str, value: str, labels: dict[str, str]) -> str:
+    """Display label for a literal: the game's name where it has one, the
+    compiler's label for a "?", a readable key otherwise."""
+    if kind == '?':
+        return QLABELS.get(value) or _pretty(value)
+    if kind == 'subj' and value == 'none':
+        return 'Independent'
+    if kind == 'dlc':
+        return _titled(re.sub(r'^d\d+_', '', value))
+    return labels.get(value) or _titled(value)
 
 
 def summarize(tree, labels: dict[str, str] | None = None, limit: int = 4) -> list[str]:

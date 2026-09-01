@@ -86,8 +86,120 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
           <input type="search" placeholder="Search… ( / )" autocomplete="off" />
           <div class="hdr-search__results" hidden></div>
         </div>
+        <div class="hdr-save" data-hdr-save>
+          <button type="button" class="hdr-save__btn" data-save-btn aria-expanded="false"
+                  title="Your save: import a melted .eu5 and the planners start from it">
+            <span class="hdr-save__icon">▤</span><span class="hdr-save__label" data-save-label>Save</span>
+          </button>
+          <div class="hdr-save__panel" data-save-panel hidden>
+            <div class="hdr-save__status" data-save-status></div>
+            <div class="hdr-save__seat" data-save-seat hidden>
+              <label>Playing as <select data-save-seat-select></select></label>
+              <label class="hdr-save__use"><input type="checkbox" data-save-enabled /> Use as my default</label>
+              <button type="button" class="hdr-save__forget" data-save-forget>Forget this save</button>
+            </div>
+            <label class="hdr-save__file">
+              <input type="file" accept=".eu5,.txt" data-save-file />
+              <span data-save-file-label>Import a melted save…</span>
+            </label>
+            <div class="hdr-save__hint">
+              Melt the <code>.eu5</code> first (pdx.tools → Melt) — the game's own saves are
+              compressed. It is read here in your browser; nothing is uploaded, and the
+              snapshot stays in this browser only. Links you share never carry it.
+            </div>
+            <div class="hdr-save__err" data-save-err hidden></div>
+          </div>
+        </div>
       </div>
     </header>
+
+    <script>
+      // The save rail: import a melted .eu5, keep a compact snapshot in
+      // localStorage, and let every planner start from it (src/lib/save-store).
+      import { scanFile, resolve } from '../lib/save-import';
+      import { loadSnapshot, loadPref, storeSnapshot, clearSnapshot, setPref, onSaveChange } from '../lib/save-store';
+      const rail = document.querySelector('[data-hdr-save]') as HTMLElement | null;
+      if (rail) {
+        const q = (s: string) => rail.querySelector(s) as HTMLElement;
+        const btn = q('[data-save-btn]'), panel = q('[data-save-panel]');
+        const status = q('[data-save-status]'), seatBox = q('[data-save-seat]');
+        const seatSel = q('[data-save-seat-select]') as HTMLSelectElement;
+        const enabled = q('[data-save-enabled]') as HTMLInputElement;
+        const fileIn = q('[data-save-file]') as HTMLInputElement;
+        const fileLabel = q('[data-save-file-label]'), err = q('[data-save-err]');
+        const label = q('[data-save-label]');
+        const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+        const esc = (t: string) => String(t).replace(/[&<>"]/g, (c) =>
+          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as any)[c]);
+
+        function render() {
+          const snap = loadSnapshot(), pref = loadPref();
+          err.hidden = true;
+          if (!snap) {
+            status.textContent = 'No save imported. Planners start from the 1337 setup.';
+            seatBox.hidden = true;
+            label.textContent = 'Save';
+            rail.classList.remove('on', 'off');
+            return;
+          }
+          const seats = Object.values(snap.seats);
+          const tag = pref.seat && snap.seats[pref.seat] ? pref.seat : seats[0]?.tag;
+          const year = (snap.date || '').split('.')[0];
+          status.innerHTML = `<b>${esc(snap.file)}</b> — ${esc(snap.date || '?')} · v${esc(snap.version || '?')}` +
+            ` · ${snap.counts.countries} countries` +
+            (snap.version && !/^1\.3\./.test(snap.version) ? ` <span class="warn">(site data is 1.3.11)</span>` : '');
+          seatSel.innerHTML = seats.map((s) =>
+            `<option value="${esc(s.tag)}"${s.tag === tag ? ' selected' : ''}>${esc(s.name)}${s.player ? ` (${esc(s.player)})` : ''}</option>`).join('');
+          enabled.checked = pref.enabled;
+          seatBox.hidden = false;
+          const seat = tag ? snap.seats[tag] : null;
+          label.textContent = seat ? `${seat.name}${year ? ' · ' + year : ''}` : 'Save';
+          rail.classList.toggle('on', pref.enabled);
+          rail.classList.toggle('off', !pref.enabled);
+        }
+
+        btn.addEventListener('click', () => {
+          panel.hidden = !panel.hidden;
+          btn.setAttribute('aria-expanded', String(!panel.hidden));
+        });
+        document.addEventListener('click', (e) => {
+          if (!rail.contains(e.target as Node)) { panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+        });
+        seatSel.addEventListener('change', () => setPref({ seat: seatSel.value }));
+        enabled.addEventListener('change', () => setPref({ enabled: enabled.checked }));
+        q('[data-save-forget]').addEventListener('click', () => { clearSnapshot(); });
+
+        fileIn.addEventListener('change', async () => {
+          const file = fileIn.files?.[0];
+          if (!file) return;
+          err.hidden = true;
+          fileLabel.textContent = 'Reading…';
+          try {
+            const [planner, geo] = await Promise.all([
+              fetch(`${baseUrl}planner.json`).then((r) => r.json()),
+              fetch(`${baseUrl}geo.json`).then((r) => r.json()).catch(() => null),
+            ]);
+            const raw = await scanFile(file, (f) => { fileLabel.textContent = `Reading… ${Math.round(f * 100)}%`; });
+            if (!raw.countries.size) throw new Error('No countries found — is this a melted EU5 save?');
+            const names: Record<string, string> = {};
+            for (const c of planner.countries || []) names[c.t] = c.n;
+            const snap = resolve(raw, file.name.replace(/_melted|\.eu5$|\.txt$/g, ''), planner.kinds || [], geo, names);
+            if (!Object.keys(snap.seats).length) throw new Error('No played country found in the save.');
+            storeSnapshot(snap);
+          } catch (e: any) {
+            err.textContent = /quota/i.test(String(e?.name || e?.message)) ?
+              'The browser refused to store the snapshot (storage quota).' : `Import failed: ${e?.message || e}`;
+            err.hidden = false;
+          } finally {
+            fileLabel.textContent = 'Import a melted save…';
+            fileIn.value = '';
+          }
+        });
+
+        onSaveChange(render);
+        render();
+      }
+    </script>
 
     <script>
       // Nav on touch/narrow screens: the dropdowns are hover-only in CSS,

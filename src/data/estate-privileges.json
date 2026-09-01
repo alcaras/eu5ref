@@ -1670,9 +1670,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "religious unity LESS THAN"
+     "religious_unity.less_than:0.66",
+     "religious unity < 0.66"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religious unity < 0.66"
+    ],
     "requires": [
      "religious unity < 0.66"
     ],
@@ -1944,13 +1947,14 @@
       "CAS"
      ],
      [
-      "unl",
-      "privilege:cas_fuero_viejo"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
-     "Privilege:Cas Fuero Viejo"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "is or was Castile",
@@ -2009,11 +2013,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:cas_mita_system"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Cas Mita System"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Mit'a System)"
@@ -2083,14 +2088,15 @@
       ]
      ],
      [
-      "unl",
-      "privilege:cas_regimiento"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ]
     ],
     "gate_labels": [
      "Castile",
      "SPA",
-     "Privilege:Cas Regimiento"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "is or was Castile",
@@ -2498,9 +2504,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "total effective building levels:university GREATER THAN"
+     "total_effective_building_levels:university.greater_than:0",
+     "total effective building levels:university > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:university > 0"
+    ],
     "requires": [
      "University > 0"
     ],
@@ -2837,9 +2846,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "religious unity LESS THAN"
+     "religious_unity.less_than:0.66",
+     "religious unity < 0.66"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religious unity < 0.66"
+    ],
     "requires": [
      "religious unity < 0.66"
     ],
@@ -4035,9 +4047,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "religious unity LESS THAN"
+     "religious_unity.less_than:0.66",
+     "religious unity < 0.66"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religious unity < 0.66"
+    ],
     "requires": [
      "religious unity < 0.66"
     ],
@@ -4430,11 +4445,13 @@
      ],
      [
       "?",
-      "dominant religion group"
+      "dominant_religion.group:dharmic",
+      "dominant religion group: dharmic"
      ]
     ],
     "gate_labels": [
-     "Islam"
+     "Islam",
+     "dominant religion group: dharmic"
     ],
     "requires": [
      "religion group is Islam"
@@ -4488,16 +4505,20 @@
       "or",
       [
        "?",
-       "dominant religion group"
+       "dominant_religion.group:christian",
+       "dominant religion group: christian"
       ],
       [
        "?",
-       "dominant religion group"
+       "dominant_religion.group:israelite_group",
+       "dominant religion group: israelite group"
       ]
      ]
     ],
     "gate_labels": [
-     "Islam"
+     "Islam",
+     "dominant religion group: christian",
+     "dominant religion group: israelite group"
     ],
     "requires": [
      "religion group is Islam"
@@ -5437,9 +5458,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "has embraced institution"
+     "has_embraced_institution:feudalism",
+     "has embraced institution: feudalism"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has embraced institution: feudalism"
+    ],
     "requires": [
      "has embraced Feudalism"
     ],
@@ -5707,11 +5731,13 @@
      ],
      [
       "?",
+      "character:etienne_marcel.is_alive",
       "character:etienne marcel is alive"
      ]
     ],
     "gate_labels": [
-     "France"
+     "France",
+     "character:etienne marcel is alive"
     ],
     "requires": [
      "is or was France",
@@ -5930,11 +5956,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:fra_papacy_pragmatic_sanctions"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Fra Papacy Pragmatic Sanctions"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Pragmatic Sanction of Bourges)",
@@ -6134,7 +6161,8 @@
      "and",
      [
       "?",
-      "produced in country:pepper GREATER THAN"
+      "produced_in_country:pepper.greater_than:0",
+      "produced in country:pepper > 0"
      ],
      [
       "rgrp",
@@ -6142,6 +6170,7 @@
      ]
     ],
     "gate_labels": [
+     "produced in country:pepper > 0",
      "Islam"
     ],
     "requires": [
@@ -6420,14 +6449,16 @@
       ],
       [
        "?",
-       "any active disaster disaster type"
+       "any_active_disaster.disaster_type:rise_of_the_szlachta",
+       "any active disaster disaster type: rise of the szlachta"
       ]
      ]
     ],
     "gate_labels": [
      "Poland",
      "PLC",
-     "Rise Of Szlachta Szlachta Outcome Variable"
+     "Rise Of Szlachta Szlachta Outcome Variable",
+     "any active disaster disaster type: rise of the szlachta"
     ],
     "requires": [
      "is or was Poland",
@@ -6743,8 +6774,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "privilege:habshi_advisors_privilege"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ],
      [
       "cap",
@@ -6753,7 +6785,7 @@
      ]
     ],
     "gate_labels": [
-     "Privilege:Habshi Advisors Privilege",
+     "has unlocked estate privilege trigger",
      "South Asia"
     ],
     "requires": [
@@ -6891,8 +6923,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "privilege:heritable_iqta"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ],
      [
       "law",
@@ -6900,7 +6933,7 @@
      ]
     ],
     "gate_labels": [
-     "Privilege:Heritable Iqta",
+     "has unlocked estate privilege trigger",
      "Iqta Law"
     ],
     "requires": [
@@ -7314,8 +7347,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "privilege:ira_clerical_aristocracy"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ],
      [
       "rgrp",
@@ -7323,7 +7357,7 @@
      ]
     ],
     "gate_labels": [
-     "Privilege:Ira Clerical Aristocracy",
+     "has unlocked estate privilege trigger",
      "Islam"
     ],
     "requires": [
@@ -7395,11 +7429,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:ira_iranian_art_patronage"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Ira Iranian Art Patronage"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Iranian Art Patronage)"
@@ -7557,7 +7592,8 @@
       ],
       [
        "?",
-       "value GREATER THAN"
+       "value.greater_than:0",
+       "value > 0"
       ]
      ]
     ],
@@ -7565,7 +7601,8 @@
      "Dharma",
      "Islam",
      "South Asia",
-     "Jainism"
+     "Jainism",
+     "value > 0"
     ],
     "requires": [
      "capital: in South Asia",
@@ -7648,7 +7685,8 @@
       ],
       [
        "?",
-       "value GREATER THAN"
+       "value.greater_than:0",
+       "value > 0"
       ]
      ]
     ],
@@ -7656,7 +7694,8 @@
      "Dharma",
      "Islam",
      "South Asia",
-     "Jainism"
+     "Jainism",
+     "value > 0"
     ],
     "requires": [
      "capital: in South Asia",
@@ -7753,11 +7792,13 @@
      ],
      [
       "?",
-      "root"
+      "root:hre.leader_country",
+      "root: hre.leader country"
      ]
     ],
     "gate_labels": [
-     "Joint Assembly Decrees Variable"
+     "Joint Assembly Decrees Variable",
+     "root: hre.leader country"
     ],
     "requires": [
      "event flag: Joint Assembly Decrees Variable",
@@ -7885,11 +7926,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:kannada_literature_aid"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Kannada Literature Aid"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Kannada Literature Aid)"
@@ -8140,15 +8182,8 @@
       "KBO"
      ],
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "serfom_improved_goods_variable"
-      ]
+      "var",
+      "serfom_improved_goods_variable"
      ]
     ],
     "gate_labels": [
@@ -8521,8 +8556,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "privilege:lat_compromise_with_greek_populace"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ],
      [
       "not",
@@ -8533,7 +8569,7 @@
      ]
     ],
     "gate_labels": [
-     "Privilege:Lat Compromise With Greek Populace"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Compromise with the Greek people)",
@@ -8616,8 +8652,110 @@
     "gate": [
      "and",
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "not",
@@ -8627,7 +8765,29 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "French",
+     "Iberian",
+     "Italian",
+     "Catholicism",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica"
+    ],
     "requires": [
      "is a Frankokratia state",
      "Culture Percentage In Country(Root.Culture) < 0.33"
@@ -8710,20 +8870,25 @@
      ],
      [
       "?",
-      "owns"
+      "owns:constantinople",
+      "owns: constantinople"
      ],
      [
       "?",
-      "location:constantinople is location holy site for"
+      "location:constantinople.is_location_holy_site_for:catholic",
+      "location:constantinople is location holy site for: catholic"
      ],
      [
-      "unl",
-      "privilege:lat_protector_of_the_constantinople_patriarchate"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ]
     ],
     "gate_labels": [
      "Catholicism",
-     "Privilege:Lat Protector Of The Constantinople Patriarchate"
+     "owns: constantinople",
+     "location:constantinople is location holy site for: catholic",
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "religion is Catholicism",
@@ -9034,11 +9199,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:lit_equal_status_of_orthodox_nobility"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Lit Equal Status Of Orthodox Nobility"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Protection of Orthodoxy Nobility)"
@@ -9095,11 +9261,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:lit_integrated_ruthenian_laws"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Lit Integrated Ruthenian Laws"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Integrated Ruthenian Laws)"
@@ -9227,11 +9394,13 @@
      ],
      [
       "?",
-      "estate power(estate type:tribes estate) GREATER THAN"
+      "estate_power_estate_type:tribes_estate_.greater_than:0",
+      "estate power(estate type:tribes estate) > 0"
      ]
     ],
     "gate_labels": [
-     "Maghreb"
+     "Maghreb",
+     "estate power(estate type:tribes estate) > 0"
     ],
     "requires": [
      "capital: in region Maghreb",
@@ -9329,7 +9498,8 @@
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:hre",
+      "is member of international organization: hre"
      ]
     ],
     "gate_labels": [
@@ -9341,7 +9511,8 @@
      "Lorraine",
      "Picardy",
      "Carniola",
-     "Silesia"
+     "Silesia",
+     "is member of international organization: hre"
     ],
     "requires": [
      "capital: in area Baltic",
@@ -9472,11 +9643,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:mam_muhtasibs"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Mam Muhtasibs"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Muḥtasib Inspectors)"
@@ -9539,13 +9711,14 @@
       "MAM"
      ],
      [
-      "unl",
-      "privilege:mam_refined_furusiyya"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ]
     ],
     "gate_labels": [
      "Egypt (MAM)",
-     "Privilege:Mam Refined Furusiyya"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "is or was Egypt (MAM)",
@@ -9938,11 +10111,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:mch_tribal_favor"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Mch Tribal Favor"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Tribal Favor)"
@@ -10983,9 +11157,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "has_ports",
      "has ports"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has ports"
+    ],
     "requires": [
      "Has Ports"
     ],
@@ -11174,9 +11351,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "religious unity LESS THAN"
+     "religious_unity.less_than:0.66",
+     "religious unity < 0.66"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religious unity < 0.66"
+    ],
     "requires": [
      "religious unity < 0.66"
     ],
@@ -12204,9 +12384,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "religious unity LESS THAN"
+     "religious_unity.less_than:0.66",
+     "religious unity < 0.66"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "religious unity < 0.66"
+    ],
     "requires": [
      "religious unity < 0.66"
     ],
@@ -12269,9 +12452,12 @@
     "excludes": [],
     "gate": [
      "?",
+     "modifier:has_a_parliamentary_system",
      "modifier:has a parliamentary system"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:has a parliamentary system"
+    ],
     "requires": [
      "Has A Parliamentary System",
      "parliament is Estate Parliament",
@@ -12490,6 +12676,7 @@
       ],
       [
        "?",
+       "any_international_organizations_member_of:sect",
        "sect condition"
       ]
      ],
@@ -12499,13 +12686,16 @@
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:middle_kingdom",
+      "is member of international organization: middle kingdom"
      ]
     ],
     "gate_labels": [
      "Confucian-Influenced",
      "Sect",
-     "Has Neo Confucianism"
+     "sect condition",
+     "Has Neo Confucianism",
+     "is member of international organization: middle kingdom"
     ],
     "requires": [
      "culture group is Confucian-Influenced",
@@ -12575,11 +12765,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:plc_cossack_treaty_of_hadiach"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Plc Cossack Treaty Of Hadiach"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Treaty of Hadiach)"
@@ -12654,11 +12845,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:plc_empower_orthodox_nobility"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Plc Empower Orthodox Nobility"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Empower Orthodoxy Nobility)"
@@ -12872,14 +13064,19 @@
      "and",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "?",
+      "modifier:can_hire_privateers",
       "modifier:can hire privateers"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of ports > 0",
+     "modifier:can hire privateers"
+    ],
     "requires": [
      "ports > 0",
      "Can Hire Privateers"
@@ -13046,11 +13243,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:promotion_of_muslim_scholars"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Promotion Of Muslim Scholars"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Promotion of Islam Scholars)"
@@ -13584,11 +13782,13 @@
      ],
      [
       "?",
-      "succession law"
+      "succession_law:partition_inheritance",
+      "succession law: partition inheritance"
      ]
     ],
     "gate_labels": [
-     "German"
+     "German",
+     "succession law: partition inheritance"
     ],
     "requires": [
      "culture group is German",
@@ -13647,11 +13847,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:royal_factories_privilege"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Royal Factories Privilege"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Royal Factories)"
@@ -13783,6 +13984,7 @@
       ],
       [
        "?",
+       "any_international_organizations_member_of:sect",
        "sect condition"
       ]
      ],
@@ -13792,13 +13994,16 @@
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:middle_kingdom",
+      "is member of international organization: middle kingdom"
      ]
     ],
     "gate_labels": [
      "Confucian-Influenced",
      "Sect",
-     "Has Neo Confucianism"
+     "sect condition",
+     "Has Neo Confucianism",
+     "is member of international organization: middle kingdom"
     ],
     "requires": [
      "culture group is Confucian-Influenced",
@@ -13868,11 +14073,12 @@
     "can_revoke": true,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:sco_statutes_of_iona"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Sco Statutes Of Iona"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Statutes of Iona)"
@@ -14016,11 +14222,19 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "requires": [
      "has a tribal government"
@@ -14074,14 +14288,19 @@
      "or",
      [
       "?",
-      "num of ports GREATER THAN"
+      "num_of_ports.greater_than:0",
+      "num of ports > 0"
      ],
      [
       "?",
+      "any_owned_foreign_building_location.modifier:can_build_ships_in_this_location",
       "any owned foreign building location modifier:can build ships in this location"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of ports > 0",
+     "any owned foreign building location modifier:can build ships in this location"
+    ],
     "requires": [
      "ports > 0",
      "Can Build Ships In This Location"
@@ -14264,9 +14483,12 @@
     "excludes": [],
     "gate": [
      "?",
-     "num of ports GREATER THAN"
+     "num_of_ports.greater_than:0",
+     "num of ports > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "num of ports > 0"
+    ],
     "requires": [
      "ports > 0"
     ],
@@ -14438,11 +14660,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:statutes_of_piotrkow"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Statutes Of Piotrkow"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Statutes of Piotrkow)"
@@ -14809,11 +15032,19 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "requires": [
      "has a tribal government"
@@ -14876,11 +15107,19 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "gov",
-     "tribe"
+     "or",
+     [
+      "gov",
+      "tribe"
+     ],
+     [
+      "gov",
+      "steppe_horde"
+     ]
     ],
     "gate_labels": [
-     "Tribe"
+     "Tribe",
+     "Steppe Horde"
     ],
     "requires": [
      "has a tribal government",
@@ -15631,11 +15870,12 @@
      "privilege Common Militias"
     ],
     "gate": [
-     "unl",
-     "privilege:tur_banned_weaponry_for_peasants"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Tur Banned Weaponry For Peasants"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Banned Weapons for Commoners)"
@@ -15734,11 +15974,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:ukr_kholop_protection"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Ukr Kholop Protection"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Kholop Protection Rights)"
@@ -16052,11 +16293,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:vij_allowance_of_religious_practices"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Vij Allowance Of Religious Practices"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Allow Religious Practices)"
@@ -16115,8 +16357,9 @@
     "gate": [
      "and",
      [
-      "unl",
-      "privilege:vij_patronization_of_local_gods"
+      "?",
+      "has_unlocked_estate_privilege_trigger",
+      "has unlocked estate privilege trigger"
      ],
      [
       "rel",
@@ -16124,7 +16367,7 @@
      ]
     ],
     "gate_labels": [
-     "Privilege:Vij Patronization Of Local Gods",
+     "has unlocked estate privilege trigger",
      "Hinduism"
     ],
     "requires": [
@@ -16178,11 +16421,12 @@
     "can_revoke": false,
     "excludes": [],
     "gate": [
-     "unl",
-     "privilege:vij_tamil_trading_rights"
+     "?",
+     "has_unlocked_estate_privilege_trigger",
+     "has unlocked estate privilege trigger"
     ],
     "gate_labels": [
-     "Privilege:Vij Tamil Trading Rights"
+     "has unlocked estate privilege trigger"
     ],
     "requires": [
      "the privilege has been unlocked (Tamil Trading Rights)"

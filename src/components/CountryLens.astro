@@ -22,44 +22,9 @@ const { placeholder = 'Filter by country…' } = Astro.props;
 </div>
 
 <script>
-  type Facts = {
-    tag: string; cul?: string; cgrp?: string[]; lang?: string;
-    rel?: string; rgrp?: string; gov?: string; cap?: Record<string, string>;
-  };
-  type Country = { t: string; n: string; f: Facts };
-
-  // TRUE = available to this country, FALSE = never, null = depends on
-  // something dynamic. Mirrors the advance planner's evaluator.
-  function evalGate(e: any, f: Facts, formables: Record<string, any>): boolean | null {
-    if (!e) return true;
-    const h = e[0];
-    if (h === 'and') {
-      let unk = false;
-      for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === false) return false; if (v === null) unk = true; }
-      return unk ? null : true;
-    }
-    if (h === 'or') {
-      let unk = false;
-      for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === true) return true; if (v === null) unk = true; }
-      return unk ? null : false;
-    }
-    if (h === 'not') { const v = evalGate(e[1], f, formables); return v === null ? null : !v; }
-    if (h === '?') return null;
-    if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
-    if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
-    if (h === 'tag') {
-      if (f.tag === e[1]) return true;
-      if (!(e[1] in formables)) return false;       // another country's tag
-      const v = evalGate(formables[e[1]], f, formables);   // a formable you could become
-      return v === false ? false : null;
-    }
-    if (h === 'cul') return f.cul === e[1];
-    if (h === 'lang') return f.lang === e[1];
-    if (h === 'rel') return f.rel === e[1];
-    if (h === 'rgrp') return f.rgrp === e[1];
-    if (h === 'gov') return f.gov ? f.gov === e[1] : null;
-    return null;
-  }
+  import { evalGate, baseFacts } from '../lib/facts';
+  import { activeSeat, saveFacts, seatLabel, onSaveChange } from '../lib/save-store';
+  type Country = { t: string; n: string; f: Record<string, any> };
 
   for (const lens of document.querySelectorAll<HTMLElement>('[data-clens]')) {
     const scope = lens.closest('[data-filter-scope]') || document;
@@ -93,13 +58,14 @@ const { placeholder = 'Filter by country…' } = Astro.props;
         if (!picked) { row.dataset.clensHide = ''; delete row.dataset.clensHide; continue; }
         let v: boolean | null = true;
         if (raw) {
-          try { v = evalGate(JSON.parse(raw), picked.f, data!.formables); } catch { v = null; }
+          try { v = evalGate(JSON.parse(raw), baseFacts(saveFacts(picked.t) || picked.f), data!.formables); } catch { v = null; }
         }
         if (v === false) { row.dataset.clensHide = '1'; hidden++; }
         else { delete row.dataset.clensHide; if (v === null) { row.classList.add('row--cond'); cond++; } }
       }
+      const seat = picked && activeSeat();
       state.textContent = picked
-        ? `${picked.n}: ${rows.length - hidden} of ${rows.length}` +
+        ? `${picked.n}${seat && seat.tag === picked.t ? ` (save · ${seatLabel(seat)})` : ''}: ${rows.length - hidden} of ${rows.length}` +
           (cond ? `, ${cond} conditional` : '')
         : '';
       clear.hidden = !picked;
@@ -133,5 +99,24 @@ const { placeholder = 'Filter by country…' } = Astro.props;
     document.addEventListener('click', (ev) => {
       if (!lens.contains(ev.target as Node)) results.hidden = true;
     });
+
+    // An imported save picks its seat by default — the lens follows it
+    // until you pick something else, and follows the save toggle live.
+    let seededTag: string | null = null;
+    function seed() {
+      const seat = activeSeat();
+      if (seat && (!picked || picked.t === seededTag)) {
+        load().then(() => {
+          picked = data?.countries.find((c) => c.t === seat.tag) || null;
+          seededTag = picked?.t || null;
+          input.value = picked?.n || '';
+          apply();
+        });
+      } else if (!seat && picked && picked.t === seededTag) {
+        picked = null; seededTag = null; input.value = ''; apply();
+      }
+    }
+    onSaveChange(seed);
+    seed();
   }
 </script>

@@ -119,7 +119,7 @@ def main():
         if gate:
             seen = set()
             for kind, v in triggers.literals(gate):
-                lab = labels.get(v) or ref.pretty(v)
+                lab = triggers.label_of(kind, v, labels)
                 if lab in seen:
                     continue
                 seen.add(lab)

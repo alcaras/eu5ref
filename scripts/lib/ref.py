@@ -272,8 +272,8 @@ def gate_of(obj, *fields: str) -> tuple[list | None, list[str]]:
         if not expr:
             continue
         seen, out = set(), []
-        for _, val in triggers.literals(expr):
-            lab = labels.get(val) or pretty(val)
+        for kind, val in triggers.literals(expr):
+            lab = triggers.label_of(kind, val, labels)
             if lab not in seen:
                 seen.add(lab)
                 out.append(lab)

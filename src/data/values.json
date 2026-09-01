@@ -2493,7 +2493,8 @@
       "or",
       [
        "?",
-       "is subject of"
+       "is_subject_of:chi",
+       "is subject of: CHI"
       ],
       [
        "or",
@@ -2512,11 +2513,13 @@
        "and",
        [
         "?",
-        "exists"
+        "exists:middle_kingdom",
+        "exists: middle kingdom"
        ],
        [
         "?",
-        "is member of international organization"
+        "is_member_of_international_organization:middle_kingdom",
+        "is member of international organization: middle kingdom"
        ]
       ]
      ]
@@ -2760,6 +2763,7 @@
     "age": null,
     "gate": [
      "?",
+     "modifier:allow_mysticism_vs_jurisprudence",
      "modifier:allow mysticism vs jurisprudence"
     ],
     "id": "mysticism_vs_jurisprudence",
@@ -2834,8 +2838,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "tag",

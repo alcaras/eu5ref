@@ -29,21 +29,16 @@ import Base from '../layouts/Base.astro';
         <input type="search" placeholder="Pick a country…" autocomplete="off" />
         <div class="hdr-search__results" hidden></div>
       </div>
-      <div class="pl-picker" data-pl-culture hidden>
-        <input type="search" autocomplete="off" />
-        <div class="hdr-search__results" hidden></div>
-      </div>
-      <div class="pl-picker" data-pl-religion hidden>
-        <input type="search" autocomplete="off" />
-        <div class="hdr-search__results" hidden></div>
-      </div>
-      <label class="pl-toggle" title="Government type — gates a few advances, and you can plan a change">
-        government <select data-pl-gov></select>
-      </label>
+      <button type="button" class="csv-btn" data-pl-facts-toggle
+        title="Everything the gates test — culture, religion, capital, government, subject status, and the things you can acquire">⚙ Your country</button>
       <span class="chips" data-pl-context></span>
       <span class="pl-spacer"></span>
-      <label class="pl-toggle" title="Advances gated to other countries, cultures or religions">
-        <input type="checkbox" data-pl-other /> show other countries’
+      <label class="pl-toggle" title="Which advances to draw: yours + conditional (default), only the certain ones, or every country’s">
+        show <select data-pl-show>
+          <option value="">yours + conditional</option>
+          <option value="sure">yours only</option>
+          <option value="all">everything</option>
+        </select>
       </label>
       <label class="pl-toggle" title="Show what each advance does, without hovering">
         <input type="checkbox" data-pl-expand /> expanded
@@ -58,6 +53,8 @@ import Base from '../layouts/Base.astro';
       <button type="button" class="csv-btn" data-pl-copy>⧉ Copy link</button>
       <button type="button" class="csv-btn" data-pl-clear>✕ Clear plan</button>
     </div>
+
+    <div class="pl-facts" data-pl-facts hidden></div>
 
     <div class="pl-ages" data-pl-ages></div>
 
@@ -159,9 +156,46 @@ import Base from '../layouts/Base.astro';
       letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim);
     }
     .pl-band-rule { position: absolute; height: 1px; background: var(--border-faint); }
-    /* a culture/religion the player has shifted to, not the 1337 start */
+    /* a fact the player asserted over the 1337 start (or the save) */
     .chip.shifted { cursor: pointer; border-color: var(--gold-deep); color: var(--gold-soft); }
     .chip.shifted:hover { border-color: var(--gold); }
+
+    /* "your country" panel — one row per kind of fact the gates test */
+    .pl-facts {
+      margin-top: 12px; padding: 10px 14px; border: 1px solid var(--border);
+      border-radius: var(--radius); background: var(--bg-elev);
+      display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px; align-items: start;
+    }
+    .pl-facts__k {
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-faint); padding-top: 5px; white-space: nowrap;
+    }
+    .pl-facts__v { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; min-height: 26px; }
+    .pl-facts__v select {
+      border: 1px solid var(--border); background: var(--bg-elev-2); color: var(--text);
+      border-radius: var(--radius-sm); padding: 3px 6px; font-size: 12px; font-family: var(--font-ui);
+    }
+    .pl-facts__v .pl-picker input { min-width: 220px; }
+    .pl-facts__v .cur { font-size: 12px; color: var(--text-soft); }
+    .pl-facts__v .cur small { color: var(--text-faint); margin-left: 6px; }
+    .pl-facts__v .reset {
+      border: 0; background: none; color: var(--gold-soft); cursor: pointer; font-size: 12px; padding: 0 4px;
+    }
+    .pl-facts__v .reset:hover { color: var(--gold); }
+    .pl-facts__v .fchip {
+      border: 1px solid var(--border); background: var(--bg-elev-2); color: var(--text-dim);
+      border-radius: 999px; padding: 2px 10px; font-size: 11.5px; cursor: pointer;
+      font-family: var(--font-ui); display: inline-flex; gap: 5px; align-items: center;
+    }
+    .pl-facts__v .fchip small { color: var(--text-faint); font-family: var(--font-mono); font-size: 10px; }
+    .pl-facts__v .fchip:hover { border-color: var(--border-strong); color: var(--text); }
+    .pl-facts__v .fchip.yes { background: var(--gold-glow); border-color: var(--gold-deep); color: var(--gold); }
+    .pl-facts__v .fchip.no { border-color: var(--bad); color: var(--bad); text-decoration: line-through; }
+    .pl-facts__v .fchip.base { border-style: dashed; }
+    .pl-facts__v .more { font-size: 11.5px; color: var(--text-faint); cursor: pointer; border: 0; background: none; font-family: var(--font-ui); }
+    .pl-facts__v .more:hover { color: var(--text); }
+    .pl-facts__hint { grid-column: 1 / -1; font-size: 11.5px; color: var(--text-faint); }
+    .pl-facts__hint b { color: var(--text-dim); font-weight: 600; }
 
     /* node card — compact row: icon + name, tier column packing */
     .pnode {
@@ -219,9 +253,18 @@ import Base from '../layouts/Base.astro';
       position: fixed; z-index: 90; max-width: 330px; padding: 9px 12px;
       background: var(--bg-elev-3); border: 1px solid var(--border-strong);
       border-radius: var(--radius); font-size: 12px; color: var(--text-soft);
-      pointer-events: none; box-shadow: var(--shadow-sm); line-height: 1.4;
+      box-shadow: var(--shadow-sm); line-height: 1.4;
     }
     .pl-tip b.t { display: block; color: var(--text); font-size: 13px; margin-bottom: 3px; }
+    .pl-tip .lit { color: var(--text-soft); }
+    .pl-tip .lit.ok { color: var(--good); }
+    .pl-tip .lit.no { color: var(--bad); }
+    .pl-tip .lit button {
+      border: 1px solid var(--gold-deep); background: var(--gold-glow); color: var(--gold);
+      border-radius: 999px; padding: 0 7px; font-size: 10.5px; cursor: pointer; margin-left: 6px;
+      font-family: var(--font-ui); line-height: 1.5;
+    }
+    .pl-tip .lit button:hover { border-color: var(--gold); }
     .pl-tip .gate { color: var(--gold-soft); }
     .pl-tip .unl { color: var(--accent-2); }
     .pl-tip .hint { color: var(--text-faint); margin-top: 5px; font-size: 11px; }
@@ -229,6 +272,10 @@ import Base from '../layouts/Base.astro';
   </style>
 
   <script>
+    import { evalGate as evalGateG, literals, applyOverrides, baseFacts,
+             overridesToParams, overridesFromParams } from '../lib/facts';
+    import type { Facts, KindDef, Overrides, SetFacts } from '../lib/facts';
+    import { activeSeat, saveFacts, seatLabel, loadSnapshot, loadPref, setPref, onSaveChange } from '../lib/save-store';
     const root = document.querySelector('[data-pl]')!;
     const $ = (s: string) => root.querySelector(s) as HTMLElement;
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
@@ -236,33 +283,32 @@ import Base from '../layouts/Base.astro';
     type Node = {
       n: string; s: string; a: number; b: string; bo?: number; o?: number; d: number; r: string[];
       p?: string;   // drawn under this node in game without it being a prerequisite
-      k: number; i?: string; g?: any; gl?: string[]; m?: string[]; u?: string[]; sp?: string;
+      k: number; i?: string; g?: any; gl?: [string, string, string][];
+      m?: [string, string, string][]; u?: string[]; sp?: string; rs?: string[];
     };
-    type Facts = { tag: string; cul: string; cgrp: string[]; lang: string;
-                   rel: string; rgrp: string; cap: Record<string, string> };
-    type Country = { t: string; n: string; col: string | null; cu: string; re: string; f: Facts };
-    type Cul = { k: string; n: string; g: string[]; l: string | null };
-    type Rel = { k: string; n: string; g: string | null };
+    type Country = { t: string; n: string; col: string | null; cu: string; re: string; f: Record<string, any> };
     type Data = { version: string; vhash: string; order: string[];
                   ages: { n: string; i: string | null }[];
                   nodes: Record<string, Node>; countries: Country[];
-                  cultures: Cul[]; religions: Rel[]; formables: Record<string, any> };
+                  kinds: KindDef[]; modkeys: Record<string, string>;
+                  formables: Record<string, any> };
 
     let D: Data;
     const idx = new Map<string, number>();
     let country: Country | null = null;
-    // You can culture-shift and convert mid-game, so both are overridable
-    // once a country is picked; the gates re-evaluate against the override.
+    let seeded: { c: string; r: string; age: string | null } | null = null;   // what the save filled in
     let formables: Record<string, any> = {};   // tag → who may form it
-    let culOverride: Cul | null = null;
-    let govOverride: string | null = null;
-    const GOVS = [['monarchy', 'Monarchy'], ['republic', 'Republic'],
-                  ['theocracy', 'Theocracy'], ['tribe', 'Tribe'],
-                  ['steppe_horde', 'Steppe Horde']];
-    let relOverride: Rel | null = null;
+    // Facts = 1337 setup ⊕ save snapshot ⊕ your overrides. You can
+    // culture-shift, convert, move your capital, reform your government,
+    // take a reform, unify a culture… — every kind of fact a gate tests is
+    // overridable once a country is picked, and the URL carries the
+    // overrides (never the save), so a link reproduces the view.
+    let overrides: Overrides = {};
     const planned = new Set<string>();
     const researched = new Set<string>();
-    let showOther = false;
+    // '' = yours + conditional · 'sure' = yours only · 'all' = everything
+    let showMode = '';
+    const showOther = () => showMode === 'all';
     let expanded = false;
     let ageIx = 0;
     let zoom = 1;
@@ -289,52 +335,21 @@ import Base from '../layouts/Base.astro';
       else { NW = 138; NH = 26; COLW = 146; ROWH = 56; }
     }
 
-    // ── three-valued gate evaluation ───────────────────────────
+    // ── gate evaluation (shared: src/lib/facts.ts) ─────────────
     // TRUE = available to this country, FALSE = never, null = depends on
-    // something dynamic (an institution, an estate, a reform…).
-    function evalGate(e: any, f: Facts): boolean | null {
-      if (!e) return true;
-      const h = e[0];
-      if (h === 'and') {
-        let unk = false;
-        for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === false) return false; if (v === null) unk = true; }
-        return unk ? null : true;
-      }
-      if (h === 'or') {
-        let unk = false;
-        for (const s of e.slice(1)) { const v = evalGate(s, f); if (v === true) return true; if (v === null) unk = true; }
-        return unk ? null : false;
-      }
-      if (h === 'not') { const v = evalGate(e[1], f); return v === null ? null : !v; }
-      if (h === '?') return null;
-      if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
-      if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
-      if (h === 'tag') {
-        // Your own tag, yes. A formable's tag is reachable, so unknown.
-        // Any other country's tag you simply cannot become — false, not
-        // "conditional", or the planner would suggest becoming Portugal.
-        if (f.tag === e[1]) return true;
-        if (!(e[1] in formables)) return false;      // not a formable: unreachable
-        // reachable only if THIS country could form it
-        const v = evalGate(formables[e[1]], f);
-        return v === false ? false : null;
-      }
-      if (h === 'cul') return f.cul === e[1];
-      if (h === 'lang') return f.lang === e[1];
-      if (h === 'rel') return f.rel === e[1];
-      if (h === 'rgrp') return f.rgrp === e[1];
-      if (h === 'gov') return (f as any).gov ? (f as any).gov === e[1] : null;
-      return null;
-    }
-    /** The country's facts with any culture / religion override applied. */
+    // something you can still acquire (asserted in the "your country" panel).
+    const evalGate = (e: any, f: Facts) => evalGateG(e, f, formables);
+    /** The country's 1337 facts (or the save's) with your overrides applied. */
+    let factsCache: Facts | null = null;
+    /** Where the facts start before your overrides: the imported save's
+     *  view of this country when one is in use, else the 1337 setup. */
+    const baselineOf = (c: Country): Record<string, any> => saveFacts(c.t) || c.f;
     function effectiveFacts(): Facts | null {
       if (!country) return null;
-      const f: Facts = { ...country.f, cap: country.f.cap || {} };
-      if (culOverride) { f.cul = culOverride.k; f.cgrp = culOverride.g; f.lang = culOverride.l!; }
-      if (relOverride) { f.rel = relOverride.k; f.rgrp = relOverride.g!; }
-      if (govOverride) (f as any).gov = govOverride;
-      return f;
+      if (!factsCache) factsCache = applyOverrides(baseFacts(baselineOf(country)), overrides, D.kinds);
+      return factsCache;
     }
+    const invalidateFacts = () => { factsCache = null; };
     // 'common' | 'yours' | 'conditional' | 'other'
     function statusOf(id: string): string {
       const n = D.nodes[id];
@@ -343,6 +358,19 @@ import Base from '../layouts/Base.astro';
       if (!f) return 'conditional';
       const v = evalGate(n.g, f);
       return v === true ? 'yours' : v === null ? 'conditional' : 'other';
+    }
+    const kindDef = (k: string) => D.kinds.find((d) => d.k === k);
+    const kindLabel = (k: string, v: string) => kindDef(k)?.values.find((x) => x.v === v)?.l || v;
+    /** Assert a set-kind atom (true / false / null = back to unknown). */
+    function assertAtom(kind: string, atom: string, val: boolean | null) {
+      const cur = { ...((overrides[kind] as SetFacts) || {}) };
+      if (val === null) delete cur[atom]; else cur[atom] = val;
+      if (Object.keys(cur).length) overrides[kind] = cur; else delete overrides[kind];
+      invalidateFacts();
+    }
+    function setOne(kind: string, v: string | null) {
+      if (v) overrides[kind] = v; else delete overrides[kind];
+      invalidateFacts();
     }
 
     // ── URL state ──────────────────────────────────────────────
@@ -355,11 +383,9 @@ import Base from '../layouts/Base.astro';
       const p = new URLSearchParams();
       p.set('v', D.vhash);
       if (country) p.set('c', country.t);
-      if (govOverride) p.set('g', govOverride);
-      if (culOverride) p.set('cu', culOverride.k);
-      if (relOverride) p.set('re', relOverride.k);
+      overridesToParams(overrides, p);
       if (ageIx) p.set('age', String(ageIx));
-      if (showOther) p.set('all', '1');
+      if (showMode) p.set('show', showMode);
       if (expanded) p.set('x', '1');
       const fo = D.ages.map((_, i) => focusAt(i));
       if (fo.some((f) => f !== 'adm')) p.set('f', fo.join('.'));
@@ -403,19 +429,17 @@ import Base from '../layouts/Base.astro';
     // History covers what you *decided* — the plan, and the country /
     // culture / religion it is for — not view state like the age tab, zoom
     // or a collapsed pane. Undo should never move you somewhere else.
-    type Snap = { c: string | null; cu: string | null; re: string | null;
-                  g: string | null; p: string[]; r: string[] };
+    type Snap = { c: string | null; ov: string; p: string[]; r: string[] };
     // NB: not `history` — that shadows window.history and breaks syncUrl().
     let undoStack: Snap[] = [];
     let histIx = -1;
     let restoring = false;
 
     const snap = (): Snap => ({
-      c: country?.t ?? null, cu: culOverride?.k ?? null, re: relOverride?.k ?? null,
-      g: govOverride, p: [...planned], r: [...researched],
+      c: country?.t ?? null, ov: JSON.stringify(overrides), p: [...planned], r: [...researched],
     });
     const sameSnap = (a: Snap, b: Snap) =>
-      a.c === b.c && a.cu === b.cu && a.re === b.re && a.g === b.g &&
+      a.c === b.c && a.ov === b.ov &&
       a.p.length === b.p.length && a.r.length === b.r.length &&
       a.p.every((x, i) => x === b.p[i]) && a.r.every((x, i) => x === b.r[i]);
 
@@ -432,9 +456,8 @@ import Base from '../layouts/Base.astro';
     function applySnap(s: Snap) {
       restoring = true;
       country = s.c ? D.countries.find((c) => c.t === s.c) || null : null;
-      culOverride = s.cu ? D.cultures.find((c) => c.k === s.cu) || null : null;
-      relOverride = s.re ? D.religions.find((r) => r.k === s.re) || null : null;
-      govOverride = s.g ?? null;
+      overrides = JSON.parse(s.ov);
+      invalidateFacts();
       planned.clear(); for (const x of s.p) planned.add(x);
       researched.clear(); for (const x of s.r) researched.add(x);
       restoring = false;
@@ -456,7 +479,8 @@ import Base from '../layouts/Base.astro';
       for (const [id, n] of Object.entries(D.nodes)) {
         if (n.a !== ageIx) continue;
         const st = statusOf(id);
-        if (st === 'other' && !showOther) continue;
+        if (st === 'other' && !showOther()) continue;
+        if (st === 'conditional' && showMode === 'sure' && !planned.has(id) && !researched.has(id)) continue;
         // an age shows one focus's advances — the one you picked — but a
         // plan that already holds one of another focus keeps it visible
         if (n.sp && n.sp !== focusAt(n.a) && !planned.has(id) && !researched.has(id)) continue;
@@ -544,26 +568,90 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderContext() {
-      const govSel = $('[data-pl-gov]') as HTMLSelectElement;
-      const curGov = (effectiveFacts() as any)?.gov || null;
-      govSel.innerHTML = GOVS.map(([k, label]) =>
-        `<option value="${k}"${k === curGov ? ' selected' : ''}>${label}</option>`).join('');
-      govSel.disabled = !country;
-      const culWrap = $('[data-pl-culture]'), relWrap = $('[data-pl-religion]');
-      culWrap.hidden = relWrap.hidden = !country;
       let html = '';
+      const seat = activeSeat();
+      if (seat) {
+        html += `<span class="chip save" title="${seat.snap.file} — facts and researched advances start from your save">` +
+          `save: ${seatLabel(seat)} <button type="button" data-save-toggle="off" title="ignore the save on this page">off</button></span>`;
+      } else if (loadSnapshot()) {
+        html += `<span class="chip save dim" title="a save is imported but not in use">save off ` +
+          `<button type="button" data-save-toggle="on">use it</button></span>`;
+      }
       if (country) {
         html += `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${country.n}</span>`;
-        if (culOverride) html += `<span class="chip shifted" data-reset="cul">${culOverride.n} ✕</span>`;
-        if (relOverride) html += `<span class="chip shifted" data-reset="rel">${relOverride.n} ✕</span>`;
-        (culWrap.querySelector('input') as HTMLInputElement).placeholder =
-          `Culture: ${culOverride ? culOverride.n : country.cu}`;
-        (relWrap.querySelector('input') as HTMLInputElement).placeholder =
-          `Religion: ${relOverride ? relOverride.n : country.re}`;
+        for (const [k, val] of Object.entries(overrides)) {
+          const def = kindDef(k);
+          if (!def) continue;
+          if (typeof val === 'string') {
+            html += `<span class="chip shifted" data-reset="${k}" title="back to the start value">${def.l}: ${kindLabel(k, val)} ✕</span>`;
+          } else {
+            const parts = Object.entries(val).map(([a, b]) => `${b ? '✓' : '✗'} ${kindLabel(k, a)}`);
+            html += `<span class="chip shifted" data-reset="${k}" title="forget these">${parts.join(' · ')} ✕</span>`;
+          }
+        }
       } else {
         html += `<span class="chip">no country — showing everything</span>`;
       }
       $('[data-pl-context]').innerHTML = html;
+      renderFacts();
+    }
+
+    // The "your country" panel is built from the kinds table alone: one row
+    // per kind of fact the gates test. `one` kinds show the effective value
+    // and let you change it; `set` kinds are tri-state chips over the
+    // values some gate actually tests (unknown → ✓ → ✗), so nothing
+    // acquirable is ever hidden until you say you can't have it.
+    const factsShowAll = new Set<string>();
+    function renderFacts() {
+      const panel = $('[data-pl-facts]');
+      if (panel.hidden) return;
+      const f = effectiveFacts();
+      if (!f) { panel.innerHTML = '<div class="pl-facts__hint">Pick a country first.</div>'; return; }
+      const base = baseFacts(baselineOf(country!));
+      let html = '';
+      for (const def of D.kinds) {
+        const ov = overrides[def.k];
+        html += `<div class="pl-facts__k">${def.l}</div><div class="pl-facts__v" data-kind="${def.k}">`;
+        if (def.mode === 'one') {
+          const cur = (def.k === 'cap' ? f.cap?.area : (f as any)[def.k]) as string | undefined;
+          const curV = def.values.find((x) => x.v === cur);
+          const shown = curV ? curV.l + (curV.p ? `<small>${curV.p}</small>` : '') : (cur || '—');
+          if (def.values.length <= 8) {
+            html += `<select data-one="${def.k}">` + def.values.map((x) =>
+              `<option value="${x.v}"${x.v === cur ? ' selected' : ''}>${x.l}${x.n ? ` (${x.n})` : ''}</option>`).join('') + '</select>';
+          } else {
+            html += `<span class="cur">${shown}</span>` +
+              `<div class="pl-picker" data-one-pick="${def.k}"><input type="search" placeholder="change…" autocomplete="off" />` +
+              `<div class="hdr-search__results" hidden></div></div>`;
+          }
+          if (ov) html += `<button type="button" class="reset" data-reset="${def.k}" title="back to the start value">✕ reset</button>`;
+        } else {
+          const all = factsShowAll.has(def.k);
+          const vals = all ? def.values : def.values.slice(0, 8);
+          for (const x of vals) {
+            const o = ov && typeof ov === 'object' ? (ov as SetFacts)[x.v] : undefined;
+            const b = (base as any)[def.k]?.[x.v] as boolean | undefined;
+            const st = o ?? b;
+            const cls = ['fchip', st === true ? 'yes' : st === false ? 'no' : '', o === undefined && b !== undefined ? 'base' : ''].filter(Boolean).join(' ');
+            html += `<button type="button" class="${cls}" data-atom="${x.v}" title="${st === true ? 'you have this — click to say you can\'t' : st === false ? 'you can\'t — click to forget' : 'unknown — click to say you have it'}">` +
+              `${st === true ? '✓ ' : st === false ? '✗ ' : ''}${x.l}<small>${x.n}</small></button>`;
+          }
+          if (def.values.length > 8) html += `<button type="button" class="more" data-more="${def.k}">${all ? 'fewer' : `+${def.values.length - 8} more`}</button>`;
+        }
+        html += '</div>';
+      }
+      html += `<div class="pl-facts__hint">The number is how many advances test that value. ` +
+        `<b>Dashed</b> chips come from the 1337 setup (or your imported save); a ✓ or ✗ you set travels in the link. ` +
+        `Picking another country resets everything here.</div>`;
+      panel.innerHTML = html;
+      for (const def of D.kinds) {
+        if (def.mode !== 'one' || def.values.length <= 8) continue;
+        wirePicker(`[data-one-pick="${def.k}"]`,
+          (q) => def.values.filter((x) => x.l.toLowerCase().includes(q) || x.v.includes(q) || (x.p || '').toLowerCase().includes(q))
+            .sort((a, b) => b.n - a.n || a.l.localeCompare(b.l))
+            .map((x) => ({ key: x.v, label: x.l, small: x.p || (x.n ? `${x.n} advances` : '') })),
+          (v) => setOne(def.k, v));
+      }
     }
 
     function nodeHtml(id: string, pos?: { x: number; y: number }) {
@@ -584,13 +672,15 @@ import Base from '../layouts/Base.astro';
         return `<div class="${cls}"${style} data-id="${id}">${icon}` +
           `<span class="nm">${n.n}</span>${sp}${qn}${badge}</div>`;
       }
-      const fx = [...(n.m || []).slice(0, 3), ...(n.u || []).slice(0, 2)];
+      const fx = [...(n.m || []).slice(0, 3).map(modLine), ...(n.u || []).slice(0, 2)];
       return `<div class="${cls} wide"${style} data-id="${id}">` +
         `<div class="hd">${icon}<span class="nm">${n.n}</span>${sp}${qn}${badge}</div>` +
         (fx.length ? `<div class="fx">${fx.map((x: string) => `<span>${x}</span>`).join('')}</div>`
                    : `<div class="fx"><span class="none">no direct effects</span></div>`) +
         `</div>`;
     }
+
+    const modLine = ([k, v]: [string, string, string]) => `${v} ${D.modkeys[k] || k}`;
 
     function paneHtml(label: string, count: number, list: string[],
                       parentOf: Map<string, string | null>, key: string) {
@@ -641,7 +731,7 @@ import Base from '../layouts/Base.astro';
       if (hasFocus) {
         const cur = focusAt(ageIx);
         const countOf = (k: string) => Object.entries(D.nodes).filter(([id, n]) =>
-          n.a === ageIx && n.sp === k && (showOther || statusOf(id) !== 'other')).length;
+          n.a === ageIx && n.sp === k && (showOther() || statusOf(id) !== 'other')).length;
         choices.innerHTML =
           `<div class="pl-choices__bar"><span class="pl-choices__label">Age focus</span>` +
           FOCUS.map(([k, lab]) =>
@@ -694,26 +784,48 @@ import Base from '../layouts/Base.astro';
     }
 
     // ── tooltip ────────────────────────────────────────────────
+    // Stays open while hovered, because a conditional advance lists what it
+    // needs with an "assume ✓" for anything you can still acquire.
     const tip = $('[data-pl-tip]');
+    let tipFor: string | null = null;
+    let tipHide: number | undefined;
     function showTip(e: MouseEvent, id: string) {
+      clearTimeout(tipHide);
+      if (tipFor === id && !tip.hidden) return;
+      tipFor = id;
       const n = D.nodes[id];
       const st = statusOf(id);
       const reqs = n.r.map((r) => D.nodes[r]?.n).filter(Boolean);
       let html = `<b class="t">${n.n}</b>`;
-      // A literal is worth naming only if you could still satisfy it: with a
-      // country picked, another country's tag never qualifies (a formable's
-      // does — Poland can become the PLC).
-      const lits = (n.gl || []).filter(([, kind, val]: any[]) =>
-        kind !== 'tag' || !country || val === country.t ||
-        (val in formables && evalGate(formables[val], effectiveFacts()!) !== false));
-      if (lits.length) {
-        const verb = st === 'other' ? 'Only for' : st === 'conditional' ? 'Needs' : 'Your unique';
-        html += `<div class="gate">${verb}: ${lits.slice(0, 6).map((l: any[]) => l[0]).join(', ')}</div>`;
-      } else if (st === 'conditional') {
-        html += `<div class="gate">Conditional — depends on state you can still acquire</div>`;
+      const f = effectiveFacts();
+      if (n.g && f) {
+        // every literal the gate tests, with how it stands for you. Another
+        // country's tag never qualifies (a formable's does — Poland can
+        // become the PLC), so those are left out.
+        const labels: Record<string, string> = {};
+        for (const [lab, kind, v] of n.gl || []) labels[`${kind}:${v}`] = lab;
+        const lits = literals(n.g, f, formables, labels).filter((l) =>
+          l.kind !== 'tag' || l.v === country!.t || (l.v in formables && l.value !== false));
+        if (lits.length) {
+          const verb = st === 'other' ? 'Only for' : st === 'conditional' ? 'Needs' : 'Your unique';
+          html += `<div class="gate">${verb}:</div>`;
+          for (const l of lits.slice(0, 8)) {
+            const label = l.label || kindLabel(l.kind, l.v);
+            const def = kindDef(l.kind);
+            let act = '';
+            if (l.value === null && def?.mode === 'set') act = `<button type="button" data-assume="${l.kind}" data-atom="${l.v}">assume ✓</button>`;
+            else if (l.value === false && def?.mode === 'one' && def.values.some((x) => x.v === l.v))
+              act = `<button type="button" data-as="${l.kind}" data-atom="${l.v}">as ${label}</button>`;
+            else if (l.kind === 'tag' && l.value === null) act = ` <small>(formable)</small>`;
+            html += `<div class="lit ${l.value === true ? 'ok' : l.value === false ? 'no' : ''}">` +
+              `${l.value === true ? '✓' : l.value === false ? '✗' : '?'} ${label}${act}</div>`;
+          }
+        }
+      } else if (n.gl?.length) {
+        html += `<div class="gate">Only for: ${n.gl.slice(0, 6).map((l) => l[0]).join(', ')}</div>`;
       }
       for (const rs of n.rs || []) html += `<div class="gate">Requires: ${rs}</div>`;
-      for (const m of n.m || []) html += `<div>${m}</div>`;
+      for (const m of n.m || []) html += `<div>${modLine(m)}</div>`;
       for (const u of n.u || []) html += `<div class="unl">${u}</div>`;
       if (reqs.length) html += `<div class="hint">after: ${reqs.join(', ')}</div>`;
       else if (n.p && D.nodes[n.p]) html += `<div class="hint">after: ${D.nodes[n.p].n} (drawn there in game; the files declare no prerequisite)</div>`;
@@ -724,8 +836,20 @@ import Base from '../layouts/Base.astro';
       tip.style.left = Math.min(e.clientX + 14, innerWidth - r.width - 12) + 'px';
       tip.style.top = Math.min(e.clientY + 14, innerHeight - r.height - 12) + 'px';
     }
+    function hideTipSoon() {
+      clearTimeout(tipHide);
+      tipHide = window.setTimeout(() => { if (!tip.matches(':hover')) { tip.hidden = true; tipFor = null; } }, 180);
+    }
+    tip.addEventListener('mouseleave', hideTipSoon);
+    tip.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('button') as HTMLElement | null;
+      if (!b) return;
+      if (b.dataset.assume) mutate(() => assertAtom(b.dataset.assume!, b.dataset.atom!, true));
+      else if (b.dataset.as) mutate(() => setOne(b.dataset.as!, b.dataset.atom!));
+      tip.hidden = true; tipFor = null;
+    });
 
-    // ── pickers (country / culture / religion) ─────────────────
+    // ── pickers ────────────────────────────────────────────────
     function wirePicker(sel: string,
                         items: (q: string) => { key: string; label: string; small?: string }[],
                         onPick: (key: string) => void) {
@@ -749,10 +873,14 @@ import Base from '../layouts/Base.astro';
         input.value = ''; results.hidden = true;
         mutate(() => onPick(a.dataset.key!));
       });
-      document.addEventListener('click', (e) => {
-        if (!wrap.contains(e.target as Node)) results.hidden = true;
-      });
     }
+    // one listener closes every picker's dropdown — the facts panel re-creates
+    // its pickers on each render, so they must not each register their own
+    document.addEventListener('click', (e) => {
+      for (const w of root.querySelectorAll<HTMLElement>('.pl-picker')) {
+        if (!w.contains(e.target as Node)) (w.querySelector('.hdr-search__results') as HTMLElement).hidden = true;
+      }
+    });
 
     function wirePickers() {
       wirePicker('[data-pl-country]',
@@ -760,25 +888,46 @@ import Base from '../layouts/Base.astro';
           .map((c) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
         (tag) => {
           country = D.countries.find((c) => c.t === tag) || null;
-          culOverride = relOverride = null;   // a new country resets the shifts
-          govOverride = null;
+          overrides = {};   // a new country resets every assertion
+          invalidateFacts();
         });
-      ($('[data-pl-gov]') as HTMLSelectElement).addEventListener('change', (e) => {
-        mutate(() => { govOverride = (e.target as HTMLSelectElement).value; });
-      });
-      wirePicker('[data-pl-culture]',
-        (q) => D.cultures.filter((c) => c.n.toLowerCase().includes(q))
-          .map((c) => ({ key: c.k, label: c.n, small: 'culture' })),
-        (k) => { culOverride = D.cultures.find((c) => c.k === k) || null; });
-      wirePicker('[data-pl-religion]',
-        (q) => D.religions.filter((r) => r.n.toLowerCase().includes(q))
-          .map((r) => ({ key: r.k, label: r.n, small: 'religion' })),
-        (k) => { relOverride = D.religions.find((r) => r.k === k) || null; });
-
       $('[data-pl-context]').addEventListener('click', (e) => {
+        const tog = (e.target as HTMLElement).closest('[data-save-toggle]') as HTMLElement | null;
+        if (tog) { setPref({ enabled: tog.dataset.saveToggle === 'on' }); return; }
         const chip = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
         if (!chip) return;
-        mutate(() => { if (chip.dataset.reset === 'cul') culOverride = null; else relOverride = null; });
+        mutate(() => { delete overrides[chip.dataset.reset!]; invalidateFacts(); });
+      });
+      $('[data-pl-facts-toggle]').addEventListener('click', () => {
+        const panel = $('[data-pl-facts]');
+        panel.hidden = !panel.hidden;
+        $('[data-pl-facts-toggle]').classList.toggle('on', !panel.hidden);
+        renderFacts();
+      });
+      const panel = $('[data-pl-facts]');
+      panel.addEventListener('change', (e) => {
+        const sel = (e.target as HTMLElement).closest('[data-one]') as HTMLSelectElement | null;
+        if (sel) mutate(() => setOne(sel.dataset.one!, sel.value));
+      });
+      panel.addEventListener('click', (e) => {
+        const t = e.target as HTMLElement;
+        const reset = t.closest('[data-reset]') as HTMLElement | null;
+        if (reset) { mutate(() => { delete overrides[reset.dataset.reset!]; invalidateFacts(); }); return; }
+        const more = t.closest('[data-more]') as HTMLElement | null;
+        if (more) {
+          const k = more.dataset.more!;
+          if (factsShowAll.has(k)) factsShowAll.delete(k); else factsShowAll.add(k);
+          renderFacts(); return;
+        }
+        const chip = t.closest('[data-atom]') as HTMLElement | null;
+        if (chip) {
+          const kind = (chip.closest('[data-kind]') as HTMLElement).dataset.kind!;
+          const atom = chip.dataset.atom!;
+          // unknown → ✓ → ✗ → unknown (a setup ✓ cycles to ✗ first)
+          const cur = (effectiveFacts() as any)?.[kind]?.[atom] as boolean | undefined;
+          const next = cur === undefined ? true : cur === true ? false : null;
+          mutate(() => assertAtom(kind, atom, next));
+        }
       });
     }
 
@@ -817,12 +966,28 @@ import Base from '../layouts/Base.astro';
         $('[data-pl-count]').textContent = '⚠ this link was made on another game version — the plan may have shifted.';
       }
       country = D.countries.find((c) => c.t === p.get('c')) || null;
-      const g0 = p.get('g');
-      govOverride = g0 && GOVS.some(([k]) => k === g0) ? g0 : null;
-      culOverride = D.cultures.find((c) => c.k === p.get('cu')) || null;
-      relOverride = D.religions.find((r) => r.k === p.get('re')) || null;
-      showOther = p.get('all') === '1';
-      ($('[data-pl-other]') as HTMLInputElement).checked = showOther;
+      // An imported save is the default view: its seat, its researched
+      // advances and its age fill in whatever the link does not say.
+      const seat = activeSeat();
+      if (seat) {
+        if (!p.get('c')) country = D.countries.find((c) => c.t === seat.tag) || null;
+        if (!p.get('r')) for (const k of seat.seat.researched) { const id = `advance:${k}`; if (D.nodes[id]) researched.add(id); }
+        if (!p.get('age')) { const m = /age_(\d+)/.exec(seat.snap.age || ''); if (m) p.set('age', String(parseInt(m[1], 10) - 1)); }
+        seeded = { c: seat.tag, r: enc(researched), age: p.get('age') };
+      }
+      onSaveChange(() => {
+        // The save changed under us (toggled, re-imported, other tab):
+        // drop what it seeded and reload so the new baseline applies.
+        const q = new URLSearchParams(location.search);
+        if (seeded && q.get('c') === seeded.c) q.delete('c');
+        if (seeded && q.get('r') === seeded.r) q.delete('r');
+        if (seeded && q.get('age') === seeded.age) q.delete('age');
+        location.href = q.toString() ? `?${q}` : location.pathname;
+      });
+      overrides = overridesFromParams(p, D.kinds);   // also reads the old cu/re/g params
+      showMode = p.get('all') === '1' ? 'all' : (p.get('show') || '');
+      if (!['', 'sure', 'all'].includes(showMode)) showMode = '';
+      ($('[data-pl-show]') as HTMLSelectElement).value = showMode;
       expanded = p.get('x') === '1';
       ($('[data-pl-expand]') as HTMLInputElement).checked = expanded;
       ageIx = Math.max(0, Math.min(D.ages.length - 1, parseInt(p.get('age') || '0', 10) || 0));
@@ -832,8 +997,8 @@ import Base from '../layouts/Base.astro';
 
       wirePickers(); wireZoom();
 
-      ($('[data-pl-other]') as HTMLInputElement).addEventListener('change', (e) => {
-        showOther = (e.target as HTMLInputElement).checked; render();
+      ($('[data-pl-show]') as HTMLSelectElement).addEventListener('change', (e) => {
+        showMode = (e.target as HTMLSelectElement).value; render();
       });
       ($('[data-pl-expand]') as HTMLInputElement).addEventListener('change', (e) => {
         expanded = (e.target as HTMLInputElement).checked; render();
@@ -887,9 +1052,9 @@ import Base from '../layouts/Base.astro';
       board.addEventListener('mousemove', (e) => {
         const el = (e.target as HTMLElement).closest('[data-id]') as HTMLElement | null;
         if (el) { showTip(e as MouseEvent, el.dataset.id!); focusChain(el.dataset.id!); }
-        else { tip.hidden = true; focusChain(null); }
+        else { hideTipSoon(); focusChain(null); }
       });
-      board.addEventListener('mouseleave', () => { tip.hidden = true; focusChain(null); });
+      board.addEventListener('mouseleave', () => { hideTipSoon(); focusChain(null); });
 
       /** Light up an advance's whole prerequisite chain (and what it leads
        *  to) and dim the rest — the fastest way to read "what do I need

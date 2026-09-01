@@ -4,15 +4,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "enable_ablaq_palace_variable"
-     ]
+     "var",
+     "enable_ablaq_palace_variable"
     ],
     "gate_labels": [
      "Enable Ablaq Palace Variable"
@@ -79,10 +72,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "or",
       [
@@ -784,24 +773,32 @@
      ],
      [
       "?",
-      "owns"
+      "owns:constantinople",
+      "owns: constantinople"
      ],
      [
       "?",
-      "owns"
+      "owns:rome",
+      "owns: rome"
      ],
      [
       "?",
-      "owns"
+      "owns:avignon",
+      "owns: avignon"
      ],
      [
       "?",
-      "owns"
+      "owns:segovia",
+      "owns: segovia"
      ]
     ],
     "gate_labels": [
      "Byzantium",
-     "ROM"
+     "ROM",
+     "owns: constantinople",
+     "owns: rome",
+     "owns: avignon",
+     "owns: segovia"
     ],
     "max_levels": null,
     "production_methods": [
@@ -1827,15 +1824,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "tag",
-      "BAV"
-     ]
+     "tag",
+     "BAV"
     ],
     "gate_labels": [
      "BAV"
@@ -2427,15 +2417,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "unlocked_bibliotheca_corviniana"
-     ]
+     "var",
+     "unlocked_bibliotheca_corviniana"
     ],
     "gate_labels": [
      "Unlocked Bibliotheca Corviniana"
@@ -2515,11 +2498,13 @@
      ],
      [
       "?",
+      "modifier:enable_black_market_buildings",
       "modifier:enable black market buildings"
      ]
     ],
     "gate_labels": [
-     "Pirate Brethren"
+     "Pirate Brethren",
+     "modifier:enable black market buildings"
     ],
     "max_levels": null,
     "production_methods": [
@@ -3687,11 +3672,13 @@
      ],
      [
       "?",
+      "situation:reformation.situation_is_active",
       "situation:reformation situation is active"
      ]
     ],
     "gate_labels": [
-     "Calvinism"
+     "Calvinism",
+     "situation:reformation situation is active"
     ],
     "max_levels": null,
     "production_methods": [
@@ -3748,15 +3735,8 @@
     "gate": [
      "and",
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "unlocked_camara_de_comptos"
-      ]
+      "var",
+      "unlocked_camara_de_comptos"
      ],
      [
       "or",
@@ -5866,9 +5846,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_clerical_archives",
      "modifier:allow clerical archives"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow clerical archives"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -6276,9 +6259,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -6711,30 +6697,27 @@
       ],
       [
        "?",
+       "any_international_organizations_member_of:sect",
        "sect condition"
       ]
      ],
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "var",
-       "has_neo_confucianism"
-      ]
+      "var",
+      "has_neo_confucianism"
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:middle_kingdom",
+      "is member of international organization: middle kingdom"
      ]
     ],
     "gate_labels": [
      "Confucian-Influenced",
      "Sānjiào",
      "Sect",
-     "Has Neo Confucianism"
+     "sect condition",
+     "Has Neo Confucianism",
+     "is member of international organization: middle kingdom"
     ],
     "max_levels": null,
     "production_methods": [
@@ -8993,9 +8976,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_dun_fort",
      "modifier:allow dun fort"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow dun fort"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -9441,9 +9427,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -9620,9 +9609,12 @@
    "data": {
     "gate": [
      "?",
-     "produced in country:elephants GREATER THAN"
+     "produced_in_country:elephants.greater_than:0",
+     "produced in country:elephants > 0"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "produced in country:elephants > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -11473,6 +11465,7 @@
      "or",
      [
       "?",
+      "modifier:can_have_monasteries",
       "modifier:can have monasteries"
      ],
      [
@@ -11485,6 +11478,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:can have monasteries",
      "Shield of the Faith",
      "Orthodoxy"
     ],
@@ -11907,10 +11901,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -12155,9 +12145,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -13401,7 +13394,8 @@
      "and",
      [
       "?",
-      "custom tooltip"
+      "custom_tooltip:globe_theatre_why",
+      "custom tooltip: globe theatre why"
      ],
      [
       "or",
@@ -13416,6 +13410,7 @@
      ]
     ],
     "gate_labels": [
+     "custom tooltip: globe theatre why",
      "England",
      "GBR"
     ],
@@ -14076,9 +14071,12 @@
    "data": {
     "gate": [
      "?",
-     "owns"
+     "owns:great_zimbabwe",
+     "owns: great zimbabwe"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: great zimbabwe"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -14148,9 +14146,12 @@
    "data": {
     "gate": [
      "?",
-     "owns"
+     "owns:great_zimbabwe",
+     "owns: great zimbabwe"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: great zimbabwe"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -14393,9 +14394,12 @@
    "data": {
     "gate": [
      "?",
-     "owns"
+     "owns:great_zimbabwe",
+     "owns: great zimbabwe"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: great zimbabwe"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -14466,10 +14470,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -14521,9 +14521,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -14594,9 +14597,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_guild_hall",
      "modifier:allow guild hall"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow guild hall"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -15200,9 +15206,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allows_hanseatic_federation_buildings",
      "modifier:allows hanseatic federation buildings"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allows hanseatic federation buildings"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -15278,9 +15287,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allows_hanseatic_federation_buildings",
      "modifier:allows hanseatic federation buildings"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allows hanseatic federation buildings"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -15378,9 +15390,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allows_hanseatic_federation_buildings",
      "modifier:allows hanseatic federation buildings"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allows hanseatic federation buildings"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -15456,25 +15471,18 @@
   {
    "data": {
     "gate": [
-     "and",
+     "or",
      [
-      "?",
-      "custom tooltip text"
+      "tag",
+      "BAV"
      ],
      [
-      "or",
-      [
-       "tag",
-       "BAV"
-      ],
-      [
-       "tag",
-       "LBV"
-      ],
-      [
-       "tag",
-       "UBV"
-      ]
+      "tag",
+      "LBV"
+     ],
+     [
+      "tag",
+      "UBV"
      ]
     ],
     "gate_labels": [
@@ -15561,9 +15569,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -15640,8 +15651,8 @@
     "gate": [
      "and",
      [
-      "?",
-      "has dlc"
+      "dlc",
+      "d008_fate_of_the_phoenix"
      ],
      [
       "or",
@@ -15656,6 +15667,7 @@
      ]
     ],
     "gate_labels": [
+     "Fate Of The Phoenix",
      "Byzantium",
      "ROM"
     ],
@@ -15864,9 +15876,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:has_a_parliamentary_system",
      "modifier:has a parliamentary system"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:has a parliamentary system"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -15932,10 +15947,33 @@
   {
    "data": {
     "gate": [
-     "?",
-     "is emperor"
+     "and",
+     [
+      "or",
+      [
+       "not",
+       [
+        "?",
+        "exists:hre",
+        "exists: hre"
+       ]
+      ],
+      [
+       "?",
+       "is_leader_of_international_organization:hre",
+       "is leader of international organization: hre"
+      ]
+     ],
+     [
+      "?",
+      "trigger_else",
+      "conditional trigger"
+     ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is leader of international organization: hre",
+     "conditional trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -16012,10 +16050,33 @@
   {
    "data": {
     "gate": [
-     "?",
-     "is emperor"
+     "and",
+     [
+      "or",
+      [
+       "not",
+       [
+        "?",
+        "exists:hre",
+        "exists: hre"
+       ]
+      ],
+      [
+       "?",
+       "is_leader_of_international_organization:hre",
+       "is leader of international organization: hre"
+      ]
+     ],
+     [
+      "?",
+      "trigger_else",
+      "conditional trigger"
+     ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is leader of international organization: hre",
+     "conditional trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -16172,15 +16233,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "unlocked_husuni_kubwa_variable"
-     ]
+     "var",
+     "unlocked_husuni_kubwa_variable"
     ],
     "gate_labels": [
      "Unlocked Husuni Kubwa Variable"
@@ -16271,9 +16325,12 @@
    "data": {
     "gate": [
      "?",
-     "does not own any copy of building type type"
+     "does_not_own_any_copy_of_building_type",
+     "does not own any copy of building type"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "does not own any copy of building type"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -16349,10 +16406,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "or",
       [
@@ -16764,10 +16817,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -17016,17 +17065,21 @@
      "and",
      [
       "?",
-      "modifier:num italian administrations GREATER THAN"
+      "modifier:num_italian_administrations.greater_than:0",
+      "modifier:num italian administrations > 0"
      ],
      [
       "not",
       [
        "?",
-       "is situation active"
+       "is_situation_active:italian_wars",
+       "is situation active: italian wars"
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:num italian administrations > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -17198,9 +17251,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -17923,10 +17979,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "tag",
       "ENG"
      ],
@@ -18353,10 +18405,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -18546,9 +18594,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:can_build_kurmina_headquarter",
      "modifier:can build kurmina headquarter"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:can build kurmina headquarter"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -19597,9 +19648,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_local_noble_delegation",
      "modifier:allow local noble delegation"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow local noble delegation"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -19640,7 +19694,8 @@
      "and",
      [
       "?",
-      "average country literacy GREATER THAN"
+      "average_country_literacy.greater_than:20",
+      "average country literacy > 20"
      ],
      [
       "not",
@@ -19650,7 +19705,9 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "average country literacy > 20"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -19926,11 +19983,13 @@
      ],
      [
       "?",
+      "situation:reformation.situation_is_active",
       "situation:reformation situation is active"
      ]
     ],
     "gate_labels": [
-     "Lutheranism"
+     "Lutheranism",
+     "situation:reformation situation is active"
     ],
     "max_levels": null,
     "production_methods": [
@@ -20221,9 +20280,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:can_build_mamluk_barracks",
      "modifier:can build mamluk barracks"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:can build mamluk barracks"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -21688,9 +21750,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:can_have_monasteries",
      "modifier:can have monasteries"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:can have monasteries"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -21958,10 +22023,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -22049,10 +22110,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -22128,25 +22185,18 @@
   {
    "data": {
     "gate": [
-     "and",
+     "or",
      [
-      "?",
-      "custom tooltip text"
+      "tag",
+      "BAV"
      ],
      [
-      "or",
-      [
-       "tag",
-       "BAV"
-      ],
-      [
-       "tag",
-       "LBV"
-      ],
-      [
-       "tag",
-       "UBV"
-      ]
+      "tag",
+      "LBV"
+     ],
+     [
+      "tag",
+      "UBV"
      ]
     ],
     "gate_labels": [
@@ -22252,25 +22302,18 @@
   {
    "data": {
     "gate": [
-     "and",
+     "or",
      [
-      "?",
-      "custom tooltip text"
+      "tag",
+      "BAV"
      ],
      [
-      "or",
-      [
-       "tag",
-       "BAV"
-      ],
-      [
-       "tag",
-       "LBV"
-      ],
-      [
-       "tag",
-       "UBV"
-      ]
+      "tag",
+      "LBV"
+     ],
+     [
+      "tag",
+      "UBV"
      ]
     ],
     "gate_labels": [
@@ -22404,25 +22447,18 @@
   {
    "data": {
     "gate": [
-     "and",
+     "or",
      [
-      "?",
-      "custom tooltip text"
+      "tag",
+      "BAV"
      ],
      [
-      "or",
-      [
-       "tag",
-       "BAV"
-      ],
-      [
-       "tag",
-       "LBV"
-      ],
-      [
-       "tag",
-       "UBV"
-      ]
+      "tag",
+      "LBV"
+     ],
+     [
+      "tag",
+      "UBV"
      ]
     ],
     "gate_labels": [
@@ -23109,9 +23145,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_nobility_fortifications",
      "modifier:allow nobility fortifications"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow nobility fortifications"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -23205,9 +23244,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_noble_villa",
      "modifier:allow noble villa"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow noble villa"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -23340,9 +23382,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_nobles_recruitment_center",
      "modifier:allow nobles recruitment center"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow nobles recruitment center"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -23478,10 +23523,6 @@
      [
       "and",
       [
-       "?",
-       "custom tooltip text"
-      ],
-      [
        "or",
        [
         "tag",
@@ -23598,9 +23639,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -23836,6 +23880,7 @@
      "and",
      [
       "?",
+      "modifier:target_of_military_sponsorships",
       "modifier:target of military sponsorships"
      ],
      [
@@ -23844,6 +23889,7 @@
      ]
     ],
     "gate_labels": [
+     "modifier:target of military sponsorships",
      "Catholicism"
     ],
     "max_levels": null,
@@ -23922,11 +23968,13 @@
      ],
      [
       "?",
-      "country rank level GREATER THAN EQUAL"
+      "country_rank_level.greater_than_equal:2",
+      "country rank level ≥ 2"
      ]
     ],
     "gate_labels": [
-     "Military Order"
+     "Military Order",
+     "country rank level ≥ 2"
     ],
     "max_levels": null,
     "production_methods": [
@@ -24577,9 +24625,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:has_panaqas",
      "modifier:has panaqas"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:has panaqas"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -25040,9 +25091,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_peasants_hunting_grounds",
      "modifier:allow peasants hunting grounds"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow peasants hunting grounds"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -25091,9 +25145,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_peasants_training_grounds",
      "modifier:allow peasants training grounds"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow peasants training grounds"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -25269,21 +25326,19 @@
      "and",
      [
       "?",
-      "is situation active"
+      "is_situation_active:black_death",
+      "is situation active: black death"
      ],
      [
-      "and",
-      [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "?",
-       "custom tooltip modifier:enable pest house"
-      ]
+      "?",
+      "modifier:enable_pest_house",
+      "modifier:enable pest house"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is situation active: black death",
+     "modifier:enable pest house"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -25425,15 +25480,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "unlocked_piazza_san_marco"
-     ]
+     "var",
+     "unlocked_piazza_san_marco"
     ],
     "gate_labels": [
      "Unlocked Piazza San Marco"
@@ -26929,11 +26977,13 @@
       "and",
       [
        "?",
-       "exists"
+       "exists:middle_kingdom",
+       "exists: middle kingdom"
       ],
       [
        "?",
-       "is leader of international organization"
+       "is_leader_of_international_organization:middle_kingdom",
+       "is leader of international organization: middle kingdom"
       ]
      ],
      [
@@ -26942,6 +26992,8 @@
      ]
     ],
     "gate_labels": [
+     "exists: middle kingdom",
+     "is leader of international organization: middle kingdom",
      "Chinese"
     ],
     "max_levels": null,
@@ -27373,9 +27425,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -28229,14 +28284,19 @@
      "and",
      [
       "?",
+      "modifier:has_a_parliamentary_system",
       "modifier:has a parliamentary system"
      ],
      [
       "?",
+      "has_parliament",
       "has parliament"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:has a parliamentary system",
+     "has parliament"
+    ],
     "max_levels": null,
     "production_methods": [],
     "settlements": [
@@ -28366,10 +28426,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "or",
       [
@@ -28789,10 +28845,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "or",
       [
@@ -29941,14 +29993,7 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "false"
-     ]
+     "false"
     ],
     "gate_labels": [],
     "max_levels": null,
@@ -30088,26 +30133,35 @@
       "or",
       [
        "?",
-       "culture this"
+       "culture.this:turkish_culture",
+       "culture this: turkish culture"
       ],
       [
        "?",
-       "culture this"
+       "culture.this:turkoman_culture",
+       "culture this: turkoman culture"
       ]
      ],
      [
       "or",
       [
        "?",
-       "owns"
+       "owns:konya",
+       "owns: konya"
       ],
       [
        "?",
-       "owns"
+       "owns:sivas",
+       "owns: sivas"
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "culture this: turkish culture",
+     "culture this: turkoman culture",
+     "owns: konya",
+     "owns: sivas"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -30888,9 +30942,12 @@
    "data": {
     "gate": [
      "?",
-     "group NOT EQUAL"
+     "group.not_equal:christian",
+     "group ≠ christian"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "group ≠ christian"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -31266,10 +31323,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "tag",
       "ENG"
@@ -31697,10 +31750,6 @@
     "gate": [
      "and",
      [
-      "?",
-      "custom tooltip text"
-     ],
-     [
       "or",
       [
        "tag",
@@ -32011,10 +32060,6 @@
    "data": {
     "gate": [
      "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
      [
       "or",
       [
@@ -32956,15 +33001,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "unlocked_teatro_san_cassiano"
-     ]
+     "var",
+     "unlocked_teatro_san_cassiano"
     ],
     "gate_labels": [
      "Unlocked Teatro San Cassiano"
@@ -33571,9 +33609,12 @@
    "data": {
     "gate": [
      "?",
+     "modifier:allow_thema_headquarters",
      "modifier:allow thema headquarters"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "modifier:allow thema headquarters"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -33660,9 +33701,12 @@
    "data": {
     "gate": [
      "?",
-     "owns"
+     "owns:constantinople",
+     "owns: constantinople"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: constantinople"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34225,14 +34269,18 @@
      "or",
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ],
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34295,14 +34343,18 @@
      "or",
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ],
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34365,14 +34417,18 @@
      "or",
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ],
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34441,14 +34497,18 @@
      "or",
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ],
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34517,28 +34577,26 @@
      "and",
      [
       "?",
-      "total effective building levels:trade company headquarters LESS THAN"
+      "total_effective_building_levels:trade_company_headquarters.less_than:1",
+      "total effective building levels:trade company headquarters < 1"
      ],
      [
-      "and",
+      "not",
       [
-       "?",
-       "custom tooltip text"
-      ],
-      [
-       "not",
-       [
-        "var",
-        "building_trade_hq"
-       ]
+       "var",
+       "building_trade_hq"
       ]
      ],
      [
       "?",
-      "num relations above limit LESS THAN EQUAL"
+      "num_relations_above_limit.less_than_equal:0",
+      "num relations above limit ≤ 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters < 1",
+     "num relations above limit ≤ 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34625,14 +34683,18 @@
      "or",
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ],
      [
       "?",
-      "total effective building levels:trade company headquarters GREATER THAN"
+      "total_effective_building_levels:trade_company_headquarters.greater_than:0",
+      "total effective building levels:trade company headquarters > 0"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "total effective building levels:trade company headquarters > 0"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -34944,15 +35006,8 @@
   {
    "data": {
     "gate": [
-     "and",
-     [
-      "?",
-      "custom tooltip text"
-     ],
-     [
-      "var",
-      "son_trans_saharan_trade_building_variable"
-     ]
+     "var",
+     "son_trans_saharan_trade_building_variable"
     ],
     "gate_labels": [
      "Son Trans Saharan Trade Building Variable"
@@ -35082,9 +35137,12 @@
    "data": {
     "gate": [
      "?",
-     "has unlocked building trigger type"
+     "has_unlocked_building_trigger",
+     "has unlocked building trigger"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "has unlocked building trigger"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -36321,9 +36379,12 @@
    "data": {
     "gate": [
      "?",
-     "owns"
+     "owns:benin",
+     "owns: benin"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: benin"
+    ],
     "max_levels": null,
     "production_methods": [
      {
@@ -36684,15 +36745,63 @@
      [
       "not",
       [
-       "?",
-       "is capital mesoamerica"
+       "or",
+       [
+        "cap",
+        "region",
+        "mesoamerica_region"
+       ],
+       [
+        "cap",
+        "area",
+        "xalisco_area"
+       ],
+       [
+        "cap",
+        "area",
+        "zacatecas_area"
+       ],
+       [
+        "cap",
+        "region",
+        "central_america_region"
+       ]
       ]
      ],
      [
       "not",
       [
-       "?",
-       "is capital in south america or carribean"
+       "or",
+       [
+        "cap",
+        "region",
+        "colombia_region"
+       ],
+       [
+        "cap",
+        "region",
+        "andes_region"
+       ],
+       [
+        "cap",
+        "region",
+        "brazil_region"
+       ],
+       [
+        "cap",
+        "region",
+        "chaco_region"
+       ],
+       [
+        "cap",
+        "region",
+        "la_plata_region"
+       ],
+       [
+        "cap",
+        "region",
+        "caribbean_region"
+       ]
       ]
      ],
      [
@@ -36794,13 +36903,15 @@
      ],
      [
       "?",
+      "modifier:allow_warrior_monks_training_grounds",
       "modifier:allow warrior monks training grounds"
      ]
     ],
     "gate_labels": [
      "Eastern Buddhism",
      "Sānjiào",
-     "Shintō"
+     "Shintō",
+     "modifier:allow warrior monks training grounds"
     ],
     "max_levels": null,
     "production_methods": [],
@@ -38199,14 +38310,19 @@
      "and",
      [
       "?",
-      "exists"
+      "exists:middle_kingdom",
+      "exists: middle kingdom"
      ],
      [
       "?",
-      "is leader of international organization"
+      "is_leader_of_international_organization:middle_kingdom",
+      "is leader of international organization: middle kingdom"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "exists: middle kingdom",
+     "is leader of international organization: middle kingdom"
+    ],
     "max_levels": null,
     "production_methods": [
      {

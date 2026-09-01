@@ -70,6 +70,7 @@ import Base from '../layouts/Base.astro';
   <div data-pp-out></div>
 
   <script>
+    import { activeSeat, saveFacts, seatAsStart, seatLabel, loadSnapshot, setPref, onSaveChange } from '../lib/save-store';
     const $ = (s: string) => document.querySelector(s) as HTMLElement;
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
     const esc = (t: any) => String(t).replace(/[&<>"]/g, (c) =>
@@ -199,7 +200,8 @@ import Base from '../layouts/Base.astro';
                              age: ageKey, year, io: [], parl: null,
                              laws: new Set(), privs: new Set() };
       const rec = startRec() || {};
-      return { ...country.f, cap: country.f.cap || {}, gov: govOf(),
+      const cf = saveFacts(country.t) || country.f;   // the save's view of the country when in use
+      return { ...cf, cap: cf.cap || {}, gov: govOf(),
                age: ageKey, year,
                io: rec.io || [], parl: rec.parliament || null,
                laws: new Set(Object.values(rec.laws || {})),
@@ -1220,11 +1222,15 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderContext() {
-      $('[data-pp-context]').innerHTML = country
+      const seat = activeSeat();
+      const saveChip = seat
+        ? `<span class="chip save" title="${esc(seat.snap.file)} — laws, privileges and values start from your save">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
+        : loadSnapshot() ? `<span class="chip save dim">save off <button type="button" data-save-toggle="on">use it</button></span>` : '';
+      $('[data-pp-context]').innerHTML = saveChip + (country
         ? `<span class="chip">${esc(country.n)}</span>` +
           `<span class="chip">${esc(country.cu)}</span>` +
           `<span class="chip">${esc(country.re)}</span>`
-        : '';
+        : '');
       const sel = $('[data-pp-gov]') as HTMLSelectElement;
       const cur = govOf();
       sel.innerHTML = GOVS.map(([k, label]) =>
@@ -1287,6 +1293,20 @@ import Base from '../layouts/Base.astro';
     ]).then(([data, starts]) => {
       D = data;
       STARTS = starts;
+      const seededByLink = !!new URLSearchParams(location.search).get('c');
+      // An imported save is the default: its seat replaces the 1337 record
+      // for that country (laws, privileges, reforms, values, government).
+      const seat = activeSeat();
+      if (seat) STARTS[seat.tag] = seatAsStart(seat.seat, seat.facts);
+      onSaveChange(() => {
+        const q = new URLSearchParams(location.search);
+        if (seat && q.get('c') === seat.tag && !seededByLink) q.delete('c');
+        location.href = q.toString() ? `?${q}` : location.pathname;
+      });
+      $('[data-pp-context]').addEventListener('click', (e) => {
+        const tog = (e.target as HTMLElement).closest('[data-save-toggle]') as HTMLElement | null;
+        if (tog) setPref({ enabled: tog.dataset.saveToggle === 'on' });
+      });
 
       ($('[data-pp-axis]') as HTMLSelectElement).innerHTML =
         Object.entries(D.pairs).map(([pid, p]: any) =>
@@ -1302,7 +1322,7 @@ import Base from '../layouts/Base.astro';
         });
 
       const qs = new URLSearchParams(location.search);
-      country = D.countries.find((c: any) => c.t === qs.get('c')) || null;
+      country = D.countries.find((c: any) => c.t === (qs.get('c') || seat?.tag)) || null;
       const g = qs.get('g');
       if (g && GOVS.some(([k]) => k === g)) govOverride = g;
       const e = parseFloat(qs.get('e') || '');

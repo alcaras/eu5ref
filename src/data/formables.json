@@ -725,8 +725,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "culture is culture native american"
+      "not",
+      [
+       "?",
+       "culture.has_culture_with_tag:native_american_tag",
+       "culture has culture with tag: native american tag"
+      ]
      ],
      [
       "or",
@@ -817,7 +821,8 @@
       "not",
       [
        "?",
-       "exists"
+       "exists:middle_kingdom",
+       "exists: middle kingdom"
       ]
      ]
     ],
@@ -986,9 +991,12 @@
     "capital_required": true,
     "gate": [
      "?",
-     "owns"
+     "owns:tunis",
+     "owns: tunis"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "owns: tunis"
+    ],
     "regions": [],
     "tag": "CTH"
    },
@@ -1151,7 +1159,8 @@
      ],
      [
       "?",
-      "owns"
+      "owns:delhi",
+      "owns: delhi"
      ]
     ],
     "gate_labels": [
@@ -1159,7 +1168,8 @@
      "Indian",
      "Iranian",
      "Mongol",
-     "Turkic"
+     "Turkic",
+     "owns: delhi"
     ],
     "regions": [
      "Hindustan"
@@ -1366,9 +1376,12 @@
     "capital_required": true,
     "gate": [
      "?",
+     "is_hegemon",
      "is hegemon"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is hegemon"
+    ],
     "regions": [],
     "tag": "EUR"
    },
@@ -1624,7 +1637,8 @@
       "not",
       [
        "?",
-       "country exists"
+       "country_exists:byz",
+       "country exists: BYZ"
       ]
      ],
      [
@@ -1861,14 +1875,19 @@
      "and",
      [
       "?",
-      "exists"
+      "exists:hre",
+      "exists: hre"
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:hre",
+      "is member of international organization: hre"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "exists: hre",
+     "is member of international organization: hre"
+    ],
     "regions": [
      "Northern Germany",
      "Southern Germany"
@@ -1974,11 +1993,13 @@
      "and",
      [
       "?",
-      "exists"
+      "exists:ilkhanate",
+      "exists: ilkhanate"
      ],
      [
       "?",
-      "is member of international organization"
+      "is_member_of_international_organization:ilkhanate",
+      "is member of international organization: ilkhanate"
      ],
      [
       "not",
@@ -1988,7 +2009,10 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "exists: ilkhanate",
+     "is member of international organization: ilkhanate"
+    ],
     "regions": [
      "Persia"
     ],
@@ -2096,14 +2120,16 @@
       "not",
       [
        "?",
-       "is member of international organization of type type"
+       "is_member_of_international_organization_of_type.type:high_kingship",
+       "is member of international organization of type type: high kingship"
       ]
      ],
      [
       "not",
       [
        "?",
-       "is member of international organization"
+       "is_member_of_international_organization:lordship_of_ireland",
+       "is member of international organization: lordship of ireland"
       ]
      ]
     ],
@@ -2138,9 +2164,12 @@
     "capital_required": false,
     "gate": [
      "?",
-     "is member of international organization of type type"
+     "is_member_of_international_organization_of_type.type:high_kingship",
+     "is member of international organization of type type: high kingship"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is member of international organization of type type: high kingship"
+    ],
     "regions": [
      "Ireland"
     ],
@@ -2168,9 +2197,12 @@
     "capital_required": false,
     "gate": [
      "?",
-     "is member of international organization"
+     "is_member_of_international_organization:lordship_of_ireland",
+     "is member of international organization: lordship of ireland"
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "is member of international organization: lordship of ireland"
+    ],
     "regions": [
      "Ireland"
     ],
@@ -2501,7 +2533,8 @@
       "not",
       [
        "?",
-       "country exists"
+       "country_exists:lat",
+       "country exists: LAT"
       ]
      ],
      [
@@ -2513,8 +2546,110 @@
       "lat_reduced_requirements_to_form"
      ],
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "not",
@@ -2526,7 +2661,27 @@
     ],
     "gate_labels": [
      "Catholicism",
-     "Lat Reduced Requirements To Form"
+     "Lat Reduced Requirements To Form",
+     "French",
+     "Iberian",
+     "Italian",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica"
     ],
     "regions": [],
     "tag": "LAT"
@@ -2560,7 +2715,8 @@
       "not",
       [
        "?",
-       "country exists"
+       "country_exists:lat",
+       "country exists: LAT"
       ]
      ],
      [
@@ -2575,8 +2731,110 @@
       "catholic"
      ],
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "not",
@@ -2587,7 +2845,27 @@
      ]
     ],
     "gate_labels": [
-     "Catholicism"
+     "Catholicism",
+     "French",
+     "Iberian",
+     "Italian",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica"
     ],
     "regions": [],
     "tag": "LAT"
@@ -2981,17 +3259,20 @@
       "and",
       [
        "?",
+       "has_ruler",
        "has ruler"
       ],
       [
        "and",
        [
         "?",
+        "ruler.has_dynasty",
         "ruler has dynasty"
        ],
        [
         "?",
-        "ruler dynasty"
+        "ruler.dynasty:borjigin_dynasty",
+        "ruler dynasty: borjigin dynasty"
        ]
       ]
      ],
@@ -3016,6 +3297,9 @@
     ],
     "gate_labels": [
      "Timurid",
+     "has ruler",
+     "ruler has dynasty",
+     "ruler dynasty: borjigin dynasty",
      "Mongol",
      "Turkic",
      "Steppe Horde"
@@ -3422,22 +3706,28 @@
      ],
      [
       "?",
-      "owns"
+      "owns:delhi",
+      "owns: delhi"
      ],
      [
       "?",
-      "owns"
+      "owns:agra",
+      "owns: agra"
      ],
      [
       "?",
-      "owns"
+      "owns:lahore",
+      "owns: lahore"
      ]
     ],
     "gate_labels": [
      "Islam",
      "Iranian",
      "Turkic",
-     "Afghani"
+     "Afghani",
+     "owns: delhi",
+     "owns: agra",
+     "owns: lahore"
     ],
     "regions": [
      "Hindustan"
@@ -3793,14 +4083,19 @@
      "or",
      [
       "?",
-      "culture.dialect"
+      "culture.dialect:occitan_dialect",
+      "culture.dialect: occitan dialect"
      ],
      [
       "?",
-      "culture.dialect"
+      "culture.dialect:gascon_dialect",
+      "culture.dialect: gascon dialect"
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "culture.dialect: occitan dialect",
+     "culture.dialect: gascon dialect"
+    ],
     "regions": [],
     "tag": "OCC"
    },
@@ -3982,11 +4277,13 @@
      ],
      [
       "?",
-      "owns"
+      "owns:trebizond",
+      "owns: trebizond"
      ]
     ],
     "gate_labels": [
-     "Pontic"
+     "Pontic",
+     "owns: trebizond"
     ],
     "regions": [],
     "tag": "PON"
@@ -4259,17 +4556,20 @@
       "or",
       [
        "?",
-       "country rank"
+       "country_rank:rank_empire",
+       "country rank: rank empire"
       ],
       [
        "?",
-       "owns"
+       "owns:constantinople",
+       "owns: constantinople"
       ],
       [
        "and",
        [
         "?",
-        "owns"
+        "owns:rome",
+        "owns: rome"
        ],
        [
         "not",
@@ -4281,7 +4581,11 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "country rank: rank empire",
+     "owns: constantinople",
+     "owns: rome"
+    ],
     "regions": [
      "Italy",
      "Iberia",
@@ -4990,7 +5294,8 @@
       "not",
       [
        "?",
-       "country exists"
+       "country_exists:the",
+       "country exists: THE"
       ]
      ],
      [
@@ -5001,8 +5306,110 @@
       ]
      ],
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "or",
@@ -5024,8 +5431,28 @@
      ]
     ],
     "gate_labels": [
-     "Halved Cost To Form Thesslonica",
-     "Achaea"
+     "French",
+     "Iberian",
+     "Italian",
+     "Catholicism",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica",
+     "Halved Cost To Form Thesslonica"
     ],
     "regions": [],
     "tag": "THE"
@@ -5056,7 +5483,8 @@
       "not",
       [
        "?",
-       "country exists"
+       "country_exists:the",
+       "country exists: THE"
       ]
      ],
      [
@@ -5067,8 +5495,110 @@
       ]
      ],
      [
-      "?",
-      "is frankokratia state"
+      "and",
+      [
+       "or",
+       [
+        "cgrp",
+        "french_group"
+       ],
+       [
+        "cgrp",
+        "iberian_group"
+       ],
+       [
+        "cgrp",
+        "italian_group"
+       ]
+      ],
+      [
+       "or",
+       [
+        "rel",
+        "catholic"
+       ],
+       [
+        "and",
+        [
+         "not",
+         [
+          "rel",
+          "orthodox"
+         ]
+        ],
+        [
+         "rgrp",
+         "christian"
+        ],
+        [
+         "age>=",
+         "age_4_reformation"
+        ]
+       ]
+      ],
+      [
+       "or",
+       [
+        "tag",
+        "ACH"
+       ],
+       [
+        "tag",
+        "ALB"
+       ],
+       [
+        "tag",
+        "ARG"
+       ],
+       [
+        "tag",
+        "ATH"
+       ],
+       [
+        "tag",
+        "BOD"
+       ],
+       [
+        "tag",
+        "CEP"
+       ],
+       [
+        "tag",
+        "CRT"
+       ],
+       [
+        "tag",
+        "KNI"
+       ],
+       [
+        "tag",
+        "LAT"
+       ],
+       [
+        "tag",
+        "NAX"
+       ],
+       [
+        "tag",
+        "NEG"
+       ],
+       [
+        "tag",
+        "NEO"
+       ],
+       [
+        "tag",
+        "PAT"
+       ],
+       [
+        "tag",
+        "SAO"
+       ],
+       [
+        "tag",
+        "THE"
+       ]
+      ]
      ],
      [
       "not",
@@ -5092,7 +5622,29 @@
       ]
      ]
     ],
-    "gate_labels": [],
+    "gate_labels": [
+     "French",
+     "Iberian",
+     "Italian",
+     "Catholicism",
+     "Christianity",
+     "Age 4 Reformation",
+     "Achaea",
+     "Albania",
+     "Argos",
+     "Athens",
+     "Bodonitsa",
+     "Cephalonia",
+     "Candia",
+     "Knights Hospitaller",
+     "Constantinople",
+     "Naxos",
+     "Negroponte",
+     "Neopatria",
+     "Patras",
+     "Salona",
+     "Thessalonica"
+    ],
     "regions": [],
     "tag": "THE"
    },
@@ -5454,8 +6006,12 @@
     "gate": [
      "and",
      [
-      "?",
-      "culture is culture native american"
+      "not",
+      [
+       "?",
+       "culture.has_culture_with_tag:native_american_tag",
+       "culture has culture with tag: native american tag"
+      ]
      ],
      [
       "cgrp",

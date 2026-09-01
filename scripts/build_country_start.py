@@ -117,9 +117,32 @@ def io_membership() -> dict[str, list[str]]:
     return out
 
 
+DIPLOMACY = GAME / 'main_menu' / 'setup' / 'start' / '12_diplomacy.txt'
+
+
+def subject_status() -> dict[str, str]:
+    """tag → subject type at the bookmark, from the setup's
+    `dependency = { first = ENG second = WLS subject_type = dominion }`
+    lines. A tag with none is independent — the setup is the complete 1337
+    state, so that is a fact of the files, not a guess."""
+    out: dict[str, str] = {}
+    if not DIPLOMACY.exists():
+        return out
+    for m in re.finditer(r'dependency\s*=\s*\{([^}]*)\}', DIPLOMACY.read_text(encoding='utf-8-sig')):
+        body = m.group(1)
+        if body.lstrip().startswith('#'):
+            continue
+        sub = re.search(r'\bsecond\s*=\s*([A-Z0-9]{3})', body)
+        typ = re.search(r'\bsubject_type\s*=\s*([a-z_]+)', body)
+        if sub and typ:
+            out[sub.group(1)] = typ.group(1)
+    return out
+
+
 def main() -> None:
     axes = set(json.loads((ref.ROOT / 'public' / 'values.json').read_text())['pairs'])
     ios = io_membership()
+    subjects = subject_status()
 
     templates = {}
     for f in sorted(TEMPLATES.glob('*.txt')):
@@ -166,6 +189,7 @@ def main() -> None:
                'heir_selection': None, 'parliament': None, 'tech': None}
         apply(rec, it[1], set())
         rec['io'] = ios.get(it[0]) or None
+        rec['subj'] = subjects.get(it[0], 'none')
         if rec['values'] or rec['privileges'] or rec['laws']:
             out[it[0]] = {k: v for k, v in rec.items() if v not in (None, {}, [])}
 
