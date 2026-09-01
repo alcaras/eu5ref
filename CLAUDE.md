@@ -162,8 +162,11 @@ derivable from the files:
    only if that parent still has capacity. If not, it is deferred.
 3. `FindSlot(node)` decides capacity: a node holds 2 children at depth 0-1,
    and deeper down 2 if `depth % 3 == 1` else 1, counting only children that
-   are visible to this country. Full nodes recurse into the child subtree with
-   the smallest width and return the best slot found there.
+   pass a static discriminator (`CountKids`, on fields +0x548/+0x250/+0x268/
+   +0x1c4 — a property of the definition, NOT of the viewing country: the tree
+   is built at advance-database load, before any country exists). Full nodes
+   recurse into the child subtree with the smallest width and take the best
+   slot found there.
 4. An advance with `in_tree_of` is placed into that tree by `FindSlot`.
 5. **An advance with neither parent nor `in_tree_of` gets `FindSlot(root)` on
    whichever tree is being constructed when its turn comes, and `AttachChild`
@@ -172,9 +175,16 @@ derivable from the files:
 6. The order the deferred/orphan buckets are drained in is randomised by a
    seeded PRNG threaded through the recursion.
 
-So an orphan's parent depends on the tree's shape, the capacity rule, the
-visible advance set (country- and focus-dependent) and an RNG order. It is
-NOT a stable property of the advance and must not be encoded as one.
+**The result is stable and global.** The draw order comes from the game's
+counter-based RNG (`hash(base_seed, counter)`, constants 0xB5297A4D /
+0x68E31DA4 / 0x1B56C4E9 / 0x92D68CA2), and the base seed is evidently fixed:
+confirmed in game that a fresh campaign puts Bookkeeping in the same place.
+Since construction happens at database load, before a country is chosen, every
+player gets the same tree — you simply do not see the advances you cannot
+research. So an orphan's parent IS a real, stable, global fact; it just is not
+in the data files. Deriving it would mean reimplementing this function
+faithfully (order, predicates, capacity, subtree-width metric, RNG) and
+recovering the base seed.
 `data.drawn_in` is emitted only for a placement the files declare. Two earlier
 guesses were wrong and cost several rounds — "no prereq = its own root" (~38
 phantom roots against the screen's four) and "orphans join the age's ungated
@@ -183,7 +193,9 @@ Fleets under Enlightenment). Don't retry either.
 
 **Known gap:** because those edges are real, the advance planner's
 prerequisite closure and cost are optimistic for these 383 — in game they sit
-behind whatever chain the layout gave them.
+behind whatever chain the layout gave them. Declared `requires` edges are
+unaffected: the final pass attaches an advance to its real parent with no
+capacity check, so authored prerequisites are never displaced.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):
