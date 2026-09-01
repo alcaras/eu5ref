@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EntityTable from '../components/EntityTable.astro';
 import FilterBar from '../components/FilterBar.astro';
+import CountryLens from '../components/CountryLens.astro';
 import SectionTable from '../components/SectionTable.astro';
 import data from '../data/reforms.json';
 import govTypes from '../data/government-types.json';
@@ -14,6 +15,7 @@ const columns = [
   { key: 'age', label: 'Age', kind: 'facet' },
   { key: 'mods', label: 'Modifiers', kind: 'mods' },
   { key: 'requires', label: 'Requires', kind: 'lines' },
+  { key: 'excludes', label: 'Conflicts with', kind: 'lines' },
 ] as const;
 const unconditional = entities.filter((e: any) => !e.data.requires?.length).length;
 ---
@@ -41,6 +43,7 @@ const unconditional = entities.filter((e: any) => !e.data.requires?.length).leng
     reforms, an advance that unlocks it. Those are listed here and filterable.
   </p>
   <div data-filter-scope>
+    <CountryLens placeholder="Show what a country can enact…" />
     <FilterBar facets={facets} placeholder="Filter reforms…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="reforms" />
   </div>

@@ -5,6 +5,7 @@
 import Base from '../layouts/Base.astro';
 import EntityTable from '../components/EntityTable.astro';
 import FilterBar from '../components/FilterBar.astro';
+import CountryLens from '../components/CountryLens.astro';
 import Rich from '../components/Rich.astro';
 import data from '../data/town-rights.json';
 import ranks from '../data/location-ranks.json';
@@ -35,6 +36,7 @@ const columns = [
   { key: 'country_mods', label: 'Effects on the country', kind: 'mods' },
   { key: 'boosts', label: 'Boosts', kind: 'refs' },
   { key: 'requires', label: 'Requires', kind: 'lines' },
+  { key: 'excludes', label: 'Conflicts with', kind: 'lines' },
   { key: 'unlocked_by', label: 'Unlocked by', kind: 'chips' },
 ] as const;
 ---
@@ -70,6 +72,7 @@ const columns = [
   </div>
 
   <div data-filter-scope>
+    <CountryLens placeholder="Show what a country can grant…" />
     <FilterBar facets={data.facets} placeholder="Filter urban rights…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="urban-rights"
       csvName="eu5ref-urban-rights" />

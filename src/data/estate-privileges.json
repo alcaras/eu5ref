@@ -4,6 +4,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -16,6 +17,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -56,6 +58,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -68,6 +71,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -120,6 +124,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -132,6 +137,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -166,6 +172,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -186,6 +193,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -227,6 +235,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "is Rome"
+    ],
     "gate": [
      "and",
      [
@@ -245,8 +256,7 @@
      "Catholicism"
     ],
     "requires": [
-     "religion is Catholicism",
-     "not — is Rome"
+     "religion is Catholicism"
     ],
     "unlocked_by": null
    },
@@ -257,9 +267,9 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
-     "Country",
      "Religion"
     ]
    },
@@ -286,6 +296,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "theocracy"
@@ -305,6 +316,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -345,6 +357,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "ara_sindicat_ara_remenca_flag"
@@ -364,6 +377,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Event or script"
@@ -404,6 +418,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "FLO"
@@ -425,6 +440,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -466,6 +482,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "religion is Catholicism"
+    ],
     "gate": [
      "var",
      "austere_monastic_life"
@@ -475,7 +494,6 @@
     ],
     "requires": [
      "event flag: Austere Monastic Life",
-     "not — religion is Catholicism",
      "Monastery > 1"
     ],
     "unlocked_by": null
@@ -487,9 +505,9 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
-     "Religion",
      "Event or script",
      "Other"
     ]
@@ -529,6 +547,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -557,6 +576,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -592,6 +612,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -637,6 +658,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Country",
@@ -680,6 +702,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -708,6 +731,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -749,6 +773,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Statutes of Iona"
+    ],
     "gate": [
      "and",
      [
@@ -773,7 +800,6 @@
     ],
     "requires": [
      "culture group is Scottish",
-     "not — has privilege Statutes of Iona",
      "event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
@@ -785,10 +811,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture",
-     "Privilege",
      "Event or script"
     ]
    },
@@ -827,6 +853,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Statutes of Iona"
+    ],
     "gate": [
      "and",
      [
@@ -851,7 +880,6 @@
     ],
     "requires": [
      "culture group is Scottish",
-     "not — has privilege Statutes of Iona",
      "event flag: Preserved Clan Autonomy"
     ],
     "unlocked_by": null
@@ -863,10 +891,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
      "Culture",
-     "Privilege",
      "Event or script"
     ]
    },
@@ -899,6 +927,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Monetary Fiefs"
+    ],
     "gate": [
      "gov",
      "monarchy"
@@ -908,8 +939,7 @@
     ],
     "requires": [
      "government is Monarchy",
-     "has researched Noble Knights",
-     "not — has privilege Monetary Fiefs"
+     "has researched Noble Knights"
     ],
     "unlocked_by": null
    },
@@ -920,11 +950,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government",
-     "Advance",
-     "Privilege"
+     "Advance"
     ]
    },
    "icon": "img/privilege/auxilium-et-consilium.png",
@@ -986,6 +1016,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -1013,6 +1044,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -1047,6 +1079,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "TUR"
@@ -1066,6 +1099,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -1106,6 +1140,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -1134,6 +1169,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country"
@@ -1168,6 +1204,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -1180,6 +1217,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -1232,6 +1270,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "SER"
@@ -1251,6 +1290,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -1291,6 +1331,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "bavarian_inheritance_split"
@@ -1310,6 +1351,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -1344,6 +1386,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "bra_kreditwerk"
@@ -1363,6 +1406,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Event or script"
@@ -1397,6 +1441,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "bra_kreditwerk_reformed"
@@ -1416,6 +1461,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Event or script"
@@ -1444,6 +1490,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -1456,6 +1503,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -1496,6 +1544,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -1517,6 +1566,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -1563,6 +1613,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -1575,6 +1626,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -1615,6 +1667,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "religious unity LESS THAN"
@@ -1632,6 +1685,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Religion"
@@ -1666,6 +1720,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -1695,6 +1750,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -1742,6 +1798,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1770,6 +1827,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Government",
@@ -1817,6 +1875,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "CAS"
@@ -1836,6 +1895,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country"
@@ -1876,6 +1936,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1904,6 +1965,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -1945,6 +2007,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:cas_mita_system"
@@ -1964,6 +2027,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -2004,6 +2068,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2041,6 +2106,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -2082,6 +2148,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2110,6 +2177,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Religion",
@@ -2151,6 +2219,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "FRA"
@@ -2170,6 +2239,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -2204,6 +2274,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2232,6 +2303,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -2267,6 +2339,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -2279,6 +2352,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -2313,6 +2387,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -2325,6 +2400,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -2365,6 +2441,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "not",
      [
@@ -2383,6 +2460,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -2417,6 +2495,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "total effective building levels:university GREATER THAN"
@@ -2434,6 +2513,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Other"
@@ -2486,6 +2566,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "adv",
      "written_alphabet"
@@ -2505,6 +2586,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Advance"
@@ -2551,6 +2633,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "religion group is Root.Religion.Group"
+    ],
     "gate": [
      "and",
      [
@@ -2584,7 +2669,6 @@
     "requires": [
      "religion is Catholicism",
      "has reform Military Order",
-     "not — religion group is Root.Religion.Group",
      "culture group is Iberian",
      "has researched Castle"
     ],
@@ -2597,6 +2681,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -2615,6 +2700,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "is Rome"
+    ],
     "gate": [
      "and",
      [
@@ -2633,8 +2721,7 @@
      "Catholicism"
     ],
     "requires": [
-     "religion is Catholicism",
-     "not — is Rome"
+     "religion is Catholicism"
     ],
     "unlocked_by": null
    },
@@ -2645,9 +2732,9 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
-     "Country",
      "Religion"
     ]
    },
@@ -2686,6 +2773,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "rgrp",
      "christian"
@@ -2705,6 +2793,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -2745,6 +2834,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "religious unity LESS THAN"
@@ -2762,6 +2852,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -2796,6 +2887,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -2808,6 +2900,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -2854,6 +2947,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -2866,6 +2960,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -2918,6 +3013,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -2930,6 +3026,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -2970,6 +3067,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -2998,6 +3096,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture",
@@ -3039,6 +3138,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3051,6 +3151,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -3091,6 +3192,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "religion is Catholicism"
+    ],
     "gate": [
      "var",
      "commons_petition"
@@ -3099,8 +3203,7 @@
      "Commons Petition"
     ],
     "requires": [
-     "event flag: Commons Petition",
-     "not — religion is Catholicism"
+     "event flag: Commons Petition"
     ],
     "unlocked_by": null
    },
@@ -3111,9 +3214,9 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
-     "Religion",
      "Event or script"
     ]
    },
@@ -3170,6 +3273,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3182,6 +3286,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -3228,6 +3333,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "priv",
      "consolidated_corruption_of_the_burghers"
@@ -3247,6 +3353,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -3262,6 +3369,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "priv",
      "consolidated_corruption_of_the_clergy"
@@ -3281,6 +3389,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Privilege"
@@ -3296,6 +3405,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "priv",
      "consolidated_corruption_of_the_nobles"
@@ -3315,6 +3425,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -3330,6 +3441,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "priv",
      "consolidated_corruption_of_the_peasants"
@@ -3349,6 +3461,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Privilege"
@@ -3364,6 +3477,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "theocracy"
@@ -3383,6 +3497,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -3417,6 +3532,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3429,6 +3545,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -3475,6 +3592,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "reform Control of the Mahdali Coinage"
+    ],
     "gate": [
      "or",
      [
@@ -3494,8 +3614,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "is or was Kilwa",
-     "not — has reform Control of the Mahdali Coinage"
+     "is or was Kilwa"
     ],
     "unlocked_by": null
    },
@@ -3506,10 +3625,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
-     "Country",
-     "Reform"
+     "Country"
     ]
    },
    "icon": "img/privilege/control-over-the-coinage.png",
@@ -3559,6 +3678,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3571,6 +3691,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3617,6 +3738,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3629,6 +3751,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3663,6 +3786,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3675,6 +3799,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3709,6 +3834,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3721,6 +3847,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3755,6 +3882,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3767,6 +3895,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3807,6 +3936,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3819,6 +3949,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3853,6 +3984,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3865,6 +3997,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3899,6 +4032,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "religious unity LESS THAN"
@@ -3916,6 +4050,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Cossacks",
     "requires": [
      "Religion"
@@ -3950,6 +4085,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -3962,6 +4098,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -3996,6 +4133,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4008,6 +4146,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -4042,6 +4181,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4054,6 +4194,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -4088,6 +4229,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4100,6 +4242,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "No requirement"
@@ -4134,6 +4277,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -4162,6 +4306,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Culture",
@@ -4215,6 +4360,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -4234,6 +4380,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Government"
@@ -4274,6 +4421,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -4300,6 +4448,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -4328,6 +4477,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -4361,6 +4511,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Dhimmi",
     "requires": [
      "Religion"
@@ -4401,6 +4552,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4413,6 +4565,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4428,6 +4581,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4440,6 +4594,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4480,6 +4635,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4492,6 +4648,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4526,6 +4683,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4538,6 +4696,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4578,6 +4737,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4590,6 +4750,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4624,6 +4785,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4636,6 +4798,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4676,6 +4839,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4688,6 +4852,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4722,6 +4887,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4734,6 +4900,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4774,6 +4941,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4786,6 +4954,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4832,6 +5001,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4844,6 +5014,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4884,6 +5055,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -4896,6 +5068,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Dhimmi",
     "requires": [
      "No requirement"
@@ -4936,6 +5109,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "district_paving_taxes_variable"
@@ -4955,6 +5129,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -5007,6 +5182,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5035,6 +5211,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Religion",
@@ -5070,6 +5247,10 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "government is Tribe",
+     "government is Steppe Horde"
+    ],
     "gate": [
      "and",
      [
@@ -5088,10 +5269,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "not — government is Tribe",
-     "not — government is Steppe Horde"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -5101,9 +5279,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
-     "Government"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/elaborate-court-ceremonies.png",
@@ -5153,6 +5332,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -5165,6 +5345,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -5199,6 +5380,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -5211,6 +5393,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -5251,6 +5434,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "has embraced institution"
@@ -5268,6 +5452,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Institution"
@@ -5308,6 +5493,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "FLO"
@@ -5336,6 +5522,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country"
@@ -5388,6 +5575,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -5400,6 +5588,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -5446,6 +5635,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "ARA"
@@ -5466,6 +5656,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -5507,6 +5698,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5534,6 +5726,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -5581,6 +5774,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5609,6 +5803,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -5656,6 +5851,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5684,6 +5880,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -5731,6 +5928,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:fra_papacy_pragmatic_sanctions"
@@ -5751,6 +5949,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Privilege",
@@ -5798,6 +5997,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "rgrp",
      "muslim"
@@ -5817,6 +6017,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -5857,6 +6058,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5885,6 +6087,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Country",
@@ -5926,6 +6129,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5953,6 +6157,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Religion",
@@ -5988,6 +6193,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "ARA"
@@ -6007,6 +6213,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -6047,6 +6254,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6075,6 +6283,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Religion",
@@ -6128,6 +6337,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "HUN"
@@ -6147,6 +6357,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -6187,6 +6398,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6232,6 +6444,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -6286,6 +6499,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "SER"
@@ -6305,6 +6519,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country"
@@ -6345,6 +6560,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "FRA"
@@ -6364,6 +6580,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -6404,6 +6621,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -6416,6 +6634,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -6456,6 +6675,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "hab_tractatus_incorporalibus_granted"
@@ -6476,6 +6696,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Event or script"
@@ -6516,6 +6737,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Only Nobility as Leaders"
+    ],
     "gate": [
      "and",
      [
@@ -6536,8 +6760,7 @@
      "the privilege has been unlocked (Ḥabshī Advisors)",
      "capital: in South Asia",
      "has slavery",
-     "has privilege Ḏimmī Bureaucrats",
-     "not — has privilege Only Nobility as Leaders"
+     "has privilege Ḏimmī Bureaucrats"
     ],
     "unlocked_by": null
    },
@@ -6548,6 +6771,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Dhimmi",
     "requires": [
      "Geography",
@@ -6596,6 +6820,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "haudenosaunee_group"
@@ -6615,6 +6840,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Culture"
@@ -6661,6 +6887,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6689,6 +6916,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Law",
@@ -6724,6 +6952,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6752,6 +6981,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -6793,6 +7023,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "BOH"
@@ -6812,6 +7043,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -6852,6 +7084,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -6871,6 +7104,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -6911,6 +7145,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -6930,6 +7165,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -6970,6 +7206,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "runs policy Closed Borders"
+    ],
     "gate": [
      "and",
      [
@@ -7018,8 +7257,7 @@
      "capital: in region Carpathia",
      "capital: in area Baltic",
      "capital: in area Bohemia",
-     "capital: in area Moravia",
-     "+1 more"
+     "capital: in area Moravia"
     ],
     "unlocked_by": null
    },
@@ -7030,11 +7268,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Religion",
-     "Geography",
-     "Law"
+     "Geography"
     ]
    },
    "icon": "img/privilege/invite-german-settlers.png",
@@ -7072,6 +7310,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7100,6 +7339,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -7153,6 +7393,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:ira_iranian_art_patronage"
@@ -7172,6 +7413,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -7212,6 +7454,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "bohemian_group"
@@ -7231,6 +7474,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Culture"
@@ -7277,6 +7521,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "religion is Jainism"
+    ],
     "gate": [
      "and",
      [
@@ -7321,7 +7568,6 @@
      "Jainism"
     ],
     "requires": [
-     "not — religion is Jainism",
      "capital: in South Asia",
      "religion is Jainism",
      "Value > 0"
@@ -7335,6 +7581,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Religion",
@@ -7365,6 +7612,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "religion is Jainism"
+    ],
     "gate": [
      "and",
      [
@@ -7409,7 +7659,6 @@
      "Jainism"
     ],
     "requires": [
-     "not — religion is Jainism",
      "capital: in South Asia",
      "religion is Jainism",
      "Value > 0"
@@ -7423,6 +7672,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Religion",
@@ -7440,6 +7690,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -7452,6 +7703,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -7492,6 +7744,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7519,6 +7772,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script",
@@ -7566,6 +7820,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "ARA"
@@ -7586,6 +7841,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -7627,6 +7883,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:kannada_literature_aid"
@@ -7646,6 +7903,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -7692,6 +7950,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -7711,6 +7970,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -7745,6 +8005,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -7764,6 +8025,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -7804,6 +8066,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -7827,6 +8090,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -7868,6 +8132,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7903,6 +8168,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -7956,6 +8222,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -7975,6 +8242,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -8003,6 +8271,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -8022,6 +8291,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture"
@@ -8062,6 +8332,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8100,6 +8371,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Culture",
@@ -8116,6 +8388,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -8128,6 +8401,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -8174,6 +8448,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "SWE"
@@ -8193,6 +8468,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country"
@@ -8239,6 +8515,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "culture is Greek"
+    ],
     "gate": [
      "and",
      [
@@ -8258,7 +8537,6 @@
     ],
     "requires": [
      "the privilege has been unlocked (Compromise with the Greek people)",
-     "not — culture is Greek",
      "is a Frankokratia state",
      "religion is Catholicism"
     ],
@@ -8271,11 +8549,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country",
      "Religion",
-     "Culture",
      "Privilege"
     ]
    },
@@ -8332,6 +8610,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "culture is Greek"
+    ],
     "gate": [
      "and",
      [
@@ -8349,7 +8630,6 @@
     "gate_labels": [],
     "requires": [
      "is a Frankokratia state",
-     "not — culture is Greek",
      "Culture Percentage In Country(Root.Culture) < 0.33"
     ],
     "unlocked_by": null
@@ -8361,10 +8641,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
-     "Culture",
      "Other"
     ]
    },
@@ -8421,6 +8701,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8459,6 +8740,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -8514,6 +8796,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8551,6 +8834,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -8598,6 +8882,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -8625,6 +8910,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country"
@@ -8677,6 +8963,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -8704,6 +8991,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -8744,6 +9032,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:lit_equal_status_of_orthodox_nobility"
@@ -8763,6 +9052,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -8803,6 +9093,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:lit_integrated_ruthenian_laws"
@@ -8822,6 +9113,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -8862,6 +9154,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "theocracy"
@@ -8882,6 +9175,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Government",
@@ -8923,6 +9217,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8951,6 +9246,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
      "Geography",
@@ -8980,6 +9276,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9064,6 +9361,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Geography",
@@ -9111,6 +9409,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -9130,6 +9429,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Government"
@@ -9170,6 +9470,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:mam_muhtasibs"
@@ -9189,6 +9490,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -9229,6 +9531,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9257,6 +9560,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -9298,6 +9602,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -9318,6 +9623,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Government",
@@ -9365,6 +9671,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9393,6 +9700,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -9434,6 +9742,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "monarchy"
@@ -9453,6 +9762,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -9499,6 +9809,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -9511,6 +9822,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -9557,6 +9869,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "var",
      "masaniellos_fight_flag"
@@ -9576,6 +9889,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Event or script"
@@ -9622,6 +9936,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:mch_tribal_favor"
@@ -9641,6 +9956,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "Privilege"
@@ -9656,6 +9972,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "MLO"
@@ -9677,6 +9994,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country",
@@ -9724,6 +10042,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "andean_group"
@@ -9743,6 +10062,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Culture"
@@ -9789,6 +10109,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Auxilium et Consilium"
+    ],
     "gate": [
      "not",
      [
@@ -9797,9 +10120,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "not — has privilege Auxilium et Consilium"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -9809,9 +10130,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
-     "Privilege"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/monetary-fiefs.png",
@@ -9855,6 +10177,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -9889,6 +10212,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -9942,6 +10266,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "var",
      "unlock_nihil_novi"
@@ -9961,6 +10286,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -10013,6 +10339,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "rgrp",
      "christian"
@@ -10032,6 +10359,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Religion"
@@ -10066,6 +10394,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10078,6 +10407,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10130,6 +10460,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -10158,6 +10489,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -10204,6 +10536,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "adv",
      "castle_advance"
@@ -10223,6 +10556,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Advance"
@@ -10281,6 +10615,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10293,6 +10628,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10393,6 +10729,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -10421,6 +10758,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -10455,6 +10793,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -10474,6 +10813,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Government"
@@ -10520,6 +10860,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10532,6 +10873,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10572,6 +10914,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10584,6 +10927,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10636,6 +10980,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "has ports"
@@ -10653,6 +10998,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Other"
@@ -10693,6 +11039,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10705,6 +11052,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10769,6 +11117,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -10781,6 +11130,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -10821,6 +11171,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "religious unity LESS THAN"
@@ -10838,6 +11189,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Religion"
@@ -10872,6 +11224,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "NOV"
@@ -10891,6 +11244,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country"
@@ -10906,6 +11260,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -10943,6 +11298,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Geography"
@@ -10983,6 +11339,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "MAL"
@@ -11003,6 +11360,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -11062,6 +11420,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "MAL"
@@ -11082,6 +11441,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -11123,6 +11483,9 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Free Mobility for the Common People"
+    ],
     "gate": [
      "and",
      [
@@ -11140,8 +11503,7 @@
     ],
     "requires": [
      "is or was England",
-     "event flag: Eng Ordinance Of Laborers Flag",
-     "not — has privilege Free Mobility for the Common People"
+     "event flag: Eng Ordinance Of Laborers Flag"
     ],
     "unlocked_by": null
    },
@@ -11152,10 +11514,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
-     "Privilege",
      "Event or script"
     ]
    },
@@ -11194,6 +11556,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -11228,6 +11591,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -11281,6 +11645,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11293,6 +11658,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -11339,6 +11705,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11351,6 +11718,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -11397,6 +11765,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Banned Weapons for Commoners"
+    ],
     "gate": [
      "not",
      [
@@ -11405,9 +11776,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "not — has privilege Banned Weapons for Commoners"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -11417,9 +11786,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
-     "Privilege"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/peasants-allowed-weapons-privilege.png",
@@ -11475,6 +11845,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11487,6 +11858,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -11539,6 +11911,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11551,6 +11924,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -11591,6 +11965,10 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Statutes of Piotrkow",
+     "privilege Ordinance of Laborers"
+    ],
     "gate": [
      "and",
      [
@@ -11620,9 +11998,7 @@
     ],
     "gate_labels": [],
     "requires": [
-     "has privilege Statutes of Piotrkow",
-     "not — has privilege Statutes of Piotrkow",
-     "not — has privilege Ordinance of Laborers"
+     "has privilege Statutes of Piotrkow"
     ],
     "unlocked_by": null
    },
@@ -11633,6 +12009,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Privilege"
@@ -11697,6 +12074,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11709,6 +12087,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -11755,6 +12134,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "ENG"
@@ -11774,6 +12154,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Country"
@@ -11820,6 +12201,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "religious unity LESS THAN"
@@ -11837,6 +12219,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Religion"
@@ -11883,6 +12266,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "?",
      "modifier:has a parliamentary system"
@@ -11903,6 +12287,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Commoners",
     "requires": [
      "Government",
@@ -11950,6 +12335,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -11962,6 +12348,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "No requirement"
@@ -12008,6 +12395,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Residence in Versailles"
+    ],
     "gate": [
      "and",
      [
@@ -12032,7 +12422,6 @@
     ],
     "requires": [
      "is or was France",
-     "not — has privilege Residence in Versailles",
      "event flag: Enable Permanent Residence In Versailles"
     ],
     "unlocked_by": null
@@ -12044,10 +12433,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
-     "Privilege",
      "Event or script"
     ]
    },
@@ -12086,6 +12475,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -12134,6 +12524,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Culture",
@@ -12182,6 +12573,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:plc_cossack_treaty_of_hadiach"
@@ -12201,6 +12593,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Cossacks",
     "requires": [
      "Privilege"
@@ -12259,6 +12652,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:plc_empower_orthodox_nobility"
@@ -12278,6 +12672,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -12293,6 +12688,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -12321,6 +12717,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country"
@@ -12361,6 +12758,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "PAP"
@@ -12380,6 +12778,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -12414,6 +12813,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -12426,6 +12826,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "No requirement"
@@ -12466,6 +12867,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12491,6 +12893,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Geography",
@@ -12532,6 +12935,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "var",
      "unlock_privilege_of_koszyce"
@@ -12551,6 +12955,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -12591,6 +12996,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -12603,6 +13009,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -12637,6 +13044,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:promotion_of_muslim_scholars"
@@ -12656,6 +13064,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "Privilege"
@@ -12708,6 +13117,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "language: Rajasthani"
+    ],
     "gate": [
      "and",
      [
@@ -12745,7 +13157,6 @@
      "Rajasthani"
     ],
     "requires": [
-     "not — language: Rajasthani",
      "religion group is Dharma",
      "religion group is Islam",
      "capital: in South Asia",
@@ -12760,6 +13171,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Religion",
@@ -12778,6 +13190,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -12797,6 +13210,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -12843,6 +13257,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "reform Military Order"
+    ],
     "gate": [
      "not",
      [
@@ -12851,9 +13268,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "not — has reform Military Order"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -12863,9 +13278,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
-     "Reform"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/reduced-from-military-obligations.png",
@@ -12909,6 +13325,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "granted_privileges_to_secure_throne"
@@ -12928,6 +13345,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -12968,6 +13386,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "granted_privileges_to_secure_throne"
@@ -12987,6 +13406,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -13027,6 +13447,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -13039,6 +13460,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
      "No requirement"
@@ -13073,6 +13495,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Permanent Residence in Versailles"
+    ],
     "gate": [
      "and",
      [
@@ -13097,7 +13522,6 @@
     ],
     "requires": [
      "is or was France",
-     "not — has privilege Permanent Residence in Versailles",
      "event flag: Enable Residence In Versailles"
     ],
     "unlocked_by": null
@@ -13109,10 +13533,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
-     "Privilege",
      "Event or script"
     ]
    },
@@ -13151,6 +13575,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -13178,6 +13603,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture",
@@ -13219,6 +13645,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:royal_factories_privilege"
@@ -13238,6 +13665,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -13278,6 +13706,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "var",
      "mos_salt_tax_exemption_flag"
@@ -13298,6 +13727,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Event or script"
@@ -13338,6 +13768,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -13386,6 +13817,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture",
@@ -13434,6 +13866,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:sco_statutes_of_iona"
@@ -13453,6 +13886,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -13493,6 +13927,10 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Statutes of Iona",
+     "event flag: Preserved Clan Autonomy"
+    ],
     "gate": [
      "and",
      [
@@ -13518,9 +13956,7 @@
      "Scottish"
     ],
     "requires": [
-     "culture group is Scottish",
-     "not — has privilege Statutes of Iona",
-     "not — event flag: Preserved Clan Autonomy"
+     "culture group is Scottish"
     ],
     "unlocked_by": null
    },
@@ -13531,11 +13967,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
-     "Culture",
-     "Privilege",
-     "Event or script"
+     "Culture"
     ]
    },
    "icon": "img/privilege/scottish-clans.png",
@@ -13579,6 +14014,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "tribe"
@@ -13598,6 +14034,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -13632,6 +14069,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -13657,6 +14095,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Geography",
@@ -13704,6 +14143,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "unlock_shooting_societies_variable"
@@ -13723,6 +14163,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Event or script"
@@ -13757,6 +14198,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "FLO"
@@ -13777,6 +14219,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country",
@@ -13818,6 +14261,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "?",
      "num of ports GREATER THAN"
@@ -13835,6 +14279,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Geography"
@@ -13869,6 +14314,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -13897,6 +14343,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Government",
@@ -13938,6 +14385,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -13958,6 +14406,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Government",
@@ -13987,6 +14436,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:statutes_of_piotrkow"
@@ -14006,6 +14456,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -14046,6 +14497,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "religion is Catholicism"
+    ],
     "gate": [
      "not",
      [
@@ -14054,9 +14508,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "not — religion is Catholicism"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -14066,9 +14518,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Clergy",
     "requires": [
-     "Religion"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/tax-exemption.png",
@@ -14106,6 +14559,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -14125,6 +14579,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Culture"
@@ -14165,6 +14620,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "republic"
@@ -14184,6 +14640,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Government"
@@ -14230,6 +14687,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14242,6 +14700,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -14288,6 +14747,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14300,6 +14760,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -14346,6 +14807,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "tribe"
@@ -14365,6 +14827,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government"
@@ -14411,6 +14874,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "gov",
      "tribe"
@@ -14431,6 +14895,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Government",
@@ -14466,6 +14931,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14478,6 +14944,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14512,6 +14979,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "scottish_group"
@@ -14531,6 +14999,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
      "Culture"
@@ -14565,6 +15034,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "scottish_group"
@@ -14584,6 +15054,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
      "Culture"
@@ -14618,6 +15089,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14630,6 +15102,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14670,6 +15143,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14682,6 +15156,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14716,6 +15191,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "cgrp",
      "scottish_group"
@@ -14735,6 +15211,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
      "Culture"
@@ -14769,6 +15246,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14781,6 +15259,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14809,6 +15288,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14821,6 +15301,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14855,6 +15336,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14867,6 +15349,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -14901,6 +15384,10 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [
+     "privilege Statutes of Iona",
+     "event flag: Preserved Clan Autonomy"
+    ],
     "gate": [
      "and",
      [
@@ -14926,9 +15413,7 @@
      "Scottish"
     ],
     "requires": [
-     "culture group is Scottish",
-     "not — has privilege Statutes of Iona",
-     "not — event flag: Preserved Clan Autonomy"
+     "culture group is Scottish"
     ],
     "unlocked_by": null
    },
@@ -14939,11 +15424,10 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Tribes",
     "requires": [
-     "Culture",
-     "Privilege",
-     "Event or script"
+     "Culture"
     ]
    },
    "icon": "img/privilege/tribes-scotland-gaelic-heritage.png",
@@ -14981,6 +15465,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -14993,6 +15478,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -15027,6 +15513,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -15039,6 +15526,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Tribes",
     "requires": [
      "No requirement"
@@ -15073,6 +15561,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "reform",
      "anatolian_beylik"
@@ -15096,6 +15585,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Geography",
@@ -15137,6 +15627,9 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [
+     "privilege Common Militias"
+    ],
     "gate": [
      "unl",
      "privilege:tur_banned_weaponry_for_peasants"
@@ -15145,8 +15638,7 @@
      "Privilege:Tur Banned Weaponry For Peasants"
     ],
     "requires": [
-     "the privilege has been unlocked (Banned Weapons for Commoners)",
-     "not — has privilege Common Militias"
+     "the privilege has been unlocked (Banned Weapons for Commoners)"
     ],
     "unlocked_by": null
    },
@@ -15157,6 +15649,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Privilege"
@@ -15203,6 +15696,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "NOV"
@@ -15222,6 +15716,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -15237,6 +15732,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:ukr_kholop_protection"
@@ -15256,6 +15752,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Privilege"
@@ -15302,6 +15799,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "var",
      "union_privilege_flag"
@@ -15321,6 +15819,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Event or script"
@@ -15361,6 +15860,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15389,6 +15889,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -15430,6 +15931,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "requires": [],
@@ -15442,6 +15944,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "No requirement"
@@ -15482,6 +15985,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15510,6 +16014,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -15545,6 +16050,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:vij_allowance_of_religious_practices"
@@ -15564,6 +16070,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -15604,6 +16111,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15632,6 +16140,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion",
@@ -15667,6 +16176,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "unl",
      "privilege:vij_tamil_trading_rights"
@@ -15686,6 +16196,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
      "Privilege"
@@ -15714,6 +16225,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "FRA"
@@ -15733,6 +16245,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Burghers",
     "requires": [
      "Country"
@@ -15779,6 +16292,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "tag",
      "MLO"
@@ -15798,6 +16312,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -15838,6 +16353,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "SER"
@@ -15857,6 +16373,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -15891,6 +16408,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "rgrp",
      "muslim"
@@ -15910,6 +16428,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -15950,6 +16469,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "rel",
      "nahuatl"
@@ -15969,6 +16489,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
      "Religion"
@@ -16009,6 +16530,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "adv",
      "mug_zamindar_system"
@@ -16028,6 +16550,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "estate": "Nobility",
     "requires": [
      "Advance"
@@ -16043,6 +16566,7 @@
   {
    "data": {
     "can_revoke": true,
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -16070,6 +16594,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -16116,6 +16641,7 @@
   {
    "data": {
     "can_revoke": false,
+    "excludes": [],
     "gate": [
      "tag",
      "SER"
@@ -16135,6 +16661,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "estate": "Nobility",
     "requires": [
      "Country"
@@ -16168,6 +16695,22 @@
   }
  ],
  "facets": [
+  {
+   "key": "availability",
+   "label": "Availability",
+   "options": [
+    {
+     "count": 127,
+     "label": "Any country",
+     "value": "Any country"
+    },
+    {
+     "count": 134,
+     "label": "Specific countries",
+     "value": "Specific countries"
+    }
+   ]
+  },
   {
    "key": "estate",
    "label": "Estate",
@@ -16224,12 +16767,12 @@
      "value": "Age"
     },
     {
-     "count": 63,
+     "count": 61,
      "label": "Country",
      "value": "Country"
     },
     {
-     "count": 23,
+     "count": 21,
      "label": "Culture",
      "value": "Culture"
     },
@@ -16239,7 +16782,7 @@
      "value": "Estate"
     },
     {
-     "count": 42,
+     "count": 40,
      "label": "Event or script",
      "value": "Event or script"
     },
@@ -16249,7 +16792,7 @@
      "value": "Geography"
     },
     {
-     "count": 23,
+     "count": 22,
      "label": "Government",
      "value": "Government"
     },
@@ -16259,12 +16802,12 @@
      "value": "Institution"
     },
     {
-     "count": 2,
+     "count": 1,
      "label": "Law",
      "value": "Law"
     },
     {
-     "count": 70,
+     "count": 75,
      "label": "No requirement",
      "value": "No requirement"
     },
@@ -16279,17 +16822,17 @@
      "value": "Other"
     },
     {
-     "count": 49,
+     "count": 39,
      "label": "Privilege",
      "value": "Privilege"
     },
     {
-     "count": 7,
+     "count": 5,
      "label": "Reform",
      "value": "Reform"
     },
     {
-     "count": 36,
+     "count": 33,
      "label": "Religion",
      "value": "Religion"
     }

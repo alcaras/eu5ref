@@ -3,6 +3,7 @@
  "entities": [
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "modifier:can have monasteries"
@@ -22,6 +23,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Theocracy",
     "requires": [
      "Geography",
@@ -56,6 +58,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Restored Rule of the Latins"
+    ],
     "gate": [
      "and",
      [
@@ -76,7 +81,6 @@
     "major": false,
     "requires": [
      "is or was Achaea",
-     "not — has reform Restored Rule of the Latins",
      "has embraced Legalism"
     ]
    },
@@ -88,11 +92,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
-     "Institution",
-     "Reform"
+     "Institution"
     ]
    },
    "icon": "img/reform/ach-heirs-of-the-latin-empire.png",
@@ -147,6 +151,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -160,6 +165,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -193,6 +199,12 @@
   },
   {
    "data": {
+    "excludes": [
+     "government is Steppe Horde",
+     "government is Tribe",
+     "is Rome",
+     "reform Military Regime"
+    ],
     "gate": [
      "and",
      [
@@ -224,11 +236,7 @@
     "gate_labels": [],
     "major": true,
     "requires": [
-     "ports > 0",
-     "not — government is Steppe Horde",
-     "not — government is Tribe",
-     "not — is Rome",
-     "not — has reform Military Regime"
+     "ports > 0"
     ]
    },
    "desc": [
@@ -239,12 +247,10 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Country",
-     "Government",
-     "Geography",
-     "Reform"
+     "Geography"
     ]
    },
    "icon": "img/reform/admiralty-regime-reform.png",
@@ -275,6 +281,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -288,6 +295,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -321,6 +329,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -334,6 +343,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -367,6 +377,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "adv",
      "genoese_flexibility"
@@ -387,6 +398,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Advance"
@@ -420,6 +432,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "SWE"
@@ -441,6 +454,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -481,6 +495,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Reformed Nahuatl Society Variable"
+    ],
     "gate": [
      "and",
      [
@@ -501,7 +518,6 @@
     "major": true,
     "requires": [
      "culture is Nahua",
-     "not — event flag: Reformed Nahuatl Society Variable",
      "has reform Āltepētl"
     ]
    },
@@ -513,11 +529,11 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
-     "Reform",
-     "Event or script"
+     "Reform"
     ]
    },
    "icon": "img/reform/altepetl.png",
@@ -560,6 +576,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -590,6 +607,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -618,6 +636,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -654,6 +673,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -702,6 +722,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "law Taille"
+    ],
     "gate": [
      "and",
      [
@@ -722,7 +745,6 @@
     "major": false,
     "requires": [
      "is or was France",
-     "not — has law Taille",
      "Centralization Vs Decentralization ≥ -50"
     ]
    },
@@ -734,10 +756,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
-     "Law",
      "Other"
     ]
    },
@@ -787,6 +809,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "andean_group"
@@ -809,6 +832,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Religion",
@@ -850,6 +874,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -863,6 +888,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -896,6 +922,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -909,6 +936,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -936,6 +964,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Ath Catalan Company Expelled"
+    ],
     "gate": [
      "and",
      [
@@ -974,7 +1005,6 @@
      "event flag: De Brienne Rule Of Athens",
      "is or was Argos",
      "is or was Athens",
-     "not — event flag: Ath Catalan Company Expelled",
      "stability < 60"
     ]
    },
@@ -986,6 +1016,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -1045,6 +1076,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1090,6 +1122,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -1131,6 +1164,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -1144,6 +1178,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -1177,6 +1212,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -1190,6 +1226,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -1223,6 +1260,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:autonomous_swiss_cantons_reform"
@@ -1243,6 +1281,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -1282,6 +1321,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1311,6 +1351,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -1339,6 +1380,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -1352,6 +1394,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -1385,6 +1428,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:bank_of_england_reform"
@@ -1406,6 +1450,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -1446,6 +1491,10 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Japanese Clan",
+     "is a Trade Company"
+    ],
     "gate": [
      "and",
      [
@@ -1471,8 +1520,6 @@
     "major": true,
     "requires": [
      "country type is Building",
-     "not — has reform Japanese Clan",
-     "not — is a Trade Company",
      "mechanic: Government Reform"
     ]
    },
@@ -1484,10 +1531,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
-     "Reform",
      "Event or script"
     ]
    },
@@ -1525,6 +1572,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Gave Autonomy To The Bulala And Sao Variable"
+    ],
     "gate": [
      "tag",
      "KBO"
@@ -1535,7 +1585,6 @@
     "major": false,
     "requires": [
      "is or was Kanem",
-     "not — event flag: Gave Autonomy To The Bulala And Sao Variable",
      "religion group is Islam",
      "Government Power < 85"
     ]
@@ -1548,11 +1597,11 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Religion",
-     "Event or script",
      "Other"
     ]
    },
@@ -1590,6 +1639,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "num subjects GREATER THAN EQUAL"
@@ -1608,6 +1658,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Other"
@@ -1635,6 +1686,10 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Abolished Timariot System",
+     "reform Expanded Timar System"
+    ],
     "gate": [
      "and",
      [
@@ -1667,9 +1722,7 @@
     "major": false,
     "requires": [
      "is or was Ottomans",
-     "has researched Timariots",
-     "not — event flag: Abolished Timariot System",
-     "not — has reform Expanded Timar System"
+     "has researched Timariots"
     ]
    },
    "desc": [
@@ -1680,12 +1733,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
-     "Advance",
-     "Reform",
-     "Event or script"
+     "Advance"
     ]
    },
    "icon": "img/reform/basic-timariot-system.png",
@@ -1710,6 +1762,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1748,6 +1801,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -1788,6 +1842,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:bng_industralized_provinces"
@@ -1808,6 +1863,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -1841,6 +1897,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -1870,6 +1927,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -1910,6 +1968,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Tsardom"
+    ],
     "gate": [
      "tag",
      "BUL"
@@ -1921,8 +1982,7 @@
     "requires": [
      "is or was Bulgaria",
      "country rank: Empire",
-     "religion is Orthodoxy",
-     "not — has reform Tsardom"
+     "religion is Orthodoxy"
     ]
    },
    "desc": [
@@ -1933,11 +1993,11 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
      "Religion",
-     "Reform",
      "Other"
     ]
    },
@@ -1969,6 +2029,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2013,6 +2074,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -2053,6 +2115,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2088,6 +2151,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -2104,6 +2168,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "num of non rural GREATER THAN"
@@ -2122,6 +2187,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Other"
@@ -2155,6 +2221,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2199,6 +2266,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -2246,6 +2314,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -2283,6 +2352,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -2330,6 +2400,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -2343,6 +2414,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -2376,6 +2448,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:chi_peasant_empire_reform"
@@ -2396,6 +2469,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -2441,6 +2515,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2479,6 +2554,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -2513,6 +2589,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2551,6 +2628,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -2585,6 +2663,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "is colonial overlord"
@@ -2603,6 +2682,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Other"
@@ -2636,6 +2716,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -2649,6 +2730,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -2676,6 +2758,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2705,6 +2788,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -2746,6 +2830,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "GEN"
@@ -2766,6 +2851,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country"
@@ -2799,6 +2885,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2835,6 +2922,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -2871,6 +2959,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -2884,6 +2973,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -2923,6 +3013,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:constitutional_state"
@@ -2946,6 +3037,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -2987,6 +3079,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "privilege Control over the Coinage"
+    ],
     "gate": [
      "tag",
      "ZAN"
@@ -2996,8 +3091,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Kilwa",
-     "not — has privilege Control over the Coinage"
+     "is or was Kilwa"
     ]
    },
    "desc": [
@@ -3008,10 +3102,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
-     "Country",
-     "Privilege"
+     "Country"
     ]
    },
    "icon": "img/reform/control-of-the-mahdali-coinage-reform.png",
@@ -3036,6 +3130,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -3064,6 +3159,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -3098,6 +3194,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -3127,6 +3224,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -3173,6 +3271,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -3202,6 +3301,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -3248,6 +3348,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -3288,6 +3389,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -3330,6 +3432,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -3379,6 +3482,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -3415,6 +3519,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -3455,6 +3560,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -3497,6 +3603,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Galley Lords"
+    ],
     "gate": [
      "and",
      [
@@ -3535,8 +3644,7 @@
      "is or was Knights Hospitaller",
      "has reform Crusade in the Sea",
      "overlord: has reform Crusade in the Sea",
-     "capital: is a port",
-     "+1 more"
+     "capital: is a port"
     ]
    },
    "desc": [
@@ -3547,6 +3655,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -3594,6 +3703,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -3607,6 +3717,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -3634,6 +3745,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Japanese Clan",
+     "reform Japanese Imperial Family",
+     "reform Shogunate"
+    ],
     "gate": [
      "cgrp",
      "japanese_group"
@@ -3645,9 +3761,6 @@
     "requires": [
      "culture group is Japanese",
      "country type is Location",
-     "not — has reform Japanese Clan",
-     "not — has reform Japanese Imperial Family",
-     "not — has reform Shogunate",
      "mechanic: Government Reform"
     ]
    },
@@ -3659,11 +3772,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
      "Culture",
-     "Reform",
      "Event or script"
     ]
    },
@@ -3701,6 +3814,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:dan_college_of_missions"
@@ -3721,6 +3835,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -3760,6 +3875,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:dan_the_kings_law"
@@ -3780,6 +3896,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -3807,6 +3924,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "GEN"
@@ -3827,6 +3945,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country"
@@ -3872,6 +3991,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -3885,6 +4005,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -3918,6 +4039,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -3931,6 +4053,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -3964,6 +4087,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:divided_persian_aristocracy"
@@ -3986,6 +4110,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -4020,6 +4145,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:diwan_i_bandagan"
@@ -4040,6 +4166,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -4079,6 +4206,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "NED"
@@ -4101,6 +4229,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -4160,6 +4289,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -4191,6 +4321,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -4239,6 +4370,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "var",
      "has_east_india_trading_company"
@@ -4259,6 +4391,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Event or script"
@@ -4298,6 +4431,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -4331,6 +4465,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -4347,6 +4482,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -4376,6 +4512,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -4416,6 +4553,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "religion has religious influence"
@@ -4434,6 +4572,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Religion",
@@ -4462,6 +4601,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -4475,6 +4615,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -4514,6 +4655,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "has parliament"
@@ -4532,6 +4674,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government"
@@ -4559,6 +4702,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -4572,6 +4716,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -4605,6 +4750,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:eth_wandering_court"
@@ -4626,6 +4772,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Law",
@@ -4654,6 +4801,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -4683,6 +4831,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -4717,6 +4866,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -4730,6 +4880,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -4757,6 +4908,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -4770,6 +4922,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -4803,6 +4956,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:expanded_posadnichestvo_office"
@@ -4823,6 +4977,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -4862,6 +5017,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Abolished Timariot System"
+    ],
     "gate": [
      "and",
      [
@@ -4887,8 +5045,7 @@
     "major": false,
     "requires": [
      "is or was Ottomans",
-     "event flag: Expanded Timar System",
-     "not — event flag: Abolished Timariot System"
+     "event flag: Expanded Timar System"
     ]
    },
    "desc": [
@@ -4899,6 +5056,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -4933,6 +5091,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cul",
      "icelandic"
@@ -4953,6 +5112,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture"
@@ -4998,6 +5158,12 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform French Feudal Nobility",
+     "reform French Appanage",
+     "reform French Ducal",
+     "reform French Monarchy"
+    ],
     "gate": [
      "and",
      [
@@ -5031,12 +5197,7 @@
     ],
     "gate_labels": [],
     "major": false,
-    "requires": [
-     "not — has reform French Feudal Nobility",
-     "not — has reform French Appanage",
-     "not — has reform French Ducal",
-     "not — has reform French Monarchy"
-    ]
+    "requires": []
    },
    "desc": [
     [
@@ -5046,9 +5207,10 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
-     "Reform"
+     "No requirement"
     ]
    },
    "icon": "img/reform/feudal-nobility.png",
@@ -5079,6 +5241,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "rgrp",
      "muslim"
@@ -5100,6 +5263,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Religion",
@@ -5140,6 +5304,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -5153,6 +5318,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -5192,6 +5358,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -5205,6 +5372,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "No requirement"
@@ -5238,6 +5406,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "country modifier: Bohemian Aggression Modifier"
+    ],
     "gate": [
      "unl",
      "reform:four_articles"
@@ -5247,8 +5418,7 @@
     ],
     "major": false,
     "requires": [
-     "the reform has been unlocked (Four Articles)",
-     "not — has country modifier: Bohemian Aggression Modifier"
+     "the reform has been unlocked (Four Articles)"
     ]
    },
    "desc": [
@@ -5259,10 +5429,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/reform/four-articles.png",
@@ -5305,6 +5475,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5334,6 +5505,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -5374,6 +5546,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -5387,6 +5560,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -5420,6 +5594,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5475,6 +5650,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -5523,6 +5699,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform French Feudal Nobility"
+    ],
     "gate": [
      "and",
      [
@@ -5554,7 +5733,6 @@
     "requires": [
      "is or was France",
      "government is Monarchy",
-     "not — has reform French Feudal Nobility",
      "event flag: Enable Centralized Fra Reform"
     ]
    },
@@ -5566,11 +5744,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Government",
-     "Reform",
      "Event or script"
     ]
    },
@@ -5614,6 +5792,12 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform French Feudal Nobility",
+     "reform French Appanage",
+     "is or was France",
+     "Is Independent Or Autonomous Subject"
+    ],
     "gate": [
      "and",
      [
@@ -5670,9 +5854,7 @@
      "overlord: has reform French Feudal Nobility",
      "overlord: has reform French Ducal",
      "government is Monarchy",
-     "not — has reform French Feudal Nobility",
-     "not — has reform French Appanage",
-     "+3 more"
+     "mechanic: Government Reform"
     ]
    },
    "desc": [
@@ -5683,14 +5865,13 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
-     "Country",
      "Government",
      "Geography",
      "Reform",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/french-ducal-vassal-reform.png",
@@ -5733,6 +5914,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Feudal Nobility",
+     "reform French Monarchy",
+     "event flag: Enable Centralized Fra Reform"
+    ],
     "gate": [
      "and",
      [
@@ -5773,9 +5959,6 @@
     "requires": [
      "is or was France",
      "government is Monarchy",
-     "not — has reform Feudal Nobility",
-     "not — has reform French Monarchy",
-     "not — event flag: Enable Centralized Fra Reform",
      "mechanic: Government Reform"
     ]
    },
@@ -5787,11 +5970,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Government",
-     "Reform",
      "Event or script"
     ]
    },
@@ -5847,6 +6030,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cul",
      "frisian"
@@ -5869,6 +6053,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -5922,6 +6107,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -5959,6 +6145,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -5988,6 +6175,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6017,6 +6205,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -6051,6 +6240,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Crusade in the Sea"
+    ],
     "gate": [
      "or",
      [
@@ -6102,7 +6294,7 @@
      "culture group is Hibernian",
      "has reform Galley Lords",
      "overlord: has reform Galley Lords",
-     "+4 more"
+     "+3 more"
     ]
    },
    "desc": [
@@ -6113,6 +6305,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -6179,6 +6372,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -6192,6 +6386,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -6231,6 +6426,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6260,6 +6456,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -6294,6 +6491,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6337,6 +6535,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -6384,6 +6583,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "GEN"
@@ -6404,6 +6604,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country"
@@ -6443,6 +6644,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6472,6 +6674,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -6506,6 +6709,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6535,6 +6739,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Theocracy",
     "requires": [
      "Government",
@@ -6575,6 +6780,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Abolished Geheimer Rat"
+    ],
     "gate": [
      "and",
      [
@@ -6594,8 +6802,7 @@
     ],
     "major": false,
     "requires": [
-     "the reform has been unlocked (Geheimer Rat)",
-     "not — event flag: Abolished Geheimer Rat"
+     "the reform has been unlocked (Geheimer Rat)"
     ]
    },
    "desc": [
@@ -6606,10 +6813,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Reform",
-     "Event or script"
+     "Reform"
     ]
    },
    "icon": "img/reform/hab-geheimer-rat.png",
@@ -6634,6 +6841,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Jianzhou Jurchen"
+    ],
     "gate": [
      "and",
      [
@@ -6664,7 +6874,6 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "not — has reform Jianzhou Jurchen",
      "Sinicized Vs Unsinicized < 40",
      "mechanic: Government Reform"
     ]
@@ -6677,11 +6886,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
      "Culture",
-     "Reform",
      "Event or script",
      "Other"
     ]
@@ -6714,6 +6923,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -6742,6 +6952,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -6794,6 +7005,10 @@
   },
   {
    "data": {
+    "excludes": [
+     "country type is Pop",
+     "country type is Building"
+    ],
     "gate": [
      "not",
      [
@@ -6810,10 +7025,7 @@
     ],
     "gate_labels": [],
     "major": false,
-    "requires": [
-     "not — country type is Pop",
-     "not — country type is Building"
-    ]
+    "requires": []
    },
    "desc": [
     [
@@ -6823,9 +7035,10 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Government"
+     "No requirement"
     ]
    },
    "icon": "img/reform/harbor-administration.png",
@@ -6850,6 +7063,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "haudenosaunee_group"
@@ -6871,6 +7085,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Tribe",
     "requires": [
      "Culture",
@@ -6911,6 +7126,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -6924,6 +7140,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -6951,6 +7168,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:holy_imperial_monarchy_reform"
@@ -6971,6 +7189,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Reform"
@@ -7016,6 +7235,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -7029,6 +7249,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -7056,6 +7277,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -7069,6 +7291,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -7096,6 +7319,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "HUN"
@@ -7116,6 +7340,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country"
@@ -7149,6 +7374,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7178,6 +7404,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -7206,6 +7433,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7244,6 +7472,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -7290,6 +7519,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7330,6 +7560,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Government",
@@ -7371,6 +7602,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:iro_council_of_the_fifty"
@@ -7391,6 +7623,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -7436,6 +7669,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:iro_reforged_law_of_peace"
@@ -7456,6 +7690,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -7501,6 +7736,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "WLS"
@@ -7522,6 +7758,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -7562,6 +7799,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -7591,6 +7829,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -7619,6 +7858,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Daimyō",
+     "reform Japanese Imperial Family",
+     "reform Shogunate"
+    ],
     "gate": [
      "cgrp",
      "japanese_group"
@@ -7630,9 +7874,6 @@
     "requires": [
      "culture group is Japanese",
      "country type is Building",
-     "not — has reform Daimyō",
-     "not — has reform Japanese Imperial Family",
-     "not — has reform Shogunate",
      "capital: in region Japan"
     ]
    },
@@ -7644,12 +7885,12 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
      "Culture",
-     "Geography",
-     "Reform"
+     "Geography"
     ]
    },
    "icon": "img/reform/japanese-clan.png",
@@ -7686,6 +7927,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Daimyō",
+     "reform Japanese Clan",
+     "reform Shogunate"
+    ],
     "gate": [
      "cgrp",
      "japanese_group"
@@ -7698,10 +7944,9 @@
      "culture group is Japanese",
      "ruling dynasty is Yamato",
      "is or was Yamato",
-     "not — has reform Daimyō",
-     "not — has reform Japanese Clan",
-     "not — has reform Shogunate",
-     "+3 more"
+     "Has Regent",
+     "heir: ruling dynasty is Yamato",
+     "ruler: ruling dynasty is Yamato"
     ]
    },
    "desc": [
@@ -7712,11 +7957,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Culture",
-     "Reform",
      "Other"
     ]
    },
@@ -7754,6 +7999,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Haixi Jurchen"
+    ],
     "gate": [
      "and",
      [
@@ -7784,7 +8032,6 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "not — has reform Haixi Jurchen",
      "Sinicized Vs Unsinicized < 20",
      "mechanic: Government Reform"
     ]
@@ -7797,11 +8044,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
      "Culture",
-     "Reform",
      "Event or script",
      "Other"
     ]
@@ -7834,6 +8081,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "is a Fiefdom"
+    ],
     "gate": [
      "and",
      [
@@ -7854,7 +8104,6 @@
     "major": true,
     "requires": [
      "culture group is German",
-     "not — is a Fiefdom",
      "ruler: this: Root.Ruler",
      "ruler: Is Alive",
      "ruler: Is Legally Male",
@@ -7869,9 +8118,9 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
-     "Government",
      "Culture",
      "Other"
     ]
@@ -7922,6 +8171,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "BRB"
@@ -7944,6 +8194,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -7979,6 +8230,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -8008,6 +8260,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -8042,6 +8295,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8070,6 +8324,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -8085,6 +8340,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "KBO"
@@ -8105,6 +8361,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country"
@@ -8138,6 +8395,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "ZAN"
@@ -8158,6 +8416,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country"
@@ -8197,6 +8456,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:kingdom_of_god_reform"
@@ -8218,6 +8478,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -8246,6 +8507,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:kor_daedongbeob"
@@ -8266,6 +8528,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -8305,6 +8568,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:kor_sadae_reform"
@@ -8327,6 +8591,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -8343,6 +8608,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Reformed Kritai Katholikoi"
+    ],
     "gate": [
      "and",
      [
@@ -8362,8 +8630,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Byzantium",
-     "not — has reform Reformed Kritai Katholikoi"
+     "is or was Byzantium"
     ]
    },
    "desc": [
@@ -8374,10 +8641,10 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
-     "Country",
-     "Reform"
+     "Country"
     ]
    },
    "icon": "img/reform/kritai-katholikoi.png",
@@ -8402,6 +8669,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Kritai Katholikoi"
+    ],
     "gate": [
      "and",
      [
@@ -8420,8 +8690,7 @@
     "major": false,
     "requires": [
      "is or was Byzantium",
-     "the reform has been unlocked (Reformed Kritai Katholikoi)",
-     "not — has reform Kritai Katholikoi"
+     "the reform has been unlocked (Reformed Kritai Katholikoi)"
     ]
    },
    "desc": [
@@ -8432,6 +8701,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -8447,6 +8717,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -8460,6 +8731,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -8487,6 +8759,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Margraviate"
+    ],
     "gate": [
      "reform",
      "landgraviate"
@@ -8497,7 +8772,6 @@
     "major": false,
     "requires": [
      "has reform Landgraviate",
-     "not — has reform Margraviate",
      "is a member of Holy Roman Empire",
      "Country Rank Level ≤ 2"
     ]
@@ -8510,6 +8784,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Reform",
@@ -8545,6 +8820,10 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Restored Rule of the Latins",
+     "Num Locations ≥ 70"
+    ],
     "gate": [
      "and",
      [
@@ -8586,9 +8865,9 @@
      "is or was Athens",
      "is or was Argos",
      "is or was Thessalonica",
-     "not — has reform Restored Rule of the Latins",
      "religion is Catholicism",
-     "+4 more"
+     "event flag: Lat Accepted Pope Latin Empire Proposal",
+     "+2 more"
     ]
    },
    "desc": [
@@ -8599,13 +8878,13 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Religion",
      "Reform",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/lat-papal-restoration-claimant.png",
@@ -8678,6 +8957,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "LAT"
@@ -8700,6 +8980,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -8771,6 +9052,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -8784,6 +9066,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -8811,6 +9094,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "is or was Ottomans"
+    ],
     "gate": [
      "and",
      [
@@ -8829,7 +9115,6 @@
     "major": false,
     "requires": [
      "this: Root",
-     "not — is or was Ottomans",
      "mechanic: Government Reform"
     ]
    },
@@ -8841,9 +9126,9 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Country",
      "Event or script",
      "Other"
     ]
@@ -8894,6 +9179,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -8938,6 +9224,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Steppe Horde",
     "requires": [
      "Country",
@@ -8974,6 +9261,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9008,6 +9296,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -9031,6 +9320,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9061,6 +9351,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -9113,6 +9404,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:legacy_of_the_ottomans"
@@ -9134,6 +9426,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -9168,6 +9461,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:legacy_of_the_turks"
@@ -9189,6 +9483,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -9223,6 +9518,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "reform",
      "legatus_natus"
@@ -9244,6 +9540,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Theocracy",
     "requires": [
      "Reform",
@@ -9284,6 +9581,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -9313,6 +9611,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Event or script"
@@ -9352,6 +9651,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -9365,6 +9665,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -9416,6 +9717,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:lifan_yuan"
@@ -9436,6 +9738,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Reform"
@@ -9457,6 +9760,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9491,6 +9795,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -9526,6 +9831,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:livonian_confederation"
@@ -9547,6 +9853,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -9587,6 +9894,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -9600,6 +9908,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -9633,6 +9942,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:luc_libertas"
@@ -9653,6 +9963,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -9692,6 +10003,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -9728,6 +10040,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -9776,6 +10089,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:malian_tribute_system"
@@ -9796,6 +10110,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -9835,6 +10150,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "MAM"
@@ -9856,6 +10172,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -9896,6 +10213,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -9947,6 +10265,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -9981,6 +10300,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -9994,6 +10314,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10027,6 +10348,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "adv",
      "kouroukan_fouga_advance"
@@ -10048,6 +10370,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Advance",
@@ -10088,6 +10411,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cul",
      "portuguese"
@@ -10108,6 +10432,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture"
@@ -10135,6 +10460,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Landgraviate"
+    ],
     "gate": [
      "reform",
      "margraviate"
@@ -10145,7 +10473,6 @@
     "major": false,
     "requires": [
      "has reform Margraviate",
-     "not — has reform Landgraviate",
      "is a member of Holy Roman Empire"
     ]
    },
@@ -10157,6 +10484,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Reform",
@@ -10191,6 +10519,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -10204,6 +10533,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10231,6 +10561,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "is a Vassal",
+     "reform French Ducal",
+     "in union with: France"
+    ],
     "gate": [
      "and",
      [
@@ -10292,11 +10627,11 @@
     "requires": [
      "has global variable: League Of Public Weal Enabled",
      "capital: in region France",
-     "not — is a Vassal",
      "overlord: has reform French Feudal Nobility",
      "government is Monarchy",
-     "not — has reform French Ducal",
-     "+7 more"
+     "has reform Member of the League of Public Weal",
+     "Subject Loyalty < 33",
+     "+3 more"
     ]
    },
    "desc": [
@@ -10307,6 +10642,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -10356,6 +10692,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -10369,6 +10706,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10402,6 +10740,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": true,
@@ -10415,6 +10754,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "No requirement"
@@ -10466,6 +10806,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "lang",
      "marathi_language"
@@ -10486,6 +10827,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture"
@@ -10507,6 +10849,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -10520,6 +10863,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10559,6 +10903,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -10589,6 +10934,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Theocracy",
     "requires": [
      "Religion",
@@ -10672,6 +11018,12 @@
   },
   {
    "data": {
+    "excludes": [
+     "government is Steppe Horde",
+     "government is Tribe",
+     "is Rome",
+     "reform Admiralty Regime"
+    ],
     "gate": [
      "and",
      [
@@ -10698,12 +11050,7 @@
     ],
     "gate_labels": [],
     "major": false,
-    "requires": [
-     "not — government is Steppe Horde",
-     "not — government is Tribe",
-     "not — is Rome",
-     "not — has reform Admiralty Regime"
-    ]
+    "requires": []
    },
    "desc": [
     [
@@ -10713,11 +11060,10 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
-     "Country",
-     "Government",
-     "Reform"
+     "No requirement"
     ]
    },
    "icon": "img/reform/military-regime-reform.png",
@@ -10748,6 +11094,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -10761,6 +11108,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10806,6 +11154,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Secret Council"
+    ],
     "gate": [
      "tag",
      "MLO"
@@ -10815,8 +11166,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Milan",
-     "not — has reform Secret Council"
+     "is or was Milan"
     ]
    },
    "desc": [
@@ -10827,10 +11177,10 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
-     "Country",
-     "Reform"
+     "Country"
     ]
    },
    "icon": "img/reform/mlo-council-of-justice.png",
@@ -10855,6 +11205,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Council of Justice"
+    ],
     "gate": [
      "tag",
      "MLO"
@@ -10864,8 +11217,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Milan",
-     "not — has reform Council of Justice"
+     "is or was Milan"
     ]
    },
    "desc": [
@@ -10876,10 +11228,10 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
-     "Country",
-     "Reform"
+     "Country"
     ]
    },
    "icon": "img/reform/mlo-secret-council.png",
@@ -10904,6 +11256,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -10917,6 +11270,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -10950,6 +11304,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Decayed Theme System"
+    ],
     "gate": [
      "and",
      [
@@ -10968,8 +11325,7 @@
     "major": false,
     "requires": [
      "is or was Byzantium",
-     "the reform has been unlocked (Modern Imperial Army)",
-     "not — has reform Decayed Theme System"
+     "the reform has been unlocked (Modern Imperial Army)"
     ]
    },
    "desc": [
@@ -10980,6 +11336,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -11020,6 +11377,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11048,6 +11406,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -11082,6 +11441,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "MUG"
@@ -11102,6 +11462,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country"
@@ -11135,6 +11496,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11148,6 +11510,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11181,6 +11544,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11219,6 +11583,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -11253,6 +11618,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11300,6 +11666,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -11341,6 +11708,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11354,6 +11722,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11387,6 +11756,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11400,6 +11770,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11439,6 +11810,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11452,6 +11824,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11485,6 +11858,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11498,6 +11872,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11531,6 +11906,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11574,6 +11950,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -11615,6 +11992,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11662,6 +12040,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -11702,6 +12081,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11740,6 +12120,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -11780,6 +12161,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11793,6 +12175,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11826,6 +12209,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": true,
@@ -11839,6 +12223,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "No requirement"
@@ -11878,6 +12263,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -11891,6 +12277,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -11918,6 +12305,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -11956,6 +12344,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -11996,6 +12385,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -12009,6 +12399,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -12042,6 +12433,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:omani_overseas_ambitions_reform"
@@ -12063,6 +12455,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12097,6 +12490,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -12117,6 +12511,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture"
@@ -12150,6 +12545,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -12163,6 +12559,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -12202,6 +12599,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12231,6 +12629,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12265,6 +12664,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12294,6 +12694,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12334,6 +12735,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12369,6 +12771,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12416,6 +12819,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12445,6 +12849,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12485,6 +12890,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Disbanded the Ottoman New Order Army"
+    ],
     "gate": [
      "and",
      [
@@ -12503,8 +12911,7 @@
     "major": true,
     "requires": [
      "is or was Ottomans",
-     "event flag: Unlocked Ottoman New Order Army",
-     "not — event flag: Disbanded the Ottoman New Order Army"
+     "event flag: Unlocked Ottoman New Order Army"
     ]
    },
    "desc": [
@@ -12515,6 +12922,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12549,6 +12957,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12589,6 +12998,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12631,6 +13041,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "PAP"
@@ -12652,6 +13063,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -12740,6 +13152,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Restored Rule of the Latins"
+    ],
     "gate": [
      "and",
      [
@@ -12758,7 +13173,6 @@
     "major": false,
     "requires": [
      "is a Frankokratia state",
-     "not — has reform Restored Rule of the Latins",
      "has embraced Legalism"
     ]
    },
@@ -12770,11 +13184,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
-     "Institution",
-     "Reform"
+     "Institution"
     ]
    },
    "icon": "img/reform/partitio-reform.png",
@@ -12817,6 +13231,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -12844,6 +13259,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Other"
@@ -12889,6 +13305,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -12902,6 +13319,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -12935,6 +13353,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "country has estate"
@@ -12957,6 +13376,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country",
@@ -13046,6 +13466,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "adv",
      "ira_religious_state"
@@ -13067,6 +13488,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Advance",
@@ -13101,6 +13523,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:petition_of_rights"
@@ -13122,6 +13545,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
@@ -13168,6 +13592,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:peuplierung_system"
@@ -13188,6 +13613,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -13221,6 +13647,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:pirate_brethren_reform"
@@ -13242,6 +13669,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Reform",
@@ -13288,6 +13716,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -13301,6 +13730,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -13334,6 +13764,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -13347,6 +13778,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -13380,6 +13812,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -13393,6 +13826,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -13426,6 +13860,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -13455,6 +13890,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -13495,6 +13931,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:por_ordinances"
@@ -13515,6 +13952,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -13554,6 +13992,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "is a Colonial Nation"
+    ],
     "gate": [
      "and",
      [
@@ -13583,7 +14024,6 @@
     "requires": [
      "is or was Portugal",
      "culture is Portuguese",
-     "not — is a Colonial Nation",
      "has embraced Legalism"
     ]
    },
@@ -13595,10 +14035,10 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
-     "Government",
      "Culture",
      "Institution"
     ]
@@ -13631,6 +14071,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:powerful_vizierships_reform"
@@ -13653,6 +14094,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -13668,6 +14110,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -13706,6 +14149,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -13746,6 +14190,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "reform",
      "primas_germaniae"
@@ -13767,6 +14212,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -13813,6 +14259,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -13852,6 +14299,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Theocracy",
     "requires": [
      "Government",
@@ -13893,6 +14341,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -13906,6 +14355,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -13933,6 +14383,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -13946,6 +14397,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -13973,6 +14425,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14002,6 +14455,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -14030,6 +14484,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14043,6 +14498,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14070,6 +14526,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14083,6 +14540,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14122,6 +14580,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14160,6 +14619,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -14200,6 +14660,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "PRU"
@@ -14220,6 +14681,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country"
@@ -14253,6 +14715,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14266,6 +14729,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14293,6 +14757,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -14323,6 +14788,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -14358,6 +14824,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14396,6 +14863,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -14442,6 +14910,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14455,6 +14924,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14488,6 +14958,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14517,6 +14988,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -14563,6 +15035,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14595,6 +15068,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Religion",
@@ -14637,6 +15111,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14671,6 +15146,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -14706,6 +15182,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14719,6 +15196,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14752,6 +15230,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14765,6 +15244,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14804,6 +15284,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -14817,6 +15298,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -14850,6 +15332,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -14895,6 +15378,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -14942,6 +15426,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "is revolutionary"
@@ -14961,6 +15446,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Event or script",
@@ -15007,6 +15493,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "is revolutionary"
@@ -15026,6 +15513,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Event or script",
@@ -15066,6 +15554,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "is revolutionary"
@@ -15085,6 +15574,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Event or script",
@@ -15131,6 +15621,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -15144,6 +15635,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -15189,6 +15681,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -15202,6 +15695,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -15229,6 +15723,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15276,6 +15771,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -15311,6 +15807,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -15324,6 +15821,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -15363,6 +15861,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15401,6 +15900,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -15447,6 +15947,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
+    ],
     "gate": [
      "or",
      [
@@ -15466,7 +15969,6 @@
     "requires": [
      "event flag: Had Sejm Event Variable",
      "event flag: Rise Of Szlachta Szlachta Outcome Variable",
-     "not — event flag: Rise Of Szlachta Szlachta Outcome Variable",
      "Crown Estate) < 0.5"
     ]
    },
@@ -15478,6 +15980,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Event or script",
@@ -15512,6 +16015,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15550,6 +16054,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -15592,6 +16097,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -15605,6 +16111,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -15638,6 +16145,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15667,6 +16175,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -15701,6 +16210,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -15738,6 +16248,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -15772,6 +16283,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -15801,6 +16313,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -15835,6 +16348,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "iberian_group"
@@ -15856,6 +16370,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -15890,6 +16405,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "Num Locations ≥ 125"
+    ],
     "gate": [
      "and",
      [
@@ -15932,8 +16450,7 @@
      "is or was Balliol",
      "culture is Scots",
      "is or was Great Britain",
-     "government is Monarchy",
-     "not — Num Locations ≥ 125"
+     "government is Monarchy"
     ]
    },
    "desc": [
@@ -15944,12 +16461,12 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Government",
-     "Culture",
-     "Other"
+     "Culture"
     ]
    },
    "icon": "img/reform/scottish-shires-reform.png",
@@ -15998,6 +16515,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -16027,6 +16545,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -16067,6 +16586,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "var",
      "republic_of_naples"
@@ -16087,6 +16607,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Event or script"
@@ -16138,6 +16659,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "var",
      "ned_seven_provinces_flag"
@@ -16158,6 +16680,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Event or script"
@@ -16197,6 +16720,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:shahana_i_mandi"
@@ -16217,6 +16741,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -16256,6 +16781,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "MLC"
@@ -16277,6 +16803,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -16311,6 +16838,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -16324,6 +16852,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -16351,6 +16880,11 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Daimyō",
+     "reform Japanese Imperial Family",
+     "reform Japanese Clan"
+    ],
     "gate": [
      "cgrp",
      "japanese_group"
@@ -16361,9 +16895,6 @@
     "major": true,
     "requires": [
      "culture group is Japanese",
-     "not — has reform Daimyō",
-     "not — has reform Japanese Imperial Family",
-     "not — has reform Japanese Clan",
      "leads Japanese Shogunate"
     ]
    },
@@ -16375,10 +16906,10 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
-     "Reform",
      "Organization"
     ]
    },
@@ -16416,6 +16947,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -16446,6 +16978,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -16493,6 +17026,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:signoria_of_venice"
@@ -16513,6 +17047,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Reform"
@@ -16558,6 +17093,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -16584,6 +17120,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Culture"
@@ -16623,6 +17160,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:single_whip_law"
@@ -16643,6 +17181,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -16670,6 +17209,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -16683,6 +17223,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -16710,6 +17251,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "reform",
      "son_in_law_rule"
@@ -16735,6 +17277,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -16754,6 +17297,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:son_trans_saharan_trade"
@@ -16774,6 +17318,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -16801,6 +17346,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:songhai_professional_army_reform"
@@ -16821,6 +17367,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -16854,6 +17401,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -16898,6 +17446,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -16934,6 +17483,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -16947,6 +17497,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "No requirement"
@@ -16980,6 +17531,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:sovet_gospod"
@@ -17000,6 +17552,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Reform"
@@ -17039,6 +17592,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17069,6 +17623,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -17097,6 +17652,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17127,6 +17683,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -17155,6 +17712,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17185,6 +17743,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -17213,6 +17772,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17257,6 +17817,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -17298,6 +17859,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17329,6 +17891,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -17358,6 +17921,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17387,6 +17951,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -17415,6 +17980,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -17428,6 +17994,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -17473,6 +18040,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17502,6 +18070,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -17542,6 +18111,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -17555,6 +18125,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -17594,6 +18165,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -17607,6 +18179,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -17646,6 +18219,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -17659,6 +18233,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -17692,6 +18267,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:subah_organization_reform"
@@ -17712,6 +18288,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -17745,6 +18322,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -17765,6 +18343,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture"
@@ -17798,6 +18377,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -17828,6 +18408,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -17869,6 +18450,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "SPA"
@@ -17890,6 +18472,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -17930,6 +18513,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -17968,6 +18552,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -18003,6 +18588,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Reformed Tawantinsuyu Government"
+    ],
     "gate": [
      "and",
      [
@@ -18023,7 +18611,6 @@
      "language is Quechuan",
      "has reform Tawantinsuyu Monarchy",
      "religion group is Andean Folk Religions",
-     "not — has reform Reformed Tawantinsuyu Government",
      "mechanic: Government Reform"
     ]
    },
@@ -18035,6 +18622,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Religion",
@@ -18089,6 +18677,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "num of ports GREATER THAN"
@@ -18107,6 +18696,7 @@
    ],
    "facets": {
     "age": "Absolutism",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Geography"
@@ -18140,6 +18730,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18153,6 +18744,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18186,6 +18778,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18199,6 +18792,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "No requirement"
@@ -18232,6 +18826,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18245,6 +18840,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18272,6 +18868,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18285,6 +18882,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18324,6 +18922,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "GRA"
@@ -18346,6 +18945,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -18381,6 +18981,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18394,6 +18995,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18427,6 +19029,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -18447,6 +19050,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Culture"
@@ -18486,6 +19090,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:the_protectorate"
@@ -18508,6 +19113,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": "Republic",
     "requires": [
      "Reform",
@@ -18536,6 +19142,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18549,6 +19156,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18576,6 +19184,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -18589,6 +19198,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -18646,6 +19256,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Modern Imperial Army"
+    ],
     "gate": [
      "tag",
      "BYZ"
@@ -18655,8 +19268,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Byzantium",
-     "not — has reform Modern Imperial Army"
+     "is or was Byzantium"
     ]
    },
    "desc": [
@@ -18667,10 +19279,10 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
-     "Country",
-     "Reform"
+     "Country"
     ]
    },
    "icon": "img/reform/theme-system.png",
@@ -18725,6 +19337,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -18791,6 +19404,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -18834,6 +19448,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:timurid_diwan_reform"
@@ -18854,6 +19469,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -18899,6 +19515,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:timurid_empire"
@@ -18920,6 +19537,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform",
@@ -18960,6 +19578,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "num of non rural GREATER THAN"
@@ -18978,6 +19597,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Other"
@@ -19011,6 +19631,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19024,6 +19645,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19057,6 +19679,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19070,6 +19693,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19109,6 +19733,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Bulgarian Tsardom"
+    ],
     "gate": [
      "cgrp",
      "russian_group"
@@ -19120,8 +19747,7 @@
     "requires": [
      "culture group is East Slavic",
      "country rank: Empire",
-     "religion is Orthodoxy",
-     "not — has reform Bulgarian Tsardom"
+     "religion is Orthodoxy"
     ]
    },
    "desc": [
@@ -19132,11 +19758,11 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
      "Religion",
      "Culture",
-     "Reform",
      "Other"
     ]
    },
@@ -19162,6 +19788,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:tughlaq_slave_army_reform"
@@ -19182,6 +19809,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -19221,6 +19849,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:turkish_pashas"
@@ -19241,6 +19870,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -19274,6 +19904,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19287,6 +19918,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19314,6 +19946,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "?",
      "is subject type"
@@ -19333,6 +19966,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government"
@@ -19384,6 +20018,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -19414,6 +20049,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -19449,6 +20085,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19462,6 +20099,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19501,6 +20139,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19514,6 +20153,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19541,6 +20181,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "cgrp",
      "russian_group"
@@ -19561,6 +20202,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Culture"
@@ -19618,6 +20260,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "VEN"
@@ -19638,6 +20281,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country"
@@ -19671,6 +20315,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "VEN"
@@ -19691,6 +20336,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country"
@@ -19712,6 +20358,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "VEN"
@@ -19732,6 +20379,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Country"
@@ -19759,6 +20407,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:vij_astadiggajas"
@@ -19779,6 +20428,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -19812,6 +20462,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -19825,6 +20476,7 @@
    ],
    "facets": {
     "age": "Revolutions",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -19852,6 +20504,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -19893,6 +20546,7 @@
    ],
    "facets": {
     "age": "Discovery",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Advance"
@@ -19926,6 +20580,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "tag",
      "LIT"
@@ -19948,6 +20603,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -19990,6 +20646,10 @@
   },
   {
    "data": {
+    "excludes": [
+     "is or was Yuán(CHI)",
+     "leads Middle Kingdom"
+    ],
     "gate": [
      "and",
      [
@@ -20073,13 +20733,13 @@
     ],
     "major": false,
     "requires": [
-     "not — is or was Yuán(CHI)",
      "has reform Warring State",
      "situation active: Red Turban Rebellions",
      "event flag: Unlocked Warring State",
      "Middle Kingdom exists",
-     "not — leads Middle Kingdom",
-     "+16 more"
+     "language family is Chinese",
+     "language is Yi",
+     "+12 more"
     ]
    },
    "desc": [
@@ -20090,12 +20750,12 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
      "Culture",
      "Reform",
-     "Organization",
      "Event or script"
     ]
    },
@@ -20187,6 +20847,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:warsaw_confederation"
@@ -20207,6 +20868,7 @@
    ],
    "facets": {
     "age": "Reformation",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Reform"
@@ -20246,6 +20908,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -20276,6 +20939,7 @@
    ],
    "facets": {
     "age": "Traditions",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Culture",
@@ -20310,6 +20974,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": null,
     "gate_labels": [],
     "major": false,
@@ -20323,6 +20988,7 @@
    ],
    "facets": {
     "age": "Renaissance",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "No requirement"
@@ -20356,6 +21022,9 @@
   },
   {
    "data": {
+    "excludes": [
+     "reform Jianzhou Jurchen"
+    ],
     "gate": [
      "and",
      [
@@ -20386,7 +21055,6 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "not — has reform Jianzhou Jurchen",
      "Sinicized Vs Unsinicized > 35",
      "mechanic: Government Reform"
     ]
@@ -20399,11 +21067,11 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Government",
      "Culture",
-     "Reform",
      "Event or script",
      "Other"
     ]
@@ -20442,6 +21110,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "adv",
      "zmw_experienced_cattle_herder"
@@ -20463,6 +21132,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -20491,6 +21161,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "unl",
      "reform:zmw_council_of_senior_wives"
@@ -20512,6 +21183,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": null,
     "requires": [
      "Country",
@@ -20540,6 +21212,7 @@
   },
   {
    "data": {
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -20569,6 +21242,7 @@
    ],
    "facets": {
     "age": "Any age",
+    "availability": "Specific countries",
     "government": "Republic",
     "requires": [
      "Culture",
@@ -20603,6 +21277,22 @@
   }
  ],
  "facets": [
+  {
+   "key": "availability",
+   "label": "Availability",
+   "options": [
+    {
+     "count": 159,
+     "label": "Any country",
+     "value": "Any country"
+    },
+    {
+     "count": 169,
+     "label": "Specific countries",
+     "value": "Specific countries"
+    }
+   ]
+  },
   {
    "key": "government",
    "label": "Government",
@@ -20690,7 +21380,7 @@
      "value": "Age"
     },
     {
-     "count": 118,
+     "count": 114,
      "label": "Country",
      "value": "Country"
     },
@@ -20700,7 +21390,7 @@
      "value": "Culture"
     },
     {
-     "count": 92,
+     "count": 88,
      "label": "Event or script",
      "value": "Event or script"
     },
@@ -20710,7 +21400,7 @@
      "value": "Geography"
     },
     {
-     "count": 39,
+     "count": 34,
      "label": "Government",
      "value": "Government"
     },
@@ -20720,32 +21410,32 @@
      "value": "Institution"
     },
     {
-     "count": 4,
+     "count": 3,
      "label": "Law",
      "value": "Law"
     },
     {
-     "count": 84,
+     "count": 87,
      "label": "No requirement",
      "value": "No requirement"
     },
     {
-     "count": 10,
+     "count": 9,
      "label": "Organization",
      "value": "Organization"
     },
     {
-     "count": 63,
+     "count": 59,
      "label": "Other",
      "value": "Other"
     },
     {
-     "count": 4,
+     "count": 3,
      "label": "Privilege",
      "value": "Privilege"
     },
     {
-     "count": 118,
+     "count": 96,
      "label": "Reform",
      "value": "Reform"
     },

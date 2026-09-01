@@ -57,7 +57,9 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
       const q = (search?.value || '').trim().toLowerCase();
       let visible = 0;
       for (const row of rows) {
-        let show = !q || textOf(row).includes(q);
+        // the country lens (if the page has one) has already ruled some rows
+        // out entirely; facets and search compose on top of that
+        let show = !row.dataset.clensHide && (!q || textOf(row).includes(q));
         if (show) {
           for (const [facet, values] of active) {
             if (values.size === 0) continue;
@@ -81,6 +83,7 @@ const { facets = [], placeholder = 'Filter…' } = Astro.props;
     if (q0 && search) search.value = q0;
 
     search?.addEventListener('input', apply);
+    scope.addEventListener('filter:refresh', apply);
     for (const btn of scope.querySelectorAll<HTMLElement>('button[data-facet]')) {
       btn.addEventListener('click', () => {
         const facet = btn.dataset.facet!;

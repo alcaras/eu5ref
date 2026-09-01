@@ -335,9 +335,12 @@ def describe(*trees, limit: int = 6) -> dict:
     lines = list(w.lines)
     if w.dropped:
         lines.append(f'+{w.dropped} more')
+    # An exclusion reads under a "Conflicts with" heading, where the verb is
+    # already implied: "has urban right Fuero Juzgo" → "urban right Fuero Juzgo".
+    excludes = [x[4:] if x.startswith('has ') else x for x in w.excludes]
     return {
         'lines': lines,
-        'excludes': list(w.excludes),
+        'excludes': excludes,
         'tags': tags or [NONE],
         'availability': SOME_COUNTRIES if w.identity else ANY_COUNTRY,
     }

@@ -1,0 +1,137 @@
+---
+// "What can my country take?" — one control that works on any table whose
+// entities carry a compiled gate (privileges, laws, reforms, urban rights).
+//
+// The gate is the same boolean-over-static-country-facts expression the
+// advance planner uses (scripts/lib/triggers.py). Evaluation is three-valued
+// on purpose: TRUE = yours, FALSE = another country's, null = depends on
+// something you could acquire (an institution, a reform, an event). Only a
+// definite FALSE is hidden, so nothing reachable is ever silently dropped.
+interface Props {
+  placeholder?: string;
+}
+const { placeholder = 'Filter by country…' } = Astro.props;
+---
+<div class="clens" data-clens>
+  <div class="pl-picker">
+    <input type="search" placeholder={placeholder} autocomplete="off" data-clens-input />
+    <div class="hdr-search__results" hidden data-clens-results></div>
+  </div>
+  <span class="clens__state" data-clens-state></span>
+  <button type="button" class="clens__clear" hidden data-clens-clear>clear</button>
+</div>
+
+<script>
+  type Facts = {
+    tag: string; cul?: string; cgrp?: string[]; lang?: string;
+    rel?: string; rgrp?: string; gov?: string; cap?: Record<string, string>;
+  };
+  type Country = { t: string; n: string; f: Facts };
+
+  // TRUE = available to this country, FALSE = never, null = depends on
+  // something dynamic. Mirrors the advance planner's evaluator.
+  function evalGate(e: any, f: Facts, formables: Record<string, any>): boolean | null {
+    if (!e) return true;
+    const h = e[0];
+    if (h === 'and') {
+      let unk = false;
+      for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === false) return false; if (v === null) unk = true; }
+      return unk ? null : true;
+    }
+    if (h === 'or') {
+      let unk = false;
+      for (const s of e.slice(1)) { const v = evalGate(s, f, formables); if (v === true) return true; if (v === null) unk = true; }
+      return unk ? null : false;
+    }
+    if (h === 'not') { const v = evalGate(e[1], f, formables); return v === null ? null : !v; }
+    if (h === '?') return null;
+    if (h === 'cap') return (f.cap || {})[e[1]] === e[2];
+    if (h === 'cgrp') return (f.cgrp || []).includes(e[1]);
+    if (h === 'tag') {
+      if (f.tag === e[1]) return true;
+      if (!(e[1] in formables)) return false;       // another country's tag
+      const v = evalGate(formables[e[1]], f, formables);   // a formable you could become
+      return v === false ? false : null;
+    }
+    if (h === 'cul') return f.cul === e[1];
+    if (h === 'lang') return f.lang === e[1];
+    if (h === 'rel') return f.rel === e[1];
+    if (h === 'rgrp') return f.rgrp === e[1];
+    if (h === 'gov') return f.gov ? f.gov === e[1] : null;
+    return null;
+  }
+
+  for (const lens of document.querySelectorAll<HTMLElement>('[data-clens]')) {
+    const scope = lens.closest('[data-filter-scope]') || document;
+    const input = lens.querySelector('input') as HTMLInputElement;
+    const results = lens.querySelector('[data-clens-results]') as HTMLElement;
+    const state = lens.querySelector('[data-clens-state]') as HTMLElement;
+    const clear = lens.querySelector('[data-clens-clear]') as HTMLElement;
+    const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
+
+    let data: { countries: Country[]; formables: Record<string, any> } | null = null;
+    let picked: Country | null = null;
+    let loading = false;
+
+    async function load() {
+      if (data || loading) return;
+      loading = true;
+      try {
+        const res = await fetch(`${baseUrl}country-facts.json`);
+        data = await res.json();
+      } catch { /* offline: the picker just stays empty */ }
+      loading = false;
+    }
+
+    /** Hide rows this country can never take; mark the conditional ones. */
+    function apply() {
+      const rows = scope.querySelectorAll<HTMLElement>('[data-row]');
+      let hidden = 0, cond = 0;
+      for (const row of rows) {
+        row.classList.remove('row--cond');
+        const raw = row.dataset.gate;
+        if (!picked) { row.dataset.clensHide = ''; delete row.dataset.clensHide; continue; }
+        let v: boolean | null = true;
+        if (raw) {
+          try { v = evalGate(JSON.parse(raw), picked.f, data!.formables); } catch { v = null; }
+        }
+        if (v === false) { row.dataset.clensHide = '1'; hidden++; }
+        else { delete row.dataset.clensHide; if (v === null) { row.classList.add('row--cond'); cond++; } }
+      }
+      state.textContent = picked
+        ? `${picked.n}: ${rows.length - hidden} of ${rows.length}` +
+          (cond ? `, ${cond} conditional` : '')
+        : '';
+      clear.hidden = !picked;
+      // re-run the facet/search filter so the two compose
+      scope.dispatchEvent(new CustomEvent('filter:refresh', { bubbles: true }));
+    }
+
+    function render() {
+      const q = input.value.trim().toLowerCase();
+      if (!q || !data) { results.hidden = true; return; }
+      const hits = data.countries.filter((c) => c.n.toLowerCase().startsWith(q)).slice(0, 10);
+      results.innerHTML = hits.map((c) =>
+        `<a href="#" data-tag="${c.t}"><span>${c.n}</span><small>${c.t}</small></a>`).join('');
+      results.hidden = hits.length === 0;
+    }
+
+    input.addEventListener('focus', () => { load().then(render); });
+    input.addEventListener('input', () => { load().then(render); });
+    results.addEventListener('click', (ev) => {
+      const a = (ev.target as HTMLElement).closest('a');
+      if (!a) return;
+      ev.preventDefault();
+      picked = data!.countries.find((c) => c.t === a.dataset.tag) || null;
+      input.value = picked?.n || '';
+      results.hidden = true;
+      apply();
+    });
+    clear.addEventListener('click', () => {
+      picked = null; input.value = ''; apply();
+    });
+    document.addEventListener('click', (ev) => {
+      if (!lens.contains(ev.target as Node)) results.hidden = true;
+    });
+  }
+</script>

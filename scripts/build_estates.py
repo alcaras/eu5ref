@@ -62,6 +62,7 @@ def main():
             'desc': rich(p.description),
             'facets': {
                 'estate': ename(estate_obj) or (p.estate if isinstance(p.estate, str) else 'Any'),
+                'availability': req['availability'],
                 'requires': req['tags'],
             },
             'mods': mods,
@@ -70,6 +71,7 @@ def main():
                 'gate': gate,
                 'gate_labels': gate_labels,
                 'requires': req['lines'],
+                'excludes': req['excludes'],
                 'unlocked_by': unlocked_by if isinstance(unlocked_by, str) else None,
             },
         })
@@ -77,7 +79,8 @@ def main():
         'dataset': 'estate-privileges',
         'source': 'in_game/common/estate_privileges',
         'entities': pents,
-        'facets': facet_meta(pents, [('estate', 'Estate'), ('requires', 'Requires')]),
+        'facets': facet_meta(pents, [('availability', 'Availability'),
+                                     ('estate', 'Estate'), ('requires', 'Requires')]),
     })
 
 

@@ -6,6 +6,14 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "reform",
+     "agrarian_community"
+    ],
+    "gate_labels": [
+     "Agrarian Community"
+    ],
     "groups": [
      {
       "mods": [
@@ -83,6 +91,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
@@ -128,6 +137,14 @@
       "polarity": "neutral",
       "value": "−2.50%"
      }
+    ],
+    "excludes": [],
+    "gate": [
+     "cgrp",
+     "bohemian_group"
+    ],
+    "gate_labels": [
+     "Bohemian"
     ],
     "groups": [
      {
@@ -186,6 +203,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -224,6 +242,14 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "cgrp",
+     "italian_group"
+    ],
+    "gate_labels": [
+     "Italian"
+    ],
     "groups": [
      {
       "mods": [
@@ -282,6 +308,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -320,6 +347,16 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Manorial Custumals"
+    ],
+    "gate": [
+     "cgrp",
+     "british_group"
+    ],
+    "gate_labels": [
+     "British"
+    ],
     "groups": [
      {
       "mods": [
@@ -367,8 +404,7 @@
      }
     ],
     "requires": [
-     "culture group is British",
-     "not — has urban right Manorial Custumals"
+     "culture group is British"
     ],
     "unlocked_by": []
    },
@@ -379,11 +415,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Culture",
-     "Urban right"
+     "Culture"
     ],
     "source": "Available from the start"
    },
@@ -431,6 +467,22 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "BYZ"
+     ],
+     [
+      "tag",
+      "ROM"
+     ]
+    ],
+    "gate_labels": [
+     "Byzantium",
+     "ROM"
+    ],
     "groups": [
      {
       "mods": [
@@ -504,6 +556,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": [
      "Silk",
      "Cloth",
@@ -553,6 +606,14 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "reform",
+     "enlightened_leadership_reform"
+    ],
+    "gate_labels": [
+     "Enlightened Leadership"
+    ],
     "groups": [
      {
       "mods": [
@@ -644,6 +705,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
@@ -703,6 +765,17 @@
      }
     ],
     "country_mods": [],
+    "excludes": [
+     "urban right Textile Rights"
+    ],
+    "gate": [
+     "not",
+     [
+      "?",
+      "scope:target has town rights"
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -773,9 +846,7 @@
       "value": "−5.00%"
      }
     ],
-    "requires": [
-     "not — has urban right Textile Rights"
-    ],
+    "requires": [],
     "unlocked_by": [
      "Flemish Cloth Industry"
     ]
@@ -787,13 +858,14 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Cloth",
      "Fine Cloth"
     ],
     "kept": "Lost at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Unlocked by an advance"
    },
@@ -840,6 +912,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Fuero Juzgo",
+     "urban right Fuero Real",
+     "urban right Fuero General",
+     "urban right Fueros de Aragón",
+     "urban right Usatges de Barcelona",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "POR"
+     ],
+     [
+      "cul",
+      "portuguese"
+     ]
+    ],
+    "gate_labels": [
+     "Portugal",
+     "Portuguese"
+    ],
     "groups": [
      {
       "mods": [
@@ -900,13 +995,7 @@
     ],
     "requires": [
      "is or was Portugal",
-     "culture is Portuguese",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fuero General",
-     "not — has urban right Fueros de Aragón",
-     "not — has urban right Usatges de Barcelona",
-     "not — has urban right Furs de Valencia"
+     "culture is Portuguese"
     ],
     "unlocked_by": []
    },
@@ -917,12 +1006,12 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
-     "Culture",
-     "Urban right"
+     "Culture"
     ],
     "source": "Available from the start"
    },
@@ -963,6 +1052,9 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -1073,6 +1165,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
@@ -1129,6 +1222,25 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Market Charter",
+     "urban right Staple Port"
+    ],
+    "gate": [
+     "not",
+     [
+      "or",
+      [
+       "?",
+       "scope:target has town rights"
+      ],
+      [
+       "?",
+       "scope:target has town rights"
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -1199,10 +1311,7 @@
       "value": "−50.00%"
      }
     ],
-    "requires": [
-     "not — has urban right Market Charter",
-     "not — has urban right Staple Port"
-    ],
+    "requires": [],
     "unlocked_by": []
    },
    "desc": [
@@ -1221,10 +1330,11 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Available from the start"
    },
@@ -1271,6 +1381,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Juzgo",
+     "urban right Fuero Real",
+     "urban right Fuero General",
+     "urban right Usatges de Barcelona",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "ARA"
+     ],
+     [
+      "cul",
+      "aragonese"
+     ]
+    ],
+    "gate_labels": [
+     "Aragon",
+     "Aragonese"
+    ],
     "groups": [
      {
       "mods": [
@@ -1321,13 +1454,7 @@
      "is or was Aragon",
      "culture is Aragonese",
      "in area Aragon",
-     "dominant culture: Aragonese",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fuero General",
-     "not — has urban right Usatges de Barcelona",
-     "not — has urban right Furs de Valencia"
+     "dominant culture: Aragonese"
     ],
     "unlocked_by": []
    },
@@ -1338,13 +1465,13 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
      "Culture",
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -1380,6 +1507,37 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Juzgo",
+     "urban right Fuero Real",
+     "urban right Fueros de Aragón",
+     "urban right Usatges de Barcelona",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "and",
+     [
+      "or",
+      [
+       "tag",
+       "NAV"
+      ],
+      [
+       "cul",
+       "basque"
+      ]
+     ],
+     [
+      "cgrp",
+      "iberian_group"
+     ]
+    ],
+    "gate_labels": [
+     "Navarre",
+     "Basque",
+     "Iberian"
+    ],
     "groups": [
      {
       "mods": [
@@ -1441,13 +1599,7 @@
     "requires": [
      "is or was Navarre",
      "culture is Basque",
-     "culture group is Iberian",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fueros de Aragón",
-     "not — has urban right Usatges de Barcelona",
-     "not — has urban right Furs de Valencia"
+     "culture group is Iberian"
     ],
     "unlocked_by": []
    },
@@ -1458,12 +1610,12 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
-     "Culture",
-     "Urban right"
+     "Culture"
     ],
     "source": "Available from the start"
    },
@@ -1504,6 +1656,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Real",
+     "urban right Fuero General",
+     "urban right Fueros de Aragón",
+     "urban right Usatges de Barcelona",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "LON"
+     ],
+     [
+      "tag",
+      "CAS"
+     ]
+    ],
+    "gate_labels": [
+     "León",
+     "Castile"
+    ],
     "groups": [
      {
       "mods": [
@@ -1557,11 +1732,7 @@
      "in area Extremadura",
      "in area Toledo",
      "in area Murcia",
-     "dominant culture: Asturleonese",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fuero General",
-     "+3 more"
+     "dominant culture: Asturleonese"
     ],
     "unlocked_by": []
    },
@@ -1572,12 +1743,12 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -1613,6 +1784,21 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Juzgo",
+     "urban right Fuero General",
+     "urban right Fueros de Aragón",
+     "urban right Usatges de Barcelona",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "tag",
+     "CAS"
+    ],
+    "gate_labels": [
+     "Castile"
+    ],
     "groups": [
      {
       "mods": [
@@ -1648,13 +1834,7 @@
      }
     ],
     "requires": [
-     "is or was Castile",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero General",
-     "not — has urban right Fueros de Aragón",
-     "not — has urban right Usatges de Barcelona",
-     "not — has urban right Furs de Valencia"
+     "is or was Castile"
     ],
     "unlocked_by": []
    },
@@ -1665,11 +1845,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Country",
-     "Urban right"
+     "Country"
     ],
     "source": "Available from the start"
    },
@@ -1698,6 +1878,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Juzgo",
+     "urban right Fuero Real",
+     "urban right Fuero General",
+     "urban right Fueros de Aragón",
+     "urban right Usatges de Barcelona"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "ARA"
+     ],
+     [
+      "cul",
+      "catalan"
+     ]
+    ],
+    "gate_labels": [
+     "Aragon",
+     "Catalan"
+    ],
     "groups": [
      {
       "mods": [
@@ -1759,13 +1962,7 @@
     "requires": [
      "is or was Aragon",
      "culture is Catalan",
-     "in area Valencia",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fuero General",
-     "not — has urban right Fueros de Aragón",
-     "not — has urban right Usatges de Barcelona"
+     "in area Valencia"
     ],
     "unlocked_by": []
    },
@@ -1776,13 +1973,13 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
      "Culture",
-     "Geography",
-     "Urban right"
+     "Geography"
     ],
     "source": "Available from the start"
    },
@@ -1823,6 +2020,17 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Imperial Breadbasket"
+    ],
+    "gate": [
+     "not",
+     [
+      "?",
+      "scope:target has town rights"
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -1869,9 +2077,7 @@
       "value": "−0.50"
      }
     ],
-    "requires": [
-     "not — has urban right Imperial Breadbasket"
-    ],
+    "requires": [],
     "unlocked_by": []
    },
    "desc": [
@@ -1899,10 +2105,11 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Available from the start"
    },
@@ -1937,6 +2144,24 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Granary Town"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "BYZ"
+     ],
+     [
+      "tag",
+      "ROM"
+     ]
+    ],
+    "gate_labels": [
+     "Byzantium",
+     "ROM"
+    ],
     "groups": [
      {
       "mods": [
@@ -1998,7 +2223,6 @@
     "requires": [
      "is or was Byzantium",
      "is or was Rome",
-     "not — has urban right Granary Town",
      "location is a City",
      "location is a Megalopolis",
      "building type: Granary",
@@ -2022,12 +2246,12 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -2069,6 +2293,15 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Magdeburg Rights",
+     "urban right Nuremberg Rights"
+    ],
+    "gate": [
+     "?",
+     "modifier:allow kulm town rights"
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -2128,9 +2361,7 @@
      }
     ],
     "requires": [
-     "Allow Kulm Town Rights",
-     "not — has urban right Magdeburg Rights",
-     "not — has urban right Nuremberg Rights"
+     "Allow Kulm Town Rights"
     ],
     "unlocked_by": []
    },
@@ -2141,10 +2372,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -2192,6 +2423,14 @@
       "polarity": "bad",
       "value": "+5.00%"
      }
+    ],
+    "excludes": [],
+    "gate": [
+     "policy",
+     "german_mining_law"
+    ],
+    "gate_labels": [
+     "German Mining Law"
     ],
     "groups": [
      {
@@ -2284,6 +2523,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -2341,6 +2581,19 @@
       "polarity": "bad",
       "value": "−10.00%"
      }
+    ],
+    "excludes": [
+     "urban right Staple Port",
+     "urban right Magdeburg Rights",
+     "urban right Nuremberg Rights",
+     "urban right Kulm Rights"
+    ],
+    "gate": [
+     "cgrp",
+     "german_group"
+    ],
+    "gate_labels": [
+     "German"
     ],
     "groups": [
      {
@@ -2401,11 +2654,7 @@
     ],
     "requires": [
      "culture group is German",
-     "is a port",
-     "not — has urban right Staple Port",
-     "not — has urban right Magdeburg Rights",
-     "not — has urban right Nuremberg Rights",
-     "not — has urban right Kulm Rights"
+     "is a port"
     ],
     "unlocked_by": []
    },
@@ -2416,12 +2665,12 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Culture",
-     "Geography",
-     "Urban right"
+     "Geography"
     ],
     "source": "Available from the start"
    },
@@ -2468,6 +2717,25 @@
       "polarity": "bad",
       "value": "−5.00%"
      }
+    ],
+    "excludes": [
+     "urban right Nuremberg Rights",
+     "urban right Kulm Rights"
+    ],
+    "gate": [
+     "and",
+     [
+      "cap",
+      "region",
+      "north_german_region"
+     ],
+     [
+      "?",
+      "modifier:allow magdeburg rights town rights"
+     ]
+    ],
+    "gate_labels": [
+     "Northern Germany"
     ],
     "groups": [
      {
@@ -2528,9 +2796,7 @@
     ],
     "requires": [
      "capital: in region Northern Germany",
-     "Allow Magdeburg Rights Town Rights",
-     "not — has urban right Nuremberg Rights",
-     "not — has urban right Kulm Rights"
+     "Allow Magdeburg Rights Town Rights"
     ],
     "unlocked_by": []
    },
@@ -2541,11 +2807,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -2587,6 +2853,16 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Borough Custumals"
+    ],
+    "gate": [
+     "cgrp",
+     "british_group"
+    ],
+    "gate_labels": [
+     "British"
+    ],
     "groups": [
      {
       "mods": [
@@ -2634,8 +2910,7 @@
      }
     ],
     "requires": [
-     "culture group is British",
-     "not — has urban right Borough Custumals"
+     "culture group is British"
     ],
     "unlocked_by": []
    },
@@ -2646,11 +2921,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Culture",
-     "Urban right"
+     "Culture"
     ],
     "source": "Available from the start"
    },
@@ -2685,6 +2960,25 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Staple Port",
+     "urban right Free Town Charter"
+    ],
+    "gate": [
+     "not",
+     [
+      "or",
+      [
+       "?",
+       "scope:target has town rights"
+      ],
+      [
+       "?",
+       "scope:target has town rights"
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -2731,10 +3025,7 @@
       "value": "+10.00%"
      }
     ],
-    "requires": [
-     "not — has urban right Staple Port",
-     "not — has urban right Free Town Charter"
-    ],
+    "requires": [],
     "unlocked_by": []
    },
    "desc": [
@@ -2753,10 +3044,11 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Available from the start"
    },
@@ -2791,6 +3083,58 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Bergslagsprivilegier",
+     "urban right Upper Bergregal",
+     "urban right Lower Bergregal"
+    ],
+    "gate": [
+     "and",
+     [
+      "and",
+      [
+       "?",
+       "custom tooltip text"
+      ],
+      [
+       "or",
+       [
+        "?",
+        "custom tooltip is mining rgo"
+       ],
+       [
+        "and",
+        [
+         "?",
+         "custom tooltip is port"
+        ],
+        [
+         "?",
+         "custom tooltip raw material"
+        ]
+       ]
+      ]
+     ],
+     [
+      "not",
+      [
+       "or",
+       [
+        "?",
+        "scope:target has town rights"
+       ],
+       [
+        "?",
+        "scope:target has town rights"
+       ],
+       [
+        "?",
+        "scope:target has town rights"
+       ]
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -2840,10 +3184,7 @@
     "requires": [
      "Is Mining Rgo",
      "is a port",
-     "raw material: Salt",
-     "not — has urban right Bergslagsprivilegier",
-     "not — has urban right Upper Bergregal",
-     "not — has urban right Lower Bergregal"
+     "raw material: Salt"
     ],
     "unlocked_by": []
    },
@@ -2863,11 +3204,11 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -2903,6 +3244,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "and",
+     [
+      "?",
+      "has dlc"
+     ],
+     [
+      "or",
+      [
+       "tag",
+       "BYZ"
+      ],
+      [
+       "tag",
+       "ROM"
+      ]
+     ]
+    ],
+    "gate_labels": [
+     "Byzantium",
+     "ROM"
+    ],
     "groups": [
      {
       "mods": [
@@ -2987,6 +3351,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -3039,6 +3404,14 @@
       "polarity": "bad",
       "value": "−2.50%"
      }
+    ],
+    "excludes": [],
+    "gate": [
+     "tag",
+     "NOR"
+    ],
+    "gate_labels": [
+     "Norway"
     ],
     "groups": [
      {
@@ -3109,6 +3482,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -3153,6 +3527,16 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Magdeburg Rights",
+     "urban right Nuremberg Rights",
+     "urban right Kulm Rights"
+    ],
+    "gate": [
+     "?",
+     "modifier:allow novi fori town rights"
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -3212,10 +3596,7 @@
      }
     ],
     "requires": [
-     "Allow Novi Fori Town Rights",
-     "not — has urban right Magdeburg Rights",
-     "not — has urban right Nuremberg Rights",
-     "not — has urban right Kulm Rights"
+     "Allow Novi Fori Town Rights"
     ],
     "unlocked_by": []
    },
@@ -3226,10 +3607,10 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -3277,6 +3658,25 @@
       "polarity": "bad",
       "value": "−5.00%"
      }
+    ],
+    "excludes": [
+     "urban right Magdeburg Rights",
+     "urban right Kulm Rights"
+    ],
+    "gate": [
+     "and",
+     [
+      "cap",
+      "region",
+      "south_german_region"
+     ],
+     [
+      "?",
+      "modifier:allow nuremberg rights town rights"
+     ]
+    ],
+    "gate_labels": [
+     "Southern Germany"
     ],
     "groups": [
      {
@@ -3337,9 +3737,7 @@
     ],
     "requires": [
      "capital: in region Southern Germany",
-     "Allow Nuremberg Rights Town Rights",
-     "not — has urban right Magdeburg Rights",
-     "not — has urban right Kulm Rights"
+     "Allow Nuremberg Rights Town Rights"
     ],
     "unlocked_by": []
    },
@@ -3350,11 +3748,11 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Geography",
-     "Urban right",
      "Other"
     ],
     "source": "Available from the start"
@@ -3409,6 +3807,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -3488,6 +3889,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Furniture",
      "Pottery",
@@ -3549,6 +3951,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -3628,6 +4033,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Paper",
      "Books",
@@ -3689,6 +4095,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -3768,6 +4177,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Liquor",
      "Beer",
@@ -3822,6 +4232,14 @@
       "polarity": "bad",
       "value": "−10.00%"
      }
+    ],
+    "excludes": [],
+    "gate": [
+     "tag",
+     "HUN"
+    ],
+    "gate_labels": [
+     "Hungary"
     ],
     "groups": [
      {
@@ -3880,6 +4298,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -3923,6 +4342,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -3990,6 +4412,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Jewelry"
     ],
@@ -4039,6 +4462,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4106,6 +4532,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Masonry",
      "Glass"
@@ -4156,6 +4583,24 @@
      }
     ],
     "country_mods": [],
+    "excludes": [
+     "event flag: Recently Forced To Revoke Town Rights Variable"
+    ],
+    "gate": [
+     "and",
+     [
+      "?",
+      "custom tooltip text"
+     ],
+     [
+      "not",
+      [
+       "var",
+       "recently_forced_to_revoke_town_rights_variable"
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4202,9 +4647,7 @@
       "value": "−5.00%"
      }
     ],
-    "requires": [
-     "not — event flag: Recently Forced To Revoke Town Rights Variable"
-    ],
+    "requires": [],
     "unlocked_by": [
      "Borough Privileges"
     ]
@@ -4225,13 +4668,14 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Naval Supplies",
      "Tar"
     ],
     "kept": "Kept at conquest",
     "requires": [
-     "Event or script"
+     "No requirement"
     ],
     "source": "Unlocked by an advance"
    },
@@ -4279,6 +4723,17 @@
      }
     ],
     "country_mods": [],
+    "excludes": [
+     "urban right Flemish Cloth Industry"
+    ],
+    "gate": [
+     "not",
+     [
+      "?",
+      "scope:target has town rights"
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4337,9 +4792,7 @@
       "value": "−5.00%"
      }
     ],
-    "requires": [
-     "not — has urban right Flemish Cloth Industry"
-    ],
+    "requires": [],
     "unlocked_by": [
      "Borough Privileges"
     ]
@@ -4360,6 +4813,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Cloth",
      "Fine Cloth",
@@ -4367,7 +4821,7 @@
     ],
     "kept": "Kept at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Unlocked by an advance"
    },
@@ -4413,6 +4867,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4468,6 +4925,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Tools"
     ],
@@ -4515,6 +4973,9 @@
      }
     ],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4594,6 +5055,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Weaponry",
      "Firearms",
@@ -4654,6 +5116,39 @@
       "value": "+5.00%"
      }
     ],
+    "excludes": [
+     "urban right Tooling Rights"
+    ],
+    "gate": [
+     "and",
+     [
+      "not",
+      [
+       "?",
+       "scope:target has town rights"
+      ]
+     ],
+     [
+      "or",
+      [
+       "?",
+       "scope:target raw material"
+      ],
+      [
+       "?",
+       "scope:target raw material"
+      ],
+      [
+       "?",
+       "scope:target raw material"
+      ],
+      [
+       "?",
+       "scope:target raw material"
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4724,7 +5219,6 @@
      }
     ],
     "requires": [
-     "not — has urban right Tooling Rights",
      "raw material: Iron",
      "raw material: Copper",
      "raw material: Silver",
@@ -4750,12 +5244,12 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Tools"
     ],
     "kept": "Lost at conquest",
     "requires": [
-     "Urban right",
      "Other"
     ],
     "source": "Unlocked by an advance"
@@ -4810,6 +5304,12 @@
       "value": "+5.00%"
      }
     ],
+    "excludes": [],
+    "gate": [
+     "?",
+     "scope:target is port"
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -4890,6 +5390,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -4943,6 +5444,17 @@
      }
     ],
     "country_mods": [],
+    "excludes": [
+     "urban right Naval Supplies Rights"
+    ],
+    "gate": [
+     "not",
+     [
+      "?",
+      "scope:target has town rights"
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -5001,9 +5513,7 @@
       "value": "−5.00%"
      }
     ],
-    "requires": [
-     "not — has urban right Naval Supplies Rights"
-    ],
+    "requires": [],
     "unlocked_by": [
      "Tjärprivilegier"
     ]
@@ -5024,13 +5534,14 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": [
      "Tar",
      "Naval Supplies"
     ],
     "kept": "Lost at conquest",
     "requires": [
-     "Urban right"
+     "No requirement"
     ],
     "source": "Unlocked by an advance"
    },
@@ -5071,6 +5582,9 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": null,
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -5138,6 +5652,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -5176,6 +5691,28 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "or",
+     [
+      "cgrp",
+      "greek_group"
+     ],
+     [
+      "and",
+      [
+       "?",
+       "culture group percentage in country culture group"
+      ],
+      [
+       "?",
+       "value GREATER THAN"
+      ]
+     ]
+    ],
+    "gate_labels": [
+     "Roman"
+    ],
     "groups": [
      {
       "mods": [
@@ -5271,6 +5808,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -5330,6 +5868,19 @@
       "value": "−2.50%"
      }
     ],
+    "excludes": [],
+    "gate": [
+     "and",
+     [
+      "?",
+      "country has special status type"
+     ],
+     [
+      "?",
+      "country has special status country"
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -5388,6 +5939,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -5427,6 +5979,12 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "?",
+     "scope:target is port"
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -5515,6 +6073,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
@@ -5559,6 +6118,26 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "and",
+     [
+      "?",
+      "custom tooltip text"
+     ],
+     [
+      "or",
+      [
+       "?",
+       "custom tooltip location rank"
+      ],
+      [
+       "?",
+       "custom tooltip location rank"
+      ]
+     ]
+    ],
+    "gate_labels": [],
     "groups": [
      {
       "mods": [
@@ -5657,6 +6236,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
@@ -5701,6 +6281,14 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "tag",
+     "SWE"
+    ],
+    "gate_labels": [
+     "Sweden"
+    ],
     "groups": [
      {
       "mods": [
@@ -5759,6 +6347,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -5803,6 +6392,14 @@
       "polarity": "bad",
       "value": "+10.00%"
      }
+    ],
+    "excludes": [],
+    "gate": [
+     "policy",
+     "german_mining_law"
+    ],
+    "gate_labels": [
+     "German Mining Law"
     ],
     "groups": [
      {
@@ -5890,6 +6487,7 @@
     ]
    ],
    "facets": {
+    "availability": "Any country",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -5942,6 +6540,29 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [
+     "urban right Foros Extensos",
+     "urban right Fuero Juzgo",
+     "urban right Fuero Real",
+     "urban right Fuero General",
+     "urban right Fueros de Aragón",
+     "urban right Furs de Valencia"
+    ],
+    "gate": [
+     "or",
+     [
+      "tag",
+      "ARA"
+     ],
+     [
+      "cul",
+      "catalan"
+     ]
+    ],
+    "gate_labels": [
+     "Aragon",
+     "Catalan"
+    ],
     "groups": [
      {
       "mods": [
@@ -5992,13 +6613,7 @@
      "is or was Aragon",
      "culture is Catalan",
      "in area Catalonia",
-     "in area Balearics",
-     "not — has urban right Foros Extensos",
-     "not — has urban right Fuero Juzgo",
-     "not — has urban right Fuero Real",
-     "not — has urban right Fuero General",
-     "not — has urban right Fueros de Aragón",
-     "not — has urban right Furs de Valencia"
+     "in area Balearics"
     ],
     "unlocked_by": []
    },
@@ -6009,13 +6624,13 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
      "Country",
      "Culture",
-     "Geography",
-     "Urban right"
+     "Geography"
     ],
     "source": "Available from the start"
    },
@@ -6050,6 +6665,21 @@
    "data": {
     "boosts": [],
     "country_mods": [],
+    "excludes": [],
+    "gate": [
+     "and",
+     [
+      "cgrp",
+      "french_group"
+     ],
+     [
+      "?",
+      "modifier:allow ville franche town rights"
+     ]
+    ],
+    "gate_labels": [
+     "French"
+    ],
     "groups": [
      {
       "mods": [
@@ -6109,6 +6739,7 @@
     ]
    ],
    "facets": {
+    "availability": "Specific countries",
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
@@ -6145,6 +6776,22 @@
   }
  ],
  "facets": [
+  {
+   "key": "availability",
+   "label": "Availability",
+   "options": [
+    {
+     "count": 28,
+     "label": "Any country",
+     "value": "Any country"
+    },
+    {
+     "count": 22,
+     "label": "Specific countries",
+     "value": "Specific countries"
+    }
+   ]
+  },
   {
    "key": "source",
    "label": "Source",
@@ -6303,11 +6950,6 @@
      "value": "Culture"
     },
     {
-     "count": 1,
-     "label": "Event or script",
-     "value": "Event or script"
-    },
-    {
      "count": 15,
      "label": "Geography",
      "value": "Geography"
@@ -6318,7 +6960,7 @@
      "value": "Law"
     },
     {
-     "count": 9,
+     "count": 16,
      "label": "No requirement",
      "value": "No requirement"
     },
@@ -6331,11 +6973,6 @@
      "count": 2,
      "label": "Reform",
      "value": "Reform"
-    },
-    {
-     "count": 23,
-     "label": "Urban right",
-     "value": "Urban right"
     }
    ]
   }

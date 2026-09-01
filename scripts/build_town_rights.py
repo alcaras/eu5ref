@@ -46,6 +46,8 @@ def main():
                 mods.extend(block)
         req = requirements.describe(getattr(t, 'potential', None),
                                     getattr(t, 'allow', None), limit=10)
+        # compiled boolean over static country facts, for the country lens
+        gate, gate_labels = ref.gate_of(t, 'potential', 'allow')
         unlocked = [getattr(a, 'display_name', str(a))
                     for a in (getattr(t, 'unlocked_by', None) or [])]
         boosts, seen = [], set()
@@ -68,14 +70,18 @@ def main():
                 'kept': 'Kept at conquest' if getattr(t, 'kept_at_conquest', True)
                         else 'Lost at conquest',
                 'good': [g['label'] for g in boosts] or None,
+                'availability': req['availability'],
                 'requires': req['tags'],
             },
             'mods': mods,
             'data': {
+                'gate': gate,
+                'gate_labels': gate_labels,
                 'groups': groups,
                 'location_mods': next((g['mods'] for g in groups if g['scope'] == 'Location'), []),
                 'country_mods': next((g['mods'] for g in groups if g['scope'] == 'Country'), []),
                 'requires': req['lines'],
+                'excludes': req['excludes'],
                 'unlocked_by': unlocked,
                 'boosts': boosts,
                 'kept_at_conquest': bool(getattr(t, 'kept_at_conquest', True)),
@@ -85,7 +91,8 @@ def main():
         'dataset': 'town-rights',
         'source': 'in_game/common/town_rights',
         'entities': entities,
-        'facets': facet_meta(entities, [('source', 'Source'), ('kept', 'At conquest'),
+        'facets': facet_meta(entities, [('availability', 'Availability'),
+                                        ('source', 'Source'), ('kept', 'At conquest'),
                                         ('good', 'Boosts'), ('requires', 'Requires')]),
     })
 

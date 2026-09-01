@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EntityTable from '../components/EntityTable.astro';
 import FilterBar from '../components/FilterBar.astro';
+import CountryLens from '../components/CountryLens.astro';
 import data from '../data/laws.json';
 
 const entities = data.entities;
@@ -12,6 +13,7 @@ const columns = [
   { key: 'government', label: 'Government', kind: 'facet' },
   { key: 'policy_names', label: 'Policies', kind: 'chips' },
   { key: 'requires', label: 'Requires', kind: 'lines' },
+  { key: 'excludes', label: 'Conflicts with', kind: 'lines' },
 ] as const;
 ---
 <Base
@@ -26,6 +28,7 @@ const columns = [
   description="Every law group and its selectable policies in Europa Universalis V."
 >
   <div data-filter-scope>
+    <CountryLens placeholder="Show what a country can pass…" />
     <FilterBar facets={facets} placeholder="Filter laws…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="laws" />
   </div>

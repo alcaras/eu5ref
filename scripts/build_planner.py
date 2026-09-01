@@ -144,10 +144,21 @@ def main():
     out = ROOT / 'public' / 'planner.json'
     out.write_text(json.dumps(payload, sort_keys=True, ensure_ascii=False,
                               separators=(',', ':')) + '\n', encoding='utf-8')
+    # The same country facts, without the 3,178 advance nodes: every list
+    # page with compiled gates (privileges, laws, reforms, urban rights) can
+    # lazy-fetch this to answer "what can my country take?".
+    facts = ROOT / 'public' / 'country-facts.json'
+    lean = [{'t': c['t'], 'n': c['n'], 'f': c['f']} for c in clist]
+    facts.write_text(json.dumps({'countries': lean, 'formables': formable_gates},
+                                sort_keys=True, ensure_ascii=False,
+                                separators=(',', ':')) + '\n', encoding='utf-8')
+
     kb = out.stat().st_size // 1024
     gated = sum(1 for n in nodes.values() if 'g' in n)
     print(f'  public/planner.json: {len(nodes)} nodes ({gated} gated), '
           f'{len(clist)} countries, {kb}KB')
+    print(f'  public/country-facts.json: '
+          f'{facts.stat().st_size // 1024}KB')
 
 
 if __name__ == '__main__':

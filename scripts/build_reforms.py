@@ -33,12 +33,14 @@ def main():
             'facets': {
                 'government': ename(r.government) if not isinstance(r.government, str) else r.government,
                 'age': ename(r.age) or 'Any age',
+                'availability': req['availability'],
                 'requires': req['tags'],
             },
             'mods': mods,
             'data': {
                 'gate': gate, 'gate_labels': gate_labels,
                 'requires': req['lines'],
+                'excludes': req['excludes'],
                 'major': bool(getattr(r, 'major', False)),
             },
         })
@@ -46,7 +48,8 @@ def main():
         'dataset': 'reforms',
         'source': 'in_game/common/government_reforms',
         'entities': entities,
-        'facets': facet_meta(entities, [('government', 'Government'), ('age', 'Age'),
+        'facets': facet_meta(entities, [('availability', 'Availability'),
+                                        ('government', 'Government'), ('age', 'Age'),
                                         ('requires', 'Requires')]),
     })
 

@@ -93,6 +93,7 @@ def main():
     entities = []
     for name, law in sorted(laws.items()):
         slug = slugify(name)
+        gate, gate_labels = ref.gate_of(law, 'potential', 'allow')
         law_req = requirements.describe(getattr(law, 'potential', None),
                                         getattr(law, 'allow', None),
                                         getattr(law, 'locked', None), limit=6)
@@ -118,7 +119,9 @@ def main():
                 'mods': [m for g in groups for m in g['mods']],
                 'groups': groups,
                 'requires': preq['lines'],
+                'excludes': preq['excludes'],
                 'req_tags': preq['tags'],
+                'availability': preq['availability'],
                 'years': years,
             })
         # A law's requirement tags include everything its policies need — the
@@ -145,12 +148,20 @@ def main():
                              else law.law_religion_group if isinstance(law.law_religion_group, str)
                              else None) or None,
                 'requires': tags or [requirements.NONE],
+                'availability': (requirements.SOME_COUNTRIES
+                                 if law_req['availability'] == requirements.SOME_COUNTRIES
+                                 or any(p['availability'] == requirements.SOME_COUNTRIES
+                                        for p in policies)
+                                 else requirements.ANY_COUNTRY),
             },
             'mods': mods_from_tree(getattr(law, 'modifier', None)),
             'data': {
+                'gate': gate,
+                'gate_labels': gate_labels,
                 'policy_names': [p['name'] for p in policies],
                 'policies': policies,
                 'requires': law_req['lines'],
+                'excludes': law_req['excludes'],
                 'requires_vote': bool(getattr(law, 'requires_vote', False)),
             },
         })
@@ -158,7 +169,8 @@ def main():
         'dataset': 'laws',
         'source': 'in_game/common/laws',
         'entities': entities,
-        'facets': facet_meta(entities, [('category', 'Category'), ('government', 'Government'),
+        'facets': facet_meta(entities, [('availability', 'Availability'),
+                                        ('category', 'Category'), ('government', 'Government'),
                                         ('religion', 'Religion'), ('requires', 'Requires')]),
     })
 

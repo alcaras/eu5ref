@@ -380,3 +380,16 @@ ul.tlines li + li { border-top: 1px dotted var(--border-faint); }
 .reqlist { list-style: none; margin: 0; padding: 0; font-size: 13px; color: var(--text-soft); }
 .reqlist li { padding: 2px 0; }
 .reqlist li + li { border-top: 1px dotted var(--border-faint); }
+
+/* ── country lens: "what can my country take?" ── */
+.clens { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.clens__state { font-size: 12px; color: var(--gold-soft); font-family: var(--font-mono); }
+.clens__clear {
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--text-dim);
+  border-radius: var(--radius-sm); padding: 2px 9px; font-size: 12px; cursor: pointer;
+  font-family: var(--font-ui);
+}
+.clens__clear:hover { border-color: var(--border-strong); color: var(--text-soft); }
+/* available only once you acquire something the gate depends on */
+.etbl tr.row--cond td:first-child { box-shadow: inset 2px 0 0 var(--gold-deep); }
+.etbl tr.row--cond .ename { color: var(--gold-soft); }
