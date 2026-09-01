@@ -80,3 +80,29 @@ refuted the moment one country has A without P.
 
 Caveat: the saves in `~/Dropbox/cc/eu5stats/save` are game version 1.0.10
 while `game/` is 1.3.11, so the trees need not match.
+
+## Which tree an advance lands in
+
+`whichtree.py <sets.json>` uses the one exact constraint available: a tree's
+root is an ancestor of everything in it, so a country that researched X but
+not root R proves X is not in R's tree. Run over ~2,400 countries this
+eliminates candidates outright — no statistics, no thresholds. On a 1795
+save it uniquely pinned the tree for 16 Discovery and 6 Absolutism orphans
+and narrowed most of the rest to two or three.
+
+**The save must come from a campaign played entirely on the patch you are
+testing.** Researched advances survive a patch; the game does not re-validate
+them. So a campaign begun on an older patch has lists built under the OLD
+layout, and testing them against the new one produces false refutations —
+it eliminates the correct tree and leaves no trace. Two cheap pre-filters:
+
+- `metadata` containing `incompatible=yes` — the game flagging a save carried
+  across patches.
+- Compare the save's advance keys against `src/data/advances.json`. Between
+  1.0.10 and 1.3.11, 9 advances were removed outright (`arte_della_lana`,
+  `venetian_arsenal_advance`, `genoese_banking_traditions`, …). A changed
+  advance list means a changed `ConstructTree` input, hence a changed layout.
+
+A day-one save is clean but useless — nothing has been researched. What is
+needed is a campaign *started* on the current patch and run a couple of
+centuries.
