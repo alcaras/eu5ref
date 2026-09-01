@@ -29,6 +29,12 @@ const ages = agesData.entities
   .sort((a: any, b: any) => a.year - b.year)
   .filter((a: any) => a.n > 0);
 
+// Prereqs are named with the branch they sit in, so "after X" says where in
+// the tree X lives without leaving the page.
+const byId: Record<string, any> = Object.fromEntries(
+  advancesData.entities.map((e: any) => [e.id, e]));
+const branchOf = (id: string) => byId[id]?.facets?.branch || null;
+
 const plain = (tokens: any[] | null) =>
   (tokens || []).map((t: any) => (t[0] === 't' ? t[1] : t[2] || '')).join('');
 
@@ -50,6 +56,10 @@ const tableEntities = focusAdvances.map((e: any) => ({
   facets: { age: e.facets.age, focus: FOCUS_NAME[e.data.specialization] },
   data: {
     ...e.data,
+    requires: e.data.requires.map((r: any) => ({
+      ...r,
+      label: branchOf(r.id) ? `${r.label} (${branchOf(r.id)})` : r.label,
+    })),
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -143,7 +153,11 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                       <div class="fx-adv__req">
                         <span class="fx-adv__k">after</span>
                         {e.data.requires.map((r: any, i: number) => (
-                          <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
+                          <Fragment>
+                            {i > 0 && ', '}
+                            <Term id={r.id} label={r.label} showIcon={false} />
+                            {branchOf(r.id) && <span class="fx-adv__branch"> ({branchOf(r.id)})</span>}
+                          </Fragment>
                         ))}
                       </div>
                     )}
@@ -242,6 +256,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-adv :global(ul.mods li) { white-space: normal; font-size: 12.5px; }
   .fx-adv__unlock, .fx-adv__req { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
   .fx-adv__unlock { color: var(--gold-soft); }
+  .fx-adv__branch { color: var(--text-faint); }
   .fx-adv__k {
     font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--text-faint); margin-right: 5px;
