@@ -179,14 +179,15 @@ tree order, parent and depth. In short:
 
 **Verified in game (1.3.11):** Bookkeeping under Medical Schools, Humanism +
 Formalized Officer Corps under Two-decker, Merchant Fleets in Enlightenment,
-Heavy Frigate + Buffer States under Global Ambitions, Military Traditions
-under Dry Dock, and a full Age of Discovery screenshot as Poland — every
+Heavy Frigate + Buffer States under Global Ambitions, Campaign Logistics
+Planning + Additional Loyalist Recruitment under Rights of Man, Military
+Traditions under Dry Dock, and a full Age of Discovery screenshot as Poland — every
 tree, node and edge including the nationals (Polish Renaissance / Supremus
 Dux Lithuaniae under Print Culture, Wojewodztwo under Pike Square, Mendicant
 Orders under Diplomatic Training, Reform Church Music under Artists). The
 `CHECKS` table in layout.py encodes these; `python3 scripts/lib/layout.py`
-prints 12/14 — the two `UNCONFIRMED` (Campaign Logistics Planning, Additional
-Loyalist Recruitment → Rights of Man) await a glance at the Revolutions tab.
+prints 14/14. (An earlier note had the Rights of Man pair under Global
+Ambitions — that was a misread of the screenshot, not a model miss.)
 
 **Emitted as** `data.drawn_in` (tree) and `data.drawn_under` (parent), each
 `{id, name, computed}` — `computed: true` where the files declare nothing and

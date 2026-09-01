@@ -37,7 +37,8 @@ slotted children and are not counted against a slot.
 
 Verified against the live game, 1.3.11: Bookkeeping under Medical Schools,
 Humanism + Formalized Officer Corps under Two-decker, Merchant Fleets in
-Enlightenment, Heavy Frigate + Buffer States under Global Ambitions, and a
+Enlightenment, Heavy Frigate + Buffer States under Global Ambitions, Campaign
+Logistics Planning + Additional Loyalist Recruitment under Rights of Man, and a
 full Age of Discovery screenshot (every visible node and edge of the Surgery,
 New World, Printing Press and Pike and Shot trees, incl. Poland's own
 national advances slotted where the game draws them). `content_priority`
@@ -304,6 +305,8 @@ CHECKS = [
     ('merchant_power_from_maritime_rev_dip_choice', 'tree', 'enlightenment_advance'),
     ('unlock_heavy_frigate_advance', 'parent', 'power_projection_advance_6'),
     ('buffer_states', 'parent', 'power_projection_advance_6'),
+    ('global_supply_limit_modifier_advance_6', 'parent', 'rights_of_man'),
+    ('additional_loyalist_recruitment', 'parent', 'rights_of_man'),
     # Age of Discovery screenshot, Poland: every visible node of all four trees
     ('military_traditions', 'parent', 'dry_dock_advance'),
     ('mendicant_orders', 'parent', 'diplomatic_training'),
@@ -311,12 +314,6 @@ CHECKS = [
     ('supremus_dux_lithuaniae', 'parent', 'print_culture'),
     ('wojewodztwo_advance', 'parent', 'pike_square'),
     ('reform_church_music', 'parent', 'artists_advance_discovery'),
-]
-# Read off a screenshot by the assistant, not by a player, and the pass puts
-# both under Rights of Man (Global Ambitions' sibling) — awaiting a look.
-UNCONFIRMED = [
-    ('global_supply_limit_modifier_advance_6', 'parent', 'power_projection_advance_6'),
-    ('additional_loyalist_recruitment', 'parent', 'power_projection_advance_6'),
 ]
 
 if __name__ == '__main__':
@@ -329,13 +326,11 @@ if __name__ == '__main__':
     args = ap.parse_args()
     placed = run(args.root, args.sort, None if args.gate == 'none' else args.gate)
     ok = 0
-    for key, what, want in CHECKS + UNCONFIRMED:
+    for key, what, want in CHECKS:
         got = placed.get(key, {}).get(what)
         ok += got == want
         tag = 'ok ' if got == want else 'XX '
-        if (key, what, want) in UNCONFIRMED:
-            tag += '(unconfirmed) '
         print(f"{tag} {key}.{what} = {got}  (expected {want})")
-    print(f"{ok}/{len(CHECKS) + len(UNCONFIRMED)} checks; {len(placed)} advances placed", file=sys.stderr)
+    print(f"{ok}/{len(CHECKS)} checks; {len(placed)} advances placed", file=sys.stderr)
     if args.json:
         json.dump(placed, open(args.json, 'w'), indent=0)
