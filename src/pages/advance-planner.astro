@@ -7,8 +7,11 @@ import Base from '../layouts/Base.astro';
   <p class="pl-intro">
     The advances screen: <b>age tabs</b>, then one pane per branch, laid out
     top-down like the game — each prerequisite tier is a row, and what it
-    leads to sits underneath. Same branches, tiers and edges as in game, so
-    nothing needs mentally rotating. Click a pane header to collapse it.
+    leads to sits underneath. Same trees, tiers and edges as in game, in the
+    same left-to-right order, so nothing needs mentally rotating. A dashed
+    edge marks an advance whose files declare no prerequisite: the game
+    slots it into a tree when it loads, and that placement is reproduced
+    here. Click a pane header to collapse it.
     Pick a country and everything that can never apply to it disappears —
     usually about two thirds of the 3,178 advances.
     <b>Hover</b> to light up an advance's whole prerequisite chain,
@@ -210,6 +213,7 @@ import Base from '../layouts/Base.astro';
     svg.pl-edges { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
     svg.pl-edges path { stroke: var(--border-strong); stroke-width: 1.4; fill: none; opacity: .45; }
     svg.pl-edges path.hot { stroke: var(--gold); opacity: 1; stroke-width: 2; }
+    svg.pl-edges path.slot { stroke-dasharray: 4 4; }
 
     .pl-tip {
       position: fixed; z-index: 90; max-width: 330px; padding: 9px 12px;
@@ -230,7 +234,8 @@ import Base from '../layouts/Base.astro';
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
 
     type Node = {
-      n: string; s: string; a: number; b: string; d: number; r: string[];
+      n: string; s: string; a: number; b: string; bo?: number; d: number; r: string[];
+      p?: string;   // drawn under this node in game without it being a prerequisite
       k: number; i?: string; g?: any; gl?: string[]; m?: string[]; u?: string[]; sp?: string;
     };
     type Facts = { tag: string; cul: string; cgrp: string[]; lang: string;
@@ -359,13 +364,21 @@ import Base from '../layouts/Base.astro';
     }
 
     // ── planning ───────────────────────────────────────────────
+    /** What has to come first: the declared `requires`, plus — for an
+     *  advance that declares none — the node the game draws it under.
+     *  In game that node has to be researched first exactly like a
+     *  declared prerequisite; the files just don't say so. */
+    function reqOf(id: string): string[] {
+      const n = D.nodes[id];
+      return n.r.length ? n.r : (n.p ? [n.p] : n.r);
+    }
     function addWithPrereqs(id: string) {
       const stack = [id];
       while (stack.length) {
         const cur = stack.pop()!;
         if (planned.has(cur) || researched.has(cur)) continue;
         planned.add(cur);
-        for (const r of D.nodes[cur].r) stack.push(r);
+        for (const r of reqOf(cur)) stack.push(r);
       }
     }
     function removeWithDependents(id: string) {
@@ -374,7 +387,7 @@ import Base from '../layouts/Base.astro';
       while (changed) {
         changed = false;
         for (const pid of [...planned]) {
-          if (D.nodes[pid].r.some((r) => !planned.has(r) && !researched.has(r))) {
+          if (reqOf(pid).some((r) => !planned.has(r) && !researched.has(r))) {
             planned.delete(pid); changed = true;
           }
         }
@@ -486,8 +499,11 @@ import Base from '../layouts/Base.astro';
       const vis = new Set(ids);
       const parentOf = new Map<string, string | null>();
       for (const id of ids) {
-        const p = D.nodes[id].r.find((r) => vis.has(r) && D.nodes[r].b === D.nodes[id].b);
-        parentOf.set(id, p ?? null);
+        const n = D.nodes[id];
+        // prerequisite first; else the slot the game's layout gave an orphan
+        const p = n.r.find((r) => vis.has(r) && D.nodes[r].b === n.b)
+          ?? (n.p && vis.has(n.p) && D.nodes[n.p].b === n.b ? n.p : null);
+        parentOf.set(id, p);
       }
       const byBranch = new Map<string, string[]>();
       for (const id of ids) {
@@ -495,8 +511,9 @@ import Base from '../layouts/Base.astro';
         if (!byBranch.has(b)) byBranch.set(b, []);
         byBranch.get(b)!.push(id);
       }
+      // same left-to-right order as the in-game tab
       const trees = [...byBranch.entries()].filter(([, l]) => l.length > 1)
-        .sort((a, b) => b[1].length - a[1].length);
+        .sort((a, b) => (D.nodes[a[0]]?.bo ?? 99) - (D.nodes[b[0]]?.bo ?? 99) || b[1].length - a[1].length);
       const loners = [...byBranch.entries()].filter(([, l]) => l.length === 1)
         .flatMap(([, l]) => l)
         .sort((a, b) => D.nodes[a].n.localeCompare(D.nodes[b].n));
@@ -571,14 +588,19 @@ import Base from '../layouts/Base.astro';
       const { pos, width, height } = layoutBranch(list, parentOf);
       let paths = '';
       for (const [id, pt] of pos) {
-        for (const r of D.nodes[id].r) {
+        const n = D.nodes[id];
+        // declared prerequisite edges, plus — dashed — the edge to the node
+        // the game draws an undeclared advance under (see reqOf)
+        const edges: [string, boolean][] = n.r.map((r) => [r, false] as [string, boolean]);
+        if (!n.r.length && n.p) edges.push([n.p, true]);
+        for (const [r, slot] of edges) {
           const rp = pos.get(r);
           if (!rp) continue;
           // leave the prerequisite's bottom edge, enter the dependant's top
           const x1 = rp.x + NW / 2, y1 = rp.y + NH, x2 = pt.x + NW / 2, y2 = pt.y;
           const my = (y1 + y2) / 2;
           const hot = planned.has(id) && (planned.has(r) || researched.has(r));
-          paths += `<path class="${hot ? 'hot' : ''}" data-a="${r}" data-b="${id}" ` +
+          paths += `<path class="${hot ? 'hot' : ''}${slot ? ' slot' : ''}" data-a="${r}" data-b="${id}" ` +
             `d="M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}"/>`;
         }
       }
@@ -625,7 +647,7 @@ import Base from '../layouts/Base.astro';
       const { trees, loners, parentOf } = branchesOf(rest);
       childIndex = new Map();
       for (const id of rest) {
-        for (const r of D.nodes[id].r) {
+        for (const r of reqOf(id)) {
           if (!childIndex.has(r)) childIndex.set(r, []);
           childIndex.get(r)!.push(id);
         }
@@ -685,6 +707,7 @@ import Base from '../layouts/Base.astro';
       for (const m of n.m || []) html += `<div>${m}</div>`;
       for (const u of n.u || []) html += `<div class="unl">${u}</div>`;
       if (reqs.length) html += `<div class="hint">after: ${reqs.join(', ')}</div>`;
+      else if (n.p && D.nodes[n.p]) html += `<div class="hint">after: ${D.nodes[n.p].n} (drawn there in game; the files declare no prerequisite)</div>`;
       html += `<div class="hint">click to plan · right-click researched · ⌥-click opens page</div>`;
       tip.innerHTML = html;
       tip.hidden = false;
@@ -881,7 +904,7 @@ import Base from '../layouts/Base.astro';
         const up = [id];
         while (up.length) {
           const cur = up.pop()!;
-          for (const r of D.nodes[cur]?.r || []) if (!chain.has(r)) { chain.add(r); up.push(r); }
+          for (const r of D.nodes[cur] ? reqOf(cur) : []) if (!chain.has(r)) { chain.add(r); up.push(r); }
         }
         const down = [id];
         while (down.length) {

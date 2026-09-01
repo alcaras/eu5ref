@@ -152,50 +152,57 @@ Press + Pike and Shot and nothing else.
 
 **But 383 advances declare no `requires`, no `depth` and no `in_tree_of`** —
 every focus advance among them — and the game gives each of them a REAL
-prerequisite anyway, computed at load. This was settled by decompiling
-`ConstructTree` (advance.cpp, 0x14429a310; see `scripts/re/`), and it is not
-derivable from the files:
+prerequisite anyway, computed at load: the node above it in the tree screen
+must be researched first. This was settled by decompiling `ConstructTree`
+(advance.cpp; method in `scripts/re/README.md`) and **is now reproduced from
+the files by `scripts/lib/layout.py`** (docstring = the algorithm), which
+`build_advances.py` runs; `placed[key]` gives every advance its age, tree,
+tree order, parent and depth. In short:
 
-1. Advances with `depth = 0` and no parent become tree roots; `ConstructTree`
-   then runs per root, recursively.
-2. An advance with a declared `requires` is attached under its parent — but
-   only if that parent still has capacity. If not, it is deferred.
-3. `FindSlot(node)` decides capacity: a node holds 2 children at depth 0-1,
-   and deeper down 2 if `depth % 3 == 1` else 1, counting only children that
-   pass a static discriminator (`CountKids`, on fields +0x548/+0x250/+0x268/
-   +0x1c4 — a property of the definition, NOT of the viewing country: the tree
-   is built at advance-database load, before any country exists). Full nodes
-   recurse into the child subtree with the smallest width and take the best
-   slot found there.
-4. An advance with `in_tree_of` is placed into that tree by `FindSlot`.
-5. **An advance with neither parent nor `in_tree_of` gets `FindSlot(root)` on
-   whichever tree is being constructed when its turn comes, and `AttachChild`
-   makes that a real edge** — so it really does have to be researched after
-   whatever it landed under.
-6. The order the deferred/orphan buckets are drained in is randomised by a
-   seeded PRNG threaded through the recursion.
+1. Roots are the `depth = 0` advances, in database order (`common/advances/
+   *.txt` sorted by filename, definition order within a file).
+2. Declared `requires` children attach under their parent if it is placed
+   and still has capacity, else defer; `in_tree_of` advances are FindSlot-ed
+   into that tree in seeded-random order; then the orphans, FindSlot-ed into
+   the age's trees under a per-root quota rotation; deferred ones ping-pong
+   until placed; finally the non-generic advances (focus `for`, `government`,
+   `country_type`, or any `potential`) go under their `requires`, else
+   FindSlot(in_tree_of), else FindSlot(age root).
+3. `FindSlot` capacity: 2 children at depth < 2, deeper 2 if `depth % 3 == 1`
+   else 1; a full node recurses into the child with the fewest descendants.
+4. The RNG is the game's counter-based hash with a **constant seed
+   (0x441e9e04)**, so the layout is global and identical for every player —
+   countries only hide nodes. The "generic" test is `potential` — the
+   content_priority and `allow` candidates were tried and rejected (0/8);
+   `potential` gives 12/12 confirmed placements and zero "prerequisite not in
+   the same tree" warnings.
 
-**The result is stable and global.** The draw order comes from the game's
-counter-based RNG (`hash(base_seed, counter)`, constants 0xB5297A4D /
-0x68E31DA4 / 0x1B56C4E9 / 0x92D68CA2), and the base seed is evidently fixed:
-confirmed in game that a fresh campaign puts Bookkeeping in the same place.
-Since construction happens at database load, before a country is chosen, every
-player gets the same tree — you simply do not see the advances you cannot
-research. So an orphan's parent IS a real, stable, global fact; it just is not
-in the data files. Deriving it would mean reimplementing this function
-faithfully (order, predicates, capacity, subtree-width metric, RNG) and
-recovering the base seed.
-`data.drawn_in` is emitted only for a placement the files declare. Two earlier
-guesses were wrong and cost several rounds — "no prereq = its own root" (~38
-phantom roots against the screen's four) and "orphans join the age's ungated
-free tree" (disproved by Bookkeeping under Scientific Revolution and Merchant
-Fleets under Enlightenment). Don't retry either.
+**Verified in game (1.3.11):** Bookkeeping under Medical Schools, Humanism +
+Formalized Officer Corps under Two-decker, Merchant Fleets in Enlightenment,
+Heavy Frigate + Buffer States under Global Ambitions, Military Traditions
+under Dry Dock, and a full Age of Discovery screenshot as Poland — every
+tree, node and edge including the nationals (Polish Renaissance / Supremus
+Dux Lithuaniae under Print Culture, Wojewodztwo under Pike Square, Mendicant
+Orders under Diplomatic Training, Reform Church Music under Artists). The
+`CHECKS` table in layout.py encodes these; `python3 scripts/lib/layout.py`
+prints 12/14 — the two `UNCONFIRMED` (Campaign Logistics Planning, Additional
+Loyalist Recruitment → Rights of Man) await a glance at the Revolutions tab.
 
-**Known gap:** because those edges are real, the advance planner's
-prerequisite closure and cost are optimistic for these 383 — in game they sit
-behind whatever chain the layout gave them. Declared `requires` edges are
-unaffected: the final pass attaches an advance to its real parent with no
-capacity check, so authored prerequisites are never displaced.
+**Emitted as** `data.drawn_in` (tree) and `data.drawn_under` (parent), each
+`{id, name, computed}` — `computed: true` where the files declare nothing and
+the value comes from the reproduced pass. The public wording is "reproduced
+from the game files and checked against the tech screen", never
+"decompiled", and no disassembly is quoted on the site. The planner's
+`p` key carries the computed parent and `reqOf()` treats it as an effective
+prerequisite (planning pulls it in, removal cascades, chains highlight),
+drawn dashed. Two earlier guesses were wrong and cost several rounds — "no
+prereq = its own root" and "orphans join the age's ungated free tree". Don't
+retry either; and if a placement looks wrong, the fix is in layout.py's
+ordering/predicates, not in a per-advance override.
+
+**Re-check each patch:** any change to the advance list changes the
+ConstructTree input, hence the layout. Run `python3 scripts/lib/layout.py`
+after `make data`; a dropped CHECK means a new screenshot pass is due.
 
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):

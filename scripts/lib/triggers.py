@@ -132,9 +132,9 @@ def _pretty(key: str) -> str:
 def compile_trigger(tree, culture_groups: dict[str, str] | None = None):
     """Tree → compiled expression, or None when there is no gate.
 
-    culture_groups maps culture script name → its group name, so
-    `merged_culture_group_contains_culture = culture:x` can be lowered to a
-    plain culture-group test.
+    culture_groups (culture script name → group) is accepted for callers
+    that pass it; `merged_culture_group_contains_culture` deliberately does
+    NOT use it — see the note at that predicate.
     """
     if tree is None:
         return None
@@ -260,11 +260,14 @@ def _compile_pair(key: str, value, cgroups, scope: str | None = None) -> list | 
     if scope == 'culture' and key == 'language':
         return ['lang', _strip_scope(value)]
     if key == 'merged_culture_group_contains_culture':
-        # "shares a (merged) culture group with culture X" — lower to that
-        # culture's own group when we can resolve it
+        # A *merged* culture group is the unified culture a player forms by
+        # merging a whole group (MERGE_CULTURE_GROUP_EFFECT: "merges a culture
+        # group into a new primary culture"). No 1337 country has one, so
+        # this is acquirable, not static: lowering it to the culture's group
+        # made every Slavic-group country "own" the Serbian, Croatian and
+        # Bulgarian advances — the tech screen for Poland shows none of them.
         cul = _strip_scope(value)
-        grp = cgroups.get(cul)
-        return ['cgrp', grp] if grp else ['cul', cul]
+        return ['?', f'merged culture group containing {_pretty(cul)}']
     # `has_tribal_government = yes|no` — the only government shape asked as a
     # boolean rather than `government_type = government_type:x`.
     if key == 'has_tribal_government':

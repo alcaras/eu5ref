@@ -1,5 +1,12 @@
 # Decompiling eu5.exe
 
+The result of this work is `scripts/lib/layout.py` — a reimplementation of
+the game's `ConstructTree` pass that places every advance in a tree from
+the game files alone (see its docstring for the algorithm and what it was
+verified against). `build_advances.py` runs it; nothing in this folder is
+part of the build. What follows is how the function was found and read, so
+the next patch can be re-checked.
+
 `./setup.sh` (run from anywhere) downloads a JDK 21 and Ghidra into
 `.toolbin/re/` (gitignored, ~1.2GB) and builds Ghidra's decompiler from the
 C++ source it ships — no macOS binary is included in the release, and the
@@ -60,7 +67,10 @@ Advance fields seen: +0x258 parent (`requires`), +0x260 `in_tree_of`,
 Tree node fields: +0x10 depth, +0x18 advance, +0x20/+0x2c child array,
 +0x38 subtree width.
 
-## Verifying against saves
+## Verifying against saves (superseded)
+
+These scripts predate the decompilation and are kept for the next patch's
+re-check; the layout itself now comes from `scripts/lib/layout.py`.
 
 A melted EU5 save carries `researched_advances={ key=yes … }` per country —
 ~2,400 countries in a mid-game multiplayer save. Since the computed edges are

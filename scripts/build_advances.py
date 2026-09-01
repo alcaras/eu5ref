@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+import layout
 import ref
 import triggers
 from ref import (eid, ename, export_icon, mods_from_tree, ref_list, rich,
@@ -76,48 +77,20 @@ def main():
             'age': ename(a.age) or 'No age',
             'requires': [r for r in (getattr(a, 'requires', None) or [])],
             'gate': gate,
-            'explicit_root': a.depth == 0,
             'allow_state': triggers.summarize(getattr(a, 'allow', None), labels),
         }
 
-    # ── pass 2: branch + tier within each age ──────────────────
-    # Parent = the first prerequisite in the same age (the files build each
-    # age as a forest of chains; cross-age prereqs start a new local root).
-    parent: dict[str, str | None] = {}
-    # `in_tree_of = x` puts an advance in x's tree without making it x's
-    # child — it is drawn there but needs no prerequisite. 33 advances use
-    # it; without this they look like roots of their own.
-    tree_of: dict[str, str | None] = {}
-    for name, r in recs.items():
-        p = None
-        for req in r['requires']:
-            rn = getattr(req, 'name', None)
-            if rn in recs and recs[rn]['age'] == r['age'] and not r['explicit_root']:
-                p = rn
-                break
-        parent[name] = p
-        t = getattr(r['obj'], 'in_tree_of', None)
-        tn = getattr(t, 'name', None) if t is not None else None
-        # Only what the files declare. An advance with no `requires` and no
-        # `in_tree_of` is left unplaced: the tech screen does draw it inside
-        # one of the age's four trees, but nothing in the data says which,
-        # and guessing put it in the wrong place. See CLAUDE.md.
-        tree_of[name] = tn if (p is None and not r['explicit_root'] and tn in recs) else None
-
-    def root_of(n, seen=()):
-        host = tree_of.get(n)
-        if host and host not in seen:
-            return root_of(host, seen + (n,))
-        p = parent.get(n)
-        if p is None or p in seen:
-            return n
-        return root_of(p, seen + (n,))
-
-    def tier_of(n, seen=()):
-        p = parent.get(n)
-        if p is None or p in seen:
-            return 0
-        return 1 + tier_of(p, seen + (n,))
+    # ── pass 2: where each advance is drawn ───────────────────
+    # The tech screen is a forest per age; `requires` and `depth = 0` fix
+    # most of it, but 383 advances (every focus advance among them) declare
+    # neither and the game slots them in with a deterministic packing pass
+    # at load. scripts/lib/layout.py re-runs that pass over the files, so
+    # tree, parent and tier below are the game's own — `declared` says
+    # whether the files fix the parent (requires/root) or the pass did.
+    placed = layout.run(str(ref.ROOT / 'game' / 'in_game'))
+    missing = [n for n in recs if n not in placed]
+    if missing:
+        raise SystemExit(f'layout pass left {len(missing)} advances unplaced: {missing[:5]}')
 
     # ── pass 3: emit ───────────────────────────────────────────
     entities = []
@@ -126,13 +99,18 @@ def main():
         a = r['obj']
         slug = slugify(name)
         national = bool(a.countries) or a.in_tree_of is not None or r['gate'] is not None
-        root = root_of(name)
-        # Only a placement the files declare (a `requires` chain, `depth = 0`,
-        # or `in_tree_of`). 383 advances declare none; the tech screen does
-        # draw them somewhere, but every attempt to derive where has been
-        # wrong, so this stays empty until it is actually known. See CLAUDE.md.
-        drawn_in = ({'id': eid('advance', root), 'name': ename(recs[root]['obj']),
-                     'inferred': False} if root != name else None)
+        pl = placed[name]
+        root = pl['tree']
+        drawn_in = {'id': eid('advance', root), 'name': ename(recs[root]['obj']),
+                    'computed': not pl['tree_declared']}
+        # The node it hangs off. For a declared advance that is its
+        # prerequisite; for an orphan it is the slot the layout pass gave it,
+        # which in game must be researched first just the same (the files
+        # only omit to say so) — flagged computed.
+        drawn_under = ({'id': eid('advance', pl['parent']),
+                        'name': ename(recs[pl['parent']]['obj']),
+                        'computed': not pl['declared']}
+                       if pl['parent'] and pl['parent'] != name else None)
         gate = r['gate']
         # Keep each literal's KIND and raw value alongside its label: the
         # planner needs to tell "another country's tag" (unreachable) from a
@@ -161,13 +139,15 @@ def main():
             },
             'mods': mods_from_tree(a.modifiers),
             'data': {
-                'tier': tier_of(name),
+                'tier': pl['depth'] - 1,
+                'tree_index': pl['tree_index'],
                 'branch_id': eid('advance', root),
                 'requires': ref_list(r['requires'], 'advance'),
                 'countries': [c.display_name for c in (a.countries or [])],
                 'tree': ename(a.in_tree_of),
                 'specialization': getattr(a, 'age_specialization', None),
                 'drawn_in': drawn_in,
+                'drawn_under': drawn_under,
                 'gate': gate,
                 'gate_labels': gate_labels,
                 'gate_lits': gate_lits,

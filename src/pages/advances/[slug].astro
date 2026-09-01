@@ -21,17 +21,22 @@ const focus = FOCUS_NAME[(entity.data as any).specialization as string];
 // Which tree the advance sits on, and whether that tree's root is an
 // institution you must embrace or one of the ages' "always-available free
 // trees" (the files' own words: Surgery, Pharmacology, Sanitation…).
-// Where the files declare no tree, `drawn_in` carries the reasoned one (the
-// age's single ungated "free tree") flagged inferred — see build_advances.py.
+// Where the files declare no tree or no prerequisite, `drawn_in` /
+// `drawn_under` reproduce the game's own load-time placement, flagged
+// computed — see build_advances.py and scripts/lib/layout.py.
 const byId: Record<string, any> = Object.fromEntries(data.entities.map((e: any) => [e.id, e]));
 const drawnIn = (entity.data as any).drawn_in;
-const root = drawnIn ? byId[drawnIn.id] : null;
+const drawnUnder = (entity.data as any).drawn_under;
+const root = byId[drawnIn.id];
 const rootInstitution = !!root && (root.data.requires_state || [])
   .some((r: string) => r.startsWith('has embraced institution: '));
-const treeLabel = !drawnIn
-  ? 'not declared'
-  : `${drawnIn.name} · ${rootInstitution ? 'institution' : 'free tree'}`
-    + (drawnIn.inferred ? ' (inferred)' : '');
+const treeLabel = `${drawnIn.name} · ${rootInstitution ? 'institution' : 'free tree'}`
+  + (drawnIn.computed ? ' (computed)' : '');
+const COMPUTED_HINT = 'The files declare no prerequisite for this advance. This is the node the '
+  + 'game draws it under when it loads — which has to be researched first — reproduced from the '
+  + 'game files and checked against the tech screen.';
+const TREE_HINT = 'The files declare no tree for this advance; the game slots it into one when it loads, '
+  + 'and that placement is reproduced here and checked against the tech screen.';
 ---
 <Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>
   <EntityDetail entity={entity} backlinks={backlinks} modsTitle="Effects">
@@ -76,15 +81,21 @@ const treeLabel = !drawnIn
         <div class="panel">
           <h3>Position</h3>
           <div class="kv">
-            {entity.data.requires.length > 0 && (
+            {entity.data.requires.length > 0 ? (
               <Fragment>
                 <span class="k">Requires</span>
                 <span class="v">{entity.data.requires.map((r: any, i: number) => (
                   <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
                 ))}</span>
               </Fragment>
+            ) : drawnUnder && (
+              <Fragment>
+                <span class="k">After</span>
+                <span class="v"><Term id={drawnUnder.id} label={drawnUnder.name} showIcon={false} />
+                  {' '}<span class="computed" title={COMPUTED_HINT}>computed</span></span>
+              </Fragment>
             )}
-            <Fragment><span class="k">Tree</span><span class="v">{treeLabel}</span></Fragment>
+            <Fragment><span class="k">Tree</span><span class="v" title={drawnIn.computed ? TREE_HINT : undefined}>{treeLabel}</span></Fragment>
             {entity.data.countries.length > 0 && (
               <Fragment><span class="k">Countries</span><span class="v">{entity.data.countries.join(', ')}</span></Fragment>
             )}
@@ -94,3 +105,10 @@ const treeLabel = !drawnIn
     </Fragment>
   </EntityDetail>
 </Base>
+<style>
+  .computed {
+    font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-faint); border: 1px solid var(--border);
+    border-radius: 3px; padding: 0 4px; cursor: help;
+  }
+</style>

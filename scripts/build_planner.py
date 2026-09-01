@@ -11,8 +11,10 @@ advances badged — so the payload carries structure, not just a flat list.
   nodes          id → compact node record (see KEYS below)
   countries      [{t tag, n name, col, cu culture, re religion, f facts}]
 
-KEYS per node: n name · s slug · a age index · b branch id · d tier ·
-r requires · g compiled gate · gl gate labels · i icon · k unlock category
+KEYS per node: n name · s slug · a age index · b branch id · bo tree order
+within the age · d tier · r requires · p the node it is drawn under when
+that is NOT a prerequisite (the game's layout slot for an orphan advance) ·
+g compiled gate · gl gate labels · i icon · k unlock category
 (0 none / 1 build+mil / 2 diplo) · m modifier lines · u unlock lines
 """
 import hashlib
@@ -68,12 +70,16 @@ def main():
             's': e['slug'],
             'a': age_ix[e['facets']['age']],
             'b': d['branch_id'],
+            'bo': d.get('tree_index', 0),
             'd': d['tier'],
             'r': [r['id'] for r in d['requires'] if r['id'] in ids],
             'k': unlock_category(d.get('unlocks')),
         }
         if e.get('icon'):
             rec['i'] = e['icon']
+        du = d.get('drawn_under')
+        if du and du.get('computed') and du['id'] in ids and du['id'] not in rec['r']:
+            rec['p'] = du['id']
         if d.get('gate'):
             rec['g'] = d['gate']
             rec['gl'] = d.get('gate_lits') or [[x, '?', ''] for x in (d.get('gate_labels') or [])]

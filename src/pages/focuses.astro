@@ -41,16 +41,16 @@ const branchOf = (id: string) => byId[id]?.facets?.branch || null;
 // plus 1-2 free roots that look like institutions but need no embrace. An
 // advance that is its own root stands alone: no prerequisite, no embrace.
 const INSTITUTIONS = new Set(institutionsData.entities.map((i: any) => i.name));
-// `data.drawn_in` is the tree the advance is drawn in: declared by the files
-// where they declare one, otherwise the age's ungated "free tree", flagged
-// inferred. See the note above the grid.
+// `data.drawn_in` is the tree the advance is drawn in and `data.drawn_under`
+// the node above it. Where the files declare neither, both are reproduced
+// from the game's own load-time placement pass and flagged computed — see
+// the note above the grid and scripts/lib/layout.py.
 const rootOf = (e: any) => {
   const d = e.data.drawn_in;
-  if (!d) return { name: null, institution: false, inferred: false };
-  return { name: d.name, institution: INSTITUTIONS.has(d.name), inferred: d.inferred };
+  return { name: d.name, institution: INSTITUTIONS.has(d.name), computed: !!d.computed };
 };
-const TREE_STANDALONE = 'Not declared';
-const treeName = (e: any) => rootOf(e).name || TREE_STANDALONE;
+const underOf = (e: any) => e.data.drawn_under;
+const treeName = (e: any) => rootOf(e).name;
 
 const plain = (tokens: any[] | null) =>
   (tokens || []).map((t: any) => (t[0] === 't' ? t[1] : t[2] || '')).join('');
@@ -76,10 +76,10 @@ const tableEntities = focusAdvances.map((e: any) => ({
   },
   data: {
     ...e.data,
-    tree_label: rootOf(e).name
-      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)'
-          : rootOf(e).inferred ? ' (free tree, inferred)' : ' (free tree)'}`
-      : 'Not declared',
+    tree_label: `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ' (free tree)'}`
+      + (rootOf(e).computed ? ', computed' : ''),
+    under_label: underOf(e)
+      ? `${underOf(e).name}${underOf(e).computed ? ' (computed)' : ''}` : '',
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -99,7 +99,7 @@ const tableData = {
         .filter((o) => o.count > 0) },
     { key: 'tree', label: 'Tree',
       options: [...new Set(tableEntities.map((e: any) => e.facets.tree))]
-        .sort((a: any, b: any) => (a === TREE_STANDALONE ? 1 : b === TREE_STANDALONE ? -1 : a.localeCompare(b)))
+        .sort((a: any, b: any) => a.localeCompare(b))
         .map((v: any) => ({ value: v, label: v, count: countBy('tree', v) })) },
   ],
 };
@@ -128,12 +128,12 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       age. You pick again at every age change — five picks over a campaign.
     </p>
     <p class="fx-trees">
-      In game these do sit in a tree, and the node above one really is a
-      prerequisite — but that placement is computed by the engine when the
-      advance database loads, not written in the files. It is the same for
-      every player and every campaign; it just is not data we can read. So the
-      tree is shown for the 34 focus advances whose prerequisite the files
-      declare, and left blank for the rest rather than guessed at.
+      In game every one of these sits in a tree, and the node above it must be
+      researched first — but for most of them the files declare no prerequisite
+      and no tree. The game slots such advances into the age's trees when it
+      loads, the same way every time, and that pass is reproduced here from the
+      game files and checked against the tech screen. A tree or parent marked
+      <i>computed</i> comes from that reproduction rather than a line in the files.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
@@ -179,9 +179,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                     ))}
                     <div class="fx-adv__tree">
                       <span class="fx-adv__k">tree</span>
-                      {rootOf(e).name === null ? (
-                        <span class="fx-adv__branch">not declared</span>
-                      ) : rootOf(e).institution ? (
+                      {rootOf(e).institution ? (
                         <Fragment>
                           <a href={`${base}institutions`}>{rootOf(e).name}</a>
                           <span class="fx-adv__inst-tag"> · institution</span>
@@ -190,21 +188,25 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                         <Fragment>
                           {rootOf(e).name}
                           <span class="fx-adv__branch"> · free tree</span>
-                          {rootOf(e).inferred && (
-                            <span class="fx-adv__inferred"
-                                  title="The advance declares no prerequisite and no tree. Each age has exactly one ungated root — the files' own 'always-available free tree' — and the tech screen shows only the four trees, so this is where it lands.">
-                              {' '}inferred
-                            </span>
-                          )}
                         </Fragment>
                       )}
+                      {rootOf(e).computed && (
+                        <span class="fx-adv__computed"
+                              title="The files declare no tree for this advance; the game places it when it loads, and that placement is reproduced here and checked against the tech screen.">
+                          {' '}computed
+                        </span>
+                      )}
                     </div>
-                    {e.data.requires.length > 0 && (
+                    {underOf(e) && (
                       <div class="fx-adv__req">
                         <span class="fx-adv__k">after</span>
-                        {e.data.requires.map((r: any, i: number) => (
-                          <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
-                        ))}
+                        <Term id={underOf(e).id} label={underOf(e).name} showIcon={false} />
+                        {underOf(e).computed && (
+                          <span class="fx-adv__computed"
+                                title="The files declare no prerequisite; this is the node the game draws it under, which must be researched first.">
+                            {' '}computed
+                          </span>
+                        )}
                       </div>
                     )}
                   </li>
@@ -222,9 +224,9 @@ const AGE_ORDER = ages.map((a: any) => a.name);
     { key: 'age', label: 'Age', kind: 'facet' },
     { key: 'focus', label: 'Focus', kind: 'facet' },
     { key: 'tree_label', label: 'Tree', kind: 'text' },
+    { key: 'under_label', label: 'After', kind: 'text' },
     { key: 'mods', label: 'Effects', kind: 'mods' },
     { key: 'unlock_names', label: 'Unlocks', kind: 'chips' },
-    { key: 'requires', label: 'Requires', kind: 'refs' },
   ] as any} placeholder="Filter focus advances…"
     defaultSort={{ key: 'age' }} sortOrder={{ age: AGE_ORDER }} />
 
@@ -305,7 +307,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-adv__unlock { color: var(--gold-soft); }
   .fx-adv__branch { color: var(--text-faint); }
   .fx-adv__inst-tag { color: var(--gold-soft); }
-  .fx-adv__inferred {
+  .fx-adv__computed {
     font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
     color: var(--text-faint); border: 1px solid var(--border);
     border-radius: 3px; padding: 0 4px; cursor: help;
