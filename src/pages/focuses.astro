@@ -128,12 +128,12 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       age. You pick again at every age change — five picks over a campaign.
     </p>
     <p class="fx-trees">
-      In game these appear inside one of the age's four trees, but that is the
-      tech screen packing them into free layout slots, not a tree they belong
-      to: the nodes drawn under an advance are frequently not its declared
-      children, and ordinary prerequisite-less advances get packed the same way.
-      Only the 34 focus advances with a real prerequisite have a tree, and it is
-      shown below.
+      In game these do sit in a tree, and the node above one really is a
+      prerequisite — but that placement is computed by the engine when the
+      advance database loads, not written in the files. It is the same for
+      every player and every campaign; it just is not data we can read. So the
+      tree is shown for the 34 focus advances whose prerequisite the files
+      declare, and left blank for the rest rather than guessed at.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
