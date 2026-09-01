@@ -143,6 +143,25 @@ Press / Surgery) and nearly every other advance has exactly one prereq.
 `build_advances.py` resolves each advance to its `branch_id` + `tier`, which
 is what lets the planner draw the game's layout.
 
+**Every age from the Renaissance on has exactly four roots: its three
+institutions and one ungated "always-available free tree"** — the files' own
+comment on `surgery_advance` / `pharmacology_advance` / `sanitation_advance` /
+`vaccination_advance` / `renaissance_development`. Confirmed in game: the
+Discovery tab shows Surgery + New World + Printing Press + Pike and Shot and
+nothing else. But **383 advances declare no `requires`, no `depth` and no
+`in_tree_of`** — every focus advance, the building unlocks — and the engine
+draws them on that free tree anyway (screenshot evidence: Efficient
+Construction Plans, a Discovery adm focus advance, hangs off the Surgery tree
+with a real edge, tooltipped "Special Advance … We decided on 'Administrative
+Abilities' for this Age"). The attachment is engine-side and expressed
+nowhere in the files, so `build_advances.py` reproduces it: a parentless
+advance joins its age's single ungated root. Traditions has seven ungated
+roots and so no unambiguous host — its parentless advances stay unplaced, on
+purpose. Also honour `in_tree_of = x`, which draws an advance in x's tree
+without making it x's child (33 advances). Don't "simplify" any of this back
+to "no prereq means it is its own root" — that produced ~38 phantom roots per
+age and is visibly wrong in game.
+
 **The game's own layout** (from `game/in_game/gui/technology_lateralview.gui`
 — the tree screen; `advances_lateralview.gui` is only the side panel):
 age tabs → per-age sub-graphs stacked vertically, each a top-down tidy tree
@@ -431,6 +450,72 @@ envelope.
 - Unknown gates are **shown as unknown** — a suggestion whose trigger rests
   on a scripted trigger we cannot evaluate gets an "unverified" badge rather
   than being presented as available.
+
+---
+
+## Battles & units — grounded facts (don't re-derive)
+
+- **Unit stats are DELTAS on the category base, resolved through
+  `copy_from`.** `a_schiltron` declares `frontage = -0.25` and
+  `a_handgonners` `initiative = -4` — only additive-on-category-base makes
+  sense. A key re-declared closer to the leaf REPLACES the template's
+  declaration (nearest-wins), it does not stack. `hide`/`empty` are
+  own-body-only (every real unit copies from a hidden template); `levy`
+  and the other flags do inherit. `scripts/lib/unitstats.py` implements
+  this and is the only place stats get resolved — the toolkit's `UnitType`
+  inherits nothing but `category`, so raw attribute reads give zeros.
+- Terrain `combat = {}` / `impact = {}` blocks are whole-block
+  nearest-wins down the chain (the knights' `combat` replaces heavy
+  cavalry's, jungle penalties and all).
+- **The combat model is verified three ways** — defines, the game's own
+  tooltip strings (units_l_english.yml `CT_IMPACT_ON_*`, the single
+  richest source), and the wiki's tested formulas, which decompose
+  EXACTLY into the defines (10+(roll−1+mods)×2 men = (BASE+roll−1+mods)
+  × REGIMENT_SIZE × DAMAGE_MULT × STR_MOD). Hard-won corrections, don't
+  regress them: **effective dice = 5 + (d10 as 0–9) + mods, cap 15**
+  (not roll 1–10); **terrain/crossing dice are penalties on the
+  ATTACKER** ("[topography] penalty on [attacker]"), the defender gets
+  nothing; **the side's possible frontage caps EACH section**
+  ("Max Frontage of X in this section"), never ÷3; **the hourly 0.01
+  morale tick hits every unit in the combat**, not just engaged;
+  **the 1/levy-efficiency bonus belongs to a REGULAR attacker only**
+  ("Regular vs Levy … one divided by a factor" — the one literal
+  formula in the loc); strength damage scales with the attacker's
+  absolute men, morale damage with its % of max strength; damage is
+  ÷ target military_tactics; target experience reduces damage (max
+  50 %); secure-flanks doubles with both neighbours held; sections pair
+  crossed (my left vs their right). Wiki claims that contradict the
+  1.3.11 files and lost: d6 dice, levy base 0.5.
+- Per-location frontage base 10 is a static modifier
+  (`location_base_values`), not a define; terrain `defender` dice +
+  frontage penalties live on topography/vegetation. Levy −10 %
+  discipline is `static_modifiers/subunit.txt`. `binaries/eu5.exe`
+  strings confirm the define registry and hourly tick task
+  (`914_CombatHourlyUpdate`) but yield no formulas.
+- Still not in the files (flagged inferred in the page's model-notes
+  table — keep that table truthful): bombard chance composition,
+  target-pick randomness, commander "shock" scaling (relative martial,
+  a separate dice modifier), stackwipe/overrun thresholds ("big enough"
+  is all the loc says).
+- **A Ghidra decompilation pass on `binaries/eu5.exe` settled the rest**
+  (RTTI is intact, so define-registry cross-refs lead straight to the
+  combat functions; method in the scratchpad `ghidra_scripts/`). It
+  CONFIRMED, don't second-guess: the engine is fixed-point (all mods are
+  int/100000) and modifiers compose as a pure multiplicative chain with
+  no mid-chain clamp (so composition order is immaterial); the engagement
+  chance is exactly `BASE + min(init×(1+army_init)×EACH, MAX) + hours×HOURS`
+  where **hours is the combat's TOTAL hour counter, no per-phase reset**
+  (wiki was wrong, tooltip right); MAX_FRONTAGE_OVERSTACKING multiplies
+  the section frontage (1.25×). This is internal verification — the
+  numbers are published as "game files + observed behavior", never as
+  "decompiled", and formulas are not quoted verbatim from the disassembly
+  on the public site.
+- **Damage must resolve simultaneously** (compute all strikes from the
+  hour's snapshot, then apply) — sequential per-side resolution gave the
+  first side a measurable ~58/42 edge in mirror matches.
+- The engine is testable headless: esbuild-bundle battle-engine.ts and
+  run scenarios against public/battle.json in node (mirror ≈ 50/50,
+  regulars >> equal levies, dice modifiers swing hard).
 
 ---
 

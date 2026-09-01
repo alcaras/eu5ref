@@ -358,7 +358,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_brand_new_world",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -391,7 +391,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "A Brand New World",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/new-world-advance.png",
@@ -820,7 +820,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_magnanimous_empire",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -840,7 +840,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "A Magnanimous Empire",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/a-magnanimous-empire.png",
@@ -930,7 +930,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_modern_nation",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -963,7 +963,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "A Modern Nation",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/a-modern-nation.png",
@@ -982,7 +982,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_neverending_crusade",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -1015,7 +1015,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "A Never-Ending Crusade",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/a-neverending-crusade.png",
@@ -1119,7 +1119,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_permanent_capital",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -1152,7 +1152,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "A Permanent Capital",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/a-permanent-capital.png",
@@ -1423,7 +1423,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_resilient_soul",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Meissen",
      "Saxony"
@@ -1470,7 +1470,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "A Resilient Soul",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/bonded-by-loyalty.png",
@@ -1609,7 +1609,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_tolerant_society",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -1656,7 +1656,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "A Tolerant Society",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/a-tolerant-society.png",
@@ -1746,7 +1746,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:a_true_ethiopian_church",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -1779,7 +1779,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "A True Ethiopian Church",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/a-true-ethiopian-church.png",
@@ -1980,7 +1980,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:absolutism_control_decline_advance",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2000,7 +2000,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Absolutist Administration",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/absolutism-control-decline-advance.png",
@@ -2739,7 +2739,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:adaptability",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2759,7 +2759,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Adaptability",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-range-age-1.png",
@@ -2778,7 +2778,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:adapted_incan_army",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Tawantinsuyu",
      "Qusqu"
@@ -2825,7 +2825,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Adaptable Incan Army",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/adapted-incan-army.png",
@@ -2844,7 +2844,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:additional_colonists",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2864,7 +2864,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Additional Colonists",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/colonies.png",
@@ -2883,7 +2883,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:additional_diplomats",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2903,7 +2903,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Additional Diplomats",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-range-age-1.png",
@@ -2922,7 +2922,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:additional_loyalist_recruitment",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2942,7 +2942,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Additional Loyalist Recruitment",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/crown-power-advance-renaissance.png",
@@ -2961,7 +2961,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:additional_merchants",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -2981,7 +2981,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Additional Merchants",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/merchant-power-from-maritime-reformation-advance.png",
@@ -3000,7 +3000,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:administrative_leadership",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -3020,7 +3020,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Administrative Leadership",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/administrative-leadership.png",
@@ -3203,7 +3203,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:advanced_bureaucracy",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -3223,7 +3223,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Advanced Bureaucracy",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/genoese-banking-traditions.png",
@@ -3599,7 +3599,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:agent_training",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -3619,7 +3619,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Agent Training",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-influence.png",
@@ -5687,7 +5687,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:alpha_and_omega",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -5707,7 +5707,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Alpha and Omega",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/alpha-and-omega.png",
@@ -5897,7 +5897,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:an_iron_fist",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -5930,7 +5930,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "An Iron Fist",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/an-iron-fist.png",
@@ -5949,7 +5949,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:an_order_with_state",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -5982,7 +5982,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "An Order with a State",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/an-order-with-state.png",
@@ -9314,7 +9314,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:arm_highland_fortresses",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Armenia",
      "Moloka'i"
@@ -9361,7 +9361,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Highland Fortresses",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/arm-highland-fortresses.png",
@@ -9916,7 +9916,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:army_country_casus_belli_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -9936,7 +9936,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Pretexts",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/army-country-casus-belli-advance.png",
@@ -9955,7 +9955,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:army_country_diplo_range_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -9975,7 +9975,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Armed Envoys",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/army-country-diplo-range-advance.png",
@@ -9994,7 +9994,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:army_country_integration_speed_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -10014,7 +10014,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Respect Local Government",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/army-country-integration-speed-advance.png",
@@ -10033,7 +10033,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:army_country_looting_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -10053,7 +10053,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Raider Troops",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/army-country-looting-advance.png",
@@ -11345,7 +11345,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:association_with_unbelievers",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Oman"
     ],
@@ -11378,7 +11378,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Association With Unbelievers",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/association-with-unbelievers.png",
@@ -11993,7 +11993,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:audit_checks",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -12013,7 +12013,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Audit Checks",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/genoese-banking-traditions.png",
@@ -12707,7 +12707,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ottoman_bureaucracy",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Ottomans"
     ],
@@ -12745,7 +12745,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Birûn",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/autonomous-pashas.png",
@@ -12829,7 +12829,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ayans",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Ottomans"
     ],
@@ -12872,7 +12872,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Âyan",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/ayans.png",
@@ -13420,7 +13420,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:aztec_chargers",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -13453,7 +13453,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Aztec Chargers",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/aztec-chargers.png",
@@ -16670,7 +16670,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bayonet_leaders",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -16690,7 +16690,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Bayonet Leaders",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/expansionism.png",
@@ -16956,7 +16956,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:benevolence",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -16976,7 +16976,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Benevolence",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/cultural-acceptance-advance.png",
@@ -17045,7 +17045,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:berliner_aufklarung",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Brandenburg"
     ],
@@ -17078,7 +17078,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Berliner Aufklärung",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/protestant-innovation.png",
@@ -19383,7 +19383,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bohemian_crystal",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Bohemia"
     ],
@@ -19416,7 +19416,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Bohemian Crystal",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/bohemian-crystal.png",
@@ -19441,7 +19441,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bohemian_imperial_standing",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Bohemia"
     ],
@@ -19474,7 +19474,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Bohemian Holy Roman Standing",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/bohemian-imperial-standing.png",
@@ -19600,7 +19600,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bonded_by_loyalty",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -19647,7 +19647,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Bonded by Loyalty",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/bonded-by-loyalty.png",
@@ -19666,7 +19666,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:bookkeeping",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -19686,7 +19686,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Bookkeeping",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/debt-and-loans.png",
@@ -20772,7 +20772,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:brave_as_hummingbird",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -20805,7 +20805,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Brave as a Hummingbird",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/brave-as-hummingbird.png",
@@ -21181,7 +21181,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:british_bill_of_rights",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -21228,7 +21228,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "English Bill of Rights",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/british-bill-of-rights.png",
@@ -21647,7 +21647,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:buffer_states",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -21667,7 +21667,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Buffer States",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-range-age-1.png",
@@ -23882,7 +23882,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cabinet",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -23902,7 +23902,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Cabinet",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -24033,7 +24033,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:call_of_our_forefathers",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Norway"
     ],
@@ -24066,7 +24066,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "The Call of our Forefathers",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/call-of-our-forefathers.png",
@@ -24097,7 +24097,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:calpixcayotl",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -24130,7 +24130,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Calpixcāyōtl",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/calpixcayotl.png",
@@ -24155,7 +24155,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:camp_followers",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -24175,7 +24175,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Camp Followers",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/global-supply-limit-modifier-advance-5.png",
@@ -26337,7 +26337,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cel_celtic_diaspora",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Celtica"
     ],
@@ -26370,7 +26370,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Celtic Diaspora",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/colonial-assembly.png",
@@ -26389,7 +26389,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cel_celtic_nations",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Celtica"
     ],
@@ -26422,7 +26422,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Celtic Nations",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/irish-travelling-bards-advance.png",
@@ -26493,7 +26493,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cel_pan_celtic_nationalism",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Celtica"
     ],
@@ -26526,7 +26526,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Pan-Celticism",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/cultural-ties.png",
@@ -26545,7 +26545,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cel_the_wests_awake",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Celtica"
     ],
@@ -26578,7 +26578,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "The West's Awake",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/expand-varangian-guard-advance.png",
@@ -26597,7 +26597,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cel_western_shore",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Celtica"
     ],
@@ -26630,7 +26630,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "The Western Shore",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/nav-fearless-seamen.png",
@@ -26760,7 +26760,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:centralize_the_states",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Rome"
     ],
@@ -26793,7 +26793,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Centralize the States",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/centralize-the-states.png",
@@ -26869,7 +26869,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:centralized_government",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -26889,7 +26889,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Centralized Government",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/road-building.png",
@@ -29012,7 +29012,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:chinampas",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -29045,7 +29045,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Chinampas",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/chinampas.png",
@@ -30045,7 +30045,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:civil_servants",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -30065,7 +30065,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Civil Service",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -31084,7 +31084,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:coke_smelting",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -31134,7 +31134,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Coke Smelting",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/coke-smelting.png",
@@ -31200,7 +31200,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:colonial_ambition",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": [
      "?",
@@ -31223,7 +31223,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Colonial Ambition",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/colonial-ambition.png",
@@ -31242,7 +31242,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:colonial_assembly",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": [
      "?",
@@ -31265,7 +31265,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Colonial Assembly",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/colonial-assembly.png",
@@ -31382,7 +31382,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:colonial_militia",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": [
      "?",
@@ -31405,7 +31405,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Colonial Militia",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/colonial-militia.png",
@@ -32018,7 +32018,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:competetive_merchants",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -32038,7 +32038,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Competitive Merchants",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/competetive-merchants.png",
@@ -33602,7 +33602,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:continental_trade",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": [
      "?",
@@ -33625,7 +33625,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Continental Trade",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/continental-trade.png",
@@ -33815,7 +33815,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:conviction_of_sin",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -33835,7 +33835,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Conviction of Sin",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/conviction-of-sin.png",
@@ -33854,7 +33854,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:copper_bottoms",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -33874,7 +33874,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Copper Bottoms",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/ship-building-advance.png",
@@ -35970,7 +35970,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:counter_espionage_building_country_advance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -35990,7 +35990,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Secret Codes",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/counter-espionage-building-country-advance.png",
@@ -36466,7 +36466,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cri_devshirme_of_the_steppes",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Crimea"
     ],
@@ -36499,7 +36499,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Devshirme of the Steppes",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/slave-soldiers.png",
@@ -36524,7 +36524,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cri_free_cattle_grazing",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Crimea"
     ],
@@ -36557,7 +36557,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Free Cattle Grazing",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/land-of-the-ancestors.png",
@@ -36628,7 +36628,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cri_slavers",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Crimea"
     ],
@@ -36661,7 +36661,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Slavers of the Steppe",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/slave-raiding-wars.png",
@@ -36680,7 +36680,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cri_steppe_commanders",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Crimea"
     ],
@@ -36713,7 +36713,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Steppe Commanders",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/trampling-horde.png",
@@ -38448,7 +38448,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:crown_rights_laws_advance",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -38478,7 +38478,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Rights of the Crown",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/crown-rights-laws-advance.png",
@@ -38856,7 +38856,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:crusader_tradition",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -38889,7 +38889,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Crusader Tradition",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/crusader-tradition.png",
@@ -39731,7 +39731,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cth_sufet_rule",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Carthage"
     ],
@@ -39764,7 +39764,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Rule of Šūfeṭ",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/republican-power-law-advance.png",
@@ -39993,7 +39993,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cultural_ties",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -40013,7 +40013,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Cultural Ties",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/cultural-ties.png",
@@ -40079,7 +40079,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:cultures_capacity_mil_choice",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -40099,7 +40099,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Multicultural Ambitions",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/cultures-capacity-mil-choice.png",
@@ -43704,7 +43704,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:defensive_army",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -43724,7 +43724,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Defensive Army",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/artillery-institution-advance.png",
@@ -43743,7 +43743,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:defensive_mentality",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -43763,7 +43763,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Defensive Mentality",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/defensive-mentality.png",
@@ -44205,7 +44205,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:devoutness",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44225,7 +44225,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Devotion",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/cultural-acceptance-advance.png",
@@ -44307,7 +44307,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:dip_choice_subject_opinions",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44327,7 +44327,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Subject Emissaries",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -44390,7 +44390,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:diplomatic_corps",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44410,7 +44410,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Diplomatic Corps",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-range-age-1.png",
@@ -44429,7 +44429,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:diplomatic_influence",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44449,7 +44449,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Diplomatic Influence",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-influence.png",
@@ -44732,7 +44732,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:discipline_drills",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -44752,7 +44752,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Disciplined Drills",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/glorious-arms.png",
@@ -44771,7 +44771,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:dispositio_achillea",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Brandenburg"
     ],
@@ -44804,7 +44804,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Dispositio Achillea",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/partition-inheritance-advance.png",
@@ -45234,7 +45234,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:divine_passion",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -45254,7 +45254,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Divine Passion",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/divine-passion.png",
@@ -45273,7 +45273,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:divine_supremacy",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -45293,7 +45293,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Divine Supremacy",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/divine-supremacy.png",
@@ -46297,7 +46297,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:drafted_hatun_runas",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Tawantinsuyu",
      "Qusqu"
@@ -46344,7 +46344,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Drafted Hatun Runas",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/drafted-hatun-runas.png",
@@ -46369,7 +46369,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ottoman_bureaucracy",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Ottomans"
     ],
@@ -46407,7 +46407,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Birûn",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/dragomans.png",
@@ -46542,7 +46542,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:dry_dock_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -46572,7 +46572,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Dry Dock",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": null,
@@ -47101,7 +47101,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:dynamic_court",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -47121,7 +47121,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Dynamic Court",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -47707,7 +47707,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:economic_ideas",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -47727,7 +47727,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Subservient Economy",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/expanded-supply-trains.png",
@@ -47793,7 +47793,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ecumenical_defenders_of_christendom",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -47826,7 +47826,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Ecumenical Defenders of Christendom",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/ecumenical-defenders-of-christendom.png",
@@ -47845,7 +47845,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ecumenism",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -47865,7 +47865,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Ecumenism",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/cultural-acceptance-advance.png",
@@ -47884,7 +47884,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:edict_of_potsdam",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Brandenburg"
     ],
@@ -47917,7 +47917,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Edict of Potsdam",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/a-tolerant-society.png",
@@ -48171,7 +48171,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:efficient_construction_plans",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -48191,7 +48191,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Efficient Construction Plans",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/efficient-construction-plans.png",
@@ -48254,7 +48254,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:efficient_mining",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -48274,7 +48274,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Efficient Mining",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/efficient-mining.png",
@@ -48305,7 +48305,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:efficient_spies",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -48325,7 +48325,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Efficient Spies",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/efficient-spies.png",
@@ -48344,7 +48344,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:elan",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "France"
     ],
@@ -48377,7 +48377,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Élan!",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/elan.png",
@@ -48396,7 +48396,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:eltham_ordinance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -48443,7 +48443,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "The Eltham Ordinance",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/eltham-ordinance.png",
@@ -48462,7 +48462,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:emancipation",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -48482,7 +48482,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Emancipation",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/emancipation.png",
@@ -49211,7 +49211,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:end_of_shipbuilding_guilds",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Oman"
     ],
@@ -49244,7 +49244,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "End of the Shipbuilding Guilds",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/end-of-shipbuilding-guilds.png",
@@ -49461,7 +49461,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:engineer_corps",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -49481,7 +49481,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Engineer Corps",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/gunpowder-advance.png",
@@ -49500,7 +49500,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:english_ambition",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -49547,7 +49547,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Rulers of the Waves",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/english-ambition.png",
@@ -50427,7 +50427,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:escort_ships",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -50447,7 +50447,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Corvettes",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -50521,7 +50521,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:estates_general",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "France"
     ],
@@ -50554,7 +50554,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Estates-General",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/estates-general.png",
@@ -50573,7 +50573,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:estates_of_brittany",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Brittany"
     ],
@@ -50606,7 +50606,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "The Estates of Brittany",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/estates-of-brittany.png",
@@ -50631,7 +50631,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:eternal_crusade",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -50677,7 +50677,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "An Eternal Crusade",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/eternal-crusade.png",
@@ -51035,7 +51035,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:expanded_infrastructure_network",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -51055,7 +51055,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Expanded Infrastructure Network",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/road-building.png",
@@ -51184,7 +51184,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:expanded_supply_trains",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -51204,7 +51204,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Expanded Supply Trains",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/expanded-supply-trains.png",
@@ -51280,7 +51280,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:expansion_of_trade_contacts",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Oman"
     ],
@@ -51313,7 +51313,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Expansion of Trade Contacts",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/expansion-of-trade-contacts.png",
@@ -51332,7 +51332,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:expansionism",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -51352,7 +51352,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "A Seed Among Thorns",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/expansionism.png",
@@ -51888,7 +51888,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:exploration",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -51918,7 +51918,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Exploration Ideas",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/exploration.png",
@@ -52025,7 +52025,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:export_building_country_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -52045,7 +52045,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Agile Exportation",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/export-building-country-advance.png",
@@ -52349,7 +52349,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:external_friends",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -52382,7 +52382,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "External Friends",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/external-friends.png",
@@ -52632,7 +52632,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fast_negotiations",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -52652,7 +52652,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Fast Negotiations",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/merchant-power-from-maritime-reformation-advance.png",
@@ -52671,7 +52671,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:faster_colonists",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -52691,7 +52691,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Faster Colonists",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/colonies.png",
@@ -54893,7 +54893,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:flesh_is_weak",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -54913,7 +54913,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Flesh is Weak",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/flesh-is-weak.png",
@@ -55000,7 +55000,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:flexible_negotiation",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -55020,7 +55020,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Flexible Negotiation",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -55784,7 +55784,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:foreign_cultural_law_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -55814,7 +55814,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Foreign Cultural Law",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/foreign-cultural-law-advance.png",
@@ -55826,7 +55826,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:foreign_embassies",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -55846,7 +55846,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Foreign Embassies",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-influence.png",
@@ -56155,7 +56155,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:formal_administration",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -56175,7 +56175,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Formal Administration",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/crown-power-advance-renaissance.png",
@@ -56194,7 +56194,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:formal_diplomacy",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -56214,7 +56214,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Formal Diplomacy",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/glorious-arms.png",
@@ -56233,7 +56233,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:formalized_officer_corps",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -56253,7 +56253,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Formalized Officer Corps",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/expansionism.png",
@@ -56580,7 +56580,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fort_logistics",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -56600,7 +56600,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Fortification Logistics",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/renaissance-development.png",
@@ -57061,7 +57061,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:founding_fathers",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": [
      "?",
@@ -57084,7 +57084,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Founding Fathers",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/founding-fathers.png",
@@ -57223,7 +57223,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_code_civil",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "France"
     ],
@@ -57256,7 +57256,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Code Civil",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/fra-code-civil.png",
@@ -57275,7 +57275,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_expansion_of_france",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "France"
     ],
@@ -57308,7 +57308,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Historic Claims",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/fra-expansion-of-france.png",
@@ -57327,7 +57327,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_gendarmes",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "France"
     ],
@@ -57360,7 +57360,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Gendarme Companies",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/fra-gendarmes.png",
@@ -57385,7 +57385,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_integration_of_new_territories",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "France"
     ],
@@ -57418,7 +57418,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Consolidation of the Country",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/fra-integration-of-new-territories.png",
@@ -57437,7 +57437,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_reformation_of_taxation",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "France"
     ],
@@ -57470,7 +57470,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Establishment of Recettes Générales",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/fra-reformation-of-taxation.png",
@@ -57489,7 +57489,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_reliance_on_privateers",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "France"
     ],
@@ -57522,7 +57522,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Reliance on Privateers",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/fra-reliance-on-privateers.png",
@@ -57547,7 +57547,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:fra_school_of_fontainebleau",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "France"
     ],
@@ -57580,7 +57580,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Northern Mannerism",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/fra-school-of-fontainebleau.png",
@@ -58213,7 +58213,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:free_colonies",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -58233,7 +58233,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Free Colonies",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -58252,7 +58252,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:free_merchants",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -58272,7 +58272,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Free Merchants",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/free-merchants.png",
@@ -58291,7 +58291,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:free_subjects",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -58311,7 +58311,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Free Subjects",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/free-subjects.png",
@@ -58330,7 +58330,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:free_thinkers",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": [
      "?",
@@ -58353,7 +58353,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Free Thinkers",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/free-thinkers.png",
@@ -58372,7 +58372,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:free_trade",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -58392,7 +58392,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Free Trade",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/free-trade.png",
@@ -58411,7 +58411,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:french_ambition",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "France"
     ],
@@ -58444,7 +58444,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Grande Armée",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/french-ambition.png",
@@ -58520,7 +58520,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:french_language_in_all_courts",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "France"
     ],
@@ -58553,7 +58553,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "French Language in All Courts",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/french-language-in-all-courts.png",
@@ -58734,7 +58734,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:friends_in_need",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -58767,7 +58767,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Friends in Need",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/friends-in-need.png",
@@ -59255,7 +59255,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:furstenschule",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -59309,7 +59309,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Fürstenschule",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/furstenschule.png",
@@ -59383,7 +59383,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:garrison_conscription",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -59403,7 +59403,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Conscripted Garrisons",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/regiment-reinforcement-speed-renaissance.png",
@@ -59865,7 +59865,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:generalkriegskommissariat",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Prussia"
     ],
@@ -59898,7 +59898,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Kriegskommisariat",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/protect-the-new-faith.png",
@@ -61686,7 +61686,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:german_fair_towns",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Germany"
     ],
@@ -61719,7 +61719,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Reichsmessestädte",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/genoese-banking-traditions.png",
@@ -62901,7 +62901,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:global_empire",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -62921,7 +62921,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Global Empire",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/genoese-banking-traditions.png",
@@ -63078,7 +63078,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:global_supply_limit_modifier_advance_6",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -63098,7 +63098,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Campaign Logistics Planning",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/expanded-supply-trains.png",
@@ -63246,7 +63246,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:glory_of_rome",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Rome"
     ],
@@ -63279,7 +63279,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Glory of Rome",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/glory-of-rome.png",
@@ -63298,7 +63298,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:gold_of_bure",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Mali"
     ],
@@ -63331,7 +63331,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Gold of Bure",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/gold-of-bure.png",
@@ -63356,7 +63356,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:gold_to_salt_trade",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Songhai"
     ],
@@ -63389,7 +63389,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Gold to Salt Trade",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/markets-for-salt.png",
@@ -64753,7 +64753,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:grand_army",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -64773,7 +64773,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Grand Army",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/regiment-reinforcement-speed-renaissance.png",
@@ -64792,7 +64792,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:grand_banquets",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -64812,7 +64812,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Grand Banquets",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/grand-banquets.png",
@@ -65123,7 +65123,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:grand_navy",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -65143,7 +65143,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Grand Navy",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/maritime-advance-age-2.png",
@@ -65162,7 +65162,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:grand_shipyard_advance",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -65192,7 +65192,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Grand Shipyard",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": null,
@@ -69942,7 +69942,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:hohenzollern_court_culture",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Brandenburg"
     ],
@@ -69975,7 +69975,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Hohenzollern Court Culture",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/protestant-administration-tax.png",
@@ -70000,7 +70000,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:hohenzollern_privy_council",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Brandenburg"
     ],
@@ -70033,7 +70033,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Hohenzollern Privy Council",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/plutocracy.png",
@@ -70689,7 +70689,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:horde_ardor",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -70709,7 +70709,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Horde Ardor",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/horde-ardor.png",
@@ -71085,7 +71085,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:house_of_parliament_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -71124,7 +71124,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "House of Parliament",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": null,
@@ -72748,7 +72748,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:humanism",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -72768,7 +72768,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Humanism",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -72787,7 +72787,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:humanist_tolerance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -72807,7 +72807,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Humanist Tolerance",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/cultural-acceptance-advance.png",
@@ -74050,7 +74050,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:hurricane_hardy",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Muscovy",
      "Russia"
@@ -74099,7 +74099,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Hurricane Hardy",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/hurricane-hardy.png",
@@ -75522,7 +75522,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:improved_foraging",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -75542,7 +75542,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Improved Foraging",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/improved-foraging.png",
@@ -75561,7 +75561,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:improved_logistics",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -75581,7 +75581,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Improved Logistics",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/glorious-arms.png",
@@ -75600,7 +75600,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:improved_manuever",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -75620,7 +75620,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Improved Maneuver",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/regimental-system.png",
@@ -75639,7 +75639,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:improved_rams",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -75659,7 +75659,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Improved Rams",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -75678,7 +75678,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:improved_shipyards",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -75707,7 +75707,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Improved Shipyards",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -76303,7 +76303,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:independence_from_mali",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Songhai"
     ],
@@ -76338,7 +76338,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Independence from Mali",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/independence-from-mali.png",
@@ -76585,7 +76585,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:indirect_rule",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -76605,7 +76605,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Indirect Rule",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/genoese-banking-traditions.png",
@@ -77196,7 +77196,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:inigo_architecture",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -77245,7 +77245,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Palladian Architecture",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/inigo-architecture.png",
@@ -77372,7 +77372,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:inspired_builders",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -77405,7 +77405,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Inspired Builders",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/inspired-builders.png",
@@ -77975,7 +77975,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:international_nobility",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -78005,7 +78005,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "International Nobility",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/international-nobility.png",
@@ -79626,7 +79626,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ire_grand_jury_system",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Ireland"
     ],
@@ -79659,7 +79659,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Grand Jury System",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/smooth-administration.png",
@@ -79678,7 +79678,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ire_irish_establishment",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Ireland"
     ],
@@ -79711,7 +79711,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Irish Establishment",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/recruitment-improvements-renaissance.png",
@@ -79730,7 +79730,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ire_irish_volunteers",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Ireland"
     ],
@@ -79763,7 +79763,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Irish Volunteers",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/land-morale-movement-cost-rev-choice-mil.png",
@@ -82537,7 +82537,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:jihad_against_the_pagans",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Songhai"
     ],
@@ -82570,7 +82570,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Jihād Against the Pagans",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/jihad-against-the-pagans.png",
@@ -82907,7 +82907,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:junker_officer_corps",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Prussia"
     ],
@@ -82940,7 +82940,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Junker Officer Corps",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/pike-and-shot-advance.png",
@@ -83831,7 +83831,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:kbo_ribat_fortifications",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Kanem"
     ],
@@ -83874,7 +83874,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Ribāṭ Fortifications",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": null,
@@ -84131,7 +84131,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:khedivates",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Ottomans"
     ],
@@ -84164,7 +84164,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Khedivates",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/khedivates.png",
@@ -88481,7 +88481,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:land_morale_movement_cost_rev_choice_mil",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -88501,7 +88501,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Unrelenting Advance",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/land-morale-movement-cost-rev-choice-mil.png",
@@ -88627,7 +88627,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:land_of_opportunity",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -88647,7 +88647,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Land of Opportunity",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/court-accounting.png",
@@ -88845,7 +88845,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:land_of_the_rus",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": [
      "cgrp",
@@ -88876,7 +88876,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Land of the Rus'",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/land-of-the-rus.png",
@@ -89671,7 +89671,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:lawcode_of_suleiman",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Ottomans"
     ],
@@ -89714,7 +89714,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "The Legal Code of Suleiman",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/lawcode-of-suleiman.png",
@@ -90059,7 +90059,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:legacy_of_breton_independence",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Brittany"
     ],
@@ -90092,7 +90092,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Legacy of Breton Independence",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/legacy-of-breton-independence.png",
@@ -90399,7 +90399,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:legislative_efficiency_idea",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -90419,7 +90419,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Efficiency in Administration",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -90576,7 +90576,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:liberty_egalite_fraternity",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "France"
     ],
@@ -90616,7 +90616,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Liberté, Egalité, Fraternité",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/liberty-egalite-fraternity.png",
@@ -90641,7 +90641,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:liberty_heroes",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": [
      "?",
@@ -90664,7 +90664,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Sons of Liberty",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/liberty-heroes.png",
@@ -91777,7 +91777,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:llama_michis",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Tawantinsuyu",
      "Qusqu"
@@ -91824,7 +91824,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Llama Michis",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/llama-michis.png",
@@ -91887,7 +91887,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:local_merchant_preference",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Oman"
     ],
@@ -91920,7 +91920,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Local Merchant Preference",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/local-merchant-preference.png",
@@ -92030,7 +92030,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:local_traditions",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -92050,7 +92050,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Local Traditions",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/grand-banquets.png",
@@ -96549,7 +96549,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:mandinka_warrior_spirit",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Mali"
     ],
@@ -96582,7 +96582,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Mandinka Warrior Spirit",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/mandinka-warrior-spirit.png",
@@ -96642,7 +96642,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:manufacturing_center",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": [
      "?",
@@ -96665,7 +96665,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Imperial Manufacturing Center",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/manufacturing-center.png",
@@ -97728,7 +97728,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:markets_for_salt",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Mali"
     ],
@@ -97761,7 +97761,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Markets for Salt",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/markets-for-salt.png",
@@ -97849,7 +97849,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:martyrs",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -97869,7 +97869,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Martyrs",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/martyrs.png",
@@ -97888,7 +97888,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:mass_army",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -97908,7 +97908,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Mass Army",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/offensive-army.png",
@@ -97927,7 +97927,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:massed_battery",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -97947,7 +97947,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Massed Battery",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/gunpowder-advance.png",
@@ -99139,7 +99139,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:meissner_groschen",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Meissen",
      "Saxony"
@@ -99186,7 +99186,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Meißner Groschen",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/meissner-groschen.png",
@@ -99205,7 +99205,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:meissner_porcelain",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -99252,7 +99252,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Meissner Porcelain",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/meissner-porcelain.png",
@@ -99574,7 +99574,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:merchant_adventures",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -99594,7 +99594,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Merchant Adventures",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -99613,7 +99613,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:merchant_marine",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -99633,7 +99633,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Merchant Marine",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/maritime-advance-age-2.png",
@@ -99887,7 +99887,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:merchant_power_from_maritime_rev_dip_choice",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -99907,7 +99907,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Merchant Fleets",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/merchant-power-from-maritime-rev-dip-choice.png",
@@ -102038,7 +102038,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:military_drill",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -102058,7 +102058,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Military Drill",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/recruitment-improvements-renaissance.png",
@@ -102296,7 +102296,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:military_traditions",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -102326,7 +102326,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Military Traditions",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/military-traditions.png",
@@ -102387,7 +102387,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:millets",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Ottomans"
     ],
@@ -102420,7 +102420,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Kanunnames",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/millets.png",
@@ -102881,7 +102881,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:minting_income_factor_building",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -102901,7 +102901,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Currency Ownership",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/minting-income-factor-building.png",
@@ -102920,7 +102920,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:minting_trade_range_disc_building",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -102940,7 +102940,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Expanded Trade Depots",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/minting-trade-range-disc-building.png",
@@ -102998,7 +102998,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:missionary_schools",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -103018,7 +103018,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Missionary Schools",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/missionary-schools.png",
@@ -103651,7 +103651,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:modernization_of_the_military",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Songhai"
     ],
@@ -103684,7 +103684,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Modernization of the Military",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/modernization-of-the-military.png",
@@ -105330,7 +105330,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:morale_recovery_rev_dip_choice",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -105350,7 +105350,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Established Rest",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/morale-recovery-rev-dip-choice.png",
@@ -105470,7 +105470,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:mos_patrol_the_territories",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Muscovy"
     ],
@@ -105503,7 +105503,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Organized Levies",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/mos-patrol-the-territories.png",
@@ -106897,7 +106897,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:mulltimmer_masugn",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Sweden",
      "Finland"
@@ -106944,7 +106944,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Mulltimmer Masugn",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/mulltimmer-masugn.png",
@@ -107702,7 +107702,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:nagusa_negast",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Ethiopia"
     ],
@@ -107735,7 +107735,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Nəgusä Nägäst",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/nagusa-negast.png",
@@ -107754,7 +107754,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:nahuatl_domination",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -107787,7 +107787,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Nahua Domination",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/nahuatl-domination.png",
@@ -108204,7 +108204,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:national_assemblies_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108234,7 +108234,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "National Assemblies",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/national-assemblies-advance.png",
@@ -108246,7 +108246,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:national_bank",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108266,7 +108266,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "National Bank",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/debt-and-loans.png",
@@ -108346,7 +108346,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:national_conscripts",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108366,7 +108366,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "National Conscripts",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/regiment-reinforcement-speed-renaissance.png",
@@ -108497,7 +108497,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:national_trade",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108517,7 +108517,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "National Trade",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/national-trade.png",
@@ -108536,7 +108536,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:national_trade_policy",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108556,7 +108556,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "National Trade Policy",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/merchant-power-from-maritime-reformation-advance.png",
@@ -108575,7 +108575,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:nationalistic_enthusiasm",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -108595,7 +108595,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Nationalistic Enthusiasm",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/regimental-system.png",
@@ -108661,7 +108661,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:natural_seamanship",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Norway"
     ],
@@ -108694,7 +108694,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Natural Seamanship",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/natural-seamanship.png",
@@ -109921,7 +109921,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:naval_base_advance",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -109951,7 +109951,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Naval Base",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": null,
@@ -109963,7 +109963,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:naval_battery_advance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -109993,7 +109993,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Naval Battery",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": null,
@@ -110005,7 +110005,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:naval_cadets",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -110025,7 +110025,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Naval Cadets",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/safe-exploration-techniques-advance.png",
@@ -110091,7 +110091,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:naval_drill",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -110111,7 +110111,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Naval Drill",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/offensive-army.png",
@@ -110130,7 +110130,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:naval_fighting_instruction",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -110150,7 +110150,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Naval Fighting Instruction",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/gunpowder-advance.png",
@@ -110662,7 +110662,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:navigation_acts",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -110709,7 +110709,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Navigation Acts",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/navigation-acts.png",
@@ -112452,7 +112452,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:new_frontiers",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": [
      "?",
@@ -112475,7 +112475,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "New Frontiers",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/new-frontiers.png",
@@ -112500,7 +112500,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:new_trade_opportunities",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -112533,7 +112533,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "New Trade Opportunities",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/new-trade-opportunities.png",
@@ -112992,7 +112992,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:noble_officers",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -113022,7 +113022,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Noble Officers",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/noble-officers.png",
@@ -113047,7 +113047,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:noble_resilience",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -113077,7 +113077,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Noble Connections",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/noble-resilience.png",
@@ -113908,7 +113908,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:nor_merchant_tradition",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Norway"
     ],
@@ -113941,7 +113941,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Norwegian Merchants",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/nor-merchant-tradition.png",
@@ -114023,7 +114023,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:nor_shipbuilding",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Norway"
     ],
@@ -114056,7 +114056,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Military Shipbuilding",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/nor-shipbuilding.png",
@@ -114896,7 +114896,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:oak_forests_for_ships",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -114916,7 +114916,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Oak Forests for Ships",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -115332,7 +115332,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:offensive_army",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -115352,7 +115352,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Offensive Army",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/offensive-army.png",
@@ -115771,7 +115771,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:omani_ambition",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Oman"
     ],
@@ -115804,7 +115804,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Land Isolation",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/omani-ambition.png",
@@ -116195,7 +116195,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:optimism",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -116215,7 +116215,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Optimism",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/printing-press-advance.png",
@@ -116349,7 +116349,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:organised_construction",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -116369,7 +116369,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Organized Construction",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/renaissance-development.png",
@@ -116388,7 +116388,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:organised_mercenary_payment",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -116408,7 +116408,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Organized Mercenary Payments",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/regimental-system.png",
@@ -117101,7 +117101,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:origin_of_coffee",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -117134,7 +117134,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Origin of Coffee",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/origin-of-coffee.png",
@@ -117378,7 +117378,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ostrog_advance",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -117419,7 +117419,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Ostrog",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": null,
@@ -117665,7 +117665,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ottoman_bureaucracy",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Ottomans"
     ],
@@ -117698,7 +117698,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Birûn",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/ottoman-bureaucracy.png",
@@ -118295,7 +118295,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:overseas_merchants",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -118315,7 +118315,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Overseas Merchants",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/merchant-power-from-maritime-reformation-advance.png",
@@ -122802,7 +122802,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:people_of_war",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -122835,7 +122835,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "People of War",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/people-of-war.png",
@@ -124261,7 +124261,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:pioneer_spirit",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Norway"
     ],
@@ -124294,7 +124294,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Pioneer Spirit",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/pioneer-spirit.png",
@@ -125437,7 +125437,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:pomestnoe_voisko",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Muscovy"
     ],
@@ -125470,7 +125470,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Pomestnoe Voisko",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/pomestnoe-voisko.png",
@@ -126896,7 +126896,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:port_cost_distance_from_capital_choice_mil",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -126916,7 +126916,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Coastal Patrols",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/port-cost-distance-from-capital-choice-mil.png",
@@ -127054,7 +127054,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:port_security_improvement",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Oman"
     ],
@@ -127087,7 +127087,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Port Security Improvements",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/port-security-improvement.png",
@@ -127169,7 +127169,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:postal_service",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -127189,7 +127189,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Postal Service",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/road-building.png",
@@ -127830,7 +127830,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:preaching_missions",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -127850,7 +127850,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Preaching Missions",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/scholasticism.png",
@@ -127943,7 +127943,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:preobrazhensky_semyonovsky_imperial_guard",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Muscovy",
      "Russia"
@@ -127992,7 +127992,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Preobrazhensky Semyonovsky Imperial Guard",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/preobrazhensky-semyonovsky-imperial-guard.png",
@@ -128201,7 +128201,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:press_gangs",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -128221,7 +128221,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Press Gangs",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -128240,7 +128240,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:prester_john",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Ethiopia"
     ],
@@ -128273,7 +128273,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Prester John",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/prester-john.png",
@@ -128425,7 +128425,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:generalkriegskommissariat",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Prussia"
     ],
@@ -128463,7 +128463,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Kriegskommisariat",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/offensive-army.png",
@@ -128860,7 +128860,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:private_to_marshal",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -128880,7 +128880,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Private to Marshal",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/military-revolution-advance.png",
@@ -128943,7 +128943,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:produktplakatet",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Sweden"
     ],
@@ -128976,7 +128976,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Produktplakatet",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/produktplakatet.png",
@@ -130484,7 +130484,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:quality_education",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -130504,7 +130504,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Well-Trained Forces",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/diplomatic-influence.png",
@@ -130617,7 +130617,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:quipu",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Tawantinsuyu",
      "Qusqu"
@@ -130664,7 +130664,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Quipu",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/quipu.png",
@@ -132765,7 +132765,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:reclamation_of_land",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Mali"
     ],
@@ -132798,7 +132798,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Reclamation of Land",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/reclamation-of-land.png",
@@ -132817,7 +132817,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:reconquista_of_the_sea",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -132850,7 +132850,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Reconquista of the Sea",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/reconquista-of-the-sea.png",
@@ -133750,7 +133750,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:reformed_telpochcalli",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -133783,7 +133783,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Reformed Tēlpōchcalli",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/reformed-telpochcalli.png",
@@ -134144,7 +134144,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regimental_system",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -134164,7 +134164,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Regimental System",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/regimental-system.png",
@@ -134369,7 +134369,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:regulation_bureau",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -134389,7 +134389,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Regulation Bureau",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/debt-and-loans.png",
@@ -134811,7 +134811,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:religious_tradition",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -134831,7 +134831,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Religious Tradition",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/glorious-arms.png",
@@ -134850,7 +134850,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:religious_unification",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -134870,7 +134870,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Religious Unification",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/religious-unification.png",
@@ -135375,7 +135375,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:repair_at_sea",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -135395,7 +135395,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Coastal Careening",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -136061,7 +136061,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:retablissement",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -136108,7 +136108,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Rétablissement",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/retablissement.png",
@@ -136358,7 +136358,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:rgo_build_time_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -136378,7 +136378,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Renaissance Building Methods",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/rgo-build-time-advance.png",
@@ -136485,7 +136485,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:rgo_logistics_mil_choice",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -136505,7 +136505,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Improved Storehouses",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/rgo-logistics-mil-choice.png",
@@ -140035,7 +140035,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:royal_navy",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -140082,7 +140082,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "A Royal Navy",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/royal-navy.png",
@@ -140502,7 +140502,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:russian_legitimization",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -140533,7 +140533,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Common Legitimacy",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/russian-legitimization.png",
@@ -141159,7 +141159,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sailing_and_fighting_instructions",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -141208,7 +141208,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Blake's Sailing and Fighting Instructions",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/sailing-and-fighting-instructions.png",
@@ -141938,7 +141938,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sankore_madrassah",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Songhai"
     ],
@@ -141971,7 +141971,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Sankoré Madrasah",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/sankore-madrassah.png",
@@ -143915,7 +143915,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:saxon_baroque",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -143962,7 +143962,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Saxon Baroque",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/saxon-baroque.png",
@@ -143981,7 +143981,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:saxon_court",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -144028,7 +144028,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "The Saxon Court",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/saxon-court.png",
@@ -144118,7 +144118,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:saxon_industrialization",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Meissen",
      "Saxony"
@@ -144165,7 +144165,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Saxon Industrialization",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/saxon-industrialization.png",
@@ -146068,7 +146068,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:scourge_of_the_corsairs",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -146101,7 +146101,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Scourge of the Corsairs",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/scourge-of-the-corsairs.png",
@@ -146167,7 +146167,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sea_hawks",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -146187,7 +146187,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Seahawks",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/safe-exploration-techniques-advance.png",
@@ -146518,7 +146518,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:secretaries_of_state",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -146565,7 +146565,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Secretaries of State",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/secretaries-of-state.png",
@@ -148506,7 +148506,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sharia",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Songhai"
     ],
@@ -148539,7 +148539,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Sharī'ah",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/sunnah.png",
@@ -148564,7 +148564,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sheltered_ports",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -148584,7 +148584,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Sheltered Ports",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -148785,7 +148785,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:ships_penny",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -148805,7 +148805,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Ship's Penny",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/rudimentary-coastal-ship-repair.png",
@@ -148824,7 +148824,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:shipyard_advance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -148854,7 +148854,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Shipyard",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": null,
@@ -150467,7 +150467,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sick_and_hurt_board",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -150514,7 +150514,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Sick and Hurt Board",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/sick-and-hurt-board.png",
@@ -151225,7 +151225,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:skilled_captains",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Oman"
     ],
@@ -151258,7 +151258,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Skilled Captains",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/skilled-captains.png",
@@ -153529,7 +153529,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sme_bridge_between_worlds",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Samtskhe"
     ],
@@ -153562,7 +153562,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Bridge Between Worlds",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/sme-bridge-between-worlds.png",
@@ -153980,7 +153980,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:smithian_economics",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -154000,7 +154000,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Smithian Economics",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/efficient-mining.png",
@@ -154659,7 +154659,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:solomonid_claim",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Ethiopia"
     ],
@@ -154692,7 +154692,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Solomon Dynastic Claim",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/solomonid-claim.png",
@@ -156124,7 +156124,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:square_rigged_caravel",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -156168,7 +156168,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Square-Rigged Caravels",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": null,
@@ -156235,7 +156235,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:standardisation_of_calibre",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -156255,7 +156255,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Caliber Standardization",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/artillery-institution-advance.png",
@@ -156362,7 +156362,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:standing_army",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Prussia"
     ],
@@ -156395,7 +156395,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Standing Army",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/flesh-is-weak.png",
@@ -156614,7 +156614,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:state_propaganda",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -156634,7 +156634,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "State Propaganda",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/expansionism.png",
@@ -156937,7 +156937,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:steppe_horde_tribal_cultural_identity_law_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -156967,7 +156967,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Tribal Cultural Identity",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/steppe-horde-tribal-cultural-identity-law-advance.png",
@@ -156979,7 +156979,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:steppe_horde_tribal_modernization_law_advance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -157009,7 +157009,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Tribal Modernization",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/steppe-horde-tribal-modernization-law-advance.png",
@@ -157021,7 +157021,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:steppe_horde_tribal_religious_values_law_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -157051,7 +157051,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Tribal Religious Values",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/steppe-horde-tribal-religious-values-law-advance.png",
@@ -157569,7 +157569,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:strength_of_the_boyars",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Muscovy"
     ],
@@ -157602,7 +157602,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Strength of the Boyars",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/strength-of-the-boyars.png",
@@ -158313,7 +158313,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:sudano_sahelian_architecture_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": [
      "cgrp",
@@ -158344,7 +158344,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Sudano-Sahelian Architecture",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/sudano-sahelian-architecture-advance.png",
@@ -158996,7 +158996,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:superior_firepower",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -159016,7 +159016,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Superior Firepower",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/gunpowder-advance.png",
@@ -159035,7 +159035,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:superior_seamanship",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -159055,7 +159055,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Superior Seamanship",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/global-trade-routes-advance.png",
@@ -159394,7 +159394,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:supply_trains",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -159414,7 +159414,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Supply Trains",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/supply-trains.png",
@@ -160284,7 +160284,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:swedish_copper_coins",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Sweden"
     ],
@@ -160327,7 +160327,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Swedish Copper Coins",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/swedish-copper-coins.png",
@@ -160469,7 +160469,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:swedish_royal_post_office",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Sweden"
     ],
@@ -160502,7 +160502,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Kungliga Postverket",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/swedish-royal-post-office.png",
@@ -161511,7 +161511,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:table_of_ranks",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -161542,7 +161542,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "The Table of Ranks",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/table-of-ranks.png",
@@ -162504,7 +162504,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_absolute_order",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Teutons"
     ],
@@ -162537,7 +162537,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Absolute Order",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/teu-absolute-order.png",
@@ -162619,7 +162619,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_expanded_marches",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Teutons"
     ],
@@ -162652,7 +162652,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Expanded Marches",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/teu-expanded-marches.png",
@@ -162677,7 +162677,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_infantry_tactics",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Teutons"
     ],
@@ -162710,7 +162710,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Infantry Tactics",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/teu-infantry-tactics.png",
@@ -162729,7 +162729,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_one_state_one_religion",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Teutons"
     ],
@@ -162762,7 +162762,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "One State, One Religion",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/teu-one-state-one-religion.png",
@@ -162781,7 +162781,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_peasants_recruitment",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Teutons"
     ],
@@ -162814,7 +162814,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Peasant Recruitment",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/teu-peasants-recruitment.png",
@@ -162833,7 +162833,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_prussian_bishops",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Teutons"
     ],
@@ -162866,7 +162866,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Prussian Bishops",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/teu-prussian-bishops.png",
@@ -162885,7 +162885,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_reformed_order_army",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Teutons"
     ],
@@ -162918,7 +162918,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Reformed Order Army",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/teu-reformed-order-army.png",
@@ -163000,7 +163000,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teu_teutonic_religious_authority",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Teutons"
     ],
@@ -163033,7 +163033,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Teutonic Religious Authority",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/teu-teutonic-religious-authority.png",
@@ -163058,7 +163058,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:teutonic_legacy",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Prussia"
     ],
@@ -163091,7 +163091,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Teutonic Legacy",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/defenses-of-novgorod.png",
@@ -163838,7 +163838,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_hajj",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Songhai"
     ],
@@ -163871,7 +163871,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "The Ḥajj",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/islamic-prayer.png",
@@ -164070,7 +164070,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_mestnichestvo_advance",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": [
      "cgrp",
@@ -164111,7 +164111,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Mestnichestvo",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/the-mestnichestvo-advance.png",
@@ -164123,7 +164123,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_old_and_infirm",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -164143,7 +164143,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "The Old and Infirm",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/improved-foraging.png",
@@ -164217,7 +164217,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_philosophes",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "France"
     ],
@@ -164250,7 +164250,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Philosophes",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/the-philosophes.png",
@@ -164392,7 +164392,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_return_of_quetzalcoatl",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -164425,7 +164425,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Return of Quetzalcōātl",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/the-return-of-quetzalcoatl.png",
@@ -164444,7 +164444,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_right_hand_pope",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Knights Hospitaller"
     ],
@@ -164477,7 +164477,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "The Right Hand of the Pope",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/pap-head-of-the-church.png",
@@ -165100,7 +165100,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:the_young_can_serve",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -165120,7 +165120,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "The Young can Serve",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/regimental-system.png",
@@ -167194,7 +167194,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tlahtocayotl",
+    "branch_id": "advance:surgery_advance",
     "countries": [
      "Tenōchtitlan"
     ],
@@ -167227,7 +167227,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Tlahtohcāyōtl",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/tlahtocayotl.png",
@@ -168561,7 +168561,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_center_building_country_advance",
+    "branch_id": "advance:renaissance_development",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -168581,7 +168581,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Emporiums",
+    "branch": "Scholarly Treatises",
     "scope": "general"
    },
    "icon": "img/advance/trade-center-building-country-advance.png",
@@ -168720,7 +168720,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trade_manipulation",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -168740,7 +168740,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Trade Manipulation",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/global-supply-limit-modifier-advance-5.png",
@@ -169120,7 +169120,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tradition_of_payment",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -169140,7 +169140,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Tradition of Payment",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/tradition-of-payment.png",
@@ -169268,7 +169268,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:trans_sahara_trade",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Songhai"
     ],
@@ -169301,7 +169301,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Trans-Sahara Trade",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/markets-for-salt.png",
@@ -170111,7 +170111,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tre_trapezuntine_endurance",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "Trebizond"
     ],
@@ -170144,7 +170144,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Trapezuntine Endurance",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/tre-trapezuntine-endurance.png",
@@ -170344,7 +170344,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tribal_cultural_identity_law_advance",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -170374,7 +170374,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Tribal Cultural Identity",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/laws.png",
@@ -170386,7 +170386,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tribal_migration_law_advance",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -170416,7 +170416,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Tribal Migration",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/tribal-migration-law-advance.png",
@@ -170428,7 +170428,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:tribal_modernization_law_advance",
+    "branch_id": "advance:vaccination_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -170458,7 +170458,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Tribal Modernization",
+    "branch": "Vaccination",
     "scope": "general"
    },
    "icon": "img/advance/laws.png",
@@ -179027,7 +179027,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:urbanization_decrees",
+    "branch_id": "advance:renaissance_development",
     "countries": [
      "Bohemia"
     ],
@@ -179060,7 +179060,7 @@
    ],
    "facets": {
     "age": "Renaissance",
-    "branch": "Urbanization Decrees",
+    "branch": "Scholarly Treatises",
     "scope": "national"
    },
    "icon": "img/advance/urbanization-decrees.png",
@@ -180143,7 +180143,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:vauban_fortifications",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "France"
     ],
@@ -180176,7 +180176,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Innovative Fortifications",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/vauban-fortifications.png",
@@ -181310,7 +181310,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:vetting",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -181330,7 +181330,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Vetting",
+    "branch": "Surgery",
     "scope": "general"
    },
    "icon": "img/advance/debt-and-loans.png",
@@ -181393,7 +181393,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:vice_roys",
+    "branch_id": "advance:sanitation_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -181413,7 +181413,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Viceroys",
+    "branch": "Sanitation",
     "scope": "general"
    },
    "icon": "img/advance/vice-roys.png",
@@ -183759,7 +183759,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:wampum",
+    "branch_id": "advance:surgery_advance",
     "countries": [],
     "gate": [
      "or",
@@ -183805,7 +183805,7 @@
    ],
    "facets": {
     "age": "Discovery",
-    "branch": "Wampum",
+    "branch": "Surgery",
     "scope": "national"
    },
    "icon": "img/advance/wampum.png",
@@ -184575,7 +184575,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:watchers_of_the_silk_road",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [],
     "gate": null,
     "gate_labels": [],
@@ -184595,7 +184595,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Watchers of the Silk Road",
+    "branch": "Pharmacology",
     "scope": "general"
    },
    "icon": "img/advance/watchers-of-the-silk-road.png",
@@ -184614,7 +184614,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:water_frame",
+    "branch_id": "advance:vaccination_advance",
     "countries": [
      "England",
      "Great Britain"
@@ -184663,7 +184663,7 @@
    ],
    "facets": {
     "age": "Revolutions",
-    "branch": "Water Frame",
+    "branch": "Vaccination",
     "scope": "national"
    },
    "icon": "img/advance/water-frame.png",
@@ -185056,7 +185056,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:west_african_slave_trade",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Mali"
     ],
@@ -185089,7 +185089,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "West African Slave Trade",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/west-african-slave-trade.png",
@@ -185597,7 +185597,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:wojsko_komputoe",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Poland"
     ],
@@ -185630,7 +185630,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Wojsko Komputowe",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/wojsko-komputoe.png",
@@ -185719,7 +185719,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:write_new_sagas",
+    "branch_id": "advance:sanitation_advance",
     "countries": [
      "Norway"
     ],
@@ -185752,7 +185752,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "branch": "Write New Sagas",
+    "branch": "Sanitation",
     "scope": "national"
    },
    "icon": "img/advance/write-new-sagas.png",
@@ -186765,7 +186765,7 @@
   },
   {
    "data": {
-    "branch_id": "advance:zasechnaya_cherta",
+    "branch_id": "advance:pharmacology_advance",
     "countries": [
      "Muscovy"
     ],
@@ -186798,7 +186798,7 @@
    ],
    "facets": {
     "age": "Reformation",
-    "branch": "Zasechnaya Cherta",
+    "branch": "Pharmacology",
     "scope": "national"
    },
    "icon": "img/advance/zasechnaya-cherta.png",
