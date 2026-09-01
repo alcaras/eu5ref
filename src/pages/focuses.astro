@@ -59,12 +59,6 @@ const columnFor = (ageName: string, focus: string) =>
     .sort((a: any, b: any) =>
       (a.data.tier - b.data.tier) || a.name.localeCompare(b.name));
 
-const withPrereq = focusAdvances.filter((e: any) => e.data.requires.length > 0).length;
-const instGated = focusAdvances.filter((e: any) => rootOf(e).institution).length;
-const renInst = focusAdvances.filter(
-  (e: any) => e.facets.age === 'Renaissance' && rootOf(e).institution).length;
-const standalone = focusAdvances.filter((e: any) => !rootOf(e).name).length;
-const unlockers = focusAdvances.filter((e: any) => e.data.unlocks.length > 0);
 
 // Bottom section: the same 150 as a sortable / filterable / exportable table.
 const FOCUS_NAME: Record<string, string> = {
@@ -124,21 +118,6 @@ const AGE_ORDER = ages.map((a: any) => a.name);
       specialization your country can take at the start of an age". Each focus opens
       exactly <b>10</b> advances per age, so 20 of the 30 below stay out of reach every
       age. You pick again at every age change — five picks over a campaign.
-    </p>
-    <p class="fx-note">
-      <a href={`${base}ages`}>Traditions</a> (1337), the age you start in, has no
-      focus advances at all, so the choice first matters in the Renaissance.
-      Each age's tree hangs off a handful of roots — three
-      <a href={`${base}institutions`}>institutions</a> plus one or two free roots
-      that behave like institutions but need no embrace — and every advance
-      inherits its root's gate. All 30 Renaissance focus advances sit on one of
-      that age's four trees, {renInst} of them behind an institution you must have
-      embraced and the other {30 - renInst} on Scholarly Treatises, which needs no
-      embrace. From Discovery on it flips: {standalone} of the
-      {focusAdvances.length} are their own root — no prerequisite, no institution,
-      available the day the age opens — the only exception being the Discovery
-      colonial chain, which needs New World. {unlockers.length} unlock something beyond
-      a modifier.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
@@ -245,7 +224,6 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-intro p + p { margin-top: 8px; }
   .fx-intro b { color: var(--text); font-weight: 600; }
   .fx-intro code { color: var(--text-dim); }
-  .fx-note { color: var(--text-dim) !important; font-size: 13px !important; }
 
   .fx-jump { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
   .fx-jump__label {
