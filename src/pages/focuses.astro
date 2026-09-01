@@ -8,6 +8,7 @@ import Term from '../components/Term.astro';
 import SectionTable from '../components/SectionTable.astro';
 import advancesData from '../data/advances.json';
 import agesData from '../data/ages.json';
+import institutionsData from '../data/institutions.json';
 
 const base = import.meta.env.BASE_URL;
 
@@ -35,17 +36,19 @@ const byId: Record<string, any> = Object.fromEntries(
   advancesData.entities.map((e: any) => [e.id, e]));
 const branchOf = (id: string) => byId[id]?.facets?.branch || null;
 
-// An advance inherits its institution gate from its branch root, which carries
-// the `allow = has_embraced_institution`. A self-rooted advance has none — it
-// is researchable the moment its age opens.
-const instOf = (e: any): string | null => {
+// The tree an advance sits on = the root of its branch. Most of an age's tree
+// hangs off 3 institution roots (which carry `allow = has_embraced_institution`)
+// plus 1-2 free roots that look like institutions but need no embrace. An
+// advance that is its own root stands alone: no prerequisite, no embrace.
+const INSTITUTIONS = new Set(institutionsData.entities.map((i: any) => i.name));
+const rootOf = (e: any) => {
   const root = byId[e.data.branch_id];
-  for (const rs of root?.data?.requires_state || []) {
-    const m = /^has embraced institution: (.+)$/.exec(rs);
-    if (m) return m[1];
-  }
-  return null;
+  const self = !root || root.id === e.id;
+  const name = self ? null : root.facets.branch;
+  return { name, institution: !!name && INSTITUTIONS.has(name) };
 };
+const TREE_STANDALONE = 'Standalone';
+const treeName = (e: any) => rootOf(e).name || TREE_STANDALONE;
 
 const plain = (tokens: any[] | null) =>
   (tokens || []).map((t: any) => (t[0] === 't' ? t[1] : t[2] || '')).join('');
@@ -57,27 +60,28 @@ const columnFor = (ageName: string, focus: string) =>
       (a.data.tier - b.data.tier) || a.name.localeCompare(b.name));
 
 const withPrereq = focusAdvances.filter((e: any) => e.data.requires.length > 0).length;
-const instGated = focusAdvances.filter((e: any) => instOf(e)).length;
+const instGated = focusAdvances.filter((e: any) => rootOf(e).institution).length;
+const renInst = focusAdvances.filter(
+  (e: any) => e.facets.age === 'Renaissance' && rootOf(e).institution).length;
+const standalone = focusAdvances.filter((e: any) => !rootOf(e).name).length;
 const unlockers = focusAdvances.filter((e: any) => e.data.unlocks.length > 0);
 
 // Bottom section: the same 150 as a sortable / filterable / exportable table.
 const FOCUS_NAME: Record<string, string> = {
   adm: 'Administrative', dip: 'Diplomatic', mil: 'Military',
 };
-const NO_INST = 'No institution';
 const tableEntities = focusAdvances.map((e: any) => ({
   ...e,
   facets: {
     age: e.facets.age,
     focus: FOCUS_NAME[e.data.specialization],
-    institution: instOf(e) || NO_INST,
+    tree: treeName(e),
   },
   data: {
     ...e.data,
-    requires: e.data.requires.map((r: any) => ({
-      ...r,
-      label: branchOf(r.id) ? `${r.label} (${branchOf(r.id)})` : r.label,
-    })),
+    tree_label: rootOf(e).name
+      ? `${rootOf(e).name}${rootOf(e).institution ? ' (institution)' : ''}`
+      : '—',
     unlock_names: e.data.unlocks.flatMap((u: any) => u.items.map((i: any) => i.label)),
   },
 }));
@@ -91,10 +95,10 @@ const tableData = {
       options: ages.map((a: any) => ({ value: a.name, label: a.name, count: countBy('age', a.name) })) },
     { key: 'focus', label: 'Focus',
       options: FOCUSES.map((f) => ({ value: FOCUS_NAME[f.key], label: f.short, count: countBy('focus', FOCUS_NAME[f.key]) })) },
-    { key: 'institution', label: 'Institution',
-      options: [...new Set(tableEntities.map((e: any) => e.facets.institution))]
-        .sort((a: any, b: any) => (a === NO_INST ? 1 : b === NO_INST ? -1 : a.localeCompare(b)))
-        .map((v: any) => ({ value: v, label: v, count: countBy('institution', v) })) },
+    { key: 'tree', label: 'Tree',
+      options: [...new Set(tableEntities.map((e: any) => e.facets.tree))]
+        .sort((a: any, b: any) => (a === TREE_STANDALONE ? 1 : b === TREE_STANDALONE ? -1 : a.localeCompare(b)))
+        .map((v: any) => ({ value: v, label: v, count: countBy('tree', v) })) },
   ],
 };
 const AGE_ORDER = ages.map((a: any) => a.name);
@@ -124,13 +128,17 @@ const AGE_ORDER = ages.map((a: any) => a.name);
     <p class="fx-note">
       <a href={`${base}ages`}>Traditions</a> (1337), the age you start in, has no
       focus advances at all, so the choice first matters in the Renaissance.
-      {withPrereq} of the {focusAdvances.length} focus advances sit inside an
-      existing branch and need a prerequisite advance first (every Renaissance one,
-      plus the Discovery colonial chain); the rest are roots you can take straight
-      away. {instGated} of those inherit an <a href={`${base}institutions`}>institution</a>
-      gate from the root of their branch — you cannot research them until you have
-      embraced it — and the other {focusAdvances.length - instGated} need no
-      institution at all. {unlockers.length} unlock something beyond a modifier.
+      Each age's tree hangs off a handful of roots — three
+      <a href={`${base}institutions`}>institutions</a> plus one or two free roots
+      that behave like institutions but need no embrace — and every advance
+      inherits its root's gate. All 30 Renaissance focus advances sit on one of
+      that age's four trees, {renInst} of them behind an institution you must have
+      embraced and the other {30 - renInst} on Scholarly Treatises, which needs no
+      embrace. From Discovery on it flips: {standalone} of the
+      {focusAdvances.length} are their own root — no prerequisite, no institution,
+      available the day the age opens — the only exception being the Discovery
+      colonial chain, which needs New World. {unlockers.length} unlock something beyond
+      a modifier.
     </p>
     <nav class="fx-jump">
       <span class="fx-jump__label">Jump to</span>
@@ -174,21 +182,27 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                         ))}
                       </div>
                     ))}
-                    {instOf(e) && (
-                      <div class="fx-adv__inst">
-                        <span class="fx-adv__k">needs</span>
-                        <a href={`${base}institutions`}>{instOf(e)}</a> embraced
-                      </div>
-                    )}
+                    <div class="fx-adv__tree">
+                      <span class="fx-adv__k">tree</span>
+                      {rootOf(e).name === null ? (
+                        <span class="fx-adv__branch">standalone — no prerequisite, no institution</span>
+                      ) : rootOf(e).institution ? (
+                        <Fragment>
+                          <a href={`${base}institutions`}>{rootOf(e).name}</a>
+                          <span class="fx-adv__branch"> — must be embraced</span>
+                        </Fragment>
+                      ) : (
+                        <Fragment>
+                          {rootOf(e).name}
+                          <span class="fx-adv__branch"> — no institution</span>
+                        </Fragment>
+                      )}
+                    </div>
                     {e.data.requires.length > 0 && (
                       <div class="fx-adv__req">
                         <span class="fx-adv__k">after</span>
                         {e.data.requires.map((r: any, i: number) => (
-                          <Fragment>
-                            {i > 0 && ', '}
-                            <Term id={r.id} label={r.label} showIcon={false} />
-                            {branchOf(r.id) && <span class="fx-adv__branch"> ({branchOf(r.id)})</span>}
-                          </Fragment>
+                          <Fragment>{i > 0 && ', '}<Term id={r.id} label={r.label} showIcon={false} /></Fragment>
                         ))}
                       </div>
                     )}
@@ -206,7 +220,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
     { key: 'name', label: 'Advance', kind: 'name' },
     { key: 'age', label: 'Age', kind: 'facet' },
     { key: 'focus', label: 'Focus', kind: 'facet' },
-    { key: 'institution', label: 'Institution', kind: 'facet' },
+    { key: 'tree_label', label: 'Tree', kind: 'text' },
     { key: 'mods', label: 'Effects', kind: 'mods' },
     { key: 'unlock_names', label: 'Unlocks', kind: 'chips' },
     { key: 'requires', label: 'Requires', kind: 'refs' },
@@ -286,7 +300,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-adv__name:hover { color: var(--gold); text-decoration: none; }
   .fx-adv :global(ul.mods) { margin-top: 3px; }
   .fx-adv :global(ul.mods li) { white-space: normal; font-size: 12.5px; }
-  .fx-adv__unlock, .fx-adv__req, .fx-adv__inst { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
+  .fx-adv__unlock, .fx-adv__req, .fx-adv__tree { margin-top: 3px; font-size: 12px; color: var(--text-dim); }
   .fx-adv__unlock { color: var(--gold-soft); }
   .fx-adv__branch { color: var(--text-faint); }
   .fx-adv__k {
