@@ -53,12 +53,7 @@ const columns = [
   description="Every urban right (town right) in Europa Universalis V — what it does to the location, what it does to the country, and who may grant it."
 >
   <div class="ur-intro">
-    {concept?.desc ? <p><Rich tokens={concept.desc} /></p> : (
-      <p>
-        A country grants an urban right to one of its towns or cities. Most of the
-        effect lands on that location; some also carry a country-wide modifier.
-      </p>
-    )}
+    {concept?.desc && <p><Rich tokens={concept.desc} /></p>}
     <p class="ur-slots">
       <span class="ur-slots__k">Slots</span>
       {slots.map((s: any, i: number) => (

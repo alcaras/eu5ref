@@ -1,13 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import ConceptLede from '../components/ConceptLede.astro';
+
 ---
 <Base title="Locations" active="locations" pageMark="📍" eyebrow="World"
   description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion.">
-  <p style="max-width: 720px; color: var(--text-soft);">
-    Every land location, searchable. Type a name, a trade good, a culture or a
-    religion — or combine them. Results link through to the location's area,
-    where you get the full detail: terrain, pops, and the culture makeup.
-  </p>
+  <ConceptLede slug="location" />
 
   <div class="loc" data-loc>
     <div class="filterbar">

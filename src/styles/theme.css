@@ -446,3 +446,8 @@ ul.tlines li + li { border-top: 1px dotted var(--border-faint); }
 /* available only once you acquire something the gate depends on */
 .etbl tr.row--cond td:first-child { box-shadow: inset 2px 0 0 var(--gold-deep); }
 .etbl tr.row--cond .ename { color: var(--gold-soft); }
+
+/* A page lede is the game's own concept text (ConceptLede) */
+.lede { max-width: 780px; color: var(--text-soft); }
+.lede .rich { white-space: pre-line; }
+.lede__src { font-size: 12.5px; color: var(--text-faint); white-space: nowrap; }

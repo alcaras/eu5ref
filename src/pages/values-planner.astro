@@ -1,33 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import ConceptLede from '../components/ConceptLede.astro';
+
 ---
 <Base title="Values Planner" active="values-planner" pageMark="🧭" eyebrow="Tools"
   description="Pick laws, government reforms and estate privileges and see where your societal values drift, and how long it takes.">
 
-  <p style="max-width: 780px; color: var(--text-soft);">
-    Societal values sit on a −100…+100 axis, and every law, estate privilege,
-    cabinet action or building applies a monthly push toward one pole. Pick
-    what you run and this sums the push per axis and shows what it can unlock.
-    Magnitudes are the game's own — tiny 0.025, minor 0.05, normal 0.1, large
-    0.2, significant 0.33 per month.
-  </p>
-  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    <b>A value stalls at 100 × its net monthly push</b>
-    (<code>SOCIETAL_VALUE_INERTIA_SCALE</code>, confirmed by player testing):
-    0.3/month of push carries you to ±30 and no further, and drift slows on
-    the way there. Remove the push and the value drifts back toward whatever
-    the remaining setup supports — nothing about the position itself is
-    banked. The projections here use that curve.
-  </p>
-  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    Mind what a reform demands: one whose requirement is a
-    <code>societal_values</code> focus block needs the value <b>held at 50
-    toward its pole — the game removes the reform when that stops being
-    true</b>. Only a reform whose requirement sits in its <code>allow</code>
-    block appears to survive the value drifting back (verify in game). Laws
-    and privileges push only while you run them. For sequencing several
-    targets against the campaign clock, use the Value Path tool.
-  </p>
+  <ConceptLede slug="societal-value" />
 
   <div class="vp" data-vp>
     <div class="vp-controls">
@@ -77,13 +56,6 @@ import Base from '../layouts/Base.astro';
         <div class="vp-axes" data-vp-axes></div>
         <h2 class="vp-h" style="margin-top:18px;">Unlocks along the way
           <small data-vp-unlocked></small></h2>
-        <p style="font-size:12px; color:var(--text-faint); margin:-4px 0 8px;">
-          Timed with the stall curve: drift slows toward its equilibrium of
-          100 × net push, so anything past that stalls out. A focus-block
-          reform needs its 50 <em>held</em> — the game removes it when the
-          value drops back; only <code>allow</code>-gated requirements appear
-          to be start-only (verify in game).
-        </p>
         <div class="vp-unlocks" data-vp-unlocks></div>
       </section>
     </div>

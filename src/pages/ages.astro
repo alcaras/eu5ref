@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import SectionTable from '../components/SectionTable.astro';
 import raw from '../data/ages.json';
+import ConceptLede from '../components/ConceptLede.astro';
+
 
 const base = import.meta.env.BASE_URL;
 
@@ -17,6 +19,7 @@ const data = {
 <Base title="Ages" active="ages" pageMark="⏳" eyebrow="Ages & Advances"
   pageStats={[{ label: 'ages', value: data.entities.length }]}
   description="The ages of Europa Universalis V — start years, age modifiers, and advance efficiency.">
+  <ConceptLede slug="age" />
   <SectionTable data={data} columns={[
     { key: 'name', label: 'Age', kind: 'name' },
     { key: 'year', label: 'Starts', kind: 'num' },
@@ -24,15 +27,7 @@ const data = {
     { key: 'mods', label: 'Modifiers', kind: 'mods' },
     { key: 'desc', label: 'Description', kind: 'rich' },
   ]} defaultSort={{ key: 'year' }} placeholder="Filter ages…" />
-  <p class="ages-note">
-    Each age also opens with a choice of <a href={`${base}focuses`}>age focus</a> —
-    administrative, diplomatic, or military — which decides ten of that age's advances.
-    The <code>efficiency</code> value falls 1.0 → 0.1 across the ages; the files declare
-    it without saying what it scales, so it is reported raw rather than interpreted.
-  </p>
 </Base>
 
 <style>
-  .ages-note { margin-top: 18px; font-size: 12.5px; color: var(--text-faint); max-width: 70ch; }
-  .ages-note code { color: var(--text-dim); }
 </style>

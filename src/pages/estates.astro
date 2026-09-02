@@ -41,12 +41,6 @@ const unconditional = privileges.filter((p: any) => !p.data.requires?.length).le
   </div>
 
   <h2 style="margin-top: 34px;">Privileges</h2>
-  <p class="sec-note">
-    A privilege's own <code>potential</code> and <code>allow</code> decide who can
-    ever grant it — a country tag, a religion, a culture, an advance, another
-    privilege. Filter by the kind of requirement, or by “No requirement” for the
-    ones anyone can grant.
-  </p>
   <div data-filter-scope>
     <CountryLens placeholder="Show what a country can grant…" />
     <FilterBar facets={privData.facets} placeholder="Filter privileges…" />
@@ -55,6 +49,4 @@ const unconditional = privileges.filter((p: any) => !p.data.requires?.length).le
 </Base>
 
 <style>
-  .sec-note { font-size: 12.5px; color: var(--text-faint); max-width: 74ch; margin-top: 6px; }
-  .sec-note code { color: var(--text-dim); }
 </style>

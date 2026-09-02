@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import ConceptLede from '../components/ConceptLede.astro';
+
 import buildingsData from '../data/buildings.json';
 import goodsData from '../data/goods.json';
 
@@ -20,20 +22,7 @@ const prices = Object.fromEntries(
 <Base title="Building Calculator" active="building-calculator" pageMark="🧮" eyebrow="Tools"
   description="What a Europa Universalis V building's production method costs and returns at market prices.">
 
-  <p style="max-width: 780px; color: var(--text-soft);">
-    A building's production methods come in <b>slots</b>, and each slot offers
-    alternatives you switch between — a cannon maker picks one barrel method
-    (wooden, cast bronze, wrought iron) and one shot method (stone, lead,
-    iron). They convert goods: 0.606 iron + 0.505 tools makes 1 cannon. This
-    prices every method at market prices so you can compare the alternatives
-    in a slot; override any price below to match your own market.
-  </p>
-  <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    What this does <em>not</em> price is a location's raw goods. Per the game's
-    own encyclopedia those "do not require Buildings to be produced, and rely
-    solely on Laborers" — output scales with how developed the location is, so
-    it is not derivable from these files alone.
-  </p>
+  <ConceptLede slug="production-method" />
 
   <div class="bc" data-bc>
     <div class="filterbar">

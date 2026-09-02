@@ -1,31 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import ConceptLede from '../components/ConceptLede.astro';
+
 ---
 <Base title="Value Path" active="value-path" pageMark="🧗" eyebrow="Tools"
   description="Your societal-value targets as an age-by-age checklist: what to enact, grant and research in each age, with every axis drifting at once.">
 
-  <p style="max-width: 820px; color: var(--text-soft);">
-    A societal value drifts toward an equilibrium set by what pushes it:
-    <b>it stalls at 100 × your net monthly push</b>
-    (<code>SOCIETAL_VALUE_INERTIA_SCALE</code>, confirmed by player testing) —
-    0.4/month carries you to ±40 and no further, and the pole needs a full
-    1.0/month, held the whole way. Every axis drifts <em>at the same time</em>
-    under whatever you run, so this plans one running setup per age: list the
-    positions you want (the order is their priority when tools conflict) and
-    read the result the way you play it — age by age, "do these things now",
-    then the next age opens and the list grows.
-  </p>
-  <p style="max-width: 820px; color: var(--text-dim); font-size: 13px;">
-    <b>What banks and what doesn't.</b> A reform whose requirement is a
-    <code>societal_values</code> focus block needs the value at
-    <b>50 toward its pole and is removed when that stops being true</b> —
-    keeping it costs 0.5/month on that axis forever. Only reforms whose value
-    requirement sits in <code>allow</code> appear to survive drifting back
-    (verify in game). Laws and privileges push only while you run them — and
-    since granting <em>and</em> revoking privileges both burn estate
-    satisfaction, this plan grants once and avoids swapping them back and
-    forth; a revoke it cannot avoid is flagged as the cost it is.
-  </p>
+  <ConceptLede slug="societal-value" />
 
   <div class="vp-controls">
     <div class="pl-picker" data-pp-country>
@@ -1077,9 +1058,7 @@ import Base from '../layouts/Base.astro';
                  `${Object.keys(rec.laws || {}).length} laws already running` : '') +
           `, as a ${esc(govLabel)}.` +
           (revokes ? ` This plan revokes ${revokes} privilege${revokes > 1 ? 's' : ''} — each one costs estate satisfaction.` : ' No privilege is ever revoked.') + `</p>`
-        : '<p class="pp-note">Pick a country to start from its real 1337 position, ' +
-          'granted privileges and laws. Without one every axis starts at 0 and only ' +
-          'generic (non-country-specific) tools are planned.</p>';
+        : '<p class="pp-note">No country: every axis starts at 0.</p>';
 
       // ---- summary: every target, where it lands, when --------------------
       const summary = `<div class="pp-summary">` + ts.map((t: any, i: number) => {
@@ -1203,21 +1182,7 @@ import Base from '../layouts/Base.astro';
         </section>`;
       }).join('');
 
-      $('[data-pp-out]').innerHTML = head + summary + sections + `<p class="pp-note">
-        Every axis drifts at once toward <em>100 × its net monthly push</em>
-        (slowing on the way; the engine stops below 0.01/mo), so this is one
-        running setup per age, not a queue of one-axis pushes. Your target
-        order is the tie-breaker where tools conflict — the one cabinet
-        member, one policy per law group, movers whose side-effects pull a
-        higher-priority axis the wrong way. Privileges are granted at most
-        ${privBudget}/age and never churned: a grant stays until it actively
-        fights the plan, and a revoke is shown as the cost it is. "Kept"
-        targets are billed forward — their hold shows in every age's standing
-        bill. One-off nudges (parliament debates, agendas, events) can pierce
-        a cap temporarily, and estate satisfaction — the real bound on
-        privileges — is not in the files: the budgets above are yours to set
-        honestly.
-      </p>`;
+      $('[data-pp-out]').innerHTML = head + summary + sections;
       syncUrl();
     }
 

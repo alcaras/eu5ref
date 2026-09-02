@@ -45,16 +45,9 @@ const columns = [
 >
   <SectionTable title="Standard Buildings" data={standard} columns={columns as any}
     pagePrefix="buildings" placeholder="Filter standard buildings…" />
-  <p class="sec-note">
-    Unique buildings carry <code>is_special = yes</code> — a country gets them from
-    its own culture, religion or tag, or from an event, not from the ordinary build
-    menu. Their availability gate is on each building's page.
-  </p>
   <SectionTable title="Unique Buildings" data={unique} columns={columns as any}
     pagePrefix="buildings" placeholder="Filter unique buildings…" />
 </Base>
 
 <style>
-  .sec-note { font-size: 12.5px; color: var(--text-faint); max-width: 74ch; margin-top: 6px; }
-  .sec-note code { color: var(--text-dim); }
 </style>

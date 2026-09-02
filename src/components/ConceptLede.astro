@@ -1,0 +1,17 @@
+---
+// The game's own description of a concept, as a page lede. No text of our
+// own: if the concept has no description, nothing renders.
+import Rich from './Rich.astro';
+import concepts from '../data/concepts.json';
+
+interface Props { slug: string; }
+const { slug } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const concept = (concepts as any).entities.find((c: any) => c.slug === slug);
+---
+{concept?.desc && (
+  <p class="lede">
+    <Rich tokens={concept.desc} />
+    {' '}<a class="lede__src" href={`${base}concepts/${concept.slug}`}>{concept.name} →</a>
+  </p>
+)}

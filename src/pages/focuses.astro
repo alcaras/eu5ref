@@ -117,31 +117,6 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   ]}
   description="Administrative, diplomatic, and military age focuses in Europa Universalis V, compared side by side — every advance each one opens, age by age."
 >
-  <div class="fx-intro">
-    <p>
-      Every age change fires an age event that asks you to pick one of three focuses —
-      <b>Administrative</b>, <b>Diplomatic</b>, or <b>Military</b>. The pick sets your
-      age preference, and that decides which extra advances appear in that age's tree:
-      an advance marked <code>for = adm</code> "will only appear for a specified
-      specialization your country can take at the start of an age". Each focus opens
-      exactly <b>10</b> advances per age, so 20 of the 30 below stay out of reach every
-      age. You pick again at every age change — five picks over a campaign.
-    </p>
-    <p class="fx-trees">
-      In game every one of these sits in a tree, and the node above it must be
-      researched first — but for most of them the files declare no prerequisite
-      and no tree. The game slots such advances into the age's trees when it
-      loads, the same way every time, and that pass is reproduced here from the
-      game files and checked against the tech screen. A tree or parent marked
-      <i>computed</i> comes from that reproduction rather than a line in the files.
-    </p>
-    <nav class="fx-jump">
-      <span class="fx-jump__label">Jump to</span>
-      {ages.map((a: any) => (
-        <a href={`#${a.slug}`}>{a.name} <span class="fx-jump__yr">{a.year}</span></a>
-      ))}
-    </nav>
-  </div>
 
   {ages.map((age: any) => (
     <section class="fx-age" id={age.slug}>
@@ -243,13 +218,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
   .fx-col--dip { --fx: oklch(0.76 0.09 230); }
   .fx-col--mil { --fx: oklch(0.74 0.14 32); }
 
-  .fx-intro { margin-top: 18px; max-width: 78ch; }
-  .fx-intro p { color: var(--text-soft); font-size: 14px; line-height: 1.6; }
-  .fx-intro p + p { margin-top: 8px; }
-  .fx-intro b { color: var(--text); font-weight: 600; }
-  .fx-intro code { color: var(--text-dim); }
 
-  .fx-trees { color: var(--text-dim) !important; font-size: 13px !important; margin-top: 10px; }
   .fx-jump { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
   .fx-jump__label {
     font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;

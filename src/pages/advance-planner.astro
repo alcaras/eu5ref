@@ -4,30 +4,6 @@ import Base from '../layouts/Base.astro';
 <Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools" wide
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
-  <p class="pl-intro">
-    The advances screen: <b>age tabs</b>, then one pane per tree, laid out
-    top-down like the game — each prerequisite tier is a row, and what it
-    leads to sits underneath. Same trees, tiers, edges and left-to-right
-    order as in game, so nothing needs mentally rotating. A dashed edge
-    marks an advance whose files declare no prerequisite: the game slots it
-    into a tree when it loads, and that placement is reproduced here from
-    the game files and checked against the tech screen. The <b>age focus</b>
-    buttons are the pick you make at each age change — the trees show the
-    focus you chose, with its advances marked ◈ where the game draws them.
-    Click a pane header to collapse it.
-    With no country picked, only the advances every country gets are
-    drawn; pick one and its own advances join them while everything that
-    can never apply to it stays hidden — usually about two thirds of the
-    3,178 advances remain. <b>show</b> widens or narrows that.
-    <b>Hover</b> to light up an advance's whole prerequisite chain,
-    <b>click</b> to plan it (its prerequisites come along),
-    <b>right-click</b> to mark it already researched,
-    <b>⌥-click</b> to open its reference page. Type a stat into <b>gives…</b>
-    to light up every advance that carries it — in this age's trees, or as a
-    list across all ages with a per-age total — and switch <b>cards</b> to
-    icons to fit a whole age on screen (the name is on hover). The URL always
-    holds your plan.
-  </p>
 
   <div class="pl" data-pl>
     <div class="pl-controls">
@@ -90,7 +66,6 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <style is:global>
-    .pl-intro { max-width: 760px; color: var(--text-soft); }
     .pl-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
     .pl-zoom { display: flex; align-items: center; gap: 2px; }
     .pl-zoom button {
