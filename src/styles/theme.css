@@ -88,6 +88,8 @@ h1, h2, h3 {
 
 /* ── layout shell ── */
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+/* a tool page that uses the whole window (the planner's trees) */
+.wrap.wide { max-width: none; padding: 0 28px; }
 
 .site-header {
   border-bottom: 1px solid var(--border);

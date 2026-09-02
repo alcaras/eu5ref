@@ -11,8 +11,9 @@ interface Props {
   iconSrc?: string;   // web-relative game icon (img/...) shown before the title
   pageStats?: { label: string; value: string | number }[];
   description?: string;
+  wide?: boolean;     // tools that want the whole viewport (the planner's trees)
 }
-const { title, active, eyebrow, pageMark, iconSrc, pageStats, description } = Astro.props;
+const { title, active, eyebrow, pageMark, iconSrc, pageStats, description, wide = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const SITE_NAME = 'EU5 Reference';
@@ -290,7 +291,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
       }
     </script>
 
-    <main class="wrap">
+    <main class:list={["wrap", { wide }]}>
       {(title || pageStats) && (
         <div class="page-meta">
           {eyebrow && <div class="eyebrow">{eyebrow}</div>}

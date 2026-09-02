@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools"
+<Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools" wide
   description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
 
   <p class="pl-intro">
@@ -173,6 +173,11 @@ import Base from '../layouts/Base.astro';
     /* a fact the player asserted over the 1337 start (or the save) */
     .chip.shifted { cursor: pointer; border-color: var(--gold-deep); color: var(--gold-soft); }
     .chip.shifted:hover { border-color: var(--gold); }
+    .chip.country button {
+      background: none; border: 0; color: var(--text-faint); font: inherit; cursor: pointer;
+      padding: 0 0 0 6px; line-height: 1;
+    }
+    .chip.country button:hover { color: var(--bad); }
 
     /* "your country" panel — one row per kind of fact the gates test */
     .pl-facts {
@@ -480,6 +485,7 @@ import Base from '../layouts/Base.astro';
       const p = new URLSearchParams();
       p.set('v', D.vhash);
       if (country) p.set('c', country.t);
+      else if (activeSeat()) p.set('c', '-');   // cleared on purpose — don't let the save refill it
       overridesToParams(overrides, p);
       if (ageIx) p.set('age', String(ageIx));
       if (showMode) p.set('show', showMode);
@@ -747,7 +753,8 @@ import Base from '../layouts/Base.astro';
           `<button type="button" data-save-toggle="on">use it</button></span>`;
       }
       if (country) {
-        html += `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${country.n}</span>`;
+        html += `<span class="chip country" style="border-color:${country.col ?? 'var(--border)'}">${country.n}` +
+          `<button type="button" data-clear-country title="no country — show everything">✕</button></span>`;
         for (const [k, val] of Object.entries(overrides)) {
           const def = kindDef(k);
           if (!def) continue;
@@ -1155,6 +1162,10 @@ import Base from '../layouts/Base.astro';
       $('[data-pl-context]').addEventListener('click', (e) => {
         const tog = (e.target as HTMLElement).closest('[data-save-toggle]') as HTMLElement | null;
         if (tog) { setPref({ enabled: tog.dataset.saveToggle === 'on' }); return; }
+        if ((e.target as HTMLElement).closest('[data-clear-country]')) {
+          mutate(() => { country = null; overrides = {}; invalidateFacts(); });
+          return;
+        }
         const chip = (e.target as HTMLElement).closest('[data-reset]') as HTMLElement | null;
         if (!chip) return;
         mutate(() => { delete overrides[chip.dataset.reset!]; invalidateFacts(); });
@@ -1232,6 +1243,7 @@ import Base from '../layouts/Base.astro';
       const seat = activeSeat();
       if (seat) {
         if (!p.get('c')) country = D.countries.find((c) => c.t === seat.tag) || null;
+        if (p.get('c') === '-') country = null;
         if (!p.get('r')) for (const k of seat.seat.researched) { const id = `advance:${k}`; if (D.nodes[id]) researched.add(id); }
         if (!p.get('age')) { const m = /age_(\d+)/.exec(seat.snap.age || ''); if (m) p.set('age', String(parseInt(m[1], 10) - 1)); }
         seeded = { c: seat.tag, r: enc(researched), age: p.get('age') };
