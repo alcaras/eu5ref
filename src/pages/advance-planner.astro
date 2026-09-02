@@ -15,8 +15,10 @@ import Base from '../layouts/Base.astro';
     buttons are the pick you make at each age change — the trees show the
     focus you chose, with its advances marked ◈ where the game draws them.
     Click a pane header to collapse it.
-    Pick a country and everything that can never apply to it disappears —
-    usually about two thirds of the 3,178 advances.
+    With no country picked, only the advances every country gets are
+    drawn; pick one and its own advances join them while everything that
+    can never apply to it stays hidden — usually about two thirds of the
+    3,178 advances remain. <b>show</b> widens or narrows that.
     <b>Hover</b> to light up an advance's whole prerequisite chain,
     <b>click</b> to plan it (its prerequisites come along),
     <b>right-click</b> to mark it already researched,
@@ -590,7 +592,10 @@ import Base from '../layouts/Base.astro';
         if (age !== null && n.a !== age) continue;
         const st = statusOf(id);
         if (st === 'other' && !showOther()) continue;
-        if (st === 'conditional' && showMode === 'sure' && !planned.has(id) && !researched.has(id)) continue;
+        // without a country every gate is "conditional" — 2,400 of them —
+        // so the default view is the ungated core until you pick one
+        const narrow = showMode === 'sure' || (!country && !showOther());
+        if (st === 'conditional' && narrow && !planned.has(id) && !researched.has(id)) continue;
         // an age shows one focus's advances — the one you picked — but a
         // plan that already holds one of another focus keeps it visible
         if (age !== null && n.sp && n.sp !== focusAt(n.a) && !planned.has(id) && !researched.has(id)) continue;
@@ -743,6 +748,12 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderContext() {
+      // the show menu reads differently without a country: there is no
+      // "yours", only the ungated core and everything
+      const sel = $('[data-pl-show]') as HTMLSelectElement;
+      const [dflt, sure] = [sel.options[0], sel.options[1]];
+      dflt.textContent = country ? 'yours + conditional' : 'common to all countries';
+      sure.hidden = !country;
       let html = '';
       const seat = activeSeat();
       if (seat) {
@@ -754,7 +765,7 @@ import Base from '../layouts/Base.astro';
       }
       if (country) {
         html += `<span class="chip country" style="border-color:${country.col ?? 'var(--border)'}">${country.n}` +
-          `<button type="button" data-clear-country title="no country — show everything">✕</button></span>`;
+          `<button type="button" data-clear-country title="no country — only the advances every country gets">✕</button></span>`;
         for (const [k, val] of Object.entries(overrides)) {
           const def = kindDef(k);
           if (!def) continue;
