@@ -70,6 +70,29 @@ def _literals(expr, acc):
         acc.add((expr[0], expr[1]))
 
 
+def disambiguate(modkeys: dict[str, str], pct: set[str]) -> None:
+    """Split labels that two modifier keys share, in place.
+
+    Ten flat/percent pairs (diplomatic_capacity and diplomatic_capacity_modifier,
+    land_morale and land_morale_modifier, …) carry one and the same
+    MODIFIER_TYPE_NAME, so the `gives…` picker listed "Diplomatic Capacity"
+    twice with no way to tell which was which. The game's own convention for
+    the pairs it does distinguish is a trailing " %" on the percent one
+    (MODIFIER_TYPE_NAME_local_population_capacity_modifier is "Local
+    Population Capacity %"), so follow that. `pct` is which keys format as a
+    percentage, taken from the values ref.mod_json already formatted with the
+    game's own modifier_type metadata."""
+    shared: dict[str, list[str]] = {}
+    for key, label in modkeys.items():
+        shared.setdefault(label, []).append(key)
+    for label, keys in shared.items():
+        if len(keys) < 2 or label.endswith('%'):
+            continue
+        for key in keys:
+            if key in pct:
+                modkeys[key] = f'{label} %'
+
+
 def build_kinds(advances, nodes, cultures_ds, religions_ds) -> list[dict]:
     """The fact vocabulary, from the gates themselves plus the game's
     catalogues — see scripts/lib/triggers.py KINDS for what each kind means.
@@ -169,6 +192,7 @@ def main():
 
     nodes = {}
     modkeys: dict[str, str] = {}
+    modpct: set[str] = set()      # keys whose value formats as a percentage
     for e in advances:
         d = e['data']
         unlock_lines = []
@@ -199,6 +223,8 @@ def main():
             rec['m'] = mods
             for m in e['mods']:
                 modkeys.setdefault(m['key'], m['label'])
+                if str(m['value']).rstrip().endswith('%'):
+                    modpct.add(m['key'])
         if unlock_lines:
             rec['u'] = unlock_lines
         if d.get('specialization'):
@@ -249,6 +275,7 @@ def main():
             formable_gates[t] = g
 
     kinds = build_kinds(advances, nodes, cultures_ds, religions_ds)
+    disambiguate(modkeys, modpct)
 
     payload = {
         'formables': formable_gates,
