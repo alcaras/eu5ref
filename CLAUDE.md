@@ -642,6 +642,75 @@ envelope.
 
 ---
 
+## Population capacity & settlements — grounded facts (don't re-derive)
+
+- **The Settlement gate is exact and in the files**: `settlement_building` in
+  `common/building_types/rural_buildings.txt` needs
+  `location_population_percentage < 0.05` to build and is auto-removed above
+  `0.1`. That is the whole reason this model exists — players want to know
+  which locations are about to outgrow it.
+- **Capacity = (Σ flat terms) × (1 + Σ percent terms)**, file values ×1000.
+  Not a multiplicative chain — *verified to the unit* against in-game
+  tooltips: London `(100,000 + 100,000 + 880) × 3.8575 = 774,895` → "774K";
+  Wien `(100,000 + 100,000 + 1,544) × 3.0468 = 614,064` → "614K". `grep
+  local_population_capacity` over the whole tree is closed at 21 hits, so
+  the term list in `scripts/lib/popcap.py` is complete, not a sample.
+- **Development contributes +2.5%/point** (Wien's panel read 31.19 against a
+  +77.98% line) and is itself computed at start by
+  `setup/start/14_development.txt`. Two behaviours that file does NOT state,
+  both settled against a 1337.4.1 save: **the `road = 2` term does not apply
+  at start** (crediting it turns 6,847 exact matches into 6,247, every miss
+  exactly −2), and **the result is floored at 1.0**. The formula then
+  reproduces the save for **12,805 of 12,821 locations (99.88%)**.
+- **River size is not in rivers.png.** Only palette indices 4, 5, 11 and 15
+  are used and they do not order the tiers — the Seine is drawn one colour
+  end to end yet Paris is size 6 while Corbeil/Melun/Mantes/Rouen are 2, and
+  on the Danube Vienna/Linz/Buda are 4 against Passau/Belgrad/Nikopol/Vidin
+  at 6. Drawn thickness is 1–2px everywhere, so that is not it either. It is
+  recovered from the development residual instead: `river size = 2 × (save
+  dev − formula dev)`, hence **tier = size − 1**, confirmed on tiers 1/3/5 by
+  four tooltips. `scripts/build_rivers.py` does this and commits
+  `data/location-map-facts.json`; don't try to decode the palette again.
+- The save stores development only for **owned** locations, so 1337's
+  uncolonised world falls back to the palette (73–90% accurate) and is
+  flagged `est` → rendered with a `~`. A location on the development floor
+  still *bounds* its river size, and build_rivers.py uses that bound.
+- **Closeness to equator** scales `location_closeness_to_equator_impact`
+  (≤ +10 flat). `default.map` has `equator_y = 3340` but in heightmap pixels
+  and no heightmap ships in the mirror, so the ramp is fitted to the four
+  tooltip readings: linear in map y, 1.0 at the equator, 0 at the southern
+  edge. Reproduces all four to 0.03%; the fitted equator lands within 0.3% of
+  where Pontianak (0°) actually sits. `CHECKS` in build_rivers.py encodes
+  them and the build prints 4/4.
+- **Two terms are not location data at all**: "Traditional Economy" is the
+  owner's `capital_economy_vs_traditional_economy` position × the axis'
+  `global_population_capacity_modifier = 0.25` (so popcap reads
+  `public/country-start.json`, which is why build_country_start now runs
+  *before* build_locations), and town rights can carry one (ville franche
+  +20%).
+- **Province capital = the first location listed in its province block** in
+  `map_data/definitions.txt`; a country capital shows +10% and never the
+  province +5% as well. Wien is first in its block and shows +5%; Nikopol is
+  fourth in Tarnovo and shows neither.
+- **Location rank is taken as declared** in `07_cities_and_buildings.txt` —
+  the `allow` blocks in `location_ranks` (town ≥ 5 pop, city ≥ 30) gate
+  *upgrading in play*, not setup. Vyborg starts a town at 2.5 pop and
+  Constantinople a megalopolis at 120. Cardiff looks like a counter-example
+  only because its setup line is commented out — **strip `#` comments before
+  parsing any setup file**, and note `named_locations` colour lines carry
+  trailing comments too (6,246 locations vanish silently otherwise).
+- **1,247 locations start over capacity** — Jiangnan is at 2–3× (Jiaxing
+  913k pop against ~409k) — and the 1433 save shows those pops collapsing.
+  That is the game's design, not a modelling error; don't "fix" it.
+- **Wastelands get no capacity row**: impassable and unownable, so nothing
+  can ever be built there, and leaving them in floods the "buildable" filter
+  with 1,818 empty mountains.
+- `make rivers` regenerates the map-derived facts and needs a melted 1337
+  start save in `melts/` (gitignored) plus the map images; `make data` needs
+  neither, since `data/location-map-facts.json` is committed.
+
+---
+
 ## Git / deploy
 
 - Commit as **alcaras <alcaras@subcreation.net>** (repo-local git config —

@@ -17,8 +17,23 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+import popcap
 import ref
 from ref import eid, ename, slugify, write_dataset, facet_meta
+
+# A location can take the Settlement building below 5% of its population
+# capacity, and the game removes it again above 10%
+# (common/building_types/rural_buildings.txt).
+SETTLE_BUILD = 5.0
+SETTLE_KEEP = 10.0
+
+
+def settlement_state(pct: float | None) -> str | None:
+    if pct is None:
+        return None
+    if pct < SETTLE_BUILD:
+        return 'buildable'
+    return 'kept' if pct < SETTLE_KEEP else 'removed'
 
 
 def town_setups() -> dict[str, list[dict]]:
@@ -112,6 +127,10 @@ def main():
     setup = setup_by_location()
     setups = town_setups()
     areas = p.areas
+    caps = popcap.Model()
+    # Who holds each location at 1337, so the table can answer "which of *my*
+    # locations is about to outgrow a Settlement".
+    tag_name = {t: getattr(c, 'display_name', t) for t, c in p.countries.items()}
 
     entities = []
     index = []          # the searchable location list
@@ -149,12 +168,31 @@ def main():
                     'sea': bool(getattr(loc, 'is_sea', False) or getattr(loc, 'is_lake', False)),
                     'wasteland': bool(getattr(loc, 'is_wasteland', False)),
                 }
+                # Wastelands are impassable and unownable — they carry terrain
+                # but nothing can ever be built in one, so no capacity row.
+                tag = caps.owner.get(lkey)
+                row['owner'] = tag
+                row['owner_name'] = tag_name.get(tag) if tag else None
+                cap = None if (row['sea'] or row['wasteland']) else caps.capacity(lkey)
+                if cap:
+                    row.update({
+                        'dev': cap['dev'],
+                        'cap': cap['cap'],
+                        'cap_pct': cap['pct'],
+                        'cap_estimated': cap['estimated'],
+                        'cap_terms': cap['terms'],
+                        'settlement': settlement_state(cap['pct']),
+                    })
                 rows.append(row)
                 if not row['sea']:
                     index.append([row['name'], aslug, row['good'] or '', row['culture'] or '',
                                   row['religion'] or '', a.display_name,
                                   row['rank'] or '', row['pop_total'] or 0,
-                                  row['slug'] if row['rank'] else ''])
+                                  row['slug'] if row['rank'] else '',
+                                  row.get('cap') or 0, row.get('cap_pct'),
+                                  row.get('settlement') or '',
+                                  1 if row.get('cap_estimated') else 0,
+                                  row.get('owner_name') or ''])
 
         land = [r for r in rows if not r['sea']]
         entities.append({
@@ -174,6 +212,8 @@ def main():
                 'towns': sum(1 for r in land if r['rank']),
                 'goods': sorted({r['good'] for r in land if r['good']}),
                 'pop_total': round(sum(r['pop_total'] or 0 for r in land), 1),
+                'cap_total': round(sum(r.get('cap') or 0 for r in land), 1),
+                'settlements': sum(1 for r in land if r.get('settlement') == 'buildable'),
             },
         })
 
@@ -188,11 +228,17 @@ def main():
 
     out = ref.ROOT / 'public' / 'locations.json'
     out.write_text(json.dumps({'cols': ['name', 'area', 'good', 'culture', 'religion',
-                                        'areaName', 'rank', 'pops', 'slug'],
+                                        'areaName', 'rank', 'pops', 'slug',
+                                        'cap', 'capPct', 'settlement', 'capEst', 'owner'],
                                'rows': index}, ensure_ascii=False,
                               separators=(',', ':')) + '\n', encoding='utf-8')
     kb = out.stat().st_size // 1024
     print(f'  public/locations.json: {len(index)} land locations, {kb}KB')
+    known = [r for r in index if r[10] is not None]
+    est = sum(r[12] for r in known)
+    build = sum(1 for r in known if r[11] == 'buildable')
+    print(f'  population capacity: {len(known)} locations ({est} with an estimated river), '
+          f'{build} under {SETTLE_BUILD:g}% — a Settlement can go up')
 
 
 if __name__ == '__main__':

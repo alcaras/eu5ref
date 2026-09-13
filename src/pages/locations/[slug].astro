@@ -23,10 +23,21 @@ export function getStaticPaths() {
 const { loc, area } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const buildingTotal = loc.buildings.reduce((n: number, b: any) => n + b.count, 0);
+// Pops and capacity are carried in thousands, as the setup files state them.
+const people = (v: number) => Math.round(v * 1000).toLocaleString();
+const SETTLE: Record<string, string> = {
+  buildable: 'a Settlement can be built here',
+  kept: 'an existing Settlement is kept, but no new one can be built',
+  removed: 'over 10% — the game removes a Settlement here',
+};
+const term = (t: any) => t.flat
+  ? `+${people(t.flat)}`
+  : `${t.pct > 0 ? '+' : '−'}${Math.abs(t.pct * 100).toFixed(2)}%`;
 ---
 <Base title={loc.name} active="locations" eyebrow={`${loc.rank} · ${area.name}`}
   pageStats={[
-    { label: 'pops at 1337', value: loc.pop_total ?? 0 },
+    { label: 'pops at 1337', value: people(loc.pop_total ?? 0) },
+    { label: '% of pop capacity', value: loc.cap_pct != null ? `${loc.cap_pct.toFixed(1)}%` : '—' },
     { label: 'starting buildings', value: buildingTotal },
     { label: 'good', value: loc.good ?? '—' },
   ]}
@@ -69,6 +80,23 @@ const buildingTotal = loc.buildings.reduce((n: number, b: any) => n + b.count, 0
           </div>
         </div>
       )}
+
+      {loc.cap && (
+        <div class="panel">
+          <h3>
+            Population capacity — {loc.cap_estimated && <span class="cap-est" title="river size estimated">~</span>}{people(loc.cap)}
+          </h3>
+          <p class="cap-lede">
+            {people(loc.pop_total ?? 0)} people, <b>{loc.cap_pct.toFixed(2)}%</b> of capacity
+            — {SETTLE[loc.settlement]}. The game builds this the same way:
+          </p>
+          <ul class="pairs">
+            {loc.cap_terms.map((t: any) => (
+              <li><span class="k">{t.label.replace(/_/g, ' ')}</span><span class="v">{term(t)}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
 
     <aside>
@@ -96,4 +124,9 @@ const buildingTotal = loc.buildings.reduce((n: number, b: any) => n + b.count, 0
       </div>
     </aside>
   </div>
+
+  <style>
+    .cap-est { color: var(--text-dim); font-family: var(--font-mono); }
+    .cap-lede { margin: 0 0 .6rem; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  </style>
 </Base>

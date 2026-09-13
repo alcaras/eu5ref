@@ -1,6 +1,6 @@
 PY := .venv/bin/python
 
-.PHONY: patch data audit changelog build check dev setup
+.PHONY: patch data rivers audit changelog build check dev setup
 
 patch: data audit changelog build
 
@@ -20,19 +20,25 @@ data:
 	$(PY) scripts/build_cultures.py
 	$(PY) scripts/build_pops.py
 	$(PY) scripts/build_missions.py
+	$(PY) scripts/build_country_start.py
 	$(PY) scripts/build_locations.py
 	$(PY) scripts/build_events.py
 	$(PY) scripts/build_countries.py
 	$(PY) scripts/build_simple.py
 	$(PY) scripts/build_defines.py
 	$(PY) scripts/build_values.py
-	$(PY) scripts/build_country_start.py
 	$(PY) scripts/build_map.py
 	$(PY) scripts/build_geo.py
 	$(PY) scripts/build_planner.py
 	$(PY) scripts/build_battle.py
 	$(PY) scripts/build_entities.py
 	$(PY) scripts/build_backlinks.py
+
+# Map-derived per-location facts (river tier, equator closeness). Needs the
+# map images and a melted 1337 start save in melts/; the output is committed,
+# so `make data` does not. Re-run after a patch.
+rivers:
+	$(PY) scripts/build_rivers.py
 
 audit:
 	$(PY) scripts/audit_coverage.py

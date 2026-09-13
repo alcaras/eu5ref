@@ -21,3 +21,6 @@ dist/
 # OS noise
 .DS_Store
 __pycache__/
+
+# Melted saves used to calibrate the pop-capacity / development model (local only)
+/melts/

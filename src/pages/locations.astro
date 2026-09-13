@@ -2,14 +2,31 @@
 import Base from '../layouts/Base.astro';
 import ConceptLede from '../components/ConceptLede.astro';
 
+const base = import.meta.env.BASE_URL;
 ---
 <Base title="Locations" active="locations" pageMark="📍" eyebrow="World"
-  description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion.">
+  description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion — with each one's 1337 population against its population capacity.">
   <ConceptLede slug="location" />
 
   <div class="loc" data-loc>
+    <p class="loc-note">
+      A <b>Settlement</b> can only be built in a location under 5% of its
+      <a href={`${base}concepts/population-capacity`}>population capacity</a>, and the game removes
+      it again once the location passes 10% — so the locations worth building in first are the
+      ones closest to the line. Capacity is the game's own modifier stack, computed for the
+      1337 start; a <span class="cap-est">~</span> marks one whose river size had to be
+      estimated rather than solved.
+    </p>
     <div class="filterbar">
-      <input type="search" placeholder="Search locations, goods, cultures…" data-loc-q autocomplete="off" />
+      <input type="search" placeholder="Search locations, owners, goods, cultures…" data-loc-q autocomplete="off" />
+      <div class="facet-group">
+        <span class="facet-label">Settlement</span>
+        <span data-loc-settle>
+          <button data-settle="buildable">buildable <small>&lt;5%</small></button>
+          <button data-settle="kept">kept <small>5–10%</small></button>
+          <button data-settle="removed">removed <small>&ge;10%</small></button>
+        </span>
+      </div>
       <div class="facet-group">
         <span class="facet-label">Good</span>
         <span data-loc-goods></span>
@@ -24,13 +41,26 @@ import ConceptLede from '../components/ConceptLede.astro';
           <th data-loc-sort="2">Good</th>
           <th data-loc-sort="3">Culture</th>
           <th data-loc-sort="4">Religion</th>
+          <th data-loc-sort="13">Owner</th>
           <th data-loc-sort="6">Rank</th>
-          <th data-loc-sort="7" class="num">Pops</th>
+          <th data-loc-sort="7" class="num">Population</th>
+          <th data-loc-sort="9" class="num">Capacity</th>
+          <th data-loc-sort="10" class="num">% of cap</th>
+          <th data-loc-sort="11">Settlement</th>
         </tr></thead>
         <tbody data-loc-body></tbody>
       </table>
     </div>
   </div>
+
+  <style is:global>
+    .loc-note { max-width: 62rem; margin: 0 0 1rem; color: var(--text-dim); font-size: .875rem; line-height: 1.55; }
+    .cap-est { color: var(--text-dim); font-family: var(--font-mono); }
+    .settle { font-size: .8125rem; padding: .05rem .4rem; border-radius: 3px; white-space: nowrap; }
+    .settle-buildable { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
+    .settle-kept { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
+    .settle-removed { color: var(--text-dim); }
+  </style>
 
   <script>
     const root = document.querySelector('[data-loc]')!;
@@ -38,28 +68,38 @@ import ConceptLede from '../components/ConceptLede.astro';
     const body = root.querySelector('[data-loc-body]') as HTMLElement;
     const count = root.querySelector('[data-loc-count]') as HTMLElement;
     const goodsBar = root.querySelector('[data-loc-goods]') as HTMLElement;
+    const settleBar = root.querySelector('[data-loc-settle]') as HTMLElement;
     const baseUrl = document.querySelector('.site-title a')!.getAttribute('href')!;
     const LIMIT = 300;   // render a page's worth; the filter narrows the rest
 
     let rows: any[][] = [];
     let good: string | null = null;
+    let settle: string | null = null;
     let sortIx = 7, sortDir = -1;
 
     const esc = (s: string) => String(s).replace(/[&<>]/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' } as any)[c]);
+    // pops and capacity are carried in thousands, as the setup files state them
+    const people = (v: number) => Math.round(v * 1000).toLocaleString();
+    const LABEL: Record<string, string> = {
+      buildable: 'buildable', kept: 'kept', removed: 'auto-removed',
+    };
 
     function render() {
       const term = q.value.trim().toLowerCase();
       let hits = rows;
       if (good) hits = hits.filter((r) => r[2] === good);
+      if (settle) hits = hits.filter((r) => r[11] === settle);
       if (term) {
         hits = hits.filter((r) =>
           r[0].toLowerCase().includes(term) || r[2].toLowerCase().includes(term) ||
           r[3].toLowerCase().includes(term) || r[4].toLowerCase().includes(term) ||
-          r[5].toLowerCase().includes(term));
+          r[5].toLowerCase().includes(term) || r[13].toLowerCase().includes(term));
       }
       const sorted = [...hits].sort((a, b) => {
         const x = a[sortIx], y = b[sortIx];
+        if (x == null) return 1;
+        if (y == null) return -1;
         if (typeof x === 'number' && typeof y === 'number') return (x - y) * sortDir;
         return String(x).localeCompare(String(y)) * sortDir;
       });
@@ -68,10 +108,27 @@ import ConceptLede from '../components/ConceptLede.astro';
         `<tr><td>${r[8] ? `<a href="${baseUrl}locations/${r[8]}"><b>${esc(r[0])}</b></a>` : `<b>${esc(r[0])}</b>`}</td>` +
         `<td><a href="${baseUrl}areas/${r[1]}">${esc(r[5])}</a></td>` +
         `<td>${esc(r[2])}</td><td>${esc(r[3])}</td><td>${esc(r[4])}</td>` +
-        `<td>${esc(r[6])}</td><td class="num">${r[7] || ''}</td></tr>`).join('');
+        `<td>${esc(r[13])}</td><td>${esc(r[6])}</td>` +
+        `<td class="num">${r[7] ? people(r[7]) : ''}</td>` +
+        `<td class="num">${r[9] ? (r[12] ? '<span class="cap-est">~</span>' : '') + people(r[9]) : ''}</td>` +
+        `<td class="num">${r[10] == null ? '' : r[10].toFixed(2) + '%'}</td>` +
+        `<td>${r[11] ? `<span class="settle settle-${r[11]}">${LABEL[r[11]]}</span>` : ''}</td></tr>`).join('');
       count.textContent = hits.length > LIMIT
         ? `showing ${LIMIT} of ${hits.length.toLocaleString()} matches`
         : `${hits.length.toLocaleString()} of ${rows.length.toLocaleString()} locations`;
+    }
+
+    function toggleBar(bar: HTMLElement, attr: string, get: () => string | null,
+                       set: (v: string | null) => void) {
+      bar.addEventListener('click', (e) => {
+        const b = (e.target as HTMLElement).closest(`[data-${attr}]`) as HTMLElement | null;
+        if (!b) return;
+        const v = b.getAttribute(`data-${attr}`)!;
+        set(get() === v ? null : v);
+        for (const x of bar.querySelectorAll('button')) x.classList.remove('on');
+        if (get()) b.classList.add('on');
+        render();
+      });
     }
 
     fetch(`${baseUrl}locations.json`).then((r) => r.json()).then((d) => {
@@ -81,23 +138,16 @@ import ConceptLede from '../components/ConceptLede.astro';
       for (const r of rows) if (r[2]) tally.set(r[2], (tally.get(r[2]) || 0) + 1);
       goodsBar.innerHTML = [...tally.entries()].sort((a, b) => b[1] - a[1])
         .map(([g, n]) => `<button data-good="${esc(g)}">${esc(g)} <small>${n}</small></button>`).join('');
-      goodsBar.addEventListener('click', (e) => {
-        const b = (e.target as HTMLElement).closest('[data-good]') as HTMLElement | null;
-        if (!b) return;
-        const g = b.dataset.good!;
-        good = good === g ? null : g;
-        for (const x of goodsBar.querySelectorAll('button')) x.classList.remove('on');
-        if (good) b.classList.add('on');
-        render();
-      });
+      toggleBar(goodsBar, 'good', () => good, (v) => { good = v; });
       render();
     });
 
+    toggleBar(settleBar, 'settle', () => settle, (v) => { settle = v; });
     q.addEventListener('input', render);
     for (const th of root.querySelectorAll<HTMLElement>('[data-loc-sort]')) {
       th.addEventListener('click', () => {
         const ix = Number(th.dataset.locSort);
-        sortDir = ix === sortIx ? -sortDir : (ix === 7 ? -1 : 1);
+        sortDir = ix === sortIx ? -sortDir : (ix >= 7 && ix <= 10 ? -1 : 1);
         sortIx = ix;
         for (const x of root.querySelectorAll('[data-loc-sort]')) x.classList.remove('sorted-asc', 'sorted-desc');
         th.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
