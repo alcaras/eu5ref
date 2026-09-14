@@ -375,6 +375,10 @@ and the planned `make art` dds→png step that follows.
 
 ## Quirks already discovered (don't re-debug)
 
+- **`dist/` is kept out of Dropbox** with `xattr -w com.dropbox.ignored 1 dist`
+  (43k generated files). The attribute is per machine and per folder, so a
+  fresh clone needs it again; `xattr -p com.dropbox.ignored dist` prints `1`
+  when it is set.
 - `du` reports 0B for game files — Dropbox online-only placeholders; reads
   fault them in fine. Don't "fix".
 - The toolkit shells out to the **rakaly** CLI for parsing; without it you

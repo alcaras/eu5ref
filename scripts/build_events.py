@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
+import requirements
 import triggers
 from ref import eid, rich, slugify, write_dataset, facet_meta
 
@@ -56,48 +57,142 @@ _SUBJECT_KEYS = ('modifier', 'name', 'type', 'advance', 'building', 'law',
 _DURATION_KEYS = ('months', 'years', 'days')
 
 
+# Control flow inside an option's effect block. The body matters more than
+# the wrapper, so each of these is recursed into and its condition, where it
+# has one, becomes the prefix on the lines it guards.
+_FLOW = {
+    'if': 'If', 'trigger_if': 'If',
+    'else_if': 'Otherwise if', 'trigger_else_if': 'Otherwise if',
+    'else': 'Otherwise', 'trigger_else': 'Otherwise',
+    'hidden_effect': '', 'random_list': 'One of',
+}
+_MAX_DEPTH = 2
+_MAX_INNER = 4        # effects listed under one condition before "and N more"
+
+
+# `estate(estate_type:burghers_estate) = { … }` switches scope; the effect a
+# player cares about is inside it, so the key becomes the prefix on the body.
+_SCOPES = {'root', 'prev', 'this', 'owner', 'ruler', 'heir', 'capital_scope',
+           'controller', 'overlord', 'from'}
+
+
+def _is_scope(label: str) -> bool:
+    key = label.lower().replace(' ', '_')
+    return '(' in key or key in _SCOPES
+
+
+def _scope_name(label: str) -> str:
+    """`Estate(Estate Type:Burghers Estate)` → `Burghers Estate`."""
+    if '(' in label:
+        inner = label[label.index('(') + 1:].rstrip(')')
+        return inner.split(':')[-1].strip() or label
+    return label
+
+
+def _condition(block) -> str:
+    """A `limit` block as one sentence, or '' when there is none."""
+    limit = None
+    try:
+        for k, v in block.iterate_with_duplicates():
+            if str(k) == 'limit':
+                limit = v
+                break
+    except AttributeError:
+        return ''
+    if limit is None:
+        return ''
+    d = requirements.describe(limit, limit=3)
+    parts = list(d['lines']) + [f'not {x}' for x in d['excludes']]
+    return ' and '.join(parts)
+
+
+def _one_effect(label: str, v, labels, depth: int) -> list[str]:
+    """One key/value of an effect block as readable lines.
+
+    A key written more than once in the same block comes back as a list, and
+    a control-flow key wraps the effects that matter, so both are walked
+    rather than printed. Nothing that still holds a parser object is ever
+    emitted: the fallback is the key's own name.
+    """
+    if isinstance(v, (list, tuple)):
+        out = []
+        for item in v:
+            out.extend(_one_effect(label, item, labels, depth))
+        return out
+
+    if hasattr(v, 'iterate_with_duplicates'):
+        flow = _FLOW.get(label.lower().replace(' ', '_'))
+        if flow is None and _is_scope(label):
+            flow = _scope_name(label)
+        if flow is not None and depth < _MAX_DEPTH:
+            cond = _condition(v) if flow.startswith(('If', 'Otherwise if')) else ''
+            inner = _block_lines(v, labels, depth + 1, skip={'limit'})
+            if not inner:
+                return []
+            head = f'{flow} {cond}' if cond else flow
+            if not head:                      # hidden_effect: the body is the effect
+                return inner
+            shown, rest = inner[:_MAX_INNER], len(inner) - _MAX_INNER
+            body = ', '.join(shown) + (f', and {rest} more' if rest > 0 else '')
+            return [f'{head}: {body}']
+
+        inner = {}
+        try:
+            for ik, iv in v.iterate_with_duplicates():
+                inner.setdefault(str(ik), iv)
+        except Exception:
+            pass
+        subject = next((inner[s] for s in _SUBJECT_KEYS if s in inner), None)
+        dur = next(((d, inner[d]) for d in _DURATION_KEYS if d in inner), None)
+        if isinstance(subject, (str, int, float, bool)):
+            tok = str(subject)
+            line = f'{label}: {labels.get(tok) or ref.pretty(tok)}'
+            if dur and isinstance(dur[1], (str, int, float)):
+                line += f' ({dur[1]} {dur[0]})'
+            return [line]
+        return [label]
+
+    if v is not None and str(v) not in ('yes', ''):
+        tok = str(v)
+        return [f'{label}: {labels.get(tok) or ref.pretty(tok)}']
+    return [label]
+
+
+def _block_lines(tree, labels, depth: int, skip: set[str] | None = None) -> list[str]:
+    """Every key of an effect block as readable lines."""
+    out: list[str] = []
+    try:
+        pairs = list(tree.iterate_with_duplicates())
+    except Exception:
+        return out
+    for k, v in pairs:
+        key = str(k)
+        if skip and key in skip:
+            continue
+        for line in _one_effect(ref.pretty(key), v, labels, depth):
+            if 'paradox_parser' in line:      # never ship a parser repr
+                line = ref.pretty(key)
+            if line and line not in out:
+                out.append(line)
+    return out
+
+
 def effect_lines(effect, labels) -> tuple[list[str], list[str]]:
     """(readable lines, raw top-level keys) for an option's effect block.
 
     "add_country_modifier" alone says nothing — the modifier's name lives one
     level in, so we read that one level and stop. Going deeper only yields
-    scripted-effect plumbing."""
+    scripted-effect plumbing. Control flow is the exception: an `if` hides the
+    effect a player cares about, so it is walked and its condition kept.
+    """
     tree = getattr(effect, 'tree', None) or effect
     if tree is None or not hasattr(tree, 'iterate_with_duplicates'):
         return [], []
-    lines, keys = [], []
     try:
-        pairs = list(tree.iterate_with_duplicates())
+        keys = [str(k) for k, _ in tree.iterate_with_duplicates()]
     except Exception:
         return [], []
-    for k, v in pairs:
-        k = str(k)
-        keys.append(k)
-        label = ref.pretty(k)
-        if hasattr(v, 'iterate_with_duplicates'):
-            inner = {}
-            try:
-                for ik, iv in v.iterate_with_duplicates():
-                    inner.setdefault(str(ik), iv)
-            except Exception:
-                pass
-            subject = next((inner[s] for s in _SUBJECT_KEYS if s in inner), None)
-            dur = next(((d, inner[d]) for d in _DURATION_KEYS if d in inner), None)
-            if isinstance(subject, (str, int, float, bool)):
-                tok = str(subject)
-                name = labels.get(tok) or ref.pretty(tok)
-                line = f'{label}: {name}'
-                if dur:
-                    line += f' ({dur[1]} {dur[0]})'
-                lines.append(line)
-            else:
-                lines.append(label)
-        elif v is not None and str(v) not in ('yes', ''):
-            tok = str(v)
-            lines.append(f'{label}: {labels.get(tok) or ref.pretty(tok)}')
-        else:
-            lines.append(label)
-    return lines, keys
+    return _block_lines(tree, labels, 0), keys
 
 
 def collect_options(e, labels) -> tuple[list[dict], list[str]]:

@@ -236,6 +236,27 @@ def first_event(tree, depth: int = 0) -> str | None:
     return None
 
 
+def tooltip_key(body) -> str:
+    """The loc key of a `custom_tooltip`, or '' when there is none.
+
+    A tooltip is written either as `custom_tooltip = some_key` or as
+    `custom_tooltip = { text = some_key <triggers> }`. Only the key is wanted
+    here, to tell the cosmetic `an_event_occurs_tt` pair from the real roll.
+    str() on the block form would leave a Python repr in the data, so the
+    block is read for its `text` and anything else yields ''.
+    """
+    v = get(body, 'custom_tooltip')
+    if v is None:
+        return ''
+    if hasattr(v, 'iterate_with_duplicates'):
+        v = get(v, 'text')
+        if v is None or hasattr(v, 'iterate_with_duplicates'):
+            return ''
+    if isinstance(v, (list, tuple)):
+        return ''
+    return str(v)
+
+
 def monthly_rolls(tree) -> list[dict]:
     """Every `random_list` / `random` in `on_monthly`, as real chances."""
     rolls: list[dict] = []
@@ -257,7 +278,7 @@ def monthly_rolls(tree) -> list[dict]:
                     entries.append({
                         'weight': w,
                         'event': first_event(body) if hasattr(body, 'iterate_with_duplicates') else None,
-                        'tooltip': str(get(body, 'custom_tooltip') or '')
+                        'tooltip': tooltip_key(body)
                                    if hasattr(body, 'iterate_with_duplicates') else '',
                         'only_if': requirements.describe(gate, limit=4)['lines'] if gate is not None else [],
                     })

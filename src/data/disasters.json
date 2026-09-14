@@ -158,12 +158,12 @@
        ]
       ],
       "effects": [
-       "If",
-       "If",
-       "If",
+       "If runs policy Absolute Rule: Remove Policy: Policy:Absolute Rule Policy, Add Policy: Policy:Figurehead Position Policy",
+       "If has the Supreme Authority Modifier modifier: Remove Country Modifier: Supreme Authority Modifier",
+       "If runs policy No Representation: Remove Policy: Policy:Colonial Representation Law No, Add Policy: Policy:Colonial Representation Law Yes",
        "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus",
        "Set Parliament Type: Parliament Type:Estate Parliament",
-       "If"
+       "If the disaster is Aspiration for Liberty: Add Country Modifier: Reinstated The Parliament Modifier (20 years), Custom Tooltip: This Will End The Disaster Tt"
       ],
       "id": "reinstate_the_legislative_assembly",
       "name": "Reinstate the Legislative Assembly",
@@ -216,14 +216,14 @@
         "chance": 0.03125,
         "event": "aspiration_for_liberty.3",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107ac2ad0>",
+        "tooltip": "battles_on_foreign_grounds_tt",
         "weight": 30.0
        },
        {
         "chance": 0.03125,
         "event": "aspiration_for_liberty.4",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107ac2c10>",
+        "tooltip": "governmental_incompetence_event_tt",
         "weight": 30.0
        }
       ],
@@ -446,8 +446,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If not Target Character exists: Custom Tooltip",
+       "Otherwise: Custom Tooltip"
       ],
       "id": "sc_commission_dynastic_history",
       "name": "Commission a Dynastic Chronicle",
@@ -471,8 +471,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If Target Country exists: Scope:Actor, Scope:Target Country",
+       "Otherwise: Custom Tooltip: Sc Seek Foreign Aid Tt"
       ],
       "id": "sc_seek_foreign_aid",
       "name": "Seek Foreign Aid",
@@ -838,8 +838,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If not Target Character exists: Custom Tooltip",
+       "Otherwise: Custom Tooltip"
       ],
       "id": "sc_commission_dynastic_history",
       "name": "Commission a Dynastic Chronicle",
@@ -863,8 +863,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If Target Country exists: Scope:Actor, Scope:Target Country",
+       "Otherwise: Custom Tooltip: Sc Seek Foreign Aid Tt"
       ],
       "id": "sc_seek_foreign_aid",
       "name": "Seek Foreign Aid",
@@ -1659,7 +1659,7 @@
       "effects": [
        "Add Country Modifier: Supreme Authority Modifier (20 years)",
        "Add All Estate Satisfaction: Estate Satisfaction Extreme Penalty",
-       "If"
+       "If Allow Autocratic Parliament and not parliament is Autocratic Parliament and not Parliament Abolished: Set Parliament Type: Parliament Type:Autocratic Parliament"
       ],
       "id": "legitimize_parliament_abolition",
       "name": "Legitimize Legislative Abolition",
@@ -1779,12 +1779,12 @@
        ]
       ],
       "effects": [
-       "If",
-       "If",
-       "If",
+       "If runs policy Absolute Rule: Remove Policy: Policy:Absolute Rule Policy, Add Policy: Policy:Figurehead Position Policy",
+       "If has the Supreme Authority Modifier modifier: Remove Country Modifier: Supreme Authority Modifier",
+       "If runs policy No Representation: Remove Policy: Policy:Colonial Representation Law No, Add Policy: Policy:Colonial Representation Law Yes",
        "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus",
        "Set Parliament Type: Parliament Type:Estate Parliament",
-       "If"
+       "If the disaster is Aspiration for Liberty: Add Country Modifier: Reinstated The Parliament Modifier (20 years), Custom Tooltip: This Will End The Disaster Tt"
       ],
       "id": "reinstate_the_legislative_assembly",
       "name": "Reinstate the Legislative Assembly",
@@ -1855,42 +1855,42 @@
         "chance": 0.016529,
         "event": "court_and_country.7",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af2120>",
+        "tooltip": "court_and_country_7_tt",
         "weight": 20.0
        },
        {
         "chance": 0.008264,
         "event": "court_and_country.8",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af21c0>",
+        "tooltip": "court_and_country_8_tt",
         "weight": 10.0
        },
        {
         "chance": 0.016529,
         "event": "court_and_country.9",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af2260>",
+        "tooltip": "court_and_country_9_tt",
         "weight": 20.0
        },
        {
         "chance": 0.016529,
         "event": "court_and_country.10",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af2300>",
+        "tooltip": "court_and_country_10_tt",
         "weight": 20.0
        },
        {
         "chance": 0.016529,
         "event": "court_and_country.11",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af23a0>",
+        "tooltip": "court_and_country_11_tt",
         "weight": 20.0
        },
        {
         "chance": 0.016529,
         "event": "court_and_country.12",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af2440>",
+        "tooltip": "court_and_country_12_tt",
         "weight": 20.0
        }
       ],
@@ -2084,7 +2084,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Rebel exists: Scope:Actor",
        "Custom Tooltip: Cmd Negotiate With Rebels Tt",
        "Custom Tooltip: Cmd Negotiate Nationalist",
        "Custom Tooltip: Cmd Negotiate Estate",
@@ -2136,7 +2136,7 @@
        ]
       ],
       "effects": [
-       "Hidden Effect",
+       "Set Variable: Cmd Restored Stability Variable",
        "Trigger Event Non Silently: Crisis Of The Chinese Dynasty.8"
       ],
       "id": "cmd_restore_stability",
@@ -2183,7 +2183,7 @@
        ]
       ],
       "effects": [
-       "Hidden Effect",
+       "Set Variable: Cmd Strengthened Crown Variable",
        "Trigger Event Non Silently: Crisis Of The Chinese Dynasty.9"
       ],
       "id": "cmd_strengthen_crown",
@@ -2239,14 +2239,14 @@
         "chance": 0.083333,
         "event": "crisis_of_the_chinese_dynasty.4",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af2f80>",
+        "tooltip": "fire_event_4_tt",
         "weight": 100.0
        },
        {
         "chance": 0.083333,
         "event": "crisis_of_the_chinese_dynasty.5",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107af3070>",
+        "tooltip": "fire_event_5_tt",
         "weight": 100.0
        }
       ],
@@ -2836,7 +2836,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Area exists: Scope:Actor",
        "Custom Tooltip: Selected Area Inspected Tt"
       ],
       "id": "cd_inspect_area",
@@ -2863,7 +2863,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Character exists: Scope:Actor, If target character: has the Head Of The Cabinet Modifier trait: Custom Tooltip: Removal Of Head Of Cabinet Takes Stab Tt",
        "Custom Tooltip: Selected Character Banned Or Executed Tt"
       ],
       "id": "cd_purge_cabinet_member",
@@ -4057,7 +4057,7 @@
      "Societal value"
     ],
     "spawn_chance": 0.02,
-    "spawn_chance_key": "inline_script_value_fb9e4ce2-affc-11f1-a6da-e6607317b285",
+    "spawn_chance_key": "inline_script_value_9a792fba-b009-11f1-8ffe-e6607317b285",
     "start": [
      "is England or is Great Britain",
      "age is Absolutism or later",
@@ -4135,7 +4135,7 @@
       "effects": [
        "Scope:Actor",
        "Religion:Catholic",
-       "If"
+       "If Rome exists and actor: is a rival of Rome and not actor: is an enemy of Rome: c:PAP"
       ],
       "id": "accept_catholic_delegation",
       "name": "Accept Catholicism Delegation",
@@ -4157,7 +4157,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Country exists: Scope:Actor",
        "Scope:Actor",
        "Custom Tooltip: Selected Country Will Send Us Engineer Character Tt"
       ],
@@ -4183,7 +4183,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Country exists: Scope:Target Country",
        "Custom Tooltip: Target Country Forced To Give Tribute Tt"
       ],
       "id": "demand_beylik_tribute",
@@ -4208,7 +4208,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Country exists: Scope:Target Country",
        "Set Variable: Grant Latin Merchants Privileges Variable",
        "Custom Tooltip: Selected Republic May Donate Ships To Our Cause Tt"
       ],
@@ -4235,8 +4235,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If Target Location exists: Scope:Target Location",
+       "Otherwise: Custom Tooltip: Patronize Orth Monastery Tt"
       ],
       "id": "patronize_orthodox_monastery",
       "name": "Patronize Orthodox Monastery",
@@ -4313,7 +4313,7 @@
        ]
       ],
       "effects": [
-       "If",
+       "If Target Country exists: Scope:Target Country",
        "Custom Tooltip: Selected Country May Join Every Ongoing War Against Heathen And Heretics Tt"
       ],
       "id": "summon_patriarchate_member",
@@ -5383,8 +5383,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else",
+       "If Target exists: Scope:Target, Custom Tooltip",
+       "Otherwise: Custom Tooltip: Pw Crush Rebellion Tt, Custom Tooltip: Pw Rebel Progress Reduction Tt",
        "Scope:Actor"
       ],
       "id": "pw_crush_rebellion",
@@ -5818,7 +5818,7 @@
       ],
       "effects": [
        "Change Societal Value: Spiritualist vs Humanist",
-       "If",
+       "If has the Wave Of Spiritualism Modifier modifier: Remove Country Modifier: Wave Of Spiritualism Modifier",
        "Add Country Modifier: Wave Of Humanism Modifier (10 years)"
       ],
       "id": "rt_push_for_humanist",
@@ -5842,7 +5842,7 @@
       ],
       "effects": [
        "Change Societal Value: Spiritualist vs Humanist",
-       "If",
+       "If has the Wave Of Humanism Modifier modifier: Remove Country Modifier: Wave Of Humanism Modifier",
        "Add Country Modifier: Wave Of Spiritualism Modifier (10 years)"
       ],
       "id": "rt_push_for_spiritualist",
@@ -7611,8 +7611,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If not Target Character exists: Custom Tooltip",
+       "Otherwise: Custom Tooltip"
       ],
       "id": "sc_commission_dynastic_history",
       "name": "Commission a Dynastic Chronicle",
@@ -7636,8 +7636,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If Target Country exists: Scope:Actor, Scope:Target Country",
+       "Otherwise: Custom Tooltip: Sc Seek Foreign Aid Tt"
       ],
       "id": "sc_seek_foreign_aid",
       "name": "Seek Foreign Aid",
@@ -8910,8 +8910,8 @@
        ]
       ],
       "effects": [
-       "If",
-       "Else"
+       "If Target Siege exists: Custom Tooltip",
+       "Otherwise: Custom Tooltip: No Chosen Siege Tt"
       ],
       "id": "wotr_bribe_garrison",
       "name": "Bribe a Garrison",
@@ -8988,14 +8988,14 @@
         "chance": 0.3,
         "event": "war_of_the_roses.3",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.TreeWithDuplicates object at 0x107aff4d0>",
+        "tooltip": "wotr_support_for_pretenders",
         "weight": 300.0
        },
        {
         "chance": 0.1,
         "event": "war_of_the_roses.15",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.TreeWithDuplicates object at 0x107aff530>",
+        "tooltip": "wotr_support_for_pretender_deeepens",
         "weight": 100.0
        },
        {
@@ -9030,7 +9030,7 @@
         "chance": 0.1,
         "event": "war_of_the_roses.12",
         "only_if": [],
-        "tooltip": "<common.paradox_parser.Tree object at 0x107b6e5d0>",
+        "tooltip": "wotr_foreign_power_intervenes",
         "weight": 100.0
        }
       ],
