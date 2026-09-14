@@ -1,24 +1,35 @@
 ---
+// Situations and diseases. Disasters have their own section — they carry
+// start and end triggers, snapshotted exit targets and outcome events, none
+// of which fit a three-column table.
 import Base from '../layouts/Base.astro';
 import SectionTable from '../components/SectionTable.astro';
 import situations from '../data/situations.json';
-import disasters from '../data/disasters.json';
 import diseases from '../data/diseases.json';
+import disasters from '../data/disasters.json';
 
+const base = import.meta.env.BASE_URL;
 const cols = [
   { key: 'name', label: 'Name', kind: 'name' },
   { key: 'mods', label: 'Modifiers', kind: 'mods' },
   { key: 'desc', label: 'Description', kind: 'rich' },
 ];
 ---
-<Base title="Situations & Disasters" active="situations" pageMark="🌋" eyebrow="World"
+<Base title="Situations & Diseases" active="situations" pageMark="🌋" eyebrow="World"
   pageStats={[
     { label: 'situations', value: situations.entities.length },
-    { label: 'disasters', value: disasters.entities.length },
     { label: 'diseases', value: diseases.entities.length },
   ]}
-  description="Situations, disasters, and diseases in Europa Universalis V.">
+  description="Situations and diseases in Europa Universalis V.">
   <SectionTable title="Situations" data={situations} columns={cols} placeholder="Filter situations…" />
-  <SectionTable title="Disasters" data={disasters} columns={cols} placeholder="Filter disasters…" />
   <SectionTable title="Diseases" data={diseases} columns={cols} placeholder="Filter diseases…" />
+  <p class="sit-link">
+    <a href={`${base}disasters`}>Disasters ({disasters.entities.length}) →</a>
+    have their own section: start conditions, monthly events, every exit route
+    and the exit targets the game computes but never shows.
+  </p>
 </Base>
+
+<style>
+  .sit-link { margin-top: 34px; color: var(--text-dim); font-size: 13px; max-width: 80ch; }
+</style>

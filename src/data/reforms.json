@@ -600,7 +600,7 @@
     ],
     "major": false,
     "requires": [
-     "event flag: Mlo Ambrosian Path",
+     "event flag: Ambrosian Path",
      "government is Republic",
      "mechanic: Government Reform"
     ]
@@ -665,11 +665,8 @@
     ],
     "major": false,
     "requires": [
-     "culture is Turkish",
-     "culture is Turkoman",
-     "is a Uç Bey",
-     "Current Year < 1340",
-     "situation active: Rise of the Turks"
+     "culture is Turkish or culture is Turkoman or is a Uç Bey",
+     "year is < 1340 or situation active: Rise of the Turks"
     ]
    },
    "desc": [
@@ -683,10 +680,10 @@
     "availability": "Specific countries",
     "government": null,
     "requires": [
+     "Country",
      "Government",
      "Culture",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/anatolian-beylik.png",
@@ -752,7 +749,7 @@
     "major": false,
     "requires": [
      "is or was France",
-     "Centralization Vs Decentralization ≥ -50"
+     "Centralization vs Decentralization ≥ -50"
     ]
    },
    "desc": [
@@ -767,7 +764,7 @@
     "government": null,
     "requires": [
      "Country",
-     "Other"
+     "Societal value"
     ]
    },
    "icon": "img/reform/ancient-french-taxation.png",
@@ -972,7 +969,7 @@
   {
    "data": {
     "excludes": [
-     "event flag: Ath Catalan Company Expelled"
+     "event flag: Catalan Company Expelled"
     ],
     "gate": [
      "and",
@@ -1009,9 +1006,7 @@
     ],
     "major": false,
     "requires": [
-     "event flag: De Brienne Rule Of Athens",
-     "is or was Argos",
-     "is or was Athens",
+     "event flag: De Brienne Rule Of Athens and is or was Argos or is or was Athens",
      "stability < 60"
     ]
    },
@@ -1115,9 +1110,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Austria",
-     "is or was Styria",
-     "is or was Tyrol",
+     "is or was Austria or is or was Styria or is or was Tyrol",
      "the reform has been unlocked (Archduchy of Austria)",
      "is a member of Holy Roman Empire"
     ]
@@ -1597,7 +1590,7 @@
     "requires": [
      "is or was Kanem",
      "religion group is Islam",
-     "Government Power < 85"
+     "government power < 85"
     ]
    },
    "desc": [
@@ -1612,8 +1605,8 @@
     "government": null,
     "requires": [
      "Country",
-     "Religion",
-     "Other"
+     "Government",
+     "Religion"
     ]
    },
    "icon": "img/reform/banu-hummay-amendments.png",
@@ -1661,7 +1654,7 @@
     ],
     "major": false,
     "requires": [
-     "Num Subjects ≥ 1"
+     "subjects ≥ 1"
     ]
    },
    "desc": [
@@ -1675,7 +1668,7 @@
     "availability": "Any country",
     "government": null,
     "requires": [
-     "Other"
+     "Government"
     ]
    },
    "icon": "img/reform/barony-rule-reform.png",
@@ -1802,8 +1795,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Benevolence Tax"
     ]
    },
@@ -1996,7 +1988,7 @@
     "major": false,
     "requires": [
      "is or was Bulgaria",
-     "country rank: Empire",
+     "rank is Empire",
      "religion is Orthodoxy"
     ]
    },
@@ -2012,8 +2004,7 @@
     "government": "Monarchy",
     "requires": [
      "Country",
-     "Religion",
-     "Other"
+     "Religion"
     ]
    },
    "icon": "img/reform/bulgarian-tsardom.png",
@@ -2075,9 +2066,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
-     "is or was Byzantium",
+     "is or was Muscovy or is or was Russia or is or was Byzantium",
      "event flag: Byzantine Court Ceremonies"
     ]
    },
@@ -2272,8 +2261,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "culture group is Iberian",
      "the reform has been unlocked (Casa de Contratación)"
     ]
@@ -2356,12 +2344,9 @@
     ],
     "major": true,
     "requires": [
-     "culture group is Celtic",
-     "has reform Celtic Traditions",
-     "overlord: has reform Celtic Traditions",
+     "culture group is Celtic or has reform Celtic Traditions or overlord: has reform Celtic Traditions",
      "has embraced Legalism",
-     "court language is Brythonic",
-     "court language is Gaelic"
+     "court language is Brythonic or court language is Gaelic"
     ]
    },
    "desc": [
@@ -2562,8 +2547,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
+     "is or was Muscovy or is or was Russia",
      "event flag: Chosen Rada"
     ]
    },
@@ -2636,8 +2620,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
+     "is or was Muscovy or is or was Russia",
      "event flag: Collegium"
     ]
    },
@@ -3053,7 +3036,7 @@
      "the reform has been unlocked (Constitutional State)",
      "parliament is Constitutional Parliament",
      "has a parliament",
-     "Absolutism Vs Liberalism > 0"
+     "Absolutism vs Liberalism > 0"
     ]
    },
    "desc": [
@@ -3064,12 +3047,12 @@
    ],
    "facets": {
     "age": "Any age",
-    "availability": "Specific countries",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Government",
      "Reform",
-     "Other"
+     "Societal value"
     ]
    },
    "icon": "img/reform/constitutional-state.png",
@@ -3239,8 +3222,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Venice",
-     "has reform Council of Forty"
+     "is or was Venice or has reform Council of Forty"
     ]
    },
    "desc": [
@@ -3316,8 +3298,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Venice",
-     "has reform Council of Ten"
+     "is or was Venice or has reform Council of Ten"
     ]
    },
    "desc": [
@@ -3401,11 +3382,10 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Court Of The Star Chamber",
      "runs policy Common Law",
-     "Crown Estate) ≥ 0.25"
+     "Crown power ≥ 25%"
     ]
    },
    "desc": [
@@ -3421,8 +3401,8 @@
     "requires": [
      "Country",
      "Law",
-     "Event or script",
-     "Other"
+     "Estate",
+     "Event or script"
     ]
    },
    "icon": "img/reform/court-of-the-star-chamber-reform.png",
@@ -3493,10 +3473,7 @@
     ],
     "major": true,
     "requires": [
-     "is or was Aragon",
-     "is or was Spain",
-     "culture is Aragonese",
-     "culture is Catalan",
+     "is or was Aragon or is or was Spain and culture is Aragonese or culture is Catalan",
      "has embraced Legalism",
      "mechanic: Government Reform"
     ]
@@ -3572,9 +3549,7 @@
     ],
     "major": true,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
-     "culture is Castilian",
+     "is or was Castile or is or was Spain and culture is Castilian",
      "has embraced Legalism",
      "mechanic: Government Reform"
     ]
@@ -3670,9 +3645,7 @@
     "requires": [
      "ports > 0",
      "has reform Military Order",
-     "is or was Knights Hospitaller",
-     "has reform Crusade in the Sea",
-     "overlord: has reform Crusade in the Sea",
+     "is or was Knights Hospitaller or has reform Crusade in the Sea or overlord: has reform Crusade in the Sea",
      "capital: is a port"
     ]
    },
@@ -4130,8 +4103,7 @@
     "major": false,
     "requires": [
      "the reform has been unlocked (Divided Persian Aristocracy)",
-     "country has estate: Nobility",
-     "country has estate: Tribes"
+     "has the Nobility or has the Tribes"
     ]
    },
    "desc": [
@@ -4146,7 +4118,7 @@
     "government": null,
     "requires": [
      "Reform",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/reform/divided-persian-aristocracy.png",
@@ -4342,13 +4314,9 @@
     ],
     "major": true,
     "requires": [
-     "court language is Gallo-Italic",
-     "court language is Italian",
-     "Crown Estate) > 0.3",
-     "is or was Milan",
-     "is or was Ferrara",
-     "is or was Padua",
-     "+6 more"
+     "court language is Gallo-Italic or court language is Italian",
+     "Crown power > 30% or is or was Milan or is or was Ferrara or is or was Padua or is or was Ravenna or is or was Verona or is or was Rimini",
+     "has privilege Visconti City States or Crown power ≤ 50% or Nobility power ≥ 50%"
     ]
    },
    "desc": [
@@ -4365,7 +4333,7 @@
      "Country",
      "Culture",
      "Privilege",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/reform/dynastic-signoria-reform.png",
@@ -4508,7 +4476,7 @@
    ],
    "facets": {
     "age": "Any age",
-    "availability": "Specific countries",
+    "availability": "Any country",
     "government": "Monarchy",
     "requires": [
      "Country",
@@ -4723,7 +4691,7 @@
    ],
    "facets": {
     "age": "Absolutism",
-    "availability": "Specific countries",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Government"
@@ -5458,7 +5426,7 @@
   {
    "data": {
     "excludes": [
-     "country modifier: Bohemian Aggression Modifier"
+     "the Bohemian Aggression Modifier modifier"
     ],
     "gate": [
      "?",
@@ -5686,13 +5654,11 @@
     ],
     "major": false,
     "requires": [
-     "capital.region: France",
-     "capital.area: Brabant",
-     "capital.area: Flanders",
-     "capital.area: Holland",
+     "capital: in region France or capital: in area Brabant or capital: in area Flanders or capital: in area Holland",
      "is a Appanage",
-     "overlord: Has Appanages Subjects",
-     "+4 more"
+     "overlord: Has Appanages Subjects or has reform French Feudal Nobility or has reform French Appanage",
+     "is a subject",
+     "mechanic: Government Reform"
     ]
    },
    "desc": [
@@ -5707,6 +5673,7 @@
     "government": null,
     "requires": [
      "Government",
+     "Geography",
      "Reform",
      "Event or script",
      "Other"
@@ -5849,7 +5816,7 @@
      "reform French Feudal Nobility",
      "reform French Appanage",
      "is or was France",
-     "Is Independent Or Autonomous Subject"
+     "is not a subject or is a Tributary"
     ],
     "gate": [
      "and",
@@ -5904,8 +5871,7 @@
     "major": false,
     "requires": [
      "capital: in region France",
-     "overlord: has reform French Feudal Nobility",
-     "overlord: has reform French Ducal",
+     "overlord: has reform French Feudal Nobility or has reform French Ducal",
      "government is Monarchy",
      "mechanic: Government Reform"
     ]
@@ -6095,7 +6061,7 @@
     "requires": [
      "culture is Frisian",
      "has embraced Legalism",
-     "Serfdom Vs Free Subjects > 0"
+     "Serfdom vs Free Subjects > 0"
     ]
    },
    "desc": [
@@ -6111,7 +6077,7 @@
     "requires": [
      "Culture",
      "Institution",
-     "Other"
+     "Societal value"
     ]
    },
    "icon": "img/reform/frisian-freedom-reform.png",
@@ -6187,9 +6153,8 @@
     ],
     "major": false,
     "requires": [
-     "is or was Venice",
-     "has reform Full College",
-     "parliament is ≠ parliament_type:no_parliament"
+     "is or was Venice or has reform Full College",
+     "parliament is ≠ No Parliament"
     ]
    },
    "desc": [
@@ -6344,13 +6309,10 @@
     ],
     "major": false,
     "requires": [
-     "culture group is Celtic",
-     "culture group is Scandinavian",
-     "culture group is Scottish",
-     "culture group is Hibernian",
-     "has reform Galley Lords",
-     "overlord: has reform Galley Lords",
-     "+3 more"
+     "culture group is Celtic or culture group is Scandinavian and culture group is Scottish or culture group is Hibernian or has reform Galley Lords or overlord: has reform Galley Lords",
+     "capital: is a port",
+     "Land vs Naval > 25",
+     "Belligerent vs Conciliatory < -25"
     ]
    },
    "desc": [
@@ -6367,7 +6329,7 @@
      "Culture",
      "Geography",
      "Reform",
-     "Other"
+     "Societal value"
     ]
    },
    "icon": "img/reform/galley-lords-reform.png",
@@ -6500,7 +6462,7 @@
     ],
     "major": false,
     "requires": [
-     "event flag: Hab Geheime Kabinettskanzlei",
+     "event flag: Geheime Kabinettskanzlei",
      "is or was Austria"
     ]
    },
@@ -6579,8 +6541,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Grand Remonstrance",
      "Has A Parliamentary System"
     ]
@@ -6944,7 +6905,7 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "Sinicized Vs Unsinicized < 40",
+     "Sinicized vs Unsinicized < 40",
      "mechanic: Government Reform"
     ]
    },
@@ -6961,8 +6922,8 @@
     "requires": [
      "Government",
      "Culture",
-     "Event or script",
-     "Other"
+     "Societal value",
+     "Event or script"
     ]
    },
    "icon": "img/reform/haixi-jurchen-reform.png",
@@ -7531,8 +7492,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "the reform has been unlocked (Intendancy System)"
     ]
    },
@@ -7619,9 +7579,8 @@
     ],
     "major": true,
     "requires": [
-     "capital.region: Ireland",
-     "culture is Anglo-Irish",
-     "country rank: County",
+     "capital: in region Ireland or culture is Anglo-Irish",
+     "rank is County",
      "language is English",
      "government is Monarchy"
     ]
@@ -7637,9 +7596,10 @@
     "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
+     "Country",
      "Government",
      "Culture",
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/reform/irish-earldom-reform.png",
@@ -8018,11 +7978,8 @@
     "major": true,
     "requires": [
      "culture group is Japanese",
-     "ruling dynasty is Yamato",
-     "is or was Yamato",
-     "Has Regent",
-     "heir: ruling dynasty is Yamato",
-     "ruler: ruling dynasty is Yamato"
+     "ruling dynasty is Yamato or is or was Yamato",
+     "has a regent and heir: ruling dynasty is Yamato or ruler: ruling dynasty is Yamato"
     ]
    },
    "desc": [
@@ -8038,7 +7995,7 @@
     "requires": [
      "Country",
      "Culture",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/reform/japanese-imperial-family.png",
@@ -8118,7 +8075,7 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "Sinicized Vs Unsinicized < 20",
+     "Sinicized vs Unsinicized < 20",
      "mechanic: Government Reform"
     ]
    },
@@ -8135,8 +8092,8 @@
     "requires": [
      "Government",
      "Culture",
-     "Event or script",
-     "Other"
+     "Societal value",
+     "Event or script"
     ]
    },
    "icon": "img/reform/jianzhou-jurchen-reform.png",
@@ -8190,10 +8147,10 @@
     "major": true,
     "requires": [
      "culture group is German",
-     "ruler: this: Root.Ruler",
-     "ruler: Is Alive",
-     "ruler: Is Legally Male",
-     "ruler: Is Adult"
+     "ruler · father · a child: ruler",
+     "ruler · father · a child: is alive",
+     "ruler · father · a child: is legally male",
+     "ruler · father · a child: is an adult"
     ]
    },
    "desc": [
@@ -8208,7 +8165,7 @@
     "government": "Monarchy",
     "requires": [
      "Culture",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/reform/joint-ruling-monarchy.png",
@@ -8334,8 +8291,7 @@
     ],
     "major": true,
     "requires": [
-     "is or was Arborea",
-     "has reform Judicate"
+     "is or was Arborea or has reform Judicate"
     ]
    },
    "desc": [
@@ -8400,7 +8356,7 @@
     "major": false,
     "requires": [
      "is or was Byzantium",
-     "has dlc: D008 Fate Of The Phoenix"
+     "owns D008 Fate Of The Phoenix"
     ]
    },
    "desc": [
@@ -8415,7 +8371,7 @@
     "government": null,
     "requires": [
      "Country",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/katepanata.png",
@@ -8669,7 +8625,7 @@
     "major": true,
     "requires": [
      "the reform has been unlocked (Sadae Policy)",
-     "is subject of: Middle Kingdom.Leader Country",
+     "is a subject of middle kingdom's leader country",
      "is a Tributary"
     ]
    },
@@ -8685,8 +8641,7 @@
     "government": null,
     "requires": [
      "Government",
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/reform/kor-sadae-reform.png",
@@ -8913,7 +8868,7 @@
    "data": {
     "excludes": [
      "reform Restored Rule of the Latins",
-     "Num Locations ≥ 70"
+     "locations ≥ 70"
     ],
     "gate": [
      "and",
@@ -8952,13 +8907,11 @@
     ],
     "major": false,
     "requires": [
-     "is or was Achaea",
-     "is or was Athens",
-     "is or was Argos",
-     "is or was Thessalonica",
+     "is or was Achaea or is or was Athens or is or was Argos or is or was Thessalonica",
      "religion is Catholicism",
-     "event flag: Lat Accepted Pope Latin Empire Proposal",
-     "+2 more"
+     "event flag: Accepted Pope Latin Empire Proposal",
+     "the reform has been unlocked (Roman Backing to Retake Constantinople)",
+     "mechanic: Government Reform"
     ]
    },
    "desc": [
@@ -9208,7 +9161,7 @@
     ],
     "major": false,
     "requires": [
-     "this: Root",
+     "situation:rise of the ottomans · the the strongest beylik: us",
      "mechanic: Government Reform"
     ]
    },
@@ -9223,8 +9176,8 @@
     "availability": "Any country",
     "government": null,
     "requires": [
-     "Event or script",
-     "Other"
+     "Ruler & dynasty",
+     "Event or script"
     ]
    },
    "icon": "img/reform/leader-of-the-turks.png",
@@ -9308,10 +9261,9 @@
     ],
     "major": true,
     "requires": [
-     "culture is Mongolian",
-     "ruler: Has Dynasty",
-     "ruler: ruling dynasty is Borjigin",
-     "country type is Army"
+     "culture is Mongolian or ruler: has a dynasty and ruler: ruling dynasty is Borjigin",
+     "country type is Army",
+     "culture is Mongolian or ruler: ruling dynasty is Borjigin"
     ]
    },
    "desc": [
@@ -9328,7 +9280,7 @@
      "Country",
      "Government",
      "Culture",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/reform/legacy-of-genghis.png",
@@ -9439,7 +9391,7 @@
     "major": false,
     "requires": [
      "is or was Ottomans",
-     "event flag: Tur Rise Of Ottoman Flag",
+     "event flag: Rise Of Ottoman Flag",
      "mechanic: Government Reform"
     ]
    },
@@ -9701,8 +9653,7 @@
     ],
     "major": false,
     "requires": [
-     "event flag: Privilegium Maius Granted",
-     "event flag: Privilegium Maius Accepted"
+     "event flag: Privilegium Maius Granted or event flag: Privilegium Maius Accepted"
     ]
    },
    "desc": [
@@ -9949,7 +9900,7 @@
     "major": false,
     "requires": [
      "the reform has been unlocked (Livonian Confederation)",
-     "Num Subjects ≥ 1"
+     "subjects ≥ 1"
     ]
    },
    "desc": [
@@ -9963,8 +9914,8 @@
     "availability": "Any country",
     "government": null,
     "requires": [
-     "Reform",
-     "Other"
+     "Government",
+     "Reform"
     ]
    },
    "icon": "img/reform/livonian-confederation.png",
@@ -10134,9 +10085,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "culture is English",
-     "overlord: has reform Magna Carta",
+     "is or was England or culture is English or overlord: has reform Magna Carta",
      "has embraced Legalism"
     ]
    },
@@ -10359,11 +10308,8 @@
     ],
     "major": true,
     "requires": [
-     "capital.sub continent: South East Asia",
-     "religion group is Dharma",
-     "religion is Theravāda",
-     "religion is Eastern Buddhism",
-     "religion is Satsana Phi"
+     "capital: in South East Asia",
+     "religion group is Dharma or religion is Theravāda or religion is Eastern Buddhism or religion is Satsana Phi"
     ]
    },
    "desc": [
@@ -10378,7 +10324,7 @@
     "government": null,
     "requires": [
      "Religion",
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/reform/mandala-system.png",
@@ -10671,9 +10617,7 @@
   {
    "data": {
     "excludes": [
-     "is a Vassal",
-     "reform French Ducal",
-     "in union with: France"
+     "is in a union with France"
     ],
     "gate": [
      "and",
@@ -10738,12 +10682,10 @@
     "major": false,
     "requires": [
      "has global variable: League Of Public Weal Enabled",
-     "capital: in region France",
-     "overlord: has reform French Feudal Nobility",
-     "government is Monarchy",
-     "has reform Member of the League of Public Weal",
-     "Subject Loyalty < 33",
-     "+3 more"
+     "capital: in region France and overlord: has reform French Feudal Nobility and government is Monarchy and is not a Vassal and does not have reform French Ducal or has reform Member of the League of Public Weal",
+     "has reform Member of the League of Public Weal or subject loyalty < 33",
+     "is at war or subject loyalty ≤ 60",
+     "mechanic: Government Reform"
     ]
    },
    "desc": [
@@ -10760,6 +10702,7 @@
      "Government",
      "Geography",
      "Reform",
+     "Rebels & war",
      "Event or script",
      "Other"
     ]
@@ -11509,7 +11452,7 @@
     "major": false,
     "requires": [
      "is or was Byzantium",
-     "has dlc: D008 Fate Of The Phoenix"
+     "owns D008 Fate Of The Phoenix"
     ]
    },
    "desc": [
@@ -11524,7 +11467,7 @@
     "government": null,
     "requires": [
      "Country",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/mos-maiorum.png",
@@ -11684,8 +11627,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
+     "is or was Muscovy or is or was Russia",
      "event flag: Nakaz"
     ]
    },
@@ -11766,10 +11708,8 @@
     ],
     "major": false,
     "requires": [
-     "parliament is Estate Parliament",
-     "parliament is Constitutional Parliament",
-     "has reform Peasant Republic",
-     "has privilege Represented in Parliament"
+     "parliament is Estate Parliament or parliament is Constitutional Parliament",
+     "has reform Peasant Republic or has privilege Represented in Parliament"
     ]
    },
    "desc": [
@@ -11780,7 +11720,7 @@
    ],
    "facets": {
     "age": "Any age",
-    "availability": "Specific countries",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Government",
@@ -12052,8 +11992,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Navy Board",
      "ports ≥ 10"
     ]
@@ -12142,10 +12081,8 @@
     ],
     "major": true,
     "requires": [
-     "culture is Kannadiga",
-     "culture is Telugu",
-     "religion group is Dharma",
-     "religion group is Buddhism"
+     "culture is Kannadiga or culture is Telugu",
+     "religion group is Dharma or religion group is Buddhism"
     ]
    },
    "desc": [
@@ -12224,8 +12161,7 @@
     "major": false,
     "requires": [
      "event flag: Dutch Shipbuilding Industry",
-     "is or was Holland",
-     "is or was Netherlands"
+     "is or was Holland or is or was Netherlands"
     ]
    },
    "desc": [
@@ -12448,8 +12384,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "the reform has been unlocked (Nueva Planta)"
     ]
    },
@@ -12736,7 +12671,7 @@
     "major": true,
     "requires": [
      "is or was Ottomans",
-     "event flag: Tur Coffee House Paranoia"
+     "event flag: Coffee House Paranoia"
     ]
    },
    "desc": [
@@ -12956,7 +12891,7 @@
     "major": true,
     "requires": [
      "is or was Ottomans",
-     "event flag: Tur Malikane"
+     "event flag: Malikane"
     ]
    },
    "desc": [
@@ -13008,9 +12943,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "event flag: Disbanded the Ottoman New Order Army"
-    ],
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -13029,7 +12962,8 @@
     "major": true,
     "requires": [
      "is or was Ottomans",
-     "event flag: Unlocked Ottoman New Order Army"
+     "event flag: Unlocked Ottoman New Order Army",
+     "Disbanded the Ottoman New Order Army"
     ]
    },
    "desc": [
@@ -13101,11 +13035,9 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Overhauled Admiralty",
-     "has reform Navy Board",
-     "capital: has building with at least one level: Admiralty"
+     "has reform Navy Board or capital: has building with at least one level: Admiralty"
     ]
    },
    "desc": [
@@ -13586,8 +13518,8 @@
     "major": false,
     "requires": [
      "Country Rank Level ≤ 2",
-     "Is Country Religion Pagan",
-     "capital: LESS_THAN = population"
+     "Religion is a Folk Religion",
+     "capital: Nobles < Population / 100 × 1 or Clergy < Population / 100 × 2 or Burghers < Population / 100 × 5"
     ]
    },
    "desc": [
@@ -13601,6 +13533,8 @@
     "availability": "Any country",
     "government": null,
     "requires": [
+     "Religion",
+     "Event or script",
      "Other"
     ]
    },
@@ -13702,11 +13636,8 @@
     ],
     "major": true,
     "requires": [
-     "country has estate: Commoners",
-     "is or was Dithmarschen",
-     "Peasants Estate) > 0.1",
-     "Serfdom Vs Free Subjects > 80",
-     "has reform Peasant Republic"
+     "has the Commoners",
+     "is or was Dithmarschen or Commoners power > 10% and Serfdom vs Free Subjects > 80 or has reform Peasant Republic"
     ]
    },
    "desc": [
@@ -13722,7 +13653,8 @@
     "requires": [
      "Country",
      "Reform",
-     "Other"
+     "Estate",
+     "Societal value"
     ]
    },
    "icon": "img/reform/peasant-republic-reform.png",
@@ -13887,7 +13819,7 @@
    ],
    "facets": {
     "age": "Any age",
-    "availability": "Specific countries",
+    "availability": "Any country",
     "government": null,
     "requires": [
      "Government",
@@ -14002,7 +13934,7 @@
     "major": true,
     "requires": [
      "the reform has been unlocked (Pirate Brethren)",
-     "Always"
+     "always"
     ]
    },
    "desc": [
@@ -14017,7 +13949,7 @@
     "government": "Republic",
     "requires": [
      "Reform",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/pirate-brethren-reform.png",
@@ -14367,8 +14299,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Portugal",
-     "culture is Portuguese",
+     "is or was Portugal or culture is Portuguese",
      "has embraced Legalism"
     ]
    },
@@ -14428,8 +14359,7 @@
     "major": false,
     "requires": [
      "the reform has been unlocked (Powerful Vizierships)",
-     "add: 0.5",
-     "multiply: Viziership Variable"
+     "Crown power < (0.5 × the viziership)"
     ]
    },
    "desc": [
@@ -14444,7 +14374,7 @@
     "government": null,
     "requires": [
      "Reform",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/reform/powerful-vizierships-reform.png",
@@ -14482,8 +14412,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
+     "is or was Muscovy or is or was Russia",
      "event flag: Prikazi"
     ]
    },
@@ -14632,8 +14561,7 @@
     "major": true,
     "requires": [
      "government is Theocracy",
-     "religion is Catholicism",
-     "religion is Lutheranism",
+     "religion is Catholicism or religion is Lutheranism",
      "Country Rank Level ≤ 2"
     ]
    },
@@ -14953,8 +14881,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Prussia",
-     "is or was Brandenburg",
+     "is or was Prussia or is or was Brandenburg",
      "event flag: Unified Legal System"
     ]
    },
@@ -15122,8 +15049,7 @@
     ],
     "major": false,
     "requires": [
-     "culture group is Pyrenean",
-     "is or was Aragon",
+     "culture group is Pyrenean or is or was Aragon",
      "has embraced Legalism"
     ]
    },
@@ -15197,8 +15123,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Muscovy",
-     "is or was Russia",
+     "is or was Muscovy or is or was Russia",
      "event flag: Razriadnyi"
     ]
    },
@@ -15403,7 +15328,7 @@
      "culture group is Andean",
      "language is Quechuan",
      "religion group is Andean Folk Religions",
-     "Crown Estate) ≥ 0.6",
+     "Crown power ≥ 60%",
      "mechanic: Government Reform"
     ]
    },
@@ -15420,8 +15345,8 @@
     "requires": [
      "Religion",
      "Culture",
-     "Event or script",
-     "Other"
+     "Estate",
+     "Event or script"
     ]
    },
    "icon": "img/reform/tawantinsuyu-monarchy.png",
@@ -15714,12 +15639,11 @@
     ],
     "major": false,
     "requires": [
-     "is or was England",
-     "is or was Great Britain",
+     "is or was England or is or was Great Britain",
      "event flag: Representative Government",
      "Has A Parliamentary System",
-     "Aristocracy Vs Plutocracy < 40",
-     "Aristocracy Vs Plutocracy > -40"
+     "Aristocracy vs Plutocracy < 40",
+     "Aristocracy vs Plutocracy > -40"
     ]
    },
    "desc": [
@@ -15734,6 +15658,7 @@
     "government": null,
     "requires": [
      "Country",
+     "Societal value",
      "Event or script",
      "Other"
     ]
@@ -15789,7 +15714,7 @@
     ],
     "major": true,
     "requires": [
-     "Is Revolutionary",
+     "is revolutionary",
      "mechanic: Government Reform"
     ]
    },
@@ -15804,8 +15729,8 @@
     "availability": "Any country",
     "government": "Republic",
     "requires": [
-     "Event or script",
-     "Other"
+     "Government",
+     "Event or script"
     ]
    },
    "icon": "img/reform/revolutionary-autocracy.png",
@@ -15859,7 +15784,7 @@
     ],
     "major": true,
     "requires": [
-     "Is Revolutionary",
+     "is revolutionary",
      "mechanic: Government Reform"
     ]
    },
@@ -15874,8 +15799,8 @@
     "availability": "Any country",
     "government": "Monarchy",
     "requires": [
-     "Event or script",
-     "Other"
+     "Government",
+     "Event or script"
     ]
    },
    "icon": "img/reform/revolutionary-empire.png",
@@ -15923,7 +15848,7 @@
     ],
     "major": true,
     "requires": [
-     "Is Revolutionary",
+     "is revolutionary",
      "mechanic: Government Reform"
     ]
    },
@@ -15938,8 +15863,8 @@
     "availability": "Any country",
     "government": "Republic",
     "requires": [
-     "Event or script",
-     "Other"
+     "Government",
+     "Event or script"
     ]
    },
    "icon": "img/reform/revolutionary-republic.png",
@@ -16119,9 +16044,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
-     "culture is Castilian",
+     "is or was Castile or is or was Spain and culture is Castilian",
      "the reform has been unlocked (Royal Council of Castile)"
     ]
    },
@@ -16250,8 +16173,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "the reform has been unlocked (Royal Factories)"
     ]
    },
@@ -16310,9 +16232,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
-    ],
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -16330,9 +16250,8 @@
     ],
     "major": true,
     "requires": [
-     "event flag: Had Sejm Event Variable",
-     "event flag: Rise Of Szlachta Szlachta Outcome Variable",
-     "Crown Estate) < 0.5"
+     "event flag: Sejm Event Variable or event flag: Rise Of Szlachta Szlachta Outcome Variable",
+     "Has successfully concluded the Struggle for Royal Power Disaster or Crown power < 50%"
     ]
    },
    "desc": [
@@ -16346,8 +16265,8 @@
     "availability": "Any country",
     "government": null,
     "requires": [
-     "Event or script",
-     "Other"
+     "Estate",
+     "Event or script"
     ]
    },
    "icon": "img/reform/rule-of-the-sejm.png",
@@ -16595,8 +16514,7 @@
     "major": false,
     "requires": [
      "the reform has been unlocked (Samsa System)",
-     "language is Korean",
-     "court language is Korean"
+     "language is Korean or court language is Korean"
     ]
    },
    "desc": [
@@ -16660,8 +16578,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Balliol",
-     "event flag: Sbl Civil War Victor"
+     "is or was Balliol or event flag: Civil War Victor"
     ]
    },
    "desc": [
@@ -16765,7 +16682,7 @@
   {
    "data": {
     "excludes": [
-     "Num Locations ≥ 125"
+     "locations ≥ 125"
     ],
     "gate": [
      "and",
@@ -16805,10 +16722,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Scotland",
-     "is or was Balliol",
-     "culture is Scots",
-     "is or was Great Britain",
+     "is or was Scotland or is or was Balliol or culture is Scots and is or was Great Britain",
      "government is Monarchy"
     ]
    },
@@ -16893,7 +16807,7 @@
     "major": false,
     "requires": [
      "is or was Ottomans",
-     "event flag: Tur Sekban System"
+     "event flag: Sekban System"
     ]
    },
    "desc": [
@@ -17329,8 +17243,7 @@
     "requires": [
      "the reform has been unlocked (Kanrei Council)",
      "leads Japanese Shogunate",
-     "has reform Shogunate",
-     "This Government Reform will be removed if the Japanese Shogunate no longer exists or if we are no longer the leader of the Japanese Shogunate."
+     "has reform Shogunate"
     ]
    },
    "desc": [
@@ -17345,8 +17258,7 @@
     "government": null,
     "requires": [
      "Reform",
-     "Organization",
-     "Event or script"
+     "Organization"
     ]
    },
    "icon": "img/reform/shogunate-kanrei-council.png",
@@ -17477,8 +17389,7 @@
     ],
     "major": true,
     "requires": [
-     "court language is Gallo-Italic",
-     "court language is Italian"
+     "court language is Gallo-Italic or court language is Italian"
     ]
    },
    "desc": [
@@ -17621,7 +17532,9 @@
   },
   {
    "data": {
-    "excludes": [],
+    "excludes": [
+     "is a subject"
+    ],
     "gate": [
      "reform",
      "son_in_law_rule"
@@ -17632,7 +17545,7 @@
     "major": true,
     "requires": [
      "has reform 'Son in Law' Rule",
-     "At War",
+     "is at war",
      "is a subject",
      "overlord: is or was Yuán(CHI)",
      "overlord: culture is Mongolian",
@@ -17654,8 +17567,8 @@
      "Government",
      "Culture",
      "Reform",
-     "Event or script",
-     "Other"
+     "Rebels & war",
+     "Event or script"
     ]
    },
    "icon": "img/reform/son-in-law-rule.png",
@@ -17803,9 +17716,7 @@
     ],
     "major": true,
     "requires": [
-     "is or was Navarre",
-     "culture is Basque",
-     "is or was Spain",
+     "is or was Navarre or culture is Basque or is or was Spain and culture is Basque",
      "has embraced Legalism",
      "mechanic: Government Reform"
     ]
@@ -18177,8 +18088,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "culture group is Iberian",
      "the reform has been unlocked (Iberian Tolerance)"
     ]
@@ -18254,7 +18164,7 @@
      "culture group is East Slavic",
      "event flag: Speransky Liberalization",
      "event flag: Liberal Values Enshrined",
-     "Crown Estate) < 0.75"
+     "Crown power < 75%"
     ]
    },
    "desc": [
@@ -18269,8 +18179,8 @@
     "government": null,
     "requires": [
      "Culture",
-     "Event or script",
-     "Other"
+     "Estate",
+     "Event or script"
     ]
    },
    "icon": "img/reform/speransky-liberalization-reform.png",
@@ -18773,7 +18683,7 @@
     "requires": [
      "is or was Sweden",
      "event flag: Frihetstiden",
-     "Always"
+     "always"
     ]
    },
    "desc": [
@@ -18788,8 +18698,7 @@
     "government": null,
     "requires": [
      "Country",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/reform/swe-age-of-freedom.png",
@@ -18915,9 +18824,7 @@
     ],
     "major": false,
     "requires": [
-     "is or was Mughal",
-     "culture group is Indian",
-     "religion group is Islam"
+     "is or was Mughal or culture group is Indian and religion group is Islam"
     ]
    },
    "desc": [
@@ -19481,8 +19388,7 @@
     "major": false,
     "requires": [
      "the reform has been unlocked (Protectorate)",
-     "Absolutism Vs Liberalism > 0",
-     "has country modifier: Parliamentarists Victorious Modifier"
+     "Absolutism vs Liberalism > 0 or has the Parliamentarists Victorious Modifier modifier"
     ]
    },
    "desc": [
@@ -19497,7 +19403,8 @@
     "government": "Republic",
     "requires": [
      "Reform",
-     "Other"
+     "Societal value",
+     "Event or script"
     ]
    },
    "icon": "img/reform/the-protectorate.png",
@@ -19771,13 +19678,9 @@
     ],
     "major": false,
     "requires": [
-     "has societal value: Sinicized vs Unsinicized",
-     "Sinicized Vs Unsinicized < -60",
-     "language family is Chinese",
-     "court language.language family: Chinese",
-     "event flag: Unlocked Mandarin Language Reforms",
+     "has societal value: Sinicized vs Unsinicized and Sinicized vs Unsinicized < -60 or language family is Chinese or court language: language family: Chinese or event flag: Unlocked Mandarin Language Reforms or Middle Kingdom exists and leads Middle Kingdom",
      "Middle Kingdom exists",
-     "+2 more"
+     "leads Middle Kingdom"
     ]
    },
    "desc": [
@@ -19793,6 +19696,7 @@
     "requires": [
      "Country",
      "Culture",
+     "Societal value",
      "Organization",
      "Event or script",
      "Other"
@@ -20135,7 +20039,7 @@
     "major": false,
     "requires": [
      "culture group is East Slavic",
-     "country rank: Empire",
+     "rank is Empire",
      "religion is Orthodoxy"
     ]
    },
@@ -20150,9 +20054,9 @@
     "availability": "Specific countries",
     "government": "Monarchy",
     "requires": [
+     "Country",
      "Religion",
-     "Culture",
-     "Other"
+     "Culture"
     ]
    },
    "icon": "img/reform/tsardom.png",
@@ -20926,10 +20830,7 @@
     ],
     "major": false,
     "requires": [
-     "has researched Voivode",
-     "has researched Województwo",
-     "has researched Voievodate",
-     "has researched Vojvodstvo"
+     "has researched Voivode or has researched Województwo or has researched Voievodate or has researched Vojvodstvo"
     ]
    },
    "desc": [
@@ -20985,7 +20886,7 @@
     "major": false,
     "requires": [
      "is or was Lithuania",
-     "age: Reformation",
+     "age is Reformation or later",
      "the reform has been unlocked (Valakų Reform)"
     ]
    },
@@ -21002,8 +20903,7 @@
     "requires": [
      "Country",
      "Age",
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/reform/volok-reform.png",
@@ -21137,12 +21037,10 @@
     "major": false,
     "requires": [
      "has reform Warring State",
-     "situation active: Red Turban Rebellions",
-     "event flag: Unlocked Warring State",
+     "situation active: Red Turban Rebellions or event flag: Unlocked Warring State",
      "Middle Kingdom exists",
-     "language family is Chinese",
-     "language is Yi",
-     "+12 more"
+     "language family is Chinese or language is Yi or language is Hmong or language family is Tai or language is Tibetan or language is Jurchen or language is Nanai or language is Udege",
+     "language family is Chinese or language is Yi or language is Hmong or language family is Tai or language is Tibetan or language is Jurchen or language is Nanai or language is Udege and situation active: Red Turban Rebellions"
     ]
    },
    "desc": [
@@ -21330,8 +21228,7 @@
     ],
     "major": false,
     "requires": [
-     "culture group is Micronesian",
-     "culture group is Polynesian",
+     "culture group is Micronesian or culture group is Polynesian",
      "capital: is a port"
     ]
    },
@@ -21469,7 +21366,7 @@
     "requires": [
      "culture group is Jurchen",
      "has a tribal government",
-     "Sinicized Vs Unsinicized > 35",
+     "Sinicized vs Unsinicized > 35",
      "mechanic: Government Reform"
     ]
    },
@@ -21486,8 +21383,8 @@
     "requires": [
      "Government",
      "Culture",
-     "Event or script",
-     "Other"
+     "Societal value",
+     "Event or script"
     ]
    },
    "icon": "img/reform/yeren-jurchen-reform.png",
@@ -21698,12 +21595,12 @@
    "label": "Availability",
    "options": [
     {
-     "count": 159,
+     "count": 164,
      "label": "Any country",
      "value": "Any country"
     },
     {
-     "count": 169,
+     "count": 164,
      "label": "Specific countries",
      "value": "Specific countries"
     }
@@ -21796,7 +21693,7 @@
      "value": "Age"
     },
     {
-     "count": 114,
+     "count": 117,
      "label": "Country",
      "value": "Country"
     },
@@ -21806,17 +21703,22 @@
      "value": "Culture"
     },
     {
-     "count": 88,
+     "count": 8,
+     "label": "Estate",
+     "value": "Estate"
+    },
+    {
+     "count": 92,
      "label": "Event or script",
      "value": "Event or script"
     },
     {
-     "count": 11,
+     "count": 14,
      "label": "Geography",
      "value": "Geography"
     },
     {
-     "count": 34,
+     "count": 40,
      "label": "Government",
      "value": "Government"
     },
@@ -21841,7 +21743,7 @@
      "value": "Organization"
     },
     {
-     "count": 59,
+     "count": 21,
      "label": "Other",
      "value": "Other"
     },
@@ -21851,14 +21753,29 @@
      "value": "Privilege"
     },
     {
+     "count": 2,
+     "label": "Rebels & war",
+     "value": "Rebels & war"
+    },
+    {
      "count": 96,
      "label": "Reform",
      "value": "Reform"
     },
     {
-     "count": 20,
+     "count": 21,
      "label": "Religion",
      "value": "Religion"
+    },
+    {
+     "count": 4,
+     "label": "Ruler & dynasty",
+     "value": "Ruler & dynasty"
+    },
+    {
+     "count": 11,
+     "label": "Societal value",
+     "value": "Societal value"
     }
    ]
   }

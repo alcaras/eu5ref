@@ -62,16 +62,7 @@
     ],
     "requires": [
      "has reform Agrarian Community",
-     "raw material: Wheat",
-     "raw material: Maize",
-     "raw material: Rice",
-     "raw material: Sturdy Grains",
-     "raw material: Legumes",
-     "raw material: Potatoes",
-     "raw material: Livestock",
-     "raw material: Olives",
-     "raw material: Fruit",
-     "+1 more"
+     "target: Produces Wheat, Maize, Rice, Millet, Legumes, Potato, Livestock, Olives, Fruit, or Beeswax"
     ],
     "unlocked_by": []
    },
@@ -96,7 +87,7 @@
     "kept": "Kept at conquest",
     "requires": [
      "Reform",
-     "Other"
+     "Event or script"
     ],
     "source": "Available from the start"
    },
@@ -348,7 +339,7 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Manorial Custumals"
+     "target: has urban right Manorial Custumals"
     ],
     "gate": [
      "cgrp",
@@ -542,10 +533,9 @@
      }
     ],
     "requires": [
-     "is or was Byzantium",
-     "is or was Rome",
-     "this: Constantinople",
-     "Is Full Expanded Rgo"
+     "is or was Byzantium or is or was Rome",
+     "target: Constantinople",
+     "target: Is Full Expanded Rgo"
     ],
     "unlocked_by": []
    },
@@ -565,6 +555,7 @@
     "kept": "Lost at conquest",
     "requires": [
      "Country",
+     "Ruler & dynasty",
      "Other"
     ],
     "source": "Available from the start"
@@ -766,7 +757,7 @@
     ],
     "country_mods": [],
     "excludes": [
-     "urban right Textile Rights"
+     "target: has urban right Textile Rights"
     ],
     "gate": [
      "not",
@@ -914,12 +905,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Fuero Juzgo",
-     "urban right Fuero Real",
-     "urban right Fuero General",
-     "urban right Fueros de Aragón",
-     "urban right Usatges de Barcelona",
-     "urban right Furs de Valencia"
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fuero General",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Usatges de Barcelona",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "or",
@@ -995,8 +986,7 @@
      }
     ],
     "requires": [
-     "is or was Portugal",
-     "culture is Portuguese"
+     "is or was Portugal or culture is Portuguese"
     ],
     "unlocked_by": []
    },
@@ -1224,8 +1214,8 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Market Charter",
-     "urban right Staple Port"
+     "target: has urban right Market Charter",
+     "target: has urban right Staple Port"
     ],
     "gate": [
      "not",
@@ -1385,12 +1375,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Juzgo",
-     "urban right Fuero Real",
-     "urban right Fuero General",
-     "urban right Usatges de Barcelona",
-     "urban right Furs de Valencia"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fuero General",
+     "target: has urban right Usatges de Barcelona",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "or",
@@ -1454,10 +1444,8 @@
      }
     ],
     "requires": [
-     "is or was Aragon",
-     "culture is Aragonese",
-     "in area Aragon",
-     "dominant culture: Aragonese"
+     "is or was Aragon or culture is Aragonese",
+     "target: in area Aragon or dominant culture: Aragonese"
     ],
     "unlocked_by": []
    },
@@ -1511,12 +1499,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Juzgo",
-     "urban right Fuero Real",
-     "urban right Fueros de Aragón",
-     "urban right Usatges de Barcelona",
-     "urban right Furs de Valencia"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Usatges de Barcelona",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "and",
@@ -1600,8 +1588,7 @@
      }
     ],
     "requires": [
-     "is or was Navarre",
-     "culture is Basque",
+     "is or was Navarre or culture is Basque",
      "culture group is Iberian"
     ],
     "unlocked_by": []
@@ -1660,12 +1647,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Real",
-     "urban right Fuero General",
-     "urban right Fueros de Aragón",
-     "urban right Usatges de Barcelona",
-     "urban right Furs de Valencia"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fuero General",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Usatges de Barcelona",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "or",
@@ -1729,13 +1716,8 @@
      }
     ],
     "requires": [
-     "is or was León",
-     "is or was Castile",
-     "in area León",
-     "in area Extremadura",
-     "in area Toledo",
-     "in area Murcia",
-     "dominant culture: Asturleonese"
+     "is or was León or is or was Castile",
+     "target: in area León or in area Extremadura or in area Toledo or in area Murcia or dominant culture: Asturleonese"
     ],
     "unlocked_by": []
    },
@@ -1788,12 +1770,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Juzgo",
-     "urban right Fuero General",
-     "urban right Fueros de Aragón",
-     "urban right Usatges de Barcelona",
-     "urban right Furs de Valencia"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero General",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Usatges de Barcelona",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "tag",
@@ -1882,12 +1864,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Juzgo",
-     "urban right Fuero Real",
-     "urban right Fuero General",
-     "urban right Fueros de Aragón",
-     "urban right Usatges de Barcelona"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fuero General",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Usatges de Barcelona"
     ],
     "gate": [
      "or",
@@ -1963,9 +1945,8 @@
      }
     ],
     "requires": [
-     "is or was Aragon",
-     "culture is Catalan",
-     "in area Valencia"
+     "is or was Aragon or culture is Catalan",
+     "target: in area Valencia"
     ],
     "unlocked_by": []
    },
@@ -2024,7 +2005,7 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Imperial Breadbasket"
+     "target: has urban right Imperial Breadbasket"
     ],
     "gate": [
      "not",
@@ -2149,7 +2130,7 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Granary Town"
+     "target: has urban right Granary Town"
     ],
     "gate": [
      "or",
@@ -2225,12 +2206,9 @@
      }
     ],
     "requires": [
-     "is or was Byzantium",
-     "is or was Rome",
-     "location is a City",
-     "location is a Megalopolis",
-     "building type: Granary",
-     "Building Level ≥ 5"
+     "is or was Byzantium or is or was Rome",
+     "target: location is a City or location is a Megalopolis",
+     "target: Has a Granary at level 5 or above"
     ],
     "unlocked_by": []
    },
@@ -2256,7 +2234,7 @@
     "requires": [
      "Country",
      "Geography",
-     "Other"
+     "Event or script"
     ],
     "source": "Available from the start"
    },
@@ -2298,8 +2276,8 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Magdeburg Rights",
-     "urban right Nuremberg Rights"
+     "target: has urban right Magdeburg Rights",
+     "target: has urban right Nuremberg Rights"
     ],
     "gate": [
      "?",
@@ -2510,16 +2488,7 @@
     ],
     "requires": [
      "runs policy Bergordnung",
-     "raw material: Iron",
-     "raw material: Copper",
-     "raw material: Lead",
-     "raw material: Tin",
-     "raw material: Alum",
-     "raw material: Marble",
-     "raw material: Mercury",
-     "raw material: Coal",
-     "raw material: Stone",
-     "+1 more"
+     "target: Produces Iron, Copper, Lead, Tin, Alum, Marble, Mercury, Coal, Stone, or Saltpeter"
     ],
     "unlocked_by": []
    },
@@ -2535,7 +2504,7 @@
     "kept": "Lost at conquest",
     "requires": [
      "Law",
-     "Other"
+     "Event or script"
     ],
     "source": "Available from the start"
    },
@@ -2590,10 +2559,10 @@
      }
     ],
     "excludes": [
-     "urban right Staple Port",
-     "urban right Magdeburg Rights",
-     "urban right Nuremberg Rights",
-     "urban right Kulm Rights"
+     "target: has urban right Staple Port",
+     "target: has urban right Magdeburg Rights",
+     "target: has urban right Nuremberg Rights",
+     "target: has urban right Kulm Rights"
     ],
     "gate": [
      "cgrp",
@@ -2661,7 +2630,7 @@
     ],
     "requires": [
      "culture group is German",
-     "is a port"
+     "target: is a port"
     ],
     "unlocked_by": []
    },
@@ -2726,8 +2695,8 @@
      }
     ],
     "excludes": [
-     "urban right Nuremberg Rights",
-     "urban right Kulm Rights"
+     "target: has urban right Nuremberg Rights",
+     "target: has urban right Kulm Rights"
     ],
     "gate": [
      "and",
@@ -2863,7 +2832,7 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Borough Custumals"
+     "target: has urban right Borough Custumals"
     ],
     "gate": [
      "cgrp",
@@ -2970,8 +2939,8 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Staple Port",
-     "urban right Free Town Charter"
+     "target: has urban right Staple Port",
+     "target: has urban right Free Town Charter"
     ],
     "gate": [
      "not",
@@ -3095,9 +3064,9 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Bergslagsprivilegier",
-     "urban right Upper Bergregal",
-     "urban right Lower Bergregal"
+     "target: has urban right Bergslagsprivilegier",
+     "target: has urban right Upper Bergregal",
+     "target: has urban right Lower Bergregal"
     ],
     "gate": [
      "and",
@@ -3196,9 +3165,7 @@
      }
     ],
     "requires": [
-     "Is Mining Rgo",
-     "is a port",
-     "raw material: Salt"
+     "target: Has a mining Raw Good or produces Salt inland"
     ],
     "unlocked_by": []
    },
@@ -3222,8 +3189,7 @@
     "good": null,
     "kept": "Kept at conquest",
     "requires": [
-     "Geography",
-     "Other"
+     "Event or script"
     ],
     "source": "Available from the start"
    },
@@ -3341,12 +3307,9 @@
      }
     ],
     "requires": [
-     "has dlc: D008 Fate Of The Phoenix",
-     "is or was Byzantium",
-     "is or was Rome",
-     "Latinization Vs Hellenization < -50",
-     "court language is Latin",
-     "dominant language: Latin"
+     "owns D008 Fate Of The Phoenix",
+     "is or was Byzantium or is or was Rome",
+     "target.owner: Latinitas vs Rōmanismós < -50 or court language is Latin or dominant language: Latin"
     ],
     "unlocked_by": []
    },
@@ -3372,6 +3335,8 @@
     "requires": [
      "Country",
      "Culture",
+     "Societal value",
+     "Event or script",
      "Other"
     ],
     "source": "Available from the start"
@@ -3543,9 +3508,9 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Magdeburg Rights",
-     "urban right Nuremberg Rights",
-     "urban right Kulm Rights"
+     "target: has urban right Magdeburg Rights",
+     "target: has urban right Nuremberg Rights",
+     "target: has urban right Kulm Rights"
     ],
     "gate": [
      "?",
@@ -3678,8 +3643,8 @@
      }
     ],
     "excludes": [
-     "urban right Magdeburg Rights",
-     "urban right Kulm Rights"
+     "target: has urban right Magdeburg Rights",
+     "target: has urban right Kulm Rights"
     ],
     "gate": [
      "and",
@@ -4603,9 +4568,7 @@
      }
     ],
     "country_mods": [],
-    "excludes": [
-     "event flag: Recently Forced To Revoke Town Rights Variable"
-    ],
+    "excludes": [],
     "gate": [
      "not",
      [
@@ -4660,7 +4623,9 @@
       "value": "−5.00%"
      }
     ],
-    "requires": [],
+    "requires": [
+     "Urban rights have not been forcefully revoked in the last 10 years."
+    ],
     "unlocked_by": [
      "Borough Privileges"
     ]
@@ -4688,7 +4653,7 @@
     ],
     "kept": "Kept at conquest",
     "requires": [
-     "No requirement"
+     "Event or script"
     ],
     "source": "Unlocked by an advance"
    },
@@ -4737,7 +4702,7 @@
     ],
     "country_mods": [],
     "excludes": [
-     "urban right Flemish Cloth Industry"
+     "target: has urban right Flemish Cloth Industry"
     ],
     "gate": [
      "not",
@@ -5131,7 +5096,7 @@
      }
     ],
     "excludes": [
-     "urban right Tooling Rights"
+     "target: has urban right Tooling Rights"
     ],
     "gate": [
      "and",
@@ -5243,10 +5208,7 @@
      }
     ],
     "requires": [
-     "raw material: Iron",
-     "raw material: Copper",
-     "raw material: Silver",
-     "raw material: Lead"
+     "target: raw material: Iron or raw material: Copper or raw material: Silver or raw material: Lead"
     ],
     "unlocked_by": [
      "Bergslagsprivilegier"
@@ -5395,7 +5357,7 @@
      }
     ],
     "requires": [
-     "is a port"
+     "target: is a port"
     ],
     "unlocked_by": [
      "Fiskeriprivilegier"
@@ -5472,7 +5434,7 @@
     ],
     "country_mods": [],
     "excludes": [
-     "urban right Naval Supplies Rights"
+     "target: has urban right Naval Supplies Rights"
     ],
     "gate": [
      "not",
@@ -5816,11 +5778,10 @@
      }
     ],
     "requires": [
-     "culture group is Roman",
-     "culture group: Roman",
-     "Value > 0.25",
-     "has building University",
-     "Development ≥ 20"
+     "culture group is Roman or Roman Culture Group Percentage In Country > 0.25",
+     "target: culture group is Roman",
+     "target: has building University",
+     "target: Development ≥ 20"
     ],
     "unlocked_by": []
    },
@@ -5900,7 +5861,9 @@
       "value": "−2.50%"
      }
     ],
-    "excludes": [],
+    "excludes": [
+     "target: is a port"
+    ],
     "gate": [
      "and",
      [
@@ -5964,8 +5927,7 @@
      }
     ],
     "requires": [
-     "country: Root",
-     "is a port"
+     "Hre: country: us"
     ],
     "unlocked_by": []
    },
@@ -5980,7 +5942,6 @@
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Geography",
      "Other"
     ],
     "source": "Available from the start"
@@ -6084,7 +6045,7 @@
      }
     ],
     "requires": [
-     "is a port"
+     "target: is a port"
     ],
     "unlocked_by": []
    },
@@ -6235,8 +6196,7 @@
      }
     ],
     "requires": [
-     "location is a City",
-     "location is a Megalopolis"
+     "target: location is a City or location is a Megalopolis"
     ],
     "unlocked_by": []
    },
@@ -6510,11 +6470,7 @@
     ],
     "requires": [
      "runs policy Bergordnung",
-     "raw material: Silver",
-     "raw material: Gold",
-     "raw material: Gems",
-     "is a port",
-     "raw material: Salt"
+     "target: Produces Silver, Goods Gold, Gems, or inland Salt"
     ],
     "unlocked_by": []
    },
@@ -6529,9 +6485,8 @@
     "good": null,
     "kept": "Lost at conquest",
     "requires": [
-     "Geography",
      "Law",
-     "Other"
+     "Event or script"
     ],
     "source": "Available from the start"
    },
@@ -6579,12 +6534,12 @@
     "boosts": [],
     "country_mods": [],
     "excludes": [
-     "urban right Foros Extensos",
-     "urban right Fuero Juzgo",
-     "urban right Fuero Real",
-     "urban right Fuero General",
-     "urban right Fueros de Aragón",
-     "urban right Furs de Valencia"
+     "target: has urban right Foros Extensos",
+     "target: has urban right Fuero Juzgo",
+     "target: has urban right Fuero Real",
+     "target: has urban right Fuero General",
+     "target: has urban right Fueros de Aragón",
+     "target: has urban right Furs de Valencia"
     ],
     "gate": [
      "or",
@@ -6648,10 +6603,8 @@
      }
     ],
     "requires": [
-     "is or was Aragon",
-     "culture is Catalan",
-     "in area Catalonia",
-     "in area Balearics"
+     "is or was Aragon or culture is Catalan",
+     "target: in area Catalonia or in area Balearics"
     ],
     "unlocked_by": []
    },
@@ -6990,7 +6943,12 @@
      "value": "Culture"
     },
     {
-     "count": 15,
+     "count": 7,
+     "label": "Event or script",
+     "value": "Event or script"
+    },
+    {
+     "count": 12,
      "label": "Geography",
      "value": "Geography"
     },
@@ -7000,12 +6958,12 @@
      "value": "Law"
     },
     {
-     "count": 16,
+     "count": 15,
      "label": "No requirement",
      "value": "No requirement"
     },
     {
-     "count": 17,
+     "count": 12,
      "label": "Other",
      "value": "Other"
     },
@@ -7013,6 +6971,16 @@
      "count": 2,
      "label": "Reform",
      "value": "Reform"
+    },
+    {
+     "count": 1,
+     "label": "Ruler & dynasty",
+     "value": "Ruler & dynasty"
+    },
+    {
+     "count": 1,
+     "label": "Societal value",
+     "value": "Societal value"
     }
    ]
   }

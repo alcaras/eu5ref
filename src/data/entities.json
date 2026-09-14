@@ -4452,7 +4452,7 @@
   "curry_favors": "define:NDiplomacy.CURRY_FAVORS",
   "curry_favors_max_favors": "define:NDiplomacy.CURRY_FAVORS_MAX_FAVORS",
   "curry_favors_relation_required": "define:NDiplomacy.CURRY_FAVORS_RELATION_REQUIRED",
-  "curse of ser_stefan_decanski": "disaster:curse_of_stefan_uros_iii",
+  "curse of ser stefan decanski": "disaster:curse_of_stefan_uros_iii",
   "curtail peasant liberties": "advance:hun_curtailed_peasantry",
   "curtailing the our country('clergy_estate')": "event:flavor_eth.155",
   "curtailing the our country('nobles_estate')": "event:flavor_ben.3",
@@ -4581,7 +4581,7 @@
   "death of a crusader": "event:flavor_teu.101",
   "death of a lama": "event:buddhism_events.1202",
   "death of a wālī": "event:flavor_maj.18",
-  "death of maj_hayam_wuruk": "disaster:death_of_hayan_wuruk",
+  "death of maj hayam wuruk": "disaster:death_of_hayan_wuruk",
   "death of our ruler": "event:flavor_tim_governor.1",
   "death of scope": "event:flavor_fra.1134",
   "death of target": "event:flavor_chi.2021",
@@ -106685,252 +106685,252 @@
   "disaster:ambrosian_republic_disaster": {
    "icon": "img/disaster/ambrosian-republic-disaster.png",
    "name": "Golden Ambrosian Republic",
-   "page": null,
+   "page": "disasters/ambrosian-republic-disaster",
    "slug": "ambrosian-republic-disaster",
    "type": "disaster"
   },
   "disaster:aspiration_for_liberty": {
    "icon": "img/disaster/aspiration-for-liberty.png",
    "name": "Aspiration for Liberty",
-   "page": null,
+   "page": "disasters/aspiration-for-liberty",
    "slug": "aspiration-for-liberty",
    "type": "disaster"
   },
   "disaster:byzantine_succession_crisis": {
    "icon": "img/disaster/byzantine-succession-crisis.png",
    "name": "Byzantine Succession Crisis",
-   "page": null,
+   "page": "disasters/byzantine-succession-crisis",
    "slug": "byzantine-succession-crisis",
    "type": "disaster"
   },
   "disaster:castilian_civil_war": {
    "icon": "img/disaster/castilian-civil-war.png",
    "name": "Castilian Civil War",
-   "page": null,
+   "page": "disasters/castilian-civil-war",
    "slug": "castilian-civil-war",
    "type": "disaster"
   },
   "disaster:ciompi_revolt": {
    "icon": "img/disaster/ciompi-revolt.png",
    "name": "Ciompi Revolt",
-   "page": null,
+   "page": "disasters/ciompi-revolt",
    "slug": "ciompi-revolt",
    "type": "disaster"
   },
   "disaster:coup_attempt": {
    "icon": "img/disaster/coup-attempt.png",
    "name": "Coup Attempt",
-   "page": null,
+   "page": "disasters/coup-attempt",
    "slug": "coup-attempt",
    "type": "disaster"
   },
   "disaster:court_and_country": {
    "icon": "img/disaster/court-and-country.png",
    "name": "Court and Country",
-   "page": null,
+   "page": "disasters/court-and-country",
    "slug": "court-and-country",
    "type": "disaster"
   },
   "disaster:crisis_of_the_chinese_dynasty": {
    "icon": "img/disaster/crisis-of-the-chinese-dynasty.png",
    "name": "Crisis of the Empire of Yuán(CHI)",
-   "page": null,
+   "page": "disasters/crisis-of-the-chinese-dynasty",
    "slug": "crisis-of-the-chinese-dynasty",
    "type": "disaster"
   },
   "disaster:crisis_of_the_sayfawa_dynasty": {
    "icon": "img/disaster/crisis-of-the-sayfawa-dynasty.png",
    "name": "Crisis of the Sayfawa Dynasty",
-   "page": null,
+   "page": "disasters/crisis-of-the-sayfawa-dynasty",
    "slug": "crisis-of-the-sayfawa-dynasty",
    "type": "disaster"
   },
   "disaster:curse_of_stefan_uros_iii": {
    "icon": "img/disaster/curse-of-stefan-uros-iii.png",
-   "name": "Curse of ser_stefan_decanski",
-   "page": null,
+   "name": "Curse of Ser Stefan Decanski",
+   "page": "disasters/curse-of-stefan-uros-iii",
    "slug": "curse-of-stefan-uros-iii",
    "type": "disaster"
   },
   "disaster:death_of_hayan_wuruk": {
    "icon": "img/disaster/death-of-hayan-wuruk.png",
-   "name": "Death of maj_hayam_wuruk",
-   "page": null,
+   "name": "Death of Maj Hayam Wuruk",
+   "page": "disasters/death-of-hayan-wuruk",
    "slug": "death-of-hayan-wuruk",
    "type": "disaster"
   },
   "disaster:decline_of_empire": {
    "icon": "img/disaster/decline-of-empire.png",
    "name": "Complacent Decline",
-   "page": null,
+   "page": "disasters/decline-of-empire",
    "slug": "decline-of-empire",
    "type": "disaster"
   },
   "disaster:decline_of_majapahit": {
    "icon": "img/disaster/decline-of-majapahit.png",
    "name": "The Decline of Majapahit",
-   "page": null,
+   "page": "disasters/decline-of-majapahit",
    "slug": "decline-of-majapahit",
    "type": "disaster"
   },
   "disaster:decline_of_mali": {
    "icon": "img/disaster/decline-of-mali.png",
    "name": "The Decline of Mali",
-   "page": null,
+   "page": "disasters/decline-of-mali",
    "slug": "decline-of-mali",
    "type": "disaster"
   },
   "disaster:dissolution_of_delhi": {
    "icon": "img/disaster/dissolution-of-delhi.png",
    "name": "The Dissolution of Delhi",
-   "page": null,
+   "page": "disasters/dissolution-of-delhi",
    "slug": "dissolution-of-delhi",
    "type": "disaster"
   },
   "disaster:english_civil_war": {
    "icon": "img/disaster/english-civil-war.png",
    "name": "The English Civil War",
-   "page": null,
+   "page": "disasters/english-civil-war",
    "slug": "english-civil-war",
    "type": "disaster"
   },
   "disaster:fate_of_the_phoenix": {
    "icon": "img/disaster/fate-of-the-phoenix.png",
    "name": "Fate of the Phoenix",
-   "page": null,
+   "page": "disasters/fate-of-the-phoenix",
    "slug": "fate-of-the-phoenix",
    "type": "disaster"
   },
   "disaster:french_wars_religion": {
    "icon": "img/disaster/french-wars-religion.png",
    "name": "French Wars of Religion",
-   "page": null,
+   "page": "disasters/french-wars-religion",
    "slug": "french-wars-religion",
    "type": "disaster"
   },
   "disaster:hook_and_cod_wars": {
    "icon": "img/disaster/hook-and-cod-wars.png",
    "name": "The Hook and Cod Wars",
-   "page": null,
+   "page": "disasters/hook-and-cod-wars",
    "slug": "hook-and-cod-wars",
    "type": "disaster"
   },
   "disaster:horde_civil_war": {
    "icon": "img/disaster/horde-civil-war.png",
    "name": "Horde Civil War",
-   "page": null,
+   "page": "disasters/horde-civil-war",
    "slug": "horde-civil-war",
    "type": "disaster"
   },
   "disaster:muscovite_succession_war": {
    "icon": "img/disaster/muscovite-succession-war.png",
    "name": "Muscovite War of Succession",
-   "page": null,
+   "page": "disasters/muscovite-succession-war",
    "slug": "muscovite-succession-war",
    "type": "disaster"
   },
   "disaster:peasants_war": {
    "icon": "img/disaster/peasants-war.png",
    "name": "Peasants' War",
-   "page": null,
+   "page": "disasters/peasants-war",
    "slug": "peasants-war",
    "type": "disaster"
   },
   "disaster:reform_society": {
    "icon": "img/disaster/reform-society.png",
    "name": "Reform Society",
-   "page": null,
+   "page": "disasters/reform-society",
    "slug": "reform-society",
    "type": "disaster"
   },
   "disaster:religious_turmoil": {
    "icon": "img/disaster/religious-turmoil.png",
    "name": "Religious Turmoil",
-   "page": null,
+   "page": "disasters/religious-turmoil",
    "slug": "religious-turmoil",
    "type": "disaster"
   },
   "disaster:revolution_disaster": {
    "icon": "img/disaster/revolution-disaster.png",
    "name": "Revolution!",
-   "page": null,
+   "page": "disasters/revolution-disaster",
    "slug": "revolution-disaster",
    "type": "disaster"
   },
   "disaster:revolutionary_chaos": {
    "icon": "img/disaster/revolutionary-chaos.png",
    "name": "Revolutionary Chaos",
-   "page": null,
+   "page": "disasters/revolutionary-chaos",
    "slug": "revolutionary-chaos",
    "type": "disaster"
   },
   "disaster:rise_of_the_szlachta": {
    "icon": "img/disaster/rise-of-the-szlachta.png",
    "name": "Rise of the Szlachta",
-   "page": null,
+   "page": "disasters/rise-of-the-szlachta",
    "slug": "rise-of-the-szlachta",
    "type": "disaster"
   },
   "disaster:savonarola_disaster": {
    "icon": "img/disaster/savonarola-disaster.png",
    "name": "The Rise of Savonarola",
-   "page": null,
+   "page": "disasters/savonarola-disaster",
    "slug": "savonarola-disaster",
    "type": "disaster"
   },
   "disaster:sinicization_disaster": {
    "icon": "img/disaster/sinicization-disaster.png",
    "name": "The Influence of China",
-   "page": null,
+   "page": "disasters/sinicization-disaster",
    "slug": "sinicization-disaster",
    "type": "disaster"
   },
   "disaster:struggle_for_royal_power": {
    "icon": "img/disaster/struggle-for-royal-power.png",
    "name": "Struggle for Royal Power",
-   "page": null,
+   "page": "disasters/struggle-for-royal-power",
    "slug": "struggle-for-royal-power",
    "type": "disaster"
   },
   "disaster:succession_crisis": {
    "icon": "img/disaster/succession-crisis.png",
    "name": "Succession Crisis",
-   "page": null,
+   "page": "disasters/succession-crisis",
    "slug": "succession-crisis",
    "type": "disaster"
   },
   "disaster:time_of_troubles": {
    "icon": "img/disaster/time-of-troubles.png",
    "name": "Time of Troubles",
-   "page": null,
+   "page": "disasters/time-of-troubles",
    "slug": "time-of-troubles",
    "type": "disaster"
   },
   "disaster:turmoil_in_brandenburg": {
    "icon": "img/disaster/turmoil-in-brandenburg.png",
    "name": "Turmoil in Brandenburg",
-   "page": null,
+   "page": "disasters/turmoil-in-brandenburg",
    "slug": "turmoil-in-brandenburg",
    "type": "disaster"
   },
   "disaster:twilight_of_the_tsardom": {
    "icon": "img/disaster/twilight-of-the-tsardom.png",
    "name": "Twilight of the Tsardom",
-   "page": null,
+   "page": "disasters/twilight-of-the-tsardom",
    "slug": "twilight-of-the-tsardom",
    "type": "disaster"
   },
   "disaster:war_of_the_aragonese_union_disaster": {
    "icon": "img/disaster/war-of-the-aragonese-union-disaster.png",
    "name": "War of the Union",
-   "page": null,
+   "page": "disasters/war-of-the-aragonese-union-disaster",
    "slug": "war-of-the-aragonese-union-disaster",
    "type": "disaster"
   },
   "disaster:war_of_the_roses": {
    "icon": "img/disaster/war-of-the-roses.png",
    "name": "War of the Roses",
-   "page": null,
+   "page": "disasters/war-of-the-roses",
    "slug": "war-of-the-roses",
    "type": "disaster"
   },

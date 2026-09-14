@@ -366,7 +366,7 @@
      "Ara Sindicat Ara Remenca Flag"
     ],
     "requires": [
-     "event flag: Ara Sindicat Ara Remenca Flag"
+     "event flag: Sindicat Ara Remenca Flag"
     ],
     "unlocked_by": null
    },
@@ -428,8 +428,7 @@
     ],
     "requires": [
      "is or was Florence",
-     "Fine Cloth > 0",
-     "Silk > 0"
+     "Fine Cloth produced > 0 or Silk produced > 0"
     ],
     "unlocked_by": null
    },
@@ -444,7 +443,7 @@
     "estate": "Burghers",
     "requires": [
      "Country",
-     "Other"
+     "Economy"
     ]
    },
    "icon": "img/privilege/arte-della-lana.png",
@@ -494,7 +493,7 @@
     ],
     "requires": [
      "event flag: Austere Monastic Life",
-     "Monastery > 1"
+     "Monastery levels > 1"
     ],
     "unlocked_by": null
    },
@@ -505,11 +504,11 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
-     "Event or script",
-     "Other"
+     "Geography",
+     "Event or script"
     ]
    },
    "icon": "img/privilege/austere-monastic-life.png",
@@ -643,11 +642,8 @@
     ],
     "requires": [
      "is or was Ottomans",
-     "age is Reformation",
-     "age is Absolutism",
-     "age is Revolutions",
-     "has researched Muqāta'ah",
-     "event flag: Autonomous Kadiluks Flag"
+     "age is Reformation or age is Absolutism or age is Revolutions",
+     "has researched Muqāta'ah or event flag: Autonomous Kadiluks Flag"
     ],
     "unlocked_by": null
    },
@@ -1032,8 +1028,7 @@
      "Venice"
     ],
     "requires": [
-     "is or was Venice",
-     "overlord: is or was Venice"
+     "is or was Venice or overlord: is or was Venice"
     ],
     "unlocked_by": null
    },
@@ -1157,8 +1152,7 @@
      "Castile"
     ],
     "requires": [
-     "is or was Spain",
-     "is or was Castile"
+     "is or was Spain or is or was Castile"
     ],
     "unlocked_by": null
    },
@@ -1677,7 +1671,7 @@
      "religious unity < 0.66"
     ],
     "requires": [
-     "religious unity < 0.66"
+     "religious unity < 66%"
     ],
     "unlocked_by": null
    },
@@ -1740,8 +1734,7 @@
      "Balliol"
     ],
     "requires": [
-     "is or was Scotland",
-     "is or was Balliol",
+     "is or was Scotland or is or was Balliol",
      "Num Of Non Rural ≥ 1"
     ],
     "unlocked_by": null
@@ -2099,8 +2092,7 @@
      "has unlocked estate privilege trigger"
     ],
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "the privilege has been unlocked (Regimiento)"
     ],
     "unlocked_by": null
@@ -2511,7 +2503,7 @@
      "total effective building levels:university > 0"
     ],
     "requires": [
-     "University > 0"
+     "University levels > 0"
     ],
     "unlocked_by": null
    },
@@ -2522,10 +2514,10 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/privilege/clergy-lecture-oaths.png",
@@ -2642,9 +2634,7 @@
   {
    "data": {
     "can_revoke": false,
-    "excludes": [
-     "religion group is Root.Religion.Group"
-    ],
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -2677,8 +2667,7 @@
     ],
     "requires": [
      "religion is Catholicism",
-     "has reform Military Order",
-     "culture group is Iberian",
+     "has reform Military Order or religion group is not religion's group or culture group is Iberian",
      "has researched Castle"
     ],
     "unlocked_by": null
@@ -2853,7 +2842,7 @@
      "religious unity < 0.66"
     ],
     "requires": [
-     "religious unity < 0.66"
+     "religious unity < 66%"
     ],
     "unlocked_by": null
    },
@@ -3096,8 +3085,7 @@
      "Celtic Traditions"
     ],
     "requires": [
-     "culture group is Hibernian",
-     "has reform Celtic Traditions"
+     "culture group is Hibernian or has reform Celtic Traditions"
     ],
     "unlocked_by": null
    },
@@ -3605,7 +3593,7 @@
    "data": {
     "can_revoke": false,
     "excludes": [
-     "reform Control of the Mahdali Coinage"
+     "if is or was Kilwa: has reform Control of the Mahdali Coinage"
     ],
     "gate": [
      "or",
@@ -3625,9 +3613,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "is or was Kilwa"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -3637,10 +3623,10 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "estate": "Burghers",
     "requires": [
-     "Country"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/control-over-the-coinage.png",
@@ -4054,7 +4040,7 @@
      "religious unity < 0.66"
     ],
     "requires": [
-     "religious unity < 0.66"
+     "religious unity < 66%"
     ],
     "unlocked_by": null
    },
@@ -4309,8 +4295,7 @@
      "Celtic Traditions"
     ],
     "requires": [
-     "culture group is Hibernian",
-     "has reform Celtic Traditions"
+     "culture group is Hibernian or has reform Celtic Traditions"
     ],
     "unlocked_by": null
    },
@@ -5741,7 +5726,7 @@
     ],
     "requires": [
      "is or was France",
-     "Is Alive"
+     "Etienne Marcel: is alive"
     ],
     "unlocked_by": null
    },
@@ -5756,7 +5741,7 @@
     "estate": "Burghers",
     "requires": [
      "Country",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/privilege/fra-leadership-of-marcel.png",
@@ -5965,7 +5950,7 @@
     ],
     "requires": [
      "the privilege has been unlocked (Pragmatic Sanction of Bourges)",
-     "Value < 50"
+     "Rome: us opinion < 50"
     ],
     "unlocked_by": null
    },
@@ -5976,11 +5961,11 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "estate": "Clergy",
     "requires": [
-     "Privilege",
-     "Other"
+     "Government",
+     "Privilege"
     ]
    },
    "icon": "img/privilege/fra-papacy-pragmatic-sanctions.png",
@@ -6174,7 +6159,7 @@
      "Islam"
     ],
     "requires": [
-     "Pepper > 0",
+     "Pepper produced > 0",
      "religion group is Islam"
     ],
     "unlocked_by": null
@@ -6190,7 +6175,7 @@
     "estate": "Burghers",
     "requires": [
      "Religion",
-     "Other"
+     "Economy"
     ]
    },
    "icon": "img/privilege/fund-karimi.png",
@@ -6461,10 +6446,8 @@
      "any active disaster disaster type: rise of the szlachta"
     ],
     "requires": [
-     "is or was Poland",
-     "is or was Poland-Lithuania",
-     "event flag: Rise Of Szlachta Szlachta Outcome Variable",
-     "disaster type: Rise of the Szlachta"
+     "is or was Poland or is or was Poland-Lithuania",
+     "event flag: Rise Of Szlachta Szlachta Outcome Variable or the disaster is Rise of the Szlachta"
     ],
     "unlocked_by": null
    },
@@ -6479,8 +6462,8 @@
     "estate": "Nobility",
     "requires": [
      "Country",
-     "Event or script",
-     "Other"
+     "Disaster",
+     "Event or script"
     ]
    },
    "icon": "img/privilege/golden-liberty.png",
@@ -6715,8 +6698,7 @@
      "Hab Tractatus Incorporalibus Granted"
     ],
     "requires": [
-     "event flag: Hab Tractatus Incorporalibus Granted",
-     "Has gained access to this privilege"
+     "event flag: Tractatus Incorporalibus Granted"
     ],
     "unlocked_by": null
    },
@@ -7286,11 +7268,7 @@
     ],
     "requires": [
      "religion is Catholicism",
-     "capital: in region Baltic",
-     "capital: in region Carpathia",
-     "capital: in area Baltic",
-     "capital: in area Bohemia",
-     "capital: in area Moravia"
+     "capital: in region Baltic or in region Carpathia or in area Baltic or in area Bohemia or in area Moravia"
     ],
     "unlocked_by": null
    },
@@ -7606,8 +7584,7 @@
     ],
     "requires": [
      "capital: in South Asia",
-     "religion is Jainism",
-     "Value > 0"
+     "Jainism share of the population > 0"
     ],
     "unlocked_by": null
    },
@@ -7622,8 +7599,7 @@
     "estate": "Burghers",
     "requires": [
      "Religion",
-     "Geography",
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/privilege/jain-banking-rights.png",
@@ -7699,8 +7675,7 @@
     ],
     "requires": [
      "capital: in South Asia",
-     "religion is Jainism",
-     "Value > 0"
+     "Jainism share of the population > 0"
     ],
     "unlocked_by": null
    },
@@ -7715,8 +7690,7 @@
     "estate": "Burghers",
     "requires": [
      "Religion",
-     "Geography",
-     "Other"
+     "Geography"
     ]
    },
    "icon": "img/privilege/jain-scholars.png",
@@ -7802,7 +7776,7 @@
     ],
     "requires": [
      "event flag: Joint Assembly Decrees Variable",
-     "root: Hre.Leader Country"
+     "root: hre's leader country"
     ],
     "unlocked_by": null
    },
@@ -8393,8 +8367,7 @@
      "Baltic"
     ],
     "requires": [
-     "culture is Prussian",
-     "culture group is German",
+     "culture is Prussian or culture group is German",
      "capital: in region Baltic"
     ],
     "unlocked_by": null
@@ -8790,7 +8763,7 @@
     ],
     "requires": [
      "is a Frankokratia state",
-     "Culture Percentage In Country(Root.Culture) < 0.33"
+     "culture percentage in country(root: Culture) < 0.33"
     ],
     "unlocked_by": null
    },
@@ -8893,7 +8866,7 @@
     "requires": [
      "religion is Catholicism",
      "owns Constantinople",
-     "is location holy site for: Catholicism",
+     "Constantinople: is location holy site for: Catholicism",
      "the privilege has been unlocked (Protector of the Patriarchate of Constantinople)"
     ],
     "unlocked_by": null
@@ -8986,8 +8959,7 @@
      "Unlock Liberum Veto Variable"
     ],
     "requires": [
-     "is or was Poland",
-     "is or was Poland-Lithuania",
+     "is or was Poland or is or was Poland-Lithuania",
      "event flag: Unlock Liberum Veto Variable"
     ],
     "unlocked_by": null
@@ -9063,8 +9035,7 @@
      "Venice"
     ],
     "requires": [
-     "is or was Venice",
-     "overlord: is or was Venice"
+     "is or was Venice or overlord: is or was Venice"
     ],
     "unlocked_by": null
    },
@@ -9144,8 +9115,7 @@
      "Venice"
     ],
     "requires": [
-     "is or was Venice",
-     "overlord: is or was Venice"
+     "is or was Venice or overlord: is or was Venice"
     ],
     "unlocked_by": null
    },
@@ -9404,7 +9374,7 @@
     ],
     "requires": [
      "capital: in region Maghreb",
-     "Tribes Estate) > 0"
+     "Tribes power > 0%"
     ],
     "unlocked_by": null
    },
@@ -9419,7 +9389,7 @@
     "estate": "Tribes",
     "requires": [
      "Geography",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/privilege/local-tribal-strongholds.png",
@@ -9515,13 +9485,8 @@
      "is member of international organization: hre"
     ],
     "requires": [
-     "capital: in area Baltic",
-     "capital: in region Northern Germany",
-     "capital: in region Southern Germany",
-     "capital: in area Alsace",
-     "capital: in area Franche-Comté",
-     "capital: in area Lorraine",
-     "+4 more"
+     "capital: in area Baltic or in region Northern Germany or in region Southern Germany or in area Alsace or in area Franche-Comté or in area Lorraine or in area Picardy or in area Carniola or in area Silesia",
+     "is a member of Holy Roman Empire"
     ],
     "unlocked_by": null
    },
@@ -10156,8 +10121,7 @@
     ],
     "requires": [
      "is or was Milan",
-     "Fine Cloth > 0",
-     "Silk > 0"
+     "Fine Cloth produced > 0 or Silk produced > 0"
     ],
     "unlocked_by": null
    },
@@ -10172,7 +10136,7 @@
     "estate": "Burghers",
     "requires": [
      "Country",
-     "Other"
+     "Economy"
     ]
    },
    "icon": "img/privilege/milanese-cloth-guilds-privileges.png",
@@ -10373,9 +10337,7 @@
      "Rise Of Szlachta Szlachta Outcome Variable"
     ],
     "requires": [
-     "is or was Poland",
-     "is or was Poland-Lithuania",
-     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
+     "is or was Poland or is or was Poland-Lithuania or event flag: Rise Of Szlachta Szlachta Outcome Variable"
     ],
     "unlocked_by": null
    },
@@ -10651,8 +10613,7 @@
      "Goryeo"
     ],
     "requires": [
-     "is or was France",
-     "is or was Goryeo"
+     "is or was France or is or was Goryeo"
     ],
     "unlocked_by": null
    },
@@ -10920,8 +10881,7 @@
      "Tribe"
     ],
     "requires": [
-     "government is Monarchy",
-     "government is Tribe"
+     "government is Monarchy or government is Tribe"
     ],
     "unlocked_by": null
    },
@@ -11358,7 +11318,7 @@
      "religious unity < 0.66"
     ],
     "requires": [
-     "religious unity < 0.66"
+     "religious unity < 66%"
     ],
     "unlocked_by": null
    },
@@ -11465,9 +11425,7 @@
      "Ruthenia"
     ],
     "requires": [
-     "capital: in region Carpathia",
-     "capital: in region Baltic",
-     "capital: in region Ruthenia"
+     "capital: in region Carpathia or in region Baltic or in region Ruthenia"
     ],
     "unlocked_by": null
    },
@@ -11683,7 +11641,7 @@
     ],
     "requires": [
      "is or was England",
-     "event flag: Eng Ordinance Of Laborers Flag"
+     "event flag: Ordinance Of Laborers Flag"
     ],
     "unlocked_by": null
    },
@@ -11758,9 +11716,7 @@
      "Rise Of Szlachta Szlachta Outcome Variable"
     ],
     "requires": [
-     "is or was Poland",
-     "is or was Poland-Lithuania",
-     "event flag: Rise Of Szlachta Szlachta Outcome Variable"
+     "is or was Poland or is or was Poland-Lithuania or event flag: Rise Of Szlachta Szlachta Outcome Variable"
     ],
     "unlocked_by": null
    },
@@ -12177,9 +12133,7 @@
      ]
     ],
     "gate_labels": [],
-    "requires": [
-     "has privilege Statutes of Piotrkow"
-    ],
+    "requires": [],
     "unlocked_by": null
    },
    "desc": [
@@ -12192,7 +12146,7 @@
     "availability": "Any country",
     "estate": "Commoners",
     "requires": [
-     "Privilege"
+     "No requirement"
     ]
    },
    "icon": "img/privilege/peasants-free-peasantry.png",
@@ -12391,7 +12345,7 @@
      "religious unity < 0.66"
     ],
     "requires": [
-     "religious unity < 0.66"
+     "religious unity < 66%"
     ],
     "unlocked_by": null
    },
@@ -12460,9 +12414,7 @@
     ],
     "requires": [
      "Has A Parliamentary System",
-     "parliament is Estate Parliament",
-     "parliament is Autocratic Parliament",
-     "parliament is Constitutional Parliament"
+     "parliament is Estate Parliament or parliament is Autocratic Parliament or parliament is Constitutional Parliament"
     ],
     "unlocked_by": null
    },
@@ -12473,7 +12425,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "estate": "Commoners",
     "requires": [
      "Government",
@@ -12698,11 +12650,7 @@
      "is member of international organization: middle kingdom"
     ],
     "requires": [
-     "culture group is Confucian-Influenced",
-     "organization is Sect",
-     "the organization runs Confucianism",
-     "event flag: Has Neo Confucianism",
-     "is a member of Middle Kingdom",
+     "culture group is Confucian-Influenced or organization is Sect and the organization runs Confucianism or event flag: Has Neo Confucianism or is a member of Middle Kingdom",
      "has imperial examinations"
     ],
     "unlocked_by": null
@@ -12897,8 +12845,7 @@
      "PLC"
     ],
     "requires": [
-     "is or was Poland",
-     "is or was Poland-Lithuania"
+     "is or was Poland or is or was Poland-Lithuania"
     ],
     "unlocked_by": null
    },
@@ -13355,8 +13302,7 @@
      "Rajasthani"
     ],
     "requires": [
-     "religion group is Dharma",
-     "religion group is Islam",
+     "religion group is Dharma or religion group is Islam",
      "capital: in South Asia",
      "language: Rajasthani"
     ],
@@ -13791,8 +13737,7 @@
      "succession law: partition inheritance"
     ],
     "requires": [
-     "culture group is German",
-     "succession law: Partition Inheritance"
+     "culture group is German or succession law: Partition Inheritance"
     ],
     "unlocked_by": null
    },
@@ -13916,8 +13861,7 @@
      "Mos Salt Tax Exemption Flag"
     ],
     "requires": [
-     "event flag: Mos Salt Tax Exemption Flag",
-     "Has gained access to this privilege"
+     "event flag: Salt Tax Exemption Flag"
     ],
     "unlocked_by": null
    },
@@ -14006,11 +13950,7 @@
      "is member of international organization: middle kingdom"
     ],
     "requires": [
-     "culture group is Confucian-Influenced",
-     "organization is Sect",
-     "the organization runs Confucianism",
-     "event flag: Has Neo Confucianism",
-     "is a member of Middle Kingdom",
+     "culture group is Confucian-Influenced or organization is Sect and the organization runs Confucianism or event flag: Has Neo Confucianism or is a member of Middle Kingdom",
      "has imperial examinations"
     ],
     "unlocked_by": null
@@ -14302,8 +14242,7 @@
      "any owned foreign building location modifier:can build ships in this location"
     ],
     "requires": [
-     "ports > 0",
-     "Can Build Ships In This Location"
+     "ports > 0 or Can Build Ships In This Location"
     ],
     "unlocked_by": null
    },
@@ -15810,10 +15749,7 @@
     ],
     "requires": [
      "has reform Anatolian Beylik",
-     "owns Konya",
-     "owns Sivas",
-     "owns Erzurum",
-     "owns Tabrīz"
+     "owns Konya or owns Sivas or owns Erzurum or owns Tabrīz"
     ],
     "unlocked_by": null
    },
@@ -16826,8 +16762,7 @@
      "Venice"
     ],
     "requires": [
-     "is or was Venice",
-     "overlord: is or was Venice"
+     "is or was Venice or overlord: is or was Venice"
     ],
     "unlocked_by": null
    },
@@ -16944,12 +16879,12 @@
    "label": "Availability",
    "options": [
     {
-     "count": 127,
+     "count": 126,
      "label": "Any country",
      "value": "Any country"
     },
     {
-     "count": 134,
+     "count": 135,
      "label": "Specific countries",
      "value": "Specific countries"
     }
@@ -17011,7 +16946,7 @@
      "value": "Age"
     },
     {
-     "count": 61,
+     "count": 60,
      "label": "Country",
      "value": "Country"
     },
@@ -17022,6 +16957,16 @@
     },
     {
      "count": 1,
+     "label": "Disaster",
+     "value": "Disaster"
+    },
+    {
+     "count": 3,
+     "label": "Economy",
+     "value": "Economy"
+    },
+    {
+     "count": 2,
      "label": "Estate",
      "value": "Estate"
     },
@@ -17031,12 +16976,12 @@
      "value": "Event or script"
     },
     {
-     "count": 15,
+     "count": 17,
      "label": "Geography",
      "value": "Geography"
     },
     {
-     "count": 22,
+     "count": 23,
      "label": "Government",
      "value": "Government"
     },
@@ -17051,7 +16996,7 @@
      "value": "Law"
     },
     {
-     "count": 75,
+     "count": 77,
      "label": "No requirement",
      "value": "No requirement"
     },
@@ -17061,12 +17006,12 @@
      "value": "Organization"
     },
     {
-     "count": 22,
+     "count": 11,
      "label": "Other",
      "value": "Other"
     },
     {
-     "count": 39,
+     "count": 38,
      "label": "Privilege",
      "value": "Privilege"
     },
@@ -17079,6 +17024,11 @@
      "count": 33,
      "label": "Religion",
      "value": "Religion"
+    },
+    {
+     "count": 1,
+     "label": "Ruler & dynasty",
+     "value": "Ruler & dynasty"
     }
    ]
   }

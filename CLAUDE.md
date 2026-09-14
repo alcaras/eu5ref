@@ -40,6 +40,7 @@ needed on GitHub Actions. `make data` runs locally only.
 make patch = data → audit → changelog → build
   data       scripts/build_*.py  → src/data/*.json (via the toolkit parser)
              build_country_start.py → per-tag 1337 setup (values/laws/privs)
+             build_disasters.py  → start/end triggers, exit-target formulas
              build_entities.py   → cross-dataset registry + aliases
              build_backlinks.py  → who-references-whom (from rich-text tokens)
   audit      audit_coverage.py   → HARD GATE: every game/in_game/common folder
@@ -300,7 +301,7 @@ on list pages) evaluates gates against ONE facts model, `Facts`, built as
 IOs, casus belli, terrain, parliament, cabinet, traits, situations…) are one
 SPECS line + a page using `<SectionTable>`. Only write a bespoke
 `build_<thing>.py` when the dataset needs real shaping (goods, advances,
-buildings, units, laws, countries).
+buildings, units, laws, countries, disasters).
 
 ---
 
@@ -641,6 +642,51 @@ envelope.
   regulars >> equal levies, dice modifiers swing hard).
 
 ---
+
+## Disasters — grounded facts (don't re-derive)
+
+- **A disaster's exit bar is a snapshot.** 13 of the 36 compute a target in
+  `on_start` from the country's own state that month; 10 of those are read
+  back by `can_end`. The number is frozen for the whole run and **is never
+  shown in game** — `gui/panels/disaster/*.gui` has estate pie charts and a
+  generic END_REQUIREMENTS tooltip list. That gap is the reason the section
+  exists.
+- **`min` is the FLOOR and `max` is the CEILING** in a PDX value block.
+  `scripts/lib/scriptvalue.py` lowers them to `atleast` / `atmost` precisely
+  so nothing downstream can read them the wrong way round; its `CHECKS` table
+  pins seven worked numbers (`python3 scripts/lib/scriptvalue.py` prints
+  7/7, and `build_disasters.py` re-runs them every build). A value block is
+  an ordered fold over an accumulator that starts at 0 — not an expression
+  tree — and both the formula text and the browser calculator come off the
+  same op list.
+- **Rise of the Szlachta is the worked example**: crown target
+  `clamp((0.5 + c) / 2, 0.3, 0.5)`, nobles `clamp(1.2n + 0.05, 0.3, 0.8)`,
+  burghers `clamp(1.2b + 0.05, 0.1, 0.9)`. Since `can_start` needs `c < 0.5`,
+  the crown bar is always the midpoint between your crown power and 50%, so
+  the climb is `(0.5 − c) / 2` — a weak crown gets a *lower* bar and a *longer*
+  climb. The page shows this by sweeping the input, not by asserting it.
+- **Every `can_end` in the game is a single scripted trigger** (`can_end = {
+  x_end_trigger = yes }`), so it says nothing until the body is inlined —
+  `requirements.py` now inlines any parameterless scripted trigger in place.
+- **`trigger_if = { limit = { has_variable = <the on_start vars> } … }` with a
+  `trigger_else` twin is display-only**: the else branch repeats the same
+  conditions as `custom_tooltip`s for the frame before `on_start` has run.
+  `display_only_if()` drops it, and only when every variable named is one this
+  disaster's own `on_start` sets.
+- **The `9 / 91` monthly pair is a tooltip, not the roll.** The roll that runs
+  is the `random_list` inside `hidden_effect` (for Szlachta, `90/1/1/1/1` →
+  4.26%/month, against a tooltip claiming 9%). Both are emitted, labelled for
+  what they are; never quote the tooltip as the chance.
+- **A disaster's actions are found from the action side**: `generic_actions`
+  with `type = disaster` name their disaster in
+  `select_trigger.visible.disaster_type`; nothing links back from the disaster.
+- `requirements.py` is now the site's general trigger-prose renderer (disasters,
+  privileges, laws, reforms, urban rights). It joins an `OR` into one sentence,
+  reads `trigger_if` as an implication, handles the subject-in-the-key
+  predicates (`estate_power(estate_type:x)`, `societal_value:x`, `var:x`), and
+  counts every predicate that still falls through in `FELL_THROUGH` — the
+  builds print the tally (15 for disasters today). Add a predicate there rather
+  than special-casing a page.
 
 ## Population capacity & settlements — grounded facts (don't re-derive)
 

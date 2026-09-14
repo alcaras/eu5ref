@@ -209,8 +209,7 @@
        "Geography"
       ],
       "requires": [
-       "capital: in region France",
-       "culture group is French"
+       "capital: in region France or culture group is French"
       ],
       "years": 2
      },
@@ -270,8 +269,7 @@
        "Geography"
       ],
       "requires": [
-       "capital: in region Iberia",
-       "culture group is Iberian"
+       "capital: in region Iberia or culture group is Iberian"
       ],
       "years": 2
      },
@@ -344,10 +342,7 @@
        "Geography"
       ],
       "requires": [
-       "capital: in region Balkans",
-       "culture group is Roman",
-       "culture group is South Slavic",
-       "is or was Byzantium"
+       "capital: in region Balkans or culture group is Roman or culture group is South Slavic or is or was Byzantium"
       ],
       "years": 2
      },
@@ -407,8 +402,7 @@
        "Organization"
       ],
       "requires": [
-       "leads Holy Roman Empire",
-       "culture group is German"
+       "leads Holy Roman Empire or culture group is German"
       ],
       "years": 2
      }
@@ -455,7 +449,9 @@
   },
   {
    "data": {
-    "excludes": [],
+    "excludes": [
+     "a tribal government"
+    ],
     "gate": [
      "not",
      [
@@ -746,11 +742,10 @@
       ],
       "name": "Confederal Union",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Discovery"
+       "age is Discovery or later"
       ],
       "years": 2
      },
@@ -800,11 +795,10 @@
       ],
       "name": "Federal State",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Reformation"
+       "age is Reformation or later"
       ],
       "years": 2
      },
@@ -854,11 +848,10 @@
       ],
       "name": "Absolute Rulership",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Absolutism"
+       "age is Absolutism or later"
       ],
       "years": 2
      },
@@ -908,11 +901,10 @@
       ],
       "name": "Unitary Administration",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Absolutism"
+       "age is Absolutism or later"
       ],
       "years": 2
      },
@@ -1084,10 +1076,7 @@
        "Culture"
       ],
       "requires": [
-       "culture is Aragonese",
-       "culture is Basque",
-       "culture is Castilian",
-       "is or was Aragon"
+       "culture is Aragonese or culture is Basque or culture is Castilian or is or was Aragon"
       ],
       "years": 2
      },
@@ -1299,10 +1288,7 @@
        "Culture"
       ],
       "requires": [
-       "language is Telugu",
-       "language is Tamil",
-       "language is Kannada",
-       "language is Malayalam"
+       "language is Telugu or language is Tamil or language is Kannada or language is Malayalam"
       ],
       "years": 2
      },
@@ -1407,7 +1393,7 @@
          }
         ],
         "scope": "Country",
-        "when": "has dlc: D008 Fate Of The Phoenix"
+        "when": "owns D008 Fate Of The Phoenix"
        }
       ],
       "key": "pronoia_system",
@@ -1496,7 +1482,7 @@
          }
         ],
         "scope": "Country",
-        "when": "has dlc: D008 Fate Of The Phoenix"
+        "when": "owns D008 Fate Of The Phoenix"
        }
       ],
       "key": "komnenian_formalization",
@@ -1587,7 +1573,7 @@
          }
         ],
         "scope": "Country",
-        "when": "has dlc: D008 Fate Of The Phoenix"
+        "when": "owns D008 Fate Of The Phoenix"
        }
       ],
       "key": "palaeologan_hereditary_transition",
@@ -1678,7 +1664,7 @@
          }
         ],
         "scope": "Country",
-        "when": "has dlc: D008 Fate Of The Phoenix"
+        "when": "owns D008 Fate Of The Phoenix"
        }
       ],
       "key": "reformed_pronoia_system",
@@ -1837,11 +1823,11 @@
       "name": "Decentralized Trade Federation",
       "req_tags": [
        "Government",
-       "Other"
+       "Reform"
       ],
       "requires": [
        "country type is Building",
-       "Is Merchant Republic"
+       "has reform Hanseatic Merchant Federation or has reform Diarchy Republic or has reform Merchant Republic or has reform Signoria of Venice or has reform Council of Forty"
       ],
       "years": 2
      },
@@ -2002,9 +1988,7 @@
      "Regulations of the Royal Court",
      "Office of the Mahapatih"
     ],
-    "requires": [
-     "has a tribal government"
-    ],
+    "requires": [],
     "requires_vote": false
    },
    "desc": [
@@ -2024,7 +2008,7 @@
      "Culture",
      "Age",
      "Law",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/law/administrative-system.png",
@@ -2204,7 +2188,7 @@
     ],
     "requires": [
      "capital: in region Maghreb",
-     "Tribes Estate) > 0"
+     "Tribes power > 0%"
     ],
     "requires_vote": false
    },
@@ -2221,7 +2205,7 @@
     "religion": null,
     "requires": [
      "Geography",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/law/amazigh-familial-connections.png",
@@ -3285,9 +3269,7 @@
        "Culture"
       ],
       "requires": [
-       "religion group is Islam",
-       "language is Hindustani",
-       "is or was Mughal"
+       "religion group is Islam and language is Hindustani or is or was Mughal"
       ],
       "years": 2
      },
@@ -3441,8 +3423,7 @@
       ],
       "requires": [
        "is or was Prussia",
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -3526,7 +3507,7 @@
          }
         ],
         "scope": "Country",
-        "when": "Has Ruler; ruler: Is Female"
+        "when": "has a ruler; ruler: is female"
        }
       ],
       "key": "ruler_general_policy",
@@ -4045,12 +4026,13 @@
       "name": "Autonomous Offices",
       "req_tags": [
        "Government",
-       "Other"
+       "Reform",
+       "Estate"
       ],
       "requires": [
        "country type is Building",
-       "Is Merchant Republic",
-       "Burghers Estate) > 0"
+       "has reform Hanseatic Merchant Federation or has reform Diarchy Republic or has reform Merchant Republic or has reform Signoria of Venice or has reform Council of Forty",
+       "Burghers power > 0%"
       ],
       "years": 2
      },
@@ -4135,7 +4117,7 @@
      "Culture",
      "Advance",
      "Reform",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/law/bureaucracy-law.png",
@@ -4533,11 +4515,10 @@
       ],
       "name": "Increased Trade Regulations",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Reformation"
+       "age is Reformation or later"
       ],
       "years": 2
      },
@@ -4599,11 +4580,10 @@
       ],
       "name": "Reduced Mercantile Regulations",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Reformation"
+       "age is Reformation or later"
       ],
       "years": 2
      }
@@ -4631,8 +4611,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
-     "Age",
-     "Other"
+     "Age"
     ]
    },
    "icon": "img/law/burghers-rights-laws.png",
@@ -5043,14 +5022,12 @@
       "name": "Yorkist Tradition",
       "req_tags": [
        "Country",
-       "Event or script",
-       "Other"
+       "Event or script"
       ],
       "requires": [
-       "is or was England",
-       "is or was Great Britain",
+       "is or was England or is or was Great Britain",
        "event flag: Yorkist Tradition",
-       "ruler.dynasty: York"
+       "ruler: ruling dynasty is York"
       ],
       "years": 2
      },
@@ -5117,14 +5094,12 @@
       ],
       "name": "Sinicized Cabinet",
       "req_tags": [
+       "Government",
        "Culture",
-       "Geography",
-       "Other"
+       "Geography"
       ],
       "requires": [
-       "is subject of: Yuán(CHI)",
-       "capital: in East Asia",
-       "capital: in South East Asia"
+       "is a subject of Yuán(CHI) or capital: in East Asia or capital: in South East Asia"
       ],
       "years": 2
      },
@@ -5207,11 +5182,11 @@
     "religion": null,
     "requires": [
      "Country",
+     "Government",
      "Culture",
      "Geography",
      "Reform",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/cabinet-laws.png",
@@ -6829,7 +6804,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -6916,7 +6891,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -6991,9 +6966,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -7009,10 +6984,10 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/cefeng-tizhi.png",
@@ -7611,11 +7586,7 @@
      "Mandate of Ofen"
     ],
     "requires": [
-     "runs policy De Heretico Comburendo",
-     "legitimacy < 100",
-     "Clergy Estate) ≥ 0.1",
-     "runs policy Oprichniki Raids Permitted",
-     "runs policy Oprichnik"
+     "runs policy De Heretico Comburendo and legitimacy < 100 and Clergy power ≥ 10% or runs policy Oprichniki Raids Permitted and runs policy Oprichnik"
     ],
     "requires_vote": false
    },
@@ -7644,7 +7615,7 @@
      "Religion",
      "Culture",
      "Law",
-     "Other"
+     "Estate"
     ]
    },
    "icon": "img/law/censorship.png",
@@ -7970,10 +7941,7 @@
     "requires": [
      "organization is Autocephalous Patriarchate",
      "organization leader: can pay price: Christian Tenet Price",
-     "religion: Orthodoxy",
-     "the organization runs High Christology",
-     "religion: Miaphysitism",
-     "religion: Nestorianism"
+     "religion: Orthodoxy and the organization runs High Christology or religion: Miaphysitism and the organization runs High Christology or religion: Nestorianism and the organization runs High Christology"
     ],
     "requires_vote": false
    },
@@ -8049,7 +8017,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -8148,7 +8116,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -8217,9 +8185,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -8235,10 +8203,10 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/civil-registration.png",
@@ -8474,7 +8442,7 @@
   {
    "data": {
     "excludes": [
-     "organization leader: At War"
+     "organization leader: is at war"
     ],
     "gate": [
      "iotype",
@@ -8737,8 +8705,8 @@
     ],
     "requires": [
      "organization is Japanese Shogunate",
-     "organization leader: stability ≥ stability_extreme_bonus",
-     "Situation Has Ended"
+     "organization leader: stability ≥ 20",
+     "Nanbokuchou: the situation has ended"
     ],
     "requires_vote": false
    },
@@ -8749,14 +8717,14 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "administrative",
     "government": "Any",
     "religion": null,
     "requires": [
      "Government",
      "Organization",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/clan-residence.png",
@@ -8867,7 +8835,7 @@
          }
         ],
         "scope": "Country",
-        "when": "religion is ≠ religion:catholic"
+        "when": "religion is ≠ Catholicism"
        },
        {
         "mods": [
@@ -9810,9 +9778,9 @@
        "Other"
       ],
       "requires": [
-       "Goods Gold) ≤ 0",
-       "Silver) ≤ 0",
-       "Copper) ≤ 0"
+       "capital · market: Goods Gold) ≤ 0",
+       "capital · market: Silver) ≤ 0",
+       "capital · market: Copper) ≤ 0"
       ],
       "years": 2
      },
@@ -9991,11 +9959,12 @@
       "mods": [],
       "name": "Found a new Monarchy",
       "req_tags": [
+       "Government",
        "Other"
       ],
       "requires": [
        "International Organization Lifetime > 10",
-       "organization leader: Government Power < 60"
+       "organization leader: government power < 60"
       ],
       "years": 0
      },
@@ -10018,8 +9987,7 @@
       ],
       "requires": [
        "International Organization Lifetime > 10",
-       "organization leader: religious unity > 0.9",
-       "organization leader: has trait: Zealot"
+       "organization leader: religious unity > 90% or ruler or regent: has trait: Zealot"
       ],
       "years": 0
      }
@@ -10046,6 +10014,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Religion",
      "Organization",
      "Other"
@@ -10979,7 +10948,7 @@
       ],
       "excludes": [
        "reform Rule of the Sejm",
-       "country modifier: Reinstated The Parliament Modifier"
+       "the Reinstated The Parliament Modifier modifier"
       ],
       "groups": [
        {
@@ -11228,7 +11197,7 @@
     ],
     "requires": [
      "runs policy Absolute Rule",
-     "Situation Is Active"
+     "The Revolution: the situation is running"
     ],
     "requires_vote": false
    },
@@ -11245,7 +11214,7 @@
     "religion": null,
     "requires": [
      "Law",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/crown-rights-laws.png",
@@ -11411,12 +11380,10 @@
       "req_tags": [
        "Country",
        "Government",
-       "Other"
+       "Reform"
       ],
       "requires": [
-       "is or was Hansa",
-       "country type is Building",
-       "Is Merchant Republic"
+       "is or was Hansa or country type is Building and has reform Hanseatic Merchant Federation or has reform Diarchy Republic or has reform Merchant Republic or has reform Signoria of Venice or has reform Council of Forty"
       ],
       "years": 2
      },
@@ -11482,8 +11449,7 @@
        "Law"
       ],
       "requires": [
-       "is or was Prussia",
-       "is or was Brandenburg",
+       "is or was Prussia or is or was Brandenburg",
        "the policy has been unlocked (Prussian Virtues)"
       ],
       "years": 2
@@ -11621,7 +11587,7 @@
      "Country",
      "Government",
      "Law",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/law/cultural-traditions-law.png",
@@ -12683,9 +12649,7 @@
        "Advance"
       ],
       "requires": [
-       "has researched Magna Carta",
-       "overlord: is or was England",
-       "overlord: is or was Great Britain"
+       "has researched Magna Carta or overlord: is or was England or is or was Great Britain"
       ],
       "years": 2
      },
@@ -12777,8 +12741,7 @@
       ],
       "requires": [
        "has reform Pyrenean Fueros",
-       "is or was Navarre",
-       "culture is Basque"
+       "is or was Navarre or culture is Basque"
       ],
       "years": 2
      },
@@ -13172,9 +13135,7 @@
       ],
       "requires": [
        "has reform Crown of Castile",
-       "is or was Castile",
-       "is or was Spain",
-       "culture is Castilian"
+       "is or was Castile or is or was Spain or culture is Castilian"
       ],
       "years": 2
      },
@@ -13242,9 +13203,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Empowered Cortes)",
-       "is or was Castile",
-       "culture is Castilian",
-       "is or was Spain"
+       "is or was Castile or culture is Castilian or is or was Spain and culture is Castilian"
       ],
       "years": 2
      },
@@ -13313,9 +13272,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Reinforced Cortes de Castilla)",
-       "is or was Castile",
-       "culture is Castilian",
-       "is or was Spain",
+       "is or was Castile or culture is Castilian or is or was Spain and culture is Castilian",
        "has reform Crown of Castile"
       ],
       "years": 2
@@ -14839,11 +14796,10 @@
       ],
       "name": "Open Institutions",
       "req_tags": [
-       "Other"
+       "Estate"
       ],
       "requires": [
-       "Crown Estate) ≥ 0.6",
-       "Clergy Estate) ≤ 0.25"
+       "Crown power ≥ 60% or Clergy power ≤ 25%"
       ],
       "years": 2
      },
@@ -15437,7 +15393,7 @@
      "Compulsory Education for Nobility"
     ],
     "requires": [
-     "University > 0"
+     "University levels > 0"
     ],
     "requires_vote": false
    },
@@ -15455,9 +15411,10 @@
     "requires": [
      "Government",
      "Culture",
+     "Geography",
      "Law",
-     "Organization",
-     "Other"
+     "Estate",
+     "Organization"
     ]
    },
    "icon": "img/law/education-elites-law.png",
@@ -15835,8 +15792,7 @@
        "Other"
       ],
       "requires": [
-       "government is Theocracy",
-       "Allow Theocratic Education"
+       "government is Theocracy or Allow Theocratic Education"
       ],
       "years": 2
      },
@@ -15925,9 +15881,7 @@
         "Wisdom is passed down to younger generations through methods such as storytelling or the performing arts. Venerable members of a community tell and re-tell ancient tales and the lessons learned from them, which young listeners will memorize and repeat in the future. In this way, the history of our people will be preserved from generation to generation by those who lived it."
        ]
       ],
-      "excludes": [
-       "researched Written Alphabet"
-      ],
+      "excludes": [],
       "groups": [
        {
         "mods": [
@@ -16004,8 +15958,7 @@
        "Government"
       ],
       "requires": [
-       "government is Steppe Horde",
-       "government is Tribe"
+       "does not have researched Written Alphabet or government is Steppe Horde or government is Tribe"
       ],
       "years": 2
      },
@@ -16266,6 +16219,7 @@
       ],
       "name": "Personal Religious Education",
       "req_tags": [
+       "Religion",
        "Advance",
        "Privilege",
        "Other"
@@ -16273,8 +16227,7 @@
       "requires": [
        "has researched Written Alphabet",
        "has researched Printing Press",
-       "has privilege Sponsor Printing of Religious Texts",
-       "Is Protestant"
+       "has privilege Sponsor Printing of Religious Texts or has tag: Protestant"
       ],
       "years": 2
      },
@@ -16344,11 +16297,8 @@
       ],
       "requires": [
        "has researched Written Alphabet",
-       "has researched Printing Press",
-       "has privilege Religious Literacy Rights",
-       "has privilege Embellish Great Works of Faith",
-       "government is Tribe",
-       "+2 more"
+       "has researched Printing Press and has privilege Religious Literacy Rights or has privilege Embellish Great Works of Faith or government is Tribe or government is Steppe Horde",
+       "Has Sects"
       ],
       "years": 2
      },
@@ -16407,11 +16357,7 @@
       ],
       "requires": [
        "has researched Written Alphabet",
-       "has researched Printing Press",
-       "has privilege Religious Literacy Rights",
-       "has privilege Embellish Great Works of Faith",
-       "government is Tribe",
-       "+1 more"
+       "has researched Printing Press and has privilege Religious Literacy Rights or has privilege Embellish Great Works of Faith or government is Tribe or government is Steppe Horde"
       ],
       "years": 2
      },
@@ -16576,7 +16522,7 @@
      "Vedic Education"
     ],
     "requires": [
-     "Peasants Estate) > 0"
+     "Commoners power > 0%"
     ],
     "requires_vote": false
    },
@@ -16599,6 +16545,7 @@
      "Advance",
      "Law",
      "Privilege",
+     "Estate",
      "Other"
     ]
    },
@@ -17569,7 +17516,7 @@
     "requires": [
      "has law Enclosure Movement",
      "runs policy Enclosure Act",
-     "Peasants Estate) ≤ 0.25"
+     "Commoners power ≤ 25%"
     ],
     "requires_vote": false
    },
@@ -17587,8 +17534,8 @@
     "requires": [
      "Culture",
      "Law",
-     "Event or script",
-     "Other"
+     "Estate",
+     "Event or script"
     ]
    },
    "icon": "img/law/enclosure-movement.png",
@@ -18209,7 +18156,7 @@
     ],
     "requires": [
      "event flag: Taxation Law",
-     "has country modifier: Temporary Income Tax"
+     "has the Temporary Income Tax modifier"
     ],
     "requires_vote": false
    },
@@ -18405,10 +18352,7 @@
     "requires": [
      "organization is Autocephalous Patriarchate",
      "organization leader: can pay price: Christian Tenet Price",
-     "religion: Orthodoxy",
-     "the organization runs Accept the Tenet of Essence",
-     "religion: Miaphysitism",
-     "religion: Nestorianism"
+     "religion: Orthodoxy and the organization runs Accept the Tenet of Essence or religion: Miaphysitism and the organization runs Accept the Tenet of Essence or religion: Nestorianism and the organization runs Accept the Tenet of Essence"
     ],
     "requires_vote": false
    },
@@ -18579,10 +18523,10 @@
       ],
       "name": "Fair Conditions",
       "req_tags": [
-       "Other"
+       "Societal value"
       ],
       "requires": [
-       "Serfdom Vs Free Subjects ≥ 0"
+       "Serfdom vs Free Subjects ≥ 0"
       ],
       "years": 2
      },
@@ -18672,8 +18616,8 @@
     "government": "Any",
     "religion": null,
     "requires": [
-     "Event or script",
-     "Other"
+     "Societal value",
+     "Event or script"
     ]
    },
    "icon": "img/law/factory-working-conditions-law.png",
@@ -19057,11 +19001,12 @@
       ],
       "name": "Agrarian Constitution",
       "req_tags": [
-       "Other"
+       "Country",
+       "Ruler & dynasty"
       ],
       "requires": [
-       "country exists: Teutons",
-       "this: Teutons"
+       "Teutons exists",
+       "Teutons"
       ],
       "years": 2
      },
@@ -19126,14 +19071,12 @@
       ],
       "name": "Promote Chinese Traditions",
       "req_tags": [
+       "Government",
        "Culture",
-       "Geography",
-       "Other"
+       "Geography"
       ],
       "requires": [
-       "is subject of: Yuán(CHI)",
-       "capital: in East Asia",
-       "capital: in South East Asia"
+       "is a subject of Yuán(CHI) or capital: in East Asia or capital: in South East Asia"
       ],
       "years": 2
      },
@@ -19234,14 +19177,12 @@
       ],
       "name": "Limit Chinese Traditions",
       "req_tags": [
+       "Government",
        "Culture",
-       "Geography",
-       "Other"
+       "Geography"
       ],
       "requires": [
-       "is subject of: Yuán(CHI)",
-       "capital: in East Asia",
-       "capital: in South East Asia"
+       "is a subject of Yuán(CHI) or capital: in East Asia or capital: in South East Asia"
       ],
       "years": 2
      }
@@ -19269,9 +19210,11 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Country",
+     "Government",
      "Culture",
      "Geography",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/law/foreign-cultural-law.png",
@@ -20809,7 +20752,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "The Free Cities get the following modifiers"
        }
       ],
       "key": "free_cities_policy",
@@ -21039,7 +20982,7 @@
      "organization is Holy Roman Empire",
      "all imperial laws are enabled",
      "the Emperor may propose this reform",
-     "Hre Enabled Free Cities"
+     "Free Cities are NOT disabled in the Hre"
     ],
     "requires_vote": false
    },
@@ -21057,7 +21000,7 @@
     "requires": [
      "Organization",
      "Economy",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/free-city-rights-law.png",
@@ -21935,9 +21878,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Amar Das exists",
-     "the organization runs Dasvandh Tax",
-     "the organization runs Ānada Kāraja",
-     "the organization runs Sangat Equality"
+     "the organization runs Dasvandh Tax or the organization runs Ānada Kāraja or the organization runs Sangat Equality"
     ],
     "requires_vote": true
    },
@@ -21948,7 +21889,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
@@ -22146,9 +22087,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Angad exists",
-     "the organization runs Gurmukhī Script",
-     "the organization runs Langar Community",
-     "the organization runs Mall Akhāṛā"
+     "the organization runs Gurmukhī Script or the organization runs Langar Community or the organization runs Mall Akhāṛā"
     ],
     "requires_vote": true
    },
@@ -22159,7 +22098,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "religious",
     "government": "Any",
     "religion": null,
@@ -22357,9 +22296,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Arjan exists",
-     "the organization runs Adi Granth",
-     "the organization runs Holy Abode",
-     "the organization runs Martyrdom"
+     "the organization runs Adi Granth or the organization runs Holy Abode or the organization runs Martyrdom"
     ],
     "requires_vote": true
    },
@@ -22370,7 +22307,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "administrative",
     "government": "Any",
     "religion": null,
@@ -22568,9 +22505,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Gobind Singh exists",
-     "the organization runs Sikhism Pluralism",
-     "the organization runs Dharamyudh",
-     "the organization runs Dasam Granth"
+     "the organization runs Sikhism Pluralism or the organization runs Dharamyudh or the organization runs Dasam Granth"
     ],
     "requires_vote": true
    },
@@ -22581,7 +22516,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "religious",
     "government": "Any",
     "religion": null,
@@ -22779,9 +22714,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Granth Sahib exists",
-     "the organization runs Eternally Living Gurū",
-     "the organization runs Divine Justice",
-     "the organization runs Unchanging Writing"
+     "the organization runs Eternally Living Gurū or the organization runs Divine Justice or the organization runs Unchanging Writing"
     ],
     "requires_vote": true
    },
@@ -22792,7 +22725,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
@@ -22990,9 +22923,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Har Krishan exists",
-     "the organization runs Treat the Sick",
-     "the organization runs Unexpected Knowledge",
-     "the organization runs Young Humility"
+     "the organization runs Treat the Sick or the organization runs Unexpected Knowledge or the organization runs Young Humility"
     ],
     "requires_vote": true
    },
@@ -23003,7 +22934,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
@@ -23201,9 +23132,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Har Rai exists",
-     "the organization runs Impartial Manji Heads",
-     "the organization runs Fragrance of a Flower",
-     "the organization runs Nature Guardian"
+     "the organization runs Impartial Manji Heads or the organization runs Fragrance of a Flower or the organization runs Nature Guardian"
     ],
     "requires_vote": true
    },
@@ -23214,7 +23143,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
@@ -23436,9 +23365,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Hargobind exists",
-     "the organization runs Akal Takht",
-     "the organization runs Protection of the Poor",
-     "the organization runs Mīrī Pīrī"
+     "the organization runs Akal Takht or the organization runs Protection of the Poor or the organization runs Mīrī Pīrī"
     ],
     "requires_vote": true
    },
@@ -23449,7 +23376,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "military",
     "government": "Any",
     "religion": null,
@@ -23635,9 +23562,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Nanak exists",
-     "the organization runs Vaṇḍ Chakō",
-     "the organization runs Kirat Karō",
-     "the organization runs Nām Japō"
+     "the organization runs Vaṇḍ Chakō or the organization runs Kirat Karō or the organization runs Nām Japō"
     ],
     "requires_vote": true
    },
@@ -23648,7 +23573,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "religious",
     "government": "Any",
     "religion": null,
@@ -23846,9 +23771,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Ram Das exists",
-     "the organization runs Urbanization Projects",
-     "the organization runs Scripture Hymns",
-     "the organization runs Masand System"
+     "the organization runs Urbanization Projects or the organization runs Scripture Hymns or the organization runs Masand System"
     ],
     "requires_vote": true
    },
@@ -23859,7 +23782,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "religious",
     "government": "Any",
     "religion": null,
@@ -24057,9 +23980,7 @@
     "requires": [
      "organization is Sikhism",
      "Guru Tegh Bahadur exists",
-     "the organization runs Word of a Sikhism",
-     "the organization runs Gurū Travels",
-     "the organization runs Resist Persecution"
+     "the organization runs Word of a Sikhism or the organization runs Gurū Travels or the organization runs Resist Persecution"
     ],
     "requires_vote": true
    },
@@ -24070,7 +23991,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
@@ -24599,8 +24520,7 @@
      "Extravagant Harem"
     ],
     "requires": [
-     "runs policy Royal Harem",
-     "runs policy Valide Sultan"
+     "runs policy Royal Harem or runs policy Valide Sultan"
     ],
     "requires_vote": false
    },
@@ -24764,13 +24684,12 @@
       "name": "Same Religion",
       "req_tags": [
        "Country",
-       "Religion",
-       "Other"
+       "Religion"
       ],
       "requires": [
-       "country exists: This",
+       "it exists",
        "Ruler Or Heir If Regent exists",
-       "religion is Root.Religion",
+       "religion is religion",
        "Union exists"
       ],
       "years": 2
@@ -24845,13 +24764,12 @@
       "name": "Same Religious Group",
       "req_tags": [
        "Country",
-       "Religion",
-       "Other"
+       "Religion"
       ],
       "requires": [
-       "country exists: This",
+       "it exists",
        "Ruler Or Heir If Regent exists",
-       "religion group is Root.Religion.Group"
+       "religion group is religion's group"
       ],
       "years": 2
      },
@@ -24949,9 +24867,7 @@
      "Any Religion"
     ],
     "requires": [
-     "runs policy Same Religion",
-     "event flag: Act Of Settlement",
-     "has country modifier: Recently Negotiated Succession Law"
+     "runs policy Same Religion and event flag: Act Of Settlement or has the Recently Negotiated Succession Law modifier"
     ],
     "requires_vote": false
    },
@@ -26097,8 +26013,7 @@
      "all imperial laws are enabled",
      "the Emperor may propose this reform",
      "subject: Imperial Circles",
-     "Circles Are Active",
-     "Hre Io Is In Formation Period"
+     "Circles Are Active or Hre Io Is In Formation Period"
     ],
     "requires_vote": false
    },
@@ -26153,9 +26068,7 @@
         "Having never been formally codified, the system of the Court Assembly is in dire need of reform."
        ]
       ],
-      "excludes": [
-       "Always"
-      ],
+      "excludes": [],
       "groups": [],
       "key": "no_imperial_diet_policy",
       "mods": [],
@@ -26163,14 +26076,16 @@
       "req_tags": [
        "Organization",
        "Economy",
+       "Event or script",
        "Other"
       ],
       "requires": [
+       "never",
        "the Emperor may propose this reform",
        "the organization has law Imperial Diet",
        "law: Imperial Diet",
        "policy: Traditional Diet",
-       "can pay to vote for the law"
+       "+1 more"
       ],
       "years": 0
      },
@@ -26343,6 +26258,7 @@
     "requires": [
      "Organization",
      "Economy",
+     "Event or script",
      "Other"
     ]
    },
@@ -26355,9 +26271,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "leads Middle Kingdom"
-    ],
+    "excludes": [],
     "gate": [
      "or",
      [
@@ -26543,12 +26457,7 @@
      "Abolish the Examination System"
     ],
     "requires": [
-     "culture group is Confucian-Influenced",
-     "organization is Sect",
-     "the organization runs Confucianism",
-     "event flag: Has Neo Confucianism",
-     "Middle Kingdom exists",
-     "is a member of Middle Kingdom"
+     "culture group is Confucian-Influenced or organization is Sect and the organization runs Confucianism or event flag: Has Neo Confucianism or Middle Kingdom exists and is a member of Middle Kingdom and does not lead Middle Kingdom"
     ],
     "requires_vote": false
    },
@@ -26630,7 +26539,7 @@
        "Other"
       ],
       "requires": [
-       "Is Religion Enabled",
+       "Lutheranism: Is Religion Enabled",
        "the organization has law Imperial Religion",
        "can pay to vote for the law"
       ],
@@ -26655,7 +26564,7 @@
        "Other"
       ],
       "requires": [
-       "Is Religion Enabled",
+       "Hussitism: Is Religion Enabled",
        "the organization has law Imperial Religion",
        "can pay to vote for the law"
       ],
@@ -26680,7 +26589,7 @@
        "Other"
       ],
       "requires": [
-       "Is Religion Enabled",
+       "Calvinism: Is Religion Enabled",
        "the organization has law Imperial Religion",
        "can pay to vote for the law"
       ],
@@ -26705,7 +26614,7 @@
        "Other"
       ],
       "requires": [
-       "Is Religion Enabled",
+       "Lutheranism: Is Religion Enabled or Hussitism: Is Religion Enabled or Calvinism: Is Religion Enabled",
        "the organization has law Imperial Religion",
        "can pay to vote for the law"
       ],
@@ -26825,12 +26734,12 @@
       ],
       "name": "Pragmatic Sanction",
       "req_tags": [
-       "Economy",
-       "Other"
+       "Ruler & dynasty",
+       "Economy"
       ],
       "requires": [
        "can pay to vote for the law",
-       "heir: Is Female"
+       "organization leader · heir: is female"
       ],
       "years": 0
      }
@@ -26860,6 +26769,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Ruler & dynasty",
      "Organization",
      "Economy",
      "Other"
@@ -26936,7 +26846,7 @@
          }
         ],
         "scope": "Country",
-        "when": "International Organization Has Leader; leads Root; +1 more"
+        "when": "if Hre: International Organization Has Leader: leads us; otherwise: root: hre's last leader country"
        }
       ],
       "key": "rotating_emperorship_policy",
@@ -27070,7 +26980,7 @@
          }
         ],
         "scope": "Country",
-        "when": "International Organization Has Leader"
+        "when": "Same Dynasty as the Emperor"
        }
       ],
       "key": "emperor_dynastic_preference_policy",
@@ -27152,7 +27062,7 @@
          }
         ],
         "scope": "Country",
-        "when": "International Organization Has Leader; leads Holy Roman Empire; +1 more"
+        "when": "if Hre: International Organization Has Leader: leads Holy Roman Empire; otherwise: root: hre's last leader country"
        }
       ],
       "key": "emperor_successor_preference_policy",
@@ -27661,8 +27571,7 @@
        "Culture"
       ],
       "requires": [
-       "culture is Venetian",
-       "culture group is Iberian"
+       "culture is Venetian or culture group is Iberian"
       ],
       "years": 2
      },
@@ -27713,13 +27622,11 @@
       "name": "Council of Three Lands",
       "req_tags": [
        "Religion",
-       "Advance",
-       "Other"
+       "Advance"
       ],
       "requires": [
        "has researched Council of Three Lands",
-       "religion is Judaism",
-       "Value > 0"
+       "Judaism share of the population > 0"
       ],
       "years": 2
      },
@@ -27822,9 +27729,7 @@
        "Law"
       ],
       "requires": [
-       "is or was Castile",
-       "is or was Spain",
-       "culture is Castilian",
+       "is or was Castile or is or was Spain or culture is Castilian",
        "the policy has been unlocked (Spanish Inquisition)"
       ],
       "years": 2
@@ -27858,8 +27763,7 @@
      "Religion",
      "Culture",
      "Advance",
-     "Law",
-     "Other"
+     "Law"
     ]
    },
    "icon": "img/law/inquisition-law.png",
@@ -28461,13 +28365,13 @@
       "name": "Secretnoye Byuro",
       "req_tags": [
        "Culture",
-       "Event or script",
-       "Other"
+       "Ruler & dynasty",
+       "Event or script"
       ],
       "requires": [
        "culture group is East Slavic",
        "event flag: Secretnoye Byuro",
-       "this: Promote Council of the Empire"
+       "Promote Council of the Empire"
       ],
       "years": 2
      },
@@ -28520,15 +28424,14 @@
       ],
       "name": "Limit Chinese Court Influence",
       "req_tags": [
+       "Country",
+       "Government",
        "Culture",
-       "Geography",
-       "Other"
+       "Geography"
       ],
       "requires": [
-       "country exists: Yuán(CHI)",
-       "is subject of: Yuán(CHI)",
-       "capital: in East Asia",
-       "capital: in South East Asia"
+       "Yuán(CHI) exists",
+       "is a subject of Yuán(CHI) or capital: in East Asia or capital: in South East Asia"
       ],
       "years": 2
      }
@@ -28558,11 +28461,13 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Country",
+     "Government",
      "Culture",
      "Geography",
      "Reform",
-     "Event or script",
-     "Other"
+     "Ruler & dynasty",
+     "Event or script"
     ]
    },
    "icon": "img/law/intelligence-agency.png",
@@ -28858,8 +28763,7 @@
        "Culture"
       ],
       "requires": [
-       "is or was Mughal",
-       "culture group is Indian"
+       "is or was Mughal or culture group is Indian"
       ],
       "years": 2
      },
@@ -29317,7 +29221,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -29398,7 +29302,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -29454,12 +29358,12 @@
     ],
     "requires": [
      "organization is Middle Kingdom",
-     "age is Reformation",
-     "age is Absolutism",
-     "age is Revolutions",
+     "age is Reformation or age is Absolutism or age is Revolutions",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "+4 more"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)",
+     "+2 more"
     ],
     "requires_vote": false
    },
@@ -29475,13 +29379,13 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Culture",
      "Age",
      "Advance",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/jakun-gusa.png",
@@ -29494,7 +29398,7 @@
   {
    "data": {
     "excludes": [
-     "organization leader: At War"
+     "organization leader: is at war"
     ],
     "gate": [
      "and",
@@ -29670,7 +29574,7 @@
     ],
     "requires": [
      "organization is Japanese Shogunate",
-     "organization leader: stability ≥ stability_extreme_bonus"
+     "organization leader: stability ≥ 20"
     ],
     "requires_vote": false
    },
@@ -29681,7 +29585,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "military",
     "government": "Any",
     "religion": null,
@@ -29700,7 +29604,7 @@
   {
    "data": {
     "excludes": [
-     "organization leader: At War"
+     "organization leader: is at war"
     ],
     "gate": [
      "iotype",
@@ -29831,8 +29735,8 @@
     ],
     "requires": [
      "organization is Japanese Shogunate",
-     "organization leader: stability ≥ stability_extreme_bonus",
-     "Situation Has Ended"
+     "organization leader: stability ≥ 20",
+     "Sengoku: the situation has ended"
     ],
     "requires_vote": false
    },
@@ -29843,14 +29747,14 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "socioeconomic",
     "government": "Any",
     "religion": null,
     "requires": [
      "Government",
      "Organization",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/jap-sakoku-law.png",
@@ -29897,7 +29801,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -29984,7 +29888,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -30065,7 +29969,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -30158,7 +30062,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -30223,9 +30127,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -30241,10 +30145,10 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/keju-examination.png",
@@ -30446,7 +30350,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "military",
     "government": "Any",
     "religion": null,
@@ -30613,7 +30517,7 @@
        "Other"
       ],
       "requires": [
-       "Paper) > 20"
+       "capital · market: Paper) > 20"
       ],
       "years": 2
      },
@@ -30651,10 +30555,10 @@
       ],
       "name": "Chinese Currency",
       "req_tags": [
-       "Other"
+       "Country"
       ],
       "requires": [
-       "country exists: Yuán(CHI)"
+       "Yuán(CHI) exists"
       ],
       "years": 2
      }
@@ -30682,6 +30586,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Country",
      "Law",
      "Other"
     ]
@@ -31254,9 +31159,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "court language is Culture.Language"
-    ],
+    "excludes": [],
     "gate": [
      "and",
      [
@@ -31476,9 +31379,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Multi-Lingual Court)",
-       "is defined from culture: Kannadiga",
-       "is defined from culture: Telugu",
-       "is defined from culture: Tamil"
+       "is defined from culture: Kannadiga or is defined from culture: Telugu or is defined from culture: Tamil"
       ],
       "years": 2
      }
@@ -31490,7 +31391,7 @@
     ],
     "requires": [
      "has embraced Legalism",
-     "the policy has been unlocked (Multi-Lingual Court)"
+     "court language is not culture's language or the policy has been unlocked (Multi-Lingual Court)"
     ],
     "requires_vote": false
    },
@@ -32084,12 +31985,11 @@
       "name": "Civil Law",
       "req_tags": [
        "Religion",
-       "Institution",
-       "Other"
+       "Geography",
+       "Institution"
       ],
       "requires": [
-       "capital.continent: Europe",
-       "religion group is Christianity",
+       "capital: in Europe or religion group is Christianity",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32141,13 +32041,11 @@
       "name": "Common Law",
       "req_tags": [
        "Culture",
-       "Institution",
-       "Other"
+       "Geography",
+       "Institution"
       ],
       "requires": [
-       "language is English",
-       "capital.region: Britain",
-       "capital.region: Ireland",
+       "language is English or capital: in region Britain or capital: in region Ireland",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32215,8 +32113,7 @@
        "Law"
       ],
       "requires": [
-       "language is Romanian",
-       "the policy has been unlocked (Vlach Law)",
+       "language is Romanian or the policy has been unlocked (Vlach Law)",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32447,8 +32344,7 @@
        "Institution"
       ],
       "requires": [
-       "culture group is Pyrenean",
-       "is or was Aragon",
+       "culture group is Pyrenean or is or was Aragon",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32754,9 +32650,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Upper Bavarian Land Rights)",
-       "is or was Bavaria",
-       "is or was Upper Bavaria",
-       "is or was Lower Bavaria",
+       "is or was Bavaria or is or was Upper Bavaria or is or was Lower Bavaria",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32825,8 +32719,7 @@
        "Other"
       ],
       "requires": [
-       "is or was Wales",
-       "is defined from culture: Welsh",
+       "is or was Wales or is defined from culture: Welsh",
        "has embraced Legalism"
       ],
       "years": 2
@@ -32901,18 +32794,16 @@
       ],
       "name": "Fetha Negest",
       "req_tags": [
+       "Country",
        "Religion",
+       "Geography",
        "Institution",
-       "Law",
-       "Other"
+       "Law"
       ],
       "requires": [
        "religion is Miaphysitism",
-       "capital.region: Egypt",
-       "capital.region: Ethiopia",
-       "the policy has been unlocked (Fetha Negest)",
-       "Current Year > 1500",
-       "+5 more"
+       "capital: in region Egypt or capital: in region Ethiopia and the policy has been unlocked (Fetha Negest) or year is > 1500 or runs policy Fetha Negest or capital: in region Nubia and year is > 1400 and runs policy Fetha Negest",
+       "has embraced Legalism"
       ],
       "years": 2
      },
@@ -32988,14 +32879,13 @@
       "req_tags": [
        "Government",
        "Religion",
+       "Geography",
        "Institution",
-       "Other"
+       "Estate"
       ],
       "requires": [
        "government is Republic",
-       "Burghers Estate) ≥ 0.5",
-       "capital.continent: Europe",
-       "religion group is Christianity",
+       "Burghers power ≥ 50% or capital: in Europe or religion group is Christianity",
        "has embraced Legalism"
       ],
       "years": 2
@@ -33238,10 +33128,7 @@
        "Institution"
       ],
       "requires": [
-       "is or was Byzantium",
-       "culture group is Roman",
-       "religion is Orthodoxy",
-       "religion is Hellenism",
+       "is or was Byzantium or culture group is Roman and religion is Orthodoxy or religion is Hellenism",
        "has embraced Legalism"
       ],
       "years": 2
@@ -33491,7 +33378,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Chi Grand Pronouncements Enacted"
+        "when": "event flag: Grand Pronouncements Enacted"
        }
       ],
       "key": "chi_ming_dynasty_code_policy",
@@ -33977,11 +33864,8 @@
        "Other"
       ],
       "requires": [
-       "is a Colonial Nation",
-       "the policy has been unlocked (Laws of Burgos)",
-       "overlord: is or was Castile",
-       "overlord: is or was Spain",
-       "is defined from culture: Castilian"
+       "is a Colonial Nation or the policy has been unlocked (Laws of Burgos)",
+       "overlord: is or was Castile and overlord: is or was Spain or is defined from culture: Castilian"
       ],
       "years": 2
      },
@@ -34050,11 +33934,8 @@
        "Other"
       ],
       "requires": [
-       "is a Colonial Nation",
-       "the policy has been unlocked (Leyes Nuevas)",
-       "overlord: is or was Castile",
-       "overlord: is or was Spain",
-       "is defined from culture: Castilian"
+       "is a Colonial Nation or the policy has been unlocked (Leyes Nuevas)",
+       "overlord: is or was Castile and overlord: is or was Spain or is defined from culture: Castilian"
       ],
       "years": 2
      },
@@ -34122,8 +34003,7 @@
       ],
       "requires": [
        "is defined from culture: Castilian",
-       "is or was Castile",
-       "is or was Spain"
+       "is or was Castile or is or was Spain or is defined from culture: Castilian"
       ],
       "years": 2
      },
@@ -34192,9 +34072,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Ordenamiento de Alcalá)",
-       "is or was Castile",
-       "is or was Spain",
-       "is defined from culture: Castilian"
+       "is or was Castile or is or was Spain or is defined from culture: Castilian"
       ],
       "years": 2
      },
@@ -34423,7 +34301,7 @@
          }
         ],
         "scope": "Country",
-        "when": null
+        "when": "Has NOT picked the first option in the Tur Kanum I Osmani Event"
        },
        {
         "mods": [
@@ -34447,7 +34325,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Tur Modified Kanum Policy"
+        "when": "event flag: Modified Kanum Policy"
        }
       ],
       "key": "tur_kanum_i_osmani",
@@ -35102,7 +34980,7 @@
      "Carta de Logu"
     ],
     "requires": [
-     "has a tribal government",
+     "does not have a tribal government or religion group is Islam",
      "religion group is Islam",
      "runs policy Sharī'ah Law"
     ],
@@ -35124,10 +35002,12 @@
      "Government",
      "Religion",
      "Culture",
+     "Geography",
      "Institution",
      "Advance",
      "Law",
      "Reform",
+     "Estate",
      "Other"
     ]
    },
@@ -35554,8 +35434,7 @@
        "Age"
       ],
       "requires": [
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -35620,8 +35499,7 @@
        "Age"
       ],
       "requires": [
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -36362,7 +36240,7 @@
        ]
       ],
       "excludes": [
-       "organization leader: culture group is Celtic"
+       "recipient · organization leader: culture group is Celtic"
       ],
       "groups": [
        {
@@ -36414,11 +36292,10 @@
       "name": "Statutes of Kilkenny",
       "req_tags": [
        "Culture",
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Renaissance"
+       "age is Renaissance or later"
       ],
       "years": 0
      },
@@ -36492,11 +36369,10 @@
       ],
       "name": "Religious Ascendancy",
       "req_tags": [
-       "Age",
-       "Other"
+       "Age"
       ],
       "requires": [
-       "age: Reformation"
+       "age is Reformation or later"
       ],
       "years": 0
      }
@@ -36508,7 +36384,7 @@
     ],
     "requires": [
      "organization is Lordship of Ireland",
-     "religion is Catholicism"
+     "Lordship Of Ireland.Leader Country: religion is Catholicism"
     ],
     "requires_vote": false
    },
@@ -36527,8 +36403,7 @@
      "Religion",
      "Culture",
      "Age",
-     "Organization",
-     "Other"
+     "Organization"
     ]
    },
    "icon": "img/law/lordship-of-ireland-rule-law.png",
@@ -36605,7 +36480,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -36752,7 +36627,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -36875,7 +36750,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -36950,7 +36825,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37025,7 +36900,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37100,7 +36975,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37187,7 +37062,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37286,7 +37161,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37361,7 +37236,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37436,7 +37311,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37511,7 +37386,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37586,7 +37461,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37661,7 +37536,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37748,7 +37623,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37859,7 +37734,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -37958,7 +37833,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -38022,7 +37897,7 @@
     ],
     "requires": [
      "organization is Sect",
-     "Always"
+     "always"
     ],
     "requires_vote": false
    },
@@ -38039,7 +37914,7 @@
     "religion": null,
     "requires": [
      "Organization",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/main-philosophy-law.png",
@@ -39154,9 +39029,7 @@
      "Act of Navigation"
     ],
     "requires": [
-     "ports > 0",
-     "Is Merchant Republic",
-     "has law Maritime Law"
+     "ports > 0 or has reform Hanseatic Merchant Federation or has reform Diarchy Republic or has reform Merchant Republic or has reform Signoria of Venice or has reform Council of Forty or has law Maritime Law"
     ],
     "requires_vote": false
    },
@@ -39175,8 +39048,7 @@
      "Country",
      "Geography",
      "Law",
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/law/maritime-law.png",
@@ -39242,8 +39114,7 @@
        "Religion"
       ],
       "requires": [
-       "government is ≠ government_type:theocracy",
-       "religion is ≠ religion:catholic"
+       "government is ≠ Theocracy or religion is ≠ Catholicism"
       ],
       "years": 2
      },
@@ -39403,12 +39274,10 @@
       "req_tags": [
        "Religion",
        "Culture",
-       "Other"
+       "Event or script"
       ],
       "requires": [
-       "Is Country Religion Pagan",
-       "religion is Hinduism",
-       "culture group is Indian"
+       "Religion is a Folk Religion or religion is Hinduism or culture group is Indian"
       ],
       "years": 2
      },
@@ -39462,12 +39331,7 @@
        "Other"
       ],
       "requires": [
-       "language family is Chinese",
-       "court language.language family: Chinese",
-       "language is Korean",
-       "court language is Korean",
-       "language is Vietnamese",
-       "+3 more"
+       "language family is Chinese or court language: language family: Chinese or language is Korean or court language is Korean or language is Vietnamese or court language is Vietnamese or language is Japanese or court language is Japanese"
       ],
       "years": 2
      },
@@ -39575,6 +39439,7 @@
      "Government",
      "Religion",
      "Culture",
+     "Event or script",
      "Other"
     ]
    },
@@ -40068,9 +39933,7 @@
        "Advance"
       ],
       "requires": [
-       "has researched Warbows",
-       "has researched Longbowmen",
-       "has researched Reformed Longbowmen"
+       "has researched Warbows or has researched Longbowmen or has researched Reformed Longbowmen"
       ],
       "years": 2
      },
@@ -40190,12 +40053,8 @@
        "Advance"
       ],
       "requires": [
-       "is or was Ahom",
-       "is or was Kangleipak",
-       "culture group is Indian",
-       "has researched Paik System",
-       "has researched Paik Infantry",
-       "+1 more"
+       "is or was Ahom or is or was Kangleipak or culture group is Indian",
+       "has researched Paik System or has researched Paik Infantry or has researched Advanced Paiks"
       ],
       "years": 2
      },
@@ -40262,8 +40121,7 @@
       ],
       "requires": [
        "culture is Castilian",
-       "is or was Castile",
-       "is or was Spain"
+       "is or was Castile or is or was Spain or culture is Castilian"
       ],
       "years": 2
      }
@@ -40490,8 +40348,7 @@
      "Right of Possession"
     ],
     "requires": [
-     "is or was Castile",
-     "is or was Spain",
+     "is or was Castile or is or was Spain",
      "event flag: Abolish Mesta"
     ],
     "requires_vote": false
@@ -40522,9 +40379,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "Always"
-    ],
+    "excludes": [],
     "gate": [
      "false"
     ],
@@ -40833,7 +40688,9 @@
      "Commence Infrastructure Works",
      "Reinforce Fortifications"
     ],
-    "requires": [],
+    "requires": [
+     "never"
+    ],
     "requires_vote": false
    },
    "desc": [
@@ -40848,7 +40705,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
-     "No requirement"
+     "Event or script"
     ]
    },
    "icon": "img/law/middle-kingdom-decrees.png",
@@ -40981,6 +40838,7 @@
       "req_tags": [
        "Organization",
        "Economy",
+       "Event or script",
        "Other"
       ],
       "requires": [
@@ -40988,7 +40846,7 @@
        "the organization has law Imperial Register",
        "law: Imperial Register",
        "policy: Imperial Armory Implementation",
-       "has enabled currency: Ducats"
+       "Hre has unlocked the Imperial Treasury by having either Only Treasury Payment or Complete Imperial Contribution enacted"
       ],
       "years": 0
      },
@@ -41046,6 +40904,7 @@
       "req_tags": [
        "Organization",
        "Economy",
+       "Event or script",
        "Other"
       ],
       "requires": [
@@ -41053,7 +40912,7 @@
        "the organization has law Imperial Register",
        "law: Imperial Register",
        "policy: Expansion of the Armories",
-       "has enabled currency: Ducats"
+       "Hre has unlocked the Imperial Treasury by having either Only Treasury Payment or Complete Imperial Contribution enacted"
       ],
       "years": 0
      },
@@ -41120,6 +40979,7 @@
       "req_tags": [
        "Organization",
        "Economy",
+       "Event or script",
        "Other"
       ],
       "requires": [
@@ -41127,7 +40987,7 @@
        "the organization has law Imperial Register",
        "law: Imperial Register",
        "policy: Imperial Standing Army",
-       "has enabled currency: Ducats"
+       "Hre has unlocked the Imperial Treasury by having either Only Treasury Payment or Complete Imperial Contribution enacted"
       ],
       "years": 0
      },
@@ -41197,6 +41057,7 @@
       "req_tags": [
        "Organization",
        "Economy",
+       "Event or script",
        "Other"
       ],
       "requires": [
@@ -41204,7 +41065,7 @@
        "the organization has law Imperial Register",
        "law: Imperial Register",
        "policy: Great Imperial Army",
-       "has enabled currency: Ducats"
+       "Hre has unlocked the Imperial Treasury by having either Only Treasury Payment or Complete Imperial Contribution enacted"
       ],
       "years": 0
      }
@@ -41237,6 +41098,7 @@
     "requires": [
      "Organization",
      "Economy",
+     "Event or script",
      "Other"
     ]
    },
@@ -41304,8 +41166,7 @@
        "Culture"
       ],
       "requires": [
-       "culture group is German",
-       "culture is Slovene"
+       "culture group is German or culture is Slovene"
       ],
       "years": 2
      },
@@ -41941,7 +41802,9 @@
   },
   {
    "data": {
-    "excludes": [],
+    "excludes": [
+     "all imperial laws are enabled"
+    ],
     "gate": [
      "iotype",
      "hre"
@@ -42190,8 +42053,7 @@
     ],
     "requires": [
      "organization is Holy Roman Empire",
-     "the Emperor may propose this reform",
-     "all imperial laws are enabled"
+     "the Emperor may propose this reform"
     ],
     "requires_vote": false
    },
@@ -42334,11 +42196,8 @@
      "Assured Defense"
     ],
     "requires": [
-     "organization is Defensive League",
-     "organization is Jurchen Confederation",
-     "organization is Tribal Confederation",
-     "organization is Colonial Federation",
-     "Always"
+     "organization is Defensive League or organization is Jurchen Confederation or organization is Tribal Confederation or organization is Colonial Federation",
+     "always"
     ],
     "requires_vote": false
    },
@@ -42355,7 +42214,7 @@
     "religion": null,
     "requires": [
      "Organization",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/mutual-defense-law.png",
@@ -42553,13 +42412,10 @@
      "No Offense"
     ],
     "requires": [
-     "organization is Balkan League",
-     "organization is French League",
-     "organization is Holy Roman League",
-     "organization is Iberian League",
-     "organization is First Italian League",
-     "organization is Second Italian League",
-     "+11 more"
+     "organization is Balkan League or organization is French League or organization is Holy Roman League or organization is Iberian League or organization is First Italian League or organization is Second Italian League or organization is Third Italian League or organization is Jurchen Confederation or organization is Tribal Confederation or organization is Colonial Federation",
+     "if organization is Balkan League or organization is French League or organization is Holy Roman League or organization is Iberian League or organization is First Italian League or organization is Second Italian League or organization is Third Italian League: Italian Wars: event flag: Allow Call Members Offensive Wars Variable",
+     "if organization is Balkan League or organization is French League or organization is Holy Roman League or organization is Iberian League or organization is First Italian League or organization is Second Italian League or organization is Third Italian League: Italian Wars: the situation is running",
+     "otherwise: always"
     ],
     "requires_vote": false
    },
@@ -42576,8 +42432,7 @@
     "religion": null,
     "requires": [
      "Organization",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/mutual-offense-law.png",
@@ -42959,7 +42814,7 @@
        ]
       ],
       "excludes": [
-       "Is Country Religion Pagan"
+       "Religion is a Folk Religion"
       ],
       "groups": [
        {
@@ -43012,7 +42867,7 @@
        ]
       ],
       "excludes": [
-       "Is Country Religion Pagan"
+       "Religion is a Folk Religion"
       ],
       "groups": [
        {
@@ -43090,10 +42945,11 @@
       ],
       "name": "Organize Our Faith",
       "req_tags": [
-       "Other"
+       "Religion",
+       "Event or script"
       ],
       "requires": [
-       "Is Country Religion Pagan"
+       "Religion is a Folk Religion"
       ],
       "years": 2
      }
@@ -43123,7 +42979,8 @@
     "religion": null,
     "requires": [
      "Government",
-     "Other"
+     "Religion",
+     "Event or script"
     ]
    },
    "icon": "img/law/nature-of-our-faith-law.png",
@@ -43153,9 +43010,9 @@
        ]
       ],
       "excludes": [
-       "this: Orthodoxy",
-       "this: Miaphysitism",
-       "this: Nestorianism"
+       "the the religion: Orthodoxy",
+       "the the religion: Miaphysitism",
+       "the the religion: Nestorianism"
       ],
       "groups": [
        {
@@ -43368,11 +43225,7 @@
     "requires": [
      "organization is Autocephalous Patriarchate",
      "organization leader: can pay price: Christian Tenet Price",
-     "religion: Orthodoxy",
-     "the organization runs Dual Nature",
-     "religion: Miaphysitism",
-     "the organization runs Composite Nature",
-     "+2 more"
+     "religion: Orthodoxy and the organization runs Dual Nature or religion: Miaphysitism and the organization runs Composite Nature or religion: Nestorianism and the organization runs Separate Nature"
     ],
     "requires_vote": false
    },
@@ -44065,8 +43918,7 @@
        "Country"
       ],
       "requires": [
-       "is or was England",
-       "is or was Great Britain"
+       "is or was England or is or was Great Britain"
       ],
       "years": 2
      },
@@ -44120,9 +43972,7 @@
        "Culture"
       ],
       "requires": [
-       "is or was Castile",
-       "is or was Spain",
-       "culture is Castilian"
+       "is or was Castile or is or was Spain and culture is Castilian"
       ],
       "years": 2
      },
@@ -44176,9 +44026,7 @@
        "Culture"
       ],
       "requires": [
-       "is or was Portugal",
-       "is or was Spain",
-       "culture is Portuguese"
+       "is or was Portugal or is or was Spain and culture is Portuguese"
       ],
       "years": 2
      },
@@ -44220,10 +44068,7 @@
        "Culture"
       ],
       "requires": [
-       "is or was Aragon",
-       "culture is Catalan",
-       "is or was Spain",
-       "culture is Aragonese"
+       "is or was Aragon or culture is Catalan or is or was Spain and culture is Aragonese or culture is Catalan"
       ],
       "years": 2
      },
@@ -44530,8 +44375,7 @@
        "Culture"
       ],
       "requires": [
-       "culture is Basque",
-       "is or was Navarre"
+       "culture is Basque or is or was Navarre"
       ],
       "years": 2
      }
@@ -44553,8 +44397,7 @@
      "Basque Mariners"
     ],
     "requires": [
-     "ports > 0",
-     "has law Piracy Law"
+     "ports > 0 or has law Piracy Law"
     ],
     "requires_vote": false
    },
@@ -45150,7 +44993,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -45261,7 +45104,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -45354,9 +45197,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -45372,10 +45215,10 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/outwards-view.png",
@@ -45697,9 +45540,7 @@
      "The Most Holy Synod"
     ],
     "requires": [
-     "religion is Orthodoxy",
-     "religion is Strigolnichestvo",
-     "religion is Miaphysitism"
+     "religion is Orthodoxy or religion is Strigolnichestvo or religion is Miaphysitism"
     ],
     "requires_vote": false
    },
@@ -45964,17 +45805,17 @@
         "The Hre and other representatives will travel to different cities across the Holy Roman Empire, convening Diets where and when needed rather on a regular schedule or in a set location."
        ]
       ],
-      "excludes": [
-       "Always"
-      ],
+      "excludes": [],
       "groups": [],
       "key": "no_perpetual_diet_policy",
       "mods": [],
       "name": "Traveling Diet",
       "req_tags": [
-       "No requirement"
+       "Event or script"
       ],
-      "requires": [],
+      "requires": [
+       "never"
+      ],
       "years": 0
      },
      {
@@ -46003,7 +45844,7 @@
          }
         ],
         "scope": "Locations",
-        "when": "Hre Is Perpetual Diet Location; owner: is a member of Holy Roman Empire; +1 more"
+        "when": "event flag: Diet Location; Diet Location"
        }
       ],
       "key": "perpetual_diet_policy",
@@ -46026,8 +45867,7 @@
        "Organization"
       ],
       "requires": [
-       "the organization runs Bicameral Imperial Diet",
-       "the organization runs Tricameral Imperial Diet"
+       "the organization runs Bicameral Imperial Diet or the organization runs Tricameral Imperial Diet"
       ],
       "years": 0
      }
@@ -46060,6 +45900,7 @@
     "requires": [
      "Organization",
      "Economy",
+     "Event or script",
      "Other"
     ]
    },
@@ -46239,11 +46080,7 @@
     "requires": [
      "organization is Autocephalous Patriarchate",
      "organization leader: can pay price: Christian Tenet Price",
-     "religion: Orthodoxy",
-     "the organization runs Single Hypostasis",
-     "religion: Miaphysitism",
-     "religion: Nestorianism",
-     "+1 more"
+     "religion: Orthodoxy and the organization runs Single Hypostasis or religion: Miaphysitism and the organization runs Single Hypostasis or religion: Nestorianism and the organization runs Multiple Hypostases"
     ],
     "requires_vote": false
    },
@@ -46291,7 +46128,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -46348,18 +46185,13 @@
       ],
       "name": "State Piracy",
       "req_tags": [
+       "Geography",
        "Advance",
        "Law",
-       "Reform",
-       "Other"
+       "Reform"
       ],
       "requires": [
-       "the policy has been unlocked (State Piracy)",
-       "has researched Letters of Marque",
-       "has researched Privateers",
-       "has researched The Korsa",
-       "has reform Anatolian Beylik",
-       "+4 more"
+       "the policy has been unlocked (State Piracy) or has researched Letters of Marque or has researched Privateers or has researched The Korsa or has reform Anatolian Beylik or has reform Crusade in the Sea or has reform Galley Lords or has reform Pirate Brethren or capital: in region Maghreb"
       ],
       "years": 2
      },
@@ -46412,8 +46244,7 @@
        "Advance"
       ],
       "requires": [
-       "has researched Privateers",
-       "has researched Letters of Marque"
+       "has researched Privateers or has researched Letters of Marque"
       ],
       "years": 2
      },
@@ -46532,8 +46363,7 @@
      "Sea Beggars"
     ],
     "requires": [
-     "ports > 0",
-     "has law Piracy Law"
+     "ports > 0 or has law Piracy Law"
     ],
     "requires_vote": false
    },
@@ -46544,7 +46374,7 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "military",
     "government": "Any",
     "religion": null,
@@ -46552,8 +46382,7 @@
      "Geography",
      "Advance",
      "Law",
-     "Reform",
-     "Other"
+     "Reform"
     ]
    },
    "icon": "img/law/piracy-law.png",
@@ -46682,8 +46511,7 @@
     ],
     "requires": [
      "the law has been unlocked (Estudo Geral)",
-     "owns Coimbra",
-     "owns Lisbon"
+     "owns Coimbra or owns Lisbon"
     ],
     "requires_vote": false
    },
@@ -47478,9 +47306,7 @@
      "Unlimited Export"
     ],
     "requires": [
-     "Goods Gold > 0",
-     "Silver > 0",
-     "has law Precious Metal Distribution"
+     "Goods Gold produced > 0 or Silver produced > 0 or has law Precious Metal Distribution"
     ],
     "requires_vote": false
    },
@@ -47497,7 +47323,7 @@
     "religion": null,
     "requires": [
      "Law",
-     "Other"
+     "Economy"
     ]
    },
    "icon": "img/law/precious-metal-distribution-law.png",
@@ -48284,11 +48110,7 @@
     "requires": [
      "organization is Autocephalous Patriarchate",
      "organization leader: can pay price: Christian Tenet Price",
-     "religion: Orthodoxy",
-     "the organization runs Monoprosopic Concept",
-     "religion: Miaphysitism",
-     "religion: Nestorianism",
-     "+1 more"
+     "religion: Orthodoxy and the organization runs Monoprosopic Concept or religion: Miaphysitism and the organization runs Monoprosopic Concept or religion: Nestorianism and the organization runs Dyoprosopic Concept"
     ],
     "requires_vote": false
    },
@@ -48364,7 +48186,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -48451,7 +48273,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -48550,7 +48372,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -48637,7 +48459,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -48736,7 +48558,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -48801,7 +48623,7 @@
        "Culture"
       ],
       "requires": [
-       "organization leader: culture group is Jurchen"
+       "Middle Kingdom · organization leader: culture group is Jurchen"
       ],
       "years": 2
      }
@@ -48816,9 +48638,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -48834,11 +48656,11 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Culture",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/provincial-governorship.png",
@@ -49153,8 +48975,7 @@
       ],
       "requires": [
        "the policy has been unlocked (Reformed Hussite Tactics)",
-       "religion is Hussitism",
-       "Hussite) > 0.25"
+       "religion is Hussitism or Hussite) > 0.25"
       ],
       "years": 2
      },
@@ -49289,8 +49110,7 @@
       ],
       "excludes": [
        "age is Traditions",
-       "age is Renaissance",
-       "event flag: Devshirme Abolished"
+       "age is Renaissance"
       ],
       "groups": [
        {
@@ -49329,10 +49149,12 @@
       ],
       "name": "Devşirme System",
       "req_tags": [
-       "Culture"
+       "Culture",
+       "Event or script"
       ],
       "requires": [
-       "culture is Turkish"
+       "culture is Turkish",
+       "Has not abolished the system through an Event"
       ],
       "years": 2
      },
@@ -49447,8 +49269,7 @@
        "Age"
       ],
       "requires": [
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -49515,8 +49336,7 @@
       ],
       "requires": [
        "culture group is British",
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -49558,10 +49378,8 @@
        "Age"
       ],
       "requires": [
-       "culture is Swedish",
-       "culture is Finnish",
-       "age is Absolutism",
-       "age is Revolutions"
+       "culture is Swedish or culture is Finnish",
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -49628,8 +49446,7 @@
        "Law"
       ],
       "requires": [
-       "is or was Prussia",
-       "is or was Brandenburg",
+       "is or was Prussia or is or was Brandenburg",
        "the policy has been unlocked (Canton System)",
        "age is Revolutions"
       ],
@@ -50184,11 +50001,11 @@
       "req_tags": [
        "Country",
        "Law",
-       "Other"
+       "Event or script"
       ],
       "requires": [
        "is or was Byzantium",
-       "has dlc: D008 Fate Of The Phoenix",
+       "owns D008 Fate Of The Phoenix",
        "the policy has been unlocked (Reformed Tágmata)"
       ],
       "years": 2
@@ -51808,8 +51625,7 @@
       "requires": [
        "is or was Prussia",
        "the policy has been unlocked (Military Court)",
-       "age is Absolutism",
-       "age is Revolutions"
+       "age is Absolutism or age is Revolutions"
       ],
       "years": 2
      },
@@ -53124,12 +52940,10 @@
       ],
       "name": "Religious Power",
       "req_tags": [
-       "Organization",
-       "Other"
+       "Organization"
       ],
       "requires": [
-       "law visible to international organization: Religious Affairs",
-       "the organization runs Mending the Schism",
+       "if law visible to international organization: Religious Affairs: the organization runs Mending the Schism",
        "the organization runs Lifelong"
       ],
       "years": 0
@@ -53192,12 +53006,10 @@
       ],
       "name": "Absolute Power",
       "req_tags": [
-       "Organization",
-       "Other"
+       "Organization"
       ],
       "requires": [
-       "law visible to international organization: Imperial Relations",
-       "the organization has law Imperial Relations",
+       "if law visible to international organization: Imperial Relations: the organization has law Imperial Relations",
        "the organization runs Lifelong"
       ],
       "years": 0
@@ -53226,8 +53038,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
-     "Organization",
-     "Other"
+     "Organization"
     ]
    },
    "icon": "img/law/sc-power-of-the-sovereign.png",
@@ -53320,7 +53131,7 @@
     ]
    ],
    "facets": {
-    "availability": "Specific countries",
+    "availability": "Any country",
     "category": "foreign_policy",
     "government": "Any",
     "religion": null,
@@ -53422,7 +53233,7 @@
     ],
     "requires": [
      "organization is Swiss Confederation",
-     "Reformation Is Enabled"
+     "the Reformation has begun"
     ],
     "requires_vote": false
    },
@@ -53433,13 +53244,13 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "religious",
     "government": "Any",
     "religion": null,
     "requires": [
-     "Organization",
-     "Other"
+     "Religion",
+     "Organization"
     ]
    },
    "icon": "img/law/sc-religious-affairs.png",
@@ -53623,14 +53434,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "global variable: Sc Unification Movement Event Happened",
-     "the organization runs Swiss Alliance",
-     "the organization runs United War Efforts",
-     "the organization runs Mending the Schism",
-     "the organization runs Enforce Religious Unity",
-     "religion is Catholicism"
-    ],
+    "excludes": [],
     "gate": [
      "iotype",
      "swiss_confederation"
@@ -53653,11 +53457,9 @@
       "mods": [],
       "name": "Found the Swiss Republic",
       "req_tags": [
-       "Organization"
+       "No requirement"
       ],
-      "requires": [
-       "the organization has law Swiss Representative"
-      ],
+      "requires": [],
       "years": 0
      },
      {
@@ -53668,23 +53470,22 @@
         "While it started as a republican union, the challenges the Swiss Confederation had to face have proven the superiority of a strong rule under a single Councillor. The future of the Swiss people can only be ensured under the authority of a proper Monarchy which shall replace the old Confederation."
        ]
       ],
-      "excludes": [
-       "the organization has law Swiss Representative"
-      ],
+      "excludes": [],
       "groups": [],
       "key": "sc_found_swiss_monarchy",
       "mods": [],
       "name": "Found the Swiss Monarchy",
       "req_tags": [
+       "Country",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "International Organization Has Leader",
-       "Has Valid Policy Vote Proposer",
+       "International Organization Has Leader or event flag: Io Law Proposer and Io Law Proposer exists",
        "the organization has law Swiss Representative",
-       "the organization runs Lifelong",
-       "the organization runs Absolute Power"
+       "otherwise: the organization runs Lifelong",
+       "otherwise: the organization runs Absolute Power"
       ],
       "years": 0
      },
@@ -53696,22 +53497,21 @@
         "Neither the free will of the Republican votes nor the authoritarian power of a Monarchy has led the Swiss Confederation to the position it is now, but the will of the divine. Only as a unified Theocracy can the Swiss people prosper in this world."
        ]
       ],
-      "excludes": [
-       "the organization has law Swiss Representative"
-      ],
+      "excludes": [],
       "groups": [],
       "key": "sc_found_swiss_theocracy",
       "mods": [],
       "name": "Found the Swiss Theocracy",
       "req_tags": [
+       "Country",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "International Organization Has Leader",
-       "Has Valid Policy Vote Proposer",
+       "International Organization Has Leader or event flag: Io Law Proposer and Io Law Proposer exists",
        "the organization has law Swiss Representative",
-       "the organization runs Religious Power"
+       "otherwise: the organization runs Religious Power"
       ],
       "years": 0
      }
@@ -53723,12 +53523,11 @@
     ],
     "requires": [
      "organization is Swiss Confederation",
-     "has global variable: Sc Unification Movement Event Happened",
+     "if does not have global variable: Sc Unification Movement Event Happened: The Event 'The Swiss Movement for Unification' has happened which has the following conditions:\n\nShowTriggerConditions('Flavor Swi 999 Trigger',PlayerScope",
      "the organization runs Forbid Internal Wars",
-     "the organization runs Swiss Alliance",
-     "the organization runs United War Efforts",
-     "the organization runs Mending the Schism",
-     "+16 more"
+     "the organization runs Swiss Alliance or the organization runs United War Efforts",
+     "if not the organization runs Mending the Schism and not the organization runs Enforce Religious Unity and religion is not Catholicism and count All or religion is Lutheranism and count All or religion is Calvinism and count All: the organization runs Mending the Schism or the organization runs Enforce Religious Unity and religion is Catholicism and count All or religion is Lutheranism and count All or religion is Calvinism and count All",
+     "if Holy Roman Empire exists and not the organization has law Imperial Relations: the organization has law Imperial Relations"
     ],
     "requires_vote": false
    },
@@ -54472,8 +54271,7 @@
      "Dynastic Holdings"
     ],
     "requires": [
-     "is or was Scotland",
-     "is or was Balliol"
+     "is or was Scotland or is or was Balliol"
     ],
     "requires_vote": false
    },
@@ -54709,11 +54507,11 @@
       "name": "Experienced Colonial Administration",
       "req_tags": [
        "Government",
-       "Other"
+       "Event or script"
       ],
       "requires": [
        "a subject: is a Colonial Nation",
-       "a subject: Count > 2"
+       "a subject: count > 2"
       ],
       "years": 0
      }
@@ -54742,7 +54540,7 @@
     "requires": [
      "Government",
      "Law",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/sco-colonial-affairs-law.png",
@@ -54849,7 +54647,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -54948,7 +54746,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55023,7 +54821,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55098,7 +54896,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55173,7 +54971,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55248,7 +55046,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55323,7 +55121,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -55378,12 +55176,8 @@
     ],
     "requires": [
      "organization is Sect",
-     "the organization runs Nichiren",
-     "the organization runs Nyingma School",
-     "the organization runs Kadam School",
-     "the organization runs Kagyu School",
-     "the organization runs Sakya School",
-     "+2 more"
+     "the organization runs Nichiren or the organization runs Nyingma School or the organization runs Kadam School or the organization runs Kagyu School or the organization runs Sakya School or the organization runs Jonang School",
+     "always"
     ],
     "requires_vote": false
    },
@@ -55400,7 +55194,7 @@
     "religion": null,
     "requires": [
      "Organization",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/sect-school-law.png",
@@ -55501,7 +55295,7 @@
          }
         ],
         "scope": "Country",
-        "when": "leads Recipient; the organization runs Imperial Religion - Catholicism"
+        "when": "leads Recipient; Hre: the organization runs Imperial Religion - Catholicism"
        },
        {
         "mods": [
@@ -55609,10 +55403,10 @@
        ]
       ],
       "excludes": [
-       "this: Ḥanbalī",
-       "this: Mālikī",
-       "this: Shāfi'ī",
-       "this: Ẓāhirī"
+       "Ḥanbalī",
+       "Mālikī",
+       "Shāfi'ī",
+       "Ẓāhirī"
       ],
       "groups": [
        {
@@ -55655,10 +55449,10 @@
        ]
       ],
       "excludes": [
-       "this: Ḥanafī",
-       "this: Mālikī",
-       "this: Shāfi'ī",
-       "this: Ẓāhirī"
+       "Ḥanafī",
+       "Mālikī",
+       "Shāfi'ī",
+       "Ẓāhirī"
       ],
       "groups": [
        {
@@ -55701,10 +55495,10 @@
        ]
       ],
       "excludes": [
-       "this: Ḥanafī",
-       "this: Ḥanbalī",
-       "this: Shāfi'ī",
-       "this: Ẓāhirī"
+       "Ḥanafī",
+       "Ḥanbalī",
+       "Shāfi'ī",
+       "Ẓāhirī"
       ],
       "groups": [
        {
@@ -55747,10 +55541,10 @@
        ]
       ],
       "excludes": [
-       "this: Ḥanafī",
-       "this: Ḥanbalī",
-       "this: Mālikī",
-       "this: Ẓāhirī"
+       "Ḥanafī",
+       "Ḥanbalī",
+       "Mālikī",
+       "Ẓāhirī"
       ],
       "groups": [
        {
@@ -55805,10 +55599,10 @@
        ]
       ],
       "excludes": [
-       "this: Ḥanafī",
-       "this: Ḥanbalī",
-       "this: Mālikī",
-       "this: Shāfi'ī"
+       "Ḥanafī",
+       "Ḥanbalī",
+       "Mālikī",
+       "Shāfi'ī"
       ],
       "groups": [
        {
@@ -55863,8 +55657,8 @@
        ]
       ],
       "excludes": [
-       "this: Ja'farī",
-       "this: Zaydī"
+       "Ja'farī",
+       "Zaydī"
       ],
       "groups": [
        {
@@ -55919,8 +55713,8 @@
        ]
       ],
       "excludes": [
-       "this: Ismā'īlī",
-       "this: Zaydī"
+       "Ismā'īlī",
+       "Zaydī"
       ],
       "groups": [
        {
@@ -55963,8 +55757,8 @@
        ]
       ],
       "excludes": [
-       "this: Ismā'īlī",
-       "this: Ja'farī"
+       "Ismā'īlī",
+       "Ja'farī"
       ],
       "groups": [
        {
@@ -56053,12 +55847,8 @@
     ],
     "requires": [
      "runs policy Sharī'ah Law",
-     "this: Ḥanafī",
-     "this: Ḥanbalī",
-     "this: Mālikī",
-     "this: Shāfi'ī",
-     "this: Ẓāhirī",
-     "+11 more"
+     "Ḥanafī or Ḥanbalī or Mālikī or Shāfi'ī or Ẓāhirī or Ismā'īlī or Ja'farī or Zaydī",
+     "runs policy Ḥanafī Jurisprudence or runs policy Ḥanbalī Jurisprudence or runs policy Mālikī Jurisprudence or runs policy Shāfi'ī Jurisprudence or runs policy Ẓāhirī Jurisprudence or runs policy Ismā'īlī Jurisprudence or runs policy Ja'farī Jurisprudence or runs policy Zaydī Jurisprudence"
     ],
     "requires_vote": false
    },
@@ -56076,7 +55866,7 @@
     "requires": [
      "Religion",
      "Law",
-     "Other"
+     "Ruler & dynasty"
     ]
    },
    "icon": "img/law/sharia-law.png",
@@ -56088,9 +55878,7 @@
   },
   {
    "data": {
-    "excludes": [
-     "Always"
-    ],
+    "excludes": [],
     "gate": [
      "false"
     ],
@@ -56483,7 +56271,9 @@
      "Ministry of Justice",
      "Ministry of Works"
     ],
-    "requires": [],
+    "requires": [
+     "never"
+    ],
     "requires_vote": false
    },
    "desc": [
@@ -56498,7 +56288,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
-     "No requirement"
+     "Event or script"
     ]
    },
    "icon": "img/law/six-ministries.png",
@@ -56993,9 +56783,7 @@
      "Force Slave Conversion"
     ],
     "requires": [
-     "pop type: Slaves",
-     "Value > 0",
-     "has law Slave Conversion"
+     "Slaves Pop Type Population In Country > 0 or has law Slave Conversion"
     ],
     "requires_vote": false
    },
@@ -57725,7 +57513,7 @@
   {
    "data": {
     "excludes": [
-     "is import banned: Silver"
+     "leader country · capital · market: is import banned: Silver"
     ],
     "gate": [
      "and",
@@ -57781,7 +57569,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -57886,7 +57674,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -57962,8 +57750,8 @@
      "organization is Middle Kingdom",
      "age is Reformation",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
      "organization leader: has reform Single Whip Law",
      "+1 more"
     ],
@@ -57981,12 +57769,12 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Age",
      "Reform",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/tax-base-system.png",
@@ -58717,9 +58505,7 @@
     ],
     "requires": [
      "government is Theocracy",
-     "is Rome",
-     "has reform Military Order",
-     "runs policy Monastic Order"
+     "is Rome or has reform Military Order and runs policy Monastic Order"
     ],
     "requires_vote": false
    },
@@ -58786,7 +58572,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -58873,7 +58659,7 @@
          }
         ],
         "scope": "Country",
-        "when": "country: Root"
+        "when": "Middle Kingdom: country: us"
        },
        {
         "mods": [
@@ -58924,9 +58710,9 @@
     "requires": [
      "organization is Middle Kingdom",
      "event flag: Celestial Authority",
-     "Celestial Authority > celestial_authority_very_strong_bonus",
-     "organization leader: Government Power ≥ 25",
-     "organization leader: GREATER_THAN_EQUAL = this.monthly_income_trade_and_tax"
+     "the celestial authority > 20",
+     "organization leader: government power ≥ 25",
+     "organization leader: treasury ≥ min(Monthly Income Trade And Tax × (6 + (1 × (international organization Middle Kingdom.Total Members / 10))), 100000)"
     ],
     "requires_vote": false
    },
@@ -58942,10 +58728,10 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
      "Organization",
      "Economy",
-     "Event or script",
-     "Other"
+     "Event or script"
     ]
    },
    "icon": "img/law/tianxia.png",
@@ -59837,12 +59623,11 @@
       "name": "Brehon Law",
       "req_tags": [
        "Culture",
-       "Institution",
-       "Other"
+       "Geography",
+       "Institution"
       ],
       "requires": [
-       "language is Gaelic",
-       "capital.region: Ireland",
+       "language is Gaelic or capital: in region Ireland",
        "has embraced Legalism"
       ],
       "years": 2
@@ -59873,8 +59658,8 @@
     "requires": [
      "Government",
      "Culture",
-     "Institution",
-     "Other"
+     "Geography",
+     "Institution"
     ]
    },
    "icon": "img/law/tribal-legal-basis-law.png",
@@ -60008,9 +59793,7 @@
         "Sometimes, following the storm is not as important as finding shelter from it. The time has come for us to establish more permanent settlements that our people can live in all year, every year."
        ]
       ],
-      "excludes": [
-       "capital: Has Owner"
-      ],
+      "excludes": [],
       "groups": [
        {
         "mods": [
@@ -60051,7 +59834,7 @@
        "Other"
       ],
       "requires": [
-       "capital: owner: Root"
+       "capital: owner: us or not Has Owner"
       ],
       "years": 5
      }
@@ -60814,11 +60597,11 @@
       "mods": [],
       "name": "Bid for Unification",
       "req_tags": [
-       "Other"
+       "Societal value"
       ],
       "requires": [
-       "organization leader: Centralization Vs Decentralization < -75",
-       "organization leader: Sinicized Vs Unsinicized < -75"
+       "organization leader: Centralization vs Decentralization < -75",
+       "organization leader: Sinicized vs Unsinicized < -75"
       ],
       "years": 5
      },
@@ -60884,6 +60667,7 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Societal value",
      "Organization",
      "Other"
     ]
@@ -60907,7 +60691,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -60982,13 +60766,19 @@
       ],
       "name": "Unified Succession Law",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Establish Seniority"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+1 more"
       ],
       "years": 0
      },
@@ -61051,12 +60841,15 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "centralization",
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -61079,7 +60872,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -61196,13 +60989,19 @@
       ],
       "name": "Unified External Diplomacy",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Unified Treasury"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+2 more"
       ],
       "years": 0
      },
@@ -61290,12 +61089,15 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "centralization",
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -61318,7 +61120,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -61369,13 +61171,19 @@
       ],
       "name": "Unified Treasury",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Unified Succession Law"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+2 more"
       ],
       "years": 0
      },
@@ -61419,12 +61227,15 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "centralization",
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -61460,10 +61271,14 @@
       "mods": [],
       "name": "Establish Seniority",
       "req_tags": [
+       "Ruler & dynasty",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1"
       ],
       "years": 0
      },
@@ -61531,7 +61346,9 @@
     "government": "Any",
     "religion": null,
     "requires": [
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -61556,7 +61373,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -61619,13 +61436,19 @@
       ],
       "name": "Aligned Legislature",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Unified External Diplomacy"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+2 more"
       ],
       "years": 0
      },
@@ -61689,12 +61512,15 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "centralization",
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -61826,7 +61652,7 @@
     ],
     "policies": [
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -61883,20 +61709,24 @@
       ],
       "name": "Rapid Unification of Crowns",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Aligned Legislature",
-       "the organization runs Rapid Unification of Crowns",
-       "the organization runs Swift Unification of Crowns"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+3 more"
       ],
       "years": 0
      },
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -61953,21 +61783,24 @@
       ],
       "name": "Swift Unification of Crowns",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Aligned Legislature",
-       "the organization runs Rapid Unification of Crowns",
-       "the organization runs Swift Unification of Crowns",
-       "+1 more"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+3 more"
       ],
       "years": 0
      },
      {
-      "availability": "Any country",
+      "availability": "Specific countries",
       "desc": [
        [
         "t",
@@ -62012,13 +61845,19 @@
       ],
       "name": "Unification of Crowns",
       "req_tags": [
+       "Government",
+       "Ruler & dynasty",
        "Organization",
+       "Event or script",
        "Other"
       ],
       "requires": [
-       "Is Same Ruler Personal Union",
-       "Has Active Senior Partner",
-       "the organization runs Aligned Legislature"
+       "ruler: save temporary scope as: Ruler Character",
+       "ruler Ruler Character",
+       "count > 1",
+       "the organization runs Establish Seniority",
+       "if has special status available: Senior Partner: government is Monarchy",
+       "+2 more"
       ],
       "years": 0
      },
@@ -62062,12 +61901,15 @@
     ]
    ],
    "facets": {
-    "availability": "Any country",
+    "availability": "Specific countries",
     "category": "centralization",
     "government": "Any",
     "religion": null,
     "requires": [
+     "Government",
+     "Ruler & dynasty",
      "Organization",
+     "Event or script",
      "Other"
     ]
    },
@@ -62142,7 +61984,7 @@
          }
         ],
         "scope": "Country",
-        "when": "event flag: Disfavoring Sect; Recipient exists; +1 more"
+        "when": "event flag: Disfavoring Sect; Recipient exists"
        },
        {
         "mods": [
@@ -62726,12 +62568,12 @@
    "label": "Availability",
    "options": [
     {
-     "count": 113,
+     "count": 122,
      "label": "Any country",
      "value": "Any country"
     },
     {
-     "count": 83,
+     "count": 74,
      "label": "Specific countries",
      "value": "Specific countries"
     }
@@ -62859,7 +62701,7 @@
      "value": "Age"
     },
     {
-     "count": 36,
+     "count": 39,
      "label": "Country",
      "value": "Country"
     },
@@ -62869,27 +62711,27 @@
      "value": "Culture"
     },
     {
-     "count": 25,
+     "count": 26,
      "label": "Economy",
      "value": "Economy"
     },
     {
-     "count": 1,
+     "count": 8,
      "label": "Estate",
      "value": "Estate"
     },
     {
-     "count": 42,
+     "count": 63,
      "label": "Event or script",
      "value": "Event or script"
     },
     {
-     "count": 11,
+     "count": 14,
      "label": "Geography",
      "value": "Geography"
     },
     {
-     "count": 32,
+     "count": 49,
      "label": "Government",
      "value": "Government"
     },
@@ -62904,7 +62746,7 @@
      "value": "Law"
     },
     {
-     "count": 7,
+     "count": 5,
      "label": "No requirement",
      "value": "No requirement"
     },
@@ -62914,7 +62756,7 @@
      "value": "Organization"
     },
     {
-     "count": 100,
+     "count": 61,
      "label": "Other",
      "value": "Other"
     },
@@ -62924,14 +62766,24 @@
      "value": "Privilege"
     },
     {
-     "count": 17,
+     "count": 19,
      "label": "Reform",
      "value": "Reform"
     },
     {
-     "count": 26,
+     "count": 28,
      "label": "Religion",
      "value": "Religion"
+    },
+    {
+     "count": 10,
+     "label": "Ruler & dynasty",
+     "value": "Ruler & dynasty"
+    },
+    {
+     "count": 2,
+     "label": "Societal value",
+     "value": "Societal value"
     }
    ]
   }

@@ -1,0 +1,397 @@
+---
+// One disaster: how it starts, what it does while it runs, every way out,
+// and what each way out gets you.
+//
+// The exit-target calculator is the reason this page exists. A disaster that
+// snapshots a target reads your own state the month it fires, freezes the
+// number, and never shows it to you — the in-game panel has estate pie
+// charts and a prose checklist. `data.targets[].ops` is the game's own value
+// block, lowered by scripts/lib/scriptvalue.py, so the widget is generic:
+// every disaster with a snapshot target gets it.
+import Base from '../../layouts/Base.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import Rich from '../../components/Rich.astro';
+import Term from '../../components/Term.astro';
+import data from '../../data/disasters.json';
+import backlinksData from '../../data/backlinks.json';
+
+export function getStaticPaths() {
+  return data.entities.map((e: any) => ({ params: { slug: e.slug }, props: { entity: e } }));
+}
+const { entity } = Astro.props;
+const d = entity.data;
+const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
+
+const pct = (n: number) => `${+(n * 100).toFixed(2)}%`;
+const spawn = d.spawn_chance == null ? null : pct(d.spawn_chance);
+
+// Targets the exit trigger actually reads, and which route reads each one.
+const targets = d.targets.filter((t: any) => t.snapshot && t.read_by_exit);
+const byName = Object.fromEntries(d.targets.map((t: any) => [t.name, t]));
+const routeOf = (name: string) =>
+  d.end_routes.find((r: any) => r.targets.includes(name));
+// A target with one input compares against that same quantity, so the gap
+// between the two is the climb the route asks for.
+const calcRows = targets
+  .filter((t: any) => t.inputs.length === 1)
+  .map((t: any) => ({
+    name: t.name, label: t.label, ops: t.ops, formula: t.formula,
+    input: t.inputs[0],
+    also: (routeOf(t.name)?.lines || []).slice(1),
+  }));
+
+// Other disasters that can hit the same countries — the Polish pair points
+// at itself this way, with no hand-written cross-link.
+const mine = new Set((d.countries || []).map((c: any) => c.id));
+const siblings = data.entities.filter((e: any) =>
+  e.id !== entity.id && (e.data.countries || []).some((c: any) => mine.has(c.id)));
+
+const rolls = d.monthly.filter((r: any) => r.kind === 'roll' && r.entries.length);
+const shown = d.monthly.find((r: any) => r.kind === 'tooltip');
+const shownChance = shown ? shown.shown_chance : null;
+const realChance = rolls.length
+  ? 1 - rolls.reduce((p: number, r: number | any) => p * (r.nothing == null
+      ? 1 - r.entries.reduce((s: number, e: any) => s + e.chance, 0) : r.nothing), 1)
+  : null;
+---
+<Base title={entity.name} active="disasters" eyebrow="Disaster" iconSrc={entity.icon}
+  description={`${entity.name} in Europa Universalis V — what starts it, what it does, and every way out.`}>
+  <EntityDetail entity={entity} backlinks={backlinks} modsTitle="While it runs">
+
+    <div class="panel">
+      <h3>How it starts</h3>
+      <ul class="reqlist">
+        {d.start.map((l: string) => <li>{l}</li>)}
+      </ul>
+      <p class="ds-meta">
+        {spawn
+          ? <Fragment>Rolled every month that all of this holds: <b>{spawn}</b>
+              {d.spawn_chance_key && <span class="ds-key"> ({d.spawn_chance_key.replace(/_/g, ' ')})</span>}.
+              {d.median_months && <Fragment> At that rate it has more likely than not
+                fired within <b>{d.median_months} months</b> of becoming eligible —
+                derived from the chance, not a number the game states.</Fragment>}
+            </Fragment>
+          : 'The game states no monthly chance for this disaster.'}
+        {' '}{d.fire_only_once ? 'It can only ever happen once.' : 'It can happen again.'}
+      </p>
+    </div>
+
+    {(rolls.length > 0 || shown) && (
+      <div class="panel">
+        <h3>While it runs, each month</h3>
+        {shownChance != null && (
+          <p class="ds-meta">
+            The in-game tooltip says an event occurs {pct(shownChance)} of the time.
+            That pair of numbers is only a tooltip; the roll that actually runs is
+            below{realChance != null && <Fragment>, and it comes to {pct(realChance)}</Fragment>}.
+          </p>
+        )}
+        {rolls.map((r: any) => (
+          <table class="ds-table">
+            <thead><tr><th>Chance</th><th>Event</th><th>Only if</th></tr></thead>
+            <tbody>
+              {r.entries.map((e: any) => (
+                <tr>
+                  <td class="num">{pct(e.chance)}</td>
+                  <td><Term id={`event:${e.event}`} /></td>
+                  <td class="ds-dim">{e.only_if.join(', ') || '—'}</td>
+                </tr>
+              ))}
+              {r.nothing != null && r.nothing > 0 && (
+                <tr><td class="num">{pct(r.nothing)}</td>
+                  <td class="ds-dim" colspan="2">nothing happens</td></tr>
+              )}
+            </tbody>
+          </table>
+        ))}
+      </div>
+    )}
+
+    <div class="panel">
+      <h3>How it ends</h3>
+      <p class="ds-meta">
+        Checked every month while it runs.
+        {d.end_shared.length > 0 && ' These have to hold whichever way you take:'}
+      </p>
+      {d.end_shared.length > 0 && (
+        <ul class="reqlist">{d.end_shared.map((l: string) => <li>{l}</li>)}</ul>
+      )}
+      <ol class="ds-routes">
+        {d.end_routes.map((r: any) => (
+          <li>
+            <ul class="reqlist">{r.lines.map((l: string) => <li>{l}</li>)}</ul>
+            {r.targets.map((name: string) => byName[name] && (
+              <div class="ds-formula">
+                <span class="ds-formula__k">{byName[name].label}</span>
+                <code>{byName[name].formula}</code>
+                {byName[name].inputs.length > 0 && (
+                  <span class="ds-formula__note">
+                    read once, when the disaster fires:
+                    {' '}{byName[name].inputs.map((i: any) => i.label).join(', ')}
+                  </span>
+                )}
+              </div>
+            ))}
+          </li>
+        ))}
+      </ol>
+      {d.end_routes.length > 1 && (
+        <p class="ds-meta">Any one of these ends it.</p>
+      )}
+    </div>
+
+    {calcRows.length > 0 && (
+      <div class="panel" data-calc>
+        <h3>What your exit bar will be</h3>
+        <p class="ds-meta">
+          These targets are computed from your own state the month the disaster
+          fires and then frozen — nothing you do afterwards moves the bar. Put in
+          where you expect to be when it fires and this works out what you would
+          then have to reach.
+        </p>
+        <div class="ds-inputs" data-calc-inputs></div>
+        <table class="ds-table">
+          <thead><tr><th>Route</th><th>Bar</th><th>Climb from there</th><th>Also needs</th></tr></thead>
+          <tbody data-calc-body></tbody>
+        </table>
+        <p class="ds-meta" data-calc-verdict></p>
+        <details class="ds-sweep">
+          <summary>How the bar moves with where you start</summary>
+          <table class="ds-table" data-calc-sweep></table>
+        </details>
+      </div>
+    )}
+
+    {d.outcomes.length > 0 && (
+      <div class="panel">
+        <h3>Outcomes</h3>
+        <p class="ds-meta">The game takes the first of these that fits, in this order.</p>
+        <ol class="ds-outcomes">
+          {d.outcomes.map((o: any) => (
+            <li>
+              <span class="ds-when">{o.conditions.join(' and ') || 'however it ended'}</span>
+              <Term id={`event:${o.event}`} />
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    {d.actions.length > 0 && (
+      <div class="panel">
+        <h3>What you can do about it</h3>
+        <p class="ds-meta">
+          Actions the disaster puts in your hands while it runs.
+        </p>
+        {d.actions.map((a: any) => (
+          <div class="ds-action">
+            <h4>{a.name}</h4>
+            {a.desc && <p class="ds-dim"><Rich tokens={a.desc} /></p>}
+            <div class="kv">
+              {a.price.length > 0 && (
+                <Fragment><span class="k">Costs</span>
+                  <span class="v">{a.price.map((p: any) => `${p.value} ${p.resource}`).join(', ')}</span></Fragment>
+              )}
+              {a.cooldown_years != null && (
+                <Fragment><span class="k">Cooldown</span>
+                  <span class="v">{a.cooldown_years} year{a.cooldown_years === 1 ? '' : 's'}
+                    {a.cooldown_shared_with && a.cooldown_shared_with !== a.id
+                      && `, shared with ${a.cooldown_shared_with.replace(/_/g, ' ')}`}</span></Fragment>
+              )}
+              {a.requires.length > 0 && (
+                <Fragment><span class="k">Needs</span>
+                  <span class="v">{a.requires.join('; ')}</span></Fragment>
+              )}
+              {a.effects.length > 0 && (
+                <Fragment><span class="k">Does</span>
+                  <span class="v">{a.effects.join('; ')}</span></Fragment>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+    <Fragment slot="aside">
+      <div class="panel">
+        <h3>Facts</h3>
+        <div class="kv">
+          {spawn && <Fragment><span class="k">Monthly chance</span><span class="v">{spawn}</span></Fragment>}
+          {d.median_months && <Fragment><span class="k">Median wait</span><span class="v">~{d.median_months} mo</span></Fragment>}
+          <Fragment><span class="k">Repeats</span><span class="v">{d.fire_only_once ? 'no' : 'yes'}</span></Fragment>
+          {d.ages.length > 0 && <Fragment><span class="k">Age</span><span class="v">{d.ages.join(', ')}</span></Fragment>}
+          {d.map_mode && <Fragment><span class="k">Map mode</span><span class="v">{d.map_mode}</span></Fragment>}
+          <Fragment><span class="k">Ways out</span><span class="v">{d.end_routes.length}</span></Fragment>
+          {d.end_trigger && <Fragment><span class="k">Exit check</span><span class="v">{d.end_trigger}</span></Fragment>}
+        </div>
+      </div>
+      {d.countries.length > 0 && (
+        <div class="panel">
+          <h3>Can hit</h3>
+          <ul class="backlinks">
+            {d.countries.map((c: any) => <li><Term id={c.id} label={c.label} /></li>)}
+          </ul>
+        </div>
+      )}
+      {siblings.length > 0 && (
+        <div class="panel">
+          <h3>Also possible for them</h3>
+          <ul class="backlinks">
+            {siblings.map((s: any) => <li><Term id={s.id} label={s.name} /></li>)}
+          </ul>
+        </div>
+      )}
+    </Fragment>
+  </EntityDetail>
+</Base>
+
+{calcRows.length > 0 && (
+<script define:vars={{ calcRows }}>
+  // The same fold scripts/lib/scriptvalue.py evaluates: an ordered list of
+  // operations over an accumulator that starts at 0. `atleast` is the game's
+  // `min` (a floor) and `atmost` its `max` (a ceiling) — they were renamed in
+  // the data layer precisely so this cannot be read the wrong way round.
+  function evalOps(ops, env) {
+    let acc = 0;
+    for (const op of ops) {
+      const name = op[0];
+      if (name === '?') return null;
+      if (name === 'floor') { acc = Math.floor(acc); continue; }
+      if (name === 'ceil') { acc = Math.ceil(acc); continue; }
+      if (name === 'round') { acc = Math.round(acc); continue; }
+      const o = op[1];
+      let x;
+      if (o[0] === 'n') x = o[1];
+      else if (o[0] === 'e') x = evalOps(o[1], env);
+      else if (o[0] === 'v') { if (!(o[1] in env)) return null; x = env[o[1]]; }
+      else return null;
+      if (x === null) return null;
+      if (name === 'set') acc = x;
+      else if (name === 'add') acc += x;
+      else if (name === 'sub') acc -= x;
+      else if (name === 'mul') acc *= x;
+      else if (name === 'div') acc = x ? acc / x : 0;
+      else if (name === 'atleast') acc = Math.max(acc, x);
+      else if (name === 'atmost') acc = Math.min(acc, x);
+      else return null;
+    }
+    return acc;
+  }
+
+  const root = document.querySelector('[data-calc]');
+  const inputsEl = root.querySelector('[data-calc-inputs]');
+  const body = root.querySelector('[data-calc-body]');
+  const verdict = root.querySelector('[data-calc-verdict]');
+  const sweep = root.querySelector('[data-calc-sweep]');
+
+  // one field per distinct input across the routes; 25% is four equal estates
+  const fields = [];
+  for (const r of calcRows) {
+    if (!fields.some((f) => f.key === r.input.key)) {
+      fields.push({ key: r.input.key, label: r.input.label, value: 0.25 });
+    }
+  }
+  const env = {};
+  for (const f of fields) env[f.key] = f.value;
+
+  const pct = (n) => `${(n * 100).toFixed(1)}%`;
+  const signed = (n) => `${n > 0 ? '+' : ''}${(n * 100).toFixed(1)} pts`;
+
+  inputsEl.innerHTML = fields.map((f) =>
+    `<label><span>${f.label} when it fires</span>` +
+    `<input type="number" min="0" max="100" step="1" value="${Math.round(f.value * 100)}" data-key="${f.key}"><small>%</small></label>`
+  ).join('');
+
+  function render() {
+    const rows = calcRows.map((r) => {
+      const bar = evalOps(r.ops, env);
+      const from = env[r.input.key];
+      return { r, bar, climb: bar === null ? null : bar - from };
+    });
+    body.innerHTML = rows.map(({ r, bar, climb }) =>
+      `<tr><td>${r.label.replace(/^the /, '')}</td>` +
+      `<td class="num">${bar === null ? '—' : pct(bar)}</td>` +
+      `<td class="num"><span class="mod-val ${climb > 0 ? 'bad' : 'good'}">${climb === null ? '—' : signed(climb)}</span></td>` +
+      `<td class="ds-dim">${r.also.join('; ') || '—'}</td></tr>`).join('');
+
+    const reachable = rows.filter((x) => x.climb !== null);
+    const best = reachable.slice().sort((a, b) => a.climb - b.climb)[0];
+    verdict.textContent = best
+      ? `Cheapest way out from there: ${best.r.label.replace(/^the /, '')} — ` +
+        `${signed(best.climb)} to cover.`
+      : '';
+
+    // how the bar moves with where you are when it fires: the whole point is
+    // that a weaker position can set a lower bar and still be a longer climb
+    const steps = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5];
+    const head = `<thead><tr><th>When it fires</th>${calcRows.map((r) =>
+      `<th colspan="2">${r.label.replace(/^the /, '')}</th>`).join('')}</tr>` +
+      `<tr><th></th>${calcRows.map(() => '<th>bar</th><th>climb</th>').join('')}</tr></thead>`;
+    const rowsHtml = steps.map((s) => {
+      const cells = calcRows.map((r) => {
+        const bar = evalOps(r.ops, { ...env, [r.input.key]: s });
+        if (bar === null) return '<td class="num">—</td><td class="num">—</td>';
+        return `<td class="num">${pct(bar)}</td>` +
+          `<td class="num"><span class="mod-val ${bar - s > 0 ? 'bad' : 'good'}">${signed(bar - s)}</span></td>`;
+      }).join('');
+      return `<tr><td class="num">${pct(s)}</td>${cells}</tr>`;
+    }).join('');
+    sweep.innerHTML = head + `<tbody>${rowsHtml}</tbody>`;
+  }
+
+  inputsEl.addEventListener('input', (e) => {
+    const el = e.target;
+    if (!el.dataset.key) return;
+    env[el.dataset.key] = (parseFloat(el.value) || 0) / 100;
+    render();
+  });
+  render();
+</script>
+)}
+
+<style>
+  .ds-meta { color: var(--text-dim); font-size: 12.5px; margin: 8px 0 0; max-width: 78ch; }
+  .ds-key { color: var(--text-faint); font-family: var(--font-mono); font-size: 11.5px; }
+  .ds-not { color: var(--text-dim); }
+  .ds-routes { margin: 10px 0 0; padding-left: 20px; }
+  .ds-routes > li { margin-bottom: 12px; }
+  .ds-routes > li::marker { color: var(--gold-deep); font-family: var(--font-mono); }
+  .ds-formula {
+    margin-top: 6px; padding: 6px 9px; background: var(--bg-elev-2);
+    border-left: 2px solid var(--gold-deep); border-radius: var(--radius-sm);
+  }
+  .ds-formula__k {
+    display: block; font-size: 11px; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--text-faint);
+  }
+  .ds-formula code { font-size: 12.5px; color: var(--text-soft); }
+  .ds-formula__note { display: block; font-size: 11.5px; color: var(--text-faint); margin-top: 3px; }
+  .ds-outcomes { margin: 8px 0 0; padding-left: 20px; font-size: 13px; }
+  .ds-outcomes li { padding: 3px 0; }
+  .ds-when { display: block; color: var(--text-dim); font-size: 12.5px; }
+  .ds-action + .ds-action { margin-top: 14px; border-top: 1px dotted var(--border-faint); padding-top: 12px; }
+  .ds-action h4 { margin: 8px 0 4px; font-family: var(--font-display); font-size: 16px; color: var(--text); }
+  .ds-sweep { margin-top: 12px; }
+  .ds-sweep summary { cursor: pointer; color: var(--text-dim); font-size: 12.5px; }
+</style>
+
+<style is:global>
+  /* The calculator writes its rows with innerHTML, so these cannot be scoped. */
+  .ds-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12.5px; }
+  .ds-table th {
+    text-align: left; font-weight: 500; color: var(--text-faint); font-size: 11px;
+    letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px 3px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .ds-table td { padding: 3px 8px 3px 0; border-bottom: 1px dotted var(--border-faint); color: var(--text-soft); }
+  .ds-table td.num, .ds-table th.num { text-align: right; font-family: var(--font-mono); }
+  .ds-dim { color: var(--text-faint); }
+  .ds-inputs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+  .ds-inputs label { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--text-dim); }
+  .ds-inputs input {
+    width: 68px; background: var(--bg-elev); color: var(--text);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 3px 7px; font-family: var(--font-mono); font-size: 12px;
+  }
+  .ds-inputs small { color: var(--text-faint); }
+</style>

@@ -93,7 +93,7 @@ SPECS = {
     'country-interactions': dict(accessor='country_interactions',
                                  etype='country-interaction', facets={}, data=[]),
     'situations': dict(accessor='situations', etype='situation', facets={}, data=[]),
-    'disasters': dict(accessor='disasters', etype='disaster', facets={}, data=[]),
+    # disasters have their own builder (exit targets, routes, outcomes)
     'diseases': dict(accessor='diseases', etype='disease', facets={}, data=[]),
     'government-types': dict(accessor='government_types', etype='government-type',
                              facets={}, data=[]),

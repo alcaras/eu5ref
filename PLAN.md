@@ -185,8 +185,11 @@ design-reference page (owreference's `nations.astro` role).
 - Map browser — continent → subcontinent → region → area → province, with
   searchable location index (no per-location pages).
 - Climate / topography / vegetation — modifiers per type.
-- Situations & disasters — struggles, civil wars, plagues (diseases), each with
+- Situations & diseases — struggles and plagues, each with
   triggers/phases/resolutions.
+- **Disasters (built)** — own section: `can_start` / `can_end` as sentences, the
+  exit routes split out of the end trigger, the snapshotted exit-target formulas
+  with a calculator, the `on_end` outcome chain and the disaster's own actions.
 - Missions — mission trees per country/group (mined from `missions/` +
   `mission_task_defs`).
 - Events browser — by folder/domain, like owreference's events pages (later phase;
@@ -277,3 +280,15 @@ from a live install, events browser, defines explorer, CoA rendering (stretch).
   base files, and badge DLC content in the UI.
 - **Dropbox placeholders**: builds will fault in online-only files; pin the repo
   offline or relocate the working copy.
+- **Event effect rendering is weak** (`build_events.py` → `events.json`). Two known
+  leaks, visible wherever an event is quoted (the disaster pages' outcome and
+  monthly-event links show it): option effects can emit a `<Tree object …>` repr,
+  and `ref.rich` mishandles a scope call it cannot unwrap — `[ROOT.GetCountry.
+  GetGovernment.GetEstateName('nobles_estate')]` renders as "our Country
+  ('nobles_estate')" instead of the estate's name, so "Triumph of the Szlachta"
+  reads as "Triumph of the our Country('nobles_estate')". The name is there to be
+  had: Poland's noble estate is loc'd `nobles_estate_szlachta = "Szlachta"` via
+  `common/customizable_localization/estates.txt:157`, keyed off the country. Fixing
+  it means teaching `_bracket_to_token` the chained-call form and wiring the
+  customizable-localization table — worth its own pass, since it improves every
+  event title and description on the site.

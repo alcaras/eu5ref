@@ -194,9 +194,14 @@ export const TABS: Tab[] = [
     summary: 'Climate, topography, and vegetation modifiers',
   },
   {
-    slug: 'situations', icon: '🌋', label: 'Situations & Disasters', section: 'World',
+    slug: 'situations', icon: '🌋', label: 'Situations & Diseases', section: 'World',
     status: 'built',
-    summary: 'Struggles, disasters, and diseases — triggers, phases, resolutions',
+    summary: 'Struggles and diseases — triggers, phases, resolutions',
+  },
+  {
+    slug: 'disasters', icon: '🔥', label: 'Disasters', section: 'World',
+    status: 'built',
+    summary: 'Every disaster — what starts it, what it does, and every way out',
   },
   {
     slug: 'missions', icon: '📌', label: 'Missions', section: 'World',

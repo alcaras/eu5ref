@@ -1,0 +1,68 @@
+---
+// Disasters — the country-specific crises, what starts them, and what ends
+// them. The "How it ends" column is the whole point: in game a disaster's
+// exit is a prose checklist, and the numbers behind it are never shown.
+import Base from '../layouts/Base.astro';
+import ConceptLede from '../components/ConceptLede.astro';
+import EntityTable from '../components/EntityTable.astro';
+import FilterBar from '../components/FilterBar.astro';
+import data from '../data/disasters.json';
+
+const pct = (n: number | null) =>
+  n == null ? null : `${+(n * 100).toFixed(2)}% / month`;
+
+// Presentation-only fields: the data layer keeps the numbers, the page
+// decides how to say them.
+const entities = data.entities.map((e: any) => ({
+  ...e,
+  data: {
+    ...e.data,
+    who: e.facets.who,
+    spawn: e.data.spawn_chance == null ? null
+      : pct(e.data.spawn_chance) + (e.data.median_months ? ` · ~${e.data.median_months} mo` : ''),
+  },
+}));
+
+const targeted = entities.filter((e: any) =>
+  e.data.targets.some((t: any) => t.snapshot && t.read_by_exit)).length;
+const withActions = entities.filter((e: any) => e.data.actions.length > 0).length;
+
+const columns = [
+  { key: 'name', label: 'Disaster', kind: 'name' },
+  { key: 'who', label: 'Who it can hit', kind: 'chips' },
+  { key: 'spawn', label: 'Chance while eligible', kind: 'text' },
+  { key: 'mods', label: 'While it runs', kind: 'mods' },
+  { key: 'end', label: 'How it ends', kind: 'lines' },
+] as const;
+---
+<Base
+  title="Disasters"
+  active="disasters"
+  pageMark="🔥"
+  eyebrow="World"
+  pageStats={[
+    { label: 'disasters', value: entities.length },
+    { label: 'set an exit target when they fire', value: targeted },
+    { label: 'have their own actions', value: withActions },
+  ]}
+  description="Every disaster in Europa Universalis V — who it can hit, what it does while it runs, and every way out of it."
+>
+  <ConceptLede slug="disaster" />
+
+  <p class="ds-note">
+    The monthly chance applies only while every start condition holds, and
+    only one disaster runs at a time. Where a disaster computes its exit bar
+    from your own state at the moment it fires, its page carries the formula
+    and a calculator.
+  </p>
+
+  <div data-filter-scope>
+    <FilterBar facets={data.facets} placeholder="Filter disasters…" />
+    <EntityTable entities={entities} columns={columns as any} pagePrefix="disasters"
+      csvName="eu5ref-disasters" />
+  </div>
+</Base>
+
+<style>
+  .ds-note { max-width: 80ch; color: var(--text-dim); font-size: 13px; margin-top: 12px; }
+</style>

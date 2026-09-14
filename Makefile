@@ -23,6 +23,7 @@ data:
 	$(PY) scripts/build_country_start.py
 	$(PY) scripts/build_locations.py
 	$(PY) scripts/build_events.py
+	$(PY) scripts/build_disasters.py
 	$(PY) scripts/build_countries.py
 	$(PY) scripts/build_simple.py
 	$(PY) scripts/build_defines.py
