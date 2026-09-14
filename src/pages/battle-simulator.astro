@@ -2,24 +2,26 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Battle Simulator" active="battle-simulator" pageMark="⚔️" eyebrow="Tools"
-  description="Build two land armies — levies or regulars — pick the terrain, and Monte-Carlo the battle with the game's own combat constants.">
+  description="Build two land armies out of levies or regulars, pick the terrain, and run the battle hundreds of times with the game's own combat constants.">
 
   <p style="max-width: 780px; color: var(--text-soft);">
-    Build two armies out of the game's actual unit types, set the battlefield,
-    and this simulates the battle hour by hour the way the engine describes it:
-    a d10 dice phase every 5 hours, initiative rolls to engage, d20 combat-speed
-    rolls to leave the reserves, four sections per side, flanking, combined
-    arms, and the levy-vs-regular efficiency gap. Every constant comes from the
-    game's defines; run it a few hundred times and read the distribution.
+    Build two armies out of the game's own unit types and set the battlefield,
+    and the page fights the battle hour by hour the way the engine describes
+    it. It rolls a d10 dice phase every 5 hours, rolls initiative to engage,
+    and rolls a d20 against combat speed to bring regiments out of the
+    reserves. It also gives each side four sections, and it applies flanking,
+    combined arms, and the efficiency gap between levies and regulars. Every
+    constant comes from the game's defines, so run the battle a few hundred
+    times and read the distribution.
   </p>
   <p style="max-width: 780px; color: var(--text-dim); font-size: 13px;">
-    <b>Honesty note:</b> the phase structure, engagement chances and every
-    multiplier in the damage chain are the game's own (defines + concept text +
-    the battle tooltip's factor list). What the files do <em>not</em> give is
-    the exact composition of those multipliers, section frontage splitting, and
-    target selection — those follow the most reasonable reading and are
-    labelled in the model notes below. Treat outcomes as a strong estimate, not
-    a replay of the engine.
+    <b>Honesty note.</b> The phase structure, the engagement chances and every
+    multiplier in the damage chain are the game's own, taken from the defines,
+    the concept text and the battle tooltip's list of factors. The files do
+    <em>not</em> say how those multipliers combine, how section frontage is
+    split, or how a target is picked, so the page follows the most reasonable
+    reading and labels each of those in the model notes below. Read an outcome
+    as a good estimate rather than a replay of the engine.
   </p>
 
   <div class="bs" data-bs>
@@ -66,7 +68,7 @@ import Base from '../layouts/Base.astro';
     </section>
 
     <details class="bs-notes">
-      <summary>Model notes — what is exact, what is inferred</summary>
+      <summary>Model notes, and which parts are exact</summary>
       <div data-bs-notes></div>
     </details>
   </div>
@@ -145,16 +147,16 @@ import Base from '../layouts/Base.astro';
     const MOD_DEFS: [string, string, string][] = [
       ['disc',  'discipline %',      'Sum of country discipline modifiers. Levy regiments get a further −10% (is_army_levy).'],
       ['tact',  'military tactics',  'Flat, base 1.0 (country_base_values). Reduces damage taken.'],
-      ['mor',   'land morale %',     'land_morale_modifier — max morale is 3.0 × (1 + this).'],
-      ['init',  'army initiative %', 'army_initiative — scales unit initiative for the engage roll.'],
-      ['cspd',  'combat speed %',    'combat_speed_modifier — scales the d20 reserve roll.'],
+      ['mor',   'land morale %',     'land_morale_modifier. Max morale is 3.0 × (1 + this).'],
+      ['init',  'army initiative %', 'army_initiative. It scales unit initiative for the engage roll.'],
+      ['cspd',  'combat speed %',    'combat_speed_modifier. It scales the d20 reserve roll.'],
       ['front', 'frontage %',        'possible_frontage_modifier.'],
-      ['levy',  'levy efficiency %', 'levy_combat_efficiency_modifier — on top of the 0.75 base.'],
-      ['exp',   'experience',        '0–100. Damage taken ×(1 − exp/100 × 0.5).'],
+      ['levy',  'levy efficiency %', 'levy_combat_efficiency_modifier, on top of the 0.75 base.'],
+      ['exp',   'experience',        '0 to 100. Damage taken ×(1 − exp/100 × 0.5).'],
       ['powInf','infantry power %',  'army_light/heavy_infantry_power (applied to both).'],
       ['powCav','cavalry power %',   'army_light/heavy_cavalry_power (applied to both).'],
       ['powArt','artillery power %', 'army_artillery_power.'],
-      ['dice',  'general dice bonus','commander_combat_bonus — flat on every phase dice. Traits add on top.'],
+      ['dice',  'general dice bonus','commander_combat_bonus, flat on every phase dice. Traits add on top.'],
     ];
     const S: Record<string, SideSpec> = { A: blankSide(), B: blankSide() };
     let topo = 'flatland', veg = 'grasslands', attacker: 'A' | 'B' = 'A';
@@ -254,11 +256,11 @@ import Base from '../layouts/Base.astro';
           ${wB ? `<div class="wb" style="flex:${wB}">B ${pct(wB)}</div>` : ''}
         </div>
         <div class="bs-stats">
-          <div class="bs-stat">Battle length<b>${avg(hrs).toFixed(0)} h avg · ${qs(hrs,0.1)}–${qs(hrs,0.9)} h</b></div>
-          <div class="bs-stat">Army A losses (of ${men(startA)})<b>${men(avg(lostA))} avg · ${men(qs(lostA,0.1))}–${men(qs(lostA,0.9))}</b></div>
-          <div class="bs-stat">Army B losses (of ${men(startB)})<b>${men(avg(lostB))} avg · ${men(qs(lostB,0.1))}–${men(qs(lostB,0.9))}</b></div>
+          <div class="bs-stat">Battle length<b>${avg(hrs).toFixed(0)} h on average, ${qs(hrs,0.1)} to ${qs(hrs,0.9)} h</b></div>
+          <div class="bs-stat">Army A losses (of ${men(startA)})<b>${men(avg(lostA))} on average, ${men(qs(lostA,0.1))} to ${men(qs(lostA,0.9))}</b></div>
+          <div class="bs-stat">Army B losses (of ${men(startB)})<b>${men(avg(lostB))} on average, ${men(qs(lostB,0.1))} to ${men(qs(lostB,0.9))}</b></div>
         </div>`;
-      $('[data-bs-runinfo]').textContent = `${n} runs · seed ${seed} · ${ms.toFixed(0)} ms`;
+      $('[data-bs-runinfo]').textContent = `${n} runs, seed ${seed}, ${ms.toFixed(0)} ms`;
       $('[data-bs-log]').textContent = firstLog.join('\n');
     }
 
@@ -288,7 +290,7 @@ import Base from '../layouts/Base.astro';
         const u = D.units[r.u];
         return `<div class="bs-reg">
           <span class="nm">${esc(u.name)}</span>
-          <span class="meta">${esc(D.categories[u.cat]?.name || '')} · <span class="${u.levy ? 'bs-src-levy' : 'bs-src-reg'}">${u.levy ? 'levy' : 'regular'}</span>${u.gate ? ` · ${esc(u.gate.join(', '))}` : ''}</span>
+          <span class="meta">${esc(D.categories[u.cat]?.name || '')}, <span class="${u.levy ? 'bs-src-levy' : 'bs-src-reg'}">${u.levy ? 'levy' : 'regular'}</span>${u.gate ? `, ${esc(u.gate.join(', '))}` : ''}</span>
           <span class="cnt">
             <button data-a="dec" data-i="${i}">−</button>×${r.n}<button data-a="inc" data-i="${i}">+</button>
             <button data-a="del" data-i="${i}" title="remove">✕</button>
@@ -307,13 +309,13 @@ import Base from '../layouts/Base.astro';
         const gated = t.needs && !t.needs.some((cat: string) => s.regs.some(r => D.units[r.u].cat === cat));
         const mods = Object.entries(t.mods).map(([k, v]) => `${k} ${v}`).join(', ');
         return `<span class="bs-trait ${on ? 'on' : ''} ${gated ? 'gated' : ''}" data-trait="${t.key}"
-          title="${esc(mods)}${t.needs ? ` — needs ${t.needs.join(' or ')} in the army` : ''}">${esc(t.name)}</span>`;
+          title="${esc(mods)}${t.needs ? `, needs ${t.needs.join(' or ')} in the army` : ''}">${esc(t.name)}</span>`;
       }).join('');
       const formOpts = Object.keys(D.formations).map(f2 =>
         `<option value="${f2}" ${s.formation === f2 ? 'selected' : ''}>${f2.replace(/_/g, ' ')}</option>`).join('');
 
       pane.innerHTML = `
-        <h2 class="bs-h">Army ${sd} <small><b>${Math.round(men).toLocaleString()}</b> men · ${s.regs.reduce((t, r) => t + r.n, 0)} regiments · frontage need ${fr.toFixed(1)}${ca ? ` · combined arms +${(ca * 100).toFixed(1)}%` : ''}</small></h2>
+        <h2 class="bs-h">Army ${sd} <small><b>${Math.round(men).toLocaleString()}</b> men, ${s.regs.reduce((t, r) => t + r.n, 0)} regiments, frontage need ${fr.toFixed(1)}${ca ? `, combined arms +${(ca * 100).toFixed(1)}%` : ''}</small></h2>
         <div class="bs-addrow">
           <select data-add-age>${ageOpts}</select>
           <select data-add-unit></select>
@@ -383,20 +385,21 @@ import Base from '../layouts/Base.astro';
     function renderNotes() {
       const d = D.defines;
       const rows: [string, string, string][] = [
-        ['Dice', `d${d.COMBAT_DICE_SIDE}, base ${d.COMBAT_BASE}, capped ${d.COMBAT_MAX}, re-rolled every ${d.HOURS_PER_PHASE} h`, 'exact (NCombat)'],
-        ['Damage scale', `dice × ${d.COMBAT_DAMAGE_MULT} × combat power × strength; ×${d.LAND_STRENGTH_DAMAGE_MODIFIER} strength, ×${d.LAND_MORALE_DAMAGE_MODIFIER} morale`, 'exact (NCombat)'],
-        ['Levy efficiency', `${d.LAND_LEVY_COMBAT_IMPACT} × (1 + levy efficiency mod); regulars deal 1/eff vs levies. Levies also get ${D.sources.levy.discipline} discipline`, 'exact (defines + tooltip + is_army_levy)'],
-        ['Engagement', `d100 < ${d.INITIATIVE_BASE_CHANCE} + min(init × ${d.INITIATIVE_CHANCE_EACH}, ${d.INITIATIVE_CHANCE_MAX}) + hours × ${d.INITIATIVE_CHANCE_HOURS}`, 'exact (concept text + defines)'],
-        ['Reserves', `d20 vs combat speed (${d.COMBAT_SPEED_SCALE}/point per hour), highest combat power first`, 'exact (concept text)'],
-        ['Frontage', `base ${D.baseFrontage} + terrain, floor ${d.MIN_FRONTAGE_AFTER_TERRAIN}, × (1 + possible_frontage_modifier)`, 'exact (location_base_values + terrain)'],
-        ['Section split', 'side frontage ÷ 3 per front section, × the formation\'s 1.25 overstack', '<span class="inf">inferred</span>'],
-        ['Multiplier chain', 'the tooltip\'s factor list (discipline, tactics, powers, terrain, flanking, secure flanks, experience, combined arms, not-engaged) applied multiplicatively', '<span class="inf">inferred composition</span> of exact factors'],
-        ['Morale scale', 'damage × attacker morale / max morale', '<span class="inf">inferred</span> (listed as "Morale vs Base Morale")'],
-        ['Target pick', 'random engaged regiment in the mirror section; adjacent section (with flanking bonus) when it is empty', '<span class="inf">inferred</span> (concept text gives the structure, not the pick)'],
-        ['Commander', 'flat dice bonus input (+ traits). The engine also has a martial-difference "shock" term whose scaling is not in the files — fold it into the dice bonus yourself', '<span class="inf">not modelled</span>'],
-        ['Collapse / retreat', `regiment breaks at ${d.MORALE_COLLAPSE_THRESHOLD * 100}% morale or 0 men; retreat locked ${d.MINIMUM_COMBAT_DURATION} h; loser takes ${d.RETREAT_STRENGTH_DAMAGE * 100}% retreat losses`, 'exact (NCombat)'],
-        ['Morale attrition', `engaged units lose ${d.COMBAT_HOURLY_MORALE_TICK}/h`, 'exact constant, <span class="inf">inferred targeting</span>'],
-        ['Not simulated', 'mercenaries, reinforcement mid-battle from outside, war-score/prestige effects, assault/siege, naval', '—'],
+        ['Dice', `effective dice = ${d.COMBAT_BASE} + (d${d.COMBAT_DICE_SIDE} read as 0 to 9) + modifiers, capped at ${d.COMBAT_MAX} and re-rolled every ${d.HOURS_PER_PHASE} h. Terrain and crossing dice are PENALTIES on the attacker ("[topography] penalty on [attacker]"), and the defender gets no bonus`, 'exact, from the defines, the loc and a formula the community tested'],
+        ['Damage scale', `strength dmg = dice × ${d.COMBAT_DAMAGE_MULT} × combat power × attacker's absolute strength × ${d.LAND_STRENGTH_DAMAGE_MODIFIER}. Morale dmg = dice × ${d.COMBAT_DAMAGE_MULT} × combat power × attacker's % of max strength × ${d.LAND_MORALE_DAMAGE_MODIFIER}`, 'the base is exact, because the defines decompose the tested formula. Whether a factor uses absolute or relative strength comes from the tooltip and the wiki'],
+        ['Levy efficiency', `levy attacker deals ×${d.LAND_LEVY_COMBAT_IMPACT} (× levy efficiency mods); a REGULAR attacking a levy deals ×(1/efficiency), which the game text spells out as "calculated as one divided by a factor", the one literal formula in the loc. Levies also get ${D.sources.levy.discipline} discipline`, 'exact, from the defines, the tooltip and is_army_levy'],
+        ['Engagement', `d100 < ${d.INITIATIVE_BASE_CHANCE} + min(init × (1 + army initiative) × ${d.INITIATIVE_CHANCE_EACH}, ${d.INITIATIVE_CHANCE_MAX}) + hours in combat × ${d.INITIATIVE_CHANCE_HOURS}, and only while the section's engaged frontage is under the side frontage`, 'confirmed against the engine\'s own behavior. The hours term reads the combat\'s TOTAL hours, with no per-phase reset, so the wiki was wrong here'],
+        ['Reserves', `d20 against combat speed, at ${d.COMBAT_SPEED_SCALE} per point per hour. The game text says "only the highest combat power regiments, up to the available frontage, are eligible to roll each hour"`, 'exact (verbatim tooltip)'],
+        ['Frontage', `possible frontage = base ${D.baseFrontage} + terrain, floor ${d.MIN_FRONTAGE_AFTER_TERRAIN}, × (1 + possible_frontage_modifier). The SIDE\'s full value caps EACH section ("Max Frontage of X in this section"), and it is not split three ways`, 'exact, from location_base_values, the terrain files and the frontage tooltips'],
+        ['Overstacking', `sections can hold up to ×${d.MAX_FRONTAGE_OVERSTACKING} frontage of placed regiments`, 'confirmed against the engine\'s own behavior, which allows 1.25 × the section frontage'],
+        ['Multiplier chain', 'every tooltip factor (own/target discipline, ÷ target military tactics, category powers, terrain, flanking, secure flanks ×2 when both neighbours held, target experience ×0.5 max, combined arms, category damage taken, not-engaged 1.1/1.2) applied multiplicatively', 'factors exact (CT_IMPACT_ON_* list); the factors compose multiplicatively in fixed point, confirmed against the engine\'s own behavior, and nothing is clamped mid-chain, so the order does not affect the result'],
+        ['Morale scale', 'damage × attacker morale / max morale ("Morale vs Base Morale", attacker-side in the tooltip chain)', 'factor exact, magnitude <span class="inf">inferred</span> as the plain ratio'],
+        ['Target pick', 'random engaged regiment in the crossed mirror section (my left vs their right); any other front section (with flanking bonus) when it is empty', 'the structure is exact, from the concept text and the GUI wiring. The random pick is <span class="inf">inferred</span>'],
+        ['Commander', 'flat dice bonus input (+ traits). The engine also has a separate "Shock" dice modifier that comes from the martial difference between the commanders. Its scaling is not in the files, so fold it into the dice bonus yourself', '<span class="inf">not modelled</span>, because the scale is unknown'],
+        ['Collapse / retreat', `A regiment breaks at ${d.MORALE_COLLAPSE_THRESHOLD * 100}% morale or at 0 men, and the battle ends when one side\'s front sections stay empty. Retreat is locked for ${d.MINIMUM_COMBAT_DURATION} h, and the loser takes ${d.RETREAT_STRENGTH_DAMAGE * 100}% retreat losses. Auto-retreat uses the average morale of the ENGAGED front-line units only`, 'exact, from NCombat and the loc. What the collapse threshold means exactly is <span class="inf">inferred</span>'],
+        ['Morale attrition', `"Every hour, each unit in the combat loses an additional ${d.COMBAT_HOURLY_MORALE_TICK} morale", which covers every unit, engaged or not`, 'exact (verbatim tooltip)'],
+        ['Bombard phase', `${d.BOMBARD_HOURS} h before the combat phase. Each hour the artillery fires with its bombard efficiency as the chance, and it deals its combat power as damage to the same section`, `the structure is exact, from the concept text. Whether BOMBARD_BASE_CHANCE (${d.BOMBARD_BASE_CHANCE}) adds or replaces is <span class="inf">unconfirmed</span>`],
+        ['Not simulated', 'stackwipe and overrun (the game text mentions a "big enough army to instantly eliminate" one, but no threshold appears anywhere in the files), correct_box_chance deployment noise, religion damage bonuses, mercenaries, reinforcement from outside the battle, assault and siege, and naval combat', 'not applicable'],
       ];
       $('[data-bs-notes]').innerHTML = `<table><tr><th>Piece</th><th>Model</th><th>Provenance</th></tr>
         ${rows.map(([a, b, c]) => `<tr><td>${a}</td><td>${b}</td><td>${c}</td></tr>`).join('')}</table>`;

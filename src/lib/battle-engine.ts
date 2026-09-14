@@ -143,12 +143,13 @@ function deploy(D: any, s: SideSpec, side: string, P: any, F: number,
                   morale: P.maxMorale, sec: 'reserves', engaged: false, broken: false });
     }
   }
-  // per-section frontage caps: side frontage split across the three front
-  // sections, each stretched by the formation's max_frontage (INFERRED)
+  // the SIDE's possible frontage caps EACH section ("Max Frontage of
+  // [side possible] in this section" — no split); the formation's 1.25
+  // max_frontage is the placement overstack on top of the engaged cap
   const caps: Record<string, number> = {};
   for (const sec of FRONT) {
     const mf = form.sections[sec]?.max_frontage ?? d.MAX_FRONTAGE_OVERSTACKING;
-    caps[sec] = (F / 3) * mf;
+    caps[sec] = F * mf;
   }
   const used: Record<string, number> = { left: 0, center: 0, right: 0 };
   const weightOf = (sec: string, cat: string) => {
@@ -195,10 +196,14 @@ export function simulate(D: any, cfg: BattleConfig,
   const inFront = (r: SimReg) => alive(r) && r.sec !== 'reserves';
   const canFight = (r: SimReg) => alive(r) && r.u.cat !== 'army_auxiliary';
   const dice: any = { A: 0, B: 0 };
+  // terrain and crossing are dice PENALTIES on the ATTACKER
+  // ("[topography] penalty on [attacker]"); the defender gets no bonus dice
   const diceMod = (sd: string) => P[sd].dice +
-    (sd === cfg.attacker ? crossDice(D, cfg) : defenderDice(D, cfg));
+    (sd === cfg.attacker ? crossDice(D, cfg) - defenderDice(D, cfg) : 0);
+  // effective dice = COMBAT_BASE + (d10 as 0..9) + modifiers, capped —
+  // matches the tooltip decomposition dmg = (5 + roll−1 + mods) × mult
   const roll = (sd: string) => Math.max(0, Math.min(d.COMBAT_MAX,
-    d.COMBAT_BASE + Math.floor(rand() * d.COMBAT_DICE_SIDE) + 1 + diceMod(sd)));
+    d.COMBAT_BASE + Math.floor(rand() * d.COMBAT_DICE_SIDE) + diceMod(sd)));
   const hasBombard = regs.some(r => alive(r) && D.categories[r.u.cat]?.flags?.bombard);
   const bombardHours = hasBombard ? d.BOMBARD_HOURS : 0;
   const start: any = { A: bySide('A').reduce((t, r) => t + r.men, 0),
@@ -213,28 +218,33 @@ export function simulate(D: any, cfg: BattleConfig,
     const discT = tLevy ? pt.levyDisc : pt.disc;
     const dv = bombard ? d.COMBAT_BASE : dice[att.side];
     let base = dv * d.COMBAT_DAMAGE_MULT
-      * (att.u.stats.combat_power || 0)
-      * (att.men / d.REGIMENT_SIZE);
+      * (att.u.stats.combat_power || 0);
     base *= (1 + discA) / (1 + discT);
     base *= 1 + (pa.pow[att.u.cat] || 0);
     base *= 1 + CA[att.side];
     if (aLevy) base *= pa.levyFactor;              // levy hits softer
-    if (tLevy) base /= pt.levyFactor;              // …and is hit harder
+    // "Regular vs Levy": ×(1 / levy efficiency) — only for a REGULAR attacker
+    if (!aLevy && tLevy) base /= pt.levyFactor;
     base *= 1 - pt.exp * d.LAND_EXPERIENCE_DAMAGE_REDUCTION;
     base *= D.categories[tgt.u.cat]?.stats?.damage_taken ?? 1;
-    base /= Math.max(0.1, pt.tact);
+    base /= Math.max(0.1, pt.tact);                // "divided by Military Tactics"
     base *= terrainMult(att.u, cfg);
     if (flanked) base *= att.u.stats.flanking_ability || 1;
     // secure flanks: each friendly-held neighbour section of the target
+    // (both neighbours held → doubled, per the concept text)
     const held = (NEIGH[tgt.sec] || []).filter(nsec =>
       regs.some(r => r.side === tgt.side && r.sec === nsec && alive(r))).length;
     base *= Math.max(0, 1 - (tgt.u.stats.secure_flanks_defense || 0) * held);
-    base *= att.morale / P[att.side].maxMorale;    // morale scale (INFERRED)
-    const str = base * d.LAND_STRENGTH_DAMAGE_MODIFIER
+    base *= att.morale / P[att.side].maxMorale;    // "Morale vs Base Morale"
+    // strength damage scales with the attacker's ABSOLUTE strength;
+    // morale damage with its RELATIVE strength ("% of max_strength")
+    const str = base * (att.men / d.REGIMENT_SIZE)
+      * d.LAND_STRENGTH_DAMAGE_MODIFIER
       * (1 + (att.u.stats.strength_damage_done || 0))
       * (1 + (tgt.u.stats.strength_damage_taken || 0))
       * (tgt.engaged ? 1 : d.NOT_ENGAGED_STRENGTH_DAMAGE_MODIFIER);
-    const mor = base * d.LAND_MORALE_DAMAGE_MODIFIER * d.BASE_MORALE_DAMAGE
+    const mor = base * (att.men / att.maxMen)
+      * d.LAND_MORALE_DAMAGE_MODIFIER * d.BASE_MORALE_DAMAGE
       * (1 + (att.u.stats.morale_damage_done || 0))
       * (1 + (tgt.u.stats.morale_damage_taken || 0))
       * (tgt.engaged ? 1 : d.NOT_ENGAGED_MORALE_DAMAGE_MODIFIER);
@@ -253,37 +263,47 @@ export function simulate(D: any, cfg: BattleConfig,
     if (!inBombard) for (const sd of ['A', 'B'] as const) {
       const frontRegs = bySide(sd).filter(inFront);
 
-      // reserves roll d20 vs combat speed to move up, best power first
-      const caps: Record<string, number> = {};
+      // per-section budgets: engaged cap = side possible frontage;
+      // placement cap = that × the formation's 1.25 overstack
+      const placeCaps: Record<string, number> = {};
       for (const sec of FRONT) {
         const mf = D.formations[sides[sd].formation].sections[sec]?.max_frontage
           ?? d.MAX_FRONTAGE_OVERSTACKING;
-        caps[sec] = (F[sd] / 3) * mf;
+        placeCaps[sec] = F[sd] * mf;
       }
-      const used: Record<string, number> = { left: 0, center: 0, right: 0 };
-      for (const r of frontRegs) used[r.sec] += r.u.stats.frontage || 1;
+      const placed: Record<string, number> = { left: 0, center: 0, right: 0 };
+      const engagedFr: Record<string, number> = { left: 0, center: 0, right: 0 };
+      for (const r of frontRegs) {
+        placed[r.sec] += r.u.stats.frontage || 1;
+        if (r.engaged) engagedFr[r.sec] += r.u.stats.frontage || 1;
+      }
+
+      // reserves roll d20 vs combat speed to move up, best power first
       const reserves = bySide(sd)
         .filter(r => alive(r) && r.sec === 'reserves' && r.u.cat !== 'army_auxiliary')
         .sort((a, b) => (b.u.stats.combat_power || 0) - (a.u.stats.combat_power || 0));
       for (const r of reserves) {
-        const secs = FRONT.filter(sec => used[sec] + (r.u.stats.frontage || 1) <= caps[sec]);
+        const secs = FRONT.filter(sec => placed[sec] + (r.u.stats.frontage || 1) <= placeCaps[sec]);
         if (!secs.length) break;
         const cs = (r.u.stats.combat_speed || 0) * (1 + P[sd].cspd);
         if (rand() < cs * d.COMBAT_SPEED_SCALE) {
-          const sec = secs.sort((x, y) => (used[x] / caps[x]) - (used[y] / caps[y]))[0];
-          r.sec = sec; used[sec] += r.u.stats.frontage || 1;
+          const sec = secs.sort((x, y) => (placed[x] / placeCaps[x]) - (placed[y] / placeCaps[y]))[0];
+          r.sec = sec; placed[sec] += r.u.stats.frontage || 1;
           log?.push(`h${hour}  ${sd} ${r.u.name} joins ${sec} from reserves`);
         }
       }
 
-      // engagement rolls (d100 vs initiative chance)
+      // engagement rolls (d100 vs initiative chance), while the section's
+      // engaged frontage stays under the side's possible frontage
       for (const r of bySide(sd).filter(inFront)) {
         if (r.engaged) continue;
+        const fr = r.u.stats.frontage || 1;
+        if (engagedFr[r.sec] + fr > F[sd]) continue;
         const init = (r.u.stats.initiative || 0) * (1 + P[sd].init);
         const chance = d.INITIATIVE_BASE_CHANCE
           + Math.min(init * d.INITIATIVE_CHANCE_EACH, d.INITIATIVE_CHANCE_MAX)
           + hour * d.INITIATIVE_CHANCE_HOURS;
-        if (rand() < chance) r.engaged = true;
+        if (rand() < chance) { r.engaged = true; engagedFr[r.sec] += fr; }
       }
     }
 
@@ -323,9 +343,10 @@ export function simulate(D: any, cfg: BattleConfig,
       tgt.morale = Math.max(0, tgt.morale - dmg.mor);
     }
 
-    // hourly morale drain on engaged units
-    if (!inBombard) for (const sd of ['A', 'B'] as const)
-      for (const r of front[sd]) if (r.engaged) r.morale = Math.max(0, r.morale - d.COMBAT_HOURLY_MORALE_TICK);
+    // "Every hour, each unit in the combat loses an additional X morale" —
+    // ALL units in the battle, engaged or not
+    if (!inBombard) for (const r of regs)
+      if (alive(r)) r.morale = Math.max(0, r.morale - d.COMBAT_HOURLY_MORALE_TICK);
 
     // collapse checks
     for (const r of regs) {
@@ -335,15 +356,17 @@ export function simulate(D: any, cfg: BattleConfig,
         log?.push(`h${hour}  ${r.side} ${r.u.name} ${destroyed ? 'destroyed' : 'breaks (morale)'}`);
       }
     }
-    // voluntary retreat after the lock, on the player-set threshold
+    // voluntary retreat after the lock, on the player-set threshold —
+    // side morale is the average over ENGAGED front-line units only
     if (hour >= d.MINIMUM_COMBAT_DURATION && !winner) {
       for (const sd of ['A', 'B'] as const) {
-        const front = bySide(sd).filter(inFront);
-        if (!front.length || !P[sd].retreat) continue;
-        const avg = front.reduce((t, r) => t + r.morale / P[sd].maxMorale, 0) / front.length;
+        if (!P[sd].retreat) continue;
+        const engaged = bySide(sd).filter(r => inFront(r) && r.engaged);
+        if (!engaged.length) continue;
+        const avg = engaged.reduce((t, r) => t + r.morale / P[sd].maxMorale, 0) / engaged.length;
         if (avg < P[sd].retreat) {
           winner = sd === 'A' ? 'B' : 'A';
-          log?.push(`h${hour}  ${sd} retreats (avg front morale ${(avg * 100).toFixed(0)}%)`);
+          log?.push(`h${hour}  ${sd} retreats (avg engaged morale ${(avg * 100).toFixed(0)}%)`);
         }
       }
     }
@@ -366,7 +389,7 @@ export function simulate(D: any, cfg: BattleConfig,
     A: start.A - bySide('A').reduce((t, r) => t + r.men, 0),
     B: start.B - bySide('B').reduce((t, r) => t + r.men, 0),
   };
-  log?.push(`— ${winner === 'draw' ? 'mutual collapse' : `Army ${winner} wins`} after ${hour}h; ` +
-    `A lost ${Math.round(lost.A)}, B lost ${Math.round(lost.B)}`);
+  log?.push(`${winner === 'draw' ? 'Mutual collapse' : `Army ${winner} wins`} after ${hour}h. ` +
+    `A lost ${Math.round(lost.A)}, B lost ${Math.round(lost.B)}.`);
   return { winner, hours: hour, lost, start };
 }
