@@ -161,7 +161,7 @@
        "If runs policy Absolute Rule: Remove Policy: Policy:Absolute Rule Policy, Add Policy: Policy:Figurehead Position Policy",
        "If has the Supreme Authority Modifier modifier: Remove Country Modifier: Supreme Authority Modifier",
        "If runs policy No Representation: Remove Policy: Policy:Colonial Representation Law No, Add Policy: Policy:Colonial Representation Law Yes",
-       "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus",
+       "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus (+20%)",
        "Set Parliament Type: Parliament Type:Estate Parliament",
        "If the disaster is Aspiration for Liberty: Add Country Modifier: Reinstated The Parliament Modifier (20 years), Custom Tooltip: This Will End The Disaster Tt"
       ],
@@ -1658,7 +1658,7 @@
       ],
       "effects": [
        "Add Country Modifier: Supreme Authority Modifier (20 years)",
-       "Add All Estate Satisfaction: Estate Satisfaction Extreme Penalty",
+       "Add All Estate Satisfaction: Estate Satisfaction Extreme Penalty (-20%)",
        "If Allow Autocratic Parliament and not parliament is Autocratic Parliament and not Parliament Abolished: Set Parliament Type: Parliament Type:Autocratic Parliament"
       ],
       "id": "legitimize_parliament_abolition",
@@ -1782,7 +1782,7 @@
        "If runs policy Absolute Rule: Remove Policy: Policy:Absolute Rule Policy, Add Policy: Policy:Figurehead Position Policy",
        "If has the Supreme Authority Modifier modifier: Remove Country Modifier: Supreme Authority Modifier",
        "If runs policy No Representation: Remove Policy: Policy:Colonial Representation Law No, Add Policy: Policy:Colonial Representation Law Yes",
-       "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus",
+       "Add All Estate Satisfaction: Estate Satisfaction Extreme Bonus (+20%)",
        "Set Parliament Type: Parliament Type:Estate Parliament",
        "If the disaster is Aspiration for Liberty: Add Country Modifier: Reinstated The Parliament Modifier (20 years), Custom Tooltip: This Will End The Disaster Tt"
       ],
@@ -2110,7 +2110,7 @@
        ]
       ],
       "effects": [
-       "Change Celestial Authority: Celestial Authority Weak Bonus",
+       "Change Celestial Authority: Celestial Authority Weak Bonus (+5)",
        "Scope:Actor"
       ],
       "id": "cmd_reform_the_cabinet",
@@ -2162,7 +2162,7 @@
        ]
       ],
       "effects": [
-       "Change Celestial Authority: Celestial Authority Weak Bonus",
+       "Change Celestial Authority: Celestial Authority Weak Bonus (+5)",
        "Scope:Actor"
       ],
       "id": "cmd_revise_the_tax_code",
@@ -4057,7 +4057,7 @@
      "Societal value"
     ],
     "spawn_chance": 0.02,
-    "spawn_chance_key": "inline_script_value_9a792fba-b009-11f1-8ffe-e6607317b285",
+    "spawn_chance_key": "inline_script_value_4215998e-b00f-11f1-9a4f-e6607317b285",
     "start": [
      "is England or is Great Britain",
      "age is Absolutism or later",
@@ -5407,8 +5407,8 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Serfdom vs Free Subjects",
-       "Add Estate Satisfaction: Nobility"
+       "Change Societal Value: Serfdom vs Free Subjects +5 toward Free Subjects",
+       "Add Estate Satisfaction: Nobility (-10%)"
       ],
       "id": "pw_push_for_free_subjects",
       "name": "Push for Free Subjects",
@@ -5433,8 +5433,8 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Serfdom vs Free Subjects",
-       "Add Estate Satisfaction: Commoners"
+       "Change Societal Value: Serfdom vs Free Subjects -5 toward Serfdom",
+       "Add Estate Satisfaction: Commoners (-10%)"
       ],
       "id": "pw_push_for_serfdom",
       "name": "Push for Serfs",
@@ -5817,7 +5817,7 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Spiritualist vs Humanist",
+       "Change Societal Value: Spiritualist vs Humanist +10 toward Humanist",
        "If has the Wave Of Spiritualism Modifier modifier: Remove Country Modifier: Wave Of Spiritualism Modifier",
        "Add Country Modifier: Wave Of Humanism Modifier (10 years)"
       ],
@@ -5841,7 +5841,7 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Spiritualist vs Humanist",
+       "Change Societal Value: Spiritualist vs Humanist -10 toward Spiritualist",
        "If has the Wave Of Humanism Modifier modifier: Remove Country Modifier: Wave Of Humanism Modifier",
        "Add Country Modifier: Wave Of Spiritualism Modifier (10 years)"
       ],
@@ -5866,7 +5866,7 @@
       ],
       "effects": [
        "Add Country Modifier: Conversion Efforts Modifier (10 years)",
-       "Add Estate Satisfaction: Clergy"
+       "Add Estate Satisfaction: Clergy (+10%)"
       ],
       "id": "rt_support_conversion_efforts",
       "name": "Support Conversion Efforts",
@@ -6475,8 +6475,8 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Aristocracy vs Plutocracy",
-       "Add Estate Satisfaction: Burghers"
+       "Change Societal Value: Aristocracy vs Plutocracy -10 toward Aristocracy",
+       "Add Estate Satisfaction: Burghers (-10%)"
       ],
       "id": "pw_push_for_aristocracy",
       "name": "Push for Aristocracy",
@@ -6501,8 +6501,8 @@
        ]
       ],
       "effects": [
-       "Change Societal Value: Aristocracy vs Plutocracy",
-       "Add Estate Satisfaction: Nobility"
+       "Change Societal Value: Aristocracy vs Plutocracy +10 toward Plutocracy",
+       "Add Estate Satisfaction: Nobility (-10%)"
       ],
       "id": "pw_push_for_plutocracy",
       "name": "Push for The Power of Coin",

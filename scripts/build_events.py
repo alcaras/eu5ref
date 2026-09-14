@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
 import ref
 import requirements
+import scriptvalue
 import triggers
 from ref import eid, rich, slugify, write_dataset, facet_meta
 
@@ -68,6 +69,63 @@ _FLOW = {
 }
 _MAX_DEPTH = 2
 _MAX_INNER = 4        # effects listed under one condition before "and N more"
+
+
+# An effect's size lives in its `value` or `amount`, usually as a named
+# constant (`societal_value_large_move_to_right = 20`). The name alone tells a
+# reader nothing, so the number goes on the line next to it.
+_AMOUNT_KEYS = ('value', 'amount')
+
+# Effects the game stores as a 0 to 1 fraction and shows as a percentage.
+_PERCENT_EFFECTS = {
+    'add_estate_satisfaction', 'add_all_estate_satisfaction',
+    'add_estate_power', 'add_estate_tax_rate', 'add_control',
+    'add_war_exhaustion', 'add_religious_unity',
+}
+
+
+def _num_text(n: float, key: str) -> str:
+    if key in _PERCENT_EFFECTS:
+        return f'{n * 100:+g}%'
+    return f'{n:+g}'
+
+
+def _amount(v, key: str) -> str:
+    """A `value`/`amount` as a signed number, or '' when it is not one."""
+    if v is None or isinstance(v, bool):
+        return ''
+    if hasattr(v, 'iterate_with_duplicates'):        # a computed value block
+        formula = scriptvalue.lower(v).get('formula') or ''
+        return formula if 0 < len(formula) <= 60 else ''
+    tok = str(v).strip()
+    n = scriptvalue.constant(tok)
+    if n is None:
+        try:
+            n = float(tok)
+        except ValueError:
+            return ''
+    return _num_text(n, key)
+
+
+def _same_number(name: str, size: str) -> bool:
+    """True when the rendered name already is the number `size` states."""
+    try:
+        return float(name) == float(size.rstrip('%'))
+    except ValueError:
+        return False
+
+
+def _toward(axis_label: str, n: float) -> str:
+    """Which pole of `Aristocracy vs Plutocracy` a signed move heads for.
+
+    The right-hand pole is the positive direction, which is the game's own
+    convention, so the sign names the pole without any extra data.
+    """
+    for sep in (' vs. ', ' vs ', ' Vs ', ' VS '):
+        if sep in axis_label:
+            left, right = axis_label.split(sep, 1)
+            return (right if n > 0 else left).strip()
+    return ''
 
 
 # `estate(estate_type:burghers_estate) = { … }` switches scope; the effect a
@@ -144,16 +202,31 @@ def _one_effect(label: str, v, labels, depth: int) -> list[str]:
             pass
         subject = next((inner[s] for s in _SUBJECT_KEYS if s in inner), None)
         dur = next(((d, inner[d]) for d in _DURATION_KEYS if d in inner), None)
+        key = label.lower().replace(' ', '_')
+        size = next((_amount(inner[a], key) for a in _AMOUNT_KEYS
+                     if a in inner and inner[a] is not subject), '')
+        if not size and any(inner.get(a) is subject for a in _AMOUNT_KEYS):
+            size = _amount(subject, key)     # the value IS the named constant
         if isinstance(subject, (str, int, float, bool)):
             tok = str(subject)
-            line = f'{label}: {labels.get(tok) or ref.pretty(tok)}'
+            name = labels.get(tok) or ref.pretty(tok)
+            line = f'{label}: {name}'
+            if size and _same_number(name, size):
+                size = ''                    # the name already is the number
+            if size:
+                pole = _toward(name, float(size.rstrip('%'))) \
+                    if size[0] in '+-' and size[1:].rstrip('%').replace('.', '').isdigit() else ''
+                line += f' {size} toward {pole}' if pole else f' ({size})'
             if dur and isinstance(dur[1], (str, int, float)):
                 line += f' ({dur[1]} {dur[0]})'
             return [line]
-        return [label]
+        return [f'{label} ({size})'] if size else [label]
 
     if v is not None and str(v) not in ('yes', ''):
         tok = str(v)
+        size = _amount(v, label.lower().replace(' ', '_'))
+        if size and size.lstrip('+-').replace('.', '').rstrip('%').isdigit():
+            return [f'{label}: {labels.get(tok) or ref.pretty(tok)} ({size})']
         return [f'{label}: {labels.get(tok) or ref.pretty(tok)}']
     return [label]
 
@@ -165,6 +238,7 @@ def _block_lines(tree, labels, depth: int, skip: set[str] | None = None) -> list
         pairs = list(tree.iterate_with_duplicates())
     except Exception:
         return out
+    counts: dict[str, int] = {}
     for k, v in pairs:
         key = str(k)
         if skip and key in skip:
@@ -172,9 +246,14 @@ def _block_lines(tree, labels, depth: int, skip: set[str] | None = None) -> list
         for line in _one_effect(ref.pretty(key), v, labels, depth):
             if 'paradox_parser' in line:      # never ship a parser repr
                 line = ref.pretty(key)
-            if line and line not in out:
+            if not line:
+                continue
+            if line in counts:                # the same effect written twice
+                counts[line] += 1             # is applied twice
+            else:
+                counts[line] = 1
                 out.append(line)
-    return out
+    return [f'{ln} ×{counts[ln]}' if counts[ln] > 1 else ln for ln in out]
 
 
 def effect_lines(effect, labels) -> tuple[list[str], list[str]]:
