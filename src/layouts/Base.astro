@@ -18,7 +18,7 @@ const base = import.meta.env.BASE_URL;
 
 const SITE_NAME = 'EU5 Reference';
 const DEFAULT_DESC =
-  "Reference for Paradox's Europa Universalis V — goods, advances, laws, buildings, countries, and game concepts, generated from the game's own data files each patch.";
+  "Reference for Paradox's Europa Universalis V, covering goods, advances, laws, buildings, countries and game concepts, generated from the game's own data files each patch.";
 const pageDesc = description || DEFAULT_DESC;
 const fullTitle = `${title} · ${SITE_NAME}`;
 
@@ -89,7 +89,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
         </div>
         <div class="hdr-save" data-hdr-save>
           <button type="button" class="hdr-save__btn" data-save-btn aria-expanded="false"
-                  title="Your save: import a melted .eu5 and the planners start from it">
+                  title="Import a melted .eu5 save and the planners will start from it">
             <span class="hdr-save__icon">▤</span><span class="hdr-save__label" data-save-label>Save</span>
           </button>
           <div class="hdr-save__panel" data-save-panel hidden>
@@ -104,9 +104,10 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
               <span data-save-file-label>Import a melted save…</span>
             </label>
             <div class="hdr-save__hint">
-              Melt the <code>.eu5</code> first (pdx.tools → Melt) — the game's own saves are
-              compressed. It is read here in your browser; nothing is uploaded, and the
-              snapshot stays in this browser only. Links you share never carry it.
+              Melt the <code>.eu5</code> file first, with Melt on pdx.tools, because the
+              game's own saves are compressed. The file is read here in your browser, so
+              nothing is uploaded, and the snapshot stays in this browser only. A link you
+              share never carries it.
             </div>
             <div class="hdr-save__err" data-save-err hidden></div>
           </div>
@@ -146,15 +147,15 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
           const seats = Object.values(snap.seats);
           const tag = pref.seat && snap.seats[pref.seat] ? pref.seat : seats[0]?.tag;
           const year = (snap.date || '').split('.')[0];
-          status.innerHTML = `<b>${esc(snap.file)}</b> — ${esc(snap.date || '?')} · v${esc(snap.version || '?')}` +
-            ` · ${snap.counts.countries} countries` +
+          status.innerHTML = `<b>${esc(snap.file)}</b>, ${esc(snap.date || '?')}, v${esc(snap.version || '?')}` +
+            `, ${snap.counts.countries} countries` +
             (snap.version && !/^1\.3\./.test(snap.version) ? ` <span class="warn">(site data is 1.3.11)</span>` : '');
           seatSel.innerHTML = seats.map((s) =>
             `<option value="${esc(s.tag)}"${s.tag === tag ? ' selected' : ''}>${esc(s.name)}${s.player ? ` (${esc(s.player)})` : ''}</option>`).join('');
           enabled.checked = pref.enabled;
           seatBox.hidden = false;
           const seat = tag ? snap.seats[tag] : null;
-          label.textContent = seat ? `${seat.name}${year ? ' · ' + year : ''}` : 'Save';
+          label.textContent = seat ? `${seat.name}${year ? ', ' + year : ''}` : 'Save';
           rail.classList.toggle('on', pref.enabled);
           rail.classList.toggle('off', !pref.enabled);
         }
@@ -181,7 +182,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
               fetch(`${baseUrl}geo.json`).then((r) => r.json()).catch(() => null),
             ]);
             const raw = await scanFile(file, (f) => { fileLabel.textContent = `Reading… ${Math.round(f * 100)}%`; });
-            if (!raw.countries.size) throw new Error('No countries found — is this a melted EU5 save?');
+            if (!raw.countries.size) throw new Error('No countries found. Is this a melted EU5 save?');
             const names: Record<string, string> = {};
             for (const c of planner.countries || []) names[c.t] = c.n;
             const snap = resolve(raw, file.name.replace(/_melted|\.eu5$|\.txt$/g, ''), planner.kinds || [], geo, names);
@@ -189,7 +190,7 @@ const activeSection = navSections.find((s) => s.items.some((t) => t.slug === act
             storeSnapshot(snap);
           } catch (e: any) {
             err.textContent = /quota/i.test(String(e?.name || e?.message)) ?
-              'The browser refused to store the snapshot (storage quota).' : `Import failed: ${e?.message || e}`;
+              'The browser refused to store the snapshot, because it is out of storage.' : `Import failed: ${e?.message || e}`;
             err.hidden = false;
           } finally {
             fileLabel.textContent = 'Import a melted save…';

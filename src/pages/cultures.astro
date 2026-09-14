@@ -25,10 +25,10 @@ const columns = [
     { label: 'cultures', value: entities.length },
     { label: 'groups', value: new Set(entities.flatMap((e) => e.data.groups)).size },
   ]}
-  description="Every culture in Europa Universalis V — groups, languages, and modifiers."
+  description="Every culture in Europa Universalis V, with its group, language and modifiers."
 >
   <div data-filter-scope>
-    <FilterBar facets={facets} placeholder="Filter cultures… (large groups shown as chips; search finds all)" />
+    <FilterBar facets={facets} placeholder="Filter cultures… The chips cover the large groups, and the search finds all of them." />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="cultures" />
   </div>
 </Base>

@@ -42,7 +42,7 @@ const unconditional = privileges.filter((p: any) => !p.data.requires?.length).le
 
   <h2 style="margin-top: 34px;">Privileges</h2>
   <div data-filter-scope>
-    <CountryLens placeholder="Show what a country can grant…" />
+    <CountryLens placeholder="Show what one country can grant…" />
     <FilterBar facets={privData.facets} placeholder="Filter privileges…" />
     <EntityTable entities={privileges} columns={privCols as any} pagePrefix="privileges" csvName="eu5ref-estate-privileges" />
   </div>

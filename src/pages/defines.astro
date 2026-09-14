@@ -15,10 +15,10 @@ const ds = { ...data, entities };
     { label: 'constants', value: entities.length },
     { label: 'groups', value: new Set(entities.map((e) => e.facets.group)).size },
   ]}
-  description="Every engine define in Europa Universalis V — the constants behind the formulas.">
+  description="Every engine define in Europa Universalis V, the constants the formulas are built on.">
   <SectionTable data={ds} minFacetCount={40} columns={[
     { key: 'name', label: 'Define', kind: 'name' },
     { key: 'group', label: 'Group', kind: 'facet' },
     { key: 'value', label: 'Value', kind: 'text' },
-  ]} placeholder="Filter defines… (large groups as chips; search finds all)" />
+  ]} placeholder="Filter defines… The chips cover the large groups, and the search finds all of them." />
 </Base>

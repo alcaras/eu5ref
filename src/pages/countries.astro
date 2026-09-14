@@ -41,10 +41,10 @@ const columns = [
     { label: 'religions', value: new Set(entities.map((e) => e.facets.religion)).size },
     { label: 'cultures', value: new Set(entities.map((e) => e.facets.culture)).size },
   ]}
-  description="Every country tag at the 1337 start of Europa Universalis V — culture, religion, rank, and capital."
+  description="Every country at the 1337 start of Europa Universalis V, with its culture, religion, rank and capital."
 >
   <div data-filter-scope>
-    <FilterBar facets={facets} placeholder="Filter countries… (big groups as chips; search finds all)" />
+    <FilterBar facets={facets} placeholder="Filter countries… The chips cover the big groups, and the search finds all of them." />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="countries" />
   </div>
 </Base>

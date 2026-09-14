@@ -26,7 +26,7 @@ const columns = [
     { label: 'religions', value: entities.length },
     { label: 'groups', value: new Set(entities.map((e) => e.facets.group)).size },
   ]}
-  description="Every religion in Europa Universalis V — group, special mechanics, and modifiers."
+  description="Every religion in Europa Universalis V, with its group, special mechanics and modifiers."
 >
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter religions…" />

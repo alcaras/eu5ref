@@ -65,7 +65,7 @@ const { placeholder = 'Filter by country…' } = Astro.props;
       }
       const seat = picked && activeSeat();
       state.textContent = picked
-        ? `${picked.n}${seat && seat.tag === picked.t ? ` (save · ${seatLabel(seat)})` : ''}: ${rows.length - hidden} of ${rows.length}` +
+        ? `${picked.n}${seat && seat.tag === picked.t ? ` (from the save, ${seatLabel(seat)})` : ''}: ${rows.length - hidden} of ${rows.length}` +
           (cond ? `, ${cond} conditional` : '')
         : '';
       clear.hidden = !picked;

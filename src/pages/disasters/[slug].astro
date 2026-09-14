@@ -55,7 +55,7 @@ const realChance = rolls.length
   : null;
 ---
 <Base title={entity.name} active="disasters" eyebrow="Disaster" iconSrc={entity.icon}
-  description={`${entity.name} in Europa Universalis V — what starts it, what it does, and every way out.`}>
+  description={`What starts ${entity.name} in Europa Universalis V, what it does, and every way out of it.`}>
   <EntityDetail entity={entity} backlinks={backlinks} modsTitle="While it runs">
 
     <div class="panel">
@@ -65,11 +65,11 @@ const realChance = rolls.length
       </ul>
       <p class="ds-meta">
         {spawn
-          ? <Fragment>Rolled every month that all of this holds: <b>{spawn}</b>
+          ? <Fragment>The game rolls every month that all of this holds, at <b>{spawn}</b>
               {d.spawn_chance_key && <span class="ds-key"> ({d.spawn_chance_key.replace(/_/g, ' ')})</span>}.
               {d.median_months && <Fragment> At that rate it has more likely than not
-                fired within <b>{d.median_months} months</b> of becoming eligible —
-                derived from the chance, not a number the game states.</Fragment>}
+                fired within <b>{d.median_months} months</b> of becoming eligible. The
+                figure comes from the chance, and the game does not state it.</Fragment>}
             </Fragment>
           : 'The game states no monthly chance for this disaster.'}
         {' '}{d.fire_only_once ? 'It can only ever happen once.' : 'It can happen again.'}
@@ -81,8 +81,8 @@ const realChance = rolls.length
         <h3>While it runs, each month</h3>
         {shownChance != null && (
           <p class="ds-meta">
-            The in-game tooltip says an event occurs {pct(shownChance)} of the time.
-            That pair of numbers is only a tooltip; the roll that actually runs is
+            The in-game tooltip says an event occurs {pct(shownChance)} of the time, but
+            that number is only a tooltip. The roll that actually runs is
             below{realChance != null && <Fragment>, and it comes to {pct(realChance)}</Fragment>}.
           </p>
         )}
@@ -110,8 +110,8 @@ const realChance = rolls.length
     <div class="panel">
       <h3>How it ends</h3>
       <p class="ds-meta">
-        Checked every month while it runs.
-        {d.end_shared.length > 0 && ' These have to hold whichever way you take:'}
+        The game checks this every month while the disaster runs.
+        {d.end_shared.length > 0 && ' The following has to hold whichever way out you take.'}
       </p>
       {d.end_shared.length > 0 && (
         <ul class="reqlist">{d.end_shared.map((l: string) => <li>{l}</li>)}</ul>
@@ -126,7 +126,7 @@ const realChance = rolls.length
                 <code>{byName[name].formula}</code>
                 {byName[name].inputs.length > 0 && (
                   <span class="ds-formula__note">
-                    read once, when the disaster fires:
+                    The game reads this once, when the disaster fires:
                     {' '}{byName[name].inputs.map((i: any) => i.label).join(', ')}
                   </span>
                 )}
@@ -144,10 +144,10 @@ const realChance = rolls.length
       <div class="panel" data-calc>
         <h3>What your exit bar will be</h3>
         <p class="ds-meta">
-          These targets are computed from your own state the month the disaster
-          fires and then frozen — nothing you do afterwards moves the bar. Put in
-          where you expect to be when it fires and this works out what you would
-          then have to reach.
+          The game works these targets out from your own state in the month the
+          disaster fires, and then freezes them, so nothing you do afterwards moves
+          the bar. Enter where you expect to be when it fires, and the table below
+          gives you what you would then have to reach.
         </p>
         <div class="ds-inputs" data-calc-inputs></div>
         <table class="ds-table">
@@ -165,7 +165,7 @@ const realChance = rolls.length
     {d.outcomes.length > 0 && (
       <div class="panel">
         <h3>Outcomes</h3>
-        <p class="ds-meta">The game takes the first of these that fits, in this order.</p>
+        <p class="ds-meta">The game takes the first outcome that fits, in the order listed.</p>
         <ol class="ds-outcomes">
           {d.outcomes.map((o: any) => (
             <li>
@@ -181,7 +181,7 @@ const realChance = rolls.length
       <div class="panel">
         <h3>What you can do about it</h3>
         <p class="ds-meta">
-          Actions the disaster puts in your hands while it runs.
+          The disaster gives you these actions while it runs.
         </p>
         {d.actions.map((a: any) => (
           <div class="ds-action">
@@ -312,13 +312,13 @@ const realChance = rolls.length
       `<tr><td>${r.label.replace(/^the /, '')}</td>` +
       `<td class="num">${bar === null ? '—' : pct(bar)}</td>` +
       `<td class="num"><span class="mod-val ${climb > 0 ? 'bad' : 'good'}">${climb === null ? '—' : signed(climb)}</span></td>` +
-      `<td class="ds-dim">${r.also.join('; ') || '—'}</td></tr>`).join('');
+      `<td class="ds-dim">${r.also.join(', ') || '—'}</td></tr>`).join('');
 
     const reachable = rows.filter((x) => x.climb !== null);
     const best = reachable.slice().sort((a, b) => a.climb - b.climb)[0];
     verdict.textContent = best
-      ? `Cheapest way out from there: ${best.r.label.replace(/^the /, '')} — ` +
-        `${signed(best.climb)} to cover.`
+      ? `The cheapest way out from there is ${best.r.label.replace(/^the /, '')}, ` +
+        `with ${signed(best.climb)} to cover.`
       : '';
 
     // how the bar moves with where you are when it fires: the whole point is

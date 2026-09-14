@@ -115,7 +115,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
     { label: 'ages with a choice', value: ages.length },
     { label: 'per focus per age', value: 10 },
   ]}
-  description="Administrative, diplomatic, and military age focuses in Europa Universalis V, compared side by side — every advance each one opens, age by age."
+  description="The administrative, diplomatic and military age focuses in Europa Universalis V, side by side, with every advance each one opens, age by age."
 >
 
   {ages.map((age: any) => (
@@ -167,7 +167,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                       )}
                       {rootOf(e).computed && (
                         <span class="fx-adv__computed"
-                              title="The files declare no tree for this advance; the game places it when it loads, and that placement is reproduced here and checked against the tech screen.">
+                              title="The files declare no tree for this advance. The game puts it in one when it loads, and that placement is reproduced here and checked against the tech screen.">
                           {' '}computed
                         </span>
                       )}
@@ -178,7 +178,7 @@ const AGE_ORDER = ages.map((a: any) => a.name);
                         <Term id={underOf(e).id} label={underOf(e).name} showIcon={false} />
                         {underOf(e).computed && (
                           <span class="fx-adv__computed"
-                                title="The files declare no prerequisite; this is the node the game draws it under, which must be researched first.">
+                                title="The files declare no prerequisite. The node named here is the one the game draws it under, and you have to research that node first.">
                             {' '}computed
                           </span>
                         )}

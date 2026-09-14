@@ -18,7 +18,7 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
         {[...new Set(entity.data.production_methods.map((pm: any) => pm.slot ?? 0))].map((slot) => (
           <div style="margin-bottom: 10px;">
             <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:4px;">
-              Slot {(slot as number) + 1} — choose one
+              Slot {(slot as number) + 1}, choose one
             </div>
             <ul class="pairs">
               {entity.data.production_methods.filter((pm: any) => (pm.slot ?? 0) === slot).map((pm: any) => (

@@ -32,10 +32,10 @@ const rootInstitution = !!root && (root.data.requires_state || [])
   .some((r: string) => r.startsWith('has embraced institution: '));
 const treeLabel = `${drawnIn.name} · ${rootInstitution ? 'institution' : 'free tree'}`
   + (drawnIn.computed ? ' (computed)' : '');
-const COMPUTED_HINT = 'The files declare no prerequisite for this advance. This is the node the '
-  + 'game draws it under when it loads — which has to be researched first — reproduced from the '
-  + 'game files and checked against the tech screen.';
-const TREE_HINT = 'The files declare no tree for this advance; the game slots it into one when it loads, '
+const COMPUTED_HINT = 'The files declare no prerequisite for this advance. The node named here is '
+  + 'the one the game draws it under when it loads, and you have to research that node first. '
+  + 'The placement is reproduced from the game files and checked against the tech screen.';
+const TREE_HINT = 'The files declare no tree for this advance. The game puts it in one when it loads, '
   + 'and that placement is reproduced here and checked against the tech screen.';
 ---
 <Base title={entity.name} active="advances" eyebrow={`Advance · ${entity.facets.age}`} iconSrc={entity.icon}>

@@ -31,9 +31,9 @@ const columns = [
   pageStats={[
     { label: 'advances', value: entities.length },
     { label: 'general', value: entities.filter((e) => e.facets.scope === 'general').length },
-    { label: 'national / cultural', value: entities.filter((e) => e.facets.scope === 'national').length },
+    { label: 'national or cultural', value: entities.filter((e) => e.facets.scope === 'national').length },
   ]}
-  description="Every advance in Europa Universalis V — age, prerequisites, and effects."
+  description="Every advance in Europa Universalis V, with its age, prerequisites and effects."
 >
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter advances…" />

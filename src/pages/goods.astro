@@ -28,7 +28,7 @@ const columns = [
     { label: 'raw materials', value: goods.filter((g) => g.facets.category === 'raw_material').length },
     { label: 'produced', value: goods.filter((g) => g.facets.category === 'produced').length },
   ]}
-  description="Every trade good in Europa Universalis V — base price, transport cost, production method, pop demand, and country modifiers."
+  description="Every trade good in Europa Universalis V, with its base price, transport cost, production method, pop demand and country modifiers."
 >
   <div data-filter-scope>
     <FilterBar facets={facets} placeholder="Filter goods…" />

@@ -5,17 +5,17 @@ import ConceptLede from '../components/ConceptLede.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <Base title="Locations" active="locations" pageMark="📍" eyebrow="World"
-  description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion — with each one's 1337 population against its population capacity.">
+  description="Search all 22,864 land locations in Europa Universalis V by name, trade good, culture or religion, and see each one's 1337 population against its population capacity.">
   <ConceptLede slug="location" />
 
   <div class="loc" data-loc>
     <p class="loc-note">
-      A <b>Settlement</b> can only be built in a location under 5% of its
+      You can only build a <b>Settlement</b> in a location that is under 5% of its
       <a href={`${base}concepts/population-capacity`}>population capacity</a>, and the game removes
-      it again once the location passes 10% — so the locations worth building in first are the
-      ones closest to the line. Capacity is the game's own modifier stack, computed for the
-      1337 start; a <span class="cap-est">~</span> marks one whose river size had to be
-      estimated rather than solved.
+      it again once the location passes 10%, so the locations to build in first are the ones
+      closest to the line. Capacity here is the game's own set of modifiers, added up for the
+      1337 start. A <span class="cap-est">~</span> marks a location whose river size had to be
+      estimated rather than worked out exactly.
     </p>
     <div class="filterbar">
       <input type="search" placeholder="Search locations, owners, goods, cultures…" data-loc-q autocomplete="off" />
@@ -23,7 +23,7 @@ const base = import.meta.env.BASE_URL;
         <span class="facet-label">Settlement</span>
         <span data-loc-settle>
           <button data-settle="buildable">buildable <small>&lt;5%</small></button>
-          <button data-settle="kept">kept <small>5–10%</small></button>
+          <button data-settle="kept">kept <small>5% to 10%</small></button>
           <button data-settle="removed">removed <small>&ge;10%</small></button>
         </span>
       </div>

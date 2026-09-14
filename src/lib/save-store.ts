@@ -109,8 +109,8 @@ export function onSaveChange(fn: () => void) {
   window.addEventListener('storage', (e) => { if (e.key === SNAPSHOT_KEY || e.key === PREF_KEY) { cache = undefined; fn(); } });
 }
 
-/** Short label for chips: "Serbia · 1494". */
+/** Short label for chips, such as "Serbia, 1494". */
 export function seatLabel(a: ActiveSeat): string {
   const year = (a.snap.date || '').split('.')[0];
-  return year ? `${a.seat.name} · ${year}` : a.seat.name;
+  return year ? `${a.seat.name}, ${year}` : a.seat.name;
 }

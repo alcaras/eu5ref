@@ -12,7 +12,7 @@ const backlinks = (backlinksData as Record<string, any[]>)[entity.id] || [];
 const d = entity.data;
 ---
 <Base title={entity.name} active="events" eyebrow={`Event · ${d.event_id}`}
-  description={`${entity.name} — Europa Universalis V event options and outcomes.`}>
+  description={`The options and outcomes of the Europa Universalis V event ${entity.name}.`}>
   <EntityDetail entity={entity} backlinks={backlinks}>
     {d.options.length > 0 && (
       <div class="panel">

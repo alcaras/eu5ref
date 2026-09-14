@@ -4,7 +4,7 @@ import ConceptLede from '../components/ConceptLede.astro';
 
 ---
 <Base title="Value Path" active="value-path" pageMark="🧗" eyebrow="Tools"
-  description="Your societal-value targets as an age-by-age checklist: what to enact, grant and research in each age, with every axis drifting at once.">
+  description="Your societal value targets as an age by age checklist. It says what to enact, grant and research in each age, with every axis drifting at once.">
 
   <ConceptLede slug="societal-value" />
 
@@ -16,13 +16,13 @@ import ConceptLede from '../components/ConceptLede.astro';
     <label class="pl-toggle">government
       <select data-pp-gov></select>
     </label>
-    <label class="pl-toggle" title="How efficient the cabinet member you put on Encourage Societal Value is — base push is 1.0/month × this. Skill, crown power and council reforms drive it; 0.3–0.6 is typical.">
+    <label class="pl-toggle" title="How efficient the cabinet member you put on Encourage Societal Value is. The base push is 1.0 per month times this. Skill, crown power and council reforms all drive it, and 0.3 to 0.6 is typical.">
       cabinet eff. <input type="number" data-pp-eff value="0.4" min="0" max="1" step="0.05" style="width:56px;" />
     </label>
-    <label class="pl-toggle" title="How many NEW estate privileges to grant per age. The real bound is estate satisfaction (−3 per grant), which the files cannot price.">
+    <label class="pl-toggle" title="How many NEW estate privileges to grant per age. The real limit is estate satisfaction, which drops 3 per grant, and the files cannot price that.">
       new privs/age <input type="number" data-pp-pb value="4" min="0" max="12" step="1" style="width:48px;" />
     </label>
-    <label class="pl-toggle" title="How many NEW government reforms to take per age. Reforms are permanent and implement over years — pace them honestly.">
+    <label class="pl-toggle" title="How many NEW government reforms to take per age. Reforms are permanent and take years to implement, so pace them honestly.">
       new reforms/age <input type="number" data-pp-rb value="3" min="0" max="10" step="1" style="width:48px;" />
     </label>
     <span class="chips" data-pp-context></span>
@@ -42,7 +42,7 @@ import ConceptLede from '../components/ConceptLede.astro';
     </select>
     <label style="font-size:12.5px; color:var(--text-dim);">
       until <input type="number" data-pp-at value="" placeholder="max" step="5" min="-100" max="100"
-        style="width:64px;" /> <span style="color:var(--text-faint);">blank = as far as the push can carry it · 50 is what focus reforms need</span>
+        style="width:64px;" /> <span style="color:var(--text-faint);">Leave it blank to go as far as the push can carry it. Focus reforms need 50.</span>
     </label>
     <button type="button" class="csv-btn" data-pp-push>+ Add target</button>
   </div>
@@ -936,17 +936,17 @@ import ConceptLede from '../components/ConceptLede.astro';
       const m = h.m;
       const cab = m.cabinet ? `<span class="pp-cab">cabinet</span>` : '';
       const perm = m.folder === 'government_reforms'
-        ? `<span class="pp-cab" title="A reform cannot be un-taken — its pushes are with you for good">permanent${m.implMonths ? ` · ${Math.round(m.implMonths / 12)}y to implement` : ''}</span>` : '';
+        ? `<span class="pp-cab" title="You cannot undo a reform, so its pushes are with you for good">permanent${m.implMonths ? `, ${Math.round(m.implMonths / 12)}y to implement` : ''}</span>` : '';
       const scaled = m.effects.some((e: any) => e.scaled)
-        ? `<span class="pp-cab" title="Scales with estate power — counted at half here">estate power</span>` : '';
+        ? `<span class="pp-cab" title="The push scales with estate power, and it is counted at half here">estate power</span>` : '';
       const g0 = m.unlock && m.unlock[0];
       const gift = g0
-        ? `<span class="pp-need">research: ${esc(g0.advance)} · ${esc(g0.age)}` +
-          `${g0.who ? ` · ${esc(g0.who)}` : ''}` +
+        ? `<span class="pp-need">research: ${esc(g0.advance)}, ${esc(g0.age)}` +
+          `${g0.who ? `, ${esc(g0.who)}` : ''}` +
           `${m.unlock.length > 1 ? ` +${m.unlock.length - 1} more` : ''}</span>` : '';
       const why = opts.why ? `<span class="pp-need">needs: ${esc(opts.why)}</span>` : '';
       const costTag = h.cost
-        ? `<span class="pp-costly" title="Revoking a privilege burns estate satisfaction — this plan only does it because the privilege fights the targets">REVOKE — costly</span>` : '';
+        ? `<span class="pp-costly" title="Revoking a privilege burns estate satisfaction, and the plan only does it because the privilege works against your targets">REVOKE, costly</span>` : '';
       const promo = opts.promote
         ? `<label class="pp-have"><input type="checkbox" data-promote="${esc(uid(m))}"${promoted.has(uid(m)) ? ' checked' : ''}/> I have this</label>` : '';
       const where = m.groupName ? esc(m.groupName) : esc(m.source);
@@ -959,7 +959,7 @@ import ConceptLede from '../components/ConceptLede.astro';
         ? `<span class="pp-need">funds the hold on ${esc(poleName(h.forHold, signedPush(m, h.forHold) >= 0 ? 'right' : 'left'))}</span>` : '';
       // signed effect summary across the axes it moves
       const eff = m.effects.filter((e: any) => !e.temp).slice(0, 3).map((e: any) =>
-        `${esc(poleName(e.pair, e.dir))} +${((e.perMonth ?? 0) * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1)).toFixed(2)}`).join(' · ');
+        `${esc(poleName(e.pair, e.dir))} +${((e.perMonth ?? 0) * (m.encourage ? cabEff : 1) * (e.scaled ? 0.5 : 1)).toFixed(2)}`).join(', ');
       return `<div class="pp-mover ${cls}">${iconHtml(m)}${fromTag}` +
         `<span class="pp-mover__n">${esc(m.name)}</span>` +
         `<span class="pp-mover__s">${where}</span>${cab}${perm}${scaled}${costTag}${gift}${why}${holdTag}${promo}` +
@@ -978,10 +978,10 @@ import ConceptLede from '../components/ConceptLede.astro';
         return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
       });
       return keys.map((k) =>
-        `<div class="pp-kind">${esc(k)}${k === 'Law' ? ' — enact (one policy per group)'
-          : k === 'Estate privilege' ? ' — grant (costs estate satisfaction; granted once, kept)'
-          : k === 'Cabinet action' ? ' — assign your cabinet member'
-          : k === 'Reform' ? ' — take (permanent)' : ''}</div>` +
+        `<div class="pp-kind">${esc(k)}${k === 'Law' ? ', enact one policy per group'
+          : k === 'Estate privilege' ? ', grant it once and keep it, at a cost in estate satisfaction'
+          : k === 'Cabinet action' ? ', assign your cabinet member'
+          : k === 'Reform' ? ', take it permanently' : ''}</div>` +
         buckets.get(k)!.map((h) => moverLine(h, null, cls)).join('')).join('');
     }
 
@@ -989,7 +989,7 @@ import ConceptLede from '../components/ConceptLede.astro';
       const p = D.pairs[t.st.pair];
       return t.st.dir === 'auto'
         ? `${esc(p.left.name)} / ${esc(p.right.name)} at ${t.st.at ?? 0}`
-        : t.st.at === null ? `${esc(poleName(t.st.pair, t.st.dir))} — as far as it goes`
+        : t.st.at === null ? `${esc(poleName(t.st.pair, t.st.dir))}, as far as it goes`
         : `${esc(poleName(t.st.pair, t.st.dir))} ${t.st.at > 0 ? '+' : ''}${t.st.at}`;
     };
 
@@ -1000,7 +1000,7 @@ import ConceptLede from '../components/ConceptLede.astro';
         `<option value="${esc(pid)}"${pid === sel ? ' selected' : ''}>` +
         `${esc(p.left.name)} ←→ ${esc(p.right.name)}</option>`).join('');
       host.innerHTML =
-        `<h2 class="vp-h">Your targets <small>${path.length} — order = priority when tools conflict; pin 🔒, or let “Best order” arrange the unpinned</small></h2>` +
+        `<h2 class="vp-h">Your targets <small>${path.length} in all. The order is the priority when two tools conflict. Pin one with 🔒, or let "Best order" arrange the rest.</small></h2>` +
         `<ol class="pp-path">` + path.map((st, i) => {
           const p = D.pairs[st.pair];
           return `<li class="pp-row">
@@ -1015,17 +1015,17 @@ import ConceptLede from '../components/ConceptLede.astro';
               <input type="number" step="5" min="-100" max="100" placeholder="max"
                 data-edit="at:${i}" value="${st.at === null ? '' : st.at}" />
             </label>
-            <label class="pp-until" title="Keep this position afterwards — the plan reserves the push to hold it">
+            <label class="pp-until" title="Keep this position afterwards, so the plan reserves enough push to hold it">
               <input type="checkbox" data-edit="keep:${i}"${st.keep ? ' checked' : ''} /> keep
             </label>
             <label class="pp-until" title="Hold off until this year, whatever else is done">
-              not before <input type="number" step="10" min="1337" max="1837" placeholder="—"
+              not before <input type="number" step="10" min="1337" max="1837" placeholder="year"
                 class="pp-year" data-edit="after:${i}" value="${st.after ?? ''}" />
             </label>
-            <label class="pp-until" title="Start this only after every other target is done — the reversal leg">
+            <label class="pp-until" title="Start this only after every other target is done, which is the reversal leg">
               <input type="checkbox" data-edit="last:${i}"${st.last ? ' checked' : ''} /> last
             </label>
-            <label class="pp-until" title="Pin this target to exactly this priority — Best order will not move it">
+            <label class="pp-until" title="Pin this target to exactly this priority, so Best order will not move it">
               <input type="checkbox" data-edit="lock:${i}"${st.lock ? ' checked' : ''} /> 🔒
             </label>
             <span class="pp-mv">
@@ -1043,7 +1043,7 @@ import ConceptLede from '../components/ConceptLede.astro';
       renderPath();
       if (!path.length) {
         $('[data-pp-out]').innerHTML =
-          '<div class="pl-empty" style="margin-top:18px;">No targets yet — add one above, ' +
+          '<div class="pl-empty" style="margin-top:18px;">No targets yet. Add one above, ' +
           'or load the example path.</div>';
         syncUrl();
         return;
@@ -1053,23 +1053,23 @@ import ConceptLede from '../components/ConceptLede.astro';
       const govLabel = (GOVS.find((g) => g[0] === govOf()) || ['', 'country'])[1].toLowerCase();
       const head = country
         ? `<p class="pp-note">Starting from <b>${esc(country.n)}</b>'s 1337 setup` +
-          (rec ? ` — ${Object.keys(rec.values || {}).length} axes placed, ` +
+          (rec ? `, with ${Object.keys(rec.values || {}).length} axes placed, ` +
                  `${(rec.privileges || []).length} privileges and ` +
                  `${Object.keys(rec.laws || {}).length} laws already running` : '') +
           `, as a ${esc(govLabel)}.` +
-          (revokes ? ` This plan revokes ${revokes} privilege${revokes > 1 ? 's' : ''} — each one costs estate satisfaction.` : ' No privilege is ever revoked.') + `</p>`
-        : '<p class="pp-note">No country: every axis starts at 0.</p>';
+          (revokes ? ` The plan revokes ${revokes} privilege${revokes > 1 ? 's' : ''}, and each one costs estate satisfaction.` : ' No privilege is ever revoked.') + `</p>`
+        : '<p class="pp-note">No country picked, so every axis starts at 0.</p>';
 
       // ---- summary: every target, where it lands, when --------------------
       const summary = `<div class="pp-summary">` + ts.map((t: any, i: number) => {
         const status = t.axisClosed
           ? `<span class="pp-bad">axis never opens for this country</span>`
           : t.stalled
-            ? `<span class="pp-bad">stalls at ${rnd(t.achieved ?? 0)}${t.st.at !== null ? ` — ${t.st.at} needs ${(Math.abs(t.st.at) / 100).toFixed(2)}/mo held${t.bestReach !== null ? `; best any age manages ≈${rnd(t.bestReach)}` : ''}` : ''}</span>`
+            ? `<span class="pp-bad">stalls at ${rnd(t.achieved ?? 0)}${t.st.at !== null ? `, because ${t.st.at} needs ${(Math.abs(t.st.at) / 100).toFixed(2)}/mo held${t.bestReach !== null ? `, and the best any age manages is about ${rnd(t.bestReach)}` : ''}` : ''}</span>`
             : t.ranOut
               ? ((t.achieved ?? 0) - (t.from ?? 0)) * sign(t.dirn) < -0.5
-                ? `<span class="pp-bad">slips to ${rnd(t.achieved ?? 0)} — the start position needs ${(Math.abs(t.from ?? 0) / 100).toFixed(2)}/mo just to hold, more than the plan can spare</span>`
-                : `<span class="pp-when">reaches ${rnd(t.achieved ?? 0)} — campaign ends mid-push</span>`
+                ? `<span class="pp-bad">slips to ${rnd(t.achieved ?? 0)}, because the start position needs ${(Math.abs(t.from ?? 0) / 100).toFixed(2)}/mo just to hold, more than the plan can spare</span>`
+                : `<span class="pp-when">reaches ${rnd(t.achieved ?? 0)}, and the campaign ends while it is still pushing</span>`
               : `<span class="pp-ok">✓ ${rnd(t.achieved ?? 0)} by ${Math.round(t.doneAt ?? END_YEAR)}</span>`;
         return `<div class="pp-sumrow"><span class="pp-num">${i + 1}</span>` +
           `<b>${goalText(t)}</b>` +
@@ -1104,24 +1104,24 @@ import ConceptLede from '../components/ConceptLede.astro';
               .filter(Boolean))];
             if (!e.adds.length && !e.drops.length) return '';
             return `<div class="pp-cfg">
-              <div class="pp-cfg__h">${Math.round(e.year)} — ${e.year <= START_YEAR + 1e-6 ? 'set up' : 'adjust'}${research.length ? ` <span class="pp-need">research first: ${esc(research.join(' · '))}</span>` : ''}</div>` +
+              <div class="pp-cfg__h">${Math.round(e.year)}, ${e.year <= START_YEAR + 1e-6 ? 'set up' : 'adjust'}${research.length ? ` <span class="pp-need">research first: ${esc(research.join(', '))}</span>` : ''}</div>` +
               (shownDrops.length ? `<div class="pp-sub">Switch off / revoke</div>` +
                 shownDrops.map((x: any) => moverLine(x, null, x.cost ? 'drop' : 'swapoff')).join('') : '') +
-              (cabAdds.length ? `<div class="pp-kind">Cabinet — ${cabAdds.some((x: any) => x.from) ? 'reassign' : 'assign'} your minister</div>` +
+              (cabAdds.length ? `<div class="pp-kind">Cabinet: ${cabAdds.some((x: any) => x.from) ? 'reassign' : 'assign'} your minister</div>` +
                 cabAdds.map((x: any) => moverLine(x, null, 'add')).join('') : '') +
-              (lawAdds.length ? `<div class="pp-kind">Change laws — each line is one swap: old policy → new</div>` +
+              (lawAdds.length ? `<div class="pp-kind">Change laws. Each line is one swap, from the old policy to the new one.</div>` +
                 lawAdds.map((x: any) => moverLine(x, null, 'add')).join('') : '') +
               (restAdds.length ? groupBySource(restAdds, 'add') : '') +
               (e.pushing.length ? `<div class="pp-net">now pushing: ` + e.pushing.map((p: any) =>
-                `${esc(poleName(p.t.st.pair, p.t.dirn))} <b>${p.net > 0 ? '+' : ''}${p.net.toFixed(2)}</b>/mo (stalls at ${Math.abs(p.cap)})`).join(' · ') + `</div>` : '') +
-              (e.holdRows.length ? `<div class="pp-sub">Standing bill — held positions</div>` +
+                `${esc(poleName(p.t.st.pair, p.t.dirn))} <b>${p.net > 0 ? '+' : ''}${p.net.toFixed(2)}</b>/mo (stalls at ${Math.abs(p.cap)})`).join(', ') + `</div>` : '') +
+              (e.holdRows.length ? `<div class="pp-sub">Standing bill for the positions you hold</div>` +
                 e.holdRows.map((h: any) =>
                   `<div class="pp-mover ${h.ok ? 'keep' : 'drop'}">` +
                   `<span class="pp-mover__n">${esc(h.label)}</span>` +
                   `<span class="pp-mover__s">needs ${h.lo === -Infinity ? '≤ ' + h.hi.toFixed(2) : h.hi === Infinity ? '≥ ' + h.lo.toFixed(2) : `${h.lo.toFixed(2)}…${h.hi.toFixed(2)}`}/mo</span>` +
                   (h.ok ? '' : h.net < h.lo
-                    ? `<span class="pp-bad" style="font-size:11px;">UNDERFUNDED — will erode</span>`
-                    : `<span class="pp-bad" style="font-size:11px;">OVERSHOOTING — permanent pushes drift it past the hold point</span>`) +
+                    ? `<span class="pp-bad" style="font-size:11px;">UNDERFUNDED, it will erode</span>`
+                    : `<span class="pp-bad" style="font-size:11px;">OVERSHOOTING, permanent pushes drift it past the hold point</span>`) +
                   `<span class="pp-mover__p">${h.net > 0 ? '+' : ''}${h.net.toFixed(2)}/mo</span></div>`).join('') : '') +
             `</div>`;
           }
@@ -1134,22 +1134,22 @@ import ConceptLede from '../components/ConceptLede.astro';
                     `<span class="pp-mover__n">${esc(u.name)}</span>` +
                     `<span class="pp-mover__s">${esc(u.source)}</span>` +
                     `<span class="pp-mover__p">${hold
-                      ? `needs the value HELD at ${Math.round(Math.abs(u.requires.find((q: any) => q.hold).value))} — lost if it drops`
-                      : u.source === 'Reform' ? 'allow-gated — probably banks (verify in game)'
+                      ? `needs the value HELD at ${Math.round(Math.abs(u.requires.find((q: any) => q.hold).value))}, and you lose it if the value drops`
+                      : u.source === 'Reform' ? 'gated in its allow block, so it probably banks. Verify in game.'
                       : 'only while you hold this'}</span></div>`; }).join('')
               : '';
             return `<div class="pp-mile">
               <span class="pp-mile__y">${Math.round(e.year)}</span>
               <span class="pp-ok">✓ ${goalText(e.t)} reached (${rnd(e.t.achieved)})</span>
-              ${e.t.st.keep ? '<span class="pp-hold">held from here on</span>' : '<span class="pp-rel">released — will drift back</span>'}
+              ${e.t.st.keep ? '<span class="pp-hold">held from here on</span>' : '<span class="pp-rel">released, it will drift back</span>'}
             </div>${gains}`;
           }
           if (e.type === 'stall') {
             return `<div class="pp-mile">
               <span class="pp-mile__y">${Math.round(e.year)}</span>
               <span class="pp-bad">${e.reason === 'axis'
-                ? `${goalText(e.t)} — this axis never opens for this country`
-                : `${goalText(e.t)} — no age can fund ${e.t.st.at}: it needs ${(Math.abs(e.t.st.at ?? 0) / 100).toFixed(2)}/mo held${e.t.bestReach !== null ? `; the best any age manages is ≈${rnd(e.t.bestReach)}` : ''}`}</span>
+                ? `${goalText(e.t)}. The axis never opens for this country.`
+                : `${goalText(e.t)}. No age can fund ${e.t.st.at}, which needs ${(Math.abs(e.t.st.at ?? 0) / 100).toFixed(2)}/mo held${e.t.bestReach !== null ? `, and the best any age manages is about ${rnd(e.t.bestReach)}` : ''}.`}</span>
             </div>`;
           }
           return '';
@@ -1169,15 +1169,15 @@ import ConceptLede from '../components/ConceptLede.astro';
           for (const c of manual) if (!seenM.has(uid(c.m))) { seenM.add(uid(c.m)); manualAll.push(c); }
         }
         const maybes = maybeAll.length
-          ? `<details class="pp-maybe"><summary>${maybeAll.length} more this age we cannot verify from the files — check in game</summary>` +
+          ? `<details class="pp-maybe"><summary>${maybeAll.length} more this age that the files cannot confirm, so check them in game</summary>` +
             maybeAll.slice(0, 16).map((h: any) => moverLine(h, null, 'temp',
               { why: gateWhy(h.m) || 'a scripted trigger', promote: true })).join('') + `</details>` : '';
         const manuals = manualAll.length
-          ? `<details class="pp-maybe"><summary>${manualAll.length} other levers this age — buildings, aspects, estates, subjects (game-state dependent, not auto-planned)</summary>` +
+          ? `<details class="pp-maybe"><summary>${manualAll.length} other levers this age, such as buildings, aspects, estates and subjects. They depend on the state of your game, so the plan leaves them to you.</summary>` +
             manualAll.slice(0, 16).map((h: any) => moverLine(h, null, 'temp')).join('') + `</details>` : '';
 
         return `<section class="pp-agesec">
-          <h2 class="pp-ageh">${esc(a.name)} <small>${a.year}${firstInAge ? ' — game start' : ''}</small></h2>
+          <h2 class="pp-ageh">${esc(a.name)} <small>${a.year}${firstInAge ? ', game start' : ''}</small></h2>
           ${body}${maybes}${manuals}
         </section>`;
       }).join('');
@@ -1189,7 +1189,7 @@ import ConceptLede from '../components/ConceptLede.astro';
     function renderContext() {
       const seat = activeSeat();
       const saveChip = seat
-        ? `<span class="chip save" title="${esc(seat.snap.file)} — laws, privileges and values start from your save">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
+        ? `<span class="chip save" title="${esc(seat.snap.file)}. Your laws, privileges and values start from this save.">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
         : loadSnapshot() ? `<span class="chip save dim">save off <button type="button" data-save-toggle="on">use it</button></span>` : '';
       $('[data-pp-context]').innerHTML = saveChip + (country
         ? `<span class="chip">${esc(country.n)}</span>` +
@@ -1279,7 +1279,7 @@ import ConceptLede from '../components/ConceptLede.astro';
 
       wirePicker('[data-pp-country]',
         (q) => D.countries.filter((c: any) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
-          .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
+          .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu}, ${c.re}` })),
         (tag) => {
           country = D.countries.find((c: any) => c.t === tag) || null;
           govOverride = null;

@@ -197,7 +197,7 @@ import Base from '../layouts/Base.astro';
         `<span data-pick="${esc(e.name)}"><i style="background:${e.color}"></i>${esc(e.name)}` +
         ` <small>${e.count}</small></span>`).join('') +
         (L.modes[mode].entries.length > entries.length
-          ? `<span><small>+${L.modes[mode].entries.length - entries.length} more — use the box above</small></span>`
+          ? `<span><small>${L.modes[mode].entries.length - entries.length} more, use the box above to find them</small></span>`
           : '');
     }
 
@@ -279,8 +279,8 @@ import Base from '../layouts/Base.astro';
         `<b>${esc(filter)}</b>, across ${areas.length.toLocaleString()} areas</div>` +
         `<div class="mp-list__grid">` +
         areas.slice(0, 400).flatMap(([area, rows]) => rows.map((r: any) => {
-          const tip = `${r[0]} — ${r[6]}, ${r[5]}${r[7] ? ` · ${r[7]}` : ''}` +
-                      `${r[8] ? ` · ${r[8]} pops` : ''} · ${r[2] || '—'} · ${r[3] || '—'} · ${r[4] || '—'}`;
+          const tip = `${r[0]}: ${r[6]}, ${r[5]}${r[7] ? `, ${r[7]}` : ''}` +
+                      `${r[8] ? `, ${r[8]} pops` : ''}, ${r[2] || '—'}, ${r[3] || '—'}, ${r[4] || '—'}`;
           const inner = `<span>${esc(r[0])}</span><span class="pv">${esc(r[6] || area)}</span>`;
           return r[12]
             ? `<a href="${baseUrl}locations/${r[12]}" title="${esc(tip)}">${inner}</a>`
@@ -345,7 +345,7 @@ import Base from '../layouts/Base.astro';
       if (!isNaN(z) && !isNaN(cx) && !isNaN(cy)) centreOn(cx, cy, z);
       const f = q.get('f');
       if (f && L.modes[mode].entries.some((e: any) => e.name === f)) setFilter(f);
-      hud.textContent = 'hover a location';
+      hud.textContent = 'Hover over a location to see it.';
 
       const idImg = new Image();
       idImg.onload = () => {
@@ -400,11 +400,11 @@ import Base from '../layouts/Base.astro';
       }
       if (onControls(e.target)) return;
       const l = locAt(e.clientX, e.clientY);
-      if (!l) { hud.textContent = 'hover a location'; return; }
+      if (!l) { hud.textContent = 'Hover over a location to see it.'; return; }
       hud.innerHTML = `<b>${esc(l[0])}</b>` +
         (l[2] ? `${esc(l[2])}<br>` : '') +
-        `<small>${[l[3], l[4]].filter(Boolean).map(esc).join(' · ')}` +
-        `${l[6] ? ` — ${esc(l[6])}, ${esc(l[5])}` : ''}</small>`;
+        `<small>${[l[3], l[4]].filter(Boolean).map(esc).join(', ')}` +
+        `${l[6] ? `, ${esc(l[6])}, ${esc(l[5])}` : ''}</small>`;
     });
     addEventListener('mouseup', () => {
       if (down) syncUrlSoon();

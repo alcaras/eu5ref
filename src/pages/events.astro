@@ -23,7 +23,7 @@ const withRewards = entities.filter((e) => e.facets.rewards).length;
     { label: 'with tagged rewards', value: withRewards },
     { label: 'groups', value: new Set(entities.map((e) => e.facets.namespace)).size },
   ]}
-  description="Every narrative event in Europa Universalis V — options, what each one gives, when it can fire, and which country it belongs to.">
+  description="Every narrative event in Europa Universalis V, with its options, what each one gives, when it can fire, and which country it belongs to.">
   <SectionTable data={ds} pagePrefix="events" minFacetCount={60} columns={[
     { key: 'name', label: 'Event', kind: 'name' },
     { key: 'kind', label: 'Kind', kind: 'facet' },
@@ -31,5 +31,5 @@ const withRewards = entities.filter((e) => e.facets.rewards).length;
     { key: 'gives', label: 'Gives', kind: 'chips' },
     { key: 'years', label: 'Years', kind: 'text' },
     { key: 'options', label: 'Options', kind: 'num' },
-  ]} placeholder="Filter events… (search covers title, group and rewards)" />
+  ]} placeholder="Filter events… The search covers the title, the group and the rewards." />
 </Base>

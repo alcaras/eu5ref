@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Tech Planner" active="advance-planner" pageMark="🧭" eyebrow="Tools" wide
-  description="Interactive Europa Universalis V advance planner — the in-game tech tree, filtered to your country, with a shareable plan.">
+  description="An advance planner for Europa Universalis V. It draws the in-game tech tree, filters it to your country, and gives you a plan you can share as a link.">
 
 
   <div class="pl" data-pl>
@@ -12,23 +12,23 @@ import Base from '../layouts/Base.astro';
         <div class="hdr-search__results" hidden></div>
       </div>
       <button type="button" class="csv-btn" data-pl-facts-toggle
-        title="Everything the gates test — culture, religion, capital, government, subject status, and the things you can acquire">⚙ Your country</button>
+        title="Everything the gates test: your culture, religion, capital, government and subject status, plus the things you can still acquire">⚙ Your country</button>
       <span class="chips" data-pl-context></span>
       <div class="pl-picker pl-modpick" data-pl-mod
-           title="Light up every advance that carries a modifier — in this age's trees, or as a list across all ages">
+           title="Light up every advance that carries a modifier, either in this age's trees or as a list across all ages">
         <input type="search" placeholder="gives… (a modifier)" autocomplete="off" />
         <div class="hdr-search__results" hidden></div>
       </div>
       <span class="chips" data-pl-modchips></span>
       <span class="pl-spacer"></span>
-      <label class="pl-toggle" title="Which advances to draw: yours + conditional (default), only the certain ones, or every country’s">
+      <label class="pl-toggle" title="Which advances to draw: yours and the conditional ones, which is the default, or only the certain ones, or every country's">
         show <select data-pl-show>
           <option value="">yours + conditional</option>
           <option value="sure">yours only</option>
           <option value="all">everything</option>
         </select>
       </label>
-      <label class="pl-toggle" title="How much each card shows: icon only (name on hover), icon + name, or name + effects">
+      <label class="pl-toggle" title="How much each card shows: the icon alone with the name on hover, the icon and the name, or the name and the effects">
         cards <select data-pl-density>
           <option value="i" selected>icons</option>
           <option value="c">compact</option>
@@ -56,7 +56,7 @@ import Base from '../layouts/Base.astro';
       <span><i class="sw k0"></i> modifiers only</span>
       <span><i class="sw st-planned"></i> planned</span>
       <span><i class="sw st-res"></i> researched</span>
-      <span><i class="sw st-cond"></i> conditional — needs something you can still acquire</span>
+      <span><i class="sw st-cond"></i> conditional, because it needs something you can still acquire</span>
       <span data-pl-count></span>
     </div>
 
@@ -716,8 +716,8 @@ import Base from '../layouts/Base.astro';
         `<button type="button" data-mod-rm="${k}" title="remove">✕</button></span>`).join('');
       if (modSel.length) {
         html += `<span class="chip modview${listView ? ' on' : ''}" data-mod-view ` +
-          `title="${listView ? 'back to this age\'s trees' : 'every matching advance, all ages, as a list'}">` +
-          `<button type="button">${listView ? '▤ list · all ages' : '▦ in the trees'}</button></span>`;
+          `title="${listView ? 'Back to this age\'s trees' : 'Every matching advance in every age, as a list'}">` +
+          `<button type="button">${listView ? '▤ list, all ages' : '▦ in the trees'}</button></span>`;
       }
       $('[data-pl-modchips]').innerHTML = html;
     }
@@ -732,15 +732,15 @@ import Base from '../layouts/Base.astro';
       let html = '';
       const seat = activeSeat();
       if (seat) {
-        html += `<span class="chip save" title="${seat.snap.file} — facts and researched advances start from your save">` +
+        html += `<span class="chip save" title="${seat.snap.file}. Your facts and researched advances start from this save">` +
           `save: ${seatLabel(seat)} <button type="button" data-save-toggle="off" title="ignore the save on this page">off</button></span>`;
       } else if (loadSnapshot()) {
-        html += `<span class="chip save dim" title="a save is imported but not in use">save off ` +
+        html += `<span class="chip save dim" title="a save is imported, but this page is not using it">save off ` +
           `<button type="button" data-save-toggle="on">use it</button></span>`;
       }
       if (country) {
         html += `<span class="chip country" style="border-color:${country.col ?? 'var(--border)'}">${country.n}` +
-          `<button type="button" data-clear-country title="no country — only the advances every country gets">✕</button></span>`;
+          `<button type="button" data-clear-country title="No country picked, so only the advances every country gets are shown">✕</button></span>`;
         for (const [k, val] of Object.entries(overrides)) {
           const def = kindDef(k);
           if (!def) continue;
@@ -748,11 +748,11 @@ import Base from '../layouts/Base.astro';
             html += `<span class="chip shifted" data-reset="${k}" title="back to the start value">${def.l}: ${kindLabel(k, val)} ✕</span>`;
           } else {
             const parts = Object.entries(val).map(([a, b]) => `${b ? '✓' : '✗'} ${kindLabel(k, a)}`);
-            html += `<span class="chip shifted" data-reset="${k}" title="forget these">${parts.join(' · ')} ✕</span>`;
+            html += `<span class="chip shifted" data-reset="${k}" title="forget these">${parts.join(', ')} ✕</span>`;
           }
         }
       } else {
-        html += `<span class="chip">no country — showing everything</span>`;
+        html += `<span class="chip">no country picked, showing everything</span>`;
       }
       $('[data-pl-context]').innerHTML = html;
       renderFacts();
@@ -795,15 +795,15 @@ import Base from '../layouts/Base.astro';
             const b = (base as any)[def.k]?.[x.v] as boolean | undefined;
             const st = o ?? b;
             const cls = ['fchip', st === true ? 'yes' : st === false ? 'no' : '', o === undefined && b !== undefined ? 'base' : ''].filter(Boolean).join(' ');
-            html += `<button type="button" class="${cls}" data-atom="${x.v}" title="${st === true ? 'you have this — click to say you can\'t' : st === false ? 'you can\'t — click to forget' : 'unknown — click to say you have it'}">` +
+            html += `<button type="button" class="${cls}" data-atom="${x.v}" title="${st === true ? 'You have this. Click to say you cannot.' : st === false ? 'You cannot have this. Click to forget that.' : 'Unknown. Click to say you have it.'}">` +
               `${st === true ? '✓ ' : st === false ? '✗ ' : ''}${x.l}<small>${x.n}</small></button>`;
           }
           if (def.values.length > 8) html += `<button type="button" class="more" data-more="${def.k}">${all ? 'fewer' : `+${def.values.length - 8} more`}</button>`;
         }
         html += '</div>';
       }
-      html += `<div class="pl-facts__hint">The number is how many advances test that value. ` +
-        `<b>Dashed</b> chips come from the 1337 setup (or your imported save); a ✓ or ✗ you set travels in the link. ` +
+      html += `<div class="pl-facts__hint">The number on a chip is how many advances test that value. ` +
+        `<b>Dashed</b> chips come from the 1337 setup, or from your imported save, and a ✓ or ✗ you set travels in the link. ` +
         `Picking another country resets everything here.</div>`;
       panel.innerHTML = html;
       for (const def of D.kinds) {
@@ -833,7 +833,7 @@ import Base from '../layouts/Base.astro';
       // the modifier filter: a hit shows the matching value on the card
       const hits = modHits(n);
       const hit = hits.length ? ' hit' : '';
-      const mv = hits.length ? `<span class="mv${hits[0][2] === 'bad' ? ' bad' : ''}" title="${hits.map(modLine).join(' · ')}">${hits[0][1]}</span>` : '';
+      const mv = hits.length ? `<span class="mv${hits[0][2] === 'bad' ? ' bad' : ''}" title="${hits.map(modLine).join(', ')}">${hits[0][1]}</span>` : '';
       if (density === 'i') {
         return `<div class="${cls} ico${hit}"${style} data-id="${id}" title="${n.n}">${sp}${mv}${qn}${icon}` +
           `<span class="nm">${n.n}</span>${badge}</div>`;
@@ -906,7 +906,7 @@ import Base from '../layouts/Base.astro';
       panes.classList.toggle('mods', modSel.length > 0 && !listView);
       if (modSel.length && listView) { choices.innerHTML = ''; renderList(); return; }
       if (!ids.length) {
-        panes.innerHTML = '<div class="pl-empty">Nothing in this age for that filter.</div>';
+        panes.innerHTML = '<div class="pl-empty">Nothing in this age matches that filter.</div>';
         choices.innerHTML = '';
         return;
       }
@@ -966,11 +966,11 @@ import Base from '../layouts/Base.astro';
       panes.innerHTML = html;
 
       const total = Object.values(D.nodes).filter((n) => n.a === ageIx).length;
-      let text = `${ids.length} of ${total} shown in this age · ${planned.size} planned · ${researched.size} researched`;
+      let text = `${ids.length} of ${total} shown in this age, ${planned.size} planned, ${researched.size} researched`;
       if (modSel.length) {
         const here = ids.filter((id) => modHits(D.nodes[id]).length).length;
         const all = filteredIds(null).filter((id) => modHits(D.nodes[id]).length).length;
-        text = `${here} in this age give ${modSel.map((k) => D.modkeys[k] || k).join(' / ')} (${all} across all ages) · ` + text;
+        text = `${here} in this age give ${modSel.map((k) => D.modkeys[k] || k).join(' or ')} (${all} across all ages), ` + text;
       }
       $('[data-pl-count]').textContent = text;
       ($('[data-zoom-label]') as HTMLElement).textContent = Math.round(zoom * 100) + '%';
@@ -1005,7 +1005,7 @@ import Base from '../layouts/Base.astro';
           return ok && unit !== null ? `${fmtNum(n, unit)} ${D.modkeys[k] || k}` : null;
         }).filter(Boolean);
         html += `<tr class="age"><td colspan="${keys.length + 4}">${D.ages[a].n}<small>${list.length} advance${list.length === 1 ? '' : 's'}</small>` +
-          (sums.length ? `<span class="sum" title="sum of every listed value">Σ ${sums.join(' · ')}</span>` : '') + `</td></tr>`;
+          (sums.length ? `<span class="sum" title="the sum of every listed value">Σ ${sums.join(', ')}</span>` : '') + `</td></tr>`;
         for (const id of list) {
           const n = D.nodes[id];
           const st = statusOf(id);
@@ -1018,14 +1018,14 @@ import Base from '../layouts/Base.astro';
             `<td class="nm"><i class="sw k${n.k}"></i>${n.i ? `<img src="${baseUrl}${n.i}" loading="lazy" alt=""/>` : ''}${n.n}${sp}</td>` +
             `<td class="tree">${D.nodes[n.b]?.n ?? '—'}<small>tier ${n.d}</small></td>${stCell}` +
             keys.map((k) => { const v = valueOf(n, k); return `<td class="num${v?.[2] === 'bad' ? ' bad' : ''}">${v ? v[1] : ''}</td>`; }).join('') +
-            `<td><a class="jump" href="#" data-jump="${n.a}" title="show it in the ${D.ages[n.a].n} trees">→ tree</a></td></tr>`;
+            `<td><a class="jump" href="#" data-jump="${n.a}" title="Show it in the ${D.ages[n.a].n} trees">→ tree</a></td></tr>`;
         }
       }
       html += '</tbody></table>';
-      if (!rows.length) html = `<div class="pl-empty">No advance gives ${modSel.map((k) => D.modkeys[k] || k).join(' / ')} under the current filter.</div>`;
+      if (!rows.length) html = `<div class="pl-empty">No advance gives ${modSel.map((k) => D.modkeys[k] || k).join(' or ')} under the current filter.</div>`;
       panes.innerHTML = html;
       $('[data-pl-count]').textContent =
-        `${rows.length} advances across all ages give ${modSel.map((k) => D.modkeys[k] || k).join(' / ')} · ${planned.size} planned · ${researched.size} researched`;
+        `${rows.length} advances across all ages give ${modSel.map((k) => D.modkeys[k] || k).join(' or ')}, ${planned.size} planned, ${researched.size} researched`;
     }
 
     // ── tooltip ────────────────────────────────────────────────
@@ -1069,12 +1069,12 @@ import Base from '../layouts/Base.astro';
       } else if (n.gl?.length) {
         html += `<div class="gate">Only for: ${n.gl.slice(0, 6).map((l) => l[0]).join(', ')}</div>`;
       }
-      for (const rs of n.rs || []) html += `<div class="gate">Requires: ${rs}</div>`;
+      for (const rs of n.rs || []) html += `<div class="gate">Requires ${rs}</div>`;
       for (const m of n.m || []) html += `<div>${modLine(m)}</div>`;
       for (const u of n.u || []) html += `<div class="unl">${u}</div>`;
-      if (reqs.length) html += `<div class="hint">after: ${reqs.join(', ')}</div>`;
-      else if (n.p && D.nodes[n.p]) html += `<div class="hint">after: ${D.nodes[n.p].n} (drawn there in game; the files declare no prerequisite)</div>`;
-      html += `<div class="hint">click to plan · right-click researched · ⌥-click opens page</div>`;
+      if (reqs.length) html += `<div class="hint">Comes after ${reqs.join(', ')}</div>`;
+      else if (n.p && D.nodes[n.p]) html += `<div class="hint">Comes after ${D.nodes[n.p].n}, which is where the game draws it, although the files declare no prerequisite</div>`;
+      html += `<div class="hint">Click to plan it, right-click to mark it researched, or ⌥-click to open its page.</div>`;
       tip.innerHTML = html;
       tip.hidden = false;
       const r = tip.getBoundingClientRect();
@@ -1221,7 +1221,7 @@ import Base from '../layouts/Base.astro';
 
       const p = new URLSearchParams(location.search);
       if (p.get('v') && p.get('v') !== D.vhash) {
-        $('[data-pl-count]').textContent = '⚠ this link was made on another game version — the plan may have shifted.';
+        $('[data-pl-count]').textContent = '⚠ The link you opened was made on another game version, so the plan may have shifted.';
       }
       country = D.countries.find((c) => c.t === p.get('c')) || null;
       // An imported save is the default view: its seat, its researched

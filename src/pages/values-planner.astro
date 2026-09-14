@@ -24,10 +24,10 @@ import ConceptLede from '../components/ConceptLede.astro';
       </div>
       <span class="chips" data-vp-context></span>
       <button type="button" class="csv-btn" data-vp-reset title="Back to this country's 1337 setup">↺ 1337 setup</button>
-      <label class="pl-toggle" title="Include things your country cannot take">
+      <label class="pl-toggle" title="Also show the things your country cannot take">
         <input type="checkbox" data-vp-all /> show unavailable
       </label>
-      <label class="pl-toggle" title="Efficiency of a cabinet member on Encourage Societal Value — base push is 1.0/month × this">
+      <label class="pl-toggle" title="How efficient a cabinet member on Encourage Societal Value is. The base push is 1.0 per month times this.">
         cabinet eff. <input type="number" data-vp-eff value="0.4" min="0" max="1" step="0.05"
           style="width:56px; background:var(--bg-elev); color:var(--text); border:1px solid var(--border); border-radius:3px; padding:2px 5px; font-family:var(--font-mono); font-size:12px;" />
       </label>
@@ -50,7 +50,7 @@ import ConceptLede from '../components/ConceptLede.astro';
 
       <section class="vp-pane">
         <h2 class="vp-h">Drift
-          <small>from your starting position, at <span data-vp-yrs>20</span> years —
+          <small>from your starting position, at <span data-vp-yrs>20</span> years
           <input type="range" min="1" max="100" value="20" data-vp-years /></small>
         </h2>
         <div class="vp-axes" data-vp-axes></div>
@@ -278,7 +278,7 @@ import ConceptLede from '../components/ConceptLede.astro';
       $('[data-vp-count]').textContent = list.length ? `${list.length} selected` : 'none';
       $('[data-vp-picked]').innerHTML = list.map(itemHtml).join('') ||
         '<div style="color:var(--text-faint); font-size:12.5px; padding:4px 8px;">' +
-        'Nothing picked yet — choose from the list below.</div>';
+        'Nothing picked yet. Choose from the list below.</div>';
     }
 
     /** The drift model (same as the value path): a value approaches an
@@ -340,10 +340,10 @@ import ConceptLede from '../components/ConceptLede.astro';
         `<div class="vp-axis__num">` +
         `<span>start <input class="vp-axis__start" type="number" step="5" min="-100" max="100" ` +
         `value="${start[r.pid] ?? 0}" data-start="${r.pid}" /> → <b>${r.now.toFixed(1)}</b> at ${horizonYears} yrs</span>` +
-        (r.net ? `<span title="push: ${r.sd.l.toFixed(3)} left / ${r.sd.r.toFixed(3)} right from ${r.sd.n} factor(s)">` +
-                 `${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month from ${r.sd.n} · ` +
+        (r.net ? `<span title="push: ${r.sd.l.toFixed(3)} left and ${r.sd.r.toFixed(3)} right, from ${r.sd.n} factor(s)">` +
+                 `${r.net > 0 ? '+' : ''}${r.net.toFixed(3)}/month from ${r.sd.n}, ` +
                  `stalls at ${Math.max(-D.scale, Math.min(D.scale, Math.round(eqOf(r.net))))}</span>`
-               : '<span>no push — drifts toward 0</span>') +
+               : '<span>no push, so it drifts toward 0</span>') +
         `</div></div>`).join('');
     }
 
@@ -368,14 +368,14 @@ import ConceptLede from '../components/ConceptLede.astro';
       reachable.sort((a, b) => a.months - b.months);
       const rest = rows.filter((x) => !(x.months !== null && x.months <= horizon));
       $('[data-vp-unlocked]').textContent =
-        `${reachable.length} within ${horizonYears} years · ${rows.length} gated in total`;
+        `${reachable.length} within ${horizonYears} years, ${rows.length} gated in total`;
       $('[data-vp-unlocks]').innerHTML = [...reachable, ...rest.slice(0, 40)].map((x: any) => {
         const cls = x.months === null ? 'never' : x.months === 0 ? '' : 'later';
         const hold = x.r.requires.some((q: any) => q.hold);
         const when = (x.months === null ? 'this drift stalls short of it'
           : x.months === 0 ? 'already qualifies'
           : `no sooner than ${(x.months / 12).toFixed(1)} yrs`) +
-          (hold && x.months !== null ? ' · must stay held or the reform is lost' : '');
+          (hold && x.months !== null ? ', and it must stay held or the reform is lost' : '');
         const need = x.r.requires.map((q: any) => {
           const p = D.pairs[q.pair];
           return p ? `${esc(p.left.name)}/${esc(p.right.name)} ${q.op} ${q.value}` : q.pair;
@@ -406,7 +406,7 @@ import ConceptLede from '../components/ConceptLede.astro';
       cw.hidden = rw.hidden = !country;
       const seat = activeSeat();
       const saveChip = seat
-        ? `<span class="chip save" title="${esc(seat.snap.file)} — laws, privileges and values start from your save">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
+        ? `<span class="chip save" title="${esc(seat.snap.file)}. Your laws, privileges and values start from this save.">save: ${esc(seatLabel(seat))} <button type="button" data-save-toggle="off">off</button></span>`
         : loadSnapshot() ? `<span class="chip save dim">save off <button type="button" data-save-toggle="on">use it</button></span>` : '';
       if (!country) { $('[data-vp-context]').innerHTML = saveChip; return; }
       let html = saveChip + `<span class="chip" style="border-color:${country.col ?? 'var(--border)'}">${esc(country.n)}</span>`;
@@ -478,7 +478,7 @@ import ConceptLede from '../components/ConceptLede.astro';
 
       wirePicker('[data-vp-country]',
         (q) => D.countries.filter((c: any) => c.n.toLowerCase().includes(q) || c.t.toLowerCase() === q)
-          .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu} · ${c.re}` })),
+          .map((c: any) => ({ key: c.t, label: c.n, small: `${c.cu}, ${c.re}` })),
         (tag) => {
           country = D.countries.find((c: any) => c.t === tag) || null;
           culOverride = relOverride = null;

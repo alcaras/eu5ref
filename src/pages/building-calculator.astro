@@ -20,7 +20,7 @@ const prices = Object.fromEntries(
 );
 ---
 <Base title="Building Calculator" active="building-calculator" pageMark="🧮" eyebrow="Tools"
-  description="What a Europa Universalis V building's production method costs and returns at market prices.">
+  description="What a production method in Europa Universalis V costs and returns at market prices.">
 
   <ConceptLede slug="production-method" />
 
@@ -46,7 +46,7 @@ const prices = Object.fromEntries(
     </div>
 
     <details class="bc-prices">
-      <summary>Adjust goods prices ({Object.keys(prices).length} goods, base market price shown)</summary>
+      <summary>Adjust goods prices. There are {Object.keys(prices).length} goods, each shown at its base market price.</summary>
       <div class="bc-price-grid" data-bc-prices></div>
     </details>
   </div>

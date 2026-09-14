@@ -28,7 +28,7 @@ const unconditional = entities.filter((e: any) => !e.data.requires?.length).leng
     { label: 'reforms', value: entities.length },
     { label: 'with no requirement', value: unconditional },
   ]}
-  description="Every government reform in Europa Universalis V — government type, age, and modifiers."
+  description="Every government reform in Europa Universalis V, with its government type, age and modifiers."
 >
   <SectionTable title="Government Types" data={govTypes} columns={[
     { key: 'name', label: 'Type', kind: 'name' },
@@ -38,7 +38,7 @@ const unconditional = entities.filter((e: any) => !e.data.requires?.length).leng
 
   <h2 style="margin-top: 34px;">Reforms</h2>
   <div data-filter-scope>
-    <CountryLens placeholder="Show what a country can enact…" />
+    <CountryLens placeholder="Show what one country can enact…" />
     <FilterBar facets={facets} placeholder="Filter reforms…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="reforms" />
   </div>

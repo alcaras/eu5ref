@@ -18,7 +18,7 @@ const seas = entity.data.locations.filter((l: any) => l.sea);
     { label: 'pops at 1337', value: entity.data.pop_total },
     { label: 'goods', value: entity.data.goods.length },
   ]}
-  description={`${entity.name} — every location, its trade good, terrain, and starting culture makeup.`}>
+  description={`Every location in ${entity.name}, with its trade good, terrain and starting culture makeup.`}>
 
   <p class="chips">
     <span class="chip">{entity.facets.continent}</span>

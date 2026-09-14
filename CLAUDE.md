@@ -339,6 +339,16 @@ buildings, units, laws, countries, disasters).
    declarations — never guessed from the sign.
 7. **Honest fallbacks over silent drops**: unresolved modifiers render raw
    and get flagged; unresolvable loc markup degrades to readable text.
+8. **Every word we write on a page follows `.claude/skills/plain-writing`**
+   (vendored from github.com/docwriter-org/plain-writing-skill). Plain
+   everyday words, complete sentences, no em dashes or en dashes, no middot
+   as a separator inside a sentence, no colon joining two clauses, no
+   invented hyphenated adjectives, and no analogies. It covers page
+   descriptions, ledes, notes, tooltips, button and chip labels, empty
+   states, error messages and the `summary` lines in `src/data/tabs.ts`.
+   It does NOT cover the game's own text: anything coming through `<Rich>`
+   or a loc string stays exactly as Paradox wrote it, and a bare `—` used
+   as an empty-cell placeholder is typography, not prose.
 
 ---
 

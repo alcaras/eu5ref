@@ -50,7 +50,7 @@ const columns = [
     { label: 'unlocked by an advance', value: researched },
     { label: 'specialize a good', value: specializing },
   ]}
-  description="Every urban right (town right) in Europa Universalis V — what it does to the location, what it does to the country, and who may grant it."
+  description="Every urban right (town right) in Europa Universalis V, what it does to the location, what it does to the country, and who may grant it."
 >
   <div class="ur-intro">
     {concept?.desc && <p><Rich tokens={concept.desc} /></p>}
@@ -60,14 +60,14 @@ const columns = [
         <span class="chip">{s.name} {parseFloat(s.n)}</span>
       ))}
       <span class="ur-slots__note">
-        from each rank's <code>local_possible_town_rights</code>; some
+        The slots come from each rank's <code>local_possible_town_rights</code>, and some
         <a href={`${base}government`}>government reforms</a> raise them.
       </span>
     </p>
   </div>
 
   <div data-filter-scope>
-    <CountryLens placeholder="Show what a country can grant…" />
+    <CountryLens placeholder="Show what one country can grant…" />
     <FilterBar facets={data.facets} placeholder="Filter urban rights…" />
     <EntityTable entities={entities} columns={columns as any} pagePrefix="urban-rights"
       csvName="eu5ref-urban-rights" />

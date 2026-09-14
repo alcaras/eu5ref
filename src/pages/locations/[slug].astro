@@ -28,7 +28,7 @@ const people = (v: number) => Math.round(v * 1000).toLocaleString();
 const SETTLE: Record<string, string> = {
   buildable: 'a Settlement can be built here',
   kept: 'an existing Settlement is kept, but no new one can be built',
-  removed: 'over 10% — the game removes a Settlement here',
+  removed: 'the location is over 10% of capacity, so the game removes a Settlement here',
 };
 const term = (t: any) => t.flat
   ? `+${people(t.flat)}`
@@ -41,7 +41,7 @@ const term = (t: any) => t.flat
     { label: 'starting buildings', value: buildingTotal },
     { label: 'good', value: loc.good ?? '—' },
   ]}
-  description={`${loc.name} in Europa Universalis V — starting buildings, pops, culture makeup and terrain at the 1337 start.`}>
+  description={`The starting buildings, pops, culture makeup and terrain of ${loc.name} at the 1337 start of Europa Universalis V.`}>
 
   <div class="detail-grid">
     <div>
@@ -71,7 +71,7 @@ const term = (t: any) => t.flat
 
       {loc.cultures.length > 0 && (
         <div class="panel">
-          <h3>Population at 1337 — {loc.pop_total}</h3>
+          <h3>Population at 1337: {loc.pop_total}</h3>
           <div class="kv">
             <span class="k">Cultures</span>
             <span class="v">{loc.cultures.map((c: any) => `${c.name} ${c.pct}%`).join(' · ')}</span>
@@ -84,11 +84,11 @@ const term = (t: any) => t.flat
       {loc.cap && (
         <div class="panel">
           <h3>
-            Population capacity — {loc.cap_estimated && <span class="cap-est" title="river size estimated">~</span>}{people(loc.cap)}
+            Population capacity: {loc.cap_estimated && <span class="cap-est" title="the river size here is estimated">~</span>}{people(loc.cap)}
           </h3>
           <p class="cap-lede">
-            {people(loc.pop_total ?? 0)} people, <b>{loc.cap_pct.toFixed(2)}%</b> of capacity
-            — {SETTLE[loc.settlement]}. The game builds this the same way:
+            {people(loc.pop_total ?? 0)} people live here, which is <b>{loc.cap_pct.toFixed(2)}%</b> of
+            capacity, so {SETTLE[loc.settlement]}. The game adds the capacity up the same way:
           </p>
           <ul class="pairs">
             {loc.cap_terms.map((t: any) => (
