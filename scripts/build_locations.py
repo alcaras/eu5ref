@@ -13,6 +13,7 @@ where the culture and religion makeup comes from, since a location's pops
 are often not all its "own" culture.
 """
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -23,14 +24,39 @@ from ref import eid, ename, slugify, write_dataset, facet_meta
 
 # A location can take the Settlement building below 5% of its population
 # capacity, and the game removes it again above 10%
-# (common/building_types/rural_buildings.txt).
+# (common/building_types/rural_buildings.txt). The same block lists the
+# location ranks it may stand in — `rural_settlement = yes`, `town = no`,
+# `city = no` — so a location that starts as a town or bigger can never take
+# one, whatever its population says.
 SETTLE_BUILD = 5.0
 SETTLE_KEEP = 10.0
+URBAN_RANKS = ('town', 'city', 'megalopolis')
 
 
-def settlement_state(pct: float | None) -> str | None:
+# Population capacity read in game at the 1337 start, re-checked every build.
+# Haverö is the reading that pins the negative half of the equator ramp (see
+# scripts/lib/popcap.py); its panel gave the exact number, Sala's only showed
+# thousands, so that one is compared against the truncated figure.
+CAP_CHECKS = {'havero': (25183, 1), 'sala': (117000, 1000)}
+
+
+def check_capacity(caps: popcap.Model) -> None:
+    ok = 0
+    for key, (want, step) in CAP_CHECKS.items():
+        got = (caps.capacity(key) or {}).get('cap') or 0.0
+        shown = math.floor(got * 1000 / step) * step
+        good = abs(shown - want) <= (0 if step > 1 else 50)
+        ok += good
+        print(f'  check {key:8} capacity {shown:>9,} (game {want:,})'
+              f"  {'ok' if good else 'MISMATCH'}")
+    print(f'  {ok}/{len(CAP_CHECKS)} capacity checks pass')
+
+
+def settlement_state(pct: float | None, rank: str | None) -> str | None:
     if pct is None:
         return None
+    if rank in URBAN_RANKS:
+        return 'urban'
     if pct < SETTLE_BUILD:
         return 'buildable'
     return 'kept' if pct < SETTLE_KEEP else 'removed'
@@ -128,6 +154,7 @@ def main():
     setups = town_setups()
     areas = p.areas
     caps = popcap.Model()
+    check_capacity(caps)
     # Who holds each location at 1337, so the table can answer "which of *my*
     # locations is about to outgrow a Settlement".
     tag_name = {t: getattr(c, 'display_name', t) for t, c in p.countries.items()}
@@ -181,7 +208,7 @@ def main():
                         'cap_pct': cap['pct'],
                         'cap_estimated': cap['estimated'],
                         'cap_terms': cap['terms'],
-                        'settlement': settlement_state(cap['pct']),
+                        'settlement': settlement_state(cap['pct'], s.get('rank')),
                     })
                 rows.append(row)
                 if not row['sea']:
@@ -238,7 +265,7 @@ def main():
     est = sum(r[12] for r in known)
     build = sum(1 for r in known if r[11] == 'buildable')
     print(f'  population capacity: {len(known)} locations ({est} with an estimated river), '
-          f'{build} under {SETTLE_BUILD:g}% — a Settlement can go up')
+          f'{build} rural and under {SETTLE_BUILD:g}% — a Settlement can go up')
 
 
 if __name__ == '__main__':

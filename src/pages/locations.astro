@@ -10,21 +10,24 @@ const base = import.meta.env.BASE_URL;
 
   <div class="loc" data-loc>
     <p class="loc-note">
-      You can only build a <b>Settlement</b> in a location that is under 5% of its
-      <a href={`${base}concepts/population-capacity`}>population capacity</a>, and the game removes
-      it again once the location passes 10%, so the locations to build in first are the ones
-      closest to the line. Capacity here is the game's own set of modifiers, added up for the
-      1337 start. A <span class="cap-est">~</span> marks a location whose river size had to be
-      estimated rather than worked out exactly.
+      You can only build a <b>Settlement</b> in a rural location that is under 5% of its
+      <a href={`${base}concepts/population-capacity`}>population capacity</a>, so the locations to
+      build in first are the ones closest to that line. Between 5% and 10% you cannot start a new
+      one, but a Settlement that is already there stays, and the game removes it once the location
+      passes 10%. A location that starts as a town, a city or a megalopolis can never take one at
+      all. Capacity here is the game's own set of modifiers, added up for the 1337 start. A
+      <span class="cap-est">~</span> marks a location whose river size had to be estimated rather
+      than worked out exactly.
     </p>
     <div class="filterbar">
       <input type="search" placeholder="Search locations, owners, goods, cultures…" data-loc-q autocomplete="off" />
       <div class="facet-group">
         <span class="facet-label">Settlement</span>
         <span data-loc-settle>
-          <button data-settle="buildable">buildable <small>&lt;5%</small></button>
-          <button data-settle="kept">kept <small>5% to 10%</small></button>
-          <button data-settle="removed">removed <small>&ge;10%</small></button>
+          <button data-settle="buildable" title="rural and under 5% of capacity, so you can build a Settlement here">buildable <small>&lt;5%</small></button>
+          <button data-settle="kept" title="no new Settlement, but one that is already here stays">stays if built <small>5% to 10%</small></button>
+          <button data-settle="removed" title="the game removes a Settlement here">auto-removed <small>&ge;10%</small></button>
+          <button data-settle="urban" title="a town or bigger, which can never take a Settlement">not rural <small>town or bigger</small></button>
         </span>
       </div>
       <div class="facet-group">
@@ -59,7 +62,7 @@ const base = import.meta.env.BASE_URL;
     .settle { font-size: .8125rem; padding: .05rem .4rem; border-radius: 3px; white-space: nowrap; }
     .settle-buildable { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
     .settle-kept { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
-    .settle-removed { color: var(--text-dim); }
+    .settle-removed, .settle-urban { color: var(--text-dim); }
   </style>
 
   <script>
@@ -82,8 +85,18 @@ const base = import.meta.env.BASE_URL;
     // pops and capacity are carried in thousands, as the setup files state them
     const people = (v: number) => Math.round(v * 1000).toLocaleString();
     const LABEL: Record<string, string> = {
-      buildable: 'buildable', kept: 'kept', removed: 'auto-removed',
+      buildable: 'buildable', kept: 'stays if built', removed: 'auto-removed',
+      urban: 'not rural',
     };
+    const WHY: Record<string, string> = {
+      buildable: 'rural and under 5% of capacity, so you can build a Settlement here',
+      kept: 'no new Settlement, but one that is already here stays until 10%',
+      removed: 'over 10% of capacity, so the game removes a Settlement here',
+      urban: 'a town or bigger, which can never take a Settlement',
+    };
+    // Truncate rather than round, so a location under the 5% line never shows
+    // as "5.00%" and looks like it contradicts its own label.
+    const pct = (v: number) => `${(Math.floor(v * 100) / 100).toFixed(2)}%`;
 
     function render() {
       const term = q.value.trim().toLowerCase();
@@ -111,8 +124,8 @@ const base = import.meta.env.BASE_URL;
         `<td>${esc(r[13])}</td><td>${esc(r[6])}</td>` +
         `<td class="num">${r[7] ? people(r[7]) : ''}</td>` +
         `<td class="num">${r[9] ? (r[12] ? '<span class="cap-est">~</span>' : '') + people(r[9]) : ''}</td>` +
-        `<td class="num">${r[10] == null ? '' : r[10].toFixed(2) + '%'}</td>` +
-        `<td>${r[11] ? `<span class="settle settle-${r[11]}">${LABEL[r[11]]}</span>` : ''}</td></tr>`).join('');
+        `<td class="num">${r[10] == null ? '' : pct(r[10])}</td>` +
+        `<td>${r[11] ? `<span class="settle settle-${r[11]}" title="${WHY[r[11]]}">${LABEL[r[11]]}</span>` : ''}</td></tr>`).join('');
       count.textContent = hits.length > LIMIT
         ? `showing ${LIMIT} of ${hits.length.toLocaleString()} matches`
         : `${hits.length.toLocaleString()} of ${rows.length.toLocaleString()} locations`;

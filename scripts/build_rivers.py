@@ -25,12 +25,22 @@ ones, which in 1337 leaves most of the Americas, Africa and inland Asia — fall
 back to the palette index, which predicts the tier 73–90% of the time. Those
 are marked `est` and the site renders them with a "~".
 
-EQUATOR CLOSENESS scales `location_closeness_to_equator_impact` (≤ +10 flat).
+EQUATOR CLOSENESS scales `location_closeness_to_equator_impact` (10 flat).
 `default.map` puts `equator_y = 3340` but in heightmap pixels, and no heightmap
 ships in the mirror, so the scale cannot be read off. The ramp here is fitted
 to the four tooltip readings; it is linear in map y, reproduces all four to
 0.03%, reaches 1.0 within 0.3% of the equator independently located from
 Pontianak, and 0 at the map's southern edge.
+
+**It keeps going below zero north of that line**, where the term is a penalty
+rather than a bonus, which is what an in-game reading of Haverö in Norrland
+says: the fitted ramp puts it at −0.1465, so its capacity is
+(25,000 − 1,465) × 1.07 = 25,182 against the 25,183 the game shows. Flooring
+the ramp at zero read 26,750 instead. Sala, the other 1337 reading we have,
+comes out at (50,000 − 905) × 2.4 = 117,827 against the game's "117K". The
+ramp crosses zero one span either side of the equator; the southern crossing
+lands on the map's bottom edge, so only locations north of the northern
+crossing (y ≈ 1,513, about the latitude of Moscow) carry a penalty.
 
 Run `make rivers` after a patch, or whenever a new start save is dropped in
 melts/. The output is committed so `make data` needs neither a save nor the
@@ -189,7 +199,10 @@ def main() -> None:
         if not t or 'vegetation' not in t:
             continue
         rec: dict = {}
-        closeness = max(0.0, 1.0 - abs(cy.get(loc, equator) - equator) / span)
+        # The ramp is not floored at zero: far enough north of the equator the
+        # term turns into a penalty. Haverö in Norrland is the reading that
+        # settles it (see the docstring).
+        closeness = 1.0 - abs(cy.get(loc, equator) - equator) / span
         if closeness:
             rec['eq'] = round(closeness, 4)
         d = dev.get(loc)

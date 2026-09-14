@@ -25,19 +25,27 @@ const base = import.meta.env.BASE_URL;
 const buildingTotal = loc.buildings.reduce((n: number, b: any) => n + b.count, 0);
 // Pops and capacity are carried in thousands, as the setup files state them.
 const people = (v: number) => Math.round(v * 1000).toLocaleString();
+// Every location with a page of its own starts as a town or bigger, so in
+// practice they all read "not rural" — the other three are here because the
+// same wording backs the area rows.
 const SETTLE: Record<string, string> = {
-  buildable: 'a Settlement can be built here',
-  kept: 'an existing Settlement is kept, but no new one can be built',
-  removed: 'the location is over 10% of capacity, so the game removes a Settlement here',
+  buildable: 'The location is rural and under 5% of capacity, so a Settlement can go up here.',
+  kept: 'Above 5% you cannot start a Settlement, but one that is already here stays until 10%.',
+  removed: 'Over 10% of capacity the game removes a Settlement here.',
+  urban: 'A town or bigger can never take a Settlement, whatever its population says.',
 };
 const term = (t: any) => t.flat
-  ? `+${people(t.flat)}`
+  ? `${t.flat > 0 ? '+' : '−'}${people(Math.abs(t.flat))}`
   : `${t.pct > 0 ? '+' : '−'}${Math.abs(t.pct * 100).toFixed(2)}%`;
+// Truncate rather than round, so a number under a threshold never displays as
+// if it had reached it.
+const pct = (v: number, places = 2) =>
+  `${(Math.floor(v * 10 ** places) / 10 ** places).toFixed(places)}%`;
 ---
 <Base title={loc.name} active="locations" eyebrow={`${loc.rank} · ${area.name}`}
   pageStats={[
     { label: 'pops at 1337', value: people(loc.pop_total ?? 0) },
-    { label: '% of pop capacity', value: loc.cap_pct != null ? `${loc.cap_pct.toFixed(1)}%` : '—' },
+    { label: '% of pop capacity', value: loc.cap_pct != null ? pct(loc.cap_pct, 1) : '—' },
     { label: 'starting buildings', value: buildingTotal },
     { label: 'good', value: loc.good ?? '—' },
   ]}
@@ -87,8 +95,8 @@ const term = (t: any) => t.flat
             Population capacity: {loc.cap_estimated && <span class="cap-est" title="the river size here is estimated">~</span>}{people(loc.cap)}
           </h3>
           <p class="cap-lede">
-            {people(loc.pop_total ?? 0)} people live here, which is <b>{loc.cap_pct.toFixed(2)}%</b> of
-            capacity, so {SETTLE[loc.settlement]}. The game adds the capacity up the same way:
+            {people(loc.pop_total ?? 0)} people live here, which is <b>{pct(loc.cap_pct)}</b> of
+            capacity. {SETTLE[loc.settlement]} The game adds the capacity up the same way:
           </p>
           <ul class="pairs">
             {loc.cap_terms.map((t: any) => (

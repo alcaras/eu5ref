@@ -708,13 +708,23 @@ envelope.
   `common/building_types/rural_buildings.txt` needs
   `location_population_percentage < 0.05` to build and is auto-removed above
   `0.1`. That is the whole reason this model exists — players want to know
-  which locations are about to outgrow it.
+  which locations are about to outgrow it. **It also declares its ranks**
+  (`rural_settlement = yes`, `town = no`, `city = no`, no megalopolis line),
+  the same slot flags `build_buildings.py` already reads, so the 1,012
+  locations that start as a town or bigger can never take one whatever their
+  population — `settlement_state()` calls those `urban`. Reporting Tunis at
+  4% as buildable was this gap.
 - **Capacity = (Σ flat terms) × (1 + Σ percent terms)**, file values ×1000.
-  Not a multiplicative chain — *verified to the unit* against in-game
-  tooltips: London `(100,000 + 100,000 + 880) × 3.8575 = 774,895` → "774K";
-  Wien `(100,000 + 100,000 + 1,544) × 3.0468 = 614,064` → "614K". `grep
-  local_population_capacity` over the whole tree is closed at 21 hits, so
-  the term list in `scripts/lib/popcap.py` is complete, not a sample.
+  Not a multiplicative chain. It is checked against the two readings we have
+  from the 1337 start itself: Haverö `(25,000 − 1,465) × 1.07 = 25,182`
+  against the 25,183 the game shows, and Sala `(50,000 − 905) × 2.4 =
+  117,827` against its "117K". **The London and Wien tooltips are mid-game
+  readings** (Wien's panel showed development 31.19 against the 30 it starts
+  with), so they pin the flat lines and the river tiers, which do not move,
+  and not the totals, which do — don't re-assert `× 3.8575 = 774,895` as a
+  start-date check. `grep local_population_capacity` over the whole tree is
+  closed at 21 hits, so the term list in `scripts/lib/popcap.py` is complete,
+  not a sample.
 - **Development contributes +2.5%/point** (Wien's panel read 31.19 against a
   +77.98% line) and is itself computed at start by
   `setup/start/14_development.txt`. Two behaviours that file does NOT state,
@@ -736,12 +746,18 @@ envelope.
   flagged `est` → rendered with a `~`. A location on the development floor
   still *bounds* its river size, and build_rivers.py uses that bound.
 - **Closeness to equator** scales `location_closeness_to_equator_impact`
-  (≤ +10 flat). `default.map` has `equator_y = 3340` but in heightmap pixels
+  (10 flat). `default.map` has `equator_y = 3340` but in heightmap pixels
   and no heightmap ships in the mirror, so the ramp is fitted to the four
   tooltip readings: linear in map y, 1.0 at the equator, 0 at the southern
   edge. Reproduces all four to 0.03%; the fitted equator lands within 0.3% of
   where Pontianak (0°) actually sits. `CHECKS` in build_rivers.py encodes
   them and the build prints 4/4.
+- **The ramp is not floored at zero** — north of where it crosses zero
+  (y ≈ 1,513, about Moscow's latitude) the term is a penalty. Haverö in
+  Norrland sits at −0.1465, which is exactly what turns our old 26,750 into
+  the 25,183 the game shows, and Sala's −0.0905 gives its 117K. Both were
+  reported as wrong by a player before the clamp came off; everything from
+  Scandinavia and Russia to Canada and Siberia had been too high.
 - **Two terms are not location data at all**: "Traditional Economy" is the
   owner's `capital_economy_vs_traditional_economy` position × the axis'
   `global_population_capacity_modifier = 0.25` (so popcap reads

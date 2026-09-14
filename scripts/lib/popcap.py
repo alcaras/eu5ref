@@ -9,7 +9,9 @@ files; only the rule for *what scales each static modifier* lives here.
     flat     vegetation.local_population_capacity     desert 10 … farmland 100
              location rank                            town 20 / city 100 /
                                                       megalopolis 400
-             closeness to equator                     ≤ 10, see EQUATOR below
+             closeness to equator                     10 at the equator, and
+                                                      negative in the far
+                                                      north, see EQUATOR below
     percent  climate                                  arctic −33% … med. +150%
              topography                               mountains −50%
              location rank                            10% / 25% / 50%
@@ -23,10 +25,16 @@ files; only the rule for *what scales each static modifier* lives here.
              owner's capital-economy-vs-traditional   ×25% at the pole
              -economy position
 
-Checked against four in-game tooltips, which reconcile to the unit:
+Checked against the two capacity numbers we have from the 1337 start itself:
 
-    London  (100,000 + 100,000 +   880) × 3.8575 = 774,895 → shown "774K"
-    Wien    (100,000 + 100,000 + 1,544) × 3.0468 = 614,064 → shown "614K"
+    Haverö  ( 25,000 −  1,465) × 1.07 =  25,182 → in game 25,183
+    Sala    ( 50,000 −    905) × 2.40 = 117,827 → in game "117K"
+
+The four location tooltips that pinned the flat lines (London, Paris, Wien,
+Nikopol, in build_rivers.CHECKS) were read in a running game rather than at
+the start — Wien's panel showed development 31.19 against the 30 it starts
+with — so they fix the closeness ramp and the river tiers, which do not move,
+and not the totals, which do.
 
 DEVELOPMENT is the game's own start formula, `setup/start/14_development.txt`,
 plus two behaviours the file does not state, both settled by a 1337.4.1 save:
@@ -44,7 +52,9 @@ no heightmap ships in the mirror, so the pixel scale cannot be read. The
 closeness ramp is therefore fitted to the four tooltip readings — it is linear
 in map y and reproduces all four to 0.03%, reaching 1.0 within 0.3% of the
 equator independently located from Pontianak, and 0 at the map's southern
-edge. Stored per location by build_rivers.py, not recomputed here.
+edge. It carries on below zero north of that, where the term subtracts:
+Haverö's −0.1465 is what makes its capacity come out at the 25,183 the game
+shows. Stored per location by build_rivers.py, not recomputed here.
 
 RIVER SIZE is not in the map image: the Seine is drawn one colour end to end
 yet Paris is size 6 while Corbeil, Melun, Mantes and Rouen are size 2. It is
@@ -408,7 +418,9 @@ class Model:
         cap = flat * (1 + pct)
         pop = self.pops.get(loc, 0.0)
         return {
-            'cap': round(cap, 2),
+            # to the person: the numbers are in thousands, and the in-game
+            # panel gives a location's capacity down to the last person.
+            'cap': round(cap, 3),
             'dev': round(dev, 2),
             'pop': round(pop, 3),
             'pct': round(100 * pop / cap, 3) if cap > 0 else None,
